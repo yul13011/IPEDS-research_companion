@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from analysis_catalog.catalog import connection
 from prototype.catalog_planner import read_source_series,expand_annual_plan,proposal_answer
-from prototype.memory import context, resolve_option
+from prototype.conversation import context, resolve_option
 from prototype.agent import ask
 
 
@@ -85,7 +85,7 @@ class SourceSeriesTests(unittest.TestCase):
         self.assertNotIn('(b)',choice['question'])
         self.assertIsNone(resolve_option('new question',b))
         self.assertIsNone(resolve_option('(d)',b))
-        with patch('prototype.memory.resolve',side_effect=AssertionError('No extra model call')),patch('prototype.agent._answer',return_value={'intent':'clarify','message':'test'}) as execute:
+        with patch('prototype.conversation.resolve',side_effect=AssertionError('No extra model call')),patch('prototype.agent._answer',return_value={'intent':'clarify','message':'test'}) as execute:
             answer=ask('(a)',use_model=True,conversation=h)
         self.assertEqual(answer['resolved_question'],choice['question'])
         self.assertEqual(execute.call_args.args[0],choice['question'])

@@ -227,7 +227,7 @@ def _ask(question,previous=None,use_model=False,model=None,conversation=None,ins
     model=model or DEFAULT_MODEL;start=time.perf_counter();choices={}
     for item in conversation or []:choices.update(item.get('answer',{}).get('institution_identity',{}).get('confirmed_choices',{}))
     choices.update(institution_choices or {})
-    from .analysis_clarification import select
+    from .conversation import select
     # A saved choice names no new institution. Reuse confirmed identity, and do
     # not spend a model call interpreting a bare option letter as a school.
     saved_selection=select(question,conversation)

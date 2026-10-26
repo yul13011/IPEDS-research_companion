@@ -114,7 +114,7 @@ class DiscoveryTests(unittest.TestCase):
     def test_discovery_skips_analytical_and_identity_planning(self):
         from prototype.institution_confirmation import ask
         from prototype.agent import ask as direct
-        with patch('prototype.institution_confirmation.mentions',side_effect=AssertionError('No institution clarification for catalog discovery')),patch('prototype.agent.model_plan',side_effect=AssertionError('No statistical plan')),patch('prototype.agent.execute',side_effect=AssertionError('No fact query')),patch('prototype.memory.resolve',side_effect=AssertionError('Explicit discovery is a new topic')):
+        with patch('prototype.institution_confirmation.mentions',side_effect=AssertionError('No institution clarification for catalog discovery')),patch('prototype.agent.model_plan',side_effect=AssertionError('No statistical plan')),patch('prototype.agent.execute',side_effect=AssertionError('No fact query')),patch('prototype.conversation.resolve',side_effect=AssertionError('Explicit discovery is a new topic')):
             for route in [ask,direct]:
                 answer=route('What data do we have on faculty?',use_model=False,conversation=[{'question':'Yale applicants','answer':{'message':'Earlier analysis'}}])
                 self.assertEqual(answer['mode'],'data discovery')

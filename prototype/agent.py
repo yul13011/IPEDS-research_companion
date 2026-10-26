@@ -181,7 +181,7 @@ For analyze, message states interpretation and defaults. For clarify, use concis
     # Static instructions/tool schema are cacheable; variable source excerpts stay bounded.
     from .coverage import SOURCE_POLICY
     static=system+'\n'+SOURCE_POLICY+'\nUse confirmed_institution_scope IDs when supplied: the application has already verified the requested identity/group. Do not rediscover that group through unrelated source classifications or ask the user to confirm it again. Identity confirmation does not approve a measure or formula.\nSupported measures and family definitions:\n'+json.dumps({'measures':description,'families':family_definitions},ensure_ascii=False)
-    from .memory import PLANNING_CONTEXT
+    from .conversation import PLANNING_CONTEXT
     from .institution_confirmation import confirmed_scope
     messages=[{'role':'user','content':json.dumps({'question':question,'previous_plan':previous,'conversation_context':PLANNING_CONTEXT.get(),'retrieved_codebook':catalog,'confirmed_institution_scope':confirmed_scope()},ensure_ascii=False)}]
     from .api_client import get_client
@@ -280,7 +280,7 @@ def _answer(question,previous=None,use_model=False,model=DEFAULT_MODEL):
     answer=_ask(question,previous,use_model,model)
     planned=time.perf_counter()
     if answer.get('analysis_bundle'):
-        from .analysis_clarification import execute_selection
+        from .conversation import execute_selection
         original=answer
         answer=execute_selection(answer['analysis_brief'],answer['analysis_bundle'])
         answer['model_usage']=original.get('model_usage',answer['model_usage'])
@@ -310,7 +310,7 @@ def ask(question,previous=None,use_model=False,model=DEFAULT_MODEL,conversation=
     from .definitions import handle as documentation_answer
     documented=documentation_answer(question,use_model,model,conversation,previous)
     if documented is not None:return documented
-    from .analysis_clarification import select,execute_selection,latest
+    from .conversation import select,execute_selection,latest
     selected=select(question,conversation)
     if selected:
         started=time.perf_counter()
@@ -332,7 +332,7 @@ def ask(question,previous=None,use_model=False,model=DEFAULT_MODEL,conversation=
         from .discovery import overview
         return overview(question,use_model=use_model,model=model)
     from .progress import report
-    from .memory import PLANNING_CONTEXT,context,resolve,local_resolve,resolve_option
+    from .conversation import PLANNING_CONTEXT,context,resolve,local_resolve,resolve_option
     started=time.perf_counter();bundle=context(conversation);token=PLANNING_CONTEXT.set(bundle)
     resolution=None;memory_usage=None;effective=question
     intent_token=None
@@ -373,7 +373,7 @@ def ask(question,previous=None,use_model=False,model=DEFAULT_MODEL,conversation=
             answer['analysis_brief']['revised_request']=effective
             # A changed request invalidates saved plans, even when planning fails.
             answer['analysis_brief']['status']='revising' if answer.get('result') is None else 'completed'
-            from .analysis_clarification import scope
+            from .conversation import scope
             if answer.get('result'):answer['analysis_brief']['scope']=scope(answer.get('catalog_plan') or answer.get('plan'))
             referenced=re.match(r'^\s*(?:option\s+)?\(?([abc])\)?\s*(?:,|but\b|except\b)',question,re.I)
             if referenced:
@@ -382,7 +382,7 @@ def ask(question,previous=None,use_model=False,model=DEFAULT_MODEL,conversation=
                     answer['analysis_brief']['selected_option']=chosen['id']
                     answer['analysis_brief']['confirmed_decisions']=[{'option':chosen['id'],'interpretation':effective,'qualifications':chosen['qualifications']}]
         if not answer.get('analysis_brief') and answer.get('mode')!='data discovery':
-            from .analysis_clarification import draft
+            from .conversation import draft
             answer['analysis_brief']=draft(effective,answer)
         answer['latency']={**answer.get('latency',{}),'answer_ready_seconds':time.perf_counter()-started,
             'conversation_resolution_seconds':memory_usage['latency_seconds'] if memory_usage else 0,

@@ -187,7 +187,7 @@ class CatalogPlannerTests(unittest.TestCase):
             result.usage.cache_creation_input_tokens=200
             result.usage.cache_read_input_tokens=800
             return result
-        from prototype.memory import PLANNING_CONTEXT
+        from prototype.conversation import PLANNING_CONTEXT
         with patch('prototype.api_client.get_client') as get_client:
             get_client.return_value.messages.create.side_effect=create
             token=PLANNING_CONTEXT.set({'test_context':'Yale conversation'})

@@ -4,7 +4,7 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.agent import ask
-from prototype.memory import context,PLANNING_CONTEXT,local_resolve
+from prototype.conversation import context,PLANNING_CONTEXT,local_resolve
 
 def history():
     return [{'question':"Show Yale's undergraduate population by race and ethnicity in fall 2024",'answer':{'intent':'analyze','catalog_plan':{'version':1,'institutions':['Yale'],'source_years':[2024]},'message':'Source counts'}}]
@@ -32,7 +32,7 @@ class MemoryTests(unittest.TestCase):
         def answer(question,*args):
             seen.append((question,PLANNING_CONTEXT.get()))
             return {'intent':'clarify','message':'Test','model_usage':{'calls':2,'estimated_api_usd':.02}}
-        with patch('prototype.memory.resolve',return_value=(resolved,usage)),patch('prototype.agent._answer',side_effect=answer):
+        with patch('prototype.conversation.resolve',return_value=(resolved,usage)),patch('prototype.agent._answer',side_effect=answer):
             a=ask('now Harvard',use_model=True,conversation=history())
         self.assertEqual(seen[0][0],resolved['question']);self.assertTrue(seen[0][1]['recent_turns'])
         self.assertEqual(a['model_usage']['calls'],3);self.assertAlmostEqual(a['model_usage']['estimated_api_usd'],.03)
@@ -40,19 +40,19 @@ class MemoryTests(unittest.TestCase):
 
     def test_ambiguous_reference_clarifies_without_execution(self):
         resolved={'kind':'clarify','question':'Do you mean the race breakdown or the awards breakdown?','referenced_turns':[1]}
-        with patch('prototype.memory.resolve',return_value=(resolved,{'calls':1,'latency_seconds':.1})),patch('prototype.agent._answer') as execute:
+        with patch('prototype.conversation.resolve',return_value=(resolved,{'calls':1,'latency_seconds':.1})),patch('prototype.agent._answer') as execute:
             a=ask('Change that breakdown',use_model=True,conversation=history())
         self.assertEqual(a['intent'],'clarify');execute.assert_not_called()
 
     def test_clear_context_and_exception_do_not_leak(self):
-        with patch('prototype.memory.resolve') as resolver,patch('prototype.agent._answer',return_value={'intent':'clarify','message':'Test'}):
+        with patch('prototype.conversation.resolve') as resolver,patch('prototype.agent._answer',return_value={'intent':'clarify','message':'Test'}):
             ask('A new conversation',use_model=True,conversation=[]);resolver.assert_not_called()
-        with patch('prototype.memory.resolve',side_effect=ValueError('Test')):
+        with patch('prototype.conversation.resolve',side_effect=ValueError('Test')):
             with self.assertRaises(ValueError):ask('followup',use_model=True,conversation=history())
         self.assertIsNone(PLANNING_CONTEXT.get())
 
     def test_resolver_transport_and_explicit_period_protection(self):
-        from prototype.memory import resolve
+        from prototype.conversation import resolve
         from prototype.tests.test_catalog_planner import block,response
         from unittest.mock import MagicMock
         b=context(history())

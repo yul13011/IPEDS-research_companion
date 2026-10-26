@@ -57,7 +57,7 @@ class TrendFollowupTests(unittest.TestCase):
         before=deepcopy(base)
         history=[{'question':'how many students does mount holyoke have','answer':finalize_answer({'result':base,'plan':base['plan']})}]
         resolved={'kind':'followup','question':'Show a 10-year trend of total enrollment (fall credit headcount) for Mount Holyoke College (UNITID 166939), ending with fall 2024.','referenced_turns':[1]}
-        with patch('prototype.memory.resolve',return_value=(resolved,{'calls':1,'latency_seconds':.01})),patch('prototype.agent.model_plan',return_value={'intent':'analyze','plan':{**base['plan'],'output':'chart'}}):
+        with patch('prototype.conversation.resolve',return_value=(resolved,{'calls':1,'latency_seconds':.01})),patch('prototype.agent.model_plan',return_value={'intent':'analyze','plan':{**base['plan'],'output':'chart'}}):
             answer=ask('Show a 10-year trend.',previous=base['plan'],use_model=True,conversation=history)
         self.assertEqual(answer['intent'],'analyze');self.assertEqual(answer['presentation']['chart_type'],'line')
         rows=answer['result']['rows'];self.assertEqual([r['observation_year'] for r in rows],list(range(2015,2025)))

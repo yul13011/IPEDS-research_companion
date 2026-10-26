@@ -1,7 +1,7 @@
 """Bounded request plans, dependency validation and an explicit outcome ledger."""
 from copy import deepcopy
 import json,re,time
-from . import working_analysis as working
+from . import conversation as working
 
 COVERAGE_SCHEMA={'type':'object','properties':{
     'operation':{'type':'string','enum':['none','check','periods','releases','overview','capabilities']},

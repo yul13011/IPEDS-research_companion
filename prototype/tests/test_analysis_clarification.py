@@ -6,9 +6,9 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.tests.test_query_engine import source,plan,field_ref
 from prototype.tests.test_catalog_planner import block,response
-from prototype.analysis_clarification import prepare,select
+from prototype.conversation import prepare,select
 from prototype.agent import ask
-from prototype.memory import context
+from prototype.conversation import context
 from prototype.catalog import readonly,annual_path
 
 
@@ -51,7 +51,7 @@ class ClarificationTests(unittest.TestCase):
         self.assertIsNone(select('Show Harvard tuition',h))
 
     def test_selected_plan_runs_without_llm_or_replanning(self):
-        with patch('prototype.memory.resolve',side_effect=AssertionError('No resolver')),patch('prototype.agent._answer',side_effect=AssertionError('No replanning')):
+        with patch('prototype.conversation.resolve',side_effect=AssertionError('No resolver')),patch('prototype.agent._answer',side_effect=AssertionError('No replanning')):
             a=ask('A',conversation=self.history(),use_model=True)
         with readonly(annual_path(2024)) as db:expected=db.execute('SELECT EFTOTAL FROM EF2024 WHERE UNITID=130794 AND EFLEVEL=20').fetchone()[0]
         self.assertEqual(a['intent'],'analyze');self.assertEqual(a['result']['rows'][0]['value'],float(expected))
@@ -91,7 +91,7 @@ class ClarificationTests(unittest.TestCase):
         self.assertNotIn('result',a);self.assertEqual(a['analysis_brief']['status'],'failed')
 
     def test_confirmed_bundle_finishes_without_reasking_or_double_query(self):
-        from prototype.analysis_clarification import prepare_bundle
+        from prototype.conversation import prepare_bundle
         from prototype.agent import _answer
         s,d=source('S2024_SIS',fields=['SISPROF'],filters={'FACSTAT':['20','30']},aggregates=[('count','sum','SISPROF',None)])
         p=plan([s],[('as_count','Ladder professors')],institutions=['130493'])
@@ -134,7 +134,7 @@ class ClarificationTests(unittest.TestCase):
     def test_modified_reply_uses_brief_and_invalidates_old_plan(self):
         h=self.history()
         resolved={'kind':'followup','question':'Show Yale women first-year undergraduates in Fall 2024.','referenced_turns':[1]}
-        with patch('prototype.memory.resolve',return_value=(resolved,{'calls':1,'latency_seconds':.1})),patch('prototype.agent._answer',return_value={'intent':'clarify','message':'Planning limit'}) as planner:
+        with patch('prototype.conversation.resolve',return_value=(resolved,{'calls':1,'latency_seconds':.1})),patch('prototype.agent._answer',return_value={'intent':'clarify','message':'Planning limit'}) as planner:
             a=ask('B, but only first-year students',conversation=h,use_model=True)
         self.assertEqual(planner.call_args.args[0],resolved['question'])
         self.assertEqual(a['analysis_brief']['status'],'revising')
@@ -142,7 +142,7 @@ class ClarificationTests(unittest.TestCase):
         b=context(h)['analysis_brief'];self.assertEqual(len(b['options']),2);self.assertNotIn('plan',b['options'][0])
 
     def test_new_topic_discards_pending(self):
-        with patch('prototype.memory.resolve',return_value=({'kind':'new','question':'Harvard tuition 2024','referenced_turns':[]},{'calls':1,'latency_seconds':.1})),patch('prototype.agent._answer',return_value={'intent':'clarify','message':'New task'}):
+        with patch('prototype.conversation.resolve',return_value=({'kind':'new','question':'Harvard tuition 2024','referenced_turns':[]},{'calls':1,'latency_seconds':.1})),patch('prototype.agent._answer',return_value={'intent':'clarify','message':'New task'}):
             a=ask('Harvard tuition 2024',conversation=self.history(),use_model=True)
         self.assertEqual(a['analysis_brief']['original_question'],'Harvard tuition 2024')
         self.assertEqual(a['analysis_brief']['options'],[])

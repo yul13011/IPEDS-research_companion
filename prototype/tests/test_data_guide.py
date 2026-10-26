@@ -1,6 +1,6 @@
 """Beginner orientation stays grounded in loaded source documentation."""
 import unittest
-from prototype import discovery as data_guide,coverage,working_analysis
+from prototype import discovery as data_guide,coverage,conversation as working_analysis
 from prototype.tests.test_request_tasks import query
 
 

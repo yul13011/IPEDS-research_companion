@@ -472,7 +472,7 @@ TOOL_SCHEMAS={'search_catalog':SEARCH_SCHEMA,'inspect_table':INSPECT_SCHEMA,
               'submit_catalog_plan':PLAN_SCHEMA,'ask_clarification':CLARIFY_SCHEMA}
 from .query_schema import QUERY_SCHEMA,REFERENCE_HELP
 TOOL_SCHEMAS['submit_query_plan']=QUERY_SCHEMA
-from .analysis_clarification import CLARIFICATION_SCHEMA,BUNDLE_SCHEMA
+from .conversation import CLARIFICATION_SCHEMA,BUNDLE_SCHEMA
 TOOL_SCHEMAS['offer_analysis_options']=CLARIFICATION_SCHEMA
 TOOL_SCHEMAS['submit_analysis_bundle']=BUNDLE_SCHEMA
 TOOL_SCHEMAS['submit_annual_plan']=obj({'template':PLAN_SCHEMA,'years':array(INTEGER)})
@@ -649,7 +649,7 @@ def model_catalog_plan(question,previous=None,model=None):
             cards.append({'table':r['table_name'],'release':r['release_id'],
                           'title':population[0]['title'] if population else r['table_name'],
                           'reporting_periods':json.loads(r['period_evidence_json'])})
-    from .memory import PLANNING_CONTEXT
+    from .conversation import PLANNING_CONTEXT
     from .institution_confirmation import confirmed_scope
     # Cache only an exact, deterministically ordered catalog prefix across questions.
     # Keep session-specific context after it; never cache answers locally.
@@ -748,11 +748,11 @@ def model_catalog_plan(question,previous=None,model=None):
                     return prepare_gap(block.input,question,metrics,inspections)
                 if block.name=='submit_analysis_bundle':
                     if len(blocks)!=1:raise ValueError('Submit the final analysis bundle alone.')
-                    from .analysis_clarification import prepare_bundle
+                    from .conversation import prepare_bundle
                     return prepare_bundle(block.input,question,metrics)
                 if block.name=='offer_analysis_options':
                     if len(blocks)!=1:raise ValueError('Offer choices alone after metadata inspection finishes.')
-                    from .analysis_clarification import prepare
+                    from .conversation import prepare
                     return prepare(block.input,question,metrics)
                 if block.name=='submit_query_plan':
                     if len(blocks)!=1:raise ValueError('Submit the final query alone after inspection tools finish.')

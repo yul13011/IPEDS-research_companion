@@ -164,7 +164,7 @@ class NarrativeTests(unittest.TestCase):
     def test_all_routes_forward_writer_settings_and_skip_analytical_planning(self):
         from prototype.agent import ask
         from prototype.institution_confirmation import ask as wrapped
-        with patch('prototype.discovery.interpret',return_value=({'status':'no_verified_expansion','calls':0,'elapsed_seconds':0,'ambiguous':False,'verified':[]},[],None)),patch('prototype.discovery.write',side_effect=lambda a,q,m:{**a,'writer_model':m}) as writer,patch('prototype.agent.model_plan',side_effect=AssertionError('No analytical planning')),patch('prototype.memory.resolve',side_effect=AssertionError('No topic rewriting')),patch('prototype.institution_confirmation.mentions',side_effect=AssertionError('No institution resolution')):
+        with patch('prototype.discovery.interpret',return_value=({'status':'no_verified_expansion','calls':0,'elapsed_seconds':0,'ambiguous':False,'verified':[]},[],None)),patch('prototype.discovery.write',side_effect=lambda a,q,m:{**a,'writer_model':m}) as writer,patch('prototype.agent.model_plan',side_effect=AssertionError('No analytical planning')),patch('prototype.conversation.resolve',side_effect=AssertionError('No topic rewriting')),patch('prototype.institution_confirmation.mentions',side_effect=AssertionError('No institution resolution')):
             for route in [ask,wrapped]:
                 answer=route(self.question,use_model=True,model='claude-haiku-5-5')
                 self.assertEqual(answer['writer_model'],'claude-haiku-5-5')

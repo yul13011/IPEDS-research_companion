@@ -224,7 +224,7 @@ def answer(query,working=None):
 """Explain source limitations before optional, independently validated proxies."""
 from copy import deepcopy
 from .query_schema import obj,array,STRING
-from .analysis_clarification import OPTION_SCHEMA,prepare,draft
+from .conversation import OPTION_SCHEMA,prepare,draft
 
 GAP_SCHEMA=obj({'missing_information':STRING,'explanation':STRING,
     'status':{'type':'string','enum':['coverage_gap','unresolved_definition','incomplete_search']},

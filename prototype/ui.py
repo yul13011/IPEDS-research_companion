@@ -32,7 +32,7 @@ def queue_example(example_id):
 
 
 def queue_analysis_choice(brief_id, option_id):
-    from .analysis_clarification import latest
+    from .conversation import latest
     brief=latest(st.session_state.history)
     if brief and brief['id']==brief_id and brief['status'] in {'pending','failed'}:
         st.session_state.pending_action={'type':'chat','question':option_id};navigate()
@@ -92,7 +92,7 @@ def run_pending():
                 answer={'intent':'analyze','plan':result['plan'],'result':result,'message':'Extract created from a validated selection.','mode':'extract builder'}
             else:
                 question=pending['question']
-                from .working_analysis import recent_result
+                from .conversation import recent_result
                 previous=recent_result(s.history)
                 if previous:
                     from .charts import effective
@@ -108,7 +108,7 @@ def run_pending():
                     if answer is None:
                         report('Checking whether this is a display change…')
                         answer=adjust_presentation(question,previous)
-                from .working_analysis import results
+                from .conversation import results
                 for edited in results(answer or {}):
                   if edited.get('mode')=='presentation adjustment':
                     from .charts import commit
@@ -225,7 +225,7 @@ def render_answer(answer,key,compact=True):
     if answer.get('institution_identity',{}).get('labels'):st.caption('Institution: '+'; '.join(label.split(' · UNITID')[0] for label in answer['institution_identity']['labels']))
     brief=answer.get('analysis_brief')
     if brief and brief.get('options'):
-        from .analysis_clarification import latest
+        from .conversation import latest
         current=latest(s.get('history',[]))
         if brief['status'] in {'pending','failed'} and current is brief:
             for col,option in zip(st.columns(len(brief['options'])),brief['options']):

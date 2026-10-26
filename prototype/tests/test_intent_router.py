@@ -131,7 +131,7 @@ class IntentRouterTests(unittest.TestCase):
         from prototype import agent
         d=decision('numerical','Show Harvard admission rate in 2024',refs=[1])
         executor=lambda q,p,u,m,**kwargs:agent.ask(q,p,u,m,conversation=kwargs['conversation'])
-        with (patch('prototype.memory.resolve',side_effect=AssertionError('Duplicate context call')),
+        with (patch('prototype.conversation.resolve',side_effect=AssertionError('Duplicate context call')),
               patch('prototype.agent._answer',return_value={'intent':'clarify','message':'Planner reached'})):
             a=self.run_request(d,'What about Harvard?',executor)
         self.assertEqual(a['conversation_resolution']['kind'],'followup');self.assertIsNone(router.INTERPRETED.get())

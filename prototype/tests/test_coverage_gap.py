@@ -5,7 +5,7 @@ from unittest.mock import patch,MagicMock
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.coverage import prepare_gap
-from prototype.analysis_clarification import prepare,select
+from prototype.conversation import prepare,select
 from prototype.tests.test_query_engine import source,plan,field_ref
 from prototype.tests.test_catalog_planner import block,response
 from prototype.agent import ask
@@ -40,7 +40,7 @@ class CoverageGapTests(unittest.TestCase):
         self.assertFalse(a['analysis_brief']['open_questions'])
         history=[{'question':'Classify Yale','answer':a}]
         self.assertIsNone(select('continue',history))
-        with patch('prototype.memory.resolve',side_effect=AssertionError('No guessed proxy choice')):
+        with patch('prototype.conversation.resolve',side_effect=AssertionError('No guessed proxy choice')):
             self.assertNotIn('result',ask('continue',conversation=history,use_model=True))
         self.assertIsNotNone(select('try optional proxy A',history))
         with patch('prototype.agent._answer',side_effect=AssertionError('No model planning')):

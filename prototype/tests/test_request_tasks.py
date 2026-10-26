@@ -4,7 +4,7 @@ from copy import deepcopy
 from unittest.mock import Mock,patch
 import sys,unittest
 ROOT=Path(__file__).resolve().parents[2];sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
-from prototype import intent_router as router,working_analysis as working,coverage
+from prototype import intent_router as router,conversation as working,coverage
 from prototype.tests.test_intent_router import decision,edit,USAGE
 from prototype.analytics import Plan,execute
 from prototype.responses import finalize_answer

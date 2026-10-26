@@ -121,7 +121,7 @@ def charts_context(history,overrides=None):
     from .responses import presentation_for
     seen=set();charts=[];answers={}
     for index in range(len(history or [])-1,-1,-1):
-      from .working_analysis import results,subject_for,prompt_context
+      from .conversation import results,subject_for,prompt_context
       for answer in reversed(list(results(history[index].get('answer',{})))):
         result=answer.get('result')
         if not result or not result.get('result_id') or result['result_id'] in seen:continue
@@ -146,7 +146,7 @@ def charts_context(history,overrides=None):
 def interpret(question,history,model,overrides=None):
     import anthropic,jsonschema
     from .agent import api_key,usage_cost,MODEL_LABELS
-    from .memory import context
+    from .conversation import context
     if not isinstance(question,str) or not 1<=len(question.strip())<=4000:raise ValueError('Enter a question of at most 4,000 characters.')
     if model not in MODEL_LABELS:raise ValueError('Choose an available planner model.')
     context_started=time.perf_counter()
@@ -157,7 +157,7 @@ def interpret(question,history,model,overrides=None):
     from .discovery import topic_index
     from .coverage import inventory
     from .purpose import describe
-    from .working_analysis import from_history,prompt_context
+    from .conversation import from_history,prompt_context
     payload={'question':question,'conversation':bundle,'charts':charts,
              'working_analysis':prompt_context(from_history(history)),'coverage_catalogue':inventory(),'data_guide_topics':topic_index(),'application_capabilities':describe(),
              'available_chart_settings':{'bounds':BOUNDS,'enums':ENUMS,'settings':SETTINGS}}
@@ -246,7 +246,7 @@ def validate_decision(d,original,history,answers):
     if d['route'] not in {'chart_edit','mixed'} and d['chart_edits']:raise ValueError('Chart changes were attached to an incompatible route.')
     if d['route']=='chart_edit':
         if d['target_result_id'] not in answers or not d['chart_edits']:raise ValueError('Please identify an existing chart and the change you want.')
-        from .working_analysis import results
+        from .conversation import results
         if not any(a['result']['result_id']==d['target_result_id'] for i in d['referenced_turns'] for a in results(history[i-1].get('answer',{}))):raise ValueError('The selected chart does not match the referenced answer.')
     elif d['route'] not in {'mixed','clarify'} and d['target_result_id']:raise ValueError('A chart target was attached to an incompatible route.')
     doc=d['documentation']
@@ -341,7 +341,7 @@ def handle(question,previous,model,history,executor,overrides=None,institution_c
         decision=validate(decision,question,history,answers,SCHEMA)
         return execute(decision,question,previous,model,history,executor,usage,overrides,institution_choices)
     answer=dispatch(question,previous,model,history,executor,decision,usage,answers,institution_choices)
-    from .working_analysis import from_history,update
+    from .conversation import from_history,update
     from .request_tasks import status
     answer['working_analysis']=update(from_history(history),answer,decision['question'],len(history or [])+1)
     answer['task_tracking']={'tasks':[{'id':'t1','request':question,'depends_on':[],'status':status(answer)}],'complete':status(answer) in {'answered','unavailable','unsupported'}}
@@ -382,10 +382,10 @@ def dispatch(question,previous,model,history,executor,decision,usage,answers,ins
             if institution_choices:args['institution_choices']=institution_choices
             prior=None
             if subject_answer is not None:
-                from .working_analysis import plan_for
+                from .conversation import plan_for
                 prior=plan_for(subject_answer)
             elif decision['relationship']!='new':
-                from .working_analysis import results
+                from .conversation import results
                 referenced=[]
                 for i in decision['referenced_turns']:
                     source_answer=history[i-1]['answer']

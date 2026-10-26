@@ -10,7 +10,7 @@ from prototype.intent_checks import CURRENT,contract,check_plan,check_result,Int
 from prototype.analytics import Plan,execute
 from prototype.responses import finalize_answer
 from prototype.agent import ask
-from prototype.memory import context
+from prototype.conversation import context
 
 @contextmanager
 def request(q,history=None,resolved=None):
@@ -115,7 +115,7 @@ class IntentCheckTests(unittest.TestCase):
     def test_semantic_failure_clarifies_and_context_does_not_leak(self):
         old={'question':'Total enrollment for 166939 in 2024','answer':{'plan':{**self.result['plan'],'years':[2024]}}}
         rewritten={'kind':'followup','question':'Total enrollment for 166939 in 2024','referenced_turns':[1]}
-        with patch('prototype.memory.resolve',return_value=(rewritten,{'calls':1,'latency_seconds':.01})),patch('prototype.agent.model_plan',return_value={'intent':'analyze','plan':old['answer']['plan']}),patch('prototype.analytics.compile_query',side_effect=AssertionError('No fact SQL')):
+        with patch('prototype.conversation.resolve',return_value=(rewritten,{'calls':1,'latency_seconds':.01})),patch('prototype.agent.model_plan',return_value={'intent':'analyze','plan':old['answer']['plan']}),patch('prototype.analytics.compile_query',side_effect=AssertionError('No fact SQL')):
             a=ask('Show a 10-year trend.',use_model=True,conversation=[old])
         self.assertEqual(a['intent'],'clarify');self.assertNotIn('result',a);self.assertEqual(a['mode'],'intent validation')
         self.assertIsNone(CURRENT.get())
@@ -137,7 +137,7 @@ class IntentCheckTests(unittest.TestCase):
                  ('Show percentages','Show Yale undergraduate enrollment by gender as percentages from fall 2015 through fall 2024')]
         for q,standalone in queries:
             start=time.perf_counter()
-            with patch('prototype.memory.resolve',return_value=({'kind':'followup','question':standalone,'referenced_turns':[len(h)]},{'calls':1,'latency_seconds':.01})):
+            with patch('prototype.conversation.resolve',return_value=({'kind':'followup','question':standalone,'referenced_turns':[len(h)]},{'calls':1,'latency_seconds':.01})):
                 a=ask(q,previous=h[-1]['answer'].get('catalog_plan') if h else None,use_model=True,conversation=h)
             self.assertIn('result',a,a.get('message'));self.assertEqual(a['result']['intent_validation']['status'],'passed')
             h.append({'question':q,'answer':a});latencies.append(time.perf_counter()-start)
