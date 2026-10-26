@@ -111,6 +111,21 @@ def leaf_domain(field,code_rows):
     return bool(re.search(r'rank|classif|categor|level|status|program|gender|sex|race|occupation|assigned',field['title']+' '+field['long_description'],re.I))
 
 
+def check_fiscal_year(sources,question):
+    """Guard the IPEDS finance off-by-one. A hyphenated "YYYY-YY" span (e.g. "2022-23")
+    names a fiscal year by its END year (2023). Finance tables are named F{aa}{bb} for
+    fiscal year 20aa-20bb and are published in the NEXT collection release, so binding the
+    collection-year folder (table F2122 in the 2022-23 release) instead of FY2022-23
+    (table F2223) is a silent off-by-one. Reject a selected finance table whose own fiscal
+    year end does not match the requested one."""
+    for start,two in re.findall(r'\b((?:19|20)\d{2})[-–/](\d{2})\b',question):
+        end_year=int(start)//100*100+int(two)
+        for s in sources:
+            m=re.match(r'f(\d{2})(\d{2})(?:_|$)',str(s.get('table','')),re.I)
+            if m and 2000+int(m[2])!=end_year:
+                raise ValueError('Requested fiscal year '+start+'-'+two+' needs the finance table whose fiscal year ends '+str(end_year)+' (e.g. F'+start[2:]+two+'); the selected '+str(s['table']).upper()+' covers a different fiscal year. No release-year substitution.')
+
+
 def bind(plan,question):
     import jsonschema
     jsonschema.validate(plan,QUERY_SCHEMA)
@@ -234,6 +249,7 @@ def bind(plan,question):
         expected_kind='fall' if kind.lower()=='fall' else 'fiscal' if kind.lower().startswith('fiscal') else 'academic'
         if not any(p['kind']==expected_kind and int(year)==(p['end'] if expected_kind=='fiscal' else p['start']) for p in periods):
             raise ValueError('Requested '+kind+' '+year+' is not supported by the selected source observation periods; no date substitution.')
+    check_fiscal_year(plan['sources'],question)
     return {'plan':plan,'definitions':defs,'descriptors':descriptors,'contexts':contexts,'codes':codes,'evidence':evidence,'populations':populations}
 
 
