@@ -69,13 +69,41 @@ not waste, drives most of the size.
 
 ## Phase 1 — Functionality inventory
 
-- [ ] Enumerate every supported question type / feature, each with a concrete example and
-      the module(s) that implement it (routes: reviewed measures, catalog discovery,
-      definitions, documentation, data guide, aggregates/populations, categorical
-      observations, charts/presentation, exports, conversation memory/clarification,
-      institution confirmation).
-- [ ] For each, record owner decision: **keep / simplify / drop**, with a one-line reason.
-- [ ] Output: a feature → module map that the rest of the plan references.
+- [x] Enumerated every supported feature → current (post-consolidation) module.
+- [x] Owner stance (stated 2026-10-26): **keep all functionality.** No features marked drop.
+      A few are flagged ⚠ *simplify-candidate* — streamline without losing the capability,
+      owner to confirm. D1 satisfied as "keep all; simplify-candidates pending owner yes/no".
+- [x] Output table below; the rest of the plan references it.
+
+| # | Feature (example) | Module(s) | Disposition |
+| --- | --- | --- | --- |
+| 1 | Greetings/thanks/help ("what can you do?") | `purpose` | Keep |
+| 2 | Capability answers ("what chart types?") | `purpose` | Keep |
+| 3 | Data-area overview + interpretation + AI narrative + beginner guide | `discovery` | Keep · ⚠ the AI-narrative writing step could be optional/trimmed |
+| 4 | Coverage / years available | `coverage` | Keep |
+| 5 | Definitions / labels / codes / "how calculated" | `definitions` | Keep |
+| 6 | Reviewed measures (36: admissions, SAT, enrollment, grad rates, awards, aid) | `analytics` + `measure-registry/` | Keep (fast path) |
+| 7 | Catalog-discovered measures (anything outside the 36) | `catalog_planner` + `catalog_execution` | Keep (core) |
+| 8 | General calculations / joins / weighted means / % change | `query_engine` + `query_schema` | Keep (core) |
+| 9 | National/state/sector aggregates + institution counts | `populations` | Keep |
+| 10 | Units / currency / field semantics | `semantics` | Keep (core) |
+| 11 | Categorical lookups & institution lists | `observations` | Keep |
+| 12 | Intent routing (classify every prompt) | `intent_router` | Keep (core) |
+| 13 | Multi-part requests / task tracking | `request_tasks` | Keep · ⚠ simplify-candidate (extra complexity; confirm it's needed) |
+| 14 | Conversation memory / follow-ups / clarification / working-analysis | `conversation` | Keep |
+| 15 | Institution confirmation / aliases / named groups | `institution_confirmation` | Keep |
+| 16 | Independent request/plan/result validation | `intent_checks` | Keep (core safety) |
+| 17 | Time / period binding (cohort vs observation vs class; trends) | `time_scope` | Keep (core) |
+| 18 | Answer text / source disclosure / "Data used" | `responses` | Keep |
+| 19 | Charts (line/bar/grouped/panels) + formatting + NL chart edits | `charts`, `components` | Keep · ⚠ NL chart-edit surface is large (see F009–F012); could narrow |
+| 20 | Exports (Excel+methodology / CSV / provenance JSON) | `exports` | Keep |
+| 21 | Explore / Ask&Analyze / Build-extract / Browse-defs / About pages | `ui`, `workflows`, `components` | Keep · ⚠ Build-a-data-extract wizard and Browse-definitions overlap the chat path |
+| 22 | Model policy (Automatic Haiku/Sonnet, retries, cost) | `model_policy`, `api_client` | Keep |
+| 23 | Progress messages | `progress` | Keep |
+| 24 | Catalog search / institution resolution / source evidence | `catalog` | Keep (core) |
+
+No features recommended for removal. The ⚠ items (#3, #13, #19, #21) are the only places
+Lever B (prune/simplify) would remove code, and each needs an explicit owner yes/no.
 
 ## Phase 2 — Non-app bulk relocation (Lever A, safe)
 
@@ -127,13 +155,69 @@ not waste, drives most of the size.
 - [ ] Before/after metrics recorded in the table above.
 - [ ] Short migration note so the structure is self-explanatory.
 
+## D2 — Architecture fork analysis (for owner decision)
+
+The feature inventory shows **no features to drop**, so Lever B frees little code. The only
+lever that can shrink the *essential core* (`catalog_planner` 824 + `query_engine` 782 +
+`catalog_execution` + `intent_checks` + `semantics` ≈ 2,800 LOC) is **Lever C — the
+architecture**. This is the pivotal choice.
+
+### Why the core is big
+This app forbids LLM-written SQL. Instead the model emits a **typed plan**, deterministic
+code **validates** it against the real metadata/physical schema and **compiles** it to
+bounded read-only SQL over the full raw catalog (10 releases · ~509 tables · 24k variables),
+then validates the result. That safety/breadth is exactly what makes it ~6× Gradrate, whose
+single 1,570-line file just lets the model write SQL against **one** fixed, tiny table.
+
+### Option A — keep "typed plans everywhere / no LLM SQL" (status quo)
+- **Pros:** strongest safety (no arbitrary SQL), structured provenance on every answer,
+  uniform handling across all 509 tables, already built and tested.
+- **Cons:** the core stays ~2,800 LOC; every new capability needs plan-schema + validator +
+  compiler support; multi-call planning is the main latency/cost driver (cold ~38s, up to
+  ~$0.11/answer); hardest lever for the owner to extend.
+- **Net:** after consolidation + Phase 2 the app is far more navigable; if the owner's pain
+  was reviewability, Option A may already be "good enough" and C is unnecessary.
+
+### Option C — curated analytical views + guarded SQL for common domains
+Build a **small number of clean, documented, year-harmonized views** (DuckDB/SQLite) for the
+domains that carry most questions — e.g. enrollment, completions/grad rates, admissions/SAT,
+finance, faculty/salary, aid — one tidy table each (Gradrate-style). Let the model write SQL
+against **only those views** through a read-only guarded executor (view allowlist, read-only
+connection, SQL parse/validate, row/time limits). Keep the typed-plan engine only for the
+open-ended long tail (arbitrary variables, novel joins).
+- **Pros:** collapses most of the planner/compiler for the common 80% (the model does
+  schema-reading + SQL over a tiny curated schema, like Gradrate); **faster** (one SQL gen,
+  not multi-call planning); **easy to extend** (add a view); closest to the Gradrate
+  simplicity the owner liked.
+- **Cons / risks:** (1) you must **build and verify** the harmonized views across 10 years of
+  schema drift (CIP 2010→2020, finance/COST reorg, aid moves) — real data-engineering with
+  its own correctness burden; (2) LLM SQL reintroduces wrong-join/filter/hallucinated-column
+  risk (mitigated because the curated schema is tiny + validated + read-only, as Gradrate
+  shows); (3) less fine-grained provenance than typed plans unless re-added; (4) two engines
+  to maintain during transition; (5) the open methodology questions (the 13 Yale
+  discrepancies, national-aggregate rules) must be re-decided *inside* the views.
+
+### Recommendation: a de-risked, incremental hybrid
+Do **not** rewrite the engine wholesale. Instead:
+1. Pick **one** high-traffic domain (candidate: six-year graduation rates, or fall
+   enrollment — both already well-understood and benchmarked).
+2. Build a single curated, year-harmonized view for it, plus a guarded read-only SQL path.
+3. Run both engines on the same question set; compare **code size, latency, cost, and
+   accuracy** (reuse the diagnostic batch harness).
+4. Expand to more domains only if the pilot clearly wins; keep the typed-plan engine as the
+   long-tail fallback either way.
+
+This matches the plan's "analysis before surgery" principle and makes D2 an evidence-based
+call rather than a bet. **Owner decision needed:** (a) stay on Option A (stop here — the app
+is already much simpler), or (b) authorize the Option C pilot on one domain.
+
 ## Open decisions log
 
 | ID | Decision | Status |
 | --- | --- | --- |
-| D1 | Feature inventory keep/simplify/drop | Pending |
-| D2 | Architecture fork (typed-plan everywhere vs. curated views + guarded SQL) | Pending |
-| D3 | Target module map approval | Pending |
+| D1 | Feature inventory keep/simplify/drop | Done — keep all; ⚠ simplify-candidates #3/#13/#19/#21 pending owner yes/no |
+| D2 | Architecture fork (typed-plan everywhere vs. curated views + guarded SQL) | Analysis done; recommend **Option C pilot on one domain**. Owner to choose A (stop) vs C (pilot) |
+| D3 | Target module map approval | Satisfied for the ✅ consolidation groups (done); full ~15–18 map not finalized |
 
 ## Change log
 
