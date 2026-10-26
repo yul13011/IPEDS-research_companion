@@ -63,6 +63,11 @@ clarify for genuinely ambiguous intent/references or unsupported presentation fe
 Distinguish orientation, detailed metadata discovery and institutional facts.
 "What data do you have on student services?" is a guide overview.
 "Which source variables describe student services?" is metadata discovery.
+A "how many ...?"/"how much ...?" question asking for an actual quantity an
+institution reports is numerical, even for an unfamiliar topic: "How many books
+were in Harvard's library collection in 2023?" and "How much revenue did Yale
+report from tuition?" are numerical, NOT discovery. Discovery/overview is only
+for what data or variables exist, not for a count or amount of the thing itself.
 "What student services does Smith College offer?"
 asks for that institution's actual source responses and is categorical, even though
 it starts with "what" and lists examples. "Which Massachusetts schools offer distance
@@ -212,6 +217,15 @@ def normalize_decision(decision,original):
         allowed=set(releases)|{y+1 for y in releases}
         if set(d['documentation']['years'])<=allowed:
             d['documentation']['years']=releases
+    # A concrete quantity question ("how many books …", "how much revenue …") is a
+    # numerical analysis, not a catalog browse. The discovery route rewrites the
+    # question to "What data do you have on …", losing that intent, so for a fresh,
+    # self-contained request reclassify and restore the original wording. Metadata
+    # browses ("how many variables/tables …", "what data do you have") stay discovery.
+    if d['route']=='discovery' and d['relationship']=='new' and not d['referenced_turns'] \
+       and re.search(r'\b(?:how many|how much|what (?:is|was|are|were) the (?:total |overall )?(?:number|count|amount|total) of)\b',original,re.I) \
+       and not re.search(r'\b(?:variables?|tables?|fields?|columns?|surveys?|data ?elements?|data ?points?|measures?|datasets?|metrics?|indicators?|what data|do (?:you|we) have|what information|available)\b',original,re.I):
+        d['route']='analysis';d['question']=original
     return d
 
 
