@@ -7,7 +7,7 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.discovery import overview
-from prototype.discovery_narrative import evidence_package,validate,render,write,QUALIFICATIONS,normalize_editorial
+from prototype.discovery import evidence_package,validate,render,write,QUALIFICATIONS,normalize_editorial
 
 
 def valid_draft(package):
@@ -107,7 +107,7 @@ class NarrativeTests(unittest.TestCase):
         self.assertIn('Year filters select source releases, not necessarily the observation years.',render(draft,answer,package))
 
     def test_small_editorial_overrun_does_not_discard_verified_answer(self):
-        from prototype.discovery_narrative import words
+        from prototype.discovery import words
         package=deepcopy(self.package);draft=valid_draft(package)
         total=sum(len(words(p['title']+' '+p['text'])) for b in draft['blocks'] for p in b['points'])
         package['max_prose_words']=total-1
@@ -164,7 +164,7 @@ class NarrativeTests(unittest.TestCase):
     def test_all_routes_forward_writer_settings_and_skip_analytical_planning(self):
         from prototype.agent import ask
         from prototype.institution_confirmation import ask as wrapped
-        with patch('prototype.discovery_interpretation.interpret',return_value=({'status':'no_verified_expansion','calls':0,'elapsed_seconds':0,'ambiguous':False,'verified':[]},[],None)),patch('prototype.discovery_narrative.write',side_effect=lambda a,q,m:{**a,'writer_model':m}) as writer,patch('prototype.agent.model_plan',side_effect=AssertionError('No analytical planning')),patch('prototype.memory.resolve',side_effect=AssertionError('No topic rewriting')),patch('prototype.institution_confirmation.mentions',side_effect=AssertionError('No institution resolution')):
+        with patch('prototype.discovery.interpret',return_value=({'status':'no_verified_expansion','calls':0,'elapsed_seconds':0,'ambiguous':False,'verified':[]},[],None)),patch('prototype.discovery.write',side_effect=lambda a,q,m:{**a,'writer_model':m}) as writer,patch('prototype.agent.model_plan',side_effect=AssertionError('No analytical planning')),patch('prototype.memory.resolve',side_effect=AssertionError('No topic rewriting')),patch('prototype.institution_confirmation.mentions',side_effect=AssertionError('No institution resolution')):
             for route in [ask,wrapped]:
                 answer=route(self.question,use_model=True,model='claude-haiku-5-5')
                 self.assertEqual(answer['writer_model'],'claude-haiku-5-5')
@@ -176,7 +176,7 @@ class NarrativeTests(unittest.TestCase):
         app=AppTest.from_file(str(ROOT/'prototype/app.py'),default_timeout=60).run()
         app.session_state['use_ai']=True
         app.button(key='nav_ask').click().run()
-        with patch('prototype.intent_router.interpret',return_value=(decision('discovery',self.question),USAGE,{})),patch('prototype.discovery_interpretation.interpret',return_value=({'status':'no_verified_expansion','calls':0,'elapsed_seconds':0,'ambiguous':False,'verified':[]},[],None)),patch('prototype.agent.api_key',return_value='test-only'),patch('anthropic.Anthropic') as client:
+        with patch('prototype.intent_router.interpret',return_value=(decision('discovery',self.question),USAGE,{})),patch('prototype.discovery.interpret',return_value=({'status':'no_verified_expansion','calls':0,'elapsed_seconds':0,'ambiguous':False,'verified':[]},[],None)),patch('prototype.agent.api_key',return_value='test-only'),patch('anthropic.Anthropic') as client:
             client.return_value.messages.create.return_value=response(valid_draft(self.package))
             app.chat_input(key='initial_question').set_value(self.question).run()
         self.assertFalse(app.exception)

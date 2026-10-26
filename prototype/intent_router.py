@@ -154,7 +154,7 @@ def interpret(question,history,model,overrides=None):
     bundle=context(history)
     bundle.pop('working_analysis',None)  # Supplied once, explicitly below.
     from .request_tasks import schema as request_schema,INSTRUCTIONS
-    from .data_guide import topic_index
+    from .discovery import topic_index
     from .coverage import inventory
     from .purpose import describe
     from .working_analysis import from_history,prompt_context

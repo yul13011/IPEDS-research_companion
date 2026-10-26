@@ -1,6 +1,6 @@
 """Beginner orientation stays grounded in loaded source documentation."""
 import unittest
-from prototype import data_guide,coverage,working_analysis
+from prototype import discovery as data_guide,coverage,working_analysis
 from prototype.tests.test_request_tasks import query
 
 
@@ -14,9 +14,9 @@ class DataGuideTests(unittest.TestCase):
         self.assertIn('not individual student records',guide['markdown'])
 
     def test_broad_orientation_and_topic_search(self):
-        self.assertEqual(len(data_guide.answer()['guide']['section_ids']),12)
-        self.assertIn('staff',data_guide.answer('faculty employees salary')['guide']['section_ids'])
-        self.assertIn('does not prove',data_guide.answer('qzxabc')['message'])
+        self.assertEqual(len(data_guide.guide_answer()['guide']['section_ids']),12)
+        self.assertIn('staff',data_guide.guide_answer('faculty employees salary')['guide']['section_ids'])
+        self.assertIn('does not prove',data_guide.guide_answer('qzxabc')['message'])
 
     def test_overview_followed_by_years_is_a_release_inventory(self):
         answer=coverage.answer(query('overview',scope_mode='dataset'))
@@ -27,7 +27,7 @@ class DataGuideTests(unittest.TestCase):
         self.assertIn('Observation periods depend',years['message'])
 
     def test_topic_guide_years_do_not_claim_all_variable_coverage(self):
-        answer=data_guide.answer('admissions')
+        answer=data_guide.guide_answer('admissions')
         state=working_analysis.update({},answer,turn=1)
         years=coverage.answer(query('periods',inherit_working=True,time_basis='working'),state)
         self.assertEqual(years['coverage']['time_basis'],'source_release')

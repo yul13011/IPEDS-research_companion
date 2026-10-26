@@ -131,7 +131,7 @@ def _catalog(fields,scope,basis,inv):
 def answer(query,working=None):
     """Answer typed coverage requests from inventory/evidence, without an LLM."""
     if query.get('operation')=='overview':
-        from .data_guide import answer as guide_answer
+        from .discovery import guide_answer
         return guide_answer(query.get('topic',''))
     inv=inventory();working=working or {};current=working.get('subject') or {}
     matches=(bool(query.get('measure_ids')) and set(query['measure_ids'])<=set(current.get('measure_ids',[]))) or (
@@ -158,10 +158,10 @@ def answer(query,working=None):
         'loaded_release_years':inv['release_years'],'status':'answered','available_periods':[],
         'limits':['This describes the supplied local files, not whether IPEDS has published other data.']}
     if not scope['measure_ids'] and not scope['field_record_ids'] and op in {'periods','releases'} and scope['topic'] and not scope.get('guide_section_ids'):
-        from .data_guide import search as guide_search
+        from .discovery import search as guide_search
         scope['guide_section_ids']=[s['id'] for s in guide_search(scope['topic'])]
     if not scope['measure_ids'] and not scope['field_record_ids'] and scope.get('guide_section_ids') and op in {'periods','releases'}:
-        from .data_guide import get
+        from .discovery import get
         sections=[s for s in get()['sections'] if s['id'] in scope['guide_section_ids']]
         coverage.update(time_basis='source_release',available_periods=sorted({y for s in sections for y in s['release_years']}))
         scope['time_basis']='source_release'

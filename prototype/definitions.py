@@ -181,7 +181,7 @@ def can_answer(question):
 
 
 def extract_with_model(term,records,model,trusted_ids=()):
-    from .discovery_narrative import request as model_request,obj,array,STRING
+    from .discovery import request as model_request,obj,array,STRING
     from .agent import usage_cost
     schema=obj({'passages':array(obj({'record_id':{'type':'integer'},'excerpt':STRING}))})
     system='''Answer a definition lookup using ONLY the supplied codebook records. Return select_definition with up to three passages, each an EXACT contiguous excerpt of a supplied definition (whitespace normalization is allowed). Prefer ONE sufficient definition. Do not repeat the same meaning from multiple fields or add unrelated salary/count methodology. Do not paraphrase, compute, invent expansions or use external knowledge. When a record has glossary_entry=true, select its ENTIRE provided definition unchanged, including exclusions and qualifications. Prefer that explicit glossary entry over a measure that merely mentions the term. Do not equate faculty status with instructional occupation. If there are genuinely different measure-specific meanings, select distinct applicable definitions rather than merging them. For an identifier whose own definition is absent, a table passage explaining its use is acceptable, but do not substitute a parent-ID variable. Use an empty passages list if these records do not establish the requested meaning. Each excerpt must be 20–1800 characters; no invented explanations or counts.'''

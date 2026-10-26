@@ -31,7 +31,7 @@ class LatencyTests(unittest.TestCase):
 
     def test_compact_writer_retains_every_passage_and_valid_source_citation(self):
         from prototype.discovery import overview
-        from prototype.discovery_narrative import evidence_package,compact_package,restore_citations,validate
+        from prototype.discovery import evidence_package,compact_package,restore_citations,validate
         from prototype.tests.test_discovery_narrative import valid_draft
         for topic in ['faculty','graduation rates']:
             with self.subTest(topic=topic):

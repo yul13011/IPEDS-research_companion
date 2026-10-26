@@ -67,7 +67,7 @@ class DefinitionTests(unittest.TestCase):
         self.assertTrue(any('cohort' in r['definition'].lower() for r in a['evidence']))
 
     def test_reviewed_rate_uses_its_actual_formula_and_supporting_definitions(self):
-        with patch('prototype.discovery_narrative.request',side_effect=AssertionError('Reviewed definition needs no model')):
+        with patch('prototype.discovery.request',side_effect=AssertionError('Reviewed definition needs no model')):
             a=ask('What is admission rate?',use_model=True)
         self.assertEqual(a['definition_lookup']['status'],'defined')
         self.assertIn('Admissions total ÷ Applicants total × 100',a['message'])
@@ -87,19 +87,19 @@ class DefinitionTests(unittest.TestCase):
     def test_model_can_select_only_verbatim_inspected_passages(self):
         records=candidates('instructional staff',[2024]);r=next(r for r in records if r['direct_match'])
         good=response(block('select_definition',{'passages':[{'record_id':r['record_id'],'excerpt':r['excerpt']}]}))
-        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery_narrative.request',return_value=good):
+        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery.request',return_value=good):
             a=answer('Define instructional staff',use_model=True)
         self.assertEqual(a['definition_lookup']['selection'],'accepted')
         self.assertEqual(a['model_usage']['calls'],1)
         bad=response(block('select_definition',{'passages':[{'record_id':r['record_id'],'excerpt':'Invented unsupported definition of staff, not in a supplied source.'}]}))
-        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery_narrative.request',return_value=bad):
+        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery.request',return_value=bad):
             a=answer('Define instructional staff',use_model=True)
         self.assertNotIn('Invented unsupported',a['message'])
         self.assertEqual(a['model_usage']['calls'],1)
         self.assertIn('Instruction combined with research',a['message'])
 
     def test_transport_failure_preserves_unknown_cost_and_safe_fallback(self):
-        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery_narrative.request',side_effect=TimeoutError('test')):
+        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery.request',side_effect=TimeoutError('test')):
             a=answer('Define instructional staff',use_model=True)
         self.assertIsNone(a['model_usage']['estimated_api_usd'])
         self.assertEqual(a['model_usage']['calls'],1)
@@ -109,7 +109,7 @@ class DefinitionTests(unittest.TestCase):
         records=candidates('faculty',[2024]);r=next(r for r in records if r.get('glossary_excerpt'))
         excerpt=r['glossary_excerpt'].split('. ')[0]+'.'
         short=response(block('select_definition',{'passages':[{'record_id':r['record_id'],'excerpt':excerpt}]}))
-        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery_narrative.request',return_value=short):
+        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery.request',return_value=short):
             a=answer('Define faculty',use_model=True)
         self.assertIn('separate from the activities',a['message'])
         self.assertIn('complete glossary',a['definition_lookup']['selection'])
@@ -138,7 +138,7 @@ class DefinitionTests(unittest.TestCase):
 
     def test_noncompact_usage_handles_unknown_tokens_and_cost(self):
         from streamlit.testing.v1 import AppTest
-        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery_narrative.request',side_effect=TimeoutError('test')):
+        with patch('prototype.agent.api_key',return_value='test'),patch('prototype.discovery.request',side_effect=TimeoutError('test')):
             a=answer('Define instructional staff',use_model=True)
         def app():
             import streamlit as st

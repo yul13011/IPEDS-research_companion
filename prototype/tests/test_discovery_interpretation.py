@@ -6,9 +6,9 @@ import sys,unittest
 from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
-from prototype.discovery_interpretation import interpret,catalog_matches,validate_proposal,merge_hits,combine_usage
+from prototype.discovery import interpret,catalog_matches,validate_proposal,merge_hits,combine_usage
 from prototype.discovery import overview
-from prototype.discovery_narrative import evidence_package
+from prototype.discovery import evidence_package
 
 
 def proposal(concept='Net price',terms=None,ambiguous=False):
@@ -35,7 +35,7 @@ class InterpretationTests(unittest.TestCase):
 
     def test_proposed_concepts_are_checked_and_made_up_concepts_rejected(self):
         draft=proposal();draft['interpretations'].append({'concept':'Xylophonic zebras','search_terms':['enrollment'],'uncertainty':''})
-        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery_narrative.request',return_value=reply(draft)):
+        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery.request',return_value=reply(draft)):
             audit,streams,usage=interpret('What information do you have on what families actually pay?','families actually pay')
         self.assertEqual([i['concept'] for i in audit['verified']],['Net price'])
         self.assertEqual(len(audit['rejected']),1)
@@ -50,19 +50,19 @@ class InterpretationTests(unittest.TestCase):
         validate_proposal(extra)
 
     def test_fallback_retains_original_search_and_records_unknown_cost(self):
-        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery_narrative.request',side_effect=TimeoutError('timeout')):
+        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery.request',side_effect=TimeoutError('timeout')):
             audit,streams,usage=interpret('What data do we have on faculty?','faculty')
         self.assertEqual(audit['status'],'fallback');self.assertFalse(streams)
         self.assertFalse(usage['usage_complete']);self.assertIsNone(usage['estimated_api_usd'])
         self.assertEqual(audit['original_keywords'],'faculty')
-        with patch('prototype.agent.api_key',return_value=None),patch('prototype.discovery_narrative.request',side_effect=AssertionError('No call')):
+        with patch('prototype.agent.api_key',return_value=None),patch('prototype.discovery.request',side_effect=AssertionError('No call')):
             audit,streams,usage=interpret('What data do we have on faculty?','faculty')
         self.assertEqual(audit['calls'],0);self.assertIsNone(usage)
 
     def test_original_hits_survive_and_new_concept_matches_enter_overview(self):
         question='What data do we have on what families actually pay?'
         original=overview(question)
-        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery_narrative.request',return_value=reply(proposal())),patch('prototype.discovery_narrative.write',side_effect=lambda a,q,m:a):
+        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery.request',return_value=reply(proposal())),patch('prototype.discovery.write',side_effect=lambda a,q,m:a):
             answer=overview(question,use_model=True)
         audit=answer['discovery']['interpretation']
         self.assertEqual(answer['query'],original['query'])
@@ -72,7 +72,7 @@ class InterpretationTests(unittest.TestCase):
 
     def test_failed_interpretation_preserves_baseline_topics(self):
         original=overview('What data do we have on faculty?')
-        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery_narrative.request',return_value=reply({'interpretations':[],'ambiguous':False})),patch('prototype.discovery_narrative.write',side_effect=lambda a,q,m:a):
+        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery.request',return_value=reply({'interpretations':[],'ambiguous':False})),patch('prototype.discovery.write',side_effect=lambda a,q,m:a):
             answer=overview('What data do we have on faculty?',use_model=True)
         self.assertEqual(answer['discovery']['topics'],original['discovery']['topics'])
         self.assertEqual(answer['discovery']['interpretation']['status'],'no_verified_expansion')
@@ -81,7 +81,7 @@ class InterpretationTests(unittest.TestCase):
         cases=[("What information do you have on teachers' pay?",proposal('Instructional staff salaries',['salary outlays']),lambda title:'salary outlays' in title.casefold()),
             ('What information do you have on students from overseas?',proposal('U.S. nonresident enrollment',['nonresident enrollment']),lambda title:'enrollment' in title.casefold() or 'race/ethnicity' in title.casefold())]
         for question,draft,relevant in cases:
-            with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery_narrative.request',return_value=reply(draft)),patch('prototype.discovery_narrative.write',side_effect=lambda a,q,m:a):
+            with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery.request',return_value=reply(draft)),patch('prototype.discovery.write',side_effect=lambda a,q,m:a):
                 answer=overview(question,use_model=True)
             self.assertTrue(any(relevant(i['title']) for i in answer['discovery']['topics']))
             audit=answer['discovery']['interpretation']
@@ -89,7 +89,7 @@ class InterpretationTests(unittest.TestCase):
 
     def test_ambiguity_and_year_scope_are_preserved_in_evidence_package(self):
         draft=proposal(ambiguous=True);draft['interpretations'][0]['uncertainty']='Published charges and net price differ.'
-        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery_narrative.request',return_value=reply(draft)),patch('prototype.discovery_narrative.write',side_effect=lambda a,q,m:a):
+        with patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery.request',return_value=reply(draft)),patch('prototype.discovery.write',side_effect=lambda a,q,m:a):
             answer=overview('What information do we have on what families pay in 2024?',use_model=True)
         self.assertEqual(answer['discovery']['requested_release_years'],[2024])
         self.assertTrue(all('2024' in row['release_id'] for t in answer['discovery']['interpretation']['verified'] for row in t['source_matches']))
@@ -128,7 +128,7 @@ class InterpretationTests(unittest.TestCase):
             if kwargs.get('tool_name')=='interpret_discovery':return reply(proposal())
             draft=valid_draft(payload)
             return response(draft)
-        with patch('prototype.intent_router.interpret',return_value=(decision('discovery','What data do we have on college tuition?'),USAGE,{})),patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery_narrative.request',side_effect=model_reply) as client:
+        with patch('prototype.intent_router.interpret',return_value=(decision('discovery','What data do we have on college tuition?'),USAGE,{})),patch('prototype.agent.api_key',return_value='test-only'),patch('prototype.discovery.request',side_effect=model_reply) as client:
             app.chat_input(key='initial_question').set_value('What data do we have on college tuition?').run()
         self.assertFalse(app.exception)
         answer=app.session_state['history'][-1]['answer']

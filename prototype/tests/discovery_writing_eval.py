@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.agent import DEFAULT_MODEL,usage_cost
 from prototype.institution_confirmation import ask
-from prototype.discovery_narrative import request,words,obj,array,STRING
+from prototype.discovery import request,words,obj,array,STRING
 
 
 def metrics(text):
