@@ -19,7 +19,10 @@ def trend_years(question,default_end=2024,previous_years=None):
     Population durations (six-year graduation) are not observation windows.
     """
     q=question.lower().strip();trend=bool(re.search(r'\btrend\b|\blongitudinal\b|\bover time\b',q))
-    match=re.search(r'\b(?:past|last|previous|most recent|over(?: the)?|for(?: the)?)\s+'+NUMBER+SEP+r'(?:(?:fall|academic|fiscal|reporting)\s+)?(?:years?|terms?|periods?)\b',q)
+    # "four-year institutions"/"two-year colleges" describe institution type, not a
+    # reporting window: a number+year followed by a sector noun is not a duration.
+    not_sector=r'(?![\s\-–‑]+(?:institution|college|school|universit|program|degree|student|graduat|undergrad|cohort|sector|level|old))'
+    match=re.search(r'\b(?:past|last|previous|most recent|over(?: the)?|for(?: the)?)\s+'+NUMBER+SEP+r'(?:(?:fall|academic|fiscal|reporting)\s+)?(?:years?|terms?|periods?)\b'+not_sector,q)
     if not match:match=re.search(r'\b'+NUMBER+SEP+r'year'+SEP+r'(?:longitudinal'+SEP+r')?trend\b',q)
     if not trend and not match:return None
     count=(int(match[1]) if match[1].isdigit() else WORDS[match[1]]) if match else None

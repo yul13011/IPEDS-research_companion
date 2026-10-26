@@ -27,7 +27,10 @@ def contract(question,resolved=None,bundle=None,resolution=None):
     # Count the requested observations separately from the date-window binder:
     # an off-by-one error in that shared binder must not validate itself.
     number=r'(\d{1,2}|'+ '|'.join(WORDS)+r')'
-    duration=re.search(r'\b'+number+r'[\s\-–‑]+year[\s\-–‑]+(?:longitudinal[\s\-–‑]+)?trend\b',question,re.I) or re.search(r'\b(?:past|last|over(?: the)?|for(?: the)?)\s+'+number+r'[\s\-–‑]+(?:(?:fall|academic|fiscal)\s+)?(?:years?|terms?)\b',question,re.I)
+    # A number+year followed by a sector noun ("four-year institutions") is an
+    # institution type, not a reporting duration; exclude it from the window count.
+    _not_sector=r'(?![\s\-–‑]+(?:institution|college|school|universit|program|degree|student|graduat|undergrad|cohort|sector|level|old))'
+    duration=re.search(r'\b'+number+r'[\s\-–‑]+year[\s\-–‑]+(?:longitudinal[\s\-–‑]+)?trend\b',question,re.I) or re.search(r'\b(?:past|last|over(?: the)?|for(?: the)?)\s+'+number+r'[\s\-–‑]+(?:(?:fall|academic|fiscal)\s+)?(?:years?|terms?)\b'+_not_sector,question,re.I)
     count=(int(duration[1]) if duration[1].isdigit() else WORDS[duration[1].casefold()]) if duration else None
     temporal=bool(re.search(r'\btrend\b|longitudinal|over time',question,re.I))
     comparison=bool(re.search(r'percent(?:age)? change|difference between|change between',question,re.I)) and not temporal
