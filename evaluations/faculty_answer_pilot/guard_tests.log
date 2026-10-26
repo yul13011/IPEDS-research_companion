@@ -1,9 +1,0 @@
-test_invalid_evidence_and_wrong_year_are_blocked_before_execution (evaluations.test_faculty_answer_pilot.PilotGuardTests.test_invalid_evidence_and_wrong_year_are_blocked_before_execution) ... ok
-test_two_scopes_match_independent_sql (evaluations.test_faculty_answer_pilot.PilotGuardTests.test_two_scopes_match_independent_sql) ... ok
-test_unconfirmed_institution_cannot_be_queried (evaluations.test_faculty_answer_pilot.PilotGuardTests.test_unconfirmed_institution_cannot_be_queried) ... ok
-test_writer_cannot_insert_numbers_or_invent_citations (evaluations.test_faculty_answer_pilot.PilotGuardTests.test_writer_cannot_insert_numbers_or_invent_citations) ... ok
-
-----------------------------------------------------------------------
-Ran 4 tests in 1.568s
-
-OK

@@ -1,9 +1,0 @@
-test_loading_context_and_workspace_order (prototype.tests.test_chat_loading.ChatLoadingTests.test_loading_context_and_workspace_order) ... 2026-10-20 17:31:04.003 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
-ok
-test_real_offline_request_reports_its_actual_stages (prototype.tests.test_chat_loading.ChatLoadingTests.test_real_offline_request_reports_its_actual_stages) ... ok
-test_stage_reporters_are_scoped_and_reset_on_failure (prototype.tests.test_chat_loading.ChatLoadingTests.test_stage_reporters_are_scoped_and_reset_on_failure) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 6.742s
-
-OK

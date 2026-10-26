@@ -1,1 +1,0 @@
-{"question": "Define graduation rate", "checks": {"definition_route": true, "no_statistics": true, "exact_source_passages": true, "definition_found": true}, "passed": true, "wall_seconds": 15.377669999958016}

@@ -3,27 +3,27 @@
   "cases": [
     {
       "topic": "faculty",
-      "answer_ready_seconds": 0.4853338000830263,
+      "answer_ready_seconds": 0.853787099942565,
       "model_calls": 0
     },
     {
       "topic": "enrollment",
-      "answer_ready_seconds": 0.36322579998522997,
+      "answer_ready_seconds": 0.6794278000015765,
       "model_calls": 0
     },
     {
       "topic": "financial aid",
-      "answer_ready_seconds": 0.970105400076136,
+      "answer_ready_seconds": 1.2598194000311196,
       "model_calls": 0
     },
     {
       "topic": "institutional finances",
-      "answer_ready_seconds": 0.6394259000662714,
+      "answer_ready_seconds": 1.2731404000660405,
       "model_calls": 0
     },
     {
       "topic": "graduation rates",
-      "answer_ready_seconds": 0.5645772999851033,
+      "answer_ready_seconds": 0.5588966999202967,
       "model_calls": 0
     }
   ]

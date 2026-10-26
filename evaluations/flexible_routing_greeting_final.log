@@ -1,7 +1,0 @@
-test_conversation_bypasses_provider_identity_and_progress (prototype.tests.test_purpose.PurposeTests.test_conversation_bypasses_provider_identity_and_progress) ... ok
-test_substantive_questions_survive (prototype.tests.test_purpose.PurposeTests.test_substantive_questions_survive) ... ok
-
-----------------------------------------------------------------------
-Ran 2 tests in 0.015s
-
-OK

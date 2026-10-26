@@ -1,6 +1,0 @@
-test_pre_execution_rejects_missing_institutions_measures_and_percentages (prototype.tests.test_intent_checks.IntentCheckTests.test_pre_execution_rejects_missing_institutions_measures_and_percentages) ... ok
-
-----------------------------------------------------------------------
-Ran 1 test in 30.215s
-
-OK

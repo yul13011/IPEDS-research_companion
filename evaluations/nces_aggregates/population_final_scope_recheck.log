@@ -1,7 +1,0 @@
-test_known_discrepancy_blocks_method_not_named_queries (prototype.tests.test_populations.PopulationTests.test_known_discrepancy_blocks_method_not_named_queries) ... ok
-test_annual_trend_source_binding_and_intent (prototype.tests.test_populations.PopulationTests.test_annual_trend_source_binding_and_intent) ... ok
-
-----------------------------------------------------------------------
-Ran 2 tests in 4.521s
-
-OK

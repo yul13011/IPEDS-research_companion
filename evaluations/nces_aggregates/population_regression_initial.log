@@ -1,7 +1,0 @@
-test_categories_are_labels_not_measures (prototype.tests.test_query_engine.QueryEngineTests.test_categories_are_labels_not_measures) ... ok
-test_cohort_rate_and_release_year_substitution_rejection (prototype.tests.test_query_engine.QueryEngineTests.test_cohort_rate_and_release_year_substitution_rejection) ... ok
-test_cross_institution_mean_and_joined_weighted_mean (prototype.tests.test_query_engine.QueryEngineTests.test_cross_institution_mean_and_joined_weighted_mean) ... ok
-test_cross_period_change (prototype.tests.test_query_engine.QueryEngineTests.test_cross_period_change) ... ok
-test_disjoint_row_sum_and_overlap_rejection (prototype.tests.test_query_engine.QueryEngineTests.test_disjoint_row_sum_and_overlap_rejection) ... ok
-test_grouped_awards_match_source_sql (prototype.tests.test_query_engine.QueryEngineTests.test_grouped_awards_match_source_sql) ... ok
-test_grouped_result_in_chat_and_exports (prototype.tests.test_query_engine.QueryEngineTests.test_grouped_result_in_chat_and_exports) ... 2026-10-21 00:56:58.771 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
