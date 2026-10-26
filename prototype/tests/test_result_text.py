@@ -8,7 +8,7 @@ sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.tests.test_general_calculations import plan_for
 from prototype.catalog_planner import proposal_answer
 from prototype.catalog_execution import execute_catalog
-from prototype.result_text import visible_warnings,definition_summary,calculation_summary,evidence_summary,source_summary
+from prototype.responses import visible_warnings,definition_summary,calculation_summary,evidence_summary,source_summary
 
 class ResultTextTests(unittest.TestCase):
     def test_ten_year_sources_show_exact_table_metadata_once_per_release(self):
@@ -46,13 +46,13 @@ class ResultTextTests(unittest.TestCase):
 
     def test_missing_and_conflicting_metadata_are_explicit(self):
         r=self.result()
-        with patch('prototype.result_text._table_metadata',return_value={}):summary=source_summary(r)
+        with patch('prototype.responses._table_metadata',return_value={}):summary=source_summary(r)
         self.assertEqual(summary['sources'][0]['Table'],'EF2024A')
         self.assertEqual(summary['sources'][0]['Year coverage'],'Not documented')
         self.assertTrue(any('unavailable' in note for note in summary['source_notes']))
         docs=[{'survey':'Fall Enrollment','year_coverage':'Fall 2024','title':'Enrollment'},
               {'survey':'Different survey','year_coverage':'Fall 2023','title':'Different title'}]
-        with patch('prototype.result_text._table_metadata',return_value={('IPEDS_2024-25_Provisional','ef2024a'):docs}):summary=source_summary(r)
+        with patch('prototype.responses._table_metadata',return_value={('IPEDS_2024-25_Provisional','ef2024a'):docs}):summary=source_summary(r)
         self.assertEqual(summary['sources'][0]['Survey'],'Conflicting metadata')
         self.assertEqual(summary['sources'][0]['Year coverage'],'Conflicting metadata')
         self.assertTrue(any('Fall 2023' in note and 'Fall 2024' in note for note in summary['source_notes']))

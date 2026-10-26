@@ -117,7 +117,7 @@ class FacultyExampleTests(unittest.TestCase):
                     if eid=='faculty-changes':self.assertEqual(a['presentation']['chart_type'],'line')
 
     def test_annual_named_templates_keep_scope_bounds(self):
-        from prototype.population_annual import annual_plans
+        from prototype.populations import annual_plans
         p=json.loads((ROOT/'prototype/faculty_example_plans.json').read_text())['faculty-changes']
         self.assertEqual(len(annual_plans(p)),10)
         for override in [{'institutions':[]},{'annual_years':[2024,2024]},{'annual_years':[2025]}]:

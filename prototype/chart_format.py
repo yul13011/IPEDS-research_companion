@@ -206,7 +206,7 @@ def styled(panel,p):
 
 def figure_spec(panel,p,result,width=1200,height=675):
     """A complete fixed-size figure; title/source/caveats travel with the plot."""
-    from .result_text import evidence_summary,visible_warnings
+    from .responses import evidence_summary,visible_warnings
     spec=styled(panel,p);spec.pop('autosize',None)
     spec['width']=max(200,width-330 if p.get('legend')=='direct' else width-140)
     spec['height']=max(180,height-260,spec.get('height',0) if p['chart_type']=='bar' else 0)

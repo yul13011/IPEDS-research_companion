@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.institution_confirmation import ask
 from prototype.catalog import annual_path,readonly
-from prototype.result_text import visible_warnings
+from prototype.responses import visible_warnings
 
 cases=[]
 for question,expect_confirmation in [('how many students does Mount Holyoke College have? Show 10-year trend.',False),('how many students does Mount Holyoke have? Show 10-year trend.',True)]:

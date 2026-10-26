@@ -476,7 +476,7 @@ from .analysis_clarification import CLARIFICATION_SCHEMA,BUNDLE_SCHEMA
 TOOL_SCHEMAS['offer_analysis_options']=CLARIFICATION_SCHEMA
 TOOL_SCHEMAS['submit_analysis_bundle']=BUNDLE_SCHEMA
 TOOL_SCHEMAS['submit_annual_plan']=obj({'template':PLAN_SCHEMA,'years':array(INTEGER)})
-from .coverage_gap import GAP_SCHEMA
+from .coverage import GAP_SCHEMA
 TOOL_SCHEMAS['report_coverage_gap']=GAP_SCHEMA
 from .observations import SCHEMA as OBSERVATION_SCHEMA
 TOOL_SCHEMAS['submit_observation_plan']=OBSERVATION_SCHEMA
@@ -624,7 +624,7 @@ SYSTEM+='''\nDo not ask for permission to prepare source-backed choices or postp
 SYSTEM+='''\nWrite the clarification itself as one short plain-language question, not a repetition of the original request. Keep labels and descriptions concise. Put table names, field names, numerical category codes and database identifiers in source evidence, not the user-facing narrative. Use the institution's name when available. Explain differences between populations and periods in ordinary words. Do not leave routine supported arithmetic to the user: when they request a combined count of disjoint categories, sum those counts with the existing validated operators, while retaining individual categories only if useful or explicitly requested.'''
 
 
-from .source_policy import SOURCE_POLICY
+from .coverage import SOURCE_POLICY
 SYSTEM+='\n'+SOURCE_POLICY+'''\nCoverage handling overrides earlier advice to offer proxy choices: when inspected sources cannot establish the original concept, use report_coverage_gap first, with zero to three optional proxies. It is valid to stop with a clear coverage explanation and no alternatives. Use ordinary offer_analysis_options only for genuinely source-supported definitions of the requested concept. Do not ask how to define a missing classification through proxies. Do not use ask_clarification to conceal a source limitation. Explain specifically what is missing and why a supported calculation cannot establish it; do not claim global IPEDS absence from a bounded search. Continue source inspection and valid derivation when a calculation can answer the original question. External sources are outside the owner's authorized data scope.'''
 
 SYSTEM+='''\nTyped categorical observations override older numerical-output-only advice. Use submit_observation_plan for availability, calendar systems, affiliations, award-level lookups, categorical comparisons and matching institution lists; never manufacture a count of 1 to display a category. Mixed categorical/quantitative observations use the same tool. sources contains one entry per exact table/year with field_record_ids and code-backed filters; include each requested release independently, without cross-year joins. institutions are readable school names or confirmed UNITIDs; population=null for named institutions. For institution lists use institutions=[], explicit population and result_kind=institution_list. Filters across source tables are ANDed by verified unique UNITID; no arbitrary fact joins. For unqualified colleges state whether degree_granting=true was selected; include universities and community colleges, not name-based classification. Numeric calculations and counts keep submit_query_plan; counting institutions satisfying Yes is valid, summing their Yes codes is not. Category data cannot measure service quality. For DISABPCT the server validates the companion DISAB reporting indicator and retains source bounds and Fall student observation dates. Treat a displayed UNITID as identity, never a student count. Preserve every original field, institution and release during repairs. A mixed request must include every requested field. Use metadata evidence and never infer Yes/No from a school name.'''
@@ -744,7 +744,7 @@ def model_catalog_plan(question,previous=None,model=None):
                     raise ValueError('Do not execute an unrequested proxy. Use report_coverage_gap first; proxy alternatives require explicit user selection.')
                 if block.name=='report_coverage_gap':
                     if len(blocks)!=1:raise ValueError('Report the coverage limitation alone after inspecting sources.')
-                    from .coverage_gap import prepare_gap
+                    from .coverage import prepare_gap
                     return prepare_gap(block.input,question,metrics,inspections)
                 if block.name=='submit_analysis_bundle':
                     if len(blocks)!=1:raise ValueError('Submit the final analysis bundle alone.')

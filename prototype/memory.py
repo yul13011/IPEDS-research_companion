@@ -82,7 +82,7 @@ turn IDs must exist. With kind=new, return the current question unchanged when c
     started=time.perf_counter()
     from .api_client import get_client
     client=get_client()
-    from .source_policy import SOURCE_POLICY
+    from .coverage import SOURCE_POLICY
     instructions+='\n'+SOURCE_POLICY+'\nPreserve coverage_gap limitations in follow-ups. A request to continue is not a selection of an optional proxy; do not choose one without explicit user intent.'
     response=client.messages.create(model=model,max_tokens=1800,system=instructions,
         tools=[{'name':'resolve_context','description':'Resolve conversation references into a standalone request or ask a necessary clarification.','input_schema':schema,'strict':True}],

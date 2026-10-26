@@ -50,7 +50,7 @@ class InstitutionConfirmationTests(unittest.TestCase):
         self.assertIn('166939',execute.call_args.args[0])
 
     def test_college_in_official_name_is_not_a_separate_reporting_unit(self):
-        from prototype.result_text import visible_warnings
+        from prototype.responses import visible_warnings
         q='Show Mount Holyoke College undergraduate population by race and ethnicity in fall 2024'
         answer=ask(q)
         self.assertEqual(answer['intent'],'analyze')

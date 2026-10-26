@@ -353,7 +353,7 @@ def inspect(plan,question):
         if len(order)==len(plan['sources']) and set(order)=={s['id'] for s in plan['sources']}:
             plan['sources']=sorted(plan['sources'],key=lambda s:order.index(s['id']))
     if plan.get('annual_years'):
-        from .population_annual import annual_plans
+        from .populations import annual_plans
         annual_question=re.sub(r'\b(?:19|20)\d{2}\b','',question)
         checked=[inspect(p,annual_question) for p in annual_plans(plan)]
         return checked[0]
@@ -475,7 +475,7 @@ def inspect(plan,question):
             refs={field_ref(rid,s['id']) for s in plan['sources'] for rid in s['group_by_record_ids'] if b['definitions'][rid]['variable_name'].upper()==expected}
             if not refs or any(not refs.intersection(e['group_by_references']) for e in plan['expressions'] if e['operator'] in {'sum','mean','weighted_mean','count','min','max'}):raise ValueError('The aggregate plan dropped the requested directory grouping.')
     if plan.get('population'):
-        from .population_review import check
+        from .populations import check
         check(plan)
     b['available']=available
     return b
@@ -593,7 +593,7 @@ def execute_source(b,s,question):
 
 def execute(plan,question):
     if plan.get('annual_years'):
-        from .population_annual import execute_annual
+        from .populations import execute_annual
         return execute_annual(plan,question)
     started=time.perf_counter();b=inspect(plan,question);plan=b['plan'];validated=time.perf_counter()
     from .intent_checks import check_plan,stamp

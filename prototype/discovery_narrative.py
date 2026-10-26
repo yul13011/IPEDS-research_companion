@@ -4,7 +4,7 @@ from hashlib import sha256
 import json,re,time
 from .catalog import DATA,readonly
 from .progress import report
-from .source_policy import SOURCE_POLICY
+from .coverage import SOURCE_POLICY
 
 PRICING_BASIS='Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.'
 QUALIFICATIONS=[

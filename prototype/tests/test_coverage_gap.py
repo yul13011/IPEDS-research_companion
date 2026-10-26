@@ -4,7 +4,7 @@ import sys,unittest
 from unittest.mock import patch,MagicMock
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
-from prototype.coverage_gap import prepare_gap
+from prototype.coverage import prepare_gap
 from prototype.analysis_clarification import prepare,select
 from prototype.tests.test_query_engine import source,plan,field_ref
 from prototype.tests.test_catalog_planner import block,response

@@ -141,7 +141,7 @@ def check_plan(plan,question='',evidence=None):
         if c['temporal'] and len(set(years))<2:
             # A wide/long source can contain multiple observation periods in one
             # release. Reject only when its documented coverage is a single year.
-            from .result_text import _table_metadata
+            from .responses import _table_metadata
             tables={(d.get('release_id'),str(d.get('table_name','')).casefold()) for d in (evidence or {}).get('definition_evidence',[]) if d.get('table_name')}
             docs=_table_metadata(sorted(tables)) if tables else {}
             coverage={int(y) for rows in docs.values() for d in rows for y in re.findall(r'\b(?:19|20)\d{2}\b',str(d.get('year_coverage','')))}

@@ -13,7 +13,7 @@ TEXT={'title','subtitle','footnote','x_label','y_label','reference_label'}
 BOOLEANS={'show_table','markers','gridlines','separate_panels'}
 BOUNDS={'font_size':(10,32),'title_size':(14,48),'label_size':(10,28),'line_width':(1,8),
         'marker_size':(10,200),'bar_size':(8,40),'tick_count':(2,12),'decimals':(0,4)}
-from .capabilities import CHART_TYPES
+from .purpose import CHART_TYPES
 ENUMS={'chart_type':list(CHART_TYPES),'legend':['top','bottom','left','right','none','direct'],
        'value_labels':['auto','none','latest','endpoints','all'],'sort':['auto','ascending','descending','alphabetical'],
        'font':['Arial','Calibri','Georgia','Times New Roman','Verdana'],
@@ -156,7 +156,7 @@ def interpret(question,history,model,overrides=None):
     from .request_tasks import schema as request_schema,INSTRUCTIONS
     from .data_guide import topic_index
     from .coverage import inventory
-    from .capabilities import describe
+    from .purpose import describe
     from .working_analysis import from_history,prompt_context
     payload={'question':question,'conversation':bundle,'charts':charts,
              'working_analysis':prompt_context(from_history(history)),'coverage_catalogue':inventory(),'data_guide_topics':topic_index(),'application_capabilities':describe(),

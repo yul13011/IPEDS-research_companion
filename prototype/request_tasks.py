@@ -192,7 +192,7 @@ def combine_usage(stages,model):
 def execute(plan,original,previous,model,history,executor,usage,overrides=None,institution_choices=None):
     from .intent_router import dispatch,charts_context,SCHEMA
     from .coverage import answer as coverage_answer,CoverageQuestion
-    from .capabilities import answer as capability_answer
+    from .purpose import answer as capability_answer
     started=time.perf_counter();state=working.from_history(history);virtual=list(history or []);outcomes=[];by_id={};task_turns={};stages=[usage]
     for task in plan['tasks']:
         answer=None;outcome=None

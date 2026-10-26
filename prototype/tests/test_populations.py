@@ -165,7 +165,7 @@ class PopulationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'exactly'):execute(p,'National graduation rate for entering cohort 2017')
 
     def test_known_discrepancy_blocks_method_not_named_queries(self):
-        import prototype.population_review as review
+        import prototype.populations as review
         p,_=build(3,2024);key=review.fingerprint(p)
         policy=MagicMock();policy.exists.return_value=True;policy.read_text.return_value=json.dumps({'blocked':{key:{'source_year':2024}}})
         with patch.object(review,'POLICY',policy):

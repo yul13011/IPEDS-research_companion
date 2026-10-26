@@ -93,7 +93,7 @@ def render_result(result,key,show_chart=None,presentation=None,compact=False):
         chart_type='none'
         st.caption('A measurement unit is unresolved or the field is an identifier/category. A chart cannot use these values as a verified measurement axis; saved calculations may need to be rerun.')
     if chart_type=='none' and presentation.get('table_reason'):st.caption(presentation['table_reason'])
-    from .result_text import visible_warnings
+    from .responses import visible_warnings
     for warning in visible_warnings(result):st.warning(warning)
     display=frame[['institution','reporting_period','measure']].rename(columns={'institution':'Institution','reporting_period':'Period','measure':'Measure'}).copy()
     display['Value']=[value_text(r)+(' '+r['unit'] if r['status']=='ok' and r['unit'] not in {'percent','score','monetary amount','unknown','source units','identifier','coded',UNVERIFIED} and not is_currency(r['unit']) else '') for r in result['rows']]
@@ -146,7 +146,7 @@ def render_result(result,key,show_chart=None,presentation=None,compact=False):
         with st.popover('Definitions & sources'):
             for info in result.get('display_units',[]):
                 st.caption('Currency unit: '+info['unit']+'. Values retain their source scale; no conversion or inflation adjustment was applied.')
-            from .result_text import evidence_summary,definition_summary,calculation_summary,metric_label
+            from .responses import evidence_summary,definition_summary,calculation_summary,metric_label
             details=evidence_summary(result)
             if details['institutions']:st.write(('Scope: ' if result.get('population_evidence') else 'Institution: ')+', '.join(details['institutions']))
             if details['population']:st.write('Population / selection: '+'; '.join(details['population']))

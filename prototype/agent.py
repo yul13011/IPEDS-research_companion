@@ -179,7 +179,7 @@ For analyze, message states interpretation and defaults. For clarify, use concis
     description=[dict(id=m['id'],label=m['label'],family=m['family'],columns=m['columns']) for m in specs.values()]
     family_definitions={m['family']:m['definition'] for m in specs.values()}
     # Static instructions/tool schema are cacheable; variable source excerpts stay bounded.
-    from .source_policy import SOURCE_POLICY
+    from .coverage import SOURCE_POLICY
     static=system+'\n'+SOURCE_POLICY+'\nUse confirmed_institution_scope IDs when supplied: the application has already verified the requested identity/group. Do not rediscover that group through unrelated source classifications or ask the user to confirm it again. Identity confirmation does not approve a measure or formula.\nSupported measures and family definitions:\n'+json.dumps({'measures':description,'families':family_definitions},ensure_ascii=False)
     from .memory import PLANNING_CONTEXT
     from .institution_confirmation import confirmed_scope
