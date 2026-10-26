@@ -2,10 +2,11 @@
 
 Created: October 26, 2026.
 
-Status: Diagnosis complete; no code changed. Fix plan proposed, awaiting owner review.
-This document records a live, evidence-backed review of why the IPEDS Research Companion
-returns wrong or slow answers, and a prioritized plan to repair the interpretation layer.
-It does not implement any fix.
+Status: Diagnosis complete. **All five findings (F-A–F-E) are now fixed on branch
+`fix/interp-layer-p0`**, each as a focused commit with its own regression test; the
+latency track remains. This document records the original live, evidence-backed review of
+why the IPEDS Research Companion returned wrong or slow answers, the prioritized fix plan,
+and (in section 7) the implementation status.
 
 ## 1. Summary
 
@@ -138,6 +139,25 @@ Not caused by the bugs above, but worth a dedicated pass:
 Before editing this dense ~9,400-line codebase, put it under git so every change is
 reversible and reviewable, and so each fix can land with a regression test and a
 re-run of the relevant batch cases.
+
+## 7. Implementation status (branch `fix/interp-layer-p0`)
+
+All five findings are fixed, each as one commit with a regression test. Existing suites
+(intent_checks, query_engine, intent_router, populations, request_tasks, definitions) all
+still pass.
+
+| ID | Commit | Fix | Live result |
+| --- | --- | --- | --- |
+| F-B | `12d924c` | Negative lookahead in `time_scope.py`/`intent_checks.py` so "N-year <sector>" is not a window | 2016 four-year-cohort question no longer errors with a false "longitudinal request" |
+| F-A | `7babfdd` | `check_fiscal_year()` in `query_engine.py` rejects a finance table bound to the wrong fiscal year | "tuition and fees 2022-23" returns $343,599,498 (was $354,023,874) |
+| F-C | `25e5d60` | `normalize_decision()` reclassifies a fresh "how many/how much" count from discovery to analysis; sharper prompt | library question reaches the numerical path (clarifies physical books vs total collection) |
+| F-D | `1599bf0` | `populations.institution_count()` answers a bare headcount from the directory population (Title IV default) | "degree-granting institutions in 2023" returns 3,841 with disclosed scope |
+| F-E | `285f555` | `definitions.reviewed()` matches a measure's core label (subgroup/bachelor stripped, 6↔six) | "six-year graduation rate" returns the reviewed definition |
+
+Tests: `prototype/tests/test_time_scope_sector.py`, `test_finance_fiscal_year.py`,
+`test_routing_count.py`, `test_institution_count.py`, `test_definition_recall.py`.
+Owner decision recorded: F-D uses the Title IV directory-population scope.
+Remaining: the latency / cost track (section 4, cross-cutting).
 
 ## 6. Evidence index
 
