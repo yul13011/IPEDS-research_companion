@@ -4,8 +4,9 @@ Created: October 26, 2026.
 
 Status: In progress. The Lever A **module consolidation (Phases 3–4) is done** on branch
 `refactor/consolidate-modules` (7 commits, each tested): **53 → 33 `.py` files (~30 app
-modules)**, no functionality removed. Still open: Phase 0 decisions (D1–D3), Phase 1
-feature inventory, Phase 2 non-app bulk relocation, Phase 5 prune/architecture. This is the
+modules)**, no functionality removed. Phase 2 non-app bulk relocation is also done
+(tracked files 970 → 668). Still open: Phase 0 decisions (D1–D3), Phase 1 feature
+inventory, Phase 5 prune/architecture. This is the
 tracking document for streamlining the IPEDS Research Companion's structure **without
 losing intended functionality**. Check items off as they land; record evidence and
 decisions inline. Companion review:
@@ -34,10 +35,11 @@ decided below.
 | App code (prototype/*.py, non-test) | 9,516 lines | — |
 | App modules (non-test) | 53 `.py` (~45 est.) | ~15–18 · **now ~30 (33 `.py`) after consolidation** |
 | Test code | 6,780 lines / 63 files | keep coverage |
-| Evaluation artifacts in repo | 642 files | relocated/archived |
-| Cached proposed plans (`data/proposed_plans/`) | 273 files | not in app tree |
-| Design/review docs (top-level + prototype) | ~55 `.md` | consolidated/indexed |
-| Vendored deps (`.packages/`) | present | removed (use requirements) |
+| Evaluation artifacts in repo | 642 files | **302 output artifacts untracked (639 → 351 in `evaluations/`)** |
+| Cached proposed plans (`data/proposed_plans/`) | 273 files | **already gitignored (0 tracked)** |
+| Design/review docs (top-level + prototype) | ~55 `.md` | **indexed in place via DOCS_INDEX.md** |
+| Vendored deps (`.packages/`) | present | **already gitignored (0 tracked); kept on disk to run/test** |
+| Total tracked files in repo | 970 | **now 668** |
 | Data scope (context, not reducible) | 10 releases · ~509 tables · 23,990 variables · ~124k category codes · ~25 survey components | unchanged |
 
 Reference point: Gradrate is a single 1,570-line `app.py` because it lets the model write
@@ -77,11 +79,11 @@ not waste, drives most of the size.
 
 ## Phase 2 — Non-app bulk relocation (Lever A, safe)
 
-- [ ] Move `evaluations/` (642 files) out of the runtime tree (archive or separate folder).
-- [ ] Remove `data/proposed_plans/` cache from the app tree (regenerated at runtime).
-- [ ] Stop vendoring `.packages/`; rely on `prototype/requirements.txt`.
-- [ ] Index/consolidate the ~55 design docs (keep history, reduce top-level clutter).
-- [ ] Verify the app still launches and tests still run after relocation.
+- [x] `evaluations/`: untracked **302** pure-output artifacts (`.log`/`.png`/`.svg`/`.jpg`/`.pdf`/`.xlsx` under `evaluations/` and `design-mockups/`) via `.gitignore` + `git rm --cached` — kept on disk (tests unaffected), kept eval scripts (`*.py`) and data fixtures/results (`*.json`/`*.csv`/`*.md`) tracked. `evaluations/` tracked 639 → 351. *Not physically moved: several tests read/write `evaluations/` paths.*
+- [x] `data/proposed_plans/`: already gitignored at git-init (0 tracked) — nothing to relocate; regenerated at runtime.
+- [x] `.packages/`: already gitignored (0 tracked). **Kept on disk** — it's what runs/tests the app here without a venv; a fresh env uses `prototype/requirements.txt`.
+- [x] Docs: added [DOCS_INDEX.md](DOCS_INDEX.md) mapping the 34 root docs by category **in place** (not moved — preserves cross-links). Physically moving them is a later option if root clutter still bothers.
+- [x] Verified: app imports 30/30 clean; untracking leaves local files intact so tests still run. Net: tracked files **970 → 668**.
 
 ## Phase 3 — Target module map (Lever A)
 
@@ -138,4 +140,5 @@ not waste, drives most of the size.
 | Date | Change |
 | --- | --- |
 | 2026-10-26 | Plan created from the structure investigation. Module consolidation observed already underway on `refactor/consolidate-modules` (uncommitted). |
-| 2026-10-26 | Lever A consolidation (Phases 3–4) completed: 7 commits on `refactor/consolidate-modules`, 53 → 33 `.py` files (~30 app modules), no functionality removed, each group's tests green. Full combined-suite gate + push pending. Phases 0/1/2/5 still open. |
+| 2026-10-26 | Lever A consolidation (Phases 3–4) completed: 7 commits on `refactor/consolidate-modules`, 53 → 33 `.py` files (~30 app modules), no functionality removed, each group's tests green. Combined suite 348/349 (1 pre-existing env failure); branch pushed. |
+| 2026-10-26 | Phase 2 non-app bulk relocation: untracked 302 generated eval/mockup artifacts; confirmed `.packages`/`proposed_plans`/annual-SQLite already gitignored; added DOCS_INDEX.md. Tracked files 970 → 668. Phases 0/1/5 (decisions, feature inventory, prune/architecture) still open. |
