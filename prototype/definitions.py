@@ -50,9 +50,48 @@ def request(question):
     return {'term':term,'explicit':explicit,'comparison':bool(re.match(r'(?:what is|explain) the difference between\b',q,re.I))}
 
 
+def _norm6(text):
+    # Treat "6-year"/"6 year" and "six-year" as the same phrase.
+    return re.sub(r'\b6 year\b','six year',normalized(text))
+
+
+def _measure_core(label):
+    """Split a reviewed label into (subgroup, core). "All: six-year bachelor
+    graduation rate" -> ("all","six-year bachelor graduation rate")."""
+    m=re.match(r'\s*(.+?):\s*(.+)$',label)
+    return (m[1].strip().casefold(),m[2].strip()) if m else (None,label.strip())
+
+
+def _alias_forms(core):
+    """Acceptable normalized phrasings of a measure core: with or without the word
+    'bachelor'. The 'six-year' qualifier is NOT dropped: bare 'graduation rate' stays
+    generic (IPEDS has 4-/6-/8-year rates) and must not claim the six-year definition."""
+    base=_norm6(core)
+    forms={base,base.replace("bachelor's ",'').replace('bachelor ','')}
+    return {re.sub(r'\s+',' ',f).strip() for f in forms if f}
+
+
 def reviewed(term):
+    """Map a natural term to a reviewed measure. Exact label/id first, then a
+    subgroup-aware core match (unqualified -> the 'All' measure). Ambiguous
+    unqualified matches fall through to the codebook search."""
     from .analytics import measures
-    return next((m for m in measures().values() if normalized(term)==normalized(m['label']) or term.strip().casefold()==m['id']),None)
+    ms=list(measures().values())
+    direct=next((m for m in ms if normalized(term)==normalized(m['label']) or term.strip().casefold()==m['id']),None)
+    if direct:return direct
+    t=_norm6(term)
+    subgroup=('non-pell students' if re.search(r'\bnon[\s-]?pell\b',term,re.I) else 'pell recipients' if re.search(r'\bpell\b',term,re.I)
+              else 'men' if re.search(r'\b(?:men|male)\b',term,re.I) else 'women' if re.search(r'\b(?:women|female)\b',term,re.I)
+              else 'u.s. nonresident' if re.search(r'\b(?:nonresident|non[\s-]?resident|international)\b',term,re.I) else None)
+    t_core=re.sub(r'\s+',' ',re.sub(r'\b(?:non[\s-]?pell|pell|men|male|women|female|u s nonresident|nonresident|non resident|international|students?|recipients?|s)\b','',t,flags=re.I)).strip()
+    best=[]
+    for m in ms:
+        pref,core=_measure_core(m['label'])
+        if t_core and t_core in _alias_forms(core):
+            if subgroup is None and pref in (None,'all'):best.append(m)
+            elif subgroup is not None and pref==subgroup:best.append(m)
+    if len(best)==1:return best[0]
+    return best[0] if best and subgroup else None
 
 
 def scope(term):
