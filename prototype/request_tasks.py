@@ -250,7 +250,7 @@ def execute(plan,original,previous,model,history,executor,usage,overrides=None,i
                     except ValueError as exc:
                         exc.model_usage=answer.get('model_usage',{});raise
             outcome=outcome or status(answer)
-            if d['route'] in {'numerical','categorical','analysis','mixed'} and outcome=='answered' and not list(working.results(answer)):
+            if d['route'] in {'numerical','categorical','analysis','mixed'} and outcome=='answered' and answer.get('mode')!='institution count' and not list(working.results(answer)):
                 answer={**answer,'message':'This part did not produce a validated analytical result. '+answer.get('message','')}
                 outcome='blocked'
         except CoverageQuestion as exc:

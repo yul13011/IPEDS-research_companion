@@ -12,6 +12,66 @@ def default_population(**changes):
     return dict({'fips':US_FIPS[:],'controls':[],'levels':[],'degree_granting':None,
                  'title_iv':True,'administrative_offices':False},**changes)
 
+
+# F-D: a plain count of institutions is answered from the directory population itself
+# (populations.select(...)['directory_count']), not a measure aggregate. Trigger only on
+# a bare institution headcount; anything with a measure, a per-category feature filter, a
+# named institution, or a geography/scope the population guard rejects falls through to the
+# normal pipeline (so we never turn a filtered question into a national count).
+_COUNT_RE=re.compile(r'\b(?:how many|number of|count of)\b',re.I)
+_UNIT_RE=re.compile(r'\binstitutions?|colleges?|universities\b',re.I)
+_MEASURE_RE=re.compile(r'enroll|students?|undergrad|graduat|degrees?|\bawards?\b|complet|faculty|staff|applicants?|admit|admission|salar|retention|\baid\b|\bgrants?\b|scholarship|tuition|revenue|expenses?|\brate\b|percent',re.I)
+_FEATURE_RE=re.compile(r'\boffer|offering|provid|\bwith\b|that have|accredit|religious|affiliat|\bHBCU\b|tribal|online|distance|women|men[- ]only|historically|\breport\b.*\bon\b',re.I)
+
+def institution_count_question(question):
+    q=question or ''
+    if not (_COUNT_RE.search(q) and _UNIT_RE.search(q)):return False
+    # "degree-granting" is a population scope, not a measure ("degree") or feature ("grant").
+    scope_q=re.sub(r'degree[\s-]granting','',q,flags=re.I)
+    if _MEASURE_RE.search(scope_q) or _FEATURE_RE.search(scope_q) or re.search(r'\b\d{6}\b',q):return False
+    return True
+
+def requested_count_year(question):
+    years=[int(y) for y in re.findall(r'\b(20[12]\d)\b',question)]
+    return max(years) if years else 2024
+
+def population_from_question(question):
+    q=question;p=default_population()
+    controls=[]
+    if re.search(r'\bpublic\b',q,re.I):controls.append(1)
+    if re.search(r'nonprofit|not.for.profit',q,re.I):controls.append(2)
+    elif re.search(r'for.profit',q,re.I):controls.append(3)
+    elif re.search(r'\bprivate\b',q,re.I):controls=[2,3]
+    p['controls']=sorted(set(controls))
+    levels=[]
+    if re.search(r'\b(?:four|4)[\s-]year\b',q,re.I):levels.append(1)
+    if re.search(r'less.than.(?:two|2)[\s-]year',q,re.I):levels.append(3)
+    elif re.search(r'\b(?:two|2)[\s-]year\b',q,re.I):levels.append(2)
+    p['levels']=sorted(set(levels))
+    if re.search(r'degree[\s-]granting',q,re.I):p['degree_granting']=True
+    return p
+
+def institution_count(question):
+    """Return a bare institution-headcount answer, or None to fall through."""
+    year=requested_count_year(question)
+    pop=population_from_question(question)
+    try:
+        validate_request(pop,question,year)
+        resolved=select(pop,year)
+    except ValueError:
+        return None
+    scope=resolved['label']+(' · degree-granting' if pop['degree_granting'] else '')
+    msg=(f"{resolved['directory_count']:,} institutions reported to IPEDS in the "
+         f"{year}–{str(year+1)[-2:]} collection within this scope: {scope}. "
+         "This counts distinct reporting institutions (directory file HD"+str(year)+") after "
+         "the population filters; by default Title IV participation is required and "
+         "administrative/central offices are excluded. Name a state, sector or level to narrow it.")
+    return {'intent':'analyze','mode':'institution count','message':msg,
+            'institution_count':{'year':year,'count':resolved['directory_count'],'scope':scope,
+                                 'filters':resolved['filters'],'code_evidence':resolved['code_evidence'],
+                                 'directory_sql':resolved['directory_sql'],'parameters':resolved['parameters']},
+            'model_usage':{'calls':0,'estimated_api_usd':0}}
+
 def select(population,year):
     from analysis_catalog.catalog import connection
     p=population

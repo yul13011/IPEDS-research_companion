@@ -323,6 +323,10 @@ def ask(question,previous=None,use_model=False,model=DEFAULT_MODEL,conversation=
     if brief and brief.get('coverage_gap') and brief.get('status')=='pending' and re.fullmatch(r'\s*(?:continue|go ahead|yes|run it|run that|proceed)[.!?\s]*',question,re.I):
         return {'intent':'clarify','mode':'source coverage limitation','message':'The original coverage gap remains. No proxy has been selected or calculated. To try an optional alternative, select its letter; you can also revise the request or ask another question.',
                 'analysis_brief':brief,'coverage_gap':brief['coverage_gap'],'model_usage':{'calls':0,'estimated_api_usd':0}}
+    from .populations import institution_count_question,institution_count
+    if isinstance(question,str) and institution_count_question(question):
+        counted=institution_count(question)
+        if counted is not None:return counted
     if isinstance(question,str) and discovery_question(question):
         if not 1<=len(question)<=4000:raise ValueError('Enter a question of at most 4,000 characters.')
         from .discovery import overview
