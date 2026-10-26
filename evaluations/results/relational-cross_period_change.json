@@ -1,0 +1,607 @@
+{
+  "plan": {
+    "metrics": [
+      "xpct"
+    ],
+    "institutions": [
+      "Yale"
+    ],
+    "years": [
+      2023,
+      2024
+    ],
+    "time_basis": "explicit_comparison",
+    "output": "table"
+  },
+  "catalog_plan": {
+    "version": 2,
+    "institutions": [
+      "Yale"
+    ],
+    "source_years": [
+      2023,
+      2024
+    ],
+    "sources": [
+      {
+        "id": "s24",
+        "year": 2024,
+        "table": "ADM2024",
+        "field_record_ids": [
+          136224
+        ],
+        "filters": [],
+        "group_by_record_ids": [],
+        "aggregates": []
+      },
+      {
+        "id": "s23",
+        "year": 2023,
+        "table": "ADM2023",
+        "field_record_ids": [
+          120667
+        ],
+        "filters": [],
+        "group_by_record_ids": [],
+        "aggregates": []
+      }
+    ],
+    "joins": [
+      {
+        "left_source": "s24",
+        "right_source": "s23",
+        "left_columns": [
+          "UNITID"
+        ],
+        "right_columns": [
+          "UNITID"
+        ],
+        "how": "left",
+        "cardinality": "one_to_one",
+        "missing_keys": "retain",
+        "period_alignment": "explicit_comparison"
+      }
+    ],
+    "expressions": [
+      {
+        "id": "pct",
+        "operator": "percent_change",
+        "inputs": [
+          "fs24_136224",
+          "fs23_120667"
+        ],
+        "group_by_references": []
+      }
+    ],
+    "outputs": [
+      {
+        "reference": "xpct",
+        "label": "Percent change in Yale total applicants, fall 2023 to fall 2024 (baseline fall 2023)"
+      }
+    ],
+    "missing_policy": "propagate",
+    "time_basis": "explicit_comparison",
+    "assumptions": [
+      "Requested time: fall 2023 (baseline, ADM2023 release) to fall 2024 (new value, ADM2024 release).",
+      "APPLCN (Applicants total) is first-time, degree/certificate-seeking undergraduate applicants; ADM tables have one row per institution.",
+      "Join on UNITID only; no year comparability or definition harmonization is claimed."
+    ],
+    "clarification_questions": []
+  },
+  "metric_specs": {
+    "xpct": {
+      "label": "Percent change in Yale total applicants, fall 2023 to fall 2024 (baseline fall 2023)",
+      "family": "query",
+      "unit": "percent"
+    }
+  },
+  "rows": [
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "Academic year Fall 2024; Academic year Fall 2023",
+      "metric": "xpct",
+      "measure": "Percent change in Yale total applicants, fall 2023 to fall 2024 (baseline fall 2023)",
+      "unit": "percent",
+      "value": 11.030249213366021,
+      "release": "IPEDS_2024-25_Provisional; IPEDS_2023-24_Final",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[]",
+      "groups": [],
+      "available_rows": null,
+      "requested_rows": null
+    }
+  ],
+  "observation_years": [
+    2024
+  ],
+  "sources": [
+    {
+      "metric": "xpct",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "ADM2024",
+      "columns": [
+        "APPLCN"
+      ],
+      "filters": [],
+      "formula": {
+        "aggregates": [],
+        "expressions": [
+          {
+            "id": "pct",
+            "operator": "percent_change",
+            "inputs": [
+              "fs24_136224",
+              "fs23_120667"
+            ],
+            "group_by_references": []
+          }
+        ]
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"APPLCN\" AS \"APPLCN\" FROM \"ADM2024\" WHERE \"UNITID\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136224,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "ADM2024",
+          "variable_name": "APPLCN",
+          "title": "Applicants total",
+          "body": "surveyorder: 12\nsurveynumber: 12\nsurvey: Admissions and Test Scores\ntablenumber: 120\ntablename: ADM2024\ntabletitle: Admission considerations, applications, admissions, enrollees and test scores\nvarnumber: 11016\nvarorder: 15\nvarname: APPLCN\nimputationvar: XAPPLCN\nvartitle: Applicants total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 85\nsectionnumber: 7\nlongdescription: Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.\nvarsource: IPEDS, Winter 2024-25, Admissions component\nfiletitle: Admission considerations, applications, admissions, enrollees and test scores\nsectiontitle: Number of applications, admissions and enrollees",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 353,
+          "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+          "documented_table": "ADM2024",
+          "physical_table": "ADM2024",
+          "location_override": false,
+          "issues": []
+        },
+        {
+          "record_id": 120667,
+          "release_id": "IPEDS_2023-24_Final",
+          "kind": "variable_definition",
+          "table_name": "ADM2023",
+          "variable_name": "APPLCN",
+          "title": "Applicants total",
+          "body": "surveyorder: 12\nsurveynumber: 12\nsurvey: Admissions and Test Scores\ntablenumber: 120\ntablename: ADM2023\ntabletitle: Admission considerations, applications, admissions, enrollees and test scores\nvarnumber: 11016\nvarorder: 15\nvarname: APPLCN\nimputationvar: XAPPLCN\nvartitle: Applicants total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nhasrv: True\nfilenumber: 85\nsectionnumber: 7\nlongdescription: Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.\nvarsource: IPEDS, Winter 2023-24, Admissions component\nfiletitle: Admission considerations, applications, admissions, enrollees and test scores\nsectiontitle: Number of applications, admissions and enrollees",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+          "source_sha256": "1e3f210f8479fb66fc203d60f01efb6e6d825b316f1a36fb96ffc7dca217384a",
+          "sheet_name": "varTable23",
+          "source_row": 701,
+          "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+          "documented_table": "ADM2023",
+          "physical_table": "ADM2023",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": []
+    },
+    {
+      "metric": "xpct",
+      "year": 2023,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2023-24_Final\\IPEDS202324.sqlite",
+      "database_size": 256307200,
+      "database_mtime_ns": 1792185747586233700,
+      "table": "ADM2023",
+      "columns": [
+        "APPLCN"
+      ],
+      "filters": [],
+      "formula": {
+        "aggregates": [],
+        "expressions": [
+          {
+            "id": "pct",
+            "operator": "percent_change",
+            "inputs": [
+              "fs24_136224",
+              "fs23_120667"
+            ],
+            "group_by_references": []
+          }
+        ]
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"APPLCN\" AS \"APPLCN\" FROM \"ADM2023\" WHERE \"UNITID\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136224,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "ADM2024",
+          "variable_name": "APPLCN",
+          "title": "Applicants total",
+          "body": "surveyorder: 12\nsurveynumber: 12\nsurvey: Admissions and Test Scores\ntablenumber: 120\ntablename: ADM2024\ntabletitle: Admission considerations, applications, admissions, enrollees and test scores\nvarnumber: 11016\nvarorder: 15\nvarname: APPLCN\nimputationvar: XAPPLCN\nvartitle: Applicants total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 85\nsectionnumber: 7\nlongdescription: Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.\nvarsource: IPEDS, Winter 2024-25, Admissions component\nfiletitle: Admission considerations, applications, admissions, enrollees and test scores\nsectiontitle: Number of applications, admissions and enrollees",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 353,
+          "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+          "documented_table": "ADM2024",
+          "physical_table": "ADM2024",
+          "location_override": false,
+          "issues": []
+        },
+        {
+          "record_id": 120667,
+          "release_id": "IPEDS_2023-24_Final",
+          "kind": "variable_definition",
+          "table_name": "ADM2023",
+          "variable_name": "APPLCN",
+          "title": "Applicants total",
+          "body": "surveyorder: 12\nsurveynumber: 12\nsurvey: Admissions and Test Scores\ntablenumber: 120\ntablename: ADM2023\ntabletitle: Admission considerations, applications, admissions, enrollees and test scores\nvarnumber: 11016\nvarorder: 15\nvarname: APPLCN\nimputationvar: XAPPLCN\nvartitle: Applicants total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nhasrv: True\nfilenumber: 85\nsectionnumber: 7\nlongdescription: Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.\nvarsource: IPEDS, Winter 2023-24, Admissions component\nfiletitle: Admission considerations, applications, admissions, enrollees and test scores\nsectiontitle: Number of applications, admissions and enrollees",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+          "source_sha256": "1e3f210f8479fb66fc203d60f01efb6e6d825b316f1a36fb96ffc7dca217384a",
+          "sheet_name": "varTable23",
+          "source_row": 701,
+          "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+          "documented_table": "ADM2023",
+          "physical_table": "ADM2023",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": []
+    }
+  ],
+  "definitions": {
+    "xpct": "Applicants total: Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.\n\nApplicants total: Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy."
+  },
+  "warnings": [
+    "Requested time: fall 2023 (baseline, ADM2023 release) to fall 2024 (new value, ADM2024 release).",
+    "APPLCN (Applicants total) is first-time, degree/certificate-seeking undergraduate applicants; ADM tables have one row per institution.",
+    "Join on UNITID only; no year comparability or definition harmonization is claimed.",
+    "Source row domains, missingness policy, join cardinality and typed calculations are retained in the audit. Missing values are not zeros.",
+    "Different source periods are explicitly compared. This does not assert that changed definitions have been harmonized."
+  ],
+  "created_at": "2026-10-19T19:22:42.092027+00:00",
+  "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+  "review_status": "Source-bound relational plan with observed grain, bounded domains, cardinality and typed-operation validation.",
+  "coverage": {
+    "requested_cells": 1,
+    "available_cells": 1
+  },
+  "query_audit": [
+    {
+      "source_id": "s24",
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"APPLCN\" AS \"APPLCN\" FROM \"ADM2024\" WHERE \"UNITID\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794
+      ],
+      "selected_rows": 1,
+      "raw_keys": [
+        "UNITID"
+      ],
+      "row_limit": 20000,
+      "requested_unitids": [
+        130794
+      ],
+      "missing_unitids": [],
+      "missing_codes": {
+        "136224": []
+      }
+    },
+    {
+      "source_id": "s23",
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2023-24_Final\\IPEDS202324.sqlite",
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"APPLCN\" AS \"APPLCN\" FROM \"ADM2023\" WHERE \"UNITID\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794
+      ],
+      "selected_rows": 1,
+      "raw_keys": [
+        "UNITID"
+      ],
+      "row_limit": 20000,
+      "requested_unitids": [
+        130794
+      ],
+      "missing_unitids": [],
+      "missing_codes": {
+        "120667": []
+      }
+    }
+  ],
+  "join_validation": [
+    {
+      "left_source": "s24",
+      "right_source": "s23",
+      "left_columns": [
+        "UNITID"
+      ],
+      "right_columns": [
+        "UNITID"
+      ],
+      "how": "left",
+      "cardinality": "one_to_one",
+      "missing_keys": "retain",
+      "period_alignment": "explicit_comparison",
+      "left_rows": 1,
+      "unmatched_left_rows": 0,
+      "result_rows": 1,
+      "cardinality_verified": true
+    }
+  ],
+  "semantic_validation": {
+    "execution_approved": true,
+    "version": 2,
+    "missing_policy": "propagate",
+    "time_basis": "explicit_comparison"
+  },
+  "catalog_evidence": {
+    "definition_evidence": [
+      {
+        "record_id": 136224,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "ADM2024",
+        "variable_name": "APPLCN",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"ADM2024\"]",
+        "imputation_variable": "XAPPLCN",
+        "category_count": 0,
+        "definition_hash": "ecf51a98e36f19e73a4ab1c42cbb484ea3a8aa27ac0bf6cc3b36a5833fcca3c3",
+        "normalized_hash": "05407afbbfd31bc3adbcfb5560f8588dd4cec8a9cef37720e1ca80f44bad5159",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Applicants total",
+        "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 136224,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "ADM2024",
+          "variable_name": "APPLCN",
+          "title": "Applicants total",
+          "body": "surveyorder: 12\nsurveynumber: 12\nsurvey: Admissions and Test Scores\ntablenumber: 120\ntablename: ADM2024\ntabletitle: Admission considerations, applications, admissions, enrollees and test scores\nvarnumber: 11016\nvarorder: 15\nvarname: APPLCN\nimputationvar: XAPPLCN\nvartitle: Applicants total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 85\nsectionnumber: 7\nlongdescription: Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.\nvarsource: IPEDS, Winter 2024-25, Admissions component\nfiletitle: Admission considerations, applications, admissions, enrollees and test scores\nsectiontitle: Number of applications, admissions and enrollees",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 353
+        }
+      },
+      {
+        "record_id": 120667,
+        "release_id": "IPEDS_2023-24_Final",
+        "table_name": "ADM2023",
+        "variable_name": "APPLCN",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"ADM2023\"]",
+        "imputation_variable": "XAPPLCN",
+        "category_count": 0,
+        "definition_hash": "ecf51a98e36f19e73a4ab1c42cbb484ea3a8aa27ac0bf6cc3b36a5833fcca3c3",
+        "normalized_hash": "05407afbbfd31bc3adbcfb5560f8588dd4cec8a9cef37720e1ca80f44bad5159",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Applicants total",
+        "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 120667,
+          "release_id": "IPEDS_2023-24_Final",
+          "kind": "variable_definition",
+          "table_name": "ADM2023",
+          "variable_name": "APPLCN",
+          "title": "Applicants total",
+          "body": "surveyorder: 12\nsurveynumber: 12\nsurvey: Admissions and Test Scores\ntablenumber: 120\ntablename: ADM2023\ntabletitle: Admission considerations, applications, admissions, enrollees and test scores\nvarnumber: 11016\nvarorder: 15\nvarname: APPLCN\nimputationvar: XAPPLCN\nvartitle: Applicants total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nhasrv: True\nfilenumber: 85\nsectionnumber: 7\nlongdescription: Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.\nvarsource: IPEDS, Winter 2023-24, Admissions component\nfiletitle: Admission considerations, applications, admissions, enrollees and test scores\nsectiontitle: Number of applications, admissions and enrollees",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+          "source_sha256": "1e3f210f8479fb66fc203d60f01efb6e6d825b316f1a36fb96ffc7dca217384a",
+          "sheet_name": "varTable23",
+          "source_row": 701
+        }
+      }
+    ],
+    "category_evidence": [],
+    "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+    "table_evidence": [
+      {
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "ADM2024",
+        "family": "ADM{YEAR}",
+        "profile": {
+          "candidate_key": [
+            "UNITID"
+          ],
+          "distinct_institutions": 1956,
+          "expected_rows_match": true,
+          "key_status": "observed_unique_institution_key",
+          "null_institution_ids": 0,
+          "query_count": 1,
+          "rows": 1956,
+          "status": "profiled"
+        },
+        "period_evidence": [
+          {
+            "record_id": 135826,
+            "release_date": null,
+            "release_status": "Provisional",
+            "year_coverage": "Academic year Fall 2024"
+          }
+        ],
+        "population_evidence": [
+          {
+            "description": "This table contains information about the undergraduate selection process for entering first-time, degree/certificate-seeking students. This includes information about admission considerations, applicants, applicants that were admitted, and admitted students who enrolled. SAT and ACT test scores are included for institutions, that require test scores for admission. These data are applicable for institutions that do not have an open admissions policy for entering first-time students. Additional gender variables were added for students that do not fit the binary gender categories provided (men/women) in the 2022-23 collection. In 2024-25, if the reported value for another gender would be nonzero but less than 5 students, the institution was instructed to not report the value.",
+            "record_id": 135826,
+            "title": "Admission considerations, applicants, admissions, and test scores"
+          }
+        ],
+        "source_definitions": [
+          {
+            "record_id": 135826,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "table_definition",
+            "table_name": "ADM2024",
+            "variable_name": "",
+            "title": "Admission considerations, applicants, admissions, and test scores",
+            "body": "surveyorder: 12\nsurveynumber: 12\nsurvey: Admissions and Test Scores\nyearcoverage: Academic year Fall 2024\ntablename: ADM2024\ntablenumber: 120\ntabletitle: Admission considerations, applicants, admissions, and test scores\ndescription: This table contains information about the undergraduate selection process for entering first-time, degree/certificate-seeking students. This includes information about admission considerations, applicants, applicants that were admitted, and admitted students who enrolled. SAT and ACT test scores are included for institutions, that require test scores for admission. These data are applicable for institutions that do not have an open admissions policy for entering first-time students. Additional gender variables were added for students that do not fit the binary gender categories provided (men/women) in the 2022-23 collection. In 2024-25, if the reported value for another gender would be nonzero but less than 5 students, the institution was instructed to not report the value.\nrelease: Provisional\nrelease_date: December 2025",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "tables24",
+            "source_row": 7
+          }
+        ]
+      },
+      {
+        "release_id": "IPEDS_2023-24_Final",
+        "table_name": "ADM2023",
+        "family": "ADM{YEAR}",
+        "profile": {
+          "candidate_key": [
+            "UNITID"
+          ],
+          "distinct_institutions": 1973,
+          "expected_rows_match": true,
+          "key_status": "observed_unique_institution_key",
+          "null_institution_ids": 0,
+          "query_count": 1,
+          "rows": 1973,
+          "status": "profiled"
+        },
+        "period_evidence": [
+          {
+            "record_id": 119924,
+            "release_date": "December 2025",
+            "release_status": "Final",
+            "year_coverage": "Academic year Fall 2023"
+          }
+        ],
+        "population_evidence": [
+          {
+            "description": "This table contains information about the undergraduate selection process for entering first-time, degree/certificate-seeking students. This includes information about admission considerations, applicants, applicants that were admitted, and admitted students who enrolled. SAT and ACT test scores are included for institutions, that require test scores for admission. These data are applicable for institutions that do not have an open admissions policy for entering first-time students. Additional gender variables were added for students that do not fit the binary gender categories provided (men/women) in the 2022-23 collection. In 2023-24, if the reported value for another gender would be nonzero but less than 5 students, the institution was instructed to not report the value.",
+            "record_id": 119924,
+            "title": "Admission considerations, applicants, admissions, and test scores"
+          }
+        ],
+        "source_definitions": [
+          {
+            "record_id": 119924,
+            "release_id": "IPEDS_2023-24_Final",
+            "kind": "table_definition",
+            "table_name": "ADM2023",
+            "variable_name": "",
+            "title": "Admission considerations, applicants, admissions, and test scores",
+            "body": "surveyorder: 12\nsurveynumber: 12\nsurvey: Admissions\nyearcoverage: Academic year Fall 2023\ntablename: ADM2023\ntablenumber: 120\ntabletitle: Admission considerations, applicants, admissions, and test scores\ndescription: This table contains information about the undergraduate selection process for entering first-time, degree/certificate-seeking students. This includes information about admission considerations, applicants, applicants that were admitted, and admitted students who enrolled. SAT and ACT test scores are included for institutions, that require test scores for admission. These data are applicable for institutions that do not have an open admissions policy for entering first-time students. Additional gender variables were added for students that do not fit the binary gender categories provided (men/women) in the 2022-23 collection. In 2023-24, if the reported value for another gender would be nonzero but less than 5 students, the institution was instructed to not report the value.\nrelease: Final\nrelease date: December 2025",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+            "source_sha256": "1e3f210f8479fb66fc203d60f01efb6e6d825b316f1a36fb96ffc7dca217384a",
+            "sheet_name": "Tables23",
+            "source_row": 11
+          }
+        ]
+      }
+    ]
+  },
+  "field_semantics": {
+    "136224": {
+      "version": 2,
+      "record_id": 136224,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "ADM2024",
+      "variable": "APPLCN",
+      "source_title": "Applicants total",
+      "measure_base": "applicants",
+      "dimensions": {},
+      "unit": "students",
+      "numeric_kind": "continuous",
+      "additive": true,
+      "total_scope": true,
+      "reporting_periods": [
+        "Academic year Fall 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135826,
+          "description": "This table contains information about the undergraduate selection process for entering first-time, degree/certificate-seeking students. This includes information about admission considerations, applicants, applicants that were admitted, and admitted students who enrolled. SAT and ACT test scores are included for institutions, that require test scores for admission. These data are applicable for institutions that do not have an open admissions policy for entering first-time students. Additional gender variables were added for students that do not fit the binary gender categories provided (men/w"
+        }
+      ],
+      "required_row_selectors": [],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136224,
+        "table_record_ids": [
+          135826
+        ],
+        "title_excerpt": "Applicants total",
+        "definition_excerpt": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for ente"
+      },
+      "readiness": "described",
+      "execution_approved": false
+    },
+    "120667": {
+      "version": 2,
+      "record_id": 120667,
+      "release_id": "IPEDS_2023-24_Final",
+      "table": "ADM2023",
+      "variable": "APPLCN",
+      "source_title": "Applicants total",
+      "measure_base": "applicants",
+      "dimensions": {},
+      "unit": "students",
+      "numeric_kind": "continuous",
+      "additive": true,
+      "total_scope": true,
+      "reporting_periods": [
+        "Academic year Fall 2023"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 119924,
+          "description": "This table contains information about the undergraduate selection process for entering first-time, degree/certificate-seeking students. This includes information about admission considerations, applicants, applicants that were admitted, and admitted students who enrolled. SAT and ACT test scores are included for institutions, that require test scores for admission. These data are applicable for institutions that do not have an open admissions policy for entering first-time students. Additional gender variables were added for students that do not fit the binary gender categories provided (men/w"
+        }
+      ],
+      "required_row_selectors": [],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 120667,
+        "table_record_ids": [
+          119924
+        ],
+        "title_excerpt": "Applicants total",
+        "definition_excerpt": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for ente"
+      },
+      "readiness": "described",
+      "execution_approved": false
+    }
+  },
+  "latency": {
+    "validation_seconds": 0.14797379996161908,
+    "query_seconds": 0.028465000039432198,
+    "planning_and_binding_seconds": 16.383576399995945,
+    "answer_ready_seconds": 16.560918000002857,
+    "live_model_calls": 3,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+  },
+  "result_id": "231feb0106251885",
+  "planning_validation": {
+    "repair_attempts": [
+      {
+        "attempt": 1,
+        "blocks": [
+          "Unknown or forward expression reference; calculation cycles are forbidden."
+        ]
+      }
+    ]
+  }
+}

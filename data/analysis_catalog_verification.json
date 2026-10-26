@@ -1,0 +1,73 @@
+{
+  "as_of": "2026-10-19T17:04:16.575065+00:00",
+  "passed": true,
+  "checks": {
+    "integrity": true,
+    "source_identity_matches": true,
+    "foreign_keys": true,
+    "all_physical_tables": true,
+    "all_physical_fields": true,
+    "all_variable_definitions": true,
+    "physical_coverage_identity": true,
+    "no_silent_definition_relocation": true,
+    "all_profiles_completed": true,
+    "profile_row_counts_match": true,
+    "no_fact_to_fact_joins": true,
+    "no_unmatched_join_approved": true,
+    "unique_target_keys_for_joins": true,
+    "read_only_api": true,
+    "dimensions_have_category_evidence": true,
+    "enrollment_definition_bound": true,
+    "period_and_population_evidence": true,
+    "missing_imputation_explicit": true,
+    "imputation_omission_documented": true,
+    "undergraduate_category_evidence": true,
+    "ten_release_availability": true,
+    "no_auto_measure_approval": true
+  },
+  "counts": {
+    "tables": 554,
+    "fields": 25245,
+    "definitions": 23990,
+    "relationships": 495,
+    "field_history": 20028,
+    "conventions": 225,
+    "review_queue": 944,
+    "source_category_records": 124493
+  },
+  "distributions": {
+    "tables.kind": {
+      "institution_data": 505,
+      "source_metadata": 49
+    },
+    "fields.definition_status": {
+      "candidate_other_location": 347,
+      "exact_definition": 23644,
+      "no_definition": 749,
+      "shared_identifier": 505
+    },
+    "tables.readiness": {
+      "evidence_linked_review_required": 505,
+      "metadata_only": 49
+    },
+    "relationships.status": {
+      "unmatched_identifiers_review_required": 4,
+      "validated_institution_decoration": 491
+    },
+    "review_queue.category": {
+      "candidate_other_location": 343,
+      "field_definition_review": 396,
+      "not_in_supplied_schema": 3,
+      "record_grain_review": 202
+    },
+    "key_status": {
+      "not_profiled": 49,
+      "observed_unique_candidate_review_required": 202,
+      "observed_unique_institution_key": 303
+    },
+    "imputation_status": {
+      "not_in_supplied_schema": 14817
+    }
+  },
+  "scope": "Full derived-catalog linkage, observed institution keys/grain, same-release directory join candidates, source guidance and cross-year change evidence. Not a broad question-answer accuracy evaluation or semantic approval of every field."
+}

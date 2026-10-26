@@ -1,0 +1,1990 @@
+{
+  "plan": {
+    "metrics": [
+      "ac_total"
+    ],
+    "institutions": [
+      "Yale"
+    ],
+    "years": [
+      2024
+    ],
+    "time_basis": "source_period",
+    "output": "table"
+  },
+  "catalog_plan": {
+    "version": 2,
+    "institutions": [
+      "Yale"
+    ],
+    "source_years": [
+      2024
+    ],
+    "sources": [
+      {
+        "id": "c",
+        "year": 2024,
+        "table": "C2024_A",
+        "field_record_ids": [
+          136602,
+          136625
+        ],
+        "filters": [
+          {
+            "record_id": 136624,
+            "operator": "eq",
+            "values": [
+              "99"
+            ],
+            "code_record_ids": [
+              146439
+            ]
+          },
+          {
+            "record_id": 136593,
+            "operator": "eq",
+            "values": [
+              "1"
+            ],
+            "code_record_ids": [
+              144680
+            ]
+          }
+        ],
+        "group_by_record_ids": [
+          136625
+        ],
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ]
+      }
+    ],
+    "joins": [],
+    "expressions": [],
+    "outputs": [
+      {
+        "reference": "ac_total",
+        "label": "Total awards (grand total) by award level"
+      }
+    ],
+    "missing_policy": "propagate",
+    "time_basis": "source_period",
+    "assumptions": [
+      "Requested period July 1, 2023 - June 30, 2024 corresponds to the C2024_A reporting period (2024 release label).",
+      "CIPCODE filtered to 99 (Grand total, all fields of study) and MAJORNUM to 1 (First major).",
+      "Grouped by AWLEVEL; returns source counts per award level category. Award level categories include totals/subtotals (e.g., 15 Degrees/certificates total, 12 Degrees total) that overlap with component levels and are not summed.",
+      "Counts only, no percentages. Yale is resolved by name to its UNITID."
+    ],
+    "clarification_questions": []
+  },
+  "metric_specs": {
+    "ac_total": {
+      "label": "Total awards (grand total) by award level",
+      "family": "query",
+      "unit": "awards"
+    }
+  },
+  "rows": [
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Certificates of at least 2 but less than 4 years",
+      "unit": "awards",
+      "value": 2.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Certificates of at least 2 but less than 4 years\"]",
+      "groups": [
+        "Award Level code: Certificates of at least 2 but less than 4 years"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Bachelor's degree",
+      "unit": "awards",
+      "value": 1665.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Bachelor's degree\"]",
+      "groups": [
+        "Award Level code: Bachelor's degree"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Postbaccalaureate certificate",
+      "unit": "awards",
+      "value": 74.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Postbaccalaureate certificate\"]",
+      "groups": [
+        "Award Level code: Postbaccalaureate certificate"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Master's degree",
+      "unit": "awards",
+      "value": 2757.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Master's degree\"]",
+      "groups": [
+        "Award Level code: Master's degree"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Post-master's certificate",
+      "unit": "awards",
+      "value": 8.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Post-master's certificate\"]",
+      "groups": [
+        "Award Level code: Post-master's certificate"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Degrees total",
+      "unit": "awards",
+      "value": 5179.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Degrees total\"]",
+      "groups": [
+        "Award Level code: Degrees total"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Certificates below the baccalaureate total",
+      "unit": "awards",
+      "value": 2.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Certificates below the baccalaureate total\"]",
+      "groups": [
+        "Award Level code: Certificates below the baccalaureate total"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Certificates above the baccalaureate total",
+      "unit": "awards",
+      "value": 82.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Certificates above the baccalaureate total\"]",
+      "groups": [
+        "Award Level code: Certificates above the baccalaureate total"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Degrees/certificates total",
+      "unit": "awards",
+      "value": 5263.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Degrees/certificates total\"]",
+      "groups": [
+        "Award Level code: Degrees/certificates total"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Doctor's degree - research/scholarship",
+      "unit": "awards",
+      "value": 438.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Doctor's degree - research/scholarship\"]",
+      "groups": [
+        "Award Level code: Doctor's degree - research/scholarship"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Doctor's degree - professional practice",
+      "unit": "awards",
+      "value": 318.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Doctor's degree - professional practice\"]",
+      "groups": [
+        "Award Level code: Doctor's degree - professional practice"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "ac_total",
+      "measure": "Total awards (grand total) by award level \u00b7 Award Level code: Doctor's degree - other",
+      "unit": "awards",
+      "value": 1.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[\"Award Level code: Doctor's degree - other\"]",
+      "groups": [
+        "Award Level code: Doctor's degree - other"
+      ],
+      "available_rows": 1,
+      "requested_rows": 1
+    }
+  ],
+  "observation_years": [
+    2024
+  ],
+  "sources": [
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    },
+    {
+      "metric": "ac_total",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "CTOTALT"
+      ],
+      "filters": [
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "total",
+            "operator": "sum",
+            "record_id": 136602,
+            "weight_record_id": null
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        }
+      ]
+    }
+  ],
+  "definitions": {
+    "ac_total": "Grand total: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders"
+  },
+  "warnings": [
+    "Requested period July 1, 2023 - June 30, 2024 corresponds to the C2024_A reporting period (2024 release label).",
+    "CIPCODE filtered to 99 (Grand total, all fields of study) and MAJORNUM to 1 (First major).",
+    "Grouped by AWLEVEL; returns source counts per award level category. Award level categories include totals/subtotals (e.g., 15 Degrees/certificates total, 12 Degrees total) that overlap with component levels and are not summed.",
+    "Counts only, no percentages. Yale is resolved by name to its UNITID.",
+    "Source row domains, missingness policy, join cardinality and typed calculations are retained in the audit. Missing values are not zeros."
+  ],
+  "created_at": "2026-10-19T19:22:12.955171+00:00",
+  "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+  "review_status": "Source-bound relational plan with observed grain, bounded domains, cardinality and typed-operation validation.",
+  "coverage": {
+    "requested_cells": 12,
+    "available_cells": 12
+  },
+  "query_audit": [
+    {
+      "source_id": "c",
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"AWLEVEL\" AS \"AWLEVEL\",\"CIPCODE\" AS \"CIPCODE\",\"MAJORNUM\" AS \"MAJORNUM\",\"CTOTALT\" AS \"CTOTALT\" FROM \"C2024_A\" WHERE \"UNITID\" IN (?) AND \"CIPCODE\" IN (?) AND \"MAJORNUM\" IN (?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "99",
+        "1"
+      ],
+      "selected_rows": 12,
+      "raw_keys": [
+        "UNITID",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "row_limit": 20000,
+      "requested_unitids": [
+        130794
+      ],
+      "missing_unitids": [],
+      "missing_codes": {
+        "136624": [],
+        "136625": [],
+        "136593": [],
+        "136602": []
+      }
+    }
+  ],
+  "join_validation": [],
+  "semantic_validation": {
+    "execution_approved": true,
+    "version": 2,
+    "missing_policy": "propagate",
+    "time_basis": "source_period"
+  },
+  "catalog_evidence": {
+    "definition_evidence": [
+      {
+        "record_id": 136593,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "variable_name": "MAJORNUM",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"C2024_A\"]",
+        "imputation_variable": "",
+        "category_count": 2,
+        "definition_hash": "f270237d4f432e92455d89c0ba820470aec46836d36be48dd7f2cf87e991b0cb",
+        "normalized_hash": "8e803b7604ed4069497b8bf32ee48e88d736c5010c4e6068649ef740fddcea18",
+        "category_hash": "f5b796fb6c8a5c61a610a1094956fe95a2e4b1ee7be9a75fb6052e9c54b27dd4",
+        "title": "First or Second Major",
+        "long_description": "First or Second Major",
+        "data_type": "N",
+        "format": "Disc",
+        "evidence": {
+          "record_id": 136593,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First or Second Major",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\nvartitle: First or Second Major\ndatatype: N\nfieldwidth: 1\nformat: Disc\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: First or Second Major\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 722
+        }
+      },
+      {
+        "record_id": 136602,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "variable_name": "CTOTALT",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"C2024_A\"]",
+        "imputation_variable": "XCTOTALT",
+        "category_count": 0,
+        "definition_hash": "ae0ddb960baae645c399c6fa046333616eadd5edb4fe7895cd3340c4b76a844c",
+        "normalized_hash": "acb1d5d882978dc04f071fc3374d1782ea4a0c55ae906ddd9a125da67e99ee7e",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Grand total",
+        "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731
+        }
+      },
+      {
+        "record_id": 136624,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "variable_name": "CIPCODE",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"C2024_A\"]",
+        "imputation_variable": "",
+        "category_count": 2154,
+        "definition_hash": "e51485626911ca1b34c0bd480e3084a5b3cc3903d29d70c65113a94547880be7",
+        "normalized_hash": "91373abcef56bb402bb025721be5d157697b534d0e6b3cf9649f7e27382d0c9f",
+        "category_hash": "c76f443df12ee2fa8bce596c7182b8152d3a379e46773b29b9f3563e265e3a4c",
+        "title": "CIP Code - 2020 Classification",
+        "long_description": "Classification of instrucional Program (CIP) code. A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions. The Classification of Instructional Programs (CIP) provides a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity. CIP was originally developed by the U.S. Department of Education's National Center for Education Statistics (NCES) in 1980, with revisions occurring in 1985, 1990, 2000, 2010 and 2020. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56",
+        "data_type": "A",
+        "format": "Disc",
+        "evidence": {
+          "record_id": 136624,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "CIP Code - 2020 Classification",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\nvartitle: CIP Code - 2020 Classification\ndatatype: A\nfieldwidth: 7\nformat: Disc\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Classification of instrucional Program (CIP) code. A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions. The Classification of Instructional Programs (CIP) provides a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity. CIP was originally developed by the U.S. Department of Education's National Center for Education Statistics (NCES) in 1980, with revisions occurring in 1985, 1990, 2000, 2010 and 2020. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 753
+        }
+      },
+      {
+        "record_id": 136625,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "variable_name": "AWLEVEL",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"C2024_A\"]",
+        "imputation_variable": "",
+        "category_count": 17,
+        "definition_hash": "d199015c445b405c01d79f19d4e57a59c7f3f45a202a8f2020cd76bfe208041c",
+        "normalized_hash": "02f1498a5129192be003938e78b6cbbe1993a61337148a8a753e1b9e43c02a61",
+        "category_hash": "a5984806fc9e30389a7547aec9144b771828d26582aea4b7c1d480cf41e10831",
+        "title": "Award Level code",
+        "long_description": "Award level code The twelve award levels under which completions can be reported are: Certificates of less than 12 weeks includes programs of less than 300 clock hours, or, Less than 9 SEMESTER or TRIMESTER credit hours, or Less than 13 QUARTER credit hours Certificates of at least 12 weeks but less than 1 year includes programs of 300-899 clock hours, or 9-29 SEMESTER or TRIMESTER credit hours, or 13-44 QUARTER credit hours Certificates of at least 1 year but less the 2 years includes programs of at least 900, but less than 1800 clock hours, or at least 30, but less than 60 SEMESTER OR TRIMESTER HOURS, or at least 45, but less than 90 QUARTER HOURS Associate's degree Certificates of at least 2 years but less the 4 years includes programs of 1800 or more clock hours, or 60 or more SEMESTER OR TRIMESTER credit hours, or 90 or more QUARTER credit hours Bachelor's degree Postbaccalaureate certificate Master's degree Post-master's certificate Doctor's degree - research/scholarship Doctor's degree - professional practice Doctor's degree - other",
+        "data_type": "N",
+        "format": "Disc",
+        "evidence": {
+          "record_id": 136625,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "AWLEVEL",
+          "title": "Award Level code",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 35005\nvarorder: 4\nvarname: AWLEVEL\nvartitle: Award Level code\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Award level code The twelve award levels under which completions can be reported are: Certificates of less than 12 weeks includes programs of less than 300 clock hours, or, Less than 9 SEMESTER or TRIMESTER credit hours, or Less than 13 QUARTER credit hours Certificates of at least 12 weeks but less than 1 year includes programs of 300-899 clock hours, or 9-29 SEMESTER or TRIMESTER credit hours, or 13-44 QUARTER credit hours Certificates of at least 1 year but less the 2 years includes programs of at least 900, but less than 1800 clock hours, or at least 30, but less than 60 SEMESTER OR TRIMESTER HOURS, or at least 45, but less than 90 QUARTER HOURS Associate's degree Certificates of at least 2 years but less the 4 years includes programs of 1800 or more clock hours, or 60 or more SEMESTER OR TRIMESTER credit hours, or 90 or more QUARTER credit hours Bachelor's degree Postbaccalaureate certificate Master's degree Post-master's certificate Doctor's degree - research/scholarship Doctor's degree - professional practice Doctor's degree - other\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 754
+        }
+      }
+    ],
+    "category_evidence": [
+      {
+        "record_id": 146439,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "code_value",
+        "table_name": "C2024_A",
+        "variable_name": "CIPCODE",
+        "title": "Grand total",
+        "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "valueSets24",
+        "source_row": 7969
+      },
+      {
+        "record_id": 144680,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "code_value",
+        "table_name": "C2024_A",
+        "variable_name": "MAJORNUM",
+        "title": "First major",
+        "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "valueSets24",
+        "source_row": 6210
+      }
+    ],
+    "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+    "table_evidence": [
+      {
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "family": "C{YEAR}_A",
+        "profile": {
+          "candidate_key": [
+            "UNITID",
+            "AWLEVEL",
+            "CIPCODE",
+            "MAJORNUM"
+          ],
+          "distinct_institutions": 5869,
+          "expected_rows_match": true,
+          "key_status": "observed_unique_candidate_review_required",
+          "null_institution_ids": 0,
+          "query_count": 2,
+          "rows": 1688471,
+          "status": "profiled"
+        },
+        "period_evidence": [
+          {
+            "record_id": 135841,
+            "release_date": null,
+            "release_status": "Provisional",
+            "year_coverage": "July 1, 2023 - June 30, 2024"
+          }
+        ],
+        "population_evidence": [
+          {
+            "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56 . Beginning in 2019-20, the less than 1 year certificate award level is divided into the following two award levels: certificates of less than 12 weeks and certificates of at least 12 weeks but less than 1 year. This table contains multiple records per institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), classification of instructional program (CIPCODE), first or second major (MAJORNUM) and award level (AWLEVEL). Each record will contain the total awards, awards for men and women, and the total awards and awards for men and women for all nine race/ethnicity categories.",
+            "record_id": 135841,
+            "title": "Awards/degrees conferred by program (6-digit CIP code), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024"
+          }
+        ],
+        "source_definitions": [
+          {
+            "record_id": 135841,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "table_definition",
+            "table_name": "C2024_A",
+            "variable_name": "",
+            "title": "Awards/degrees conferred by program (6-digit CIP code), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024",
+            "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\nyearcoverage: July 1, 2023 - June 30, 2024\ntablename: C2024_A\ntablenumber: 30\ntabletitle: Awards/degrees conferred by program (6-digit CIP code), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\ndescription: This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56 . Beginning in 2019-20, the less than 1 year certificate award level is divided into the following two award levels: certificates of less than 12 weeks and certificates of at least 12 weeks but less than 1 year. This table contains multiple records per institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), classification of instructional program (CIPCODE), first or second major (MAJORNUM) and award level (AWLEVEL). Each record will contain the total awards, awards for men and women, and the total awards and awards for men and women for all nine race/ethnicity categories.\nrelease: Provisional\nrelease_date: September 2025",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "tables24",
+            "source_row": 22
+          }
+        ]
+      }
+    ]
+  },
+  "field_semantics": {
+    "136593": {
+      "version": 2,
+      "record_id": 136593,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "C2024_A",
+      "variable": "MAJORNUM",
+      "source_title": "First or Second Major",
+      "measure_base": "first or second major",
+      "dimensions": {},
+      "unit": "unknown",
+      "numeric_kind": "coded_or_other",
+      "additive": false,
+      "total_scope": false,
+      "reporting_periods": [
+        "July 1, 2023 - June 30, 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135841,
+          "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+        }
+      ],
+      "required_row_selectors": [
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136593,
+        "table_record_ids": [
+          135841
+        ],
+        "title_excerpt": "First or Second Major",
+        "definition_excerpt": "First or Second Major"
+      },
+      "readiness": "partial_unit_unknown",
+      "execution_approved": false
+    },
+    "136602": {
+      "version": 2,
+      "record_id": 136602,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "C2024_A",
+      "variable": "CTOTALT",
+      "source_title": "Grand total",
+      "measure_base": "",
+      "dimensions": {},
+      "unit": "awards",
+      "numeric_kind": "continuous",
+      "additive": true,
+      "total_scope": true,
+      "reporting_periods": [
+        "July 1, 2023 - June 30, 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135841,
+          "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+        }
+      ],
+      "required_row_selectors": [
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136602,
+        "table_record_ids": [
+          135841
+        ],
+        "title_excerpt": "Grand total",
+        "definition_excerpt": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders"
+      },
+      "readiness": "described",
+      "execution_approved": false
+    },
+    "136624": {
+      "version": 2,
+      "record_id": 136624,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "C2024_A",
+      "variable": "CIPCODE",
+      "source_title": "CIP Code - 2020 Classification",
+      "measure_base": "cip code 2020 classification",
+      "dimensions": {},
+      "unit": "unknown",
+      "numeric_kind": "coded_or_other",
+      "additive": false,
+      "total_scope": false,
+      "reporting_periods": [
+        "July 1, 2023 - June 30, 2024"
+      ],
+      "field_time_qualifiers": [
+        "2020"
+      ],
+      "population_evidence": [
+        {
+          "record_id": 135841,
+          "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+        }
+      ],
+      "required_row_selectors": [
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136624,
+        "table_record_ids": [
+          135841
+        ],
+        "title_excerpt": "CIP Code - 2020 Classification",
+        "definition_excerpt": "Classification of instrucional Program (CIP) code. A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions. The Classification of Instructional Programs (CIP) provides a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity. CIP was originally developed by the U.S. Depart"
+      },
+      "readiness": "partial_unit_unknown",
+      "execution_approved": false
+    },
+    "136625": {
+      "version": 2,
+      "record_id": 136625,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "C2024_A",
+      "variable": "AWLEVEL",
+      "source_title": "Award Level code",
+      "measure_base": "award level code",
+      "dimensions": {},
+      "unit": "unknown",
+      "numeric_kind": "coded_or_other",
+      "additive": false,
+      "total_scope": false,
+      "reporting_periods": [
+        "July 1, 2023 - June 30, 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135841,
+          "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+        }
+      ],
+      "required_row_selectors": [
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136625,
+        "table_record_ids": [
+          135841
+        ],
+        "title_excerpt": "Award Level code",
+        "definition_excerpt": "Award level code The twelve award levels under which completions can be reported are: Certificates of less than 12 weeks includes programs of less than 300 clock hours, or, Less than 9 SEMESTER or TRIMESTER credit hours, or Less than 13 QUARTER credit hours Certificates of at least 12 weeks but less than 1 year includes programs of 300-899 clock hours, or 9-29 SEMESTER or TRIMESTER credit hours, o"
+      },
+      "readiness": "partial_unit_unknown",
+      "execution_approved": false
+    }
+  },
+  "latency": {
+    "validation_seconds": 0.10890939994715154,
+    "query_seconds": 0.05039580003358424,
+    "planning_and_binding_seconds": 25.85147189995041,
+    "answer_ready_seconds": 26.01398359995801,
+    "live_model_calls": 4,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+  },
+  "result_id": "b5adf236f8b20925",
+  "planning_validation": {
+    "repair_attempts": []
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "sources": [
+    {
+      "release": "IPEDS_2015-16_Final",
+      "role": "codebook",
+      "sheets": 5,
+      "nonempty_rows_exactly_matched": 14670,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2015-16_Final",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 17,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2016-17_Final",
+      "role": "codebook",
+      "sheets": 7,
+      "nonempty_rows_exactly_matched": 15508,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2016-17_Final",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 17,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2017-18_Final",
+      "role": "codebook",
+      "sheets": 5,
+      "nonempty_rows_exactly_matched": 14784,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2017-18_Final",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 17,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2018-19_Final",
+      "role": "codebook",
+      "sheets": 5,
+      "nonempty_rows_exactly_matched": 15101,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2018-19_Final",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 17,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2019-20_Final",
+      "role": "codebook",
+      "sheets": 5,
+      "nonempty_rows_exactly_matched": 14811,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2019-20_Final",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 17,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2020-21_Final",
+      "role": "codebook",
+      "sheets": 7,
+      "nonempty_rows_exactly_matched": 14690,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2020-21_Final",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 20,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2021-22_Final",
+      "role": "codebook",
+      "sheets": 5,
+      "nonempty_rows_exactly_matched": 14262,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2021-22_Final",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 18,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2022-23_Final",
+      "role": "codebook",
+      "sheets": 7,
+      "nonempty_rows_exactly_matched": 15960,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2022-23_Final",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 20,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2023-24_Final",
+      "role": "codebook",
+      "sheets": 6,
+      "nonempty_rows_exactly_matched": 15890,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2023-24_Final",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 19,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2024-25_Provisional",
+      "role": "codebook",
+      "sheets": 6,
+      "nonempty_rows_exactly_matched": 14929,
+      "source_sha256_matches": true
+    },
+    {
+      "release": "IPEDS_2024-25_Provisional",
+      "role": "release_notes",
+      "paragraphs_exactly_matched": 19,
+      "source_sha256_matches": true
+    }
+  ]
+}

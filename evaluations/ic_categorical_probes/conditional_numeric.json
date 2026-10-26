@@ -1,0 +1,157 @@
+{
+  "id": "conditional_numeric",
+  "question": "What percentage of Smith College undergraduates were formally registered with disability services in the 2024-25 Institutional Characteristics release? State the student observation year.",
+  "answer": {
+    "intent": "clarify",
+    "message": "Which institution has the 167,835 undergraduates you mean? The disability-services percentage is reported per institution (for fall 2023 undergraduates, in the 2024-25 release), so I need the institution's name.",
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 4,
+      "latency_seconds": 13.494066099965014,
+      "input_tokens": 29177,
+      "output_tokens": 986,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 45242,
+      "estimated_api_usd": 0.0727382,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "planning_tool_requests": 3,
+      "semantic_repair_attempts": 0,
+      "stages": [
+        {
+          "input_tokens": 581,
+          "output_tokens": 58,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.3220660999650136,
+          "estimated_api_usd": 0.001742,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 3,
+          "latency_seconds": 12.172,
+          "input_tokens": 28596,
+          "output_tokens": 928,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 45242,
+          "estimated_api_usd": 0.07099620000000001,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+          "planning_tool_requests": 3,
+          "semantic_repair_attempts": 0,
+          "stages": [
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 1,
+              "latency_seconds": 4.672,
+              "input_tokens": 4328,
+              "output_tokens": 554,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 5184,
+              "estimated_api_usd": 0.014714399999999999,
+              "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 2,
+              "planning_tool_requests": 3,
+              "semantic_repair_attempts": 0,
+              "latency_seconds": 7.5,
+              "input_tokens": 24268,
+              "output_tokens": 374,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 40058,
+              "estimated_api_usd": 0.05628180000000001,
+              "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+            }
+          ]
+        }
+      ]
+    },
+    "mode": "catalog language-model planner",
+    "catalog_context": {
+      "kind": "catalog_clarification",
+      "question": "What percentage of 167835 undergraduates were formally registered with disability services in the 2024-25 Institutional Characteristics release? State the student observation year.",
+      "previous_plan": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 15.26850150001701,
+      "answer_ready_seconds": 16.707746199914254,
+      "live_model_calls": 4,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 1.4116956999059767
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "d596c59db1fecfe1",
+      "status": "awaiting_information",
+      "goal": "What percentage of 167835 undergraduates were formally registered with disability services in the 2024-25 Institutional Characteristics release? State the student observation year.",
+      "original_question": "What percentage of 167835 undergraduates were formally registered with disability services in the 2024-25 Institutional Characteristics release? State the student observation year.",
+      "question": "Which institution has the 167,835 undergraduates you mean? The disability-services percentage is reported per institution (for fall 2023 undergraduates, in the 2024-25 release), so I need the institution's name.",
+      "scope": {},
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [
+        "Which institution has the 167,835 undergraduates you mean? The disability-services percentage is reported per institution (for fall 2023 undergraduates, in the 2024-25 release), so I need the institution's name."
+      ]
+    },
+    "institution_identity": {
+      "unitids": [
+        167835
+      ],
+      "original_question": "What percentage of Smith College undergraduates were formally registered with disability services in the 2024-25 Institutional Characteristics release? State the student observation year.",
+      "original_mentions": [
+        "Smith College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 16.708273299969733,
+  "events": [
+    {
+      "elapsed": 0.00047660002019256353,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.3335162999574095,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.4113424000097439,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 9.148933100048453,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 9.172831200063229,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 12.323299800045788,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 12.861612500040792,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 13.55224630003795,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    }
+  ],
+  "expected_variables": [
+    "DISAB",
+    "DISABPCT"
+  ]
+}

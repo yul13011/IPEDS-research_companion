@@ -1,0 +1,267 @@
+{
+  "timestamp": "2026-10-19T18:40:24.828851+00:00",
+  "model": "claude-sonnet-5-5",
+  "cases": [
+    {
+      "label": "admissions women share",
+      "question": "What percentage of Yale's fall 2024 applicants were women?",
+      "independent_sql": "SELECT APPLCNW,APPLCN FROM ADM2024 WHERE UNITID=130794",
+      "expected_numerator": 32540,
+      "expected_denominator": 57517,
+      "expected_percent": 56.5745779508667,
+      "outcome": "analyze",
+      "message": "For Yale University (Academic year Fall 2024), Percent of applicants who were women: 56.57%. The reporting period and source definitions are available below.",
+      "latency": {
+        "validation_seconds": 0.03977620002115145,
+        "query_seconds": 0.006680899998173118,
+        "planning_and_binding_seconds": 16.99846630002139,
+        "answer_ready_seconds": 17.045743599999696,
+        "live_model_calls": 3,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 3,
+        "planning_tool_requests": 4,
+        "semantic_repair_attempts": 0,
+        "latency_seconds": 11.781,
+        "input_tokens": 41034,
+        "output_tokens": 1576,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 9903,
+        "estimated_api_usd": 0.0988183,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+      },
+      "repair_history": [],
+      "passed": true,
+      "rows": [
+        {
+          "institution": "Yale University",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year Fall 2024",
+          "metric": "ADM{YEAR}::APPLCNW::percent::0",
+          "measure": "Percent of applicants who were women",
+          "unit": "percent",
+          "value": 56.5745779508667,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": 32540,
+          "denominator": 57517,
+          "series_segment": "source release 2024",
+          "source_value": 32540,
+          "input_values": [
+            32540
+          ],
+          "calculation_evidence": {
+            "label": "Percent of applicants who were women",
+            "operator": "percent",
+            "approved": true,
+            "input_record_ids": [
+              136185
+            ],
+            "denominator_record_id": 136224,
+            "evidence_record_ids": [
+              136185,
+              136224
+            ],
+            "reason": "Source population, row selection, period, units and relationship agree.",
+            "proof": {
+              "kind": "category_containment",
+              "axes": [
+                "gender"
+              ]
+            },
+            "unit": "percent",
+            "bounded_share": true
+          }
+        }
+      ],
+      "export_seconds": {
+        "csv": 0.022848299995530397,
+        "excel": 0.5189478000393137,
+        "audit_json": 0.0014069000026211143
+      },
+      "test_wall_seconds": 17.59747499995865
+    },
+    {
+      "label": "bachelor awards women share",
+      "question": "What percentage of Yale's bachelor's degrees awarded from July 1, 2023 through June 30, 2024 went to women? Use first majors across all fields of study.",
+      "independent_sql": "SELECT CTOTALW,CTOTALT FROM C2024_A WHERE UNITID=130794 AND AWLEVEL=5 AND CIPCODE='99' AND MAJORNUM=1",
+      "expected_numerator": 843,
+      "expected_denominator": 1665,
+      "expected_percent": 50.630630630630634,
+      "outcome": "analyze",
+      "message": "For Yale University (July 1, 2023 - June 30, 2024), Percent of bachelor's degrees (first major, all fields) awarded to women: 50.63%. The reporting period and source definitions are available below.",
+      "latency": {
+        "validation_seconds": 0.05337049998342991,
+        "query_seconds": 0.0057045999565161765,
+        "planning_and_binding_seconds": 17.112094399984926,
+        "answer_ready_seconds": 17.17224799998803,
+        "live_model_calls": 4,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 4,
+        "planning_tool_requests": 8,
+        "semantic_repair_attempts": 0,
+        "latency_seconds": 16.953,
+        "input_tokens": 77731,
+        "output_tokens": 2357,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 13204,
+        "estimated_api_usd": 0.1803524,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+      },
+      "repair_history": [],
+      "passed": true,
+      "rows": [
+        {
+          "institution": "Yale University",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "July 1, 2023 - June 30, 2024",
+          "metric": "C{YEAR}_A::CTOTALW::percent::0",
+          "measure": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+          "unit": "percent",
+          "value": 50.630630630630634,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": 843,
+          "denominator": 1665,
+          "series_segment": "source release 2024",
+          "source_value": 843,
+          "input_values": [
+            843
+          ],
+          "calculation_evidence": {
+            "label": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+            "operator": "percent",
+            "approved": true,
+            "input_record_ids": [
+              136599
+            ],
+            "denominator_record_id": 136602,
+            "evidence_record_ids": [
+              136599,
+              136602
+            ],
+            "reason": "Source population, row selection, period, units and relationship agree.",
+            "proof": {
+              "kind": "category_containment",
+              "axes": [
+                "gender"
+              ]
+            },
+            "unit": "percent",
+            "bounded_share": true
+          }
+        }
+      ],
+      "export_seconds": {
+        "csv": 0.006097000034060329,
+        "excel": 0.06747839995659888,
+        "audit_json": 0.0024569000233896077
+      },
+      "test_wall_seconds": 17.25730569998268
+    },
+    {
+      "label": "physical library collection share",
+      "question": "For fiscal year 2024, what percentage of Yale's total physical and electronic library collection units were physical collection units? Include all collection types, not just books.",
+      "independent_sql": "SELECT LPCLLCT,LTCLLCT FROM AL2024 WHERE UNITID=130794",
+      "expected_numerator": 9661648.0,
+      "expected_denominator": 12825381.0,
+      "expected_percent": 75.33224938892654,
+      "outcome": "analyze",
+      "message": "For Yale University (Fiscal year 2024), Physical collection units as percent of total library collection: 75.33%. The reporting period and source definitions are available below.",
+      "latency": {
+        "validation_seconds": 0.03486489999340847,
+        "query_seconds": 0.003725400019902736,
+        "planning_and_binding_seconds": 12.57328770001186,
+        "answer_ready_seconds": 12.612317799997982,
+        "live_model_calls": 3,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 3,
+        "planning_tool_requests": 4,
+        "semantic_repair_attempts": 0,
+        "latency_seconds": 12.469,
+        "input_tokens": 51548,
+        "output_tokens": 1689,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 9903,
+        "estimated_api_usd": 0.1209763,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+      },
+      "repair_history": [],
+      "passed": true,
+      "rows": [
+        {
+          "institution": "Yale University",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Fiscal year 2024",
+          "metric": "AL{YEAR}::LPCLLCT::percent::0",
+          "measure": "Physical collection units as percent of total library collection",
+          "unit": "percent",
+          "value": 75.33224938892654,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": 9661648,
+          "denominator": 12825381,
+          "series_segment": "source release 2024",
+          "source_value": 9661648.0,
+          "input_values": [
+            9661648
+          ],
+          "calculation_evidence": {
+            "label": "Physical collection units as percent of total library collection",
+            "operator": "percent",
+            "approved": true,
+            "input_record_ids": [
+              137908
+            ],
+            "denominator_record_id": 137910,
+            "evidence_record_ids": [
+              137908,
+              137910
+            ],
+            "reason": "Source population, row selection, period, units and relationship agree.",
+            "proof": {
+              "kind": "category_containment",
+              "axes": [
+                "medium"
+              ]
+            },
+            "unit": "percent",
+            "bounded_share": true
+          }
+        }
+      ],
+      "export_seconds": {
+        "csv": 0.005387500044889748,
+        "excel": 0.06884340004762635,
+        "audit_json": 0.0016807999927550554
+      },
+      "test_wall_seconds": 12.695668300031684
+    }
+  ],
+  "passed": 3,
+  "total": 3,
+  "latency_summary": {
+    "n": 3,
+    "median_seconds": 17.045743599999696,
+    "min_seconds": 12.612317799997982,
+    "max_seconds": 17.17224799998803
+  },
+  "scope": "Live model, no previous plan, generic catalog route with no case-specific numerical shortcuts. Independent source SQL verifies the requested percent. Small serial sample; caches can warm; browser paint excluded; exports separately measured. Failed requests retain elapsed time."
+}

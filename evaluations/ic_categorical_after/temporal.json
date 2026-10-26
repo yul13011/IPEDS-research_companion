@@ -1,0 +1,567 @@
+{
+  "id": "temporal",
+  "question": "Did Smith College accept Advanced Placement (AP) credits in both 2015-16 and 2024-25?",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "167835"
+      ],
+      "population": null,
+      "sources": [
+        {
+          "year": 2015,
+          "table": "IC2015",
+          "field_record_ids": [
+            12640
+          ],
+          "filters": []
+        },
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136085
+          ],
+          "filters": []
+        }
+      ],
+      "result_kind": "lookup"
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "167835"
+        ],
+        "population": null,
+        "sources": [
+          {
+            "year": 2015,
+            "table": "IC2015",
+            "field_record_ids": [
+              12640
+            ],
+            "filters": []
+          },
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136085
+            ],
+            "filters": []
+          }
+        ],
+        "result_kind": "lookup",
+        "source_years": [
+          2015,
+          2024
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::CREDITS3"
+        ],
+        "institutions": [
+          "167835"
+        ],
+        "years": [
+          2015,
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::CREDITS3": {
+          "label": "Advanced placement (AP) credits",
+          "family": "observation",
+          "unit": "coded"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2015,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2015-16",
+          "source_reporting_period": "Academic year 2015-16",
+          "metric": "IC{YEAR}::CREDITS3",
+          "measure": "Advanced placement (AP) credits",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2015-16_Final",
+          "provisional": false,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 12640,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            4892
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2015-16_Final",
+            "table": "IC2015",
+            "variable": "CREDITS3",
+            "record_id": 12640,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 12640,
+                "excerpt": "Advanced placement (AP) credits"
+              },
+              {
+                "record_id": 11,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities."
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::CREDITS3",
+          "measure": "Advanced placement (AP) credits",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136085,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139025
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "CREDITS3",
+            "record_id": 136085,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136085,
+                "excerpt": "Advanced placement (AP) credits"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      ],
+      "observation_years": [
+        2015,
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::CREDITS3",
+          "year": 2015,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2015-16_Final\\IPEDS201516.sqlite",
+          "database_size": 243814400,
+          "database_mtime_ns": 1792185053120669500,
+          "table": "IC2015",
+          "columns": [
+            "CREDITS3"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"CREDITS3\" FROM \"IC2015\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 12640,
+              "release_id": "IPEDS_2015-16_Final",
+              "kind": "variable_definition",
+              "table_name": "IC2015",
+              "variable_name": "CREDITS3",
+              "title": "Advanced placement (AP) credits",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2015\ntabletitle: Educational offerings, organization, admissions, services and athletic associations\nvarnumber: 10691\nvarorder: 123\nvarname: CREDITS3\nvartitle: Advanced placement (AP) credits\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nhasrv: 1\nfilenumber: 2\nsectionnumber: 9\nlongdescription: Does your institution accept any of the following? [Check all that apply] Special credit upon entry - Please indicate if institution accepts credit earned prior to admission through any of the sources listed. Advanced placement (AP) credits ADVANCED PLACEMENT - Advanced placement courses are college-level courses taught in high school. Students may take an examination at the completion of the course; acceptable scores allow students to earn college credit.\nvarsource: IPEDS, Fall 2015, Institutional Characteristics component\nfiletitle: Institutional Characteristics\nsectiontitle: Non-traditional credits",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2015-16_Final\\IPEDS201516TablesDoc.xlsx",
+              "source_sha256": "ccca49877c72d6957815778aea693cde05a56fc2c6cfd9f1a5a5d412bc388df5",
+              "sheet_name": "vartable15",
+              "source_row": 204,
+              "long_description": "Does your institution accept any of the following? [Check all that apply] Special credit upon entry - Please indicate if institution accepts credit earned prior to admission through any of the sources listed. Advanced placement (AP) credits ADVANCED PLACEMENT - Advanced placement courses are college-level courses taught in high school. Students may take an examination at the completion of the course; acceptable scores allow students to earn college credit.",
+              "documented_table": "IC2015",
+              "physical_table": "IC2015",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 4894,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 4895,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 4893,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 4892,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::CREDITS3",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "CREDITS3"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"CREDITS3\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136085,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "CREDITS3",
+              "title": "Advanced placement (AP) credits",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10691\nvarorder: 53\nvarname: CREDITS3\nvartitle: Advanced placement (AP) credits\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Does your institution accept any of the following? [Check all that apply] Special credit upon entry - Please indicate if institution accepts credit earned prior to admission through any of the sources listed. Advanced placement (AP) credits ADVANCED PLACEMENT - Advanced placement courses are college-level courses taught in high school. Students may take an examination at the completion of the course; acceptable scores allow students to earn college credit.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 214,
+              "long_description": "Does your institution accept any of the following? [Check all that apply] Special credit upon entry - Please indicate if institution accepts credit earned prior to admission through any of the sources listed. Advanced placement (AP) credits ADVANCED PLACEMENT - Advanced placement courses are college-level courses taught in high school. Students may take an examination at the completion of the course; acceptable scores allow students to earn college credit.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139027,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 139028,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139026,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 139025,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::CREDITS3": "Does your institution accept any of the following? [Check all that apply] Special credit upon entry - Please indicate if institution accepts credit earned prior to admission through any of the sources listed. Advanced placement (AP) credits ADVANCED PLACEMENT - Advanced placement courses are college-level courses taught in high school. Students may take an examination at the completion of the course; acceptable scores allow students to earn college credit."
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:33:47.363219+00:00",
+      "registry_sha256": "d504e2e1e20f82017ec26b01abdd9480bb6974ad48e902481e126d731beb56b7",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 2,
+        "available_cells": 2,
+        "matching_institutions": {
+          "2024": 1,
+          "2015": 1
+        },
+        "source_rows": [
+          {
+            "year": 2015,
+            "table": "IC2015",
+            "selected_rows": 1
+          },
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 1
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            167835,
+            2015,
+            12640
+          ],
+          [
+            167835,
+            2024,
+            136085
+          ]
+        ],
+        "source_years": [
+          2015,
+          2024
+        ],
+        "institutions": [
+          167835
+        ],
+        "rows_sha256": "04a064e2d2e3f284f5aebbc3f1862075ae56ab4c0999ad28268ceb4b7821e07c"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 13.5078909000149,
+        "answer_ready_seconds": 14.673574300017208,
+        "live_model_calls": 5,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 1.151504300069064
+      },
+      "result_id": "07188b1cd5661bd8",
+      "institution_identity": {
+        "unitids": [
+          167835
+        ],
+        "original_question": "Did Smith College accept Advanced Placement (AP) credits in both 2015-16 and 2024-25?",
+        "original_mentions": [
+          "Smith College"
+        ],
+        "confirmed_choices": {
+          "smith college": 167835
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 5,
+      "planning_tool_requests": 7,
+      "semantic_repair_attempts": 1,
+      "latency_seconds": 14.371532200006769,
+      "input_tokens": 87406,
+      "output_tokens": 1122,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 85232,
+      "estimated_api_usd": 0.19455519999999998,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 568,
+          "output_tokens": 58,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.106532200006768,
+          "estimated_api_usd": 0.001716,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 4,
+          "planning_tool_requests": 7,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 13.265,
+          "input_tokens": 86838,
+          "output_tokens": 1064,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 85232,
+          "estimated_api_usd": 0.1928392,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "Smith College \u2014 Advanced placement (AP) credits: Yes (Academic year 2015-16); Smith College \u2014 Advanced placement (AP) credits: Yes (Academic year 2024-25).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 13.5078909000149,
+      "answer_ready_seconds": 14.673574300017208,
+      "live_model_calls": 5,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 1.151504300069064
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "fd163b107ab698b4",
+      "status": "completed",
+      "goal": "Did Smith College (UNITID 167835) accept Advanced Placement (AP) credits in both 2015-16 and 2024-25?",
+      "original_question": "Did Smith College (UNITID 167835) accept Advanced Placement (AP) credits in both 2015-16 and 2024-25?",
+      "question": "Smith College \u2014 Advanced placement (AP) credits: Yes (Academic year 2015-16); Smith College \u2014 Advanced placement (AP) credits: Yes (Academic year 2024-25).",
+      "scope": {
+        "institutions": [
+          "167835"
+        ],
+        "population": null,
+        "years": [
+          2015,
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::CREDITS3"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        167835
+      ],
+      "original_question": "Did Smith College accept Advanced Placement (AP) credits in both 2015-16 and 2024-25?",
+      "original_mentions": [
+        "Smith College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 14.67389269999694,
+  "events": [
+    {
+      "elapsed": 0.00018149998504668474,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.113025699974969,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.1576342999469489,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 1.1577252999413759,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 1.1675965000176802,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 4.271645199973136,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 4.588066599913873,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 4.829123899922706,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 5.062820899998769,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 8.271529799909331,
+      "stage": "Reading definitions and category codes across years\u2026"
+    },
+    {
+      "elapsed": 8.41422449995298,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 8.43911069992464,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 11.623940199962817,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 14.665417599957436,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 14.673869199934416,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "CREDITS3"
+  ]
+}

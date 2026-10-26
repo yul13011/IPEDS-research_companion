@@ -1,0 +1,81 @@
+{
+  "institution-services": {
+    "version": 1,
+    "institutions": [
+      "167835"
+    ],
+    "population": null,
+    "sources": [
+      {
+        "year": 2024,
+        "table": "IC2024",
+        "field_record_ids": [
+          136102,
+          136104,
+          136105
+        ],
+        "filters": []
+      }
+    ],
+    "result_kind": "lookup"
+  },
+  "institution-awards": {
+    "version": 1,
+    "institutions": [
+      "167835",
+      "166939",
+      "168218"
+    ],
+    "population": null,
+    "sources": [
+      {
+        "year": 2024,
+        "table": "IC2024",
+        "field_record_ids": [
+          136075,
+          136077
+        ],
+        "filters": []
+      }
+    ],
+    "result_kind": "lookup"
+  },
+  "institution-distance": {
+    "version": 1,
+    "institutions": [],
+    "population": {
+      "fips": [
+        25
+      ],
+      "controls": [],
+      "levels": [],
+      "degree_granting": true,
+      "title_iv": false,
+      "administrative_offices": false
+    },
+    "sources": [
+      {
+        "year": 2024,
+        "table": "IC2024",
+        "field_record_ids": [
+          136133,
+          136136,
+          136137
+        ],
+        "filters": [
+          {
+            "record_id": 136133,
+            "operator": "eq",
+            "values": [
+              "1"
+            ],
+            "code_record_ids": [
+              140131
+            ]
+          }
+        ]
+      }
+    ],
+    "result_kind": "institution_list"
+  }
+}

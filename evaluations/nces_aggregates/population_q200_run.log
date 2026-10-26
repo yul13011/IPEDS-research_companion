@@ -1,0 +1,118 @@
+1 {'outside_local_release_coverage': 14, 'match': 10}
+2 {'outside_local_release_coverage': 14, 'mismatch': 1, 'match': 9}
+3 {'match': 10, 'outside_local_release_coverage': 13}
+4 {'match': 10, 'outside_local_release_coverage': 9}
+5 {'match': 10, 'outside_local_release_coverage': 13}
+8 {'match': 5, 'outside_local_release_coverage': 6}
+12 {'match': 10, 'outside_local_release_coverage': 13}
+13 {'match': 10, 'outside_local_release_coverage': 11}
+15 {'match': 10, 'outside_local_release_coverage': 13}
+17 {'match': 10, 'outside_local_release_coverage': 13}
+19 {'match': 9, 'mismatch': 1, 'outside_local_release_coverage': 13}
+20 {'match': 7, 'mismatch': 3, 'outside_local_release_coverage': 13}
+21 {'match': 10, 'outside_local_release_coverage': 13}
+22 {'match': 10, 'outside_local_release_coverage': 13}
+24 {'outside_local_release_coverage': 13, 'mismatch': 1, 'match': 9}
+25 {'match': 8, 'blocked_definition_or_method': 1, 'mismatch': 1, 'outside_local_release_coverage': 13}
+30 {'match': 10, 'outside_local_release_coverage': 13}
+32 {'match': 10, 'outside_local_release_coverage': 8}
+33 {'match': 10, 'outside_local_release_coverage': 8}
+34 {'match': 8, 'blocked_definition_or_method': 1, 'mismatch': 1, 'outside_local_release_coverage': 13}
+35 {'match': 8, 'blocked_definition_or_method': 1, 'mismatch': 1, 'outside_local_release_coverage': 6}
+36 {'match': 8, 'blocked_definition_or_method': 1, 'mismatch': 1, 'outside_local_release_coverage': 6}
+37 {'match': 9, 'blocked_definition_or_method': 1, 'outside_local_release_coverage': 6}
+38 {'match': 8, 'blocked_definition_or_method': 1, 'mismatch': 1, 'outside_local_release_coverage': 6}
+39 {'match': 10, 'outside_local_release_coverage': 5}
+40 {'match': 10, 'outside_local_release_coverage': 13}
+41 {'match': 10, 'outside_local_release_coverage': 13}
+42 {'blocked_definition_or_method': 10, 'outside_local_release_coverage': 3}
+43 {'outside_local_release_coverage': 6, 'mismatch': 1, 'match': 9}
+50 {'match': 9}
+51 {'match': 10, 'outside_local_release_coverage': 1}
+101 {'match': 10, 'outside_local_release_coverage': 1}
+102 {'match': 10, 'outside_local_release_coverage': 1}
+103 {'match': 10, 'outside_local_release_coverage': 1}
+110 {'blocked_definition_or_method': 10, 'outside_local_release_coverage': 5}
+150 {'match': 5, 'outside_local_release_coverage': 6}
+155 {'match': 5, 'outside_local_release_coverage': 6}
+200 {'match': 8}
+205 {'match': 9, 'mismatch': 1, 'outside_local_release_coverage': 13}
+206 {'mismatch': 3, 'match': 7, 'outside_local_release_coverage': 13}
+207 {'match': 10, 'outside_local_release_coverage': 13}
+208 {'mismatch': 3, 'match': 7, 'outside_local_release_coverage': 13}
+210 {'outside_local_release_coverage': 4, 'mismatch': 1, 'match': 9}
+220 {'match': 9, 'blocked_definition_or_method': 1, 'outside_local_release_coverage': 6}
+221 {'match': 8, 'blocked_definition_or_method': 1, 'mismatch': 1, 'outside_local_release_coverage': 6}
+{
+  "timestamp": "2026-10-21T15:51:37.931148+00:00",
+  "observations": 824,
+  "status": {
+    "outside_local_release_coverage": 392,
+    "match": 383,
+    "mismatch": 21,
+    "blocked_definition_or_method": 28
+  },
+  "wall_seconds": 13.205147099972237,
+  "model_calls": 0,
+  "estimated_api_usd": 0,
+  "scope": "Actual population query executor against independent NCES spreadsheet expectations; no AI planning in this numerical pass.",
+  "previous_full_run": {
+    "timestamp": "2026-10-21T15:50:43.370451+00:00",
+    "observations": 824,
+    "status": {
+      "outside_local_release_coverage": 392,
+      "match": 375,
+      "mismatch": 21,
+      "blocked_definition_or_method": 36
+    },
+    "wall_seconds": 8.781170200032648,
+    "model_calls": 0,
+    "estimated_api_usd": 0,
+    "scope": "Actual population query executor against independent NCES spreadsheet expectations; no AI planning in this numerical pass.",
+    "previous_full_run": {
+      "timestamp": "2026-10-21T15:44:47.210621+00:00",
+      "observations": 824,
+      "status": {
+        "outside_local_release_coverage": 392,
+        "match": 375,
+        "mismatch": 21,
+        "blocked_definition_or_method": 36
+      },
+      "wall_seconds": 7.7879852000041865,
+      "model_calls": 0,
+      "estimated_api_usd": 0,
+      "scope": "Actual population query executor against independent NCES spreadsheet expectations; no AI planning in this numerical pass.",
+      "previous_full_run": {
+        "timestamp": "2026-10-21T15:14:38.251692+00:00",
+        "observations": 824,
+        "status": {
+          "outside_local_release_coverage": 392,
+          "match": 370,
+          "mismatch": 21,
+          "blocked_definition_or_method": 41
+        },
+        "wall_seconds": 5.15055930003291,
+        "model_calls": 0,
+        "estimated_api_usd": 0,
+        "scope": "Actual population query executor against independent NCES spreadsheet expectations; no AI planning in this numerical pass.",
+        "previous_full_run": {
+          "timestamp": "2026-10-21T15:13:04.945802+00:00",
+          "observations": 824,
+          "status": {
+            "outside_local_release_coverage": 392,
+            "match": 369,
+            "mismatch": 21,
+            "blocked_definition_or_method": 42
+          },
+          "wall_seconds": 801.5015627000248,
+          "model_calls": 0,
+          "estimated_api_usd": 0,
+          "scope": "Actual population query executor against independent NCES spreadsheet expectations; no AI planning in this numerical pass."
+        }
+      },
+      "targeted_rerun_q": 8
+    },
+    "targeted_rerun_q": 200
+  },
+  "targeted_rerun_q": 200
+}

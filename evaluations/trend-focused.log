@@ -1,0 +1,15 @@
+test_canonical_binding_overrides_one_year_model_plan (prototype.tests.test_trend_followup.TrendFollowupTests.test_canonical_binding_overrides_one_year_model_plan) ... ok
+test_catalog_window_precedes_inherited_single_year (prototype.tests.test_trend_followup.TrendFollowupTests.test_catalog_window_precedes_inherited_single_year) ... ok
+test_endpoint_duration_variants_and_defaults (prototype.tests.test_trend_followup.TrendFollowupTests.test_endpoint_duration_variants_and_defaults) ... ok
+test_followup_with_actual_bad_resolution_executes_ten_years (prototype.tests.test_trend_followup.TrendFollowupTests.test_followup_with_actual_bad_resolution_executes_ten_years) ... ok
+test_real_chat_followups_render_line_and_all_years (prototype.tests.test_trend_followup.TrendFollowupTests.test_real_chat_followups_render_line_and_all_years) ... 2026-10-20 16:47:20.391 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 16:47:21.474 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 16:47:21.474 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 16:47:21.474 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 16:47:21.474 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 6.808s
+
+OK

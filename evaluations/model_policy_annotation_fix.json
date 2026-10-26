@@ -1,0 +1,1775 @@
+{
+  "timestamp": "2026-10-25T15:30:43.655873+00:00",
+  "scope": "Two paired passes of 2 predeclared tasks per model through current handle/executors. Standardized independent seed histories. Direct SQLite correctness checks. Warmup excluded from task latency but included in spend. Models use existing app settings, not equalized reasoning effort. No app defaults changed.",
+  "expected_tasks_per_model": 4,
+  "estimated_spend_including_warmup": 0.08263511999999999,
+  "elapsed_seconds": 65.03800189995673,
+  "cases": [
+    {
+      "model": "claude-sonnet-5-5",
+      "round": 1,
+      "case": "mixed",
+      "group": "mixed",
+      "question": "Compare Yale University and Harvard University admission rates in fall 2024 and make the bars blue.",
+      "case_id": "1:mixed:claude-sonnet-5-5",
+      "passed": true,
+      "checks": {
+        "two_institutions": true,
+        "values": true,
+        "blue": true,
+        "seed_unchanged": true
+      },
+      "intent": "analyze",
+      "mode": "language model planner",
+      "message": "Yale University — Admission rate: 3.87%; Harvard University — Admission rate: 3.65% (fall 2024). The reporting period and source definitions are available below.",
+      "interpretation": {
+        "route": "mixed",
+        "relationship": "new",
+        "question": "Compare Yale University and Harvard University admission rates in fall 2024.",
+        "message": "",
+        "institution_mentions": [
+          "Yale University",
+          "Harvard University"
+        ],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [
+          {
+            "setting": "color",
+            "value": "blue",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        },
+        "original_question": "Compare Yale University and Harvard University admission rates in fall 2024 and make the bars blue."
+      },
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide · 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": "blue"
+      },
+      "model_policy": null,
+      "reported_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 2,
+        "latency_seconds": 5.298550299950875,
+        "input_tokens": 4139,
+        "output_tokens": 651,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7852,
+        "estimated_api_usd": 0.015573199999999999,
+        "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+        "stages": [
+          {
+            "input_tokens": 673,
+            "output_tokens": 314,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2668,
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 2.1735502999508753,
+            "estimated_api_usd": 0.004752800000000001,
+            "stage": "initial intent interpretation",
+            "context_seconds": 6.0399994254112244e-05,
+            "client_setup_seconds": 3.6100042052567005e-05,
+            "provider_seconds": 2.173532599932514
+          },
+          {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 3.125,
+            "input_tokens": 3466,
+            "output_tokens": 337,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5184,
+            "estimated_api_usd": 0.010820399999999999,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0,
+                "stage": "institution mentions reused from initial interpretation"
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "calls": 1,
+                "latency_seconds": 3.125,
+                "input_tokens": 3466,
+                "output_tokens": 337,
+                "cache_creation_input_tokens": 0,
+                "cache_read_input_tokens": 5184,
+                "estimated_api_usd": 0.010820399999999999,
+                "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+              }
+            ]
+          }
+        ]
+      },
+      "rows": [
+        {
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.871898742980336,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        },
+        {
+          "unitid": 166027,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.647607761813065,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        }
+      ],
+      "narrative_status": null,
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 4.948637899942696,
+        "answer_ready_seconds": 9.19832960003987,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 1.2783925000112504,
+        "intent_interpretation_seconds": 2.1735502999508753
+      },
+      "narrative_reason": null,
+      "plan": {
+        "metrics": [
+          "admission_rate"
+        ],
+        "institutions": [
+          "130794",
+          "166027"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "chart"
+      },
+      "wall_seconds": 9.204,
+      "model_calls": 2,
+      "estimated_api_usd": 0.015573199999999999,
+      "usage_complete": true
+    },
+    {
+      "model": "automatic",
+      "round": 1,
+      "case": "mixed",
+      "group": "mixed",
+      "question": "Compare Yale University and Harvard University admission rates in fall 2024 and make the bars blue.",
+      "case_id": "1:mixed:automatic",
+      "passed": true,
+      "checks": {
+        "two_institutions": true,
+        "values": true,
+        "blue": true,
+        "seed_unchanged": true
+      },
+      "intent": "analyze",
+      "mode": "language model planner",
+      "message": "Yale University — Admission rate: 3.87%; Harvard University — Admission rate: 3.65% (fall 2024). The reporting period and source definitions are available below.",
+      "interpretation": {
+        "route": "mixed",
+        "relationship": "new",
+        "question": "Compare admission rates for Yale University and Harvard University in fall 2024.",
+        "message": "I'll compare the fall 2024 admission rates for Yale University and Harvard University, then apply the blue bar color to the new chart.",
+        "institution_mentions": [
+          "Yale University",
+          "Harvard University"
+        ],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [
+          {
+            "setting": "color",
+            "value": "blue",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        },
+        "original_question": "Compare Yale University and Harvard University admission rates in fall 2024 and make the bars blue."
+      },
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide · 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": "blue"
+      },
+      "model_policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "reported_usage": {
+        "model": "automatic",
+        "calls": 2,
+        "latency_seconds": 9.232354399980977,
+        "input_tokens": 4140,
+        "output_tokens": 1751,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7853,
+        "estimated_api_usd": 0.0013680300000000001,
+        "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+        "stages": [
+          {
+            "input_tokens": 673,
+            "output_tokens": 852,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2668,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 3.982354399980977,
+            "estimated_api_usd": 0.00051998,
+            "stage": "initial intent interpretation",
+            "context_seconds": 4.730001091957092e-05,
+            "client_setup_seconds": 2.8499984182417393e-05,
+            "provider_seconds": 3.9823347000638023
+          },
+          {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 5.25,
+            "input_tokens": 3467,
+            "output_tokens": 899,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5185,
+            "estimated_api_usd": 0.00084805,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0,
+                "stage": "institution mentions reused from initial interpretation"
+              },
+              {
+                "model": "claude-haiku-5-5",
+                "calls": 1,
+                "latency_seconds": 5.25,
+                "input_tokens": 3467,
+                "output_tokens": 899,
+                "cache_creation_input_tokens": 0,
+                "cache_read_input_tokens": 5185,
+                "estimated_api_usd": 0.00084805,
+                "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+              }
+            ]
+          }
+        ]
+      },
+      "rows": [
+        {
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.871898742980336,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        },
+        {
+          "unitid": 166027,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.647607761813065,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        }
+      ],
+      "narrative_status": null,
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 6.736109399935231,
+        "answer_ready_seconds": 11.555523999966681,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 0.17715620005037636,
+        "intent_interpretation_seconds": 3.982354399980977
+      },
+      "narrative_reason": null,
+      "plan": {
+        "metrics": [
+          "admission_rate"
+        ],
+        "institutions": [
+          "130794",
+          "166027"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "chart"
+      },
+      "wall_seconds": 11.564,
+      "model_calls": 2,
+      "estimated_api_usd": 0.0013680300000000001,
+      "usage_complete": true
+    },
+    {
+      "model": "automatic",
+      "round": 1,
+      "case": "mixed__variation",
+      "group": "mixed",
+      "question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard; please color the resulting bars blue.",
+      "case_id": "1:mixed__variation:automatic",
+      "passed": true,
+      "checks": {
+        "two_institutions": true,
+        "values": true,
+        "blue": true,
+        "seed_unchanged": true
+      },
+      "intent": "analyze",
+      "mode": "language model planner",
+      "message": "Yale University — Admission rate: 3.87%; Harvard University — Admission rate: 3.65% (fall 2024). The reporting period and source definitions are available below.",
+      "interpretation": {
+        "route": "mixed",
+        "relationship": "new",
+        "question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard.",
+        "message": "",
+        "institution_mentions": [
+          "Yale",
+          "Harvard"
+        ],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [
+          {
+            "setting": "color",
+            "value": "blue",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        },
+        "original_question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard; please color the resulting bars blue."
+      },
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide · 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": "blue"
+      },
+      "model_policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "reported_usage": {
+        "model": "automatic",
+        "calls": 2,
+        "latency_seconds": 7.278202999944799,
+        "input_tokens": 6516,
+        "output_tokens": 1482,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7853,
+        "estimated_api_usd": 0.00147113,
+        "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+        "stages": [
+          {
+            "input_tokens": 680,
+            "output_tokens": 745,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2668,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 3.4812029999447986,
+            "estimated_api_usd": 0.00046718,
+            "stage": "initial intent interpretation",
+            "context_seconds": 4.070007707923651e-05,
+            "client_setup_seconds": 2.6399968191981316e-05,
+            "provider_seconds": 3.4811830000253394
+          },
+          {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 3.797,
+            "input_tokens": 5836,
+            "output_tokens": 737,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5185,
+            "estimated_api_usd": 0.00100395,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0,
+                "stage": "institution mentions reused from initial interpretation"
+              },
+              {
+                "model": "claude-haiku-5-5",
+                "calls": 1,
+                "latency_seconds": 3.797,
+                "input_tokens": 5836,
+                "output_tokens": 737,
+                "cache_creation_input_tokens": 0,
+                "cache_read_input_tokens": 5185,
+                "estimated_api_usd": 0.00100395,
+                "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+              }
+            ]
+          }
+        ]
+      },
+      "rows": [
+        {
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.871898742980336,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        },
+        {
+          "unitid": 166027,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.647607761813065,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        }
+      ],
+      "narrative_status": null,
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 7.304586600046605,
+        "answer_ready_seconds": 11.626241099904291,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 0.5119814000790939,
+        "intent_interpretation_seconds": 3.4812029999447986
+      },
+      "narrative_reason": null,
+      "plan": {
+        "metrics": [
+          "admission_rate"
+        ],
+        "institutions": [
+          "130794",
+          "166027"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "chart"
+      },
+      "wall_seconds": 11.626,
+      "model_calls": 2,
+      "estimated_api_usd": 0.00147113,
+      "usage_complete": true
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "round": 1,
+      "case": "mixed__variation",
+      "group": "mixed",
+      "question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard; please color the resulting bars blue.",
+      "case_id": "1:mixed__variation:claude-sonnet-5-5",
+      "passed": true,
+      "checks": {
+        "two_institutions": true,
+        "values": true,
+        "blue": true,
+        "seed_unchanged": true
+      },
+      "intent": "analyze",
+      "mode": "language model planner",
+      "message": "Yale University — Admission rate: 3.87%; Harvard University — Admission rate: 3.65% (fall 2024). The reporting period and source definitions are available below.",
+      "interpretation": {
+        "route": "mixed",
+        "relationship": "new",
+        "question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard.",
+        "message": "",
+        "institution_mentions": [
+          "Yale",
+          "Harvard"
+        ],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [
+          {
+            "setting": "color",
+            "value": "blue",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        },
+        "original_question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard; please color the resulting bars blue."
+      },
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide · 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": "blue"
+      },
+      "model_policy": null,
+      "reported_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 2,
+        "latency_seconds": 6.105455700089223,
+        "input_tokens": 6516,
+        "output_tokens": 641,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7852,
+        "estimated_api_usd": 0.0202272,
+        "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+        "stages": [
+          {
+            "input_tokens": 680,
+            "output_tokens": 312,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2668,
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 2.1204557000892237,
+            "estimated_api_usd": 0.0047468,
+            "stage": "initial intent interpretation",
+            "context_seconds": 3.800005652010441e-05,
+            "client_setup_seconds": 2.5400076992809772e-05,
+            "provider_seconds": 2.120438399957493
+          },
+          {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 3.985,
+            "input_tokens": 5836,
+            "output_tokens": 329,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5184,
+            "estimated_api_usd": 0.0154804,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0,
+                "stage": "institution mentions reused from initial interpretation"
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "calls": 1,
+                "latency_seconds": 3.985,
+                "input_tokens": 5836,
+                "output_tokens": 329,
+                "cache_creation_input_tokens": 0,
+                "cache_read_input_tokens": 5184,
+                "estimated_api_usd": 0.0154804,
+                "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+              }
+            ]
+          }
+        ]
+      },
+      "rows": [
+        {
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.871898742980336,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        },
+        {
+          "unitid": 166027,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.647607761813065,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        }
+      ],
+      "narrative_status": null,
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 9.005392599967308,
+        "answer_ready_seconds": 11.925174199976027,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 0.506296299980022,
+        "intent_interpretation_seconds": 2.1204557000892237
+      },
+      "narrative_reason": null,
+      "plan": {
+        "metrics": [
+          "admission_rate"
+        ],
+        "institutions": [
+          "130794",
+          "166027"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "chart"
+      },
+      "wall_seconds": 11.925,
+      "model_calls": 2,
+      "estimated_api_usd": 0.0202272,
+      "usage_complete": true
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "round": 2,
+      "case": "mixed",
+      "group": "mixed",
+      "question": "Compare Yale University and Harvard University admission rates in fall 2024 and make the bars blue.",
+      "case_id": "2:mixed:claude-sonnet-5-5",
+      "passed": true,
+      "checks": {
+        "two_institutions": true,
+        "values": true,
+        "blue": true,
+        "seed_unchanged": true
+      },
+      "intent": "analyze",
+      "mode": "language model planner",
+      "message": "Yale University — Admission rate: 3.87%; Harvard University — Admission rate: 3.65% (fall 2024). The reporting period and source definitions are available below.",
+      "interpretation": {
+        "route": "mixed",
+        "relationship": "new",
+        "question": "Compare Yale University and Harvard University admission rates in fall 2024.",
+        "message": "",
+        "institution_mentions": [
+          "Yale University",
+          "Harvard University"
+        ],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [
+          {
+            "setting": "color",
+            "value": "blue",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        },
+        "original_question": "Compare Yale University and Harvard University admission rates in fall 2024 and make the bars blue."
+      },
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide · 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": "blue"
+      },
+      "model_policy": null,
+      "reported_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 2,
+        "latency_seconds": 4.95791990005225,
+        "input_tokens": 4139,
+        "output_tokens": 654,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7852,
+        "estimated_api_usd": 0.015603200000000001,
+        "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+        "stages": [
+          {
+            "input_tokens": 673,
+            "output_tokens": 314,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2668,
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 2.1609199000522494,
+            "estimated_api_usd": 0.004752800000000001,
+            "stage": "initial intent interpretation",
+            "context_seconds": 2.159993164241314e-05,
+            "client_setup_seconds": 1.580000389367342e-05,
+            "provider_seconds": 2.1609074000734836
+          },
+          {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 2.797,
+            "input_tokens": 3466,
+            "output_tokens": 340,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5184,
+            "estimated_api_usd": 0.0108504,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0,
+                "stage": "institution mentions reused from initial interpretation"
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "calls": 1,
+                "latency_seconds": 2.797,
+                "input_tokens": 3466,
+                "output_tokens": 340,
+                "cache_creation_input_tokens": 0,
+                "cache_read_input_tokens": 5184,
+                "estimated_api_usd": 0.0108504,
+                "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+              }
+            ]
+          }
+        ]
+      },
+      "rows": [
+        {
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.871898742980336,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        },
+        {
+          "unitid": 166027,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.647607761813065,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        }
+      ],
+      "narrative_status": null,
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 3.1351235000183806,
+        "answer_ready_seconds": 5.5148615000071,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 0.03826590010430664,
+        "intent_interpretation_seconds": 2.1609199000522494
+      },
+      "narrative_reason": null,
+      "plan": {
+        "metrics": [
+          "admission_rate"
+        ],
+        "institutions": [
+          "130794",
+          "166027"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "chart"
+      },
+      "wall_seconds": 5.515,
+      "model_calls": 2,
+      "estimated_api_usd": 0.015603200000000001,
+      "usage_complete": true
+    },
+    {
+      "model": "automatic",
+      "round": 2,
+      "case": "mixed",
+      "group": "mixed",
+      "question": "Compare Yale University and Harvard University admission rates in fall 2024 and make the bars blue.",
+      "case_id": "2:mixed:automatic",
+      "passed": true,
+      "checks": {
+        "two_institutions": true,
+        "values": true,
+        "blue": true,
+        "seed_unchanged": true
+      },
+      "intent": "analyze",
+      "mode": "language model planner",
+      "message": "Yale University — Admission rate: 3.87%; Harvard University — Admission rate: 3.65% (fall 2024). The reporting period and source definitions are available below.",
+      "interpretation": {
+        "route": "mixed",
+        "relationship": "new",
+        "question": "Compare Yale University and Harvard University admission rates in fall 2024",
+        "message": "I'll compare Yale University and Harvard University admission rates for fall 2024, then apply the blue bar color to the new chart.",
+        "institution_mentions": [
+          "Yale University",
+          "Harvard University"
+        ],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [
+          {
+            "setting": "color",
+            "value": "blue",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        },
+        "original_question": "Compare Yale University and Harvard University admission rates in fall 2024 and make the bars blue."
+      },
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide · 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": "blue"
+      },
+      "model_policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "reported_usage": {
+        "model": "automatic",
+        "calls": 2,
+        "latency_seconds": 7.953236199997365,
+        "input_tokens": 4138,
+        "output_tokens": 1674,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7853,
+        "estimated_api_usd": 0.00132933,
+        "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+        "stages": [
+          {
+            "input_tokens": 673,
+            "output_tokens": 924,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2668,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 4.2662361999973655,
+            "estimated_api_usd": 0.00055598,
+            "stage": "initial intent interpretation",
+            "context_seconds": 2.5699962861835957e-05,
+            "client_setup_seconds": 2.1200045011937618e-05,
+            "provider_seconds": 4.2662292999448255
+          },
+          {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 3.687,
+            "input_tokens": 3465,
+            "output_tokens": 750,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5185,
+            "estimated_api_usd": 0.00077335,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0,
+                "stage": "institution mentions reused from initial interpretation"
+              },
+              {
+                "model": "claude-haiku-5-5",
+                "calls": 1,
+                "latency_seconds": 3.687,
+                "input_tokens": 3465,
+                "output_tokens": 750,
+                "cache_creation_input_tokens": 0,
+                "cache_read_input_tokens": 5185,
+                "estimated_api_usd": 0.00077335,
+                "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+              }
+            ]
+          }
+        ]
+      },
+      "rows": [
+        {
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.871898742980336,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        },
+        {
+          "unitid": 166027,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.647607761813065,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        }
+      ],
+      "narrative_status": null,
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 3.9886431000195444,
+        "answer_ready_seconds": 8.58998310007155,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 0.04784379992634058,
+        "intent_interpretation_seconds": 4.2662361999973655
+      },
+      "narrative_reason": null,
+      "plan": {
+        "metrics": [
+          "admission_rate"
+        ],
+        "institutions": [
+          "130794",
+          "166027"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "chart"
+      },
+      "wall_seconds": 8.59,
+      "model_calls": 2,
+      "estimated_api_usd": 0.00132933,
+      "usage_complete": true
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "round": 2,
+      "case": "mixed__variation",
+      "group": "mixed",
+      "question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard; please color the resulting bars blue.",
+      "case_id": "2:mixed__variation:claude-sonnet-5-5",
+      "passed": true,
+      "checks": {
+        "two_institutions": true,
+        "values": true,
+        "blue": true,
+        "seed_unchanged": true
+      },
+      "intent": "analyze",
+      "mode": "language model planner",
+      "message": "Yale University — Admission rate: 3.87%; Harvard University — Admission rate: 3.65% (fall 2024). The reporting period and source definitions are available below.",
+      "interpretation": {
+        "route": "mixed",
+        "relationship": "new",
+        "question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard.",
+        "message": "",
+        "institution_mentions": [
+          "Yale",
+          "Harvard"
+        ],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [
+          {
+            "setting": "color",
+            "value": "blue",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        },
+        "original_question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard; please color the resulting bars blue."
+      },
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide · 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": "blue"
+      },
+      "model_policy": null,
+      "reported_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 2,
+        "latency_seconds": 5.200995000024326,
+        "input_tokens": 6516,
+        "output_tokens": 651,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7852,
+        "estimated_api_usd": 0.0203272,
+        "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+        "stages": [
+          {
+            "input_tokens": 680,
+            "output_tokens": 316,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2668,
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 2.216995000024326,
+            "estimated_api_usd": 0.0047868,
+            "stage": "initial intent interpretation",
+            "context_seconds": 3.070000093430281e-05,
+            "client_setup_seconds": 2.0399922505021095e-05,
+            "provider_seconds": 2.2169792000204325
+          },
+          {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 2.984,
+            "input_tokens": 5836,
+            "output_tokens": 335,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5184,
+            "estimated_api_usd": 0.0155404,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0,
+                "stage": "institution mentions reused from initial interpretation"
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "calls": 1,
+                "latency_seconds": 2.984,
+                "input_tokens": 5836,
+                "output_tokens": 335,
+                "cache_creation_input_tokens": 0,
+                "cache_read_input_tokens": 5184,
+                "estimated_api_usd": 0.0155404,
+                "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+              }
+            ]
+          }
+        ]
+      },
+      "rows": [
+        {
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.871898742980336,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        },
+        {
+          "unitid": 166027,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.647607761813065,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        }
+      ],
+      "narrative_status": null,
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 6.00887140003033,
+        "answer_ready_seconds": 8.7516988000134,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 0.3126701998990029,
+        "intent_interpretation_seconds": 2.216995000024326
+      },
+      "narrative_reason": null,
+      "plan": {
+        "metrics": [
+          "admission_rate"
+        ],
+        "institutions": [
+          "130794",
+          "166027"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "table"
+      },
+      "wall_seconds": 8.752,
+      "model_calls": 2,
+      "estimated_api_usd": 0.0203272,
+      "usage_complete": true
+    },
+    {
+      "model": "automatic",
+      "round": 2,
+      "case": "mixed__variation",
+      "group": "mixed",
+      "question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard; please color the resulting bars blue.",
+      "case_id": "2:mixed__variation:automatic",
+      "passed": true,
+      "checks": {
+        "two_institutions": true,
+        "values": true,
+        "blue": true,
+        "seed_unchanged": true
+      },
+      "intent": "analyze",
+      "mode": "language model planner",
+      "message": "Yale University — Admission rate: 3.87%; Harvard University — Admission rate: 3.65% (fall 2024). The reporting period and source definitions are available below.",
+      "interpretation": {
+        "route": "mixed",
+        "relationship": "new",
+        "question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard",
+        "message": "",
+        "institution_mentions": [
+          "Yale",
+          "Harvard"
+        ],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [
+          {
+            "setting": "color",
+            "value": "blue",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        },
+        "original_question": "For fall 2024 show the percent of applicants admitted at Yale and Harvard; please color the resulting bars blue."
+      },
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide · 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": "blue"
+      },
+      "model_policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "reported_usage": {
+        "model": "automatic",
+        "calls": 2,
+        "latency_seconds": 7.722610499963165,
+        "input_tokens": 6516,
+        "output_tokens": 1510,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7853,
+        "estimated_api_usd": 0.00148513,
+        "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+        "stages": [
+          {
+            "input_tokens": 680,
+            "output_tokens": 753,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2668,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 3.1446104999631643,
+            "estimated_api_usd": 0.00047118,
+            "stage": "initial intent interpretation",
+            "context_seconds": 1.850002445280552e-05,
+            "client_setup_seconds": 1.179997343569994e-05,
+            "provider_seconds": 3.144604600034654
+          },
+          {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 4.578,
+            "input_tokens": 5836,
+            "output_tokens": 757,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5185,
+            "estimated_api_usd": 0.00101395,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0,
+                "stage": "institution mentions reused from initial interpretation"
+              },
+              {
+                "model": "claude-haiku-5-5",
+                "calls": 1,
+                "latency_seconds": 4.578,
+                "input_tokens": 5836,
+                "output_tokens": 757,
+                "cache_creation_input_tokens": 0,
+                "cache_read_input_tokens": 5185,
+                "estimated_api_usd": 0.00101395,
+                "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+              }
+            ]
+          }
+        ]
+      },
+      "rows": [
+        {
+          "unitid": 130794,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.871898742980336,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        },
+        {
+          "unitid": 166027,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "metric": "admission_rate",
+          "value": 3.647607761813065,
+          "raw_code": null,
+          "response_label": null,
+          "status": "ok"
+        }
+      ],
+      "narrative_status": null,
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 6.916799300001003,
+        "answer_ready_seconds": 10.75058390002232,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 0.41072420007549226,
+        "intent_interpretation_seconds": 3.1446104999631643
+      },
+      "narrative_reason": null,
+      "plan": {
+        "metrics": [
+          "admission_rate"
+        ],
+        "institutions": [
+          "130794",
+          "166027"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "chart"
+      },
+      "wall_seconds": 10.751,
+      "model_calls": 2,
+      "estimated_api_usd": 0.00148513,
+      "usage_complete": true
+    }
+  ],
+  "calls": [
+    {
+      "case_id": "warmup:claude-sonnet-5-5",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 644,
+      "output_tokens": 314,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2668,
+      "estimated_api_usd": 0.0046948,
+      "status": "ok",
+      "seconds": 3.083392500062473
+    },
+    {
+      "case_id": "warmup:automatic",
+      "model": "claude-haiku-5-5",
+      "input_tokens": 644,
+      "output_tokens": 316,
+      "cache_creation_input_tokens": 2668,
+      "cache_read_input_tokens": 0,
+      "estimated_api_usd": 0.0005559,
+      "status": "ok",
+      "seconds": 2.189458700013347
+    },
+    {
+      "case_id": "1:mixed:claude-sonnet-5-5",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 673,
+      "output_tokens": 314,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2668,
+      "estimated_api_usd": 0.004752800000000001,
+      "status": "ok",
+      "seconds": 2.1731914000120014
+    },
+    {
+      "case_id": "1:mixed:automatic",
+      "model": "claude-haiku-5-5",
+      "input_tokens": 673,
+      "output_tokens": 852,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2668,
+      "estimated_api_usd": 0.00051998,
+      "status": "ok",
+      "seconds": 3.9820445000659674
+    },
+    {
+      "case_id": "1:mixed:claude-sonnet-5-5",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 3466,
+      "output_tokens": 337,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5184,
+      "estimated_api_usd": 0.010820399999999999,
+      "status": "ok",
+      "seconds": 3.127442199969664
+    },
+    {
+      "case_id": "1:mixed:automatic",
+      "model": "claude-haiku-5-5",
+      "input_tokens": 3467,
+      "output_tokens": 899,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5185,
+      "estimated_api_usd": 0.00084805,
+      "status": "ok",
+      "seconds": 5.248973299982026
+    },
+    {
+      "case_id": "1:mixed__variation:claude-sonnet-5-5",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 680,
+      "output_tokens": 312,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2668,
+      "estimated_api_usd": 0.0047468,
+      "status": "ok",
+      "seconds": 2.120210500084795
+    },
+    {
+      "case_id": "1:mixed__variation:automatic",
+      "model": "claude-haiku-5-5",
+      "input_tokens": 680,
+      "output_tokens": 745,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2668,
+      "estimated_api_usd": 0.00046718,
+      "status": "ok",
+      "seconds": 3.4809260999318212
+    },
+    {
+      "case_id": "1:mixed__variation:automatic",
+      "model": "claude-haiku-5-5",
+      "input_tokens": 5836,
+      "output_tokens": 737,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5185,
+      "estimated_api_usd": 0.00100395,
+      "status": "ok",
+      "seconds": 3.801331299939193
+    },
+    {
+      "case_id": "1:mixed__variation:claude-sonnet-5-5",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 5836,
+      "output_tokens": 329,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5184,
+      "estimated_api_usd": 0.0154804,
+      "status": "ok",
+      "seconds": 3.9952750999946147
+    },
+    {
+      "case_id": "2:mixed:claude-sonnet-5-5",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 673,
+      "output_tokens": 314,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2668,
+      "estimated_api_usd": 0.004752800000000001,
+      "status": "ok",
+      "seconds": 2.160784799954854
+    },
+    {
+      "case_id": "2:mixed:automatic",
+      "model": "claude-haiku-5-5",
+      "input_tokens": 673,
+      "output_tokens": 924,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2668,
+      "estimated_api_usd": 0.00055598,
+      "status": "ok",
+      "seconds": 4.266054700012319
+    },
+    {
+      "case_id": "2:mixed:claude-sonnet-5-5",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 3466,
+      "output_tokens": 340,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5184,
+      "estimated_api_usd": 0.0108504,
+      "status": "ok",
+      "seconds": 2.7970421999925748
+    },
+    {
+      "case_id": "2:mixed:automatic",
+      "model": "claude-haiku-5-5",
+      "input_tokens": 3465,
+      "output_tokens": 750,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5185,
+      "estimated_api_usd": 0.00077335,
+      "status": "ok",
+      "seconds": 3.679436100064777
+    },
+    {
+      "case_id": "2:mixed__variation:claude-sonnet-5-5",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 680,
+      "output_tokens": 316,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2668,
+      "estimated_api_usd": 0.0047868,
+      "status": "ok",
+      "seconds": 2.216795999906026
+    },
+    {
+      "case_id": "2:mixed__variation:automatic",
+      "model": "claude-haiku-5-5",
+      "input_tokens": 680,
+      "output_tokens": 753,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2668,
+      "estimated_api_usd": 0.00047118,
+      "status": "ok",
+      "seconds": 3.1444722999585792
+    },
+    {
+      "case_id": "2:mixed__variation:claude-sonnet-5-5",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 5836,
+      "output_tokens": 335,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5184,
+      "estimated_api_usd": 0.0155404,
+      "status": "ok",
+      "seconds": 2.9895424999995157
+    },
+    {
+      "case_id": "2:mixed__variation:automatic",
+      "model": "claude-haiku-5-5",
+      "input_tokens": 5836,
+      "output_tokens": 757,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5185,
+      "estimated_api_usd": 0.00101395,
+      "status": "ok",
+      "seconds": 4.582317400025204
+    }
+  ],
+  "models": [
+    {
+      "model": "claude-sonnet-5-5",
+      "passed": 4,
+      "total": 4,
+      "attempted": 4,
+      "unavailable": 0,
+      "median_seconds": 8.978000000000002,
+      "total_task_seconds": 35.396,
+      "estimated_task_usd": 0.0717308,
+      "by_group": {
+        "mixed": {
+          "passed": 4,
+          "total": 4,
+          "median_seconds": 8.978000000000002
+        }
+      }
+    },
+    {
+      "model": "automatic",
+      "passed": 4,
+      "total": 4,
+      "attempted": 4,
+      "unavailable": 0,
+      "median_seconds": 11.157499999999999,
+      "total_task_seconds": 42.531,
+      "estimated_task_usd": 0.00565362,
+      "by_group": {
+        "mixed": {
+          "passed": 4,
+          "total": 4,
+          "median_seconds": 11.157499999999999
+        }
+      }
+    }
+  ],
+  "stop_reason": "",
+  "previous_unavailable_attempts": []
+}

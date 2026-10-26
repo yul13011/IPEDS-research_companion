@@ -1,0 +1,304 @@
+{
+  "id": "distance_distinction",
+  "question": "Did Wellesley College offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+  "answer": {
+    "intent": "catalog_plan",
+    "catalog_plan": {
+      "version": 2,
+      "institutions": [
+        "168218"
+      ],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136136,
+            136137
+          ],
+          "filters": [],
+          "group_by_record_ids": [],
+          "aggregates": []
+        }
+      ],
+      "joins": [],
+      "expressions": [],
+      "outputs": [
+        {
+          "reference": "fs1_136136",
+          "label": "Undergraduate distance education courses offered (1=Yes, 0=Implied no, -1=Not reported, -2=Not applicable)"
+        },
+        {
+          "reference": "fs1_136137",
+          "label": "Complete undergraduate distance education programs offered (1=Yes, 0=Implied no, -1=Not reported, -2=Not applicable)"
+        }
+      ],
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "IC2024 is one row per institution (key UNITID), so no row selectors are needed.",
+        "Both flags are coded Yes/No fields from the 2024-25 Institutional Characteristics release: both Yes = both; one Yes = that one only.",
+        "Not reported (-1) and Not applicable (-2) are source categories, not 'no'."
+      ],
+      "clarification_questions": []
+    },
+    "catalog_proposal": {
+      "catalog_plan": {
+        "version": 2,
+        "institutions": [
+          "168218"
+        ],
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "id": "s1",
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136136,
+              136137
+            ],
+            "filters": [],
+            "group_by_record_ids": [],
+            "aggregates": []
+          }
+        ],
+        "joins": [],
+        "expressions": [],
+        "outputs": [
+          {
+            "reference": "fs1_136136",
+            "label": "Undergraduate distance education courses offered (1=Yes, 0=Implied no, -1=Not reported, -2=Not applicable)"
+          },
+          {
+            "reference": "fs1_136137",
+            "label": "Complete undergraduate distance education programs offered (1=Yes, 0=Implied no, -1=Not reported, -2=Not applicable)"
+          }
+        ],
+        "missing_policy": "propagate",
+        "time_basis": "source_period",
+        "assumptions": [
+          "IC2024 is one row per institution (key UNITID), so no row selectors are needed.",
+          "Both flags are coded Yes/No fields from the 2024-25 Institutional Characteristics release: both Yes = both; one Yes = that one only.",
+          "Not reported (-1) and Not applicable (-2) are source categories, not 'no'."
+        ],
+        "clarification_questions": []
+      },
+      "question": "Did 168218 offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+      "definition_evidence": [],
+      "category_evidence": [],
+      "validation": {
+        "execution_approved": false,
+        "preflight_eligible": false,
+        "semantic_status": "blocked",
+        "blocks": [
+          "Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs."
+        ]
+      },
+      "created_at": "2026-10-22T18:41:52.302791+00:00",
+      "proposal_id": "52b2642c41ad6e14a64b"
+    },
+    "message": "The query could not be validated: Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs.",
+    "mode": "catalog relational planner",
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 6,
+      "planning_tool_requests": 7,
+      "semantic_repair_attempts": 2,
+      "latency_seconds": 20.22792080001626,
+      "input_tokens": 87069,
+      "output_tokens": 2334,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 100145,
+      "estimated_api_usd": 0.2074925,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 575,
+          "output_tokens": 60,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.4149208000162616,
+          "estimated_api_usd": 0.00175,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 5,
+          "planning_tool_requests": 7,
+          "semantic_repair_attempts": 2,
+          "latency_seconds": 18.813,
+          "input_tokens": 86494,
+          "output_tokens": 2274,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 100145,
+          "estimated_api_usd": 0.2057425,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "validation_attempts": [
+      {
+        "attempt": 1,
+        "blocks": [
+          "DSTNUGC is not a documented continuous numerical measure.",
+          "DSTNUGP is not a documented continuous numerical measure."
+        ]
+      },
+      {
+        "attempt": 2,
+        "blocks": [
+          "No numerical measure was selected.",
+          "Grouped extracts need an explicit row-output and subtotal policy; this executor currently returns explicitly selected institution observations."
+        ]
+      }
+    ],
+    "latency": {
+      "validation_seconds": 0.0,
+      "query_seconds": 0.0,
+      "planning_and_binding_seconds": 19.849469799897633,
+      "answer_ready_seconds": 21.402693199925125,
+      "live_model_calls": 6,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 1.5219254998955876
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "7ba6929a66b8ad0b",
+      "status": "awaiting_information",
+      "goal": "Did 168218 offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+      "original_question": "Did 168218 offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+      "question": "The query could not be validated: Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs.",
+      "scope": {
+        "institutions": [
+          "168218"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          {
+            "reference": "fs1_136136",
+            "label": "Undergraduate distance education courses offered (1=Yes, 0=Implied no, -1=Not reported, -2=Not applicable)"
+          },
+          {
+            "reference": "fs1_136137",
+            "label": "Complete undergraduate distance education programs offered (1=Yes, 0=Implied no, -1=Not reported, -2=Not applicable)"
+          }
+        ],
+        "breakdowns": [
+          []
+        ],
+        "time_basis": "source_period",
+        "assumptions": [
+          "IC2024 is one row per institution (key UNITID), so no row selectors are needed.",
+          "Both flags are coded Yes/No fields from the 2024-25 Institutional Characteristics release: both Yes = both; one Yes = that one only.",
+          "Not reported (-1) and Not applicable (-2) are source categories, not 'no'."
+        ]
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [
+        "The query could not be validated: Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs."
+      ]
+    },
+    "institution_identity": {
+      "unitids": [
+        168218
+      ],
+      "original_question": "Did Wellesley College offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+      "original_mentions": [
+        "Wellesley College"
+      ],
+      "confirmed_choices": {
+        "wellesley college": 168218
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Wellesley College \u00b7 Wellesley, MA \u00b7 UNITID 168218"
+      ]
+    }
+  },
+  "elapsed_seconds": 21.40307869995013,
+  "events": [
+    {
+      "elapsed": 0.00033329997677356005,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.4290215999353677,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.51872229995206,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 1.5192247999366373,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 1.5439138999208808,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 4.504199899965897,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 5.447364999912679,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 5.487437899922952,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 7.520526199950837,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 7.566721600014716,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 7.594292499939911,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 11.849505899939686,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 11.966977300005965,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 15.784266299917363,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 15.947724499972537,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 20.533210099907592,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    }
+  ],
+  "expected_variables": [
+    "DSTNUGC",
+    "DSTNUGP"
+  ]
+}

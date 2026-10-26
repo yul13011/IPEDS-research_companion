@@ -1,0 +1,721 @@
+{
+  "id": "mixed",
+  "question": "For Smith College in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "167835"
+      ],
+      "population": null,
+      "result_kind": "lookup",
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136122,
+            136165,
+            136166
+          ],
+          "filters": []
+        }
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "167835"
+        ],
+        "population": null,
+        "result_kind": "lookup",
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136122,
+              136165,
+              136166
+            ],
+            "filters": []
+          }
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::CALSYS",
+          "IC{YEAR}::DISAB",
+          "IC{YEAR}::DISABPCT"
+        ],
+        "institutions": [
+          "167835"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::CALSYS": {
+          "label": "Calendar system",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::DISAB": {
+          "label": "Percent indicator of undergraduates formally registered as students with disabilities",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::DISABPCT": {
+          "label": "Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent",
+          "family": "observation",
+          "unit": "percent"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::CALSYS",
+          "measure": "Calendar system",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136122,
+          "raw_code": 1,
+          "response_label": "Semester",
+          "response_status": "reported",
+          "category_record_ids": [
+            139841
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "CALSYS",
+            "record_id": 136122,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136122,
+                "excerpt": "Calendar system"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Fall 2023",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::DISAB",
+          "measure": "Percent indicator of undergraduates formally registered as students with disabilities",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136165,
+          "raw_code": 2,
+          "response_label": "More than 3 percent",
+          "response_status": "reported",
+          "category_record_ids": [
+            143785
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "DISAB",
+            "record_id": 136165,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136165,
+                "excerpt": "Percent indicator of undergraduates formally registered as students with disabilities"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Fall 2023",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::DISABPCT",
+          "measure": "Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent",
+          "unit": "percent",
+          "value": 38,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "quantitative",
+          "record_id": 136166,
+          "raw_code": "38.00",
+          "response_label": null,
+          "response_status": "reported",
+          "category_record_ids": [],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "DISABPCT",
+            "record_id": 136166,
+            "unit": "percent",
+            "quantity_type": "percentage",
+            "status": "verified",
+            "basis": "Explicit percentage quantity",
+            "evidence": [
+              {
+                "record_id": 136166,
+                "excerpt": "Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          },
+          "conditional_evidence": {
+            "record_id": 136165,
+            "raw_code": 2,
+            "response_label": "More than 3 percent",
+            "response_status": "reported",
+            "category_record_ids": [
+              143785
+            ]
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::CALSYS",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "CALSYS"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"CALSYS\",\"DISAB\",\"DISABPCT\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136122,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "CALSYS",
+              "title": "Calendar system",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10901\nvarorder: 27\nvarname: CALSYS\nvartitle: Calendar system\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 11\nlongdescription: What is the predominant calendar system at the institution? [Choose one] Standard academic terms Checking one of these systems determines that your institution will provide graduation rates data based on a FALL COHORT and student charges based on a FULL ACADEMIC YEAR Semester Quarter Trimester 4-1-4 or similar plan Other academic calendar Other calendar systems (for primarily occupational schools) Checking one of the following determines that your institution will provide graduation rates data based on a FULL YEAR COHORT and student charges data will be requested by PROGRAM. Differs by program Continuous basis (every 2 weeks, monthly, or other period) SEMESTER calendar SYSTEM -A calendar system that consists of two semesters during the academic year with about 16 weeks for each semester of instruction. There may be an additional summer session. QUARTER calendar SYSTEM - A calendar system in which the academic year consists of 3 sessions called quarters of about 12 weeks each. The range may be from 10 to 15 weeks. There may be an additional quarter in the summer TRIMESTER calendar SYSTEM - An academic year consisting of 3 terms of about 15 weeks each. FOUR-ONE-FOUR PLAN - The 4-1-4 calendar consists of 4 courses taken for 4 months, 1 course taken for 1 month, and 4 courses taken for 4 months. There may be an additional summer session. OTHER ACADEMIC calendar SYSTEM - Category used to describe \"non-traditional\" calendar systems at 4-year and 2-year degree-granting institutions. These can include schools that offer primarily on-line courses or \"one course at a time\". DIFFERS BY PROGRAM (calendar SYSTEM) - A calendar system classification that is used by institutions that have occupational/vocational programs of varying lengths. These schools may enroll students at specific times depending on the program desired. For example, a school might offer a 2-month program in January, March, May, September, and November; and a 3-month program in January, April, and October. CONTINUOUS BASIS (FOR PROGRAM ENROLLMENT) - A calendar system classification that is used by institutions that enroll students at any time during the academic year. For example, a cosmetology school or a word processing school might allow students to enroll and begin studies at various times, with no requirement that classes begin on a certain date.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Enrollment levels offered",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 251,
+              "long_description": "What is the predominant calendar system at the institution? [Choose one] Standard academic terms Checking one of these systems determines that your institution will provide graduation rates data based on a FALL COHORT and student charges based on a FULL ACADEMIC YEAR Semester Quarter Trimester 4-1-4 or similar plan Other academic calendar Other calendar systems (for primarily occupational schools) Checking one of the following determines that your institution will provide graduation rates data based on a FULL YEAR COHORT and student charges data will be requested by PROGRAM. Differs by program Continuous basis (every 2 weeks, monthly, or other period) SEMESTER calendar SYSTEM -A calendar system that consists of two semesters during the academic year with about 16 weeks for each semester of instruction. There may be an additional summer session. QUARTER calendar SYSTEM - A calendar system in which the academic year consists of 3 sessions called quarters of about 12 weeks each. The range may be from 10 to 15 weeks. There may be an additional quarter in the summer TRIMESTER calendar SYSTEM - An academic year consisting of 3 terms of about 15 weeks each. FOUR-ONE-FOUR PLAN - The 4-1-4 calendar consists of 4 courses taken for 4 months, 1 course taken for 1 month, and 4 courses taken for 4 months. There may be an additional summer session. OTHER ACADEMIC calendar SYSTEM - Category used to describe \"non-traditional\" calendar systems at 4-year and 2-year degree-granting institutions. These can include schools that offer primarily on-line courses or \"one course at a time\". DIFFERS BY PROGRAM (calendar SYSTEM) - A calendar system classification that is used by institutions that have occupational/vocational programs of varying lengths. These schools may enroll students at specific times depending on the program desired. For example, a school might offer a 2-month program in January, March, May, September, and November; and a 3-month program in January, April, and October. CONTINUOUS BASIS (FOR PROGRAM ENROLLMENT) - A calendar system classification that is used by institutions that enroll students at any time during the academic year. For example, a cosmetology school or a word processing school might allow students to enroll and begin studies at various times, with no requirement that classes begin on a certain date.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139848,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139841,
+              "code_value": "1",
+              "value_label": "Semester"
+            },
+            {
+              "record_id": 139842,
+              "code_value": "2",
+              "value_label": "Quarter"
+            },
+            {
+              "record_id": 139843,
+              "code_value": "3",
+              "value_label": "Trimester"
+            },
+            {
+              "record_id": 139844,
+              "code_value": "4",
+              "value_label": "Four-one-four plan"
+            },
+            {
+              "record_id": 139845,
+              "code_value": "5",
+              "value_label": "Other academic year"
+            },
+            {
+              "record_id": 139846,
+              "code_value": "6",
+              "value_label": "Differs by program"
+            },
+            {
+              "record_id": 139847,
+              "code_value": "7",
+              "value_label": "Continuous"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::DISAB",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "DISAB"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"CALSYS\",\"DISAB\",\"DISABPCT\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136165,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "DISAB",
+              "title": "Percent indicator of undergraduates formally registered as students with disabilities",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nvarnumber: 24566\nvarorder: 94\nvarname: DISAB\nvartitle: Percent indicator of undergraduates formally registered as students with disabilities\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 76\nsectionnumber: 1\nlongdescription: Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nsectiontitle: Undergraduate students with disabilities: Fall 2023",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 294,
+              "long_description": "Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 143786,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 143787,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 143784,
+              "code_value": "1",
+              "value_label": "3 percent or less"
+            },
+            {
+              "record_id": 143785,
+              "code_value": "2",
+              "value_label": "More than 3 percent"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::DISABPCT",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "DISABPCT",
+            "DISAB"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"CALSYS\",\"DISAB\",\"DISABPCT\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136166,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "DISABPCT",
+              "title": "Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nvarnumber: 24571\nvarorder: 96\nvarname: DISABPCT\nimputationvar: XDISABPC\nvartitle: Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 76\nsectionnumber: 1\nlongdescription: Enter percentage when the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office) if percentage is more than 3 percent\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nsectiontitle: Undergraduate students with disabilities: Fall 2023",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 295,
+              "long_description": "Enter percentage when the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office) if percentage is more than 3 percent",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            },
+            {
+              "record_id": 136165,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "DISAB",
+              "title": "Percent indicator of undergraduates formally registered as students with disabilities",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nvarnumber: 24566\nvarorder: 94\nvarname: DISAB\nvartitle: Percent indicator of undergraduates formally registered as students with disabilities\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 76\nsectionnumber: 1\nlongdescription: Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nsectiontitle: Undergraduate students with disabilities: Fall 2023",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 294,
+              "long_description": "Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 143786,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 143787,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 143784,
+              "code_value": "1",
+              "value_label": "3 percent or less"
+            },
+            {
+              "record_id": 143785,
+              "code_value": "2",
+              "value_label": "More than 3 percent"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::CALSYS": "What is the predominant calendar system at the institution? [Choose one] Standard academic terms Checking one of these systems determines that your institution will provide graduation rates data based on a FALL COHORT and student charges based on a FULL ACADEMIC YEAR Semester Quarter Trimester 4-1-4 or similar plan Other academic calendar Other calendar systems (for primarily occupational schools) Checking one of the following determines that your institution will provide graduation rates data based on a FULL YEAR COHORT and student charges data will be requested by PROGRAM. Differs by program Continuous basis (every 2 weeks, monthly, or other period) SEMESTER calendar SYSTEM -A calendar system that consists of two semesters during the academic year with about 16 weeks for each semester of instruction. There may be an additional summer session. QUARTER calendar SYSTEM - A calendar system in which the academic year consists of 3 sessions called quarters of about 12 weeks each. The range may be from 10 to 15 weeks. There may be an additional quarter in the summer TRIMESTER calendar SYSTEM - An academic year consisting of 3 terms of about 15 weeks each. FOUR-ONE-FOUR PLAN - The 4-1-4 calendar consists of 4 courses taken for 4 months, 1 course taken for 1 month, and 4 courses taken for 4 months. There may be an additional summer session. OTHER ACADEMIC calendar SYSTEM - Category used to describe \"non-traditional\" calendar systems at 4-year and 2-year degree-granting institutions. These can include schools that offer primarily on-line courses or \"one course at a time\". DIFFERS BY PROGRAM (calendar SYSTEM) - A calendar system classification that is used by institutions that have occupational/vocational programs of varying lengths. These schools may enroll students at specific times depending on the program desired. For example, a school might offer a 2-month program in January, March, May, September, and November; and a 3-month program in January, April, and October. CONTINUOUS BASIS (FOR PROGRAM ENROLLMENT) - A calendar system classification that is used by institutions that enroll students at any time during the academic year. For example, a cosmetology school or a word processing school might allow students to enroll and begin studies at various times, with no requirement that classes begin on a certain date.",
+        "IC{YEAR}::DISAB": "Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.",
+        "IC{YEAR}::DISABPCT": "Enter percentage when the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office) if percentage is more than 3 percent"
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:45:43.709996+00:00",
+      "registry_sha256": "60ae903cb04a92935c745289fcc7c11109d2c012a8c8f1dc7ba106da275e4871",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 3,
+        "available_cells": 3,
+        "matching_institutions": {
+          "2024": 1
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 1
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            167835,
+            2024,
+            136122
+          ],
+          [
+            167835,
+            2024,
+            136165
+          ],
+          [
+            167835,
+            2024,
+            136166
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          167835
+        ],
+        "rows_sha256": "ba132adb64490018694d125ce5cfadeaf7ca130c9b412e87483e90b20db71609"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 12.317900700028986,
+        "answer_ready_seconds": 14.056263000005856,
+        "live_model_calls": 5,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 1.7248098000418395
+      },
+      "result_id": "8833aa8db89c82d8",
+      "institution_identity": {
+        "unitids": [
+          167835
+        ],
+        "original_question": "For Smith College in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+        "original_mentions": [
+          "Smith College"
+        ],
+        "confirmed_choices": {
+          "smith college": 167835
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 5,
+      "planning_tool_requests": 6,
+      "semantic_repair_attempts": 1,
+      "latency_seconds": 13.749882300055585,
+      "input_tokens": 39946,
+      "output_tokens": 1098,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 85232,
+      "estimated_api_usd": 0.0993952,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 591,
+          "output_tokens": 58,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.6718823000555858,
+          "estimated_api_usd": 0.001762,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 4,
+          "planning_tool_requests": 6,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 12.078,
+          "input_tokens": 39355,
+          "output_tokens": 1040,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 85232,
+          "estimated_api_usd": 0.0976332,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "Smith College \u2014 Calendar system: Semester (Academic year 2024-25); Smith College \u2014 Percent indicator of undergraduates formally registered as students with disabilities: More than 3 percent (Fall 2023); Smith College \u2014 Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent: 38.00% (Fall 2023).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 12.317900700028986,
+      "answer_ready_seconds": 14.056263000005856,
+      "live_model_calls": 5,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 1.7248098000418395
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "e9dd005cd80bda4f",
+      "status": "completed",
+      "goal": "For Smith College (UNITID 167835) in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+      "original_question": "For Smith College (UNITID 167835) in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+      "question": "Smith College \u2014 Calendar system: Semester (Academic year 2024-25); Smith College \u2014 Percent indicator of undergraduates formally registered as students with disabilities: More than 3 percent (Fall 2023); Smith College \u2014 Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent: 38.00% (Fall 2023).",
+      "scope": {
+        "institutions": [
+          "167835"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::CALSYS",
+          "IC{YEAR}::DISAB",
+          "IC{YEAR}::DISABPCT"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        167835
+      ],
+      "original_question": "For Smith College in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+      "original_mentions": [
+        "Smith College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 14.057152800029144,
+  "events": [
+    {
+      "elapsed": 0.0005771999713033438,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.6787930000573397,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.7267550000688061,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 1.7268783000763506,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 1.738670999999158,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 4.814793199999258,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 4.865581699996255,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 4.89992620004341,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 7.565303500043228,
+      "stage": "Reading a source definition\u2026"
+    },
+    {
+      "elapsed": 7.587139700073749,
+      "stage": "Reading a source definition\u2026"
+    },
+    {
+      "elapsed": 7.601215700036846,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 10.648208099999465,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 14.041209500050172,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 14.057082200073637,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "CALSYS",
+    "DISABPCT"
+  ]
+}

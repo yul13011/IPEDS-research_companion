@@ -1,0 +1,4 @@
+{"id": "yale", "seconds": 8.141299900016747, "estimated_api_usd": null, "checks": null, "error": "Select or filter every source key dimension: FACSTAT"}
+{"id": "yale_paraphrase", "seconds": 6.5654792000423186, "estimated_api_usd": null, "checks": null, "error": "Select or filter every source key dimension: FACSTAT"}
+{"id": "harvard", "seconds": 7.962713600019924, "estimated_api_usd": null, "checks": null, "error": "Select or filter every source key dimension: FACSTAT"}
+{"id": "smith", "seconds": 6.271927599969786, "estimated_api_usd": null, "checks": null, "error": "Select or filter every source key dimension: FACSTAT"}

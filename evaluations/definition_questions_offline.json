@@ -1,0 +1,894 @@
+[
+  {
+    "q": "What is the definition of instructional staff?",
+    "a": {
+      "intent": "definition",
+      "mode": "source definition",
+      "message": "For **instructional staff**, the supplied codebook gives these source passages:\n\n**Average salary for instructional staff equated to a 9-month contract-men** (2024-25 \u00b7 Provisional \u00b7 SAL2024_IS \u00b7 SAEQ9AM)\n\n> instructional staff - men equated to month contract (SAEQ9OM) by the number of full-time, non-medical, instructional staff (SATOTLM)\n\n**Average salary for instructional staff equated to a 9-month contract-total** (2024-25 \u00b7 Provisional \u00b7 SAL2024_IS \u00b7 SAEQ9AT)\n\n> instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\n\n**Average salary for instructional staff equated to a 9-month contract-women** (2024-25 \u00b7 Provisional \u00b7 SAL2024_IS \u00b7 SAEQ9AW)\n\n> instructional staff - women equated to month contract (SAEQ9OW) by the number of full-time, non-medical, instructional staff (SATOTLW)\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+      "evidence": [
+        {
+          "record_id": 137725,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SAEQ9AM",
+          "title": "Average salary for instructional staff equated to a 9-month contract-men",
+          "definition": "Average salary for instructional staff equated to a 9-month contract - men This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - men equated to month contract (SAEQ9OM) by the number of full-time, non-medical, instructional staff (SATOTLM)",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1854,
+          "excerpt": "instructional staff - men equated to month contract (SAEQ9OM) by the number of full-time, non-medical, instructional staff (SATOTLM)",
+          "direct_match": true,
+          "score": 739.971,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137724,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SAEQ9AT",
+          "title": "Average salary for instructional staff equated to a 9-month contract-total",
+          "definition": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1853,
+          "excerpt": "instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+          "direct_match": true,
+          "score": 739.9708,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137726,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SAEQ9AW",
+          "title": "Average salary for instructional staff equated to a 9-month contract-women",
+          "definition": "Average salary for instructional staff equated to a 9-month contract - women This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - women equated to month contract (SAEQ9OW) by the number of full-time, non-medical, instructional staff (SATOTLW)",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1855,
+          "excerpt": "instructional staff - women equated to month contract (SAEQ9OW) by the number of full-time, non-medical, instructional staff (SATOTLW)",
+          "direct_match": true,
+          "score": 739.9706,
+          "physical_column_present": true,
+          "issues": []
+        }
+      ],
+      "definition_lookup": {
+        "term": "instructional staff",
+        "source_years": [
+          2024
+        ],
+        "default_latest_release": true,
+        "status": "defined",
+        "selection": "deterministic",
+        "candidate_record_ids": [
+          137725,
+          137724,
+          137726,
+          137881,
+          137877,
+          137880,
+          137878,
+          137879,
+          137876,
+          137882,
+          137695,
+          137698,
+          137701,
+          137704,
+          137694,
+          137696,
+          137697,
+          137699,
+          137700,
+          137702
+        ],
+        "passages": [
+          {
+            "record_id": 137725,
+            "excerpt": "instructional staff - men equated to month contract (SAEQ9OM) by the number of full-time, non-medical, instructional staff (SATOTLM)"
+          },
+          {
+            "record_id": 137724,
+            "excerpt": "instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)"
+          },
+          {
+            "record_id": 137726,
+            "excerpt": "instructional staff - women equated to month contract (SAEQ9OW) by the number of full-time, non-medical, instructional staff (SATOTLW)"
+          }
+        ],
+        "source_policy": "Owner-supplied metadata only; no statistical values queried"
+      },
+      "latency": {
+        "answer_ready_seconds": 0.17529849999118596,
+        "live_model_calls": 0
+      }
+    }
+  },
+  {
+    "q": "What does UNITID mean?",
+    "a": {
+      "intent": "definition",
+      "mode": "source definition",
+      "message": "I could not establish a direct definition of **UNITID** from this bounded search of the supplied codebooks. This does not prove the term is absent. Try its exact variable name, source table, or a more specific term.",
+      "evidence": [
+        {
+          "record_id": 135908,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "HD2024",
+          "variable_name": "NEWID",
+          "title": "UNITID for merged schools",
+          "definition": "UNITID where data is found for merged schools.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 37,
+          "excerpt": "UNITID where data is found for merged schools.",
+          "direct_match": false,
+          "score": 19.9954,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 135987,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_C",
+          "title": "UnitID of Parent institution",
+          "definition": "UNITID number of parent institution reporting Completions data IDX_C contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 116,
+          "excerpt": "UNITID number of parent institution reporting Completions data IDX_C contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.",
+          "direct_match": false,
+          "score": 19.9786,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136027,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_GR",
+          "title": "UNITID of parent institution reporting Graduation Rates",
+          "definition": "UNITID number of parent institution reporting Graduation Rate data. IDX_GR contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 156,
+          "excerpt": "UNITID number of parent institution reporting Graduation Rate data. IDX_GR contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.",
+          "direct_match": false,
+          "score": 19.978,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136054,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_AL",
+          "title": "UnitID of Parent institution - Academic Libraries",
+          "definition": "UNITID number of parent institution reporting Academic Libraries data IDX_AL contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 183,
+          "excerpt": "UNITID number of parent institution reporting Academic Libraries data IDX_AL contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.",
+          "direct_match": false,
+          "score": 19.9778,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136034,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_GR2",
+          "title": "UNITID of parent institution reporting Graduation Rates 200",
+          "definition": "UNITID number of parent institution reporting Graduation Rate 200 data. IDX_GR2 contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 163,
+          "excerpt": "UNITID number of parent institution reporting Graduation Rate 200 data. IDX_GR2 contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.",
+          "direct_match": false,
+          "score": 19.9775,
+          "physical_column_present": true,
+          "issues": []
+        }
+      ],
+      "definition_lookup": {
+        "term": "UNITID",
+        "source_years": [
+          2024
+        ],
+        "default_latest_release": true,
+        "status": "not_established",
+        "selection": "deterministic",
+        "candidate_record_ids": [
+          135908,
+          135987,
+          136027,
+          136054,
+          136034,
+          136040,
+          135957,
+          135999,
+          135962,
+          135970,
+          135981,
+          136020,
+          135825,
+          135971,
+          136028,
+          136041,
+          135982,
+          136035,
+          136021,
+          136048
+        ],
+        "passages": [],
+        "source_policy": "Owner-supplied metadata only; no statistical values queried"
+      },
+      "latency": {
+        "answer_ready_seconds": 0.0991677000420168,
+        "live_model_calls": 0
+      }
+    }
+  },
+  {
+    "q": "Define graduation rate",
+    "a": {
+      "intent": "definition",
+      "mode": "source definition",
+      "message": "For **graduation rate**, the supplied codebook gives these source passages:\n\n**4-year Graduation rate - bachelor's degree within 100% of normal time** (2024-25 \u00b7 Provisional \u00b7 GR200_24 \u00b7 BAGR100)\n\n> Graduation rate - bachelor\u2019s degree within 100% of normal time The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 100 percent of normal time (4-years) divided by the adjusted cohort.\n\n**6-year Graduation rate - bachelor's degree within 150% of normal time** (2024-25 \u00b7 Provisional \u00b7 GR200_24 \u00b7 BAGR150)\n\n> Graduation rate - bachelor\u2019s degree within 150% of normal time The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 150 percent of normal time (6-years) divided by the adjusted cohort.\n\n**8-year Graduation rate - bachelor's degree within 200% of normal time** (2024-25 \u00b7 Provisional \u00b7 GR200_24 \u00b7 BAGR200)\n\n> Graduation rate - bachelor\u2019s degree within 200% of normal time. The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 200 percent of normal time (8-years) divided by the adjusted cohort.\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+      "evidence": [
+        {
+          "record_id": 136941,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "GR200_24",
+          "variable_name": "BAGR100",
+          "title": "4-year Graduation rate - bachelor's degree within 100% of normal time",
+          "definition": "4-year Graduation rate - bachelor\u2019s degree within 100% of normal time The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 100 percent of normal time (4-years) divided by the adjusted cohort. Note: Adjusted Cohort is the revised cohort minus exclusions as reported by the institution as of 150 percent of normal time. (6-years).",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1070,
+          "excerpt": "Graduation rate - bachelor\u2019s degree within 100% of normal time The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 100 percent of normal time (4-years) divided by the adjusted cohort.",
+          "direct_match": true,
+          "score": 739.9609,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136943,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "GR200_24",
+          "variable_name": "BAGR150",
+          "title": "6-year Graduation rate - bachelor's degree within 150% of normal time",
+          "definition": "6-year Graduation rate - bachelor\u2019s degree within 150% of normal time The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 150 percent of normal time (6-years) divided by the adjusted cohort. Note: Adjusted Cohort is the revised cohort minus exclusions as reported by the institution as of 150 percent of normal time. (6-years).",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1072,
+          "excerpt": "Graduation rate - bachelor\u2019s degree within 150% of normal time The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 150 percent of normal time (6-years) divided by the adjusted cohort.",
+          "direct_match": true,
+          "score": 739.9609,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136948,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "GR200_24",
+          "variable_name": "BAGR200",
+          "title": "8-year Graduation rate - bachelor's degree within 200% of normal time",
+          "definition": "8-year Graduation rate - bachelor\u2019s degree within 200% of normal time. The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 200 percent of normal time (8-years) divided by the adjusted cohort. Note: Adjusted Cohort is the revised cohort minus exclusions as reported by the institution as of 200 percent of normal time. (8-years).",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1077,
+          "excerpt": "Graduation rate - bachelor\u2019s degree within 200% of normal time. The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 200 percent of normal time (8-years) divided by the adjusted cohort.",
+          "direct_match": true,
+          "score": 739.9608,
+          "physical_column_present": true,
+          "issues": []
+        }
+      ],
+      "definition_lookup": {
+        "term": "graduation rate",
+        "source_years": [
+          2024
+        ],
+        "default_latest_release": true,
+        "status": "defined",
+        "selection": "deterministic",
+        "candidate_record_ids": [
+          136941,
+          136943,
+          136948,
+          136961,
+          136954,
+          136956,
+          136971,
+          136972,
+          136989,
+          136966,
+          136970,
+          136965,
+          136964,
+          136987,
+          136969,
+          136968,
+          136990,
+          136967,
+          136963,
+          136867
+        ],
+        "passages": [
+          {
+            "record_id": 136941,
+            "excerpt": "Graduation rate - bachelor\u2019s degree within 100% of normal time The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 100 percent of normal time (4-years) divided by the adjusted cohort."
+          },
+          {
+            "record_id": 136943,
+            "excerpt": "Graduation rate - bachelor\u2019s degree within 150% of normal time The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 150 percent of normal time (6-years) divided by the adjusted cohort."
+          },
+          {
+            "record_id": 136948,
+            "excerpt": "Graduation rate - bachelor\u2019s degree within 200% of normal time. The number of students from the adjusted bachelor's degree-seeking cohort, who completed a bachelor's degree within 200 percent of normal time (8-years) divided by the adjusted cohort."
+          }
+        ],
+        "source_policy": "Owner-supplied metadata only; no statistical values queried"
+      },
+      "latency": {
+        "answer_ready_seconds": 0.11964110005646944,
+        "live_model_calls": 0
+      }
+    }
+  },
+  {
+    "q": "How is full-time undergraduate enrollment defined?",
+    "a": {
+      "intent": "definition",
+      "mode": "source definition",
+      "message": "For **full-time undergraduate enrollment**, the supplied codebook gives these source passages:\n\n**Full-time undergraduate enrollment** (2024-25 \u00b7 Provisional \u00b7 DRVEF2024 \u00b7 EFUGFT)\n\n> Full-time undergraduate men and women enrolled for credit in the fall of the academic year. Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+      "evidence": [
+        {
+          "record_id": 136540,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVEF2024",
+          "variable_name": "EFUGFT",
+          "title": "Full-time undergraduate enrollment",
+          "definition": "Full-time undergraduate men and women enrolled for credit in the fall of the academic year. Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 669,
+          "excerpt": "Full-time undergraduate men and women enrolled for credit in the fall of the academic year. Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.",
+          "direct_match": true,
+          "score": 1079.9294,
+          "physical_column_present": true,
+          "issues": []
+        }
+      ],
+      "definition_lookup": {
+        "term": "full-time undergraduate enrollment",
+        "source_years": [
+          2024
+        ],
+        "default_latest_release": true,
+        "status": "defined",
+        "selection": "deterministic",
+        "candidate_record_ids": [
+          136540,
+          136522,
+          136282,
+          136280,
+          136544,
+          136543,
+          136542,
+          136541,
+          136123,
+          136531,
+          136329,
+          136323,
+          136124,
+          136507,
+          136446,
+          136333,
+          136332,
+          136331,
+          136330,
+          136767
+        ],
+        "passages": [
+          {
+            "record_id": 136540,
+            "excerpt": "Full-time undergraduate men and women enrolled for credit in the fall of the academic year. Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15."
+          }
+        ],
+        "source_policy": "Owner-supplied metadata only; no statistical values queried"
+      },
+      "latency": {
+        "answer_ready_seconds": 0.33226359996479005,
+        "live_model_calls": 0
+      }
+    }
+  },
+  {
+    "q": "What is faculty?",
+    "a": {
+      "intent": "definition",
+      "mode": "source definition",
+      "message": "For **faculty**, the supplied codebook gives these source passages:\n\n**Faculty and tenure status** (2024-25 \u00b7 Provisional \u00b7 EAP2024 \u00b7 FACSTAT)\n\n> Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category\n\n**Total length of largest program** (2024-25 \u00b7 Provisional \u00b7 COST1_2024 \u00b7 CIPLGTH1)\n\n> faculty-supervised laboratory, shop training, or internship in a 60-minute period; or (3) Sixty minutes of preparation in a correspondence course.\n\n**Largest program measured in credit or clock hours** (2024-25 \u00b7 Provisional \u00b7 COST1_2024 \u00b7 PRGMSR1)\n\n> faculty-supervised laboratory, shop training, or internship in a 60-minute period; or (3) Sixty minutes of preparation in a correspondence course. Credit hour A unit of measure representing the equivalent of an hour (50 minutes) of instruction per week over the entire term. It is applied toward the total number of credit hours needed for completing the requirements of a degree, diploma, certificate, or other formal award.\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+      "evidence": [
+        {
+          "record_id": 137674,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "EAP2024",
+          "variable_name": "FACSTAT",
+          "title": "Faculty and tenure status",
+          "definition": "Faculty and tenure status Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category Tenure-Status of a personnel position with respect to permanence of the position. Tenure track - Personnel positions that lead to consideration for tenure. Not on tenure track - Personnel positions that are considered non-tenure earning positions Multi-year contract - a contract or employment agreement that is in effect for more than one year (e.g., more than 365 days) where subsequent years of the contract may be contingent upon other factors such as the appropriation of funds. The renewal period of a multi-year contract is not on an annual basis (e.g., a 5-year multi-year contract is renewed every 5 years NOT annually). Annual contract - An annually-renewable contract or employment agreement that is in effect for a stated annual period within one year of execution, and may be equal to a period of 365 days, or a standard academic year, or the equivalent. Does not include contracts for partial year periods such as a single semester, quarter, term, block, or course. Less-than-annual-contract - A contract or employment agreement that is in effect for a partial year period of less than 365 days, or less than a standard academic year or the equivalent. Includes contracts for partial year periods such as a single semester, quarter, term, block, or course.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1803,
+          "excerpt": "Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category",
+          "direct_match": true,
+          "score": 719.7706,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137983,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "COST1_2024",
+          "variable_name": "CIPLGTH1",
+          "title": "Total length of largest program",
+          "definition": "Price of attendance for entering students in the largest program:(Books and supplies, room and board, and other expenses are those amounts used by your financial aid office for determining eligibility for student financial assistance) These data are published at the IPEDS College Navigator Web site Total length of largest program measured in clock or credit hours Clock hour. A period of time consisting of (1) A 50- to 60-minute class, lecture, or recitation in a 60-minute period; (2) A 50- to 60-minute faculty-supervised laboratory, shop training, or internship in a 60-minute period; or (3) Sixty minutes of preparation in a correspondence course.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 2112,
+          "excerpt": "faculty-supervised laboratory, shop training, or internship in a 60-minute period; or (3) Sixty minutes of preparation in a correspondence course.",
+          "direct_match": true,
+          "score": 699.9346,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137984,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "COST1_2024",
+          "variable_name": "PRGMSR1",
+          "title": "Largest program measured in credit or clock hours",
+          "definition": "Indicate if program length for the entire program is measured in credit or clock hour . Clock hour. A period of time consisting of (1) A 50- to 60-minute class, lecture, or recitation in a 60-minute period; (2) A 50- to 60-minute faculty-supervised laboratory, shop training, or internship in a 60-minute period; or (3) Sixty minutes of preparation in a correspondence course. Credit hour A unit of measure representing the equivalent of an hour (50 minutes) of instruction per week over the entire term. It is applied toward the total number of credit hours needed for completing the requirements of a degree, diploma, certificate, or other formal award.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 2113,
+          "excerpt": "faculty-supervised laboratory, shop training, or internship in a 60-minute period; or (3) Sixty minutes of preparation in a correspondence course. Credit hour A unit of measure representing the equivalent of an hour (50 minutes) of instruction per week over the entire term. It is applied toward the total number of credit hours needed for completing the requirements of a degree, diploma, certificate, or other formal award.",
+          "direct_match": true,
+          "score": 699.9345,
+          "physical_column_present": true,
+          "issues": []
+        }
+      ],
+      "definition_lookup": {
+        "term": "faculty",
+        "source_years": [
+          2024
+        ],
+        "default_latest_release": true,
+        "status": "defined",
+        "selection": "deterministic",
+        "candidate_record_ids": [
+          137674,
+          137801,
+          137840,
+          137875,
+          137672,
+          137983,
+          137984,
+          138018,
+          138024,
+          138030,
+          138036,
+          138042,
+          138017,
+          138023,
+          138029,
+          138035,
+          138041,
+          137839,
+          137873,
+          135859
+        ],
+        "passages": [
+          {
+            "record_id": 137674,
+            "excerpt": "Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category"
+          },
+          {
+            "record_id": 137983,
+            "excerpt": "faculty-supervised laboratory, shop training, or internship in a 60-minute period; or (3) Sixty minutes of preparation in a correspondence course."
+          },
+          {
+            "record_id": 137984,
+            "excerpt": "faculty-supervised laboratory, shop training, or internship in a 60-minute period; or (3) Sixty minutes of preparation in a correspondence course. Credit hour A unit of measure representing the equivalent of an hour (50 minutes) of instruction per week over the entire term. It is applied toward the total number of credit hours needed for completing the requirements of a degree, diploma, certificate, or other formal award."
+          }
+        ],
+        "source_policy": "Owner-supplied metadata only; no statistical values queried"
+      },
+      "latency": {
+        "answer_ready_seconds": 0.1535216000629589,
+        "live_model_calls": 0
+      }
+    }
+  },
+  {
+    "q": "What is Yale admission rate in fall 2024?",
+    "a": {
+      "intent": "analyze",
+      "plan": {
+        "metrics": [
+          "applicants",
+          "admits",
+          "admission_rate"
+        ],
+        "institutions": [
+          "130794"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "table"
+      },
+      "result": {
+        "plan": {
+          "metrics": [
+            "applicants",
+            "admits",
+            "admission_rate"
+          ],
+          "institutions": [
+            "130794"
+          ],
+          "years": [
+            2024
+          ],
+          "time_basis": "observation",
+          "output": "table"
+        },
+        "observation_years": [
+          2024
+        ],
+        "rows": [
+          {
+            "institution": "Yale University",
+            "unitid": 130794,
+            "observation_year": 2024,
+            "entry_cohort_year": null,
+            "reporting_period": "fall 2024",
+            "metric": "applicants",
+            "measure": "Applicants",
+            "unit": "students",
+            "value": 57517.0,
+            "release": "IPEDS_2024-25_Provisional",
+            "provisional": true,
+            "status": "ok",
+            "numerator": null,
+            "denominator": null,
+            "series_segment": "comparable scope"
+          },
+          {
+            "institution": "Yale University",
+            "unitid": 130794,
+            "observation_year": 2024,
+            "entry_cohort_year": null,
+            "reporting_period": "fall 2024",
+            "metric": "admits",
+            "measure": "Admitted students",
+            "unit": "students",
+            "value": 2227.0,
+            "release": "IPEDS_2024-25_Provisional",
+            "provisional": true,
+            "status": "ok",
+            "numerator": null,
+            "denominator": null,
+            "series_segment": "comparable scope"
+          },
+          {
+            "institution": "Yale University",
+            "unitid": 130794,
+            "observation_year": 2024,
+            "entry_cohort_year": null,
+            "reporting_period": "fall 2024",
+            "metric": "admission_rate",
+            "measure": "Admission rate",
+            "unit": "percent",
+            "value": 3.871898742980336,
+            "release": "IPEDS_2024-25_Provisional",
+            "provisional": true,
+            "status": "ok",
+            "numerator": 2227,
+            "denominator": 57517,
+            "series_segment": "comparable scope"
+          }
+        ],
+        "sources": [
+          {
+            "metric": "applicants",
+            "year": 2024,
+            "unitid": 130794,
+            "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+            "database_size": 272990208,
+            "database_mtime_ns": 1792185798524065800,
+            "table": "ADM2024",
+            "columns": [
+              "APPLCN"
+            ],
+            "filters": {},
+            "formula": "APPLCN",
+            "sql": "SELECT APPLCN AS value FROM \"ADM2024\" WHERE UNITID=?",
+            "parameters": [
+              130794
+            ],
+            "codebook_evidence": [
+              {
+                "record_id": 136224,
+                "documented_table": "ADM2024",
+                "variable_name": "APPLCN",
+                "title": "Applicants total",
+                "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "sheet_name": "varTable24",
+                "source_row": 353,
+                "physical_table": "ADM2024",
+                "location_override": false,
+                "issues": [],
+                "codes": []
+              }
+            ],
+            "code_filters": [],
+            "location_overrides": []
+          },
+          {
+            "metric": "admits",
+            "year": 2024,
+            "unitid": 130794,
+            "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+            "database_size": 272990208,
+            "database_mtime_ns": 1792185798524065800,
+            "table": "ADM2024",
+            "columns": [
+              "ADMSSN"
+            ],
+            "filters": {},
+            "formula": "ADMSSN",
+            "sql": "SELECT ADMSSN AS value FROM \"ADM2024\" WHERE UNITID=?",
+            "parameters": [
+              130794
+            ],
+            "codebook_evidence": [
+              {
+                "record_id": 136225,
+                "documented_table": "ADM2024",
+                "variable_name": "ADMSSN",
+                "title": "Admissions total",
+                "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of admissions ADMISSIONS - Applicants that have been granted an official offer to enroll in a college or university. FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "sheet_name": "varTable24",
+                "source_row": 354,
+                "physical_table": "ADM2024",
+                "location_override": false,
+                "issues": [],
+                "codes": []
+              }
+            ],
+            "code_filters": [],
+            "location_overrides": []
+          },
+          {
+            "metric": "admission_rate",
+            "year": 2024,
+            "unitid": 130794,
+            "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+            "database_size": 272990208,
+            "database_mtime_ns": 1792185798524065800,
+            "table": "ADM2024",
+            "columns": [
+              "ADMSSN",
+              "APPLCN"
+            ],
+            "filters": {},
+            "formula": "100.0*ADMSSN/NULLIF(APPLCN,0)",
+            "sql": "SELECT 100.0*ADMSSN/NULLIF(APPLCN,0) AS value,\"ADMSSN\" AS numerator,\"APPLCN\" AS denominator FROM \"ADM2024\" WHERE UNITID=?",
+            "parameters": [
+              130794
+            ],
+            "codebook_evidence": [
+              {
+                "record_id": 136225,
+                "documented_table": "ADM2024",
+                "variable_name": "ADMSSN",
+                "title": "Admissions total",
+                "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of admissions ADMISSIONS - Applicants that have been granted an official offer to enroll in a college or university. FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "sheet_name": "varTable24",
+                "source_row": 354,
+                "physical_table": "ADM2024",
+                "location_override": false,
+                "issues": [],
+                "codes": []
+              },
+              {
+                "record_id": 136224,
+                "documented_table": "ADM2024",
+                "variable_name": "APPLCN",
+                "title": "Applicants total",
+                "long_description": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "sheet_name": "varTable24",
+                "source_row": 353,
+                "physical_table": "ADM2024",
+                "location_override": false,
+                "issues": [],
+                "codes": []
+              }
+            ],
+            "code_filters": [],
+            "location_overrides": []
+          }
+        ],
+        "warnings": [
+          "2024\u201325 is provisional; values may be revised."
+        ],
+        "technical_notes": [],
+        "definitions": {
+          "applicants": "First-time degree/certificate-seeking undergraduates for fall, including prior-summer entrants; not graduate admissions. Rates use raw counts, not rounded derived percentages.",
+          "admits": "First-time degree/certificate-seeking undergraduates for fall, including prior-summer entrants; not graduate admissions. Rates use raw counts, not rounded derived percentages.",
+          "admission_rate": "First-time degree/certificate-seeking undergraduates for fall, including prior-summer entrants; not graduate admissions. Rates use raw counts, not rounded derived percentages."
+        },
+        "created_at": "2026-10-22T12:49:34.133301+00:00",
+        "registry_sha256": "244137358682bf7757a298f5cdf3c9010ca46fb30c0ad04f9f30929c860a0886",
+        "coverage": {
+          "requested_cells": 3,
+          "available_cells": 3
+        },
+        "review_status": "Implementation-reviewed source mappings; retained Yale benchmark discrepancies are disclosed, not resolved.",
+        "result_id": "a00c5f410b7b631e",
+        "intent_validation": {
+          "contract": {
+            "version": 1,
+            "original_question": "What is 130794 admission rate in fall 2024?",
+            "scope_question": "What is 130794 admission rate in fall 2024?",
+            "expected_years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "temporal": false,
+            "period_count": null,
+            "unitids": [
+              130794
+            ],
+            "inherit_institutions": false,
+            "dimensions": [],
+            "percentage": false,
+            "undergraduate": false
+          },
+          "plan_checks": [
+            "requested institutions",
+            "requested time scope"
+          ],
+          "policy": "Bounded independent checks; existing source/population/formula validators remain authoritative. Unknown semantic equivalence is not certified.",
+          "result_checks": [
+            "institution scope",
+            "actual reporting periods",
+            "requested output kind and breakdown cardinality"
+          ],
+          "status": "passed"
+        },
+        "latency": {
+          "reviewed_or_discovery_pipeline_seconds": 0.2167245999444276,
+          "answer_ready_seconds": 4.487430599983782,
+          "live_model_calls": 0,
+          "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+          "conversation_resolution_seconds": 0,
+          "institution_resolution_seconds": 4.2303324999520555
+        },
+        "institution_identity": {
+          "unitids": [
+            130794
+          ],
+          "original_question": "What is Yale admission rate in fall 2024?",
+          "original_mentions": [
+            "Yale"
+          ],
+          "confirmed_choices": {
+            "yale": 130794
+          },
+          "scope_mentions": [],
+          "labels": [
+            "Yale University \u00b7 New Haven, CT \u00b7 UNITID 130794"
+          ]
+        }
+      },
+      "mode": "starter parser",
+      "message": "For Yale University (fall 2024), Applicants: 57,517; Admitted students: 2,227; Admission rate: 3.87%. The reporting period and source definitions are available below.",
+      "presentation": {
+        "chart_type": "none",
+        "show_table": true,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 0.2167245999444276,
+        "answer_ready_seconds": 4.487430599983782,
+        "live_model_calls": 0,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 4.2303324999520555
+      },
+      "analysis_brief": {
+        "version": 1,
+        "id": "4493372e80db2b00",
+        "status": "completed",
+        "goal": "What is 130794 admission rate in fall 2024?",
+        "original_question": "What is 130794 admission rate in fall 2024?",
+        "question": "For Yale University (fall 2024), Applicants: 57,517; Admitted students: 2,227; Admission rate: 3.87%. The reporting period and source definitions are available below.",
+        "scope": {
+          "institutions": [
+            "130794"
+          ],
+          "population": null,
+          "years": [
+            2024
+          ],
+          "measures": [
+            "applicants",
+            "admits",
+            "admission_rate"
+          ],
+          "breakdowns": [],
+          "time_basis": "observation",
+          "assumptions": []
+        },
+        "options": [],
+        "selected_option": null,
+        "confirmed_decisions": [],
+        "open_questions": []
+      },
+      "institution_identity": {
+        "unitids": [
+          130794
+        ],
+        "original_question": "What is Yale admission rate in fall 2024?",
+        "original_mentions": [
+          "Yale"
+        ],
+        "confirmed_choices": {
+          "yale": 130794
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Yale University \u00b7 New Haven, CT \u00b7 UNITID 130794"
+        ]
+      }
+    }
+  }
+]

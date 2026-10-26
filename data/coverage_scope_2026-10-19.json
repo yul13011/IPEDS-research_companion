@@ -1,0 +1,382 @@
+{
+  "as_of": "2026-10-19",
+  "scope_root": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data",
+  "definition": "All datasets, codebooks and release documentation supplied under this folder, across all institutions and populations represented there. No claim of coverage beyond supplied files.",
+  "releases": [
+    {
+      "release": "IPEDS_2015-16_Final",
+      "source_files": [
+        "IPEDS201516.accdb",
+        "IPEDS201516.sqlite",
+        "IPEDS201516TablesDoc.xlsx",
+        "ReadMe2015-16.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2015-16_Final\\IPEDS201516.sqlite",
+      "imported_tables": 52,
+      "tables_match_catalog": true,
+      "variable_definitions": 2185
+    },
+    {
+      "release": "IPEDS_2016-17_Final",
+      "source_files": [
+        "IPEDS201617.accdb",
+        "IPEDS201617TablesDoc.xlsx",
+        "ReadMe2016-17.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2016-17_Final\\IPEDS201617.sqlite",
+      "imported_tables": 55,
+      "tables_match_catalog": true,
+      "variable_definitions": 2159
+    },
+    {
+      "release": "IPEDS_2017-18_Final",
+      "source_files": [
+        "IPEDS201718.accdb",
+        "IPEDS201718TablesDoc.xlsx",
+        "ReadMe2017-18.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2017-18_Final\\IPEDS201718.sqlite",
+      "imported_tables": 54,
+      "tables_match_catalog": true,
+      "variable_definitions": 2210
+    },
+    {
+      "release": "IPEDS_2018-19_Final",
+      "source_files": [
+        "IPEDS201819.accdb",
+        "IPEDS201819TablesDoc.xlsx",
+        "ReadMe2018-19.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2018-19_Final\\IPEDS201819.sqlite",
+      "imported_tables": 55,
+      "tables_match_catalog": true,
+      "variable_definitions": 2246
+    },
+    {
+      "release": "IPEDS_2019-20_Final",
+      "source_files": [
+        "IPEDS201920.accdb",
+        "IPEDS201920TablesDoc.xlsx",
+        "ReadMe2019-20.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2019-20_Final\\IPEDS201920.sqlite",
+      "imported_tables": 55,
+      "tables_match_catalog": true,
+      "variable_definitions": 2211
+    },
+    {
+      "release": "IPEDS_2020-21_Final",
+      "source_files": [
+        "IPEDS202021.accdb",
+        "IPEDS202021TablesDoc.xlsx",
+        "ReadMe2020-21.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2020-21_Final\\IPEDS202021.sqlite",
+      "imported_tables": 56,
+      "tables_match_catalog": true,
+      "variable_definitions": 2439
+    },
+    {
+      "release": "IPEDS_2021-22_Final",
+      "source_files": [
+        "IPEDS202122.accdb",
+        "IPEDS202122TablesDoc.xlsx",
+        "ReadMe2021-22.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2021-22_Final\\IPEDS202122.sqlite",
+      "imported_tables": 56,
+      "tables_match_catalog": true,
+      "variable_definitions": 2561
+    },
+    {
+      "release": "IPEDS_2022-23_Final",
+      "source_files": [
+        "IPEDS202223.accdb",
+        "IPEDS202223TablesDoc.xlsx",
+        "ReadMe2022-23.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2022-23_Final\\IPEDS202223.sqlite",
+      "imported_tables": 58,
+      "tables_match_catalog": true,
+      "variable_definitions": 2685
+    },
+    {
+      "release": "IPEDS_2023-24_Final",
+      "source_files": [
+        "IPEDS202324.accdb",
+        "IPEDS202324Tablesdoc.xlsx",
+        "ReadMe2023-24.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2023-24_Final\\IPEDS202324.sqlite",
+      "imported_tables": 57,
+      "tables_match_catalog": true,
+      "variable_definitions": 2695
+    },
+    {
+      "release": "IPEDS_2024-25_Provisional",
+      "source_files": [
+        "IPEDS202425.accdb",
+        "IPEDS202425Tablesdoc.xlsx",
+        "ReadMe2024-25.docx"
+      ],
+      "imported_database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "imported_tables": 56,
+      "tables_match_catalog": true,
+      "variable_definitions": 2599
+    }
+  ],
+  "catalog_counts": {
+    "releases": 10,
+    "physical_tables": 554,
+    "physical_columns": 25245,
+    "variable_docs": 23990,
+    "code_values": 124493,
+    "issues": 1248
+  },
+  "registered_measures": 36,
+  "source_checks": [
+    {
+      "release": "IPEDS_2015-16_Final",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2015-16_Final\\IPEDS201516TablesDoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2015-16_Final",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2015-16_Final\\ReadMe2015-16.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2016-17_Final",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2016-17_Final\\IPEDS201617TablesDoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2016-17_Final",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2016-17_Final\\ReadMe2016-17.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2017-18_Final",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2017-18_Final\\IPEDS201718TablesDoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2017-18_Final",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2017-18_Final\\ReadMe2017-18.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2018-19_Final",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819TablesDoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2018-19_Final",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\ReadMe2018-19.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2019-20_Final",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920TablesDoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2019-20_Final",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\ReadMe2019-20.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2020-21_Final",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2020-21_Final\\IPEDS202021TablesDoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2020-21_Final",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2020-21_Final\\ReadMe2020-21.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2021-22_Final",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2021-22_Final\\IPEDS202122TablesDoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2021-22_Final",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2021-22_Final\\ReadMe2021-22.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2022-23_Final",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2022-23_Final",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\ReadMe2022-23.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2023-24_Final",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2023-24_Final",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\ReadMe2023-24.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2024-25_Provisional",
+      "role": "codebook",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2024-25_Provisional",
+      "role": "release_notes",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\ReadMe2024-25.docx",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": true
+    },
+    {
+      "release": "IPEDS_2015-16_Final",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2015-16_Final\\IPEDS201516.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    },
+    {
+      "release": "IPEDS_2016-17_Final",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2016-17_Final\\IPEDS201617.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    },
+    {
+      "release": "IPEDS_2017-18_Final",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2017-18_Final\\IPEDS201718.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    },
+    {
+      "release": "IPEDS_2018-19_Final",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    },
+    {
+      "release": "IPEDS_2019-20_Final",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    },
+    {
+      "release": "IPEDS_2020-21_Final",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2020-21_Final\\IPEDS202021.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    },
+    {
+      "release": "IPEDS_2021-22_Final",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2021-22_Final\\IPEDS202122.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    },
+    {
+      "release": "IPEDS_2022-23_Final",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    },
+    {
+      "release": "IPEDS_2023-24_Final",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    },
+    {
+      "release": "IPEDS_2024-25_Provisional",
+      "role": "access_database",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425.accdb",
+      "exists": true,
+      "size_matches_catalog": true,
+      "sha256_matches_catalog": null
+    }
+  ],
+  "verification_limits": "Current checks cover file presence/sizes, documentation hashes and imported table names. Access hashes, full row/value equivalence and database integrity were not rerun; see prior foundation_verification.json. Counts of variable definitions/columns are annual occurrences, not distinct concepts.",
+  "prior_foundation_report": "data/foundation_verification.json",
+  "extra_sqlite": "IPEDS_2015-16_Final/IPEDS201516.sqlite is an additional supplied copy, not an eleventh release; this pass does not establish equivalence to the canonical Access source."
+}

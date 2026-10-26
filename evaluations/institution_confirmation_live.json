@@ -1,0 +1,83 @@
+{
+  "pending": {
+    "intent": "institution_confirmation",
+    "message": "Which institution did you mean? Please confirm before I run the analysis.",
+    "institution_confirmation": {
+      "question": "Show University of Michigan's undergraduate population by race and ethnicity in fall 2024",
+      "unresolved": [
+        {
+          "text": "University of Michigan",
+          "key": "university of michigan",
+          "candidates": [
+            170976,
+            171137,
+            171146,
+            169628,
+            484695,
+            490373,
+            144050,
+            135726,
+            161253,
+            233374,
+            497347,
+            482510
+          ]
+        }
+      ],
+      "choices": {}
+    },
+    "model_usage": {
+      "input_tokens": 561,
+      "output_tokens": 60,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 1.9684872000361793,
+      "estimated_api_usd": 0.001722,
+      "model": "claude-sonnet-5-5",
+      "stage": "institution mention extraction"
+    },
+    "latency": {
+      "answer_ready_seconds": 6.896540300047491
+    }
+  },
+  "confirmed_institution": {
+    "unitids": [
+      170976
+    ],
+    "original_mentions": [
+      "University of Michigan"
+    ],
+    "confirmed_choices": {
+      "university of michigan": 170976
+    },
+    "labels": [
+      "University of Michigan-Ann Arbor \u00b7 Ann Arbor, MI \u00b7 UNITID 170976"
+    ]
+  },
+  "latency": {
+    "validation_seconds": 0.0485818000161089,
+    "query_seconds": 0.006549699988681823,
+    "planning_and_binding_seconds": 0.204688600031659,
+    "answer_ready_seconds": 2.0665170999709517,
+    "live_model_calls": 1,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+    "conversation_resolution_seconds": 0,
+    "institution_resolution_seconds": 1.7976212999783456
+  },
+  "independent_values": [
+    53,
+    6326,
+    1796,
+    4002,
+    35,
+    16017,
+    1962,
+    1501,
+    2762,
+    34454
+  ],
+  "passed": true,
+  "wall_seconds": 9.97030069999164,
+  "scope": "Live extraction and continuation after explicit UNITID selection; all nine category counts and total checked against independent source SQL. Human selection time excluded."
+}

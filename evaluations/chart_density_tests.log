@@ -1,0 +1,43 @@
+test_cutoff_table_and_explicit_chart_preserve_all_categories (prototype.tests.test_chart_density.ChartDensityTests.test_cutoff_table_and_explicit_chart_preserve_all_categories) ... ok
+test_missing_categories_are_retained_and_units_are_separate (prototype.tests.test_chart_density.ChartDensityTests.test_missing_categories_are_retained_and_units_are_separate) ... ok
+test_years_and_cluster_cells_are_not_extra_categories (prototype.tests.test_chart_density.ChartDensityTests.test_years_and_cluster_cells_are_not_extra_categories) ... ok
+test_bar_followup_keeps_time_periods_distinct_and_ordered (prototype.tests.test_charts.ChartTests.test_bar_followup_keeps_time_periods_distinct_and_ordered) ... ok
+test_catalog_gender_trend_connects_years_and_keeps_explicit_breaks (prototype.tests.test_charts.ChartTests.test_catalog_gender_trend_connects_years_and_keeps_explicit_breaks) ... ok
+test_category_labels_percent_scale_and_immutability (prototype.tests.test_charts.ChartTests.test_category_labels_percent_scale_and_immutability) ... ok
+test_cohort_axis_and_currency_and_signed_values (prototype.tests.test_charts.ChartTests.test_cohort_axis_and_currency_and_signed_values) ... ok
+test_comparison_keeps_eight_institutions_together (prototype.tests.test_charts.ChartTests.test_comparison_keeps_eight_institutions_together) ... ok
+test_many_institution_trends_share_scale_and_keep_every_row (prototype.tests.test_charts.ChartTests.test_many_institution_trends_share_scale_and_keep_every_row) ... ok
+test_multiple_category_trends_have_at_most_four_series (prototype.tests.test_charts.ChartTests.test_multiple_category_trends_have_at_most_four_series) ... ok
+test_result_in_chat_with_new_renderer (prototype.tests.test_charts.ChartTests.test_result_in_chat_with_new_renderer) ... 2026-10-21 17:44:28.384 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:44:32.303 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:44:32.303 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_totals_are_separate_from_categories (prototype.tests.test_charts.ChartTests.test_totals_are_separate_from_categories) ... ok
+test_all_advertised_edits_reach_the_rendered_chart (prototype.tests.test_chart_edits.ChartEditTests.test_all_advertised_edits_reach_the_rendered_chart) ... 2026-10-21 17:44:35.814 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:44:37.878 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:44:37.890 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:44:40.385 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:44:41.838 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:44:44.694 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:44:51.998 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:44:57.068 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:01.004 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:05.676 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:09.487 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:11.746 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:14.257 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:15.573 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:17.382 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:19.471 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:22.174 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_axis_wording_quotes_and_range_intent (prototype.tests.test_chart_edits.ChartEditTests.test_axis_wording_quotes_and_range_intent) ... ok
+test_valid_edit_after_rejected_edit_still_uses_the_last_chart (prototype.tests.test_chart_edits.ChartEditTests.test_valid_edit_after_rejected_edit_still_uses_the_last_chart) ... 2026-10-21 17:45:31.197 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:32.499 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 17:45:32.501 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 73.807s
+
+OK

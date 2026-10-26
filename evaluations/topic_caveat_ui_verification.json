@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "topic": "admissions",
+      "displayed_caveat": "The loaded admissions data cover first-time, degree/certificate-seeking undergraduates at institutions without open admission, for Fall 2015–2024. Graduate admissions are not included in these tables. Reported SAT section medians are available from Fall 2022 where institutions report them.",
+      "passed": true
+    },
+    {
+      "topic": "enrollment",
+      "displayed_caveat": "Fall headcount, 12-month unduplicated enrollment, and full-time equivalent enrollment are different measures. Fall FTE and 12-month FTE also differ. Available breakdowns vary by year; check Definitions & sources for the population, reporting period, and enrollment measure used.",
+      "passed": true
+    },
+    {
+      "topic": "aid",
+      "displayed_caveat": "Grant/scholarship aid, loans, and any financial aid are different measures. Results may cover all undergraduates or a subgroup, such as full-time, first-time degree/certificate-seeking students. Percentages and average amounts can use different denominators. Check Definitions & sources for eligibility, the denominator, reporting period, and missing values; enrollment totals from another survey may describe a different population.",
+      "passed": true
+    },
+    {
+      "topic": "outcomes",
+      "displayed_caveat": "These six-year bachelor graduation examples follow first-time, full-time bachelor's-seeking adjusted cohorts: outcomes in 2015–2024 correspond to entry in 2009–2018. Other graduation and Outcome Measures data use different populations and follow-up periods. Annual awards cover July–June and are distinct from cohort graduation rates.",
+      "passed": true
+    },
+    {
+      "topic": "faculty",
+      "displayed_caveat": "Faculty status and instructional work are different classifications. Staff counts depend on the employment and occupational groups selected; salary measures may also differ by academic rank and appointment period. Definitions can change across years, so compare compatible populations and periods.",
+      "passed": true
+    },
+    {
+      "topic": "institution",
+      "displayed_caveat": "Institution names, characteristics, and reporting status can change over time. Analyses use institution records associated with the relevant source release, which may differ from the cohort or observation year. Branches or campuses may report separately or as part of a larger institution; confirm the reporting institution when the intended scope is unclear. Unresolved source relationships may require technical investigation.",
+      "passed": true
+    }
+  ],
+  "elapsed_seconds": 1.8384813999873586,
+  "ui_exceptions": 0,
+  "scope": "All six expanded Explore IPEDS blue-box texts; shared topic JSON; no analytical execution or routing changes."
+}

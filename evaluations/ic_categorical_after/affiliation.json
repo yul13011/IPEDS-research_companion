@@ -1,0 +1,827 @@
+{
+  "id": "affiliation",
+  "question": "Compare the religious affiliations of Boston College and Smith College in 2024-25.",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "164924",
+        "167835"
+      ],
+      "population": null,
+      "result_kind": "lookup",
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136068
+          ],
+          "filters": []
+        }
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "164924",
+          "167835"
+        ],
+        "population": null,
+        "result_kind": "lookup",
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136068
+            ],
+            "filters": []
+          }
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::RELAFFIL"
+        ],
+        "institutions": [
+          "164924",
+          "167835"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::RELAFFIL": {
+          "label": "Religious affiliation",
+          "family": "observation",
+          "unit": "coded"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Boston College",
+          "unitid": 164924,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::RELAFFIL",
+          "measure": "Religious affiliation",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136068,
+          "raw_code": 30,
+          "response_label": "Roman Catholic",
+          "response_status": "reported",
+          "category_record_ids": [
+            138935
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "RELAFFIL",
+            "record_id": 136068,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136068,
+                "excerpt": "Religious affiliation"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::RELAFFIL",
+          "measure": "Religious affiliation",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136068,
+          "raw_code": -2,
+          "response_label": "Not applicable",
+          "response_status": "not_applicable",
+          "category_record_ids": [
+            138951
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "RELAFFIL",
+            "record_id": 136068,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136068,
+                "excerpt": "Religious affiliation"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::RELAFFIL",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "RELAFFIL"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"RELAFFIL\" FROM \"IC2024\" WHERE UNITID IN (?,?) LIMIT 20001",
+          "parameters": [
+            164924,
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136068,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "RELAFFIL",
+              "title": "Religious affiliation",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10406\nvarorder: 12\nvarname: RELAFFIL\nvartitle: Religious affiliation\ndatatype: N\nfieldwidth: 3\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 3\nlongdescription: Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics Header component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Institutional control or affiliation",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 197,
+              "long_description": "Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 138950,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 138951,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 138924,
+              "code_value": "100",
+              "value_label": "Original Free Will Baptist"
+            },
+            {
+              "record_id": 138899,
+              "code_value": "101",
+              "value_label": "Ecumenical Christian"
+            },
+            {
+              "record_id": 138901,
+              "code_value": "102",
+              "value_label": "Evangelical Christian"
+            },
+            {
+              "record_id": 138929,
+              "code_value": "103",
+              "value_label": "Presbyterian"
+            },
+            {
+              "record_id": 138946,
+              "code_value": "104",
+              "value_label": "Virginia Baptist General Association"
+            },
+            {
+              "record_id": 138909,
+              "code_value": "105",
+              "value_label": "General Baptist"
+            },
+            {
+              "record_id": 138921,
+              "code_value": "106",
+              "value_label": "Muslim"
+            },
+            {
+              "record_id": 138928,
+              "code_value": "107",
+              "value_label": "Plymouth Brethren"
+            },
+            {
+              "record_id": 138922,
+              "code_value": "108",
+              "value_label": "Non-Denominational"
+            },
+            {
+              "record_id": 138888,
+              "code_value": "109",
+              "value_label": "Buddhist/Buddhism"
+            },
+            {
+              "record_id": 138925,
+              "code_value": "110",
+              "value_label": "Orthodox Christian"
+            },
+            {
+              "record_id": 138883,
+              "code_value": "22",
+              "value_label": "American Evangelical Lutheran Church"
+            },
+            {
+              "record_id": 138881,
+              "code_value": "24",
+              "value_label": "African Methodist Episcopal Zion Church"
+            },
+            {
+              "record_id": 138885,
+              "code_value": "27",
+              "value_label": "Assemblies of God Church"
+            },
+            {
+              "record_id": 138887,
+              "code_value": "28",
+              "value_label": "Brethren Church"
+            },
+            {
+              "record_id": 138935,
+              "code_value": "30",
+              "value_label": "Roman Catholic"
+            },
+            {
+              "record_id": 138948,
+              "code_value": "33",
+              "value_label": "Wisconsin Evangelical Lutheran Synod"
+            },
+            {
+              "record_id": 138889,
+              "code_value": "34",
+              "value_label": "Christ and Missionary Alliance Church"
+            },
+            {
+              "record_id": 138893,
+              "code_value": "35",
+              "value_label": "Christian Reformed Church"
+            },
+            {
+              "record_id": 138902,
+              "code_value": "36",
+              "value_label": "Evangelical Congregational Church"
+            },
+            {
+              "record_id": 138903,
+              "code_value": "37",
+              "value_label": "Evangelical Covenant Church of America"
+            },
+            {
+              "record_id": 138904,
+              "code_value": "38",
+              "value_label": "Evangelical Free Church of America"
+            },
+            {
+              "record_id": 138905,
+              "code_value": "39",
+              "value_label": "Evangelical Lutheran Church"
+            },
+            {
+              "record_id": 138912,
+              "code_value": "40",
+              "value_label": "International United Pentecostal Church"
+            },
+            {
+              "record_id": 138907,
+              "code_value": "41",
+              "value_label": "Free Will Baptist Church"
+            },
+            {
+              "record_id": 138911,
+              "code_value": "42",
+              "value_label": "Interdenominational"
+            },
+            {
+              "record_id": 138916,
+              "code_value": "43",
+              "value_label": "Mennonite Brethren Church"
+            },
+            {
+              "record_id": 138919,
+              "code_value": "44",
+              "value_label": "Moravian Church"
+            },
+            {
+              "record_id": 138923,
+              "code_value": "45",
+              "value_label": "North American Baptist"
+            },
+            {
+              "record_id": 138927,
+              "code_value": "47",
+              "value_label": "Pentecostal Holiness Church"
+            },
+            {
+              "record_id": 138891,
+              "code_value": "48",
+              "value_label": "Christian Churches and Churches of Christ"
+            },
+            {
+              "record_id": 138933,
+              "code_value": "49",
+              "value_label": "Reformed Church in America"
+            },
+            {
+              "record_id": 138900,
+              "code_value": "50",
+              "value_label": "Episcopal Church, Reformed"
+            },
+            {
+              "record_id": 138880,
+              "code_value": "51",
+              "value_label": "African Methodist Episcopal"
+            },
+            {
+              "record_id": 138882,
+              "code_value": "52",
+              "value_label": "American Baptist"
+            },
+            {
+              "record_id": 138884,
+              "code_value": "53",
+              "value_label": "American Lutheran"
+            },
+            {
+              "record_id": 138886,
+              "code_value": "54",
+              "value_label": "Baptist"
+            },
+            {
+              "record_id": 138892,
+              "code_value": "55",
+              "value_label": "Christian Methodist Episcopal"
+            },
+            {
+              "record_id": 138895,
+              "code_value": "57",
+              "value_label": "Church of God"
+            },
+            {
+              "record_id": 138894,
+              "code_value": "58",
+              "value_label": "Church of Brethren"
+            },
+            {
+              "record_id": 138896,
+              "code_value": "59",
+              "value_label": "Church of the Nazarene"
+            },
+            {
+              "record_id": 138898,
+              "code_value": "60",
+              "value_label": "Cumberland Presbyterian"
+            },
+            {
+              "record_id": 138890,
+              "code_value": "61",
+              "value_label": "Christian Church (Disciples of Christ)"
+            },
+            {
+              "record_id": 138906,
+              "code_value": "64",
+              "value_label": "Free Methodist"
+            },
+            {
+              "record_id": 138908,
+              "code_value": "65",
+              "value_label": "Friends"
+            },
+            {
+              "record_id": 138930,
+              "code_value": "66",
+              "value_label": "Presbyterian Church (USA)"
+            },
+            {
+              "record_id": 138915,
+              "code_value": "67",
+              "value_label": "Lutheran Church in America"
+            },
+            {
+              "record_id": 138914,
+              "code_value": "68",
+              "value_label": "Lutheran Church - Missouri Synod"
+            },
+            {
+              "record_id": 138917,
+              "code_value": "69",
+              "value_label": "Mennonite Church"
+            },
+            {
+              "record_id": 138945,
+              "code_value": "71",
+              "value_label": "United Methodist"
+            },
+            {
+              "record_id": 138931,
+              "code_value": "73",
+              "value_label": "Protestant Episcopal"
+            },
+            {
+              "record_id": 138897,
+              "code_value": "74",
+              "value_label": "Churches of Christ"
+            },
+            {
+              "record_id": 138938,
+              "code_value": "75",
+              "value_label": "Southern Baptist"
+            },
+            {
+              "record_id": 138944,
+              "code_value": "76",
+              "value_label": "United Church of Christ"
+            },
+            {
+              "record_id": 138932,
+              "code_value": "77",
+              "value_label": "Protestant, not specified"
+            },
+            {
+              "record_id": 138920,
+              "code_value": "78",
+              "value_label": "Multiple Protestant Denomination"
+            },
+            {
+              "record_id": 138926,
+              "code_value": "79",
+              "value_label": "Other Protestant"
+            },
+            {
+              "record_id": 138913,
+              "code_value": "80",
+              "value_label": "Jewish"
+            },
+            {
+              "record_id": 138934,
+              "code_value": "81",
+              "value_label": "Reformed Presbyterian Church"
+            },
+            {
+              "record_id": 138943,
+              "code_value": "84",
+              "value_label": "United Brethren Church"
+            },
+            {
+              "record_id": 138918,
+              "code_value": "87",
+              "value_label": "Missionary Church Inc"
+            },
+            {
+              "record_id": 138941,
+              "code_value": "88",
+              "value_label": "Undenominational"
+            },
+            {
+              "record_id": 138947,
+              "code_value": "89",
+              "value_label": "Wesleyan"
+            },
+            {
+              "record_id": 138910,
+              "code_value": "91",
+              "value_label": "Greek Orthodox"
+            },
+            {
+              "record_id": 138936,
+              "code_value": "92",
+              "value_label": "Russian Orthodox"
+            },
+            {
+              "record_id": 138942,
+              "code_value": "93",
+              "value_label": "Unitarian Universalist"
+            },
+            {
+              "record_id": 138939,
+              "code_value": "94",
+              "value_label": "The Church of Jesus Christ of Latter-day Saints"
+            },
+            {
+              "record_id": 138937,
+              "code_value": "95",
+              "value_label": "Seventh Day Adventist"
+            },
+            {
+              "record_id": 138940,
+              "code_value": "97",
+              "value_label": "The Presbyterian Church in America"
+            },
+            {
+              "record_id": 138949,
+              "code_value": "99",
+              "value_label": "Other (none of the above)"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::RELAFFIL": "Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated."
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:33:14.993005+00:00",
+      "registry_sha256": "6bd1984b21b0950b0c376ec6569431e1826881e4a183d94a5b433ec65e12763c",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 2,
+        "available_cells": 2,
+        "matching_institutions": {
+          "2024": 2
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 2
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            164924,
+            2024,
+            136068
+          ],
+          [
+            167835,
+            2024,
+            136068
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          164924,
+          167835
+        ],
+        "rows_sha256": "f30cade27119bce39a5aa9edb5325001c668d51781282d637034732458b75fc3"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 7.988999900058843,
+        "answer_ready_seconds": 22.865370100014843,
+        "live_model_calls": 4,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 14.824626000015996
+      },
+      "result_id": "3802005144daa5a7",
+      "institution_identity": {
+        "unitids": [
+          164924,
+          167835
+        ],
+        "original_question": "Compare the religious affiliations of Boston College and Smith College in 2024-25.",
+        "original_mentions": [
+          "Boston College",
+          "Smith College"
+        ],
+        "confirmed_choices": {
+          "boston college": 164924,
+          "smith college": 167835
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Boston College \u00b7 Chestnut Hill, MA \u00b7 UNITID 164924",
+          "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 4,
+      "planning_tool_requests": 4,
+      "semantic_repair_attempts": 0,
+      "latency_seconds": 9.631685700014234,
+      "input_tokens": 34064,
+      "output_tokens": 685,
+      "cache_creation_input_tokens": 21308,
+      "cache_read_input_tokens": 42616,
+      "estimated_api_usd": 0.1325096,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 559,
+          "output_tokens": 64,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.9596857000142336,
+          "estimated_api_usd": 0.001758,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 3,
+          "planning_tool_requests": 4,
+          "semantic_repair_attempts": 0,
+          "latency_seconds": 7.672,
+          "input_tokens": 33505,
+          "output_tokens": 621,
+          "cache_creation_input_tokens": 21308,
+          "cache_read_input_tokens": 42616,
+          "estimated_api_usd": 0.1307516,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "Boston College \u2014 Religious affiliation: Roman Catholic (Academic year 2024-25); Smith College \u2014 Religious affiliation: Not applicable (Academic year 2024-25).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 7.988999900058843,
+      "answer_ready_seconds": 22.865370100014843,
+      "live_model_calls": 4,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 14.824626000015996
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "0575d04260a939d7",
+      "status": "completed",
+      "goal": "Compare the religious affiliations of Boston College (UNITID 164924) and Smith College (UNITID 167835) in 2024-25.",
+      "original_question": "Compare the religious affiliations of Boston College (UNITID 164924) and Smith College (UNITID 167835) in 2024-25.",
+      "question": "Boston College \u2014 Religious affiliation: Roman Catholic (Academic year 2024-25); Smith College \u2014 Religious affiliation: Not applicable (Academic year 2024-25).",
+      "scope": {
+        "institutions": [
+          "164924",
+          "167835"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::RELAFFIL"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        164924,
+        167835
+      ],
+      "original_question": "Compare the religious affiliations of Boston College and Smith College in 2024-25.",
+      "original_mentions": [
+        "Boston College",
+        "Smith College"
+      ],
+      "confirmed_choices": {
+        "boston college": 164924,
+        "smith college": 167835
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Boston College \u00b7 Chestnut Hill, MA \u00b7 UNITID 164924",
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 23.905472600017674,
+  "events": [
+    {
+      "elapsed": 0.02245339995715767,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 15.766528300009668,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 15.893742799991742,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 15.895696999970824,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 16.102520999964327,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 19.12408590002451,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 19.29682759998832,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 21.665825300035067,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 21.714726999984123,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 21.72953959996812,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 23.882634700043127,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 23.905421099974774,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "RELAFFIL",
+    "CNTLAFFI"
+  ]
+}

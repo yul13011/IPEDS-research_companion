@@ -1,0 +1,406 @@
+[
+  {
+    "question": "What is the definition of instructional staff?",
+    "answer": {
+      "intent": "catalog_discovery",
+      "message": "The full source catalog is searchable, but the offline starter cannot yet construct a complete plan for this request. Enable conversational AI for catalog-driven planning. Source matches do not establish that the requested statistic is absent.",
+      "catalog_matches": [
+        {
+          "record_id": 137724,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SAEQ9AT",
+          "title": "Average salary for instructional staff equated to a 9-month contract-total",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40967\nvarorder: 82\nvarname: SAEQ9AT\nimputationvar: XSAEQ9AT\nvartitle: Average salary for instructional staff equated to a 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 137725,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SAEQ9AM",
+          "title": "Average salary for instructional staff equated to a 9-month contract-men",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40969\nvarorder: 84\nvarname: SAEQ9AM\nimputationvar: XSAEQ9AM\nvartitle: Average salary for instructional staff equated to a 9-month contract-men\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract - men This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - men equated to month contract (SAEQ9OM) by the number of full-time, non-medical, instructional staff (SATOTLM)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 137726,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SAEQ9AW",
+          "title": "Average salary for instructional staff equated to a 9-month contract-women",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40971\nvarorder: 86\nvarname: SAEQ9AW\nimputationvar: XSAEQ9AW\nvartitle: Average salary for instructional staff equated to a 9-month contract-women\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract - women This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - women equated to month contract (SAEQ9OW) by the number of full-time, non-medical, instructional staff (SATOTLW)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 137885,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVHR2024",
+          "variable_name": "SFTEINST",
+          "title": "Instructional FTE",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 97\ntablename: DRVHR2024\ntabletitle: Full-time equivalent staff by occupational category: Fall 2024\nvarnumber: 90350\nvarorder: 11\nvarname: SFTEINST\nvartitle: Instructional FTE\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 67\nsectionnumber: 1\nlongdescription: Instruction FTE = Full-time instructional staff (EAPFT,EAPCAT=21000) plus (1/3 of the part-time instructional staff (EAPPT,EAPCAT=21000)) Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service\nvarsource: Derived DFR - IPEDS, Spring 2025, Human Resource component, EAP\nfiletitle: Full-time equivalent staff by occupational category: Fall 2024\nsectiontitle: Full-time equivalent staff by assigned position",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 137727,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SA09MAT",
+          "title": "Average salary for instructional staff on 9-month contract-total",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40976\nvarorder: 88\nvarname: SA09MAT\nimputationvar: XSA09MAT\nvartitle: Average salary for instructional staff on 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary of full-time, non-medical, instructional staff - total as of November 1 on 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in healt",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 137728,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SA09MAM",
+          "title": "Average salary for instructional staff on 9-month contract-men",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40981\nvarorder: 90\nvarname: SA09MAM\nimputationvar: XSA09MAM\nvartitle: Average salary for instructional staff on 9-month contract-men\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary of full-time, non-medical, instructional staff - men as of November 1 on 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 137729,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SA09MAW",
+          "title": "Average salary for instructional staff on 9-month contract-women",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40986\nvarorder: 92\nvarname: SA09MAW\nimputationvar: XSA09MAW\nvartitle: Average salary for instructional staff on 9-month contract-women\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary of full-time, non-medical, instructional staff - women as of November 1 on 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in healt",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 137730,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SA10MAT",
+          "title": "Average salary for instructional staff on 10-month contract-total",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40991\nvarorder: 94\nvarname: SA10MAT\nimputationvar: XSA10MAT\nvartitle: Average salary for instructional staff on 10-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary of full-time, non-medical, instructional staff - total as of November 1 on 10-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in hea",
+          "physical_status": "documented_location_present"
+        }
+      ],
+      "mode": "catalog offline discovery",
+      "availability": "needs_planning",
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 4.427539899945259,
+        "answer_ready_seconds": 7.437499199993908,
+        "live_model_calls": 0,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 2.996026700013317
+      },
+      "analysis_brief": {
+        "version": 1,
+        "id": "708c4524904ec54a",
+        "status": "awaiting_information",
+        "goal": "What is the definition of instructional staff?",
+        "original_question": "What is the definition of instructional staff?",
+        "question": "The full source catalog is searchable, but the offline starter cannot yet construct a complete plan for this request. Enable conversational AI for catalog-driven planning. Source matches do not establish that the requested statistic is absent.",
+        "scope": {},
+        "options": [],
+        "selected_option": null,
+        "confirmed_decisions": [],
+        "open_questions": [
+          "The full source catalog is searchable, but the offline starter cannot yet construct a complete plan for this request. Enable conversational AI for catalog-driven planning. Source matches do not establish that the requested statistic is absent."
+        ]
+      },
+      "institution_identity": {
+        "unitids": [],
+        "original_question": "What is the definition of instructional staff?",
+        "original_mentions": [],
+        "confirmed_choices": {},
+        "scope_mentions": [],
+        "labels": []
+      }
+    }
+  },
+  {
+    "question": "What does UNITID mean?",
+    "answer": {
+      "intent": "catalog_discovery",
+      "message": "The full source catalog is searchable, but the offline starter cannot yet construct a complete plan for this request. Enable conversational AI for catalog-driven planning. Source matches do not establish that the requested statistic is absent.",
+      "catalog_matches": [
+        {
+          "record_id": 135987,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_C",
+          "title": "UnitID of Parent institution",
+          "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 11\ntablename: FLAGS2024\ntabletitle: Response status\nvarnumber: 30016\nvarorder: 8\nvarname: IDX_C\nvartitle: UnitID of Parent institution\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 3\nsectionnumber: 1\nlongdescription: UNITID number of parent institution reporting Completions data IDX_C contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Response status\nsectiontitle: Response status information",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136027,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_GR",
+          "title": "UNITID of parent institution reporting Graduation Rates",
+          "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 11\ntablename: FLAGS2024\ntabletitle: Response status\nvarnumber: 80016\nvarorder: 40\nvarname: IDX_GR\nvartitle: UNITID of parent institution reporting Graduation Rates\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 41\nsectionnumber: 1\nlongdescription: UNITID number of parent institution reporting Graduation Rate data. IDX_GR contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.\nvarsource: IPEDS, Winter 2024-25, Graduation Rates component\nfiletitle: Response status\nsectiontitle: Response status information",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136054,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_AL",
+          "title": "UnitID of Parent institution - Academic Libraries",
+          "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 11\ntablename: FLAGS2024\ntabletitle: Academic Libraries: Fiscal year 2024\nvarnumber: 160016\nvarorder: 111\nvarname: IDX_AL\nvartitle: UnitID of Parent institution - Academic Libraries\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 87\nsectionnumber: 6\nlongdescription: UNITID number of parent institution reporting Academic Libraries data IDX_AL contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.\nvarsource: IPEDS, Spring 2025, Academic Libaries component\nfiletitle: Academic Libraries: Fiscal year 2024\nsectiontitle: Response status",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136034,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_GR2",
+          "title": "UNITID of parent institution reporting Graduation Rates 200",
+          "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 11\ntablename: FLAGS2024\ntabletitle: Response status\nvarnumber: 80116\nvarorder: 47\nvarname: IDX_GR2\nvartitle: UNITID of parent institution reporting Graduation Rates 200\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 41\nsectionnumber: 1\nlongdescription: UNITID number of parent institution reporting Graduation Rate 200 data. IDX_GR2 contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.\nvarsource: IPEDS, Winter 2024-25, Graduation Rates component\nfiletitle: Response status\nsectiontitle: Response status information",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136040,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_OM",
+          "title": "UNITID of parent institution reporting Outcome Measures",
+          "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 11\ntablename: FLAGS2024\ntabletitle: Response status\nvarnumber: 82116\nvarorder: 53\nvarname: IDX_OM\nvartitle: UNITID of parent institution reporting Outcome Measures\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 47\nsectionnumber: 1\nlongdescription: UNITID number of parent institution reporting Graduation Rate data. IDX_OM contains the UNITID number of the parent institution institution reporting Outcome Measures. This data field is used to link child institutions with the parent institution.\nvarsource: IPEDS, Winter 2024-25, Outcome Measure component\nfiletitle: Response status\nsectiontitle: Response status information",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 135908,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "HD2024",
+          "variable_name": "NEWID",
+          "title": "UNITID for merged schools",
+          "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 10\ntablename: HD2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10191\nvarorder: 40\nvarname: NEWID\nvartitle: UNITID for merged schools\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 1\nlongdescription: UNITID where data is found for merged schools.\nvarsource: IPEDS, 2024-25 OPE Characteristics/PEPS Data extracts\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Directory information and response status",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 135999,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_F",
+          "title": "ID number of parent institution - Finance",
+          "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 11\ntablename: FLAGS2024\ntabletitle: Response status\nvarnumber: 60021\nvarorder: 88\nvarname: IDX_F\nvartitle: ID number of parent institution - Finance\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 26\nsectionnumber: 1\nlongdescription: UNITID number of parent institution reporting Finance data IDX_F contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.\nvarsource: IPEDS, Spring 2025, Finance component\nfiletitle: Response status\nsectiontitle: Response status information",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 135957,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "FLAGS2024",
+          "variable_name": "IDX_COS",
+          "title": "ID number of parent institution - Cost component",
+          "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 11\ntablename: FLAGS2024\ntabletitle: Response status\nvarnumber: 16291\nvarorder: 24\nvarname: IDX_COS\nvartitle: ID number of parent institution - Cost component\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 96\nsectionnumber: 18\nlongdescription: UNITID number of parent institution reporting Cost data IDX_COS contains the UNITID number of the parent institution institution. This data field is used to link child institutions with the parent institution.\nvarsource: IPEDS, Fall 2024, Cost component\nfiletitle: Response status\nsectiontitle: Response status",
+          "physical_status": "documented_location_present"
+        }
+      ],
+      "mode": "catalog offline discovery",
+      "availability": "needs_planning",
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 0.5964084999868646,
+        "answer_ready_seconds": 2.512205700040795,
+        "live_model_calls": 0,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 1.908830700092949
+      },
+      "analysis_brief": {
+        "version": 1,
+        "id": "17bea08ff3e8a471",
+        "status": "awaiting_information",
+        "goal": "What does UNITID mean?",
+        "original_question": "What does UNITID mean?",
+        "question": "The full source catalog is searchable, but the offline starter cannot yet construct a complete plan for this request. Enable conversational AI for catalog-driven planning. Source matches do not establish that the requested statistic is absent.",
+        "scope": {},
+        "options": [],
+        "selected_option": null,
+        "confirmed_decisions": [],
+        "open_questions": [
+          "The full source catalog is searchable, but the offline starter cannot yet construct a complete plan for this request. Enable conversational AI for catalog-driven planning. Source matches do not establish that the requested statistic is absent."
+        ]
+      },
+      "institution_identity": {
+        "unitids": [],
+        "original_question": "What does UNITID mean?",
+        "original_mentions": [],
+        "confirmed_choices": {},
+        "scope_mentions": [],
+        "labels": []
+      }
+    }
+  },
+  {
+    "question": "Define graduation rate",
+    "answer": {
+      "intent": "clarify",
+      "message": "Institution 'Define' needs clarification. No matching institution in this year. Choose an exact institution or UNITID in the extract builder; no result has been published.",
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 0.18889360001776367,
+        "answer_ready_seconds": 2.3387607999611646,
+        "live_model_calls": 0,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 2.139369699987583
+      },
+      "analysis_brief": {
+        "version": 1,
+        "id": "938ca18084c466ae",
+        "status": "awaiting_information",
+        "goal": "Define graduation rate",
+        "original_question": "Define graduation rate",
+        "question": "Institution 'Define' needs clarification. No matching institution in this year. Choose an exact institution or UNITID in the extract builder; no result has been published.",
+        "scope": {},
+        "options": [],
+        "selected_option": null,
+        "confirmed_decisions": [],
+        "open_questions": [
+          "Institution 'Define' needs clarification. No matching institution in this year. Choose an exact institution or UNITID in the extract builder; no result has been published."
+        ]
+      },
+      "institution_identity": {
+        "unitids": [],
+        "original_question": "Define graduation rate",
+        "original_mentions": [],
+        "confirmed_choices": {},
+        "scope_mentions": [],
+        "labels": []
+      }
+    }
+  },
+  {
+    "question": "How is full-time undergraduate enrollment defined?",
+    "answer": {
+      "intent": "catalog_discovery",
+      "message": "The full source catalog is searchable, but the offline starter cannot yet construct a complete plan for this request. Enable conversational AI for catalog-driven planning. Source matches do not establish that the requested statistic is absent.",
+      "catalog_matches": [
+        {
+          "record_id": 136378,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVEF122024",
+          "variable_name": "E12FT",
+          "title": "Full-time 12-month unduplicated headcount",
+          "body": "surveyorder: 14\nsurveynumber: 14\nsurvey: 12-month Enrollment\ntablenumber: 144\ntablename: DRVEF122024\ntabletitle: Frequently used enrollment variables: 2023-24\nvarnumber: 26276\nvarorder: 5\nvarname: E12FT\nvartitle: Full-time 12-month unduplicated headcount\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 62\nsectionnumber: 1\nlongdescription: Full-time 12-month unduplicated headcount Indicates how many individuals - full-time students (EFFYALEV=21,EFYTOTLT) the institution served over a 12-month period (the unduplicated headcount) Unduplicated count - The sum of students enrolled for credit with each student counted only once during the reporting period, regardless of when the student enrolled. Full-time student - Undergraduate\u2014A student enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. Graduate\u2014A student enrolled for 9 or more semester credits, or 9 or more quarter credits. Doctor's degree\u2014Professional practice \u2014As defined by the institution. Credit - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award\nvarsource: Derived DFR - IPEDS, Fall 2024, 12-month Enrollment (E12) component\nfiletitle: Frequently used enrollment variables: 2023-24\nsectiontitle: Frequently used enrollment variables: 2023-24",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136329,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVEF122024",
+          "variable_name": "E12UGFT",
+          "title": "Full-time undergraduate 12-month unduplicated headcount",
+          "body": "surveyorder: 14\nsurveynumber: 14\nsurvey: 12-month Enrollment\ntablenumber: 144\ntablename: DRVEF122024\ntabletitle: Frequently used enrollment variables: 2023-24\nvarnumber: 26031\nvarorder: 12\nvarname: E12UGFT\nvartitle: Full-time undergraduate 12-month unduplicated headcount\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 62\nsectionnumber: 1\nlongdescription: Full-time undergraduate 12-month unduplicated headcount Indicates how many individuals - full-time undergraduates (EFFYALEV=22,EFYTOTLT) the institution served over a 12-month period (the unduplicated headcount) Unduplicated count - The sum of students enrolled for credit with each student counted only once during the reporting period, regardless of when the student enrolled. Credit - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. NOTE: Enrollment reported is for the 12-month period (July 1 - June 30)\nvarsource: Derived DFR - IPEDS, Fall 2024, 12-month Enrollment (E12) component\nfiletitle: Frequently used enrollment variables: 2023-24\nsectiontitle: Frequently used enrollment variables: 2023-24",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136522,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVEF2024",
+          "variable_name": "DVEF06",
+          "title": "Adult age (25-64) enrollment, full-time undergraduate",
+          "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\ntablenumber: 27\ntablename: DRVEF2024\ntabletitle: Frequently used enrollment variables: Fall 2024\nvarnumber: 23406\nvarorder: 62\nvarname: DVEF06\nvartitle: Adult age (25-64) enrollment, full-time undergraduate\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 61\nsectionnumber: 1\nlongdescription: Total fall enrollment of all full-time undergraduate adult students (age 25 through 64). FULL-TIME STUDENT (Undergraduate) \u2014 A student enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.\nvarsource: Derived - IPEDS, Spring 2025, Fall Enrollment component\nfiletitle: Frequently used enrollment variables: Fall 2024\nsectiontitle: Frequently used fall enrollment variables",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136280,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "EFIA2024",
+          "variable_name": "EFTEUG",
+          "title": "Estimated full-time equivalent (FTE) undergraduate enrollment, 2023-24",
+          "body": "surveyorder: 14\nsurveynumber: 14\nsurvey: 12-month Enrollment\ntablenumber: 141\ntablename: EFIA2024\ntabletitle: 12-month instructional activity: 2023-24\nvarnumber: 22024\nvarorder: 9\nvarname: EFTEUG\nimputationvar: XEFTEUG\nvartitle: Estimated full-time equivalent (FTE) undergraduate enrollment, 2023-24\ndatatype: N\nfieldwidth: 8\nformat: Cont\nmultirecord: 0\nfilenumber: 13\nsectionnumber: 1\nlongdescription: Estimated full-time equivalent (FTE) undergraduate enrollment, academic year 2023-24 Estimated full-time equivalent undergraduate enrollment was generated as follows: For institutions with a semester, trimester, or 4-1-4 plan, the number of FTE undergraduate is the sum of undergraduate credit hours divided by 30 and clock hours divided by 900. For institutions with a quarter plan, undergraduate undergraduate credit hours divided by 45 and clock hours divided by 900. For institutions with continuous enrollment over a 12-month period, undergraduate credit hours were divided by 30 and clock hours were divided by 900.\nvarsource: IPEDS, Fall 2024 12-month Enrollment (E12) component\nfiletitle: 12-month instructional activity: 2023-24\nsectiontitle: Instructional activity",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136531,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVEF2024",
+          "variable_name": "EnrFt",
+          "title": "Full-time enrollment",
+          "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\ntablenumber: 27\ntablename: DRVEF2024\ntabletitle: Frequently used enrollment variables: Fall 2024\nvarnumber: 23805\nvarorder: 4\nvarname: EnrFt\nvartitle: Full-time enrollment\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 61\nsectionnumber: 1\nlongdescription: Total men and women enrolled for credit full time in the fall of the academic year. FULL-TIME STUDENT - Undergraduate\u2014A student enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. Graduate\u2014A student enrolled for 9 or more semester credits, or 9 or more quarter credits, or a student involved in thesis or dissertation preparation that is considered full time by the institution. First-professional\u2014As defined by the institution. CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.\nvarsource: Derived DFR - IPEDS, Spring 2025, Fall Enrollment component\nfiletitle: Frequently used enrollment variables: Fall 2024\nsectiontitle: Frequently used fall enrollment variables",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136333,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVEF122024",
+          "variable_name": "E12UGNDFT",
+          "title": "Full-time nondegree/certificate-seeking undergraduate 12-month unduplicated headcount",
+          "body": "surveyorder: 14\nsurveynumber: 14\nsurvey: 12-month Enrollment\ntablenumber: 144\ntablename: DRVEF122024\ntabletitle: Frequently used enrollment variables: 2023-24\nvarnumber: 26051\nvarorder: 16\nvarname: E12UGNDFT\nvartitle: Full-time nondegree/certificate-seeking undergraduate 12-month unduplicated headcount\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 62\nsectionnumber: 1\nlongdescription: Full-time nondegree/certificate-seeking undergraduate 12-month unduplicated headcount Indicates how many individuals -full-time nondegree/certificate-seeking undergraduates (EFFYALEV=31,EFYTOTLT) the institution served over a 12-month period (the unduplicated headcount) Unduplicated count - The sum of students enrolled for credit with each student counted only once during the reporting period, regardless of when the student enrolled. Examples of non-degree/certificate-seeking students would be high school students enrolled in creditable courses prior to high school graduation, or those enrolled in creditable courses who for some reason are not seeking a degree/certificate. Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other form",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136330,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVEF122024",
+          "variable_name": "E12UG1SFT",
+          "title": "Full-time first-time degree/certificate-seeking undergraduate 12-month unduplicated headcount",
+          "body": "surveyorder: 14\nsurveynumber: 14\nsurvey: 12-month Enrollment\ntablenumber: 144\ntablename: DRVEF122024\ntabletitle: Frequently used enrollment variables: 2023-24\nvarnumber: 26036\nvarorder: 13\nvarname: E12UG1SFT\nvartitle: Full-time first-time degree/certificate-seeking undergraduate 12-month unduplicated headcount\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 62\nsectionnumber: 1\nlongdescription: Full-time first-time degree/certificate-seeking undergraduate 12-month unduplicated headcount0 Indicates how many individuals -full-time, first-time undergraduates (EFFYALEV=24,EFYTOTLT) the institution served over a 12-month period (the unduplicated headcount) Unduplicated count - The sum of students enrolled for credit with each student counted only once during the reporting period, regardless of when the student enrolled. First-time student (undergraduate) A student who has no prior postsecondary experience (except as noted below) attending any institution for the first time at the undergraduate level. This includes students enrolled in academic or occupational programs. It also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Degree/certificate-seeking students Students enrolled in courses for credit and recognized by the institution as seeking a degree, certificate, or other formal award. High school students also enrolled in postsecondary courses for credit are not considered degree/certificate",
+          "physical_status": "documented_location_present"
+        },
+        {
+          "record_id": 136332,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVEF122024",
+          "variable_name": "E12UGCNFT",
+          "title": "Full-time continuing degree/certificate-seeking undergraduate 12-month unduplicated headcount",
+          "body": "surveyorder: 14\nsurveynumber: 14\nsurvey: 12-month Enrollment\ntablenumber: 144\ntablename: DRVEF122024\ntabletitle: Frequently used enrollment variables: 2023-24\nvarnumber: 26046\nvarorder: 15\nvarname: E12UGCNFT\nvartitle: Full-time continuing degree/certificate-seeking undergraduate 12-month unduplicated headcount\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 62\nsectionnumber: 1\nlongdescription: Full-time continuing degree/certificate-seeking undergraduate 12-month unduplicated headcount Indicates how many individuals - full-time continuing undergraduates (EFFYALEV=40,EFYTOTLT) the institution served over a 12-month period (the unduplicated headcount) Unduplicated count - The sum of students enrolled for credit with each student counted only once during the reporting period, regardless of when the student enrolled. Continuing - Students beyond their first-year and are also not transfer-ins Degree/certificate-seeking students Students enrolled in courses for credit and recognized by the institution as seeking a degree, certificate, or other formal award. High school students also enrolled in postsecondary courses for credit are not considered degree/certificate-seeking Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. CREDIT - Recognition of attendance or performance in an instructional activity (course or pro",
+          "physical_status": "documented_location_present"
+        }
+      ],
+      "mode": "catalog offline discovery",
+      "availability": "needs_planning",
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 3.563835100037977,
+        "answer_ready_seconds": 5.814369200030342,
+        "live_model_calls": 0,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 2.2382846999680623
+      },
+      "analysis_brief": {
+        "version": 1,
+        "id": "c875a55bb927b284",
+        "status": "awaiting_information",
+        "goal": "How is full-time undergraduate enrollment defined?",
+        "original_question": "How is full-time undergraduate enrollment defined?",
+        "question": "The full source catalog is searchable, but the offline starter cannot yet construct a complete plan for this request. Enable conversational AI for catalog-driven planning. Source matches do not establish that the requested statistic is absent.",
+        "scope": {},
+        "options": [],
+        "selected_option": null,
+        "confirmed_decisions": [],
+        "open_questions": [
+          "The full source catalog is searchable, but the offline starter cannot yet construct a complete plan for this request. Enable conversational AI for catalog-driven planning. Source matches do not establish that the requested statistic is absent."
+        ]
+      },
+      "institution_identity": {
+        "unitids": [],
+        "original_question": "How is full-time undergraduate enrollment defined?",
+        "original_mentions": [],
+        "confirmed_choices": {},
+        "scope_mentions": [],
+        "labels": []
+      }
+    }
+  }
+]

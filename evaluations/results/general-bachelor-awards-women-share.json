@@ -1,0 +1,1230 @@
+{
+  "plan": {
+    "metrics": [
+      "C{YEAR}_A::CTOTALW::percent::0"
+    ],
+    "institutions": [
+      "Yale"
+    ],
+    "years": [
+      2024
+    ],
+    "time_basis": "source_release",
+    "output": "answer"
+  },
+  "catalog_plan": {
+    "version": 1,
+    "institutions": [
+      "Yale"
+    ],
+    "source_years": [
+      2024
+    ],
+    "requested_time": {
+      "basis": "reporting_period",
+      "description": "Awards conferred July 1, 2023 through June 30, 2024 (IPEDS 2024-25 completions)"
+    },
+    "selections": [
+      {
+        "record_id": 136599,
+        "role": "measure"
+      },
+      {
+        "record_id": 136602,
+        "role": "denominator"
+      }
+    ],
+    "filters": [
+      {
+        "record_id": 136625,
+        "operator": "eq",
+        "values": [
+          "5"
+        ],
+        "code_record_ids": [
+          148596
+        ]
+      },
+      {
+        "record_id": 136593,
+        "operator": "eq",
+        "values": [
+          "1"
+        ],
+        "code_record_ids": [
+          144680
+        ]
+      },
+      {
+        "record_id": 136624,
+        "operator": "eq",
+        "values": [
+          "99"
+        ],
+        "code_record_ids": [
+          146439
+        ]
+      }
+    ],
+    "group_by_record_ids": [],
+    "calculations": [
+      {
+        "label": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+        "operator": "percent",
+        "input_record_ids": [
+          136599
+        ],
+        "denominator_record_id": 136602,
+        "group_by_record_ids": [],
+        "interpretation": "Women's grand total awards divided by grand total awards (CTOTALT) in the same row: AWLEVEL=5 bachelor's, MAJORNUM=1 first major, CIPCODE=99 grand total across all fields, July 1, 2023-June 30, 2024. Women are a gender component of the grand total in the same row."
+      }
+    ],
+    "joins": [],
+    "output": "answer",
+    "assumptions": [
+      "Single table C2024_A; row selectors preserve the population: bachelor's degree, first major, CIPCODE 99 (grand total, avoids double counting with CIP subtotals).",
+      "Yale resolved by name to a single UNITID at execution.",
+      "Percentage is by awards (first majors), not unique students."
+    ],
+    "clarification_questions": []
+  },
+  "metric_specs": {
+    "C{YEAR}_A::CTOTALW::percent::0": {
+      "label": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+      "family": "catalog",
+      "unit": "percent"
+    }
+  },
+  "observation_years": [
+    2024
+  ],
+  "rows": [
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "July 1, 2023 - June 30, 2024",
+      "metric": "C{YEAR}_A::CTOTALW::percent::0",
+      "measure": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+      "unit": "percent",
+      "value": 50.630630630630634,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": 843,
+      "denominator": 1665,
+      "series_segment": "source release 2024",
+      "source_value": 843,
+      "input_values": [
+        843
+      ],
+      "calculation_evidence": {
+        "label": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+        "operator": "percent",
+        "approved": true,
+        "input_record_ids": [
+          136599
+        ],
+        "denominator_record_id": 136602,
+        "evidence_record_ids": [
+          136599,
+          136602
+        ],
+        "reason": "Source population, row selection, period, units and relationship agree.",
+        "proof": {
+          "kind": "category_containment",
+          "axes": [
+            "gender"
+          ]
+        },
+        "unit": "percent",
+        "bounded_share": true
+      }
+    }
+  ],
+  "sources": [
+    {
+      "metric": "C{YEAR}_A::CTOTALW::percent::0",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "C2024_A",
+      "columns": [
+        "MAJORNUM",
+        "CTOTALW",
+        "CTOTALT",
+        "CIPCODE",
+        "AWLEVEL"
+      ],
+      "filters": [
+        {
+          "record_id": 136625,
+          "operator": "eq",
+          "values": [
+            "5"
+          ],
+          "code_record_ids": [
+            148596
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        },
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        }
+      ],
+      "formula": {
+        "label": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+        "operator": "percent",
+        "input_record_ids": [
+          136599
+        ],
+        "denominator_record_id": 136602,
+        "group_by_record_ids": [],
+        "interpretation": "Women's grand total awards divided by grand total awards (CTOTALT) in the same row: AWLEVEL=5 bachelor's, MAJORNUM=1 first major, CIPCODE=99 grand total across all fields, July 1, 2023-June 30, 2024. Women are a gender component of the grand total in the same row."
+      },
+      "sql": "SELECT \"MAJORNUM\", \"CTOTALW\", \"CTOTALT\", \"CIPCODE\", \"AWLEVEL\" FROM \"C2024_A\" WHERE \"UNITID\"=? AND \"AWLEVEL\" = ? AND \"MAJORNUM\" = ? AND \"CIPCODE\" = ? LIMIT 2",
+      "parameters": [
+        130794,
+        "5",
+        "1",
+        "99"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 136593,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First or Second Major",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\nvartitle: First or Second Major\ndatatype: N\nfieldwidth: 1\nformat: Disc\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: First or Second Major\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 722,
+          "long_description": "First or Second Major",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        },
+        {
+          "record_id": 136599,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALW",
+          "title": "Grand total women",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31090\nvarorder: 10\nvarname: CTOTALW\nimputationvar: XCTOTALW\nvartitle: Grand total women\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to Grand total Women\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 728,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to Grand total Women",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        },
+        {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731,
+          "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        },
+        {
+          "record_id": 136624,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "CIP Code - 2020 Classification",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\nvartitle: CIP Code - 2020 Classification\ndatatype: A\nfieldwidth: 7\nformat: Disc\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Classification of instrucional Program (CIP) code. A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions. The Classification of Instructional Programs (CIP) provides a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity. CIP was originally developed by the U.S. Department of Education's National Center for Education Statistics (NCES) in 1980, with revisions occurring in 1985, 1990, 2000, 2010 and 2020. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 753,
+          "long_description": "Classification of instrucional Program (CIP) code. A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions. The Classification of Instructional Programs (CIP) provides a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity. CIP was originally developed by the U.S. Department of Education's National Center for Education Statistics (NCES) in 1980, with revisions occurring in 1985, 1990, 2000, 2010 and 2020. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        },
+        {
+          "record_id": 136625,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "AWLEVEL",
+          "title": "Award Level code",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 35005\nvarorder: 4\nvarname: AWLEVEL\nvartitle: Award Level code\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Award level code The twelve award levels under which completions can be reported are: Certificates of less than 12 weeks includes programs of less than 300 clock hours, or, Less than 9 SEMESTER or TRIMESTER credit hours, or Less than 13 QUARTER credit hours Certificates of at least 12 weeks but less than 1 year includes programs of 300-899 clock hours, or 9-29 SEMESTER or TRIMESTER credit hours, or 13-44 QUARTER credit hours Certificates of at least 1 year but less the 2 years includes programs of at least 900, but less than 1800 clock hours, or at least 30, but less than 60 SEMESTER OR TRIMESTER HOURS, or at least 45, but less than 90 QUARTER HOURS Associate's degree Certificates of at least 2 years but less the 4 years includes programs of 1800 or more clock hours, or 60 or more SEMESTER OR TRIMESTER credit hours, or 90 or more QUARTER credit hours Bachelor's degree Postbaccalaureate certificate Master's degree Post-master's certificate Doctor's degree - research/scholarship Doctor's degree - professional practice Doctor's degree - other\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 754,
+          "long_description": "Award level code The twelve award levels under which completions can be reported are: Certificates of less than 12 weeks includes programs of less than 300 clock hours, or, Less than 9 SEMESTER or TRIMESTER credit hours, or Less than 13 QUARTER credit hours Certificates of at least 12 weeks but less than 1 year includes programs of 300-899 clock hours, or 9-29 SEMESTER or TRIMESTER credit hours, or 13-44 QUARTER credit hours Certificates of at least 1 year but less the 2 years includes programs of at least 900, but less than 1800 clock hours, or at least 30, but less than 60 SEMESTER OR TRIMESTER HOURS, or at least 45, but less than 90 QUARTER HOURS Associate's degree Certificates of at least 2 years but less the 4 years includes programs of 1800 or more clock hours, or 60 or more SEMESTER OR TRIMESTER credit hours, or 90 or more QUARTER credit hours Bachelor's degree Postbaccalaureate certificate Master's degree Post-master's certificate Doctor's degree - research/scholarship Doctor's degree - professional practice Doctor's degree - other",
+          "documented_table": "C2024_A",
+          "physical_table": "C2024_A",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 148596,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "AWLEVEL",
+          "title": "Bachelor's degree",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35005\nvarorder: 4\nvarname: AWLEVEL\ncodevalue: 5\nfrequency: 226411\npercent: 13.41\nvalueorder: 4\nvaluelabel: Bachelor's degree\nvartitle: Award Level code",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10126
+        },
+        {
+          "record_id": 144680,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First major",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 6210
+        },
+        {
+          "record_id": 146439,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "Grand total",
+          "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 7969
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "Single table C2024_A; row selectors preserve the population: bachelor's degree, first major, CIPCODE 99 (grand total, avoids double counting with CIP subtotals).",
+    "Yale resolved by name to a single UNITID at execution.",
+    "Percentage is by awards (first majors), not unique students.",
+    "Source release labels are shown separately from source reporting periods. Missing, suppressed and nonnumeric values remain empty. These answers do not infer reported versus imputed status."
+  ],
+  "definitions": {
+    "C{YEAR}_A::CTOTALW::percent::0": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to Grand total Women Formula: Women's grand total awards divided by grand total awards (CTOTALT) in the same row: AWLEVEL=5 bachelor's, MAJORNUM=1 first major, CIPCODE=99 grand total across all fields, July 1, 2023-June 30, 2024. Women are a gender component of the grand total in the same row."
+  },
+  "created_at": "2026-10-19T18:40:12.052634+00:00",
+  "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+  "review_status": "Catalog-bound direct observations; source row keys, selectors and numeric missingness validated. No implicit aggregation or fact joins.",
+  "semantic_validation": {
+    "schema_and_catalog_binding": "passed",
+    "execution_approved": true,
+    "semantic_status": "passed",
+    "blocks": [],
+    "required_next_checks": [],
+    "execution_scope": "Direct source observations with explicit institution/population selectors; no implicit aggregation, joins or inferred year equivalence.",
+    "completed_checks": [
+      "exact physical fields and source codes",
+      "documented and observed row key",
+      "explicit row selectors",
+      "source reporting period",
+      "bounded read-only compilation",
+      "numeric missingness policy",
+      "calculation relationship where applicable"
+    ]
+  },
+  "catalog_evidence": {
+    "catalog_plan": {
+      "version": 1,
+      "institutions": [
+        "Yale"
+      ],
+      "source_years": [
+        2024
+      ],
+      "requested_time": {
+        "basis": "reporting_period",
+        "description": "Awards conferred July 1, 2023 through June 30, 2024 (IPEDS 2024-25 completions)"
+      },
+      "selections": [
+        {
+          "record_id": 136599,
+          "role": "measure"
+        },
+        {
+          "record_id": 136602,
+          "role": "denominator"
+        }
+      ],
+      "filters": [
+        {
+          "record_id": 136625,
+          "operator": "eq",
+          "values": [
+            "5"
+          ],
+          "code_record_ids": [
+            148596
+          ]
+        },
+        {
+          "record_id": 136593,
+          "operator": "eq",
+          "values": [
+            "1"
+          ],
+          "code_record_ids": [
+            144680
+          ]
+        },
+        {
+          "record_id": 136624,
+          "operator": "eq",
+          "values": [
+            "99"
+          ],
+          "code_record_ids": [
+            146439
+          ]
+        }
+      ],
+      "group_by_record_ids": [],
+      "calculations": [
+        {
+          "label": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+          "operator": "percent",
+          "input_record_ids": [
+            136599
+          ],
+          "denominator_record_id": 136602,
+          "group_by_record_ids": [],
+          "interpretation": "Women's grand total awards divided by grand total awards (CTOTALT) in the same row: AWLEVEL=5 bachelor's, MAJORNUM=1 first major, CIPCODE=99 grand total across all fields, July 1, 2023-June 30, 2024. Women are a gender component of the grand total in the same row."
+        }
+      ],
+      "joins": [],
+      "output": "answer",
+      "assumptions": [
+        "Single table C2024_A; row selectors preserve the population: bachelor's degree, first major, CIPCODE 99 (grand total, avoids double counting with CIP subtotals).",
+        "Yale resolved by name to a single UNITID at execution.",
+        "Percentage is by awards (first majors), not unique students."
+      ],
+      "clarification_questions": []
+    },
+    "question": "What percentage of Yale's bachelor's degrees awarded from July 1, 2023 through June 30, 2024 went to women? Use first majors across all fields of study.",
+    "resolved_institutions": {
+      "2024": [
+        130794
+      ]
+    },
+    "definition_evidence": [
+      {
+        "record_id": 136593,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "variable_name": "MAJORNUM",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"C2024_A\"]",
+        "imputation_variable": "",
+        "category_count": 2,
+        "definition_hash": "f270237d4f432e92455d89c0ba820470aec46836d36be48dd7f2cf87e991b0cb",
+        "normalized_hash": "8e803b7604ed4069497b8bf32ee48e88d736c5010c4e6068649ef740fddcea18",
+        "category_hash": "f5b796fb6c8a5c61a610a1094956fe95a2e4b1ee7be9a75fb6052e9c54b27dd4",
+        "title": "First or Second Major",
+        "long_description": "First or Second Major",
+        "data_type": "N",
+        "format": "Disc",
+        "evidence": {
+          "record_id": 136593,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "MAJORNUM",
+          "title": "First or Second Major",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\nvartitle: First or Second Major\ndatatype: N\nfieldwidth: 1\nformat: Disc\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: First or Second Major\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 722
+        }
+      },
+      {
+        "record_id": 136599,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "variable_name": "CTOTALW",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"C2024_A\"]",
+        "imputation_variable": "XCTOTALW",
+        "category_count": 0,
+        "definition_hash": "17b21f3c112f8d7b13356835b6c4151fdfc9ee76c9200363af6258a910efc384",
+        "normalized_hash": "d0377ac44802b18bb80442ca88a56798c003126a6e010a824f53db8c4b0ccf17",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Grand total women",
+        "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to Grand total Women",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 136599,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALW",
+          "title": "Grand total women",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31090\nvarorder: 10\nvarname: CTOTALW\nimputationvar: XCTOTALW\nvartitle: Grand total women\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to Grand total Women\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 728
+        }
+      },
+      {
+        "record_id": 136602,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "variable_name": "CTOTALT",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"C2024_A\"]",
+        "imputation_variable": "XCTOTALT",
+        "category_count": 0,
+        "definition_hash": "ae0ddb960baae645c399c6fa046333616eadd5edb4fe7895cd3340c4b76a844c",
+        "normalized_hash": "acb1d5d882978dc04f071fc3374d1782ea4a0c55ae906ddd9a125da67e99ee7e",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Grand total",
+        "long_description": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 136602,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CTOTALT",
+          "title": "Grand total",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 31130\nvarorder: 6\nvarname: CTOTALT\nimputationvar: XCTOTALT\nvartitle: Grand total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 731
+        }
+      },
+      {
+        "record_id": 136624,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "variable_name": "CIPCODE",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"C2024_A\"]",
+        "imputation_variable": "",
+        "category_count": 2154,
+        "definition_hash": "e51485626911ca1b34c0bd480e3084a5b3cc3903d29d70c65113a94547880be7",
+        "normalized_hash": "91373abcef56bb402bb025721be5d157697b534d0e6b3cf9649f7e27382d0c9f",
+        "category_hash": "c76f443df12ee2fa8bce596c7182b8152d3a379e46773b29b9f3563e265e3a4c",
+        "title": "CIP Code - 2020 Classification",
+        "long_description": "Classification of instrucional Program (CIP) code. A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions. The Classification of Instructional Programs (CIP) provides a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity. CIP was originally developed by the U.S. Department of Education's National Center for Education Statistics (NCES) in 1980, with revisions occurring in 1985, 1990, 2000, 2010 and 2020. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56",
+        "data_type": "A",
+        "format": "Disc",
+        "evidence": {
+          "record_id": 136624,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "CIPCODE",
+          "title": "CIP Code - 2020 Classification",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\nvartitle: CIP Code - 2020 Classification\ndatatype: A\nfieldwidth: 7\nformat: Disc\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Classification of instrucional Program (CIP) code. A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions. The Classification of Instructional Programs (CIP) provides a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity. CIP was originally developed by the U.S. Department of Education's National Center for Education Statistics (NCES) in 1980, with revisions occurring in 1985, 1990, 2000, 2010 and 2020. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 753
+        }
+      },
+      {
+        "record_id": 136625,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "variable_name": "AWLEVEL",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"C2024_A\"]",
+        "imputation_variable": "",
+        "category_count": 17,
+        "definition_hash": "d199015c445b405c01d79f19d4e57a59c7f3f45a202a8f2020cd76bfe208041c",
+        "normalized_hash": "02f1498a5129192be003938e78b6cbbe1993a61337148a8a753e1b9e43c02a61",
+        "category_hash": "a5984806fc9e30389a7547aec9144b771828d26582aea4b7c1d480cf41e10831",
+        "title": "Award Level code",
+        "long_description": "Award level code The twelve award levels under which completions can be reported are: Certificates of less than 12 weeks includes programs of less than 300 clock hours, or, Less than 9 SEMESTER or TRIMESTER credit hours, or Less than 13 QUARTER credit hours Certificates of at least 12 weeks but less than 1 year includes programs of 300-899 clock hours, or 9-29 SEMESTER or TRIMESTER credit hours, or 13-44 QUARTER credit hours Certificates of at least 1 year but less the 2 years includes programs of at least 900, but less than 1800 clock hours, or at least 30, but less than 60 SEMESTER OR TRIMESTER HOURS, or at least 45, but less than 90 QUARTER HOURS Associate's degree Certificates of at least 2 years but less the 4 years includes programs of 1800 or more clock hours, or 60 or more SEMESTER OR TRIMESTER credit hours, or 90 or more QUARTER credit hours Bachelor's degree Postbaccalaureate certificate Master's degree Post-master's certificate Doctor's degree - research/scholarship Doctor's degree - professional practice Doctor's degree - other",
+        "data_type": "N",
+        "format": "Disc",
+        "evidence": {
+          "record_id": 136625,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "C2024_A",
+          "variable_name": "AWLEVEL",
+          "title": "Award Level code",
+          "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\ntablenumber: 30\ntablename: C2024_A\ntabletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nvarnumber: 35005\nvarorder: 4\nvarname: AWLEVEL\nvartitle: Award Level code\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 3\nfilenumber: 4\nsectionnumber: 1\nlongdescription: Award level code The twelve award levels under which completions can be reported are: Certificates of less than 12 weeks includes programs of less than 300 clock hours, or, Less than 9 SEMESTER or TRIMESTER credit hours, or Less than 13 QUARTER credit hours Certificates of at least 12 weeks but less than 1 year includes programs of 300-899 clock hours, or 9-29 SEMESTER or TRIMESTER credit hours, or 13-44 QUARTER credit hours Certificates of at least 1 year but less the 2 years includes programs of at least 900, but less than 1800 clock hours, or at least 30, but less than 60 SEMESTER OR TRIMESTER HOURS, or at least 45, but less than 90 QUARTER HOURS Associate's degree Certificates of at least 2 years but less the 4 years includes programs of 1800 or more clock hours, or 60 or more SEMESTER OR TRIMESTER credit hours, or 90 or more QUARTER credit hours Bachelor's degree Postbaccalaureate certificate Master's degree Post-master's certificate Doctor's degree - research/scholarship Doctor's degree - professional practice Doctor's degree - other\nvarsource: IPEDS, Fall 2024, Completions component\nfiletitle: Awards/degrees conferred by program (CIP), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\nsectiontitle: Completions, awards and degrees by 6-digit cipcode",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 754
+        }
+      }
+    ],
+    "category_evidence": [
+      {
+        "record_id": 148596,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "code_value",
+        "table_name": "C2024_A",
+        "variable_name": "AWLEVEL",
+        "title": "Bachelor's degree",
+        "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35005\nvarorder: 4\nvarname: AWLEVEL\ncodevalue: 5\nfrequency: 226411\npercent: 13.41\nvalueorder: 4\nvaluelabel: Bachelor's degree\nvartitle: Award Level code",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "valueSets24",
+        "source_row": 10126
+      },
+      {
+        "record_id": 144680,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "code_value",
+        "table_name": "C2024_A",
+        "variable_name": "MAJORNUM",
+        "title": "First major",
+        "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 31005\nvarorder: 3\nvarname: MAJORNUM\ncodevalue: 1\nfrequency: 1542031\npercent: 91.33\nvalueorder: 1\nvaluelabel: First major\nvartitle: First or Second Major",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "valueSets24",
+        "source_row": 6210
+      },
+      {
+        "record_id": 146439,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "code_value",
+        "table_name": "C2024_A",
+        "variable_name": "CIPCODE",
+        "title": "Grand total",
+        "body": "surveyorder: 30\ntablenumber: 30\ntablename: C2024_A\nvarnumber: 35000\nvarorder: 2\nvarname: CIPCODE\ncodevalue: 99\nfrequency: 41867\npercent: 2.48\nvalueorder: 10\nvaluelabel: Grand total\nvartitle: CIP Code - 2020 Classification",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "valueSets24",
+        "source_row": 7969
+      }
+    ],
+    "join_key_evidence": [],
+    "table_evidence": [
+      {
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "C2024_A",
+        "family": "C{YEAR}_A",
+        "profile": {
+          "candidate_key": [
+            "UNITID",
+            "AWLEVEL",
+            "CIPCODE",
+            "MAJORNUM"
+          ],
+          "distinct_institutions": 5869,
+          "expected_rows_match": true,
+          "key_status": "observed_unique_candidate_review_required",
+          "null_institution_ids": 0,
+          "query_count": 2,
+          "rows": 1688471,
+          "status": "profiled"
+        },
+        "period_evidence": [
+          {
+            "record_id": 135841,
+            "release_date": null,
+            "release_status": "Provisional",
+            "year_coverage": "July 1, 2023 - June 30, 2024"
+          }
+        ],
+        "population_evidence": [
+          {
+            "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56 . Beginning in 2019-20, the less than 1 year certificate award level is divided into the following two award levels: certificates of less than 12 weeks and certificates of at least 12 weeks but less than 1 year. This table contains multiple records per institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), classification of instructional program (CIPCODE), first or second major (MAJORNUM) and award level (AWLEVEL). Each record will contain the total awards, awards for men and women, and the total awards and awards for men and women for all nine race/ethnicity categories.",
+            "record_id": 135841,
+            "title": "Awards/degrees conferred by program (6-digit CIP code), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024"
+          }
+        ],
+        "source_definitions": [
+          {
+            "record_id": 135841,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "table_definition",
+            "table_name": "C2024_A",
+            "variable_name": "",
+            "title": "Awards/degrees conferred by program (6-digit CIP code), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024",
+            "body": "surveyorder: 30\nsurveynumber: 3\nsurvey: Completions\nyearcoverage: July 1, 2023 - June 30, 2024\ntablename: C2024_A\ntablenumber: 30\ntabletitle: Awards/degrees conferred by program (6-digit CIP code), award level, race/ethnicity, and gender: July 1, 2023 to June 30, 2024\ndescription: This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56 . Beginning in 2019-20, the less than 1 year certificate award level is divided into the following two award levels: certificates of less than 12 weeks and certificates of at least 12 weeks but less than 1 year. This table contains multiple records per institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), classification of instructional program (CIPCODE), first or second major (MAJORNUM) and award level (AWLEVEL). Each record will contain the total awards, awards for men and women, and the total awards and awards for men and women for all nine race/ethnicity categories.\nrelease: Provisional\nrelease_date: September 2025",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "tables24",
+            "source_row": 22
+          }
+        ]
+      }
+    ],
+    "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+    "validation": {
+      "schema_and_catalog_binding": "passed",
+      "execution_approved": true,
+      "semantic_status": "passed",
+      "blocks": [],
+      "required_next_checks": [],
+      "execution_scope": "Direct source observations with explicit institution/population selectors; no implicit aggregation, joins or inferred year equivalence.",
+      "completed_checks": [
+        "exact physical fields and source codes",
+        "documented and observed row key",
+        "explicit row selectors",
+        "source reporting period",
+        "bounded read-only compilation",
+        "numeric missingness policy",
+        "calculation relationship where applicable"
+      ]
+    },
+    "created_at": "2026-10-19T18:40:12.045408+00:00",
+    "normalization": [],
+    "field_semantics": {
+      "136593": {
+        "version": 1,
+        "record_id": 136593,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table": "C2024_A",
+        "variable": "MAJORNUM",
+        "source_title": "First or Second Major",
+        "measure_base": "first or second major",
+        "dimensions": {},
+        "unit": "unknown",
+        "numeric_kind": "coded_or_other",
+        "additive": false,
+        "total_scope": false,
+        "reporting_periods": [
+          "July 1, 2023 - June 30, 2024"
+        ],
+        "field_time_qualifiers": [],
+        "population_evidence": [
+          {
+            "record_id": 135841,
+            "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+          }
+        ],
+        "required_row_selectors": [
+          "AWLEVEL",
+          "CIPCODE",
+          "MAJORNUM"
+        ],
+        "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+        "category_overlap_warning": false,
+        "evidence": {
+          "variable_record_id": 136593,
+          "table_record_ids": [
+            135841
+          ],
+          "title_excerpt": "First or Second Major",
+          "definition_excerpt": "First or Second Major"
+        },
+        "readiness": "partial_unit_unknown"
+      },
+      "136599": {
+        "version": 1,
+        "record_id": 136599,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table": "C2024_A",
+        "variable": "CTOTALW",
+        "source_title": "Grand total women",
+        "measure_base": "",
+        "dimensions": {
+          "gender": "women"
+        },
+        "unit": "awards",
+        "numeric_kind": "continuous",
+        "additive": true,
+        "total_scope": true,
+        "reporting_periods": [
+          "July 1, 2023 - June 30, 2024"
+        ],
+        "field_time_qualifiers": [],
+        "population_evidence": [
+          {
+            "record_id": 135841,
+            "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+          }
+        ],
+        "required_row_selectors": [
+          "AWLEVEL",
+          "CIPCODE",
+          "MAJORNUM"
+        ],
+        "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+        "category_overlap_warning": false,
+        "evidence": {
+          "variable_record_id": 136599,
+          "table_record_ids": [
+            135841
+          ],
+          "title_excerpt": "Grand total women",
+          "definition_excerpt": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to Grand total Women"
+        },
+        "readiness": "described"
+      },
+      "136602": {
+        "version": 1,
+        "record_id": 136602,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table": "C2024_A",
+        "variable": "CTOTALT",
+        "source_title": "Grand total",
+        "measure_base": "",
+        "dimensions": {},
+        "unit": "awards",
+        "numeric_kind": "continuous",
+        "additive": true,
+        "total_scope": true,
+        "reporting_periods": [
+          "July 1, 2023 - June 30, 2024"
+        ],
+        "field_time_qualifiers": [],
+        "population_evidence": [
+          {
+            "record_id": 135841,
+            "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+          }
+        ],
+        "required_row_selectors": [
+          "AWLEVEL",
+          "CIPCODE",
+          "MAJORNUM"
+        ],
+        "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+        "category_overlap_warning": false,
+        "evidence": {
+          "variable_record_id": 136602,
+          "table_record_ids": [
+            135841
+          ],
+          "title_excerpt": "Grand total",
+          "definition_excerpt": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders"
+        },
+        "readiness": "described"
+      },
+      "136624": {
+        "version": 1,
+        "record_id": 136624,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table": "C2024_A",
+        "variable": "CIPCODE",
+        "source_title": "CIP Code - 2020 Classification",
+        "measure_base": "cip code 2020 classification",
+        "dimensions": {},
+        "unit": "unknown",
+        "numeric_kind": "coded_or_other",
+        "additive": false,
+        "total_scope": false,
+        "reporting_periods": [
+          "July 1, 2023 - June 30, 2024"
+        ],
+        "field_time_qualifiers": [
+          "2020"
+        ],
+        "population_evidence": [
+          {
+            "record_id": 135841,
+            "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+          }
+        ],
+        "required_row_selectors": [
+          "AWLEVEL",
+          "CIPCODE",
+          "MAJORNUM"
+        ],
+        "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+        "category_overlap_warning": false,
+        "evidence": {
+          "variable_record_id": 136624,
+          "table_record_ids": [
+            135841
+          ],
+          "title_excerpt": "CIP Code - 2020 Classification",
+          "definition_excerpt": "Classification of instrucional Program (CIP) code. A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions. The Classification of Instructional Programs (CIP) provides a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity. CIP was originally developed by the U.S. Depart"
+        },
+        "readiness": "partial_unit_unknown"
+      },
+      "136625": {
+        "version": 1,
+        "record_id": 136625,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table": "C2024_A",
+        "variable": "AWLEVEL",
+        "source_title": "Award Level code",
+        "measure_base": "award level code",
+        "dimensions": {},
+        "unit": "unknown",
+        "numeric_kind": "coded_or_other",
+        "additive": false,
+        "total_scope": false,
+        "reporting_periods": [
+          "July 1, 2023 - June 30, 2024"
+        ],
+        "field_time_qualifiers": [],
+        "population_evidence": [
+          {
+            "record_id": 135841,
+            "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+          }
+        ],
+        "required_row_selectors": [
+          "AWLEVEL",
+          "CIPCODE",
+          "MAJORNUM"
+        ],
+        "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+        "category_overlap_warning": false,
+        "evidence": {
+          "variable_record_id": 136625,
+          "table_record_ids": [
+            135841
+          ],
+          "title_excerpt": "Award Level code",
+          "definition_excerpt": "Award level code The twelve award levels under which completions can be reported are: Certificates of less than 12 weeks includes programs of less than 300 clock hours, or, Less than 9 SEMESTER or TRIMESTER credit hours, or Less than 13 QUARTER credit hours Certificates of at least 12 weeks but less than 1 year includes programs of 300-899 clock hours, or 9-29 SEMESTER or TRIMESTER credit hours, o"
+        },
+        "readiness": "partial_unit_unknown"
+      }
+    },
+    "calculation_validation": [
+      {
+        "label": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+        "operator": "percent",
+        "approved": true,
+        "input_record_ids": [
+          136599
+        ],
+        "denominator_record_id": 136602,
+        "evidence_record_ids": [
+          136599,
+          136602
+        ],
+        "reason": "Source population, row selection, period, units and relationship agree.",
+        "proof": {
+          "kind": "category_containment",
+          "axes": [
+            "gender"
+          ]
+        },
+        "unit": "percent",
+        "bounded_share": true
+      }
+    ]
+  },
+  "field_semantics": {
+    "136593": {
+      "version": 1,
+      "record_id": 136593,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "C2024_A",
+      "variable": "MAJORNUM",
+      "source_title": "First or Second Major",
+      "measure_base": "first or second major",
+      "dimensions": {},
+      "unit": "unknown",
+      "numeric_kind": "coded_or_other",
+      "additive": false,
+      "total_scope": false,
+      "reporting_periods": [
+        "July 1, 2023 - June 30, 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135841,
+          "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+        }
+      ],
+      "required_row_selectors": [
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136593,
+        "table_record_ids": [
+          135841
+        ],
+        "title_excerpt": "First or Second Major",
+        "definition_excerpt": "First or Second Major"
+      },
+      "readiness": "partial_unit_unknown"
+    },
+    "136599": {
+      "version": 1,
+      "record_id": 136599,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "C2024_A",
+      "variable": "CTOTALW",
+      "source_title": "Grand total women",
+      "measure_base": "",
+      "dimensions": {
+        "gender": "women"
+      },
+      "unit": "awards",
+      "numeric_kind": "continuous",
+      "additive": true,
+      "total_scope": true,
+      "reporting_periods": [
+        "July 1, 2023 - June 30, 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135841,
+          "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+        }
+      ],
+      "required_row_selectors": [
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136599,
+        "table_record_ids": [
+          135841
+        ],
+        "title_excerpt": "Grand total women",
+        "definition_excerpt": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to Grand total Women"
+      },
+      "readiness": "described"
+    },
+    "136602": {
+      "version": 1,
+      "record_id": 136602,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "C2024_A",
+      "variable": "CTOTALT",
+      "source_title": "Grand total",
+      "measure_base": "",
+      "dimensions": {},
+      "unit": "awards",
+      "numeric_kind": "continuous",
+      "additive": true,
+      "total_scope": true,
+      "reporting_periods": [
+        "July 1, 2023 - June 30, 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135841,
+          "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+        }
+      ],
+      "required_row_selectors": [
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136602,
+        "table_record_ids": [
+          135841
+        ],
+        "title_excerpt": "Grand total",
+        "definition_excerpt": "Awards/degrees conferred between July 1, 2023 and June 30, 2024 to all recipients, across all race/ethnicities and both genders"
+      },
+      "readiness": "described"
+    },
+    "136624": {
+      "version": 1,
+      "record_id": 136624,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "C2024_A",
+      "variable": "CIPCODE",
+      "source_title": "CIP Code - 2020 Classification",
+      "measure_base": "cip code 2020 classification",
+      "dimensions": {},
+      "unit": "unknown",
+      "numeric_kind": "coded_or_other",
+      "additive": false,
+      "total_scope": false,
+      "reporting_periods": [
+        "July 1, 2023 - June 30, 2024"
+      ],
+      "field_time_qualifiers": [
+        "2020"
+      ],
+      "population_evidence": [
+        {
+          "record_id": 135841,
+          "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+        }
+      ],
+      "required_row_selectors": [
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136624,
+        "table_record_ids": [
+          135841
+        ],
+        "title_excerpt": "CIP Code - 2020 Classification",
+        "definition_excerpt": "Classification of instrucional Program (CIP) code. A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions. The Classification of Instructional Programs (CIP) provides a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity. CIP was originally developed by the U.S. Depart"
+      },
+      "readiness": "partial_unit_unknown"
+    },
+    "136625": {
+      "version": 1,
+      "record_id": 136625,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "C2024_A",
+      "variable": "AWLEVEL",
+      "source_title": "Award Level code",
+      "measure_base": "award level code",
+      "dimensions": {},
+      "unit": "unknown",
+      "numeric_kind": "coded_or_other",
+      "additive": false,
+      "total_scope": false,
+      "reporting_periods": [
+        "July 1, 2023 - June 30, 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135841,
+          "description": "This table contains the number of awards by type of program, level of award (certificate or degree), first or second major and by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. Type of program is categorized according to the 2020 Classification of Instructional Programs (CIP), a detailed coding system for postsecondary instructional programs. The 2010 CIP was used to categorize programs for Completions data collected from 2009-10 through 2018-19. Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is"
+        }
+      ],
+      "required_row_selectors": [
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 136625,
+        "table_record_ids": [
+          135841
+        ],
+        "title_excerpt": "Award Level code",
+        "definition_excerpt": "Award level code The twelve award levels under which completions can be reported are: Certificates of less than 12 weeks includes programs of less than 300 clock hours, or, Less than 9 SEMESTER or TRIMESTER credit hours, or Less than 13 QUARTER credit hours Certificates of at least 12 weeks but less than 1 year includes programs of 300-899 clock hours, or 9-29 SEMESTER or TRIMESTER credit hours, o"
+      },
+      "readiness": "partial_unit_unknown"
+    }
+  },
+  "calculation_validation": [
+    {
+      "label": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+      "operator": "percent",
+      "approved": true,
+      "input_record_ids": [
+        136599
+      ],
+      "denominator_record_id": 136602,
+      "evidence_record_ids": [
+        136599,
+        136602
+      ],
+      "reason": "Source population, row selection, period, units and relationship agree.",
+      "proof": {
+        "kind": "category_containment",
+        "axes": [
+          "gender"
+        ]
+      },
+      "unit": "percent",
+      "bounded_share": true
+    }
+  ],
+  "planning_validation": {
+    "preflight": {
+      "execution_eligible": true,
+      "blocks": [],
+      "normalization": [],
+      "calculation_validation": [
+        {
+          "label": "Percent of bachelor's degrees (first major, all fields) awarded to women",
+          "operator": "percent",
+          "approved": true,
+          "input_record_ids": [
+            136599
+          ],
+          "denominator_record_id": 136602,
+          "evidence_record_ids": [
+            136599,
+            136602
+          ],
+          "reason": "Source population, row selection, period, units and relationship agree.",
+          "proof": {
+            "kind": "category_containment",
+            "axes": [
+              "gender"
+            ]
+          },
+          "unit": "percent",
+          "bounded_share": true
+        }
+      ]
+    },
+    "repair_attempts": []
+  },
+  "coverage": {
+    "requested_cells": 1,
+    "available_cells": 1
+  },
+  "result_id": "f856b5599070ae7f",
+  "latency": {
+    "validation_seconds": 0.05337049998342991,
+    "query_seconds": 0.0057045999565161765,
+    "planning_and_binding_seconds": 17.112094399984926,
+    "answer_ready_seconds": 17.17224799998803,
+    "live_model_calls": 4,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+  }
+}

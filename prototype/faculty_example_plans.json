@@ -1,0 +1,233 @@
+{
+  "faculty-counts": {
+    "version": 2,
+    "institutions": [
+      "130794"
+    ],
+    "source_years": [
+      2024
+    ],
+    "sources": [
+      {
+        "id": "staff",
+        "year": 2024,
+        "table": "EAP2024",
+        "field_record_ids": [],
+        "filters": [
+          {
+            "record_id": 137672,
+            "operator": "eq",
+            "values": [
+              "21000"
+            ],
+            "code_record_ids": [
+              149032
+            ]
+          },
+          {
+            "record_id": 137673,
+            "operator": "eq",
+            "values": [
+              "210"
+            ],
+            "code_record_ids": [
+              149288
+            ]
+          },
+          {
+            "record_id": 137674,
+            "operator": "eq",
+            "values": [
+              "0"
+            ],
+            "code_record_ids": [
+              149317
+            ]
+          }
+        ],
+        "group_by_record_ids": [],
+        "aggregates": [
+          {
+            "id": "full_time",
+            "operator": "sum",
+            "record_id": 137678,
+            "weight_record_id": null
+          },
+          {
+            "id": "part_time",
+            "operator": "sum",
+            "record_id": 137681,
+            "weight_record_id": null
+          }
+        ]
+      }
+    ],
+    "joins": [],
+    "expressions": [],
+    "outputs": [
+      {
+        "reference": "astaff_full_time",
+        "label": "Full-time instructional staff"
+      },
+      {
+        "reference": "astaff_part_time",
+        "label": "Part-time instructional staff"
+      }
+    ],
+    "missing_policy": "propagate",
+    "time_basis": "source_period",
+    "assumptions": [
+      "Instructional staff total, with or without faculty status; includes medical-school instructional staff where reported. Full/part-time is the institution-defined employment status at the November 1 snapshot."
+    ],
+    "clarification_questions": []
+  },
+  "faculty-salaries": {
+    "version": 2,
+    "institutions": [
+      "130794",
+      "166027",
+      "186131"
+    ],
+    "source_years": [
+      2023
+    ],
+    "sources": [
+      {
+        "id": "salary",
+        "year": 2023,
+        "table": "SAL2023_IS",
+        "field_record_ids": [
+          122429
+        ],
+        "filters": [
+          {
+            "record_id": 122389,
+            "operator": "in",
+            "values": [
+              "1",
+              "2",
+              "3"
+            ],
+            "code_record_ids": [
+              135405,
+              135406,
+              135407
+            ]
+          }
+        ],
+        "group_by_record_ids": [
+          122389
+        ],
+        "aggregates": []
+      }
+    ],
+    "joins": [],
+    "expressions": [],
+    "outputs": [
+      {
+        "reference": "fsalary_122429",
+        "label": "Nine-month-equivalent average salary"
+      }
+    ],
+    "missing_policy": "propagate",
+    "time_basis": "source_period",
+    "assumptions": [
+      "Academic year 2023-24; full-time nonmedical instructional staff on 9-, 10-, 11- or 12-month appointments, using the source-reported nine-month-equivalent average base salary. Ranks are professor, associate professor and assistant professor. Salary outlays exclude supplements, overloads and bonuses."
+    ],
+    "clarification_questions": []
+  },
+  "faculty-changes": {
+    "version": 2,
+    "institutions": [
+      "130794"
+    ],
+    "source_years": [
+      2024
+    ],
+    "sources": [
+      {
+        "id": "staff",
+        "year": 2024,
+        "table": "EAP2024",
+        "field_record_ids": [],
+        "filters": [
+          {
+            "record_id": 137672,
+            "operator": "eq",
+            "values": [
+              "21000"
+            ],
+            "code_record_ids": [
+              149032
+            ]
+          },
+          {
+            "record_id": 137673,
+            "operator": "eq",
+            "values": [
+              "210"
+            ],
+            "code_record_ids": [
+              149288
+            ]
+          },
+          {
+            "record_id": 137674,
+            "operator": "eq",
+            "values": [
+              "0"
+            ],
+            "code_record_ids": [
+              149317
+            ]
+          }
+        ],
+        "group_by_record_ids": [],
+        "aggregates": [
+          {
+            "id": "full_time",
+            "operator": "sum",
+            "record_id": 137678,
+            "weight_record_id": null
+          },
+          {
+            "id": "part_time",
+            "operator": "sum",
+            "record_id": 137681,
+            "weight_record_id": null
+          }
+        ]
+      }
+    ],
+    "joins": [],
+    "expressions": [],
+    "outputs": [
+      {
+        "reference": "astaff_full_time",
+        "label": "Full-time instructional staff"
+      },
+      {
+        "reference": "astaff_part_time",
+        "label": "Part-time instructional staff"
+      }
+    ],
+    "missing_policy": "propagate",
+    "time_basis": "source_period",
+    "assumptions": [
+      "Instructional staff total, with or without faculty status; includes medical-school instructional staff where reported. Full/part-time is the institution-defined employment status at the November 1 snapshot."
+    ],
+    "clarification_questions": [],
+    "annual_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  }
+}

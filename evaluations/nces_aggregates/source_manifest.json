@@ -1,0 +1,5063 @@
+[
+  {
+    "q": 1,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q1-10-20-26 22-37.xlsx",
+    "sha256": "caca23219d5b39372f14b589fa3c20065f5e645fdc7c0716bf392908148a157a",
+    "sheet": "TrendGenerator",
+    "title": "Number of postsecondary institutions in the United States that award federal student aid",
+    "headers": [
+      "Academic Year",
+      "Number of postsecondary institutions"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to academic year 2010-11, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Institutional Characteristics component final data (2002-03 - 2024-25) and provisional data (2025-26)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2025-26",
+        "expected": 5581.0
+      },
+      {
+        "source_row": 7,
+        "period": "2024-25",
+        "expected": 5626.0
+      },
+      {
+        "source_row": 8,
+        "period": "2023-24",
+        "expected": 5686.0
+      },
+      {
+        "source_row": 9,
+        "period": "2022-23",
+        "expected": 5783.0
+      },
+      {
+        "source_row": 10,
+        "period": "2021-22",
+        "expected": 5839.0
+      },
+      {
+        "source_row": 11,
+        "period": "2020-21",
+        "expected": 5916.0
+      },
+      {
+        "source_row": 12,
+        "period": "2019-20",
+        "expected": 5999.0
+      },
+      {
+        "source_row": 13,
+        "period": "2018-19",
+        "expected": 6138.0
+      },
+      {
+        "source_row": 14,
+        "period": "2017-18",
+        "expected": 6502.0
+      },
+      {
+        "source_row": 15,
+        "period": "2016-17",
+        "expected": 6606.0
+      },
+      {
+        "source_row": 16,
+        "period": "2015-16",
+        "expected": 7021.0
+      },
+      {
+        "source_row": 17,
+        "period": "2014-15",
+        "expected": 7151.0
+      },
+      {
+        "source_row": 18,
+        "period": "2013-14",
+        "expected": 7236.0
+      },
+      {
+        "source_row": 19,
+        "period": "2012-13",
+        "expected": 7253.0
+      },
+      {
+        "source_row": 20,
+        "period": "2011-12",
+        "expected": 7234.0
+      },
+      {
+        "source_row": 21,
+        "period": "2010-11",
+        "expected": 7021.0
+      },
+      {
+        "source_row": 22,
+        "period": "2009-10",
+        "expected": 6742.0
+      },
+      {
+        "source_row": 23,
+        "period": "2008-09",
+        "expected": 6632.0
+      },
+      {
+        "source_row": 24,
+        "period": "2007-08",
+        "expected": 6551.0
+      },
+      {
+        "source_row": 25,
+        "period": "2006-07",
+        "expected": 6536.0
+      },
+      {
+        "source_row": 26,
+        "period": "2005-06",
+        "expected": 6463.0
+      },
+      {
+        "source_row": 27,
+        "period": "2004-05",
+        "expected": 6383.0
+      },
+      {
+        "source_row": 28,
+        "period": "2003-04",
+        "expected": 6412.0
+      },
+      {
+        "source_row": 29,
+        "period": "2002-03",
+        "expected": 6354.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 2,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q2-10-20-26 22-42.xlsx",
+    "sha256": "69fa003c0ac206644736e5e8fc685a01227d9a8411d2a38570e2b0cf765ae59d",
+    "sheet": "TrendGenerator",
+    "title": "Number of students enrolled in postsecondary institutions annually",
+    "headers": [
+      "Year",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "This is the unduplicated 12-month enrollment  at institutions from July 1 of one year through June 30 of the next. Prior to 2010-11, institutions could choose to report on the 12-month period between July 1 and June 30 or September 1 and August 31.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), 12-month Enrollment component final data (2001-02 - 2023-24) and provisional data (2024-25)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024-25",
+        "expected": 26632638.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023-24",
+        "expected": 25662076.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022-23",
+        "expected": 24936397.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021-22",
+        "expected": 24909164.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020-21",
+        "expected": 25349129.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019-20",
+        "expected": 26091786.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018-19",
+        "expected": 26322620.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017-18",
+        "expected": 26421008.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016-17",
+        "expected": 26706865.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015-16",
+        "expected": 26953976.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014-15",
+        "expected": 27410085.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013-14",
+        "expected": 27835916.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012-13",
+        "expected": 28300104.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011-12",
+        "expected": 29036155.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010-11",
+        "expected": 29507367.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009-10",
+        "expected": 28907440.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008-09",
+        "expected": 27253481.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007-09",
+        "expected": 25886779.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006-07",
+        "expected": 25043867.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005-06",
+        "expected": 24689847.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004-05",
+        "expected": 24475143.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003-04",
+        "expected": 24094265.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002-03",
+        "expected": 23793871.0
+      },
+      {
+        "source_row": 29,
+        "period": "2001-02",
+        "expected": 23010948.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 3,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q3-10-20-26 22-42.xlsx",
+    "sha256": "17dc47fcc7e1839025360013bff6bf984bd3a4480e37a91bcb457e3d31cc3032",
+    "sheet": "TrendGenerator",
+    "title": "Number of students enrolled in postsecondary institutions in the fall",
+    "headers": [
+      "Fall",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fall 2010, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component  final data (2002 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 20066904.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 19426353.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 18954628.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 19034838.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 19391922.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 19999916.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 20014723.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 20151151.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 20230012.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 20400164.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 20664180.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 20848050.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 21148181.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 21573798.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 21591742.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 20853423.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 19553784.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 18677469.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 18198370.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005",
+        "expected": 17908209.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004",
+        "expected": 17703635.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003",
+        "expected": 17330775.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002",
+        "expected": 17035027.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 4,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q4-10-20-26 22-42.xlsx",
+    "sha256": "5ee70621779a1dfb451464ff66a7b5c644cfb811de0e1fe3a9fe8ade3010b1b5",
+    "sheet": "TrendGenerator",
+    "title": "Number of degree-seeking undergraduate students enrolled in postsecondary institutions in the fall who are transfer-in students",
+    "headers": [
+      "Fall",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fall 2010, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component final data (2006 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 1277289.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 1237449.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 1183185.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 1231059.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 1249441.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 1360810.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 1392418.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 1369397.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 1363132.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 1423992.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 1473870.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 1481204.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 1523717.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 1547436.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 1537429.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 1460810.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 1355224.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 1176024.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 745744.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 5,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q5-10-20-26 22-42.xlsx",
+    "sha256": "26e6c7845551f6c0759d1df8439d96b66e2bfa0a278640dde1268fadcf427f61",
+    "sheet": "TrendGenerator",
+    "title": "Number of degree-seeking undergraduate students enrolled in postsecondary institutions for the first-time in the fall",
+    "headers": [
+      "Fall",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fall 2010, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component final data (2002 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 3066637.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 2962013.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 2864567.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 2782246.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 2713343.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 2975219.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 3002330.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 3009234.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 3014737.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 3021413.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 3082927.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 3156765.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 3176802.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 3299666.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 3371169.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 3369707.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 3217597.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 2959305.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 2921549.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005",
+        "expected": 2875841.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004",
+        "expected": 2907277.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003",
+        "expected": 2900552.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002",
+        "expected": 2913082.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 8,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q8-10-20-26 22-42.xlsx",
+    "sha256": "bc179613cdf675cb5274ce0be6a8d13ee7e860c84e1847a57f1a34ee280abe39",
+    "sheet": "TrendGenerator",
+    "title": "Number of students, by age category, enrolled in postsecondary institutions in the fall",
+    "headers": [
+      "Fall",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fall 2010, the data include only Title IV primarily postsecondary institutions. \nFall enrollment by age of student is collected annually, but institutions are required to respond only in odd-numbered years.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component final data (2003 - 2023)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2023",
+        "expected": 6269521.0
+      },
+      {
+        "source_row": 7,
+        "period": "2021",
+        "expected": 6423104.0
+      },
+      {
+        "source_row": 8,
+        "period": "2019",
+        "expected": 6692148.0
+      },
+      {
+        "source_row": 9,
+        "period": "2017",
+        "expected": 6932344.0
+      },
+      {
+        "source_row": 10,
+        "period": "2015",
+        "expected": 7336110.0
+      },
+      {
+        "source_row": 11,
+        "period": "2013",
+        "expected": 7882440.0
+      },
+      {
+        "source_row": 12,
+        "period": "2011",
+        "expected": 8542001.0
+      },
+      {
+        "source_row": 13,
+        "period": "2009",
+        "expected": 8157230.0
+      },
+      {
+        "source_row": 14,
+        "period": "2007",
+        "expected": 7063854.0
+      },
+      {
+        "source_row": 15,
+        "period": "2005",
+        "expected": 6872609.0
+      },
+      {
+        "source_row": 16,
+        "period": "2003",
+        "expected": 6730506.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 12,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q12-10-20-26 22-49.xlsx",
+    "sha256": "aad23e4545b9b4f68c07a9369106e10c9784a4a1e3e669197cc11e2216202d66",
+    "sheet": "TrendGenerator",
+    "title": "Number of full-time instructional staff are employed by degree-granting postsecondary institutions",
+    "headers": [
+      "Fall",
+      "Number of full-time instructional staff "
+    ],
+    "notes": [
+      "This table presents data collected from Title IV degree-granting institutions in the United States. Prior to Fall 2010, the data include only Title IV degree-granting primarily postsecondary institutions.",
+      "The data do not include medical school staff, instructional staff on less-than-9-month employment agreements/contract length.\nInstructional staff from administrative offices are not included.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Human Resources component final data (fall 2002 - 2023) and provisional data (fall 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 624689.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 619601.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 617392.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 616306.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 621550.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 633404.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 629994.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 625869.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 623141.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 620394.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 618677.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 612852.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 603805.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 599454.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 593929.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 584061.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 578119.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 564633.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 552554.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005",
+        "expected": 539960.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004",
+        "expected": 530030.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003",
+        "expected": 521039.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002",
+        "expected": 514943.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 13,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q13-10-20-26 22-48.xlsx",
+    "sha256": "67172de32d2192d569cfdc5d348608c76ded25eb3bb5eb9b4ee8ea4f8c419201",
+    "sheet": "TrendGenerator",
+    "title": "Revenues (in thousands) of public postsecondary institutions using GASB standards",
+    "headers": [
+      "Fiscal year",
+      "Revenues (in thousands)"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fiscal year 2010, the data include only Title IV primarily postsecondary institutions.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Finance component  final data (fiscal years 2004 - 2023) and provisional data (fiscal year 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 553403556.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 502733755.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 462628660.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 485568576.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 415306328.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 402775285.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 395766344.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 378252047.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 353989113.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 336749895.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 342163868.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 317862048.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 308878597.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 314982581.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 295147543.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 261561140.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 266546301.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 262104425.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 240696231.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005",
+        "expected": 229511311.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004",
+        "expected": 218786585.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 15,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q15-10-20-26 22-48.xlsx",
+    "sha256": "068bc779d1d8bfa33d0f41b93d1191a0bdd998ff0989957a063afa53cc954982",
+    "sheet": "TrendGenerator",
+    "title": "Revenues (in thousands) of private not-for-profit postsecondary institutions using FASB standards",
+    "headers": [
+      "Fiscal year",
+      "Revenues (in thousands)"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fiscal year 2010, the data include only Title IV primarily postsecondary institutions.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Finance component  final data (fiscal years 2002 - 2023) and provisional data (fiscal year 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 327348748.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 274900961.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 220394546.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 409095682.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 237218947.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 242374880.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 248647523.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 242887679.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 182866465.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 200715978.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 229087451.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 202326911.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 162132845.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 207440802.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 168977368.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 69299684.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 139543329.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 182884794.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 153495686.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005",
+        "expected": 140844754.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004",
+        "expected": 134984584.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003",
+        "expected": 108047067.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002",
+        "expected": 85308122.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 17,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q17-10-20-26 22-48.xlsx",
+    "sha256": "ca4a7bf8072ee0262cdef7d79b217152dcd6c4969a156f1f5ab94465e67f25a2",
+    "sheet": "TrendGenerator",
+    "title": "Revenues (in thousands) of private for-profit postsecondary institutions using FASB standards",
+    "headers": [
+      "Fiscal year",
+      "Revenues (in thousands)"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fiscal year 2010, the data include only Title IV primarily postsecondary institutions.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Finance component  final data (fiscal years 2002 - 2023) and provisional data (fiscal year 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 20101654.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 18346027.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 18054543.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 17836887.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 17509269.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 17373219.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 16762091.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 19446618.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 20804128.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 24007022.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 27310167.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 29643714.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 32196111.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 33889758.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 29603059.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 23433890.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 20006524.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 17623604.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 15985493.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005",
+        "expected": 14245253.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004",
+        "expected": 11812470.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003",
+        "expected": 9954657.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002",
+        "expected": 8664743.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 19,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q19-10-20-26 22-45.xlsx",
+    "sha256": "7f923394dfe290b9467abdd9f0771179d0fab6889feb80d3a1ad5bdd7511a331",
+    "sheet": "TrendGenerator",
+    "title": "Graduation rate within 150% of normal time at 4-year postsecondary institutions",
+    "headers": [
+      "Cohort Year",
+      "Graduation rate"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to cohort year 2004, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Graduation Rates component  final data (2002 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2018",
+        "expected": 0.61
+      },
+      {
+        "source_row": 7,
+        "period": "2017",
+        "expected": 0.61
+      },
+      {
+        "source_row": 8,
+        "period": "2016",
+        "expected": 0.611
+      },
+      {
+        "source_row": 9,
+        "period": "2015",
+        "expected": 0.609
+      },
+      {
+        "source_row": 10,
+        "period": "2014",
+        "expected": 0.601
+      },
+      {
+        "source_row": 11,
+        "period": "2013",
+        "expected": 0.595
+      },
+      {
+        "source_row": 12,
+        "period": "2012",
+        "expected": 0.586
+      },
+      {
+        "source_row": 13,
+        "period": "2011",
+        "expected": 0.555
+      },
+      {
+        "source_row": 14,
+        "period": "2010",
+        "expected": 0.547
+      },
+      {
+        "source_row": 15,
+        "period": "2009",
+        "expected": 0.5379999999999999
+      },
+      {
+        "source_row": 16,
+        "period": "2008",
+        "expected": 0.544
+      },
+      {
+        "source_row": 17,
+        "period": "2007",
+        "expected": 0.552
+      },
+      {
+        "source_row": 18,
+        "period": "2006",
+        "expected": 0.557
+      },
+      {
+        "source_row": 19,
+        "period": "2005",
+        "expected": 0.5529999999999999
+      },
+      {
+        "source_row": 20,
+        "period": "2004",
+        "expected": 0.552
+      },
+      {
+        "source_row": 21,
+        "period": "2003",
+        "expected": 0.5579999999999999
+      },
+      {
+        "source_row": 22,
+        "period": "2002",
+        "expected": 0.56
+      },
+      {
+        "source_row": 23,
+        "period": "2001",
+        "expected": 0.561
+      },
+      {
+        "source_row": 24,
+        "period": "2000",
+        "expected": 0.564
+      },
+      {
+        "source_row": 25,
+        "period": "1999",
+        "expected": 0.5589999999999999
+      },
+      {
+        "source_row": 26,
+        "period": "1998",
+        "expected": 0.5529999999999999
+      },
+      {
+        "source_row": 27,
+        "period": "1997",
+        "expected": 0.5429999999999999
+      },
+      {
+        "source_row": 28,
+        "period": "1996",
+        "expected": 0.544
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 20,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q20-10-20-26 22-45.xlsx",
+    "sha256": "ad123ce7436e68acd6f8eb9f01a0ab61857f0122bb2b1538cee1831c3224fd45",
+    "sheet": "TrendGenerator",
+    "title": "Graduation rate within 150% of normal time for bachelor's or equivalent degree-seeking undergraduate students who received a bachelor’s or equivalent degree at 4-year postsecondary institutions.",
+    "headers": [
+      "Cohort Year",
+      "Graduation rate"
+    ],
+    "notes": [
+      "For 4-year institutions, 150% of normal time is equivalent to taking 6 years to complete the bachelor’s degree or equivalent.",
+      "This table presents data collected from Title IV institutions in the United States. Prior to cohort year 2004, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Graduation Rates component  final data (2002 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2018",
+        "expected": 0.648
+      },
+      {
+        "source_row": 7,
+        "period": "2017",
+        "expected": 0.6459999999999999
+      },
+      {
+        "source_row": 8,
+        "period": "2016",
+        "expected": 0.6459999999999999
+      },
+      {
+        "source_row": 9,
+        "period": "2015",
+        "expected": 0.6459999999999999
+      },
+      {
+        "source_row": 10,
+        "period": "2014",
+        "expected": 0.64
+      },
+      {
+        "source_row": 11,
+        "period": "2013",
+        "expected": 0.634
+      },
+      {
+        "source_row": 12,
+        "period": "2012",
+        "expected": 0.624
+      },
+      {
+        "source_row": 13,
+        "period": "2011",
+        "expected": 0.604
+      },
+      {
+        "source_row": 14,
+        "period": "2010",
+        "expected": 0.597
+      },
+      {
+        "source_row": 15,
+        "period": "2009",
+        "expected": 0.594
+      },
+      {
+        "source_row": 16,
+        "period": "2008",
+        "expected": 0.596
+      },
+      {
+        "source_row": 17,
+        "period": "2007",
+        "expected": 0.594
+      },
+      {
+        "source_row": 18,
+        "period": "2006",
+        "expected": 0.5920000000000001
+      },
+      {
+        "source_row": 19,
+        "period": "2005",
+        "expected": 0.586
+      },
+      {
+        "source_row": 20,
+        "period": "2004",
+        "expected": 0.584
+      },
+      {
+        "source_row": 21,
+        "period": "2003",
+        "expected": 0.578
+      },
+      {
+        "source_row": 22,
+        "period": "2002",
+        "expected": 0.574
+      },
+      {
+        "source_row": 23,
+        "period": "2001",
+        "expected": 0.574
+      },
+      {
+        "source_row": 24,
+        "period": "2000",
+        "expected": 0.5760000000000001
+      },
+      {
+        "source_row": 25,
+        "period": "1999",
+        "expected": 0.5710000000000001
+      },
+      {
+        "source_row": 26,
+        "period": "1998",
+        "expected": 0.564
+      },
+      {
+        "source_row": 27,
+        "period": "1997",
+        "expected": 0.56
+      },
+      {
+        "source_row": 28,
+        "period": "1996",
+        "expected": 0.5539999999999999
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 21,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q21-10-20-26 22-46.xlsx",
+    "sha256": "6d79db5b876bfcb8ca220a5191621c91559c7f3404dfbce6db463deed02aaa9b",
+    "sheet": "TrendGenerator",
+    "title": "Graduation rate within 150% of normal time at 2-year postsecondary institutions",
+    "headers": [
+      "Cohort Year",
+      "Graduation rate"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to cohort year 2007, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Graduation Rates component  final data (2002 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2021",
+        "expected": 0.42700000000000005
+      },
+      {
+        "source_row": 7,
+        "period": "2020",
+        "expected": 0.39399999999999996
+      },
+      {
+        "source_row": 8,
+        "period": "2019",
+        "expected": 0.355
+      },
+      {
+        "source_row": 9,
+        "period": "2018",
+        "expected": 0.363
+      },
+      {
+        "source_row": 10,
+        "period": "2017",
+        "expected": 0.359
+      },
+      {
+        "source_row": 11,
+        "period": "2016",
+        "expected": 0.349
+      },
+      {
+        "source_row": 12,
+        "period": "2015",
+        "expected": 0.34600000000000003
+      },
+      {
+        "source_row": 13,
+        "period": "2014",
+        "expected": 0.33799999999999997
+      },
+      {
+        "source_row": 14,
+        "period": "2013",
+        "expected": 0.32799999999999996
+      },
+      {
+        "source_row": 15,
+        "period": "2012",
+        "expected": 0.315
+      },
+      {
+        "source_row": 16,
+        "period": "2011",
+        "expected": 0.306
+      },
+      {
+        "source_row": 17,
+        "period": "2010",
+        "expected": 0.319
+      },
+      {
+        "source_row": 18,
+        "period": "2009",
+        "expected": 0.33299999999999996
+      },
+      {
+        "source_row": 19,
+        "period": "2008",
+        "expected": 0.34
+      },
+      {
+        "source_row": 20,
+        "period": "2007",
+        "expected": 0.33
+      },
+      {
+        "source_row": 21,
+        "period": "2006",
+        "expected": 0.316
+      },
+      {
+        "source_row": 22,
+        "period": "2005",
+        "expected": 0.306
+      },
+      {
+        "source_row": 23,
+        "period": "2004",
+        "expected": 0.309
+      },
+      {
+        "source_row": 24,
+        "period": "2003",
+        "expected": 0.32299999999999995
+      },
+      {
+        "source_row": 25,
+        "period": "2002",
+        "expected": 0.325
+      },
+      {
+        "source_row": 26,
+        "period": "2001",
+        "expected": 0.326
+      },
+      {
+        "source_row": 27,
+        "period": "2000",
+        "expected": 0.33399999999999996
+      },
+      {
+        "source_row": 28,
+        "period": "1999",
+        "expected": 0.32
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 22,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q22-10-20-26 22-46.xlsx",
+    "sha256": "be8b72984c97a506c27e63110b781bac761b969aa3832fc0b7374d839d28eb9d",
+    "sheet": "TrendGenerator",
+    "title": "Graduation rate within 150% of normal time at less-than 2-year postsecondary institutions",
+    "headers": [
+      "Cohort Year",
+      "Graduation rate"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to cohort year 2007, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Graduation Rates component  final data (2002 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2021",
+        "expected": 0.7120000000000001
+      },
+      {
+        "source_row": 7,
+        "period": "2020",
+        "expected": 0.684
+      },
+      {
+        "source_row": 8,
+        "period": "2019",
+        "expected": 0.652
+      },
+      {
+        "source_row": 9,
+        "period": "2018",
+        "expected": 0.6859999999999999
+      },
+      {
+        "source_row": 10,
+        "period": "2017",
+        "expected": 0.693
+      },
+      {
+        "source_row": 11,
+        "period": "2016",
+        "expected": 0.687
+      },
+      {
+        "source_row": 12,
+        "period": "2015",
+        "expected": 0.6890000000000001
+      },
+      {
+        "source_row": 13,
+        "period": "2014",
+        "expected": 0.693
+      },
+      {
+        "source_row": 14,
+        "period": "2013",
+        "expected": 0.6920000000000001
+      },
+      {
+        "source_row": 15,
+        "period": "2012",
+        "expected": 0.6829999999999999
+      },
+      {
+        "source_row": 16,
+        "period": "2011",
+        "expected": 0.664
+      },
+      {
+        "source_row": 17,
+        "period": "2010",
+        "expected": 0.664
+      },
+      {
+        "source_row": 18,
+        "period": "2009",
+        "expected": 0.6679999999999999
+      },
+      {
+        "source_row": 19,
+        "period": "2008",
+        "expected": 0.665
+      },
+      {
+        "source_row": 20,
+        "period": "2007",
+        "expected": 0.669
+      },
+      {
+        "source_row": 21,
+        "period": "2006",
+        "expected": 0.6709999999999999
+      },
+      {
+        "source_row": 22,
+        "period": "2005",
+        "expected": 0.672
+      },
+      {
+        "source_row": 23,
+        "period": "2004",
+        "expected": 0.6609999999999999
+      },
+      {
+        "source_row": 24,
+        "period": "2003",
+        "expected": 0.664
+      },
+      {
+        "source_row": 25,
+        "period": "2002",
+        "expected": 0.68
+      },
+      {
+        "source_row": 26,
+        "period": "2001",
+        "expected": 0.6609999999999999
+      },
+      {
+        "source_row": 27,
+        "period": "2000",
+        "expected": 0.6609999999999999
+      },
+      {
+        "source_row": 28,
+        "period": "1999",
+        "expected": 0.672
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 24,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q24-10-20-26 22-43.xlsx",
+    "sha256": "a7ae96379738262c4426be70a8612df81ae508c285c042ae396383f10f4b2471",
+    "sheet": "TrendGenerator",
+    "title": "Number of degrees/certificates awarded at postsecondary institutions",
+    "headers": [
+      "Completion Year",
+      "Number of degrees/certificates"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Completions component final data (2001-02 - 2023-24) and provisional data (2024-25)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024-25",
+        "expected": 5612257.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023-24",
+        "expected": 5365113.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022-23",
+        "expected": 5218948.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021-22",
+        "expected": 5239442.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020-21",
+        "expected": 5242994.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019-20",
+        "expected": 5137005.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018-19",
+        "expected": 5144436.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017-18",
+        "expected": 5020910.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016-17",
+        "expected": 4956075.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015-16",
+        "expected": 4892308.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014-15",
+        "expected": 4863935.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013-14",
+        "expected": 4832282.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012-13",
+        "expected": 4793988.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011-12",
+        "expected": 4782571.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010-11",
+        "expected": 4637322.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009-10",
+        "expected": 4336631.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008-09",
+        "expected": 4056528.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007-08",
+        "expected": 3882397.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006-07",
+        "expected": 3775360.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005-06",
+        "expected": 3689764.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004-05",
+        "expected": 3596860.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003-04",
+        "expected": 3477476.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002-03",
+        "expected": 3297453.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 25,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q25-10-20-26 22-47.xlsx",
+    "sha256": "b355d644083695a368914d05fe31ec1d71ed0711da99ff5e369f3c3f0a7c08b1",
+    "sheet": "TrendGenerator",
+    "title": "Number of full-time, first-time students receiving financial aid",
+    "headers": [
+      "Aid year",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "Prior to academic year 2010-11, the data represents students receiving aid rather than students awarded aid. Students awarded loan aid are included if they accepted that aid. Students awarded grant/scholarship aid are included even if that aid was not accepted. Students receiving aid were included if the awarded aid was disbursed.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Student Financial Aid component final data (2001-02 - 2022-23) and provisional data (2023-24)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2023-24",
+        "expected": 2213974.0
+      },
+      {
+        "source_row": 7,
+        "period": "2022-23",
+        "expected": 2151237.0
+      },
+      {
+        "source_row": 8,
+        "period": "2021-22",
+        "expected": 2144383.0
+      },
+      {
+        "source_row": 9,
+        "period": "2020-21",
+        "expected": 2077473.0
+      },
+      {
+        "source_row": 10,
+        "period": "2019-20",
+        "expected": 2252559.0
+      },
+      {
+        "source_row": 11,
+        "period": "2018-19",
+        "expected": 2234055.0
+      },
+      {
+        "source_row": 12,
+        "period": "2017-18",
+        "expected": 2227576.0
+      },
+      {
+        "source_row": 13,
+        "period": "2016-17",
+        "expected": 2245092.0
+      },
+      {
+        "source_row": 14,
+        "period": "2015-16",
+        "expected": 2221978.0
+      },
+      {
+        "source_row": 15,
+        "period": "2014-15",
+        "expected": 2278686.0
+      },
+      {
+        "source_row": 16,
+        "period": "2013-14",
+        "expected": 2322078.0
+      },
+      {
+        "source_row": 17,
+        "period": "2012-13",
+        "expected": 2341720.0
+      },
+      {
+        "source_row": 18,
+        "period": "2011-12",
+        "expected": 2445878.0
+      },
+      {
+        "source_row": 19,
+        "period": "2010-11",
+        "expected": 2536189.0
+      },
+      {
+        "source_row": 20,
+        "period": "2009-10",
+        "expected": 2713619.0
+      },
+      {
+        "source_row": 21,
+        "period": "2008-09",
+        "expected": 2317678.0
+      },
+      {
+        "source_row": 22,
+        "period": "2007-08",
+        "expected": 2222747.0
+      },
+      {
+        "source_row": 23,
+        "period": "2006-07",
+        "expected": 2033662.0
+      },
+      {
+        "source_row": 24,
+        "period": "2005-06",
+        "expected": 2025042.0
+      },
+      {
+        "source_row": 25,
+        "period": "2004-05",
+        "expected": 1975237.0
+      },
+      {
+        "source_row": 26,
+        "period": "2003-04",
+        "expected": 1901393.0
+      },
+      {
+        "source_row": 27,
+        "period": "2002-03",
+        "expected": 1838722.0
+      },
+      {
+        "source_row": 28,
+        "period": "2001-02",
+        "expected": 1737303.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 30,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q30-10-20-26 22-49.xlsx",
+    "sha256": "c201e59e72b3426a7c1caec46f4f9ca92fd7d02b13abdcfe4ef00bfb2e13e7ae",
+    "sheet": "TrendGenerator",
+    "title": "Number of people employed by postsecondary institutions",
+    "headers": [
+      "Fall",
+      "Number of people"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV degree-granting institutions in the United States. Prior to Fall 2010, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Human Resources component final data (fall 2002 - 2023) and provisional data (fall 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 4114069.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 4027816.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 3932874.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 3873739.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 3868066.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 4023596.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 3986129.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 3979018.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 3970842.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 3981632.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 4128462.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 3969226.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 3967124.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 3921675.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 3893998.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 3795744.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 3709484.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 3631229.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 3536766.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005",
+        "expected": 3452678.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004",
+        "expected": 3335869.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003",
+        "expected": 3252226.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002",
+        "expected": 3212196.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 32,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q32-10-20-26 22-46.xlsx",
+    "sha256": "fede2edc71d7e749d8acd2b6e9ee2a6704c6b2f02d4683124b9d7d25b14c920f",
+    "sheet": "TrendGenerator",
+    "title": "Full-time retention rate in postsecondary institutions",
+    "headers": [
+      "Fall",
+      "Full-time retention rate"
+    ],
+    "notes": [
+      "For 4-year institutions, retention rate is the percentage of full-time, first-time bachelor's (or equivalent) degree-seeking undergraduates from the previous fall who are again enrolled in the current fall. For all other institutions retention rate is the percentage of full-time, first-time, degree/certificate-seeking undergraduates from the previous fall who are again enrolled in the current fall.",
+      "This table presents data collected from Title IV postsecondary institutions in the United States. Prior to Fall 2010, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component final data (2007 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 0.779
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 0.775
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 0.7659999999999999
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 0.755
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 0.757
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 0.76
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 0.755
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 0.754
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 0.7509999999999999
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 0.7440000000000001
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 0.738
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 0.7290000000000001
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 0.718
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 0.7170000000000001
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 0.7190000000000001
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 0.7190000000000001
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 0.7170000000000001
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 0.711
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 33,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q33-10-20-26 22-46.xlsx",
+    "sha256": "30896d835ccc0582cab9d0b5cd384155750b1225d5810f216c570663ced43a44",
+    "sheet": "TrendGenerator",
+    "title": "Part-time retention rate in postsecondary institutions",
+    "headers": [
+      "Fall",
+      "Part-time retention rate"
+    ],
+    "notes": [
+      "For 4-year institutions, retention rate is the percentage of part-time, first-time bachelor's (or equivalent) degree-seeking undergraduates from the previous fall who are again enrolled in the current fall. For all other institutions retention rate is the percentage of part-time, first-time degree/certificate-seeking undergraduates from the previous fall who are again enrolled in the current fall.",
+      "This table presents data collected from Title IV postsecondary institutions in the United States. Prior to Fall 2010, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component final data (2007 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 0.469
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 0.465
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 0.45799999999999996
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 0.449
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 0.435
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 0.465
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 0.465
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 0.465
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 0.46
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 0.449
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 0.449
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 0.444
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 0.436
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 0.433
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 0.43799999999999994
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 0.426
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 0.42700000000000005
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 0.429
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 34,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q34-10-20-26 22-47.xlsx",
+    "sha256": "5f3f65cee317cfd49f18eb9096afa9aaecf232d56e164f68f8997727bb26c280",
+    "sheet": "TrendGenerator",
+    "title": "Percent of full-time, first-time students receiving financial aid",
+    "headers": [
+      "Year",
+      "Percent of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "Prior to academic year 2010-11, the data represents students receiving aid rather than students awarded aid. Students awarded loan aid are included if they accepted that aid. Students awarded grant/scholarship aid are included even if that aid was not accepted. Students receiving aid were included if the awarded aid was disbursed.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Student Financial Aid component final data (2001-02 - 2022-23) and provisional data (2023-24)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2023-24",
+        "expected": 0.851
+      },
+      {
+        "source_row": 7,
+        "period": "2022-23",
+        "expected": 0.852
+      },
+      {
+        "source_row": 8,
+        "period": "2021-22",
+        "expected": 0.868
+      },
+      {
+        "source_row": 9,
+        "period": "2020-21",
+        "expected": 0.853
+      },
+      {
+        "source_row": 10,
+        "period": "2019-20",
+        "expected": 0.852
+      },
+      {
+        "source_row": 11,
+        "period": "2018-19",
+        "expected": 0.836
+      },
+      {
+        "source_row": 12,
+        "period": "2017-18",
+        "expected": 0.8320000000000001
+      },
+      {
+        "source_row": 13,
+        "period": "2016-17",
+        "expected": 0.825
+      },
+      {
+        "source_row": 14,
+        "period": "2015-16",
+        "expected": 0.825
+      },
+      {
+        "source_row": 15,
+        "period": "2014-15",
+        "expected": 0.8340000000000001
+      },
+      {
+        "source_row": 16,
+        "period": "2013-14",
+        "expected": 0.83
+      },
+      {
+        "source_row": 17,
+        "period": "2012-13",
+        "expected": 0.8290000000000001
+      },
+      {
+        "source_row": 18,
+        "period": "2011-12",
+        "expected": 0.8340000000000001
+      },
+      {
+        "source_row": 19,
+        "period": "2010-11",
+        "expected": 0.826
+      },
+      {
+        "source_row": 20,
+        "period": "2009-10",
+        "expected": 0.8170000000000001
+      },
+      {
+        "source_row": 21,
+        "period": "2008-09",
+        "expected": 0.782
+      },
+      {
+        "source_row": 22,
+        "period": "2007-08",
+        "expected": 0.763
+      },
+      {
+        "source_row": 23,
+        "period": "2006-07",
+        "expected": 0.733
+      },
+      {
+        "source_row": 24,
+        "period": "2005-06",
+        "expected": 0.753
+      },
+      {
+        "source_row": 25,
+        "period": "2004-05",
+        "expected": 0.7509999999999999
+      },
+      {
+        "source_row": 26,
+        "period": "2003-04",
+        "expected": 0.741
+      },
+      {
+        "source_row": 27,
+        "period": "2002-03",
+        "expected": 0.73
+      },
+      {
+        "source_row": 28,
+        "period": "2001-02",
+        "expected": 0.727
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 35,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q35-10-20-26 22-47.xlsx",
+    "sha256": "1617873293ee57faa34101e0702c0b1663c5311822f1f4bf6cb7a7c1e76d9a07",
+    "sheet": "TrendGenerator",
+    "title": "Percent of undergraduate students receiving Pell grants",
+    "headers": [
+      "Year",
+      "Percent of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "Prior to academic year 2010-11, the data represents students receiving aid rather than students awarded aid. Students awarded grant/scholarship aid are included even if that aid was not accepted. Students receiving aid were included if the awarded aid was disbursed.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Student Financial Aid component final data (2001-02 - 2022-23) and provisional data (2023-24)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2023-24",
+        "expected": 0.324
+      },
+      {
+        "source_row": 7,
+        "period": "2022-23",
+        "expected": 0.316
+      },
+      {
+        "source_row": 8,
+        "period": "2021-22",
+        "expected": 0.32
+      },
+      {
+        "source_row": 9,
+        "period": "2020-21",
+        "expected": 0.322
+      },
+      {
+        "source_row": 10,
+        "period": "2019-20",
+        "expected": 0.336
+      },
+      {
+        "source_row": 11,
+        "period": "2018-19",
+        "expected": 0.34
+      },
+      {
+        "source_row": 12,
+        "period": "2017-18",
+        "expected": 0.348
+      },
+      {
+        "source_row": 13,
+        "period": "2016-17",
+        "expected": 0.349
+      },
+      {
+        "source_row": 14,
+        "period": "2015-16",
+        "expected": 0.36200000000000004
+      },
+      {
+        "source_row": 15,
+        "period": "2014-15",
+        "expected": 0.385
+      },
+      {
+        "source_row": 16,
+        "period": "2013-14",
+        "expected": 0.39299999999999996
+      },
+      {
+        "source_row": 17,
+        "period": "2012-13",
+        "expected": 0.39799999999999996
+      },
+      {
+        "source_row": 18,
+        "period": "2011-12",
+        "expected": 0.406
+      },
+      {
+        "source_row": 19,
+        "period": "2010-11",
+        "expected": 0.39399999999999996
+      },
+      {
+        "source_row": 20,
+        "period": "2009-10",
+        "expected": 0.349
+      },
+      {
+        "source_row": 21,
+        "period": "2008-09",
+        "expected": 0.284
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 36,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q36-10-20-26 22-48.xlsx",
+    "sha256": "0fdb4a1f4642625e496b689ff6fbb6fbc68af4b21337b13e7264093b221eedb3",
+    "sheet": "TrendGenerator",
+    "title": "Average amount of Pell grants for undergraduate students",
+    "headers": [
+      "Year",
+      "Average amount"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "Amounts displayed are in current dollars.",
+      "Prior to academic year 2010-11, the data represents students receiving aid rather than students awarded aid. Students awarded grant/scholarship aid are included even if that aid was not accepted. Students receiving aid were included if the awarded aid was disbursed.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Student Financial Aid component final data (2001-02 - 2022-23) and provisional data (2023-24)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2023-24",
+        "expected": 5300.0
+      },
+      {
+        "source_row": 7,
+        "period": "2022-23",
+        "expected": 4876.0
+      },
+      {
+        "source_row": 8,
+        "period": "2021-22",
+        "expected": 4600.0
+      },
+      {
+        "source_row": 9,
+        "period": "2020-21",
+        "expected": 4569.0
+      },
+      {
+        "source_row": 10,
+        "period": "2019-20",
+        "expected": 4495.0
+      },
+      {
+        "source_row": 11,
+        "period": "2018-19",
+        "expected": 4416.0
+      },
+      {
+        "source_row": 12,
+        "period": "2017-18",
+        "expected": 4271.0
+      },
+      {
+        "source_row": 13,
+        "period": "2016-17",
+        "expected": 4046.0
+      },
+      {
+        "source_row": 14,
+        "period": "2015-16",
+        "expected": 4026.0
+      },
+      {
+        "source_row": 15,
+        "period": "2014-15",
+        "expected": 3973.0
+      },
+      {
+        "source_row": 16,
+        "period": "2013-14",
+        "expected": 3946.0
+      },
+      {
+        "source_row": 17,
+        "period": "2012-13",
+        "expected": 3884.0
+      },
+      {
+        "source_row": 18,
+        "period": "2011-12",
+        "expected": 3861.0
+      },
+      {
+        "source_row": 19,
+        "period": "2010-11",
+        "expected": 4057.0
+      },
+      {
+        "source_row": 20,
+        "period": "2009-10",
+        "expected": 3975.0
+      },
+      {
+        "source_row": 21,
+        "period": "2008-09",
+        "expected": 3210.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 37,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q37-10-20-26 22-48.xlsx",
+    "sha256": "eded7d58e1f253cf7cd0174d7d82544ecd116f5dd4a873db14a63bc538d96a01",
+    "sheet": "TrendGenerator",
+    "title": "Percent of undergraduate students receiving federal student loans",
+    "headers": [
+      "Year",
+      "Percent of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "Prior to academic year 2010-11, the data represents students receiving aid rather than students awarded aid. Students awarded loan aid are included if they accepted that aid. Students receiving aid were included if the awarded aid was disbursed.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Student Financial Aid component final data (2001-02 - 2022-23) and provisional data (2023-24)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2023-24",
+        "expected": 0.278
+      },
+      {
+        "source_row": 7,
+        "period": "2022-23",
+        "expected": 0.28600000000000003
+      },
+      {
+        "source_row": 8,
+        "period": "2021-22",
+        "expected": 0.292
+      },
+      {
+        "source_row": 9,
+        "period": "2020-21",
+        "expected": 0.301
+      },
+      {
+        "source_row": 10,
+        "period": "2019-20",
+        "expected": 0.318
+      },
+      {
+        "source_row": 11,
+        "period": "2018-19",
+        "expected": 0.32899999999999996
+      },
+      {
+        "source_row": 12,
+        "period": "2017-18",
+        "expected": 0.342
+      },
+      {
+        "source_row": 13,
+        "period": "2016-17",
+        "expected": 0.358
+      },
+      {
+        "source_row": 14,
+        "period": "2015-16",
+        "expected": 0.365
+      },
+      {
+        "source_row": 15,
+        "period": "2014-15",
+        "expected": 0.38299999999999995
+      },
+      {
+        "source_row": 16,
+        "period": "2013-14",
+        "expected": 0.396
+      },
+      {
+        "source_row": 17,
+        "period": "2012-13",
+        "expected": 0.41
+      },
+      {
+        "source_row": 18,
+        "period": "2011-12",
+        "expected": 0.415
+      },
+      {
+        "source_row": 19,
+        "period": "2010-11",
+        "expected": 0.402
+      },
+      {
+        "source_row": 20,
+        "period": "2009-10",
+        "expected": 0.397
+      },
+      {
+        "source_row": 21,
+        "period": "2008-09",
+        "expected": 0.371
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 38,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q38-10-20-26 22-48.xlsx",
+    "sha256": "f950451577c556d34e13725799f8482eea81682db28b7921976b381a0d0f0526",
+    "sheet": "TrendGenerator",
+    "title": "Average amount of federal student loans received by undergraduate students",
+    "headers": [
+      "Year",
+      "Average amount "
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "Amounts displayed are in current dollars.",
+      "Prior to academic year 2010-11, the data represents students receiving aid rather than students awarded aid. Students awarded loan aid are included if they accepted that aid. Students receiving aid were included if the awarded aid was disbursed.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Student Financial Aid component final data (2001-02 - 2022-23) and provisional data (2023-24)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2023-24",
+        "expected": 6670.0
+      },
+      {
+        "source_row": 7,
+        "period": "2022-23",
+        "expected": 6575.0
+      },
+      {
+        "source_row": 8,
+        "period": "2021-22",
+        "expected": 6590.0
+      },
+      {
+        "source_row": 9,
+        "period": "2020-21",
+        "expected": 6597.0
+      },
+      {
+        "source_row": 10,
+        "period": "2019-20",
+        "expected": 6632.0
+      },
+      {
+        "source_row": 11,
+        "period": "2018-19",
+        "expected": 6629.0
+      },
+      {
+        "source_row": 12,
+        "period": "2017-18",
+        "expected": 6688.0
+      },
+      {
+        "source_row": 13,
+        "period": "2016-17",
+        "expected": 6713.0
+      },
+      {
+        "source_row": 14,
+        "period": "2015-16",
+        "expected": 6774.0
+      },
+      {
+        "source_row": 15,
+        "period": "2014-15",
+        "expected": 6827.0
+      },
+      {
+        "source_row": 16,
+        "period": "2013-14",
+        "expected": 6890.0
+      },
+      {
+        "source_row": 17,
+        "period": "2012-13",
+        "expected": 6914.0
+      },
+      {
+        "source_row": 18,
+        "period": "2011-12",
+        "expected": 6912.0
+      },
+      {
+        "source_row": 19,
+        "period": "2010-11",
+        "expected": 6956.0
+      },
+      {
+        "source_row": 20,
+        "period": "2009-10",
+        "expected": 7125.0
+      },
+      {
+        "source_row": 21,
+        "period": "2008-09",
+        "expected": 6880.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 39,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q39-10-20-26 22-48.xlsx",
+    "sha256": "2b178c5c13b6dcca247b32c995d3a40f4640dc2b24bde3cda446d75949122df3",
+    "sheet": "TrendGenerator",
+    "title": "Expenses (in thousands) of public postsecondary institutions using GASB standards",
+    "headers": [
+      "Fiscal year",
+      "Expenses (in thousands)"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Finance component  final data ( fiscal years 2010 - 2023) and provisional data (fiscal year 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 499543441.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 463562574.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 440467132.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 407105074.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 406201119.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 388910806.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 374909469.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 360815833.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 344383853.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 325906087.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 314790211.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 302689450.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 297093995.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 288955697.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 274056414.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 40,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q40-10-20-26 22-48.xlsx",
+    "sha256": "24a4f1e2a21ce20a44487b051705acccf3bdf82cb71b51feee6e9fe257b37f1e",
+    "sheet": "TrendGenerator",
+    "title": "Expenses (in thousands) of private not-for-profit postsecondary institutions using FASB standards",
+    "headers": [
+      "Fiscal year",
+      "Expenses (in thousands)"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fiscal year 2010, the data include only Title IV primarily postsecondary institutions.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Finance component  final data (fiscal years 2002 - 2023) and provisional data (fiscal year 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 283730107.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 264618881.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 246080044.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 223093655.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 223226621.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 219146848.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 206985104.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 197491190.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 189012991.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 181748044.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 172831583.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 165804438.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 160133631.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 152827650.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 145434682.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 141965832.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 134016497.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 125276582.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 117471814.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005",
+        "expected": 110963566.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004",
+        "expected": 104817028.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003",
+        "expected": 101916956.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002",
+        "expected": 93237970.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 41,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q41-10-20-26 22-49.xlsx",
+    "sha256": "5188c3929919981cb01140d6bcb26e037d4c6a1e60c570967aae21b3444ee49d",
+    "sheet": "TrendGenerator",
+    "title": "Expenses (in thousands) of private for-profit  postsecondary institutions using FASB standards",
+    "headers": [
+      "Fiscal year",
+      "Expenses (in thousands)"
+    ],
+    "notes": [
+      "The combined expense functional categories of (1) research and public service, and (2) academic and institutional support and student services are reported by detailed categories and are not displayed beginning with fiscal year 2014",
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fiscal year 2010, the data include only Title IV primarily postsecondary institutions.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Finance component  final data (fiscal years 2002 - 2023) and provisional data (fiscal year 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 17441807.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 16385288.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 15801944.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 15504077.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 15561324.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 15429645.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 15350024.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 17981171.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 19427483.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 22202088.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 24856527.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 26264237.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 27301344.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 27271612.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 23978260.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009",
+        "expected": 19847651.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008",
+        "expected": 17535599.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007",
+        "expected": 15547961.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006",
+        "expected": 13297969.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005",
+        "expected": 11659124.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004",
+        "expected": 9801369.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003",
+        "expected": 8248774.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002",
+        "expected": 7194747.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 42,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q42-10-20-26 22-42.xlsx",
+    "sha256": "bdd8247cae6ef6a2de33634f5406455197e2ed96ee2bc6170e374520d837b382",
+    "sheet": "TrendGenerator",
+    "title": "Percent of students enrolled in distance education courses",
+    "headers": [
+      "Year",
+      "Percent of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component final data (2012 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 0.5379999999999999
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 0.532
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 0.5329999999999999
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 0.589
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 0.7340000000000001
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 0.363
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 0.34700000000000003
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 0.32899999999999996
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 0.312
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 0.293
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 0.27699999999999997
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 0.264
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 0.255
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 43,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q43-10-20-26 22-42.xlsx",
+    "sha256": "ab2b5e2c539b7bc8560881d8d418c0a3be1238c015a674f79d0e8864c8c808bf",
+    "sheet": "TrendGenerator",
+    "title": "Number of full-time equivalent students enroll in postsecondary institutions annually",
+    "headers": [
+      "Year",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States.",
+      "This is the full-time equivalent enrollment at institutions from July 1 of one year through June 30 of the next. Prior to 2010-11, institutions could choose to report on the 12-month period between July 1 and June 30 or September 1 and August 31. The full-time-equivalent (FTE) enrollment displayed in this table is calculated from institutions’ instructional activity over a 12-month period. For institutions following a quarter calendar system, 45 undergraduate credit hours is considered one undergraduate FTE and 36 graduate credit hours is considered one graduate FTE. For institutions following a semester, trimester, 4-1-4, or other academic year calendar system, 30 undergraduate credit hours is considered one undergraduate FTE and 24 graduate credit hours is considered one graduate FTE. For all calendar systems (both academic year-based systems and continuous enrollment systems), 900 undergraduate contact hours is considered one undergraduate FTE. Definitions for terms used in this table may be found in the IPEDS online glossary located at https://surveys.nces.ed.gov/ipeds/VisGlossaryAll.aspx.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), 12-month Enrollment component final data (2009-10 - 2023-24) and provisional data (2024-25)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024-25",
+        "expected": 16788243.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023-24",
+        "expected": 16117442.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022-23",
+        "expected": 15641663.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021-22",
+        "expected": 15684500.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020-21",
+        "expected": 16089127.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019-20",
+        "expected": 16464070.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018-19",
+        "expected": 16501208.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017-18",
+        "expected": 16488311.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016-17",
+        "expected": 16606009.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015-16",
+        "expected": 16712769.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014-15",
+        "expected": 17001564.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013-14",
+        "expected": 17310964.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012-13",
+        "expected": 17516375.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011-12",
+        "expected": 18119554.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010-11",
+        "expected": 18343423.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009-10",
+        "expected": 17841164.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 50,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q50-10-20-26 22-49.xlsx",
+    "sha256": "c0b51cb1fd1f5407d683e43d338647003040470d6773a87d5516a836ca8de6b6",
+    "sheet": "TrendGenerator",
+    "title": "Adjusted 9-month average salary",
+    "headers": [
+      "Fall",
+      "Average salary"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV degree-granting institutions in the United States.",
+      "Full-time instructional staff includes those on 9-, 10-, 11-, or 12-month contracts.  Total salary outlays for full-time instructional staff  on 10-, 11-, and 12-month contracts were adjusted to 9-month outlays by dividing the outlay for the longer contracts by their length and multiplying the result by 9. The “equated” outlays were then added to the outlays for 9-month staff, and the resulting sum was then divided by the total number of staff to determine an average salary. Salaries for staff on less-than-9-month contracts were not collected.",
+      "Full-time instructional staff from administrative offices are included.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Human Resources component final data (fall 2016 - 2023) and provisional data (fall 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 100224.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 96784.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 92747.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 89177.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 87407.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 86205.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 84374.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 82328.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 80447.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 51,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q51-10-20-26 22-49.xlsx",
+    "sha256": "e9ea5df081de07107f253198a13823e2e1457c4a12445e8185e2d6c18ab3b7a6",
+    "sheet": "TrendGenerator",
+    "title": "Number of full-time instructional staff",
+    "headers": [
+      "Fall",
+      "Number of staff"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV degree-granting institutions in the United States.",
+      "The data do not include full-time instructional staff from institutions that have  less than 15 full-time staff.\nFull-time instructional staff from administrative offices are included.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Human Resources component final data (fall 2013,  2015 - 2023) and provisional data (fall 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 741767.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 733401.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 727577.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 724044.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 727233.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 737013.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 730264.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 723824.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 716867.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 714105.0
+      },
+      {
+        "source_row": 16,
+        "period": "2013",
+        "expected": 704717.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 101,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q101-10-20-26 22-38.xlsx",
+    "sha256": "2d15c8350d59617d32d2e8a378a28a9dd06ace8eb3400c8f131f06be40edf2a1",
+    "sheet": "TrendGenerator",
+    "title": "Number of applications for admission from first-time, degree/certificate-seeking undergraduate students were received by postsecondary institutions in the fall",
+    "headers": [
+      "Fall",
+      "Number of applications"
+    ],
+    "notes": [
+      "Notes: This table presents data collected from Title IV institutions that do not have an open admissions policy in the United States. Individuals may apply to more than one postsecondary institution. The counts presented are aggregated across institutions and may include duplicated applicants.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Admissions component final data (fall 2014 - 2023) and provisional data (fall 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 14751867.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 13901237.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 13091728.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 12172982.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 11540532.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 11536437.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 11278642.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 10699890.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 10435175.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 9967334.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 9598759.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 102,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q102-10-20-26 22-38.xlsx",
+    "sha256": "834ab6aa0333865381c983afcd18f00a0d0787e829c5c4c66b9acb5fe0d4990b",
+    "sheet": "TrendGenerator",
+    "title": "Percent of first-time, degree/certificate-seeking applicants to postsecondary institutions who were granted admission to enroll in the fall",
+    "headers": [
+      "Fall",
+      "Percent of applicants admitted"
+    ],
+    "notes": [
+      "Notes: This table presents data collected from Title IV institutions that do not have an open admissions policy in the United States. Individuals may apply to and be admitted at more than one postsecondary institution. The counts and percentages of admitted applicants are aggregated across institutions and may include duplicated applicants.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Admissions component final data (fall 2014 - 2023) and provisional data (fall 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 0.59
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 0.584
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 0.586
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 0.602
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 0.607
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 0.568
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 0.5579999999999999
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 0.563
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 0.5579999999999999
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 0.5579999999999999
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 0.56
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 103,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q103-10-20-26 22-38.xlsx",
+    "sha256": "432f2d7fa8468991805be80900f07e5dd5cae3333fc5dfe39e035c6bf11aaaf0",
+    "sheet": "TrendGenerator",
+    "title": "Percent of admitted first-time degree/certificate-seeking undergraduate students who enrolled at postsecondary institutions in the fall",
+    "headers": [
+      "Fall",
+      "Percent of students"
+    ],
+    "notes": [
+      "Notes: This table presents data collected from Title IV institutions that do not have an open admissions policy in the United States. Individuals may be admitted and enrolled at more than one postsecondary institution. The counts and percentages of admitted students who enrolled are aggregated across institutions and may include duplicated admitted students.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Admissions component final data (fall 2014 - 2023) and provisional data (fall 2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 0.19399999999999998
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 0.20600000000000002
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 0.214
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 0.22
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 0.222
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 0.247
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 0.259
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 0.267
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 0.272
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 0.285
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 0.29100000000000004
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 110,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q110-10-20-26 22-49.xlsx",
+    "sha256": "1730d2636d52077f84c35127677a3fda1118243f693cc9a3e911d772f0805e48",
+    "sheet": "TrendGenerator",
+    "title": "The total core expenses per full-time equivalent enrollment of public and private not-for-profit postsecondary institutions",
+    "headers": [
+      "Fiscal year",
+      "Core expenses"
+    ],
+    "notes": [
+      "This table presents data from Title IV institutions in the United States",
+      "Beginning in fiscal year 2010, expenses by functional categories under GASB and FASB reporting standards were aligned to allow comparisons of data across institutions. Public institutions reporting either GASB or FASB reporting standards or private not-for-profit institutions using FASB reporting standards are included. Core expenses are the expenses for the essential education activities of the institution. Core expenses include expenses for instruction, research, public service, academic support, student services, institutional support, scholarships and fellowships (GASB) or net grant aid to students (FASB)  and other expenses. Core expenses exclude expenses for auxiliary enterprises, hospitals, and independent operations.",
+      "Expenses from administrative offices are excluded.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Data Feedback Report, Derived variables from Finance component final data (fiscal years 2010 - 2023) and provisional data (fiscal year 2024) and 12-month Enrollment component final data (2009-10 – 2022-23) and provisional data (2023-24)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 38376.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023",
+        "expected": 37003.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022",
+        "expected": 35324.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021",
+        "expected": 32053.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020",
+        "expected": 31176.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019",
+        "expected": 30099.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018",
+        "expected": 29095.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017",
+        "expected": 28025.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016",
+        "expected": 26865.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015",
+        "expected": 25625.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014",
+        "expected": 24749.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013",
+        "expected": 23729.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012",
+        "expected": 22815.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011",
+        "expected": 22047.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010",
+        "expected": 21462.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 150,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q150-10-20-26 22-43.xlsx",
+    "sha256": "ace9d6a1187284ddfbda8c882603121676cdd3cde855ff028ebfdd2a49e73d30",
+    "sheet": "TrendGenerator",
+    "title": "Number of degree-seeking undergraduate students enrolled in postsecondary institutions for the first time in the fall",
+    "headers": [
+      "Fall",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fall 2010, the data include only Title IV primarily postsecondary institutions. Fall enrollment by state residence of first-time undergraduate students is collected annually, but institutions are required to respond only in even-numbered years.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component final data (2004 - 2022) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 3066637.0
+      },
+      {
+        "source_row": 7,
+        "period": "2022",
+        "expected": 2864567.0
+      },
+      {
+        "source_row": 8,
+        "period": "2020",
+        "expected": 2713343.0
+      },
+      {
+        "source_row": 9,
+        "period": "2018",
+        "expected": 3002330.0
+      },
+      {
+        "source_row": 10,
+        "period": "2016",
+        "expected": 3014737.0
+      },
+      {
+        "source_row": 11,
+        "period": "2014",
+        "expected": 3082927.0
+      },
+      {
+        "source_row": 12,
+        "period": "2012",
+        "expected": 3176802.0
+      },
+      {
+        "source_row": 13,
+        "period": "2010",
+        "expected": 3371169.0
+      },
+      {
+        "source_row": 14,
+        "period": "2008",
+        "expected": 3217597.0
+      },
+      {
+        "source_row": 15,
+        "period": "2006",
+        "expected": 2921549.0
+      },
+      {
+        "source_row": 16,
+        "period": "2004",
+        "expected": 2907277.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 155,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q155-10-20-26 22-43.xlsx",
+    "sha256": "5bbf253cde5d787b62e82e4588f4ae92d763829824a0b41e3e7043f5d35878fb",
+    "sheet": "TrendGenerator",
+    "title": "Number of degree-seeking undergraduate students who enrolled in postsecondary institutions within 12-months of graduating high school for the first time in the fall",
+    "headers": [
+      "Fall",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to Fall 2010, the data include only Title IV primarily postsecondary institutions. Fall enrollment by state residence of first-time undergraduate students is collected annually, but institutions are required to respond only in even-numbered years.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component final data (2004 - 2022) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024",
+        "expected": 2270544.0
+      },
+      {
+        "source_row": 7,
+        "period": "2022",
+        "expected": 2178726.0
+      },
+      {
+        "source_row": 8,
+        "period": "2020",
+        "expected": 2117409.0
+      },
+      {
+        "source_row": 9,
+        "period": "2018",
+        "expected": 2293519.0
+      },
+      {
+        "source_row": 10,
+        "period": "2016",
+        "expected": 2252391.0
+      },
+      {
+        "source_row": 11,
+        "period": "2014",
+        "expected": 2239292.0
+      },
+      {
+        "source_row": 12,
+        "period": "2012",
+        "expected": 2220837.0
+      },
+      {
+        "source_row": 13,
+        "period": "2010",
+        "expected": 2241593.0
+      },
+      {
+        "source_row": 14,
+        "period": "2008",
+        "expected": 2185119.0
+      },
+      {
+        "source_row": 15,
+        "period": "2006",
+        "expected": 2005144.0
+      },
+      {
+        "source_row": 16,
+        "period": "2004",
+        "expected": 1771206.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 200,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q200-10-20-26 22-46.xlsx",
+    "sha256": "2d2bb8c5630cbf36036025dcc99cacf83328fc8f82db1dffee10f5ae467157bb",
+    "sheet": "TrendGenerator",
+    "title": "Percent of undergraduate degree/certificate-seeking entering students",
+    "headers": [
+      "Cohort Year",
+      "Percent of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV degree-granting institutions in the United States.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Outcome Measures component final data (2017 - 2023) and provisional data (2024)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2016-17",
+        "expected": 0.473
+      },
+      {
+        "source_row": 7,
+        "period": "2015-16",
+        "expected": 0.461
+      },
+      {
+        "source_row": 8,
+        "period": "2014-15",
+        "expected": 0.45
+      },
+      {
+        "source_row": 9,
+        "period": "2013-14",
+        "expected": 0.428
+      },
+      {
+        "source_row": 10,
+        "period": "2012-13",
+        "expected": 0.40700000000000003
+      },
+      {
+        "source_row": 11,
+        "period": "2011-12",
+        "expected": 0.389
+      },
+      {
+        "source_row": 12,
+        "period": "2010-11",
+        "expected": 0.38
+      },
+      {
+        "source_row": 13,
+        "period": "2009-10",
+        "expected": 0.37200000000000005
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 205,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q205-10-20-26 22-39.xlsx",
+    "sha256": "563a3aa94b353af9e2767cc46119bad26b11736e9594a38524be8ff57e259d31",
+    "sheet": "TrendGenerator",
+    "title": "Average amount of tuition and required fees for full-time undergraduate students at public postsecondary institutions operating on an academic year calendar system",
+    "headers": [
+      "Academic Year",
+      "Average amount (in USD)"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions. Amounts are institutional averages as reported by the institution, not average amounts paid by students (i.e., charges are not weighted by enrollment).",
+      "In-state average tuition and required fees were used for public institutions that reported varying tuitions by residency.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Institutional Characteristics component final data (2002-03 - 2023-24), Cost component 2024-25 final data."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024-25",
+        "expected": 7135.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023-24",
+        "expected": 6944.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022-23",
+        "expected": 6771.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021-22",
+        "expected": 6527.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020-21",
+        "expected": 6434.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019-20",
+        "expected": 6435.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018-19",
+        "expected": 6346.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017-18",
+        "expected": 6114.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016-17",
+        "expected": 5918.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015-16",
+        "expected": 5753.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014-15",
+        "expected": 5560.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013-14",
+        "expected": 5396.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012-13",
+        "expected": 5211.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011-12",
+        "expected": 4961.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010-11",
+        "expected": 4632.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009-10",
+        "expected": 4340.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008-09",
+        "expected": 4080.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007-08",
+        "expected": 3908.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006-07",
+        "expected": 3748.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005-06",
+        "expected": 3545.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004-05",
+        "expected": 3390.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003-04",
+        "expected": 3147.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002-03",
+        "expected": 2854.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 206,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q206-10-20-26 22-39.xlsx",
+    "sha256": "e3f55d0aae1b78a8c7e007a845b093a36c0e8ff20c7cfefd0e963b67d1575da4",
+    "sheet": "TrendGenerator",
+    "title": "Average amount of tuition and required fees for full-time undergraduate students at private postsecondary institutions operating on an academic year calendar system",
+    "headers": [
+      "Academic Year",
+      "Average amount (in USD)"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions. Amounts are institutional averages as reported by the institution, not average amounts paid by students (i.e., charges are not weighted by enrollment).",
+      "Out-of-state average tuition and required fees were used for private institutions that reported varying tuitions by residency.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Institutional Characteristics component final data (2002-03 - 2023-24), Cost component 2024-25 final data."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024-25",
+        "expected": 28951.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023-24",
+        "expected": 27978.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022-23",
+        "expected": 26998.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021-22",
+        "expected": 26077.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020-21",
+        "expected": 25595.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019-20",
+        "expected": 24990.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018-19",
+        "expected": 24315.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017-18",
+        "expected": 22854.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016-17",
+        "expected": 22050.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015-16",
+        "expected": 21004.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014-15",
+        "expected": 20368.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013-14",
+        "expected": 19648.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012-13",
+        "expected": 19191.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011-12",
+        "expected": 18655.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010-11",
+        "expected": 18185.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009-10",
+        "expected": 17830.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008-09",
+        "expected": 17132.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007-08",
+        "expected": 16280.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006-07",
+        "expected": 15366.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005-06",
+        "expected": 14608.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004-05",
+        "expected": 13719.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003-04",
+        "expected": 13000.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002-03",
+        "expected": 12321.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 207,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q207-10-20-26 22-39.xlsx",
+    "sha256": "2eb3f863863e124a6bbe871d183b9505fb085bcef59a4198091fd7b85603406b",
+    "sheet": "TrendGenerator",
+    "title": "Average amount of tuition and required fees for full-time graduate students at public postsecondary institutions operating on an academic year calendar system",
+    "headers": [
+      "Academic Year",
+      "Average amount (in USD)"
+    ],
+    "notes": [
+      "Notes: This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily.  Tuition and required fees are average institutional charges, not average amounts paid by students (i.e., charges are not weighted by enrollment) at postsecondary institutions. Tuition and fee charges for graduate students do not include charges for programs designated as doctor’s degrees—professional practice.",
+      "In-state average tuition and required fees were used for public institutions that reported varying tuitions by residency.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Institutional Characteristics component final data (2002-03 - 2023-24), Cost component 2024-25 final data."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024-25",
+        "expected": 12116.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023-24",
+        "expected": 11827.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022-23",
+        "expected": 11554.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021-22",
+        "expected": 10949.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020-21",
+        "expected": 10799.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019-20",
+        "expected": 11251.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018-19",
+        "expected": 11132.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017-18",
+        "expected": 10919.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016-17",
+        "expected": 10638.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015-16",
+        "expected": 10268.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014-15",
+        "expected": 9913.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013-14",
+        "expected": 9624.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012-13",
+        "expected": 9320.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011-12",
+        "expected": 8944.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010-11",
+        "expected": 8350.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009-10",
+        "expected": 7945.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008-09",
+        "expected": 7361.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007-08",
+        "expected": 6970.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006-07",
+        "expected": 6614.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005-06",
+        "expected": 6230.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004-05",
+        "expected": 5805.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003-04",
+        "expected": 5333.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002-03",
+        "expected": 4621.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 208,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q208-10-20-26 22-39.xlsx",
+    "sha256": "e7c5816e69d486940f184d218c20b22bd11db1431e4253d398cfbbdd722a7c7a",
+    "sheet": "TrendGenerator",
+    "title": "average amount of tuition and required fees for full-time graduate students at private postsecondary institutions operating on an academic year calendar system",
+    "headers": [
+      "Academic Year",
+      "Average amount (in USD)"
+    ],
+    "notes": [
+      "Notes: This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily.  Tuition and required fees are average institutional charges, not average amounts paid by students (i.e., charges are not weighted by enrollment) at postsecondary institutions. Tuition and fee charges for graduate students do not include charges for programs designated as doctor’s degrees—professional practice.",
+      "Out-of-state average tuition and required fees were used for private institutions that reported varying tuitions by residency.",
+      "Amounts displayed are in current dollars.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Institutional Characteristics component final data (2002-03 - 2023-24), Cost component 2024-25 final data."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024-25",
+        "expected": 21110.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023-24",
+        "expected": 20515.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022-23",
+        "expected": 20015.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021-22",
+        "expected": 19541.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020-21",
+        "expected": 19326.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019-20",
+        "expected": 19033.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018-19",
+        "expected": 18439.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017-18",
+        "expected": 18202.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016-17",
+        "expected": 17799.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015-16",
+        "expected": 17464.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014-15",
+        "expected": 17167.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013-14",
+        "expected": 16835.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012-13",
+        "expected": 16523.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011-12",
+        "expected": 15984.0
+      },
+      {
+        "source_row": 20,
+        "period": "2010-11",
+        "expected": 15435.0
+      },
+      {
+        "source_row": 21,
+        "period": "2009-10",
+        "expected": 14950.0
+      },
+      {
+        "source_row": 22,
+        "period": "2008-09",
+        "expected": 14550.0
+      },
+      {
+        "source_row": 23,
+        "period": "2007-08",
+        "expected": 13956.0
+      },
+      {
+        "source_row": 24,
+        "period": "2006-07",
+        "expected": 13308.0
+      },
+      {
+        "source_row": 25,
+        "period": "2005-06",
+        "expected": 12689.0
+      },
+      {
+        "source_row": 26,
+        "period": "2004-05",
+        "expected": 12059.0
+      },
+      {
+        "source_row": 27,
+        "period": "2003-04",
+        "expected": 11453.0
+      },
+      {
+        "source_row": 28,
+        "period": "2002-03",
+        "expected": 10701.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 210,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q210-10-20-26 22-43.xlsx",
+    "sha256": "e010d4c7d19086f2e8c37c409c006b0e758ef052b9796192353554f3812bc6f5",
+    "sheet": "TrendGenerator",
+    "title": "Number of students awarded degrees/certificates at postsecondary institutions",
+    "headers": [
+      "Completion Year",
+      "Number of students"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Completions component final data (2011-12 - 2023-24 and provisional data (2024-25)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2024-25",
+        "expected": 5033316.0
+      },
+      {
+        "source_row": 7,
+        "period": "2023-24",
+        "expected": 4826826.0
+      },
+      {
+        "source_row": 8,
+        "period": "2022-23",
+        "expected": 4737875.0
+      },
+      {
+        "source_row": 9,
+        "period": "2021-22",
+        "expected": 4751353.0
+      },
+      {
+        "source_row": 10,
+        "period": "2020-21",
+        "expected": 4770920.0
+      },
+      {
+        "source_row": 11,
+        "period": "2019-20",
+        "expected": 4673694.0
+      },
+      {
+        "source_row": 12,
+        "period": "2018-19",
+        "expected": 4694549.0
+      },
+      {
+        "source_row": 13,
+        "period": "2017-18",
+        "expected": 4618567.0
+      },
+      {
+        "source_row": 14,
+        "period": "2016-17",
+        "expected": 4597909.0
+      },
+      {
+        "source_row": 15,
+        "period": "2015-16",
+        "expected": 4553267.0
+      },
+      {
+        "source_row": 16,
+        "period": "2014-15",
+        "expected": 4547832.0
+      },
+      {
+        "source_row": 17,
+        "period": "2013-14",
+        "expected": 4551201.0
+      },
+      {
+        "source_row": 18,
+        "period": "2012-13",
+        "expected": 4534936.0
+      },
+      {
+        "source_row": 19,
+        "period": "2011-12",
+        "expected": 4538171.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 220,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q220-10-20-26 22-47.xlsx",
+    "sha256": "067d26f06b1c19ed9023d8d6b26420bb298c23f7f64e7f808455f4aa863e80c4",
+    "sheet": "TrendGenerator",
+    "title": "Average amount of grant or scholarship aid from the federal government, state/local government, or the institution awarded to full-time, first-time  undergraduate students",
+    "headers": [
+      "Year",
+      "Average amount"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "Amounts displayed are in current dollars.",
+      "Prior to academic year 2010-11, the data represents students receiving aid rather than students awarded aid. Students awarded grant/scholarship aid are included even if that aid was not accepted. Students receiving aid were included if the awarded aid was disbursed.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Student Financial Aid component final data (2008-09 - 2022-23) and provisional data (2023-24)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2023-24",
+        "expected": 13783.0
+      },
+      {
+        "source_row": 7,
+        "period": "2022-23",
+        "expected": 13006.0
+      },
+      {
+        "source_row": 8,
+        "period": "2021-22",
+        "expected": 12667.0
+      },
+      {
+        "source_row": 9,
+        "period": "2020-21",
+        "expected": 11902.0
+      },
+      {
+        "source_row": 10,
+        "period": "2019-20",
+        "expected": 11461.0
+      },
+      {
+        "source_row": 11,
+        "period": "2018-19",
+        "expected": 11321.0
+      },
+      {
+        "source_row": 12,
+        "period": "2017-18",
+        "expected": 10837.0
+      },
+      {
+        "source_row": 13,
+        "period": "2016-17",
+        "expected": 10137.0
+      },
+      {
+        "source_row": 14,
+        "period": "2015-16",
+        "expected": 9839.0
+      },
+      {
+        "source_row": 15,
+        "period": "2014-15",
+        "expected": 9363.0
+      },
+      {
+        "source_row": 16,
+        "period": "2013-14",
+        "expected": 8929.0
+      },
+      {
+        "source_row": 17,
+        "period": "2012-13",
+        "expected": 8500.0
+      },
+      {
+        "source_row": 18,
+        "period": "2011-12",
+        "expected": 8011.0
+      },
+      {
+        "source_row": 19,
+        "period": "2010-11",
+        "expected": 7853.0
+      },
+      {
+        "source_row": 20,
+        "period": "2009-10",
+        "expected": 7275.0
+      },
+      {
+        "source_row": 21,
+        "period": "2008-09",
+        "expected": 6791.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  },
+  {
+    "q": 221,
+    "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q221-10-20-26 22-47.xlsx",
+    "sha256": "f214a21502ab6ea8d54823d57eadc5c5aa2502350743748e175276ffd91f34aa",
+    "sheet": "TrendGenerator",
+    "title": "Average amount of student loans  awarded to full-time, first-time undergraduate students",
+    "headers": [
+      "Year",
+      "Average amount"
+    ],
+    "notes": [
+      "This table presents data collected from Title IV institutions in the United States. Prior to 2009-10, the data include only Title IV primarily postsecondary institutions.",
+      "Amounts displayed are in current dollars.",
+      "Loans to students include only loans made directly to students. Federal loans to parents (Parent Loan for Undergraduate Students [PLUS]) and other loans made directly to parents are not included.",
+      "Prior to academic year 2010-11, the data represents students receiving aid rather than students awarded aid. Students awarded loan aid are included if they accepted that aid. Students receiving aid were included if the awarded aid was disbursed.",
+      "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Student Financial Aid component final data (2008-09 - 2022-23) and provisional data (2023-24)."
+    ],
+    "observations": [
+      {
+        "source_row": 6,
+        "period": "2023-24",
+        "expected": 7812.0
+      },
+      {
+        "source_row": 7,
+        "period": "2022-23",
+        "expected": 7709.0
+      },
+      {
+        "source_row": 8,
+        "period": "2021-22",
+        "expected": 7470.0
+      },
+      {
+        "source_row": 9,
+        "period": "2020-21",
+        "expected": 7198.0
+      },
+      {
+        "source_row": 10,
+        "period": "2019-20",
+        "expected": 7360.0
+      },
+      {
+        "source_row": 11,
+        "period": "2018-19",
+        "expected": 7196.0
+      },
+      {
+        "source_row": 12,
+        "period": "2017-18",
+        "expected": 7087.0
+      },
+      {
+        "source_row": 13,
+        "period": "2016-17",
+        "expected": 7092.0
+      },
+      {
+        "source_row": 14,
+        "period": "2015-16",
+        "expected": 7000.0
+      },
+      {
+        "source_row": 15,
+        "period": "2014-15",
+        "expected": 6974.0
+      },
+      {
+        "source_row": 16,
+        "period": "2013-14",
+        "expected": 7103.0
+      },
+      {
+        "source_row": 17,
+        "period": "2012-13",
+        "expected": 6977.0
+      },
+      {
+        "source_row": 18,
+        "period": "2011-12",
+        "expected": 6748.0
+      },
+      {
+        "source_row": 19,
+        "period": "2010-11",
+        "expected": 6754.0
+      },
+      {
+        "source_row": 20,
+        "period": "2009-10",
+        "expected": 7068.0
+      },
+      {
+        "source_row": 21,
+        "period": "2008-09",
+        "expected": 6768.0
+      }
+    ],
+    "sheets": [
+      "TrendGenerator"
+    ]
+  }
+]

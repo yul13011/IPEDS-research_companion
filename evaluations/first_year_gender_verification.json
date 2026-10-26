@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-10-19T18:22:13.784462+00:00",
+  "question": "show me the gender break down of Yale College's first year undergrads",
+  "intent": "analyze",
+  "latency": {
+    "validation_seconds": 0.04926900001009926,
+    "query_seconds": 0.005770399991888553,
+    "planning_and_binding_seconds": 0.35261200001696125,
+    "answer_ready_seconds": 0.4112114000017755,
+    "live_model_calls": 0,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+  },
+  "catalog_plan": {
+    "version": 1,
+    "institutions": [
+      "yale"
+    ],
+    "source_years": [
+      2024
+    ],
+    "requested_time": {
+      "basis": "fall",
+      "description": "Fall credit enrollment; source population All students, Undergraduate, Degree/certificate-seeking, First-time."
+    },
+    "selections": [
+      {
+        "record_id": 136397,
+        "role": "measure"
+      },
+      {
+        "record_id": 136398,
+        "role": "measure"
+      },
+      {
+        "record_id": 136401,
+        "role": "measure"
+      }
+    ],
+    "filters": [
+      {
+        "record_id": 136392,
+        "operator": "eq",
+        "values": [
+          "4"
+        ],
+        "code_record_ids": [
+          144206
+        ]
+      }
+    ],
+    "group_by_record_ids": [],
+    "calculations": [],
+    "joins": [],
+    "output": "table",
+    "assumptions": [
+      "First-year undergraduates is interpreted as the IPEDS first-time degree/certificate-seeking population, which excludes transfer-in students.",
+      "Attendance scope: All students. Latest supplied fall 2024 is used when no year is requested.",
+      "The source reports Men and Women for this first-time population. Separate another-gender/unknown counts are not collected at this detailed level; no residual or zero is inferred.",
+      "IPEDS reports Yale University as the institution; this uses its first-time undergraduate population, not a separately reported Yale College unit."
+    ],
+    "clarification_questions": []
+  },
+  "rows": [
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "Fall 2024",
+      "metric": "EF{YEAR}A::EFTOTLM",
+      "measure": "Grand total men",
+      "unit": "source units",
+      "value": 782,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "source release 2024",
+      "source_value": 782
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "Fall 2024",
+      "metric": "EF{YEAR}A::EFTOTLW",
+      "measure": "Grand total women",
+      "unit": "source units",
+      "value": 772,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "source release 2024",
+      "source_value": 772
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "Fall 2024",
+      "metric": "EF{YEAR}A::EFTOTLT",
+      "measure": "Grand total",
+      "unit": "source units",
+      "value": 1554,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "source release 2024",
+      "source_value": 1554
+    }
+  ],
+  "warnings": [
+    "First-year undergraduates is interpreted as the IPEDS first-time degree/certificate-seeking population, which excludes transfer-in students.",
+    "Attendance scope: All students. Latest supplied fall 2024 is used when no year is requested.",
+    "The source reports Men and Women for this first-time population. Separate another-gender/unknown counts are not collected at this detailed level; no residual or zero is inferred.",
+    "IPEDS reports Yale University as the institution; this uses its first-time undergraduate population, not a separately reported Yale College unit.",
+    "Source release labels are shown separately from source reporting periods. Missing, suppressed and nonnumeric values remain empty. These answers do not infer reported versus imputed status."
+  ],
+  "validation": {
+    "schema_and_catalog_binding": "passed",
+    "execution_approved": true,
+    "semantic_status": "passed",
+    "blocks": [],
+    "required_next_checks": [],
+    "execution_scope": "Direct source observations with explicit institution/population selectors; no implicit aggregation, joins or inferred year equivalence.",
+    "completed_checks": [
+      "exact physical fields and source codes",
+      "documented and observed row key",
+      "explicit row selectors",
+      "source reporting period",
+      "bounded read-only compilation",
+      "numeric missingness policy",
+      "calculation relationship where applicable"
+    ]
+  }
+}

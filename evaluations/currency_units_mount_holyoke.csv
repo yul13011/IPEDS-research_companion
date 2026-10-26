@@ -1,0 +1,2 @@
+﻿institution,unitid,observation_year,entry_cohort_year,reporting_period,metric,measure,unit,value,release,provisional,status,numerator,denominator,series_segment,groups,available_rows,requested_rows,source_unit,currency,currency_scale
+Mount Holyoke College,166939,2024,,2024-25,fs_137706,"Salary outlays, full-time instructional staff (all ranks), 2024-25",USD,27792003.0,IPEDS_2024-25_Provisional,True,ok,,,[],[],,,monetary amount,USD,1

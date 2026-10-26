@@ -1,0 +1,199 @@
+{
+  "events": [
+    "initial grouping/legend/three pickers",
+    "picker recolors Harvard only",
+    "title footnote large bars and font",
+    "hide legend keeps color controls",
+    "undo restores legend",
+    "separate panels retain institutional colors",
+    "line type exposes nine actual series controls",
+    "bar restores three controls and hides period angle",
+    "prompt preserves Harvard and changes Princeton",
+    "actual preview function PNG/SVG and full/half-slide controls with exact edited state",
+    "reset defaults",
+    "undo reset restores edited state",
+    "final reset"
+  ],
+  "exports": [
+    {
+      "file": "evaluations\\chart_workflow\\default_panel1_1200x675",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\default_panel1_800x600",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\edited_hidden_legend_panel1_1200x675",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\edited_hidden_legend_panel1_800x600",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\separate_panels_panel1_1200x675",
+      "values": 3,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\separate_panels_panel1_800x600",
+      "values": 3,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\separate_panels_panel2_1200x675",
+      "values": 3,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\separate_panels_panel2_800x600",
+      "values": 3,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\separate_panels_panel3_1200x675",
+      "values": 3,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\separate_panels_panel3_800x600",
+      "values": 3,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\prompt_edited_panel1_1200x675",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\prompt_edited_panel1_800x600",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\reset_panel1_1200x675",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\reset_panel1_800x600",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    }
+  ],
+  "actual_preview_exports": [
+    {
+      "kind": "png",
+      "canvas": [
+        1200,
+        675
+      ],
+      "scale": 2
+    },
+    {
+      "kind": "svg",
+      "canvas": [
+        1200,
+        675
+      ],
+      "scale": 2
+    },
+    {
+      "kind": "png",
+      "canvas": [
+        800,
+        600
+      ],
+      "scale": 2
+    },
+    {
+      "kind": "svg",
+      "canvas": [
+        800,
+        600
+      ],
+      "scale": 2
+    }
+  ],
+  "preview_harness_note": "Main app preview-open click tested; dialog controls use the actual preview function with the same edited state because AppTest full-script widget reruns dismiss button-opened dialogs.",
+  "independent_source_values": 9,
+  "source_rows_unchanged": true,
+  "formatting_model_calls": 0,
+  "formatting_data_queries": 0,
+  "elapsed_seconds": 78.86111060006078
+}

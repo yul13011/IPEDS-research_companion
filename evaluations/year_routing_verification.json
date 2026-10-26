@@ -1,0 +1,18 @@
+{
+  "live_cases": 10,
+  "live_passed": 10,
+  "estimated_api_usd": 0.056748744999999996,
+  "focused_regression_tests": 55,
+  "regression_failures": 0,
+  "regression_seconds": 54.126,
+  "local_server": {
+    "port": 8516,
+    "old_process_started": "2026-10-25",
+    "old_file_watcher": "none",
+    "new_pid": 274648,
+    "new_file_watcher": "poll",
+    "run_on_save": true,
+    "health": "ok"
+  },
+  "limits": "Live cases exercise current production routing/executors in a test process. The local endpoint health check establishes readiness, not browser end-to-end behavior."
+}

@@ -1,0 +1,19 @@
+{
+  "tested_questions": 16,
+  "count_answers": 11,
+  "clarifications": 5,
+  "routing_matches": 16,
+  "exact_scope_profiles": 10,
+  "source_values_checked": 52,
+  "initial_count_answer_median_seconds": 8.670251800038386,
+  "initial_count_answer_min_seconds": 6.949204900010955,
+  "initial_count_answer_max_seconds": 17.52050430001691,
+  "initial_count_answer_median_usd": 0.035462,
+  "initial_completed_suite_api_usd": 0.487522,
+  "refined_writing_accepted": 8,
+  "refined_writing_fallbacks": 2,
+  "semantic_repairs": 1,
+  "refined_writing_api_usd": 0.162636,
+  "refined_answer_word_median": 122,
+  "initial_answer_word_median": 165
+}

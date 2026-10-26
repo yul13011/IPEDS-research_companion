@@ -1,0 +1,43 @@
+# === Secrets: NEVER commit ===
+.streamlit/secrets.toml
+secrets.toml
+.env
+.env.*
+*.env
+# Google service-account keys (also live outside this folder)
+*service*account*.json
+grad-rate-*-*.json
+
+# === Vendored dependencies (reinstall from prototype/requirements.txt) ===
+.packages/
+
+# === Large, regenerable data (rebuild from "../IPEDS Data" via ingestion/) ===
+# Annual + catalog SQLite databases are 20 MB–440 MB each (~3 GB total) and
+# exceed GitHub's 100 MB per-file limit. They are derived, not source.
+*.sqlite
+*.sqlite3
+*.db
+*.accdb
+data/annual/
+# Regenerable planner cache (hundreds of files)
+data/proposed_plans/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# === Local tooling / editor (machine-specific; e.g. hardcoded interpreter paths) ===
+.claude/
+.vscode/
+.idea/
+
+# === OS cruft ===
+.DS_Store
+Thumbs.db

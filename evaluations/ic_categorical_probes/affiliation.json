@@ -1,0 +1,986 @@
+{
+  "id": "affiliation",
+  "question": "Compare the religious affiliations of Boston College and Smith College in 2024-25.",
+  "answer": {
+    "intent": "analyze",
+    "catalog_plan": {
+      "version": 2,
+      "institutions": [
+        "164924",
+        "167835"
+      ],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136068
+          ],
+          "filters": [],
+          "group_by_record_ids": [
+            136068
+          ],
+          "aggregates": []
+        }
+      ],
+      "joins": [],
+      "expressions": [
+        {
+          "id": "n",
+          "operator": "count",
+          "inputs": [
+            "fs1_136068"
+          ],
+          "group_by_references": [
+            "institution",
+            "fs1_136068"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "reference": "xn",
+          "label": "Institution count by religious affiliation category, per institution (2024-25)"
+        }
+      ],
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "Each institution is kept separate, so the output shows each institution's reported religious affiliation category side by side.",
+        "Religious affiliation is only reported for religiously affiliated private not-for-profit institutions; a missing or not-applicable value is a source status, not zero.",
+        "Requested period is academic year 2024-25 (IC2024 release)."
+      ],
+      "clarification_questions": []
+    },
+    "catalog_proposal": {
+      "catalog_plan": {
+        "version": 2,
+        "institutions": [
+          "164924",
+          "167835"
+        ],
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "id": "s1",
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136068
+            ],
+            "filters": [],
+            "group_by_record_ids": [
+              136068
+            ],
+            "aggregates": []
+          }
+        ],
+        "joins": [],
+        "expressions": [
+          {
+            "id": "n",
+            "operator": "count",
+            "inputs": [
+              "fs1_136068"
+            ],
+            "group_by_references": [
+              "institution",
+              "fs1_136068"
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "reference": "xn",
+            "label": "Institution count by religious affiliation category, per institution (2024-25)"
+          }
+        ],
+        "missing_policy": "propagate",
+        "time_basis": "source_period",
+        "assumptions": [
+          "Each institution is kept separate, so the output shows each institution's reported religious affiliation category side by side.",
+          "Religious affiliation is only reported for religiously affiliated private not-for-profit institutions; a missing or not-applicable value is a source status, not zero.",
+          "Requested period is academic year 2024-25 (IC2024 release)."
+        ],
+        "clarification_questions": []
+      },
+      "question": "Compare the religious affiliations of 164924 and 167835 in 2024-25.",
+      "definition_evidence": [
+        {
+          "record_id": 136068,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table_name": "IC2024",
+          "variable_name": "RELAFFIL",
+          "physical_status": "documented_location_present",
+          "physical_locations_json": "[\"IC2024\"]",
+          "imputation_variable": "",
+          "category_count": 72,
+          "definition_hash": "31ba60645ff6e70756e513dcbc488c11ada7a1fbb13913cc95703646641906e4",
+          "normalized_hash": "a925cbff4ff0972194c286bf94db28a7510830caa3eda48d9187e2ac3ecc6a6d",
+          "category_hash": "1727ef08cebb02b0cc13428108633f0a7b44e773ca6eb5023ecdfb5a0974b52d",
+          "title": "Religious affiliation",
+          "long_description": "Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.",
+          "data_type": "N",
+          "format": "Disc",
+          "evidence": {
+            "record_id": 136068,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "IC2024",
+            "variable_name": "RELAFFIL",
+            "title": "Religious affiliation",
+            "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10406\nvarorder: 12\nvarname: RELAFFIL\nvartitle: Religious affiliation\ndatatype: N\nfieldwidth: 3\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 3\nlongdescription: Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics Header component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Institutional control or affiliation",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "varTable24",
+            "source_row": 197
+          }
+        }
+      ],
+      "category_evidence": [],
+      "validation": {
+        "execution_approved": false,
+        "preflight_eligible": true,
+        "semantic_status": "runtime_cardinality_pending",
+        "blocks": []
+      },
+      "created_at": "2026-10-22T18:41:10.173708+00:00",
+      "proposal_id": "23f8cbeff25b9a7f51bc"
+    },
+    "message": "Institution count by religious affiliation category, per institution (2024-25) \u00b7 Religious affiliation: Roman Catholic (Academic year 2024-25): Boston College: 1; Smith College: 1. The reporting period and source definitions are available below.",
+    "mode": "catalog relational planner",
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 6,
+      "latency_seconds": 31.726380500004627,
+      "input_tokens": 51239,
+      "output_tokens": 2002,
+      "cache_creation_input_tokens": 25213,
+      "cache_read_input_tokens": 60087,
+      "estimated_api_usd": 0.19153920000000002,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "planning_tool_requests": 5,
+      "semantic_repair_attempts": 1,
+      "stages": [
+        {
+          "input_tokens": 559,
+          "output_tokens": 64,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 7.694380500004627,
+          "estimated_api_usd": 0.001758,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 5,
+          "latency_seconds": 24.032,
+          "input_tokens": 50680,
+          "output_tokens": 1938,
+          "cache_creation_input_tokens": 25213,
+          "cache_read_input_tokens": 60087,
+          "estimated_api_usd": 0.1897812,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+          "planning_tool_requests": 5,
+          "semantic_repair_attempts": 1,
+          "stages": [
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 1,
+              "latency_seconds": 3.672,
+              "input_tokens": 1869,
+              "output_tokens": 430,
+              "cache_creation_input_tokens": 5184,
+              "cache_read_input_tokens": 0,
+              "estimated_api_usd": 0.020998,
+              "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 4,
+              "planning_tool_requests": 5,
+              "semantic_repair_attempts": 1,
+              "latency_seconds": 20.36,
+              "input_tokens": 48811,
+              "output_tokens": 1508,
+              "cache_creation_input_tokens": 20029,
+              "cache_read_input_tokens": 60087,
+              "estimated_api_usd": 0.16878320000000002,
+              "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+            }
+          ]
+        }
+      ]
+    },
+    "validation_attempts": [
+      {
+        "attempt": 1,
+        "blocks": [
+          "No numerical measure was selected.",
+          "Grouped extracts need an explicit row-output and subtotal policy; this executor currently returns explicitly selected institution observations."
+        ]
+      }
+    ],
+    "result": {
+      "plan": {
+        "metrics": [
+          "xn"
+        ],
+        "institutions": [
+          "164924",
+          "167835"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_period",
+        "output": "table"
+      },
+      "catalog_plan": {
+        "version": 2,
+        "institutions": [
+          "164924",
+          "167835"
+        ],
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "id": "s1",
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136068
+            ],
+            "filters": [],
+            "group_by_record_ids": [
+              136068
+            ],
+            "aggregates": []
+          }
+        ],
+        "joins": [],
+        "expressions": [
+          {
+            "id": "n",
+            "operator": "count",
+            "inputs": [
+              "fs1_136068"
+            ],
+            "group_by_references": [
+              "institution",
+              "fs1_136068"
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "reference": "xn",
+            "label": "Institution count by religious affiliation category, per institution (2024-25)"
+          }
+        ],
+        "missing_policy": "propagate",
+        "time_basis": "source_period",
+        "assumptions": [
+          "Each institution is kept separate, so the output shows each institution's reported religious affiliation category side by side.",
+          "Religious affiliation is only reported for religiously affiliated private not-for-profit institutions; a missing or not-applicable value is a source status, not zero.",
+          "Requested period is academic year 2024-25 (IC2024 release)."
+        ],
+        "clarification_questions": []
+      },
+      "metric_specs": {
+        "xn": {
+          "label": "Institution count by religious affiliation category, per institution (2024-25)",
+          "family": "query",
+          "unit": "records"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Boston College",
+          "unitid": 164924,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "metric": "xn",
+          "measure": "Institution count by religious affiliation category, per institution (2024-25) \u00b7 Religious affiliation: Roman Catholic",
+          "unit": "records",
+          "value": 1.0,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "[\"Religious affiliation: Roman Catholic\"]",
+          "groups": [
+            "Religious affiliation: Roman Catholic"
+          ],
+          "available_rows": 1,
+          "requested_rows": 1,
+          "unit_metadata": {
+            "version": 1,
+            "unit": "records",
+            "status": "verified",
+            "basis": "Validated query expression",
+            "inputs": [
+              {
+                "version": 3,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "IC2024",
+                "variable": "RELAFFIL",
+                "record_id": 136068,
+                "unit": "coded",
+                "quantity_type": "category",
+                "status": "verified",
+                "basis": "Source coded/non-continuous field",
+                "evidence": [
+                  {
+                    "record_id": 136068,
+                    "excerpt": "Religious affiliation"
+                  },
+                  {
+                    "record_id": 135823,
+                    "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+                  }
+                ],
+                "scale": 1,
+                "currency": null,
+                "population": null,
+                "rule_version": 3
+              }
+            ]
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "metric": "xn",
+          "measure": "Institution count by religious affiliation category, per institution (2024-25) \u00b7 Religious affiliation: Not applicable",
+          "unit": "records",
+          "value": 1.0,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "[\"Religious affiliation: Not applicable\"]",
+          "groups": [
+            "Religious affiliation: Not applicable"
+          ],
+          "available_rows": 1,
+          "requested_rows": 1,
+          "unit_metadata": {
+            "version": 1,
+            "unit": "records",
+            "status": "verified",
+            "basis": "Validated query expression",
+            "inputs": [
+              {
+                "version": 3,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "IC2024",
+                "variable": "RELAFFIL",
+                "record_id": 136068,
+                "unit": "coded",
+                "quantity_type": "category",
+                "status": "verified",
+                "basis": "Source coded/non-continuous field",
+                "evidence": [
+                  {
+                    "record_id": 136068,
+                    "excerpt": "Religious affiliation"
+                  },
+                  {
+                    "record_id": 135823,
+                    "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+                  }
+                ],
+                "scale": 1,
+                "currency": null,
+                "population": null,
+                "rule_version": 3
+              }
+            ]
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "xn",
+          "year": 2024,
+          "unitid": 164924,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "RELAFFIL"
+          ],
+          "filters": [],
+          "formula": {
+            "aggregates": [],
+            "expressions": [
+              {
+                "id": "n",
+                "operator": "count",
+                "inputs": [
+                  "fs1_136068"
+                ],
+                "group_by_references": [
+                  "institution",
+                  "fs1_136068"
+                ]
+              }
+            ]
+          },
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"RELAFFIL\" AS \"RELAFFIL\" FROM \"IC2024\" WHERE \"UNITID\" IN (?,?) LIMIT 20001",
+          "parameters": [
+            164924,
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136068,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "RELAFFIL",
+              "title": "Religious affiliation",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10406\nvarorder: 12\nvarname: RELAFFIL\nvartitle: Religious affiliation\ndatatype: N\nfieldwidth: 3\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 3\nlongdescription: Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics Header component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Institutional control or affiliation",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 197,
+              "long_description": "Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "location_override": false,
+              "issues": []
+            }
+          ],
+          "code_filters": []
+        },
+        {
+          "metric": "xn",
+          "year": 2024,
+          "unitid": 167835,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "RELAFFIL"
+          ],
+          "filters": [],
+          "formula": {
+            "aggregates": [],
+            "expressions": [
+              {
+                "id": "n",
+                "operator": "count",
+                "inputs": [
+                  "fs1_136068"
+                ],
+                "group_by_references": [
+                  "institution",
+                  "fs1_136068"
+                ]
+              }
+            ]
+          },
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"RELAFFIL\" AS \"RELAFFIL\" FROM \"IC2024\" WHERE \"UNITID\" IN (?,?) LIMIT 20001",
+          "parameters": [
+            164924,
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136068,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "RELAFFIL",
+              "title": "Religious affiliation",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10406\nvarorder: 12\nvarname: RELAFFIL\nvartitle: Religious affiliation\ndatatype: N\nfieldwidth: 3\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 3\nlongdescription: Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics Header component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Institutional control or affiliation",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 197,
+              "long_description": "Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "location_override": false,
+              "issues": []
+            }
+          ],
+          "code_filters": []
+        }
+      ],
+      "definitions": {
+        "xn": "Religious affiliation: Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated."
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Each institution is kept separate, so the output shows each institution's reported religious affiliation category side by side.",
+        "Religious affiliation is only reported for religiously affiliated private not-for-profit institutions; a missing or not-applicable value is a source status, not zero.",
+        "Requested period is academic year 2024-25 (IC2024 release).",
+        "Source row domains, missingness policy, join cardinality and typed calculations are retained in the audit. Missing values are not zeros."
+      ],
+      "created_at": "2026-10-22T18:41:10.836224+00:00",
+      "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+      "review_status": "Source-bound relational plan with observed grain, bounded domains, cardinality and typed-operation validation.",
+      "coverage": {
+        "requested_cells": 2,
+        "available_cells": 2
+      },
+      "query_audit": [
+        {
+          "source_id": "s1",
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"RELAFFIL\" AS \"RELAFFIL\" FROM \"IC2024\" WHERE \"UNITID\" IN (?,?) LIMIT 20001",
+          "parameters": [
+            164924,
+            167835
+          ],
+          "selected_rows": 2,
+          "raw_keys": [
+            "UNITID"
+          ],
+          "row_limit": 20000,
+          "requested_unitids": [
+            164924,
+            167835
+          ],
+          "missing_unitids": [],
+          "missing_codes": {
+            "136068": [
+              "-1",
+              "-2"
+            ]
+          }
+        }
+      ],
+      "join_validation": [],
+      "semantic_validation": {
+        "execution_approved": true,
+        "version": 2,
+        "missing_policy": "propagate",
+        "time_basis": "source_period"
+      },
+      "catalog_evidence": {
+        "definition_evidence": [
+          {
+            "record_id": 136068,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table_name": "IC2024",
+            "variable_name": "RELAFFIL",
+            "physical_status": "documented_location_present",
+            "physical_locations_json": "[\"IC2024\"]",
+            "imputation_variable": "",
+            "category_count": 72,
+            "definition_hash": "31ba60645ff6e70756e513dcbc488c11ada7a1fbb13913cc95703646641906e4",
+            "normalized_hash": "a925cbff4ff0972194c286bf94db28a7510830caa3eda48d9187e2ac3ecc6a6d",
+            "category_hash": "1727ef08cebb02b0cc13428108633f0a7b44e773ca6eb5023ecdfb5a0974b52d",
+            "title": "Religious affiliation",
+            "long_description": "Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.",
+            "data_type": "N",
+            "format": "Disc",
+            "evidence": {
+              "record_id": 136068,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "RELAFFIL",
+              "title": "Religious affiliation",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10406\nvarorder: 12\nvarname: RELAFFIL\nvartitle: Religious affiliation\ndatatype: N\nfieldwidth: 3\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 3\nlongdescription: Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics Header component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Institutional control or affiliation",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 197
+            }
+          }
+        ],
+        "category_evidence": [],
+        "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+        "table_evidence": [
+          {
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table_name": "IC2024",
+            "family": "IC{YEAR}",
+            "profile": {
+              "candidate_key": [
+                "UNITID"
+              ],
+              "distinct_institutions": 5963,
+              "expected_rows_match": true,
+              "key_status": "observed_unique_institution_key",
+              "null_institution_ids": 0,
+              "query_count": 1,
+              "rows": 5963,
+              "status": "profiled"
+            },
+            "period_evidence": [
+              {
+                "record_id": 135823,
+                "release_date": null,
+                "release_status": "Provisional",
+                "year_coverage": "Academic year 2024-25"
+              }
+            ],
+            "population_evidence": [
+              {
+                "description": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year",
+                "record_id": 135823,
+                "title": "Educational offerings, organization, admissions, services and athletic associations"
+              }
+            ],
+            "source_definitions": [
+              {
+                "record_id": 135823,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "table_definition",
+                "table_name": "IC2024",
+                "variable_name": "",
+                "title": "Educational offerings, organization, admissions, services and athletic associations",
+                "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\nyearcoverage: Academic year 2024-25\ntablename: IC2024\ntablenumber: 12\ntabletitle: Educational offerings, organization, admissions, services and athletic associations\ndescription: This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year\nrelease: Provisional\nrelease_date: September 2025",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "tables24",
+                "source_row": 4
+              }
+            ]
+          }
+        ]
+      },
+      "population_evidence": {},
+      "field_semantics": {
+        "136068": {
+          "version": 3,
+          "record_id": 136068,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table": "IC2024",
+          "variable": "RELAFFIL",
+          "source_title": "Religious affiliation",
+          "measure_base": "religious affiliation",
+          "dimensions": {},
+          "unit": "coded",
+          "numeric_kind": "coded_or_other",
+          "additive": false,
+          "total_scope": false,
+          "reporting_periods": [
+            "Academic year 2024-25"
+          ],
+          "field_time_qualifiers": [],
+          "population_evidence": [
+            {
+              "record_id": 135823,
+              "description": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+            }
+          ],
+          "required_row_selectors": [],
+          "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+          "category_overlap_warning": false,
+          "evidence": {
+            "variable_record_id": 136068,
+            "table_record_ids": [
+              135823
+            ],
+            "title_excerpt": "Religious affiliation",
+            "definition_excerpt": "Indicates religious affiliation (denomination) for private not-for-profit institutions that are religiously affiliated.",
+            "unit_basis_excerpt": "Religious affiliation"
+          },
+          "readiness": "described",
+          "execution_approved": false,
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "RELAFFIL",
+            "record_id": 136068,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136068,
+                "excerpt": "Religious affiliation"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      },
+      "latency": {
+        "validation_seconds": 0.43769240006804466,
+        "query_seconds": 0.21890059998258948,
+        "planning_and_binding_seconds": 29.672881100093946,
+        "answer_ready_seconds": 90.53489269991405,
+        "live_model_calls": 6,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 60.115776099963114
+      },
+      "result_id": "9bc5ea9a36bd3167",
+      "intent_validation": {
+        "contract": {
+          "version": 1,
+          "original_question": "Compare the religious affiliations of 164924 and 167835 in 2024-25.",
+          "scope_question": "Compare the religious affiliations of 164924 and 167835 in 2024-25.",
+          "expected_years": null,
+          "time_basis": "observation",
+          "temporal": false,
+          "period_count": null,
+          "unitids": [
+            164924,
+            167835
+          ],
+          "inherit_institutions": false,
+          "dimensions": [],
+          "percentage": false,
+          "undergraduate": false
+        },
+        "plan_checks": [
+          "requested institutions",
+          "requested time scope"
+        ],
+        "policy": "Bounded independent checks; existing source/population/formula validators remain authoritative. Unknown semantic equivalence is not certified.",
+        "result_checks": [
+          "institution scope",
+          "actual reporting periods",
+          "requested output kind and breakdown cardinality"
+        ],
+        "status": "passed"
+      },
+      "planning_validation": {
+        "repair_attempts": [
+          {
+            "attempt": 1,
+            "blocks": [
+              "No numerical measure was selected.",
+              "Grouped extracts need an explicit row-output and subtotal policy; this executor currently returns explicitly selected institution observations."
+            ]
+          }
+        ]
+      },
+      "institution_identity": {
+        "unitids": [
+          164924,
+          167835
+        ],
+        "original_question": "Compare the religious affiliations of Boston College and Smith College in 2024-25.",
+        "original_mentions": [
+          "Boston College",
+          "Smith College"
+        ],
+        "confirmed_choices": {
+          "boston college": 164924,
+          "smith college": 167835
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Boston College \u00b7 Chestnut Hill, MA \u00b7 UNITID 164924",
+          "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+        ]
+      }
+    },
+    "latency": {
+      "validation_seconds": 0.43769240006804466,
+      "query_seconds": 0.21890059998258948,
+      "planning_and_binding_seconds": 29.672881100093946,
+      "answer_ready_seconds": 90.53489269991405,
+      "live_model_calls": 6,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 60.115776099963114
+    },
+    "presentation": {
+      "chart_type": "bar",
+      "show_table": false,
+      "table_reason": null,
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "91dad5bae55b3b10",
+      "status": "completed",
+      "goal": "Compare the religious affiliations of 164924 and 167835 in 2024-25.",
+      "original_question": "Compare the religious affiliations of 164924 and 167835 in 2024-25.",
+      "question": "Institution count by religious affiliation category, per institution (2024-25) \u00b7 Religious affiliation: Roman Catholic (Academic year 2024-25): Boston College: 1; Smith College: 1. The reporting period and source definitions are available below.",
+      "scope": {
+        "institutions": [
+          "164924",
+          "167835"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          {
+            "reference": "xn",
+            "label": "Institution count by religious affiliation category, per institution (2024-25)"
+          }
+        ],
+        "breakdowns": [
+          [
+            136068
+          ]
+        ],
+        "time_basis": "source_period",
+        "assumptions": [
+          "Each institution is kept separate, so the output shows each institution's reported religious affiliation category side by side.",
+          "Religious affiliation is only reported for religiously affiliated private not-for-profit institutions; a missing or not-applicable value is a source status, not zero.",
+          "Requested period is academic year 2024-25 (IC2024 release)."
+        ]
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        164924,
+        167835
+      ],
+      "original_question": "Compare the religious affiliations of Boston College and Smith College in 2024-25.",
+      "original_mentions": [
+        "Boston College",
+        "Smith College"
+      ],
+      "confirmed_choices": {
+        "boston college": 164924,
+        "smith college": 167835
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Boston College \u00b7 Chestnut Hill, MA \u00b7 UNITID 164924",
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 93.00402899994515,
+  "events": [
+    {
+      "elapsed": 0.03444379998836666,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 62.18319549993612,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 62.621084499987774,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 70.34947409993038,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 70.75793749990407,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 73.59113449999131,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 73.89364389993716,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 77.44821419997606,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 80.50096769991796,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 80.81279419991188,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 85.66513959993608,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 85.77789289993234,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 91.32942899991758,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    },
+    {
+      "elapsed": 92.29422229994088,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    },
+    {
+      "elapsed": 92.73171059996821,
+      "stage": "Checking the planned scope against your request\u2026"
+    },
+    {
+      "elapsed": 92.79229639994446,
+      "stage": "Reading source data for 2024\u2026"
+    },
+    {
+      "elapsed": 92.8718600999564,
+      "stage": "Calculating results from the validated data\u2026"
+    },
+    {
+      "elapsed": 92.95459280000068,
+      "stage": "Checking result coverage before publication\u2026"
+    },
+    {
+      "elapsed": 92.95505879994016,
+      "stage": "Checking result coverage before publication\u2026"
+    },
+    {
+      "elapsed": 92.9551586000016,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 93.00379349989817,
+      "stage": "Checking result coverage before publication\u2026"
+    },
+    {
+      "elapsed": 93.00389779999387,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "RELAFFIL",
+    "CNTLAFFI"
+  ]
+}

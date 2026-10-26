@@ -1,0 +1,65 @@
+{
+  "scope": "Synthetic presentation fixtures derived from the salary result; not new statistical findings.",
+  "checks": [
+    {
+      "file": "evaluations\\chart_workflow\\missing_value_panel1_1200x675",
+      "values": 8,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\missing_value_panel1_800x600",
+      "values": 8,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\absent_category_panel1_1200x675",
+      "values": 8,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\absent_category_panel1_800x600",
+      "values": 8,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\long_labels_panel1_1200x675",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        1200,
+        675
+      ]
+    },
+    {
+      "file": "evaluations\\chart_workflow\\long_labels_panel1_800x600",
+      "values": 9,
+      "colors_match": true,
+      "no_bar_overlap": true,
+      "canvas": [
+        800,
+        600
+      ]
+    }
+  ]
+}

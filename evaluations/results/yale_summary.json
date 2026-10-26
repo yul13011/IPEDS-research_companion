@@ -1,0 +1,91 @@
+{
+  "status_counts": {
+    "outside_coverage": 820,
+    "pass": 229,
+    "mismatch": 13,
+    "unsupported_field": 58,
+    "needs_definition": 36
+  },
+  "family_counts": {
+    "enrollment": {
+      "outside_coverage": 123,
+      "pass": 26,
+      "mismatch": 4
+    },
+    "sat": {
+      "outside_coverage": 400,
+      "unsupported_field": 54,
+      "pass": 41,
+      "mismatch": 5
+    },
+    "admissions": {
+      "outside_coverage": 200,
+      "pass": 46,
+      "mismatch": 4
+    },
+    "graduation": {
+      "outside_coverage": 69,
+      "pass": 30
+    },
+    "subgroups": {
+      "outside_coverage": 28,
+      "pass": 86,
+      "unsupported_field": 4,
+      "needs_definition": 36
+    }
+  },
+  "source_files": [
+    {
+      "family": "enrollment",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\w005-enr-historical-by-level(in).csv",
+      "sha256": "50cb95ed3964b0084f0854be77d3560fca6190f0b9520710f2a848eb954b0600",
+      "rows": 51
+    },
+    {
+      "family": "admissions",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\w033-yale-college-admissions-summary(in).csv",
+      "sha256": "bb18affa3eda9a7fc5e6de80699a7a77500e182ffc3099e55da1991324cf8ad1",
+      "rows": 50
+    },
+    {
+      "family": "sat",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\w032-first-year-sat-scores(in).csv",
+      "sha256": "d222f772ede95b154ee5ff393b5a5a6eeb5b8fcb092936c45f808be5929fe792",
+      "rows": 100
+    },
+    {
+      "family": "graduation",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\w041-yale-college-graduation-rates(in).csv",
+      "sha256": "a0e7df2b8bdf7d50ace3c1c5abae7aceabd012775f92f5fb8e8f38e4c1a2850e",
+      "rows": 33
+    },
+    {
+      "family": "subgroups",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\yale-college-grad-rates-subgroups(in).csv",
+      "sha256": "76f0361e6473847177b9edb6aa0e1bcecb27546d277f1c23ca199fd1ad34e567",
+      "rows": 77
+    }
+  ],
+  "total_cases": 1156,
+  "scope": "Deterministic data-retrieval regression tests. Not LLM tool-choice, conversation, chart, or export tests. Source benchmarks unchanged; no results used to change expected values.",
+  "definitions": {
+    "institution": "Yale University",
+    "unitid": 130794,
+    "user_definition_of_urm": "URM are anyone who is not white, asian or international.",
+    "international_operational_category": "IPEDS GRNRALT, U.S. nonresident; exact benchmark agreement is checked rather than assuming it covers all foreign-born students.",
+    "include_unknown_in_non_urm": null,
+    "unknown_status": "User explicitly chose to leave the race/ethnicity-unknown placement unresolved on 2026-10-16. Do not infer a grouping from benchmark agreement.",
+    "source_policy": "User-supplied CSVs are immutable expected results. Dataset differences are retained as failures, not used to change expectations.",
+    "coverage": "IPEDS observation years 2015 through 2024. Six-year graduation cohorts enter six years before observation year.",
+    "sat_definition_verification": {
+      "population": "Enrolled first-time degree/certificate-seeking undergraduates submitting relevant SAT scores, including prior-summer entrants. Broad population aligns with Yale College first-year students.",
+      "score_protocol": "New 2016 SAT scale and old-to-new concordance required by 2017/2018 instructions; scores used in admission decision. Yale CSV footnote/score selection not supplied.",
+      "comparability": "Population aligned; exact scoring/reporting basis unresolved. Five numeric mismatches retained.",
+      "evidence_file": "SAT_DEFINITION_VERIFICATION.md"
+    }
+  },
+  "unresolved_definitions": [
+    "Race-unknown placement in Yale URM/Non-URM grouping"
+  ],
+  "rounding": "Count and SAT cells: exact. Rates: fractions with absolute tolerance 0.0005 (0.05 percentage points), reflecting 3-decimal benchmark precision."
+}

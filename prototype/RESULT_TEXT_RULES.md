@@ -1,0 +1,30 @@
+# Answer, caveat and source-text separation
+
+Implemented October 19, 2026. These rules supersede treating every planner assumption as a visible warning or copying full original codebooks into result popovers.
+
+| Surface | Content |
+| --- | --- |
+| Main answer | Existing deterministic numerical summary, institution, population/measure and actual period. No model-generated statistical summary or extra model call. |
+| Highlighted caveats | Material reporting-scope limitations, missing observations, zero denominators, reconciliation/source conflicts, comparability breaks, complete-case limitations, provisional status and reviewed source-location corrections. Unknown engine warnings stay visible by default. |
+| Definitions & sources | Institution, selected population/category labels, reporting periods, concise source-derived definitions, a plain-language calculation when available, and deduplicated source tables showing IPEDS release/status, survey, year coverage and exact table code, grouped under descriptive source table titles. |
+| Downloads | Full original definitions, variable/category IDs and codes, exact formulas/SQL/parameters, source sheet/row references, calculation proofs, planner assumptions, validation/repair metadata and timing. |
+
+`catalog_execution.py` and `query_engine.py` store planner assumptions and generic execution explanations in `technical_notes`; they no longer seed `warnings` from model-written assumptions. Reviewed execution similarly retains long SAT/aid definitions as technical notes; a real SAT comparison across the 2017 break produces a short comparability warning. Existing benchmark discrepancies and conditional missingness/reconciliation warnings remain.
+
+`result_text.py` builds reader-facing text without modifying the source result. It also suppresses known old generic technical messages and exact planner assumptions in cached legacy warning lists. It does not guess whether arbitrary warning strings are unimportant: unrecognized warnings remain visible. Provisional/missing flags and reviewed location corrections produce deterministic caveats. The confirmed-college-versus-reporting-institution warning remains visible.
+
+Concise definitions are deterministic extracts of the beginning of the existing definition, excluding repeated CREDIT/NOTE boilerplate and limiting length; they are summaries, not replacements for original source text. Plain-language formulas use source variable titles, not raw codes. Typed version-2 expressions can be summarized recursively, with a depth bound and a reference to the full download for complex intermediate calculations. Reviewed percentages use source titles where a simple reviewed formula can be recognized, otherwise numerator/denominator terminology. No new formula is inferred or executed by presentation code.
+
+The source popover no longer leads with requested/retrieved-cell diagnostics or repeats generic percent/missingness explanations. Exact source table codes are visible alongside meaningful survey/period metadata; variable codes and sheet row numbers remain in the technical audit and Excel source/codebook sheets. The three primary result controls are unchanged.
+
+Excel Methodology includes `technical_notes`; JSON includes the full result. Original `definitions`, calculation evidence, source documents and query fields remain intact. CSV continues to export all numerical result rows and their existing calculation fields; Excel/JSON carry the full source documentation.
+
+Verification: source-bound women/undergraduate percentages, source population and period labels, preserved college/conflict/provisional caveats, version-2 expressions, concise UI text, two existing popovers, source-result immutability, and full-original Excel/JSON exports. See `tests/test_result_text.py` and the combined regression report.
+
+Source-bound starter caveats: first-time versus transfer population interpretation, unavailable detailed gender categories, and college reporting-unit limitations are now passed through a separate server-authored source_caveats field. They remain visible even when the same wording is also retained in technical notes. Current engine warnings are never suppressed merely because a planner repeated their wording as an assumption; legacy-assumption suppression applies only to older results without technical_notes.
+
+Final verification: 124 combined tests passed with zero failures/errors. Nine focused result-text/enrollment checks also passed after the final label changes. The app was restarted and its health endpoint returned ok. No additional model calls are required for these presentation changes.
+
+October 20 source-display update: table-level metadata is read from the indexed codebook `table_docs` rows, using each executed source's exact release and table. Workbook filenames are no longer the primary reader-facing source. Each release/table appears once even when used for multiple institutions, numerators or denominators. Different source tables remain separate, including joined queries. The metadata's canonical TableName is retained. A shared descriptive heading strips only an exact documented year-coverage suffix; the period stays in its own column. Missing and conflicting metadata are identified explicitly rather than inferred from a filename or silently chosen. Source results are not mutated, and Excel/JSON retain original workbook, sheet and row references. No new model requests or statistical queries are used for this presentation.
+
+Institution-scope warning correction: compare the original mention with its confirmed reporting institution rather than treating every name containing College as an unreported subunit. Official/historical names, harmless formatting variants and ordinary College-name spelling confirmations do not produce a separate-college warning. The renderer also suppresses that false warning in legacy answers using stored identity mappings. A genuine designation change such as Yale College to Yale University retains a scope caveat stating that these results do not establish separate college figures; it does not claim that no separate record exists.

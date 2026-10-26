@@ -1,0 +1,711 @@
+{
+  "timestamp": "2026-10-25T14:54:38.536335+00:00",
+  "scope": "Same deterministic source evidence per topic for every writer setting. No app defaults changed.",
+  "records": [
+    {
+      "topic": "faculty",
+      "round": 1,
+      "configuration": "sonnet_current",
+      "model": "claude-sonnet-5-5",
+      "settings": {},
+      "status": "accepted",
+      "reason": null,
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 10,
+        "points": 8,
+        "prose_words": 187,
+        "target_words": 220,
+        "hard_word_limit": 242,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "evidence_sha256": "f15636e4009f515a4c0f754d99f658b247f1d1042c0298095c5ed2fd4abe82d7",
+      "usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "input_tokens": 32069,
+        "output_tokens": 953,
+        "cache_creation_input_tokens": 1763,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": 0.0780755,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 22.404
+      },
+      "wall_seconds": 22.414
+    },
+    {
+      "topic": "faculty",
+      "round": 1,
+      "configuration": "haiku_current",
+      "model": "claude-haiku-5-5",
+      "settings": {},
+      "status": "accepted",
+      "reason": null,
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 14,
+        "points": 8,
+        "prose_words": 184,
+        "target_words": 220,
+        "hard_word_limit": 242,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "evidence_sha256": "f15636e4009f515a4c0f754d99f658b247f1d1042c0298095c5ed2fd4abe82d7",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 32069,
+        "output_tokens": 3237,
+        "cache_creation_input_tokens": 1764,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": 0.0050459,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 28.394
+      },
+      "wall_seconds": 28.394
+    },
+    {
+      "topic": "faculty",
+      "round": 1,
+      "configuration": "haiku_larger",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "max_tokens": 7000
+      },
+      "status": "fallback",
+      "reason": "Unsupported universal or equivalence claim.",
+      "validation": null,
+      "evidence_sha256": "f15636e4009f515a4c0f754d99f658b247f1d1042c0298095c5ed2fd4abe82d7",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 32069,
+        "output_tokens": 4638,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1764,
+        "estimated_api_usd": 0.00554354,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 17.314
+      },
+      "wall_seconds": 17.314
+    },
+    {
+      "topic": "faculty",
+      "round": 1,
+      "configuration": "haiku_no_reasoning",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "reasoning": "disabled"
+      },
+      "status": "fallback",
+      "reason": "Unsupported universal or equivalence claim.",
+      "validation": null,
+      "evidence_sha256": "f15636e4009f515a4c0f754d99f658b247f1d1042c0298095c5ed2fd4abe82d7",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 32069,
+        "output_tokens": 1266,
+        "cache_creation_input_tokens": 1763,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": 0.004060275,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 5.09
+      },
+      "wall_seconds": 5.09
+    },
+    {
+      "topic": "faculty",
+      "round": 2,
+      "configuration": "haiku_no_reasoning",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "reasoning": "disabled"
+      },
+      "status": "accepted",
+      "reason": null,
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 16,
+        "points": 8,
+        "prose_words": 204,
+        "target_words": 220,
+        "hard_word_limit": 242,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "evidence_sha256": "f15636e4009f515a4c0f754d99f658b247f1d1042c0298095c5ed2fd4abe82d7",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 32069,
+        "output_tokens": 1205,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1763,
+        "estimated_api_usd": 0.0038270300000000004,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 5.19
+      },
+      "wall_seconds": 5.19
+    },
+    {
+      "topic": "faculty",
+      "round": 2,
+      "configuration": "haiku_larger",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "max_tokens": 7000
+      },
+      "status": "accepted",
+      "reason": null,
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 13,
+        "points": 8,
+        "prose_words": 205,
+        "target_words": 220,
+        "hard_word_limit": 242,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "evidence_sha256": "f15636e4009f515a4c0f754d99f658b247f1d1042c0298095c5ed2fd4abe82d7",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 32069,
+        "output_tokens": 3615,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1764,
+        "estimated_api_usd": 0.00503204,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 14.657
+      },
+      "wall_seconds": 14.657
+    },
+    {
+      "topic": "faculty",
+      "round": 2,
+      "configuration": "haiku_current",
+      "model": "claude-haiku-5-5",
+      "settings": {},
+      "status": "accepted",
+      "reason": null,
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 8,
+        "points": 8,
+        "prose_words": 138,
+        "target_words": 220,
+        "hard_word_limit": 242,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "evidence_sha256": "f15636e4009f515a4c0f754d99f658b247f1d1042c0298095c5ed2fd4abe82d7",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 32069,
+        "output_tokens": 3459,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1764,
+        "estimated_api_usd": 0.00495404,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 14.224
+      },
+      "wall_seconds": 14.225
+    },
+    {
+      "topic": "faculty",
+      "round": 2,
+      "configuration": "sonnet_current",
+      "model": "claude-sonnet-5-5",
+      "settings": {},
+      "status": "accepted",
+      "reason": null,
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 10,
+        "points": 8,
+        "prose_words": 184,
+        "target_words": 220,
+        "hard_word_limit": 242,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "evidence_sha256": "f15636e4009f515a4c0f754d99f658b247f1d1042c0298095c5ed2fd4abe82d7",
+      "usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "input_tokens": 32069,
+        "output_tokens": 959,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1763,
+        "estimated_api_usd": 0.0739043,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 6.543
+      },
+      "wall_seconds": 6.543
+    },
+    {
+      "topic": "graduation rates",
+      "round": 1,
+      "configuration": "sonnet_current",
+      "model": "claude-sonnet-5-5",
+      "settings": {},
+      "status": "accepted",
+      "reason": null,
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 12,
+        "points": 8,
+        "prose_words": 205,
+        "target_words": 220,
+        "hard_word_limit": 242,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "evidence_sha256": "dd771975513b81aa62419a9b9545af464bcf50dc8b674e49b4ec40201c8312c9",
+      "usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "input_tokens": 38232,
+        "output_tokens": 1095,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1763,
+        "estimated_api_usd": 0.08759030000000001,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 8.296
+      },
+      "wall_seconds": 8.297
+    },
+    {
+      "topic": "graduation rates",
+      "round": 1,
+      "configuration": "haiku_current",
+      "model": "claude-haiku-5-5",
+      "settings": {},
+      "status": "fallback",
+      "reason": "No complete structured discovery narrative.",
+      "validation": null,
+      "evidence_sha256": "dd771975513b81aa62419a9b9545af464bcf50dc8b674e49b4ec40201c8312c9",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 38232,
+        "output_tokens": 3500,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1764,
+        "estimated_api_usd": 0.0055908400000000006,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 16.283
+      },
+      "wall_seconds": 16.283
+    },
+    {
+      "topic": "graduation rates",
+      "round": 1,
+      "configuration": "haiku_larger",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "max_tokens": 7000
+      },
+      "status": "fallback",
+      "reason": "Narrative number lacks cited support.",
+      "validation": null,
+      "evidence_sha256": "dd771975513b81aa62419a9b9545af464bcf50dc8b674e49b4ec40201c8312c9",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 38232,
+        "output_tokens": 6602,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1764,
+        "estimated_api_usd": 0.00714184,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 26.725
+      },
+      "wall_seconds": 26.725
+    },
+    {
+      "topic": "graduation rates",
+      "round": 1,
+      "configuration": "haiku_no_reasoning",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "reasoning": "disabled"
+      },
+      "status": "fallback",
+      "reason": "Distinct source concepts were merged.",
+      "validation": null,
+      "evidence_sha256": "dd771975513b81aa62419a9b9545af464bcf50dc8b674e49b4ec40201c8312c9",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 38232,
+        "output_tokens": 1089,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1763,
+        "estimated_api_usd": 0.00438533,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 5.637
+      },
+      "wall_seconds": 5.637
+    },
+    {
+      "topic": "graduation rates",
+      "round": 2,
+      "configuration": "haiku_no_reasoning",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "reasoning": "disabled"
+      },
+      "status": "fallback",
+      "reason": "Unsupported universal or equivalence claim.",
+      "validation": null,
+      "evidence_sha256": "dd771975513b81aa62419a9b9545af464bcf50dc8b674e49b4ec40201c8312c9",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 38232,
+        "output_tokens": 1216,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1763,
+        "estimated_api_usd": 0.00444883,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 5.098
+      },
+      "wall_seconds": 5.099
+    },
+    {
+      "topic": "graduation rates",
+      "round": 2,
+      "configuration": "haiku_larger",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "max_tokens": 7000
+      },
+      "status": "accepted",
+      "reason": null,
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 41,
+        "points": 8,
+        "prose_words": 208,
+        "target_words": 220,
+        "hard_word_limit": 242,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "evidence_sha256": "dd771975513b81aa62419a9b9545af464bcf50dc8b674e49b4ec40201c8312c9",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 38232,
+        "output_tokens": 6270,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1764,
+        "estimated_api_usd": 0.0069758400000000005,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 23.861
+      },
+      "wall_seconds": 23.862
+    },
+    {
+      "topic": "graduation rates",
+      "round": 2,
+      "configuration": "haiku_current",
+      "model": "claude-haiku-5-5",
+      "settings": {},
+      "status": "fallback",
+      "reason": "No complete structured discovery narrative.",
+      "validation": null,
+      "evidence_sha256": "dd771975513b81aa62419a9b9545af464bcf50dc8b674e49b4ec40201c8312c9",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 38232,
+        "output_tokens": 3500,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1764,
+        "estimated_api_usd": 0.0055908400000000006,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 15.974
+      },
+      "wall_seconds": 15.974
+    },
+    {
+      "topic": "graduation rates",
+      "round": 2,
+      "configuration": "sonnet_current",
+      "model": "claude-sonnet-5-5",
+      "settings": {},
+      "status": "accepted",
+      "reason": null,
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 12,
+        "points": 8,
+        "prose_words": 197,
+        "target_words": 220,
+        "hard_word_limit": 242,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "evidence_sha256": "dd771975513b81aa62419a9b9545af464bcf50dc8b674e49b4ec40201c8312c9",
+      "usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "input_tokens": 38232,
+        "output_tokens": 1059,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1763,
+        "estimated_api_usd": 0.0872303,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 7.492
+      },
+      "wall_seconds": 7.492
+    },
+    {
+      "topic": "admissions",
+      "round": 1,
+      "configuration": "sonnet_current",
+      "model": "claude-sonnet-5-5",
+      "settings": {},
+      "status": "fallback",
+      "reason": "Overview exceeds the total reading budget.",
+      "validation": null,
+      "evidence_sha256": "2032598ee27e02b6c49a6370cde737252d2769707e65630077da9e6c5536ce38",
+      "usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "input_tokens": 15072,
+        "output_tokens": 1061,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1763,
+        "estimated_api_usd": 0.0409303,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 7.406
+      },
+      "wall_seconds": 7.406
+    },
+    {
+      "topic": "admissions",
+      "round": 1,
+      "configuration": "haiku_current",
+      "model": "claude-haiku-5-5",
+      "settings": {},
+      "status": "fallback",
+      "reason": "Technical dates or formatting in narrative.",
+      "validation": null,
+      "evidence_sha256": "2032598ee27e02b6c49a6370cde737252d2769707e65630077da9e6c5536ce38",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 15072,
+        "output_tokens": 2405,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1764,
+        "estimated_api_usd": 0.00272734,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 11.166
+      },
+      "wall_seconds": 11.166
+    },
+    {
+      "topic": "admissions",
+      "round": 1,
+      "configuration": "haiku_larger",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "max_tokens": 7000
+      },
+      "status": "fallback",
+      "reason": "No complete structured discovery narrative.",
+      "validation": null,
+      "evidence_sha256": "2032598ee27e02b6c49a6370cde737252d2769707e65630077da9e6c5536ce38",
+      "usage": {
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "input_tokens": 15072,
+        "output_tokens": 7000,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1764,
+        "estimated_api_usd": 0.00502484,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 27.438
+      },
+      "wall_seconds": 27.439
+    },
+    {
+      "topic": "admissions",
+      "round": 1,
+      "configuration": "haiku_no_reasoning",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "reasoning": "disabled"
+      },
+      "status": "fallback",
+      "reason": "Writing service unavailable or output invalid.",
+      "validation": null,
+      "evidence_sha256": "2032598ee27e02b6c49a6370cde737252d2769707e65630077da9e6c5536ce38",
+      "usage": {
+        "stage": "discovery writing",
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "latency_seconds": 0.181,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": null,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": false
+      },
+      "wall_seconds": 0.181
+    },
+    {
+      "topic": "admissions",
+      "round": 2,
+      "configuration": "haiku_no_reasoning",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "reasoning": "disabled"
+      },
+      "status": "fallback",
+      "reason": "Writing service unavailable or output invalid.",
+      "validation": null,
+      "evidence_sha256": "2032598ee27e02b6c49a6370cde737252d2769707e65630077da9e6c5536ce38",
+      "usage": {
+        "stage": "discovery writing",
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "latency_seconds": 0.16,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": null,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": false
+      },
+      "wall_seconds": 0.16
+    },
+    {
+      "topic": "admissions",
+      "round": 2,
+      "configuration": "haiku_larger",
+      "model": "claude-haiku-5-5",
+      "settings": {
+        "max_tokens": 7000
+      },
+      "status": "fallback",
+      "reason": "Writing service unavailable or output invalid.",
+      "validation": null,
+      "evidence_sha256": "2032598ee27e02b6c49a6370cde737252d2769707e65630077da9e6c5536ce38",
+      "usage": {
+        "stage": "discovery writing",
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "latency_seconds": 0.213,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": null,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": false
+      },
+      "wall_seconds": 0.214
+    },
+    {
+      "topic": "admissions",
+      "round": 2,
+      "configuration": "haiku_current",
+      "model": "claude-haiku-5-5",
+      "settings": {},
+      "status": "fallback",
+      "reason": "Writing service unavailable or output invalid.",
+      "validation": null,
+      "evidence_sha256": "2032598ee27e02b6c49a6370cde737252d2769707e65630077da9e6c5536ce38",
+      "usage": {
+        "stage": "discovery writing",
+        "model": "claude-haiku-5-5",
+        "calls": 1,
+        "latency_seconds": 0.159,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": null,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": false
+      },
+      "wall_seconds": 0.159
+    },
+    {
+      "topic": "admissions",
+      "round": 2,
+      "configuration": "sonnet_current",
+      "model": "claude-sonnet-5-5",
+      "settings": {},
+      "status": "fallback",
+      "reason": "Writing service unavailable or output invalid.",
+      "validation": null,
+      "evidence_sha256": "2032598ee27e02b6c49a6370cde737252d2769707e65630077da9e6c5536ce38",
+      "usage": {
+        "stage": "discovery writing",
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 0.153,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": null,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": false
+      },
+      "wall_seconds": 0.153
+    }
+  ]
+}

@@ -1,0 +1,659 @@
+{
+  "question": "how many women's colleges in the US",
+  "model": "claude-sonnet-5-5",
+  "fresh_conversation": true,
+  "answer": {
+    "intent": "clarify",
+    "message": "IPEDS has no \"women's college\" flag. How should we identify them?\n\n**A. No men enrolled (all students)**\n\nCount US Title IV institutions whose total fall 2024 enrollment (all students) includes zero men and at least one woman.\n\nProxy: IPEDS has no women's-college designation. Fall 2024 enrollment, all levels combined. Counts institutions that report zero men, which may include tiny or specialized schools that are not women's colleges, and excludes women's colleges that enroll a few men (e.g. graduate or non-degree students). Institutions with missing enrollment are excluded; the count is a proxy, not an official list.\n\n**B. No men among undergraduates**\n\nCount US Title IV institutions whose fall 2024 undergraduate enrollment includes zero men and at least one woman, allowing co-ed graduate programs.\n\nProxy: IPEDS has no women's-college designation. Fall 2024 undergraduate enrollment only; graduate programs may enroll men. Better fits traditional women's colleges with co-ed graduate programs, but may include small or specialized undergraduate programs that are not women's colleges. Institutions with missing undergraduate enrollment are excluded.",
+    "analysis_brief": {
+      "version": 1,
+      "status": "pending",
+      "goal": "Count US women's colleges using fall 2024 enrollment as a proxy",
+      "original_question": "how many women's colleges in the US",
+      "question": "IPEDS has no \"women's college\" flag. How should we identify them?",
+      "options": [
+        {
+          "id": "A",
+          "label": "No men enrolled (all students)",
+          "interpretation": "Count US Title IV institutions whose total fall 2024 enrollment (all students) includes zero men and at least one woman.",
+          "qualifications": [
+            "Proxy: IPEDS has no women's-college designation.",
+            "Fall 2024 enrollment, all levels combined.",
+            "Counts institutions that report zero men, which may include tiny or specialized schools that are not women's colleges, and excludes women's colleges that enroll a few men (e.g. graduate or non-degree students).",
+            "Institutions with missing enrollment are excluded; the count is a proxy, not an official list."
+          ],
+          "plan": {
+            "version": 2,
+            "institutions": [],
+            "source_years": [
+              2024
+            ],
+            "sources": [
+              {
+                "id": "e",
+                "year": 2024,
+                "table": "EF2024",
+                "field_record_ids": [
+                  136384,
+                  136385
+                ],
+                "filters": [
+                  {
+                    "record_id": 136382,
+                    "operator": "eq",
+                    "values": [
+                      "10"
+                    ],
+                    "code_record_ids": [
+                      144666
+                    ]
+                  },
+                  {
+                    "record_id": 136384,
+                    "operator": "eq",
+                    "values": [
+                      "0"
+                    ],
+                    "code_record_ids": []
+                  },
+                  {
+                    "record_id": 136385,
+                    "operator": "gt",
+                    "values": [
+                      "0"
+                    ],
+                    "code_record_ids": []
+                  }
+                ],
+                "group_by_record_ids": [],
+                "aggregates": []
+              }
+            ],
+            "joins": [],
+            "expressions": [
+              {
+                "id": "n",
+                "operator": "count",
+                "inputs": [
+                  "fe_136385"
+                ],
+                "group_by_references": []
+              }
+            ],
+            "outputs": [
+              {
+                "reference": "xn",
+                "label": "Institutions with only women enrolled, fall 2024 (proxy for women's colleges)"
+              }
+            ],
+            "missing_policy": "complete_cases",
+            "time_basis": "source_period",
+            "assumptions": [
+              "Fall 2024 is the latest fall and the default period.",
+              "Population is US Title IV institutions excluding administrative offices; counts institutions, not students.",
+              "Women's college is proxied by zero men enrolled across all students.",
+              "Proxy: IPEDS has no women's-college designation.",
+              "Fall 2024 enrollment, all levels combined.",
+              "Counts institutions that report zero men, which may include tiny or specialized schools that are not women's colleges, and excludes women's colleges that enroll a few men (e.g. graduate or non-degree students).",
+              "Institutions with missing enrollment are excluded; the count is a proxy, not an official list."
+            ],
+            "clarification_questions": [],
+            "population": {
+              "fips": [
+                1,
+                2,
+                4,
+                5,
+                6,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                53,
+                54,
+                55,
+                56
+              ],
+              "controls": [],
+              "levels": [],
+              "degree_granting": null,
+              "title_iv": true,
+              "administrative_offices": false
+            }
+          },
+          "evidence": {
+            "definitions": [
+              {
+                "record_id": 136382,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "EF2024",
+                "variable_name": "EFLEVEL",
+                "physical_status": "documented_location_present",
+                "physical_locations_json": "[\"EF2024\"]",
+                "imputation_variable": "",
+                "category_count": 9,
+                "definition_hash": "291ec03d53bd7107b59637fb92ad05aeaab3373d2850b1cae7879610e9173d36",
+                "normalized_hash": "569d293612640f7fd2064467db6017545c9ba78a510f6545a822126c546567b7",
+                "category_hash": "43e0822da4b712d63a85753ba48ea737c8b857f2b010dd7a3b67f7107ae04062",
+                "title": "Level of student",
+                "long_description": "Level of student Undergraduate A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate. Degree/certificate-seeking students Students enrolled in courses for credit who are recognized by the institution as seeking a degree or other formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs First-time student (undergraduate) A student who has no prior postsecondary experience (except as noted below) attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs . Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Institutions that do not have a standard fall term should consider all students entering the institution between August 1 and October 31 as first-time students, provided they have no previous postsecondary experience. Transfer-in degree/certificate-seeking undergraduate students - Degree/certificate-seeking undergraduate students entering the reporting institution for the first time but known to have previously attended a postsecondary institution at the undergraduate level. These students may or may not have transferred credit(s). Non-degree/certificate-seeking undergraduates - Examples of non-degree/certificate-seeking students would be high school students enrolled in creditable courses prior to high school graduation, or those enrolled in creditable courses who for some reason are not seeking a degree/certificate. Graduate student A student who holds a bachelor's or first-professional degree, or equivalent, and is taking courses at the post-baccalaureate level. These students may or may not be enrolled in graduate programs . First-professional student A student enrolled in any of the following degree programs : Chiropractic (D.C. or D.C.M.) Dentistry (D.D.S. or D.M.D.) Law (L.L.B., J.D.) Medicine (M.D.) Optometry (O.D.) Osteopathic Medicine (D.O.) Pharmacy (Pharm.D.) Podiatry (D.P.M., D.P., or Pod.D.) Theology (M.Div., M.H.L., B.D., or Ordination) Veterinary Medicine (D.V.M.)",
+                "data_type": "N",
+                "format": "Disc",
+                "evidence": {
+                  "record_id": 136382,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "kind": "variable_definition",
+                  "table_name": "EF2024",
+                  "variable_name": "EFLEVEL",
+                  "title": "Level of student",
+                  "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\ntablenumber: 20\ntablename: EF2024\ntabletitle: Gender, attendance status, and level of student: Fall 2024\nvarnumber: 24051\nvarorder: 2\nvarname: EFLEVEL\nvartitle: Level of student\ndatatype: N\nfieldwidth: 3\nformat: Disc\nmultirecord: 1\nfilenumber: 74\nsectionnumber: 1\nlongdescription: Level of student Undergraduate A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate. Degree/certificate-seeking students Students enrolled in courses for credit who are recognized by the institution as seeking a degree or other formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs First-time student (undergraduate) A student who has no prior postsecondary experience (except as noted below) attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs . Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Institutions that do not have a standard fall term should consider all students entering the institution between August 1 and October 31 as first-time students, provided they have no previous postsecondary experience. Transfer-in degree/certificate-seeking undergraduate students - Degree/certificate-seeking undergraduate students entering the reporting institution for the first time but known to have previously attended a postsecondary institution at the undergraduate level. These students may or may not have transferred credit(s). Non-degree/certificate-seeking undergraduates - Examples of non-degree/certificate-seeking students would be high school students enrolled in creditable courses prior to high school graduation, or those enrolled in creditable courses who for some reason are not seeking a degree/certificate. Graduate student A student who holds a bachelor's or first-professional degree, or equivalent, and is taking courses at the post-baccalaureate level. These students may or may not be enrolled in graduate programs . First-professional student A student enrolled in any of the following degree programs : Chiropractic (D.C. or D.C.M.) Dentistry (D.D.S. or D.M.D.) Law (L.L.B., J.D.) Medicine (M.D.) Optometry (O.D.) Osteopathic Medicine (D.O.) Pharmacy (Pharm.D.) Podiatry (D.P.M., D.P., or Pod.D.) Theology (M.Div., M.H.L., B.D., or Ordination) Veterinary Medicine (D.V.M.)\nvarsource: IPEDS, Spring 2025, Fall Enrollment component\nfiletitle: Gender, attendance status, and level of student: Fall 2024\nsectiontitle: Gender, attendance status, and level of student",
+                  "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                  "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                  "sheet_name": "varTable24",
+                  "source_row": 511
+                }
+              },
+              {
+                "record_id": 136384,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "EF2024",
+                "variable_name": "EFMEN",
+                "physical_status": "documented_location_present",
+                "physical_locations_json": "[\"EF2024\"]",
+                "imputation_variable": "",
+                "category_count": 0,
+                "definition_hash": "962b805fd15a56c9502c4969dc3885565526d8942864f0c09feb4d5019314d0c",
+                "normalized_hash": "f7a015f1089122d65acf11f42e7a4beddfd4fc13d28a427e121a746e2e86f67a",
+                "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "title": "Total men",
+                "long_description": "Total men enrolled for credit CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.",
+                "data_type": "N",
+                "format": "Cont",
+                "evidence": {
+                  "record_id": 136384,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "kind": "variable_definition",
+                  "table_name": "EF2024",
+                  "variable_name": "EFMEN",
+                  "title": "Total men",
+                  "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\ntablenumber: 20\ntablename: EF2024\ntabletitle: Gender, attendance status, and level of student: Fall 2024\nvarnumber: 24058\nvarorder: 4\nvarname: EFMEN\nvartitle: Total men\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 74\nsectionnumber: 1\nlongdescription: Total men enrolled for credit CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.\nvarsource: IPEDS, Spring 2025, Fall Enrollment component\nfiletitle: Gender, attendance status, and level of student: Fall 2024\nsectiontitle: Gender, attendance status, and level of student",
+                  "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                  "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                  "sheet_name": "varTable24",
+                  "source_row": 513
+                }
+              },
+              {
+                "record_id": 136385,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "EF2024",
+                "variable_name": "EFWOM",
+                "physical_status": "documented_location_present",
+                "physical_locations_json": "[\"EF2024\"]",
+                "imputation_variable": "",
+                "category_count": 0,
+                "definition_hash": "383fde52dc1fd939824afa0e0be8ba226b6bc3a05105efcbdf8a7504148d25c2",
+                "normalized_hash": "febbc2cb7cbac637f55d9449ec0a49add216c06adf26ca39a50ffb094bc2a05a",
+                "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "title": "Total women",
+                "long_description": "Total women enrolled for credit CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.",
+                "data_type": "N",
+                "format": "Cont",
+                "evidence": {
+                  "record_id": 136385,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "kind": "variable_definition",
+                  "table_name": "EF2024",
+                  "variable_name": "EFWOM",
+                  "title": "Total women",
+                  "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\ntablenumber: 20\ntablename: EF2024\ntabletitle: Gender, attendance status, and level of student: Fall 2024\nvarnumber: 24060\nvarorder: 5\nvarname: EFWOM\nvartitle: Total women\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 74\nsectionnumber: 1\nlongdescription: Total women enrolled for credit CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.\nvarsource: IPEDS, Spring 2025, Fall Enrollment component\nfiletitle: Gender, attendance status, and level of student: Fall 2024\nsectiontitle: Gender, attendance status, and level of student",
+                  "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                  "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                  "sheet_name": "varTable24",
+                  "source_row": 514
+                }
+              }
+            ],
+            "categories": [
+              {
+                "record_id": 144666,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "code_value",
+                "table_name": "EF2024",
+                "variable_name": "EFLEVEL",
+                "title": "All students total",
+                "body": "surveyorder: 20\ntablenumber: 20\ntablename: EF2024\nvarnumber: 24051\nvarorder: 2\nvarname: EFLEVEL\ncodevalue: 10\nfrequency: 5842\npercent: 13.98\nvalueorder: 10\nvaluelabel: All students total\nvartitle: Level of student",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "valueSets24",
+                "source_row": 6196
+              }
+            ],
+            "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+          },
+          "additional_analyses": []
+        },
+        {
+          "id": "B",
+          "label": "No men among undergraduates",
+          "interpretation": "Count US Title IV institutions whose fall 2024 undergraduate enrollment includes zero men and at least one woman, allowing co-ed graduate programs.",
+          "qualifications": [
+            "Proxy: IPEDS has no women's-college designation.",
+            "Fall 2024 undergraduate enrollment only; graduate programs may enroll men.",
+            "Better fits traditional women's colleges with co-ed graduate programs, but may include small or specialized undergraduate programs that are not women's colleges.",
+            "Institutions with missing undergraduate enrollment are excluded."
+          ],
+          "plan": {
+            "version": 2,
+            "institutions": [],
+            "source_years": [
+              2024
+            ],
+            "sources": [
+              {
+                "id": "e",
+                "year": 2024,
+                "table": "EF2024",
+                "field_record_ids": [
+                  136384,
+                  136385
+                ],
+                "filters": [
+                  {
+                    "record_id": 136382,
+                    "operator": "eq",
+                    "values": [
+                      "20"
+                    ],
+                    "code_record_ids": [
+                      144667
+                    ]
+                  },
+                  {
+                    "record_id": 136384,
+                    "operator": "eq",
+                    "values": [
+                      "0"
+                    ],
+                    "code_record_ids": []
+                  },
+                  {
+                    "record_id": 136385,
+                    "operator": "gt",
+                    "values": [
+                      "0"
+                    ],
+                    "code_record_ids": []
+                  }
+                ],
+                "group_by_record_ids": [],
+                "aggregates": []
+              }
+            ],
+            "joins": [],
+            "expressions": [
+              {
+                "id": "n",
+                "operator": "count",
+                "inputs": [
+                  "fe_136385"
+                ],
+                "group_by_references": []
+              }
+            ],
+            "outputs": [
+              {
+                "reference": "xn",
+                "label": "Institutions with only women among undergraduates, fall 2024 (proxy for women's colleges)"
+              }
+            ],
+            "missing_policy": "complete_cases",
+            "time_basis": "source_period",
+            "assumptions": [
+              "Fall 2024 is the latest fall and the default period.",
+              "Population is US Title IV institutions excluding administrative offices; counts institutions, not students.",
+              "Women's college is proxied by zero undergraduate men enrolled.",
+              "Proxy: IPEDS has no women's-college designation.",
+              "Fall 2024 undergraduate enrollment only; graduate programs may enroll men.",
+              "Better fits traditional women's colleges with co-ed graduate programs, but may include small or specialized undergraduate programs that are not women's colleges.",
+              "Institutions with missing undergraduate enrollment are excluded."
+            ],
+            "clarification_questions": [],
+            "population": {
+              "fips": [
+                1,
+                2,
+                4,
+                5,
+                6,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                53,
+                54,
+                55,
+                56
+              ],
+              "controls": [],
+              "levels": [],
+              "degree_granting": null,
+              "title_iv": true,
+              "administrative_offices": false
+            }
+          },
+          "evidence": {
+            "definitions": [
+              {
+                "record_id": 136382,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "EF2024",
+                "variable_name": "EFLEVEL",
+                "physical_status": "documented_location_present",
+                "physical_locations_json": "[\"EF2024\"]",
+                "imputation_variable": "",
+                "category_count": 9,
+                "definition_hash": "291ec03d53bd7107b59637fb92ad05aeaab3373d2850b1cae7879610e9173d36",
+                "normalized_hash": "569d293612640f7fd2064467db6017545c9ba78a510f6545a822126c546567b7",
+                "category_hash": "43e0822da4b712d63a85753ba48ea737c8b857f2b010dd7a3b67f7107ae04062",
+                "title": "Level of student",
+                "long_description": "Level of student Undergraduate A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate. Degree/certificate-seeking students Students enrolled in courses for credit who are recognized by the institution as seeking a degree or other formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs First-time student (undergraduate) A student who has no prior postsecondary experience (except as noted below) attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs . Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Institutions that do not have a standard fall term should consider all students entering the institution between August 1 and October 31 as first-time students, provided they have no previous postsecondary experience. Transfer-in degree/certificate-seeking undergraduate students - Degree/certificate-seeking undergraduate students entering the reporting institution for the first time but known to have previously attended a postsecondary institution at the undergraduate level. These students may or may not have transferred credit(s). Non-degree/certificate-seeking undergraduates - Examples of non-degree/certificate-seeking students would be high school students enrolled in creditable courses prior to high school graduation, or those enrolled in creditable courses who for some reason are not seeking a degree/certificate. Graduate student A student who holds a bachelor's or first-professional degree, or equivalent, and is taking courses at the post-baccalaureate level. These students may or may not be enrolled in graduate programs . First-professional student A student enrolled in any of the following degree programs : Chiropractic (D.C. or D.C.M.) Dentistry (D.D.S. or D.M.D.) Law (L.L.B., J.D.) Medicine (M.D.) Optometry (O.D.) Osteopathic Medicine (D.O.) Pharmacy (Pharm.D.) Podiatry (D.P.M., D.P., or Pod.D.) Theology (M.Div., M.H.L., B.D., or Ordination) Veterinary Medicine (D.V.M.)",
+                "data_type": "N",
+                "format": "Disc",
+                "evidence": {
+                  "record_id": 136382,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "kind": "variable_definition",
+                  "table_name": "EF2024",
+                  "variable_name": "EFLEVEL",
+                  "title": "Level of student",
+                  "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\ntablenumber: 20\ntablename: EF2024\ntabletitle: Gender, attendance status, and level of student: Fall 2024\nvarnumber: 24051\nvarorder: 2\nvarname: EFLEVEL\nvartitle: Level of student\ndatatype: N\nfieldwidth: 3\nformat: Disc\nmultirecord: 1\nfilenumber: 74\nsectionnumber: 1\nlongdescription: Level of student Undergraduate A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate. Degree/certificate-seeking students Students enrolled in courses for credit who are recognized by the institution as seeking a degree or other formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs First-time student (undergraduate) A student who has no prior postsecondary experience (except as noted below) attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs . Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Institutions that do not have a standard fall term should consider all students entering the institution between August 1 and October 31 as first-time students, provided they have no previous postsecondary experience. Transfer-in degree/certificate-seeking undergraduate students - Degree/certificate-seeking undergraduate students entering the reporting institution for the first time but known to have previously attended a postsecondary institution at the undergraduate level. These students may or may not have transferred credit(s). Non-degree/certificate-seeking undergraduates - Examples of non-degree/certificate-seeking students would be high school students enrolled in creditable courses prior to high school graduation, or those enrolled in creditable courses who for some reason are not seeking a degree/certificate. Graduate student A student who holds a bachelor's or first-professional degree, or equivalent, and is taking courses at the post-baccalaureate level. These students may or may not be enrolled in graduate programs . First-professional student A student enrolled in any of the following degree programs : Chiropractic (D.C. or D.C.M.) Dentistry (D.D.S. or D.M.D.) Law (L.L.B., J.D.) Medicine (M.D.) Optometry (O.D.) Osteopathic Medicine (D.O.) Pharmacy (Pharm.D.) Podiatry (D.P.M., D.P., or Pod.D.) Theology (M.Div., M.H.L., B.D., or Ordination) Veterinary Medicine (D.V.M.)\nvarsource: IPEDS, Spring 2025, Fall Enrollment component\nfiletitle: Gender, attendance status, and level of student: Fall 2024\nsectiontitle: Gender, attendance status, and level of student",
+                  "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                  "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                  "sheet_name": "varTable24",
+                  "source_row": 511
+                }
+              },
+              {
+                "record_id": 136384,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "EF2024",
+                "variable_name": "EFMEN",
+                "physical_status": "documented_location_present",
+                "physical_locations_json": "[\"EF2024\"]",
+                "imputation_variable": "",
+                "category_count": 0,
+                "definition_hash": "962b805fd15a56c9502c4969dc3885565526d8942864f0c09feb4d5019314d0c",
+                "normalized_hash": "f7a015f1089122d65acf11f42e7a4beddfd4fc13d28a427e121a746e2e86f67a",
+                "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "title": "Total men",
+                "long_description": "Total men enrolled for credit CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.",
+                "data_type": "N",
+                "format": "Cont",
+                "evidence": {
+                  "record_id": 136384,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "kind": "variable_definition",
+                  "table_name": "EF2024",
+                  "variable_name": "EFMEN",
+                  "title": "Total men",
+                  "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\ntablenumber: 20\ntablename: EF2024\ntabletitle: Gender, attendance status, and level of student: Fall 2024\nvarnumber: 24058\nvarorder: 4\nvarname: EFMEN\nvartitle: Total men\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 74\nsectionnumber: 1\nlongdescription: Total men enrolled for credit CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.\nvarsource: IPEDS, Spring 2025, Fall Enrollment component\nfiletitle: Gender, attendance status, and level of student: Fall 2024\nsectiontitle: Gender, attendance status, and level of student",
+                  "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                  "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                  "sheet_name": "varTable24",
+                  "source_row": 513
+                }
+              },
+              {
+                "record_id": 136385,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "EF2024",
+                "variable_name": "EFWOM",
+                "physical_status": "documented_location_present",
+                "physical_locations_json": "[\"EF2024\"]",
+                "imputation_variable": "",
+                "category_count": 0,
+                "definition_hash": "383fde52dc1fd939824afa0e0be8ba226b6bc3a05105efcbdf8a7504148d25c2",
+                "normalized_hash": "febbc2cb7cbac637f55d9449ec0a49add216c06adf26ca39a50ffb094bc2a05a",
+                "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "title": "Total women",
+                "long_description": "Total women enrolled for credit CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.",
+                "data_type": "N",
+                "format": "Cont",
+                "evidence": {
+                  "record_id": 136385,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "kind": "variable_definition",
+                  "table_name": "EF2024",
+                  "variable_name": "EFWOM",
+                  "title": "Total women",
+                  "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\ntablenumber: 20\ntablename: EF2024\ntabletitle: Gender, attendance status, and level of student: Fall 2024\nvarnumber: 24060\nvarorder: 5\nvarname: EFWOM\nvartitle: Total women\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 74\nsectionnumber: 1\nlongdescription: Total women enrolled for credit CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.\nvarsource: IPEDS, Spring 2025, Fall Enrollment component\nfiletitle: Gender, attendance status, and level of student: Fall 2024\nsectiontitle: Gender, attendance status, and level of student",
+                  "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                  "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                  "sheet_name": "varTable24",
+                  "source_row": 514
+                }
+              }
+            ],
+            "categories": [
+              {
+                "record_id": 144667,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "code_value",
+                "table_name": "EF2024",
+                "variable_name": "EFLEVEL",
+                "title": "All students, Undergraduate total",
+                "body": "surveyorder: 20\ntablenumber: 20\ntablename: EF2024\nvarnumber: 24051\nvarorder: 2\nvarname: EFLEVEL\ncodevalue: 20\nfrequency: 5577\npercent: 13.35\nvalueorder: 20\nvaluelabel: All students, Undergraduate total\nvartitle: Level of student",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "valueSets24",
+                "source_row": 6197
+              }
+            ],
+            "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+          },
+          "additional_analyses": []
+        }
+      ],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [
+        "IPEDS has no \"women's college\" flag. How should we identify them?"
+      ],
+      "id": "44ee655801385b74"
+    },
+    "mode": "source-backed clarification",
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 7,
+      "planning_tool_requests": 12,
+      "semantic_repair_attempts": 0,
+      "latency_seconds": 36.391,
+      "input_tokens": 193769,
+      "output_tokens": 3219,
+      "cache_creation_input_tokens": 15642,
+      "cache_read_input_tokens": 93852,
+      "estimated_api_usd": 0.46821820000000003,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+    },
+    "catalog_context": {
+      "kind": "catalog_clarification",
+      "question": "how many women's colleges in the US",
+      "previous_plan": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 45.724010700010695,
+      "answer_ready_seconds": 45.741586399963126,
+      "live_model_calls": 7,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    }
+  },
+  "wall_seconds": 45.760621900029946,
+  "progress": [
+    {
+      "seconds": 0.03657810000004247,
+      "message": "Choosing an analysis approach\u2026"
+    },
+    {
+      "seconds": 0.039518300036434084,
+      "message": "Finding source fields for your question\u2026"
+    },
+    {
+      "seconds": 6.1024484999943525,
+      "message": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "seconds": 9.436788599996362,
+      "message": "Finding relevant source fields\u2026"
+    },
+    {
+      "seconds": 12.765715400048066,
+      "message": "Finding relevant source fields\u2026"
+    },
+    {
+      "seconds": 14.43334580003284,
+      "message": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "seconds": 17.50553750002291,
+      "message": "Inspecting the source table and population\u2026"
+    },
+    {
+      "seconds": 17.591567000024952,
+      "message": "Finding relevant source fields\u2026"
+    },
+    {
+      "seconds": 17.895712700032163,
+      "message": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "seconds": 21.271139300020877,
+      "message": "Finding relevant source fields\u2026"
+    },
+    {
+      "seconds": 21.847672100004274,
+      "message": "Finding relevant source fields\u2026"
+    },
+    {
+      "seconds": 22.29500880005071,
+      "message": "Preparing the analysis plan \u00b7 step 4\u2026"
+    },
+    {
+      "seconds": 26.004606000031345,
+      "message": "Inspecting the source table and population\u2026"
+    },
+    {
+      "seconds": 26.05313200003002,
+      "message": "Inspecting the source table and population\u2026"
+    },
+    {
+      "seconds": 26.06803540000692,
+      "message": "Preparing the analysis plan \u00b7 step 5\u2026"
+    },
+    {
+      "seconds": 29.30021240003407,
+      "message": "Inspecting the source table and population\u2026"
+    },
+    {
+      "seconds": 29.387952900025994,
+      "message": "Inspecting the source table and population\u2026"
+    },
+    {
+      "seconds": 29.431061000039335,
+      "message": "Preparing the analysis plan \u00b7 step 6\u2026"
+    },
+    {
+      "seconds": 31.656013300002087,
+      "message": "Checking source population categories\u2026"
+    },
+    {
+      "seconds": 31.665609800023958,
+      "message": "Preparing the analysis plan \u00b7 step 7\u2026"
+    },
+    {
+      "seconds": 44.13495229999535,
+      "message": "Validating source selections, relationships and calculations\u2026"
+    },
+    {
+      "seconds": 45.31884350004839,
+      "message": "Validating source selections, relationships and calculations\u2026"
+    }
+  ]
+}

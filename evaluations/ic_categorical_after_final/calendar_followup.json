@@ -1,0 +1,280 @@
+{
+  "id": "calendar_followup",
+  "question": "And Mount Holyoke College?",
+  "answer": {
+    "intent": "clarify",
+    "message": "I could not validate the requested source observations. No partial answer was published. Observation institutions differ from confirmed identities.",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "166939"
+      ],
+      "population": null,
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136122
+          ],
+          "filters": []
+        }
+      ],
+      "result_kind": "lookup",
+      "source_years": [
+        2024
+      ]
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 6,
+      "planning_tool_requests": 4,
+      "semantic_repair_attempts": 2,
+      "latency_seconds": 17.091275899917818,
+      "input_tokens": 43866,
+      "output_tokens": 1080,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 85232,
+      "estimated_api_usd": 0.1070552,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 543,
+          "output_tokens": 63,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.602882899926044,
+          "estimated_api_usd": 0.001716,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 5,
+          "planning_tool_requests": 4,
+          "semantic_repair_attempts": 2,
+          "latency_seconds": 15.488392999991774,
+          "input_tokens": 43323,
+          "output_tokens": 1017,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 85232,
+          "estimated_api_usd": 0.10533920000000001,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+          "stages": [
+            {
+              "input_tokens": 3763,
+              "output_tokens": 133,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 0,
+              "model": "claude-sonnet-5-5",
+              "calls": 1,
+              "latency_seconds": 2.6283929999917746,
+              "estimated_api_usd": 0.008856,
+              "stage": "conversation resolution"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 4,
+              "planning_tool_requests": 4,
+              "semantic_repair_attempts": 2,
+              "latency_seconds": 12.86,
+              "input_tokens": 39560,
+              "output_tokens": 884,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 85232,
+              "estimated_api_usd": 0.0964832,
+              "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+            }
+          ]
+        }
+      ]
+    },
+    "validation_attempts": [
+      {
+        "attempt": 1,
+        "blocks": [
+          "Observation institutions differ from confirmed identities."
+        ]
+      },
+      {
+        "attempt": 2,
+        "blocks": [
+          "Observation institutions differ from confirmed identities."
+        ]
+      },
+      {
+        "attempt": 3,
+        "blocks": [
+          "Observation institutions differ from confirmed identities."
+        ]
+      }
+    ],
+    "catalog_context": {
+      "kind": "catalog_clarification",
+      "question": "What academic calendar system did Mount Holyoke College (UNITID 166939) use in 2024-25?",
+      "previous_plan": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 13.001818399992771,
+      "answer_ready_seconds": 17.351016099913977,
+      "live_model_calls": 6,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 2.6283929999917746,
+      "institution_resolution_seconds": 1.691928599961102
+    },
+    "resolved_question": "What academic calendar system did Mount Holyoke College (UNITID 166939) use in 2024-25?",
+    "conversation_resolution": {
+      "kind": "followup",
+      "question": "What academic calendar system did Mount Holyoke College (UNITID 166939) use in 2024-25?",
+      "referenced_turns": [
+        1
+      ]
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "19d1fac6de08507b",
+      "status": "revising",
+      "goal": "What academic calendar system did Smith College (UNITID 167835) use in 2024-25?",
+      "original_question": "What academic calendar system did Smith College (UNITID 167835) use in 2024-25?",
+      "question": "Smith College \u2014 Calendar system: Semester (Academic year 2024-25).",
+      "scope": {
+        "institutions": [
+          "167835"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::CALSYS"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [],
+      "revised_request": "What academic calendar system did Mount Holyoke College (UNITID 166939) use in 2024-25?"
+    },
+    "institution_identity": {
+      "unitids": [
+        166939,
+        167835
+      ],
+      "original_question": "And Mount Holyoke College?",
+      "original_mentions": [
+        "Mount Holyoke College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835,
+        "mount holyoke college": 166939
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Mount Holyoke College \u00b7 South Hadley, MA \u00b7 UNITID 166939",
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 17.351376999984495,
+  "events": [
+    {
+      "elapsed": 0.09459689992945641,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 17.020421599969268,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 17.17689809994772,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 17.180058399913833,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 17.33727389993146,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 20.362088799942285,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 20.559285199968144,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 20.583340299897827,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 22.092140799970366,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 22.103579599992372,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 24.06532639998477,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 26.387388999923132,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 26.413486399920657,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 0.0003239000216126442,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.613899299991317,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.6789853000082076,
+      "stage": "Resolving your question using the conversation\u2026"
+    },
+    {
+      "elapsed": 4.335791100049391,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 4.3359042999800295,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 4.357998299994506,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 7.481099899974652,
+      "stage": "Reading definitions and category codes across years\u2026"
+    },
+    {
+      "elapsed": 7.511662899982184,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 10.218798400019296,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 13.634522499982268,
+      "stage": "Revising the plan after validation feedback\u2026"
+    }
+  ],
+  "expected_variables": [
+    "CALSYS"
+  ]
+}

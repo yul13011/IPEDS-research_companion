@@ -1,0 +1,159 @@
+{
+  "200": {
+    "reason": "User added IPEDS question and 2016-17 cohort notes; expected cells unchanged.",
+    "confirmed_on": "2026-10-21",
+    "original_sha256": "2d2bb8c5630cbf36036025dcc99cacf83328fc8f82db1dffee10f5ae467157bb",
+    "current": {
+      "q": 200,
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q200-10-20-26 22-46.xlsx",
+      "sha256": "940de9ae5241ad8e16f969344ca5499b612b621cc357bedcf3a026175b22eddd",
+      "sheet": "TrendGenerator",
+      "title": "Percent of undergraduate degree/certificate-seeking entering students",
+      "headers": [
+        "Cohort Year",
+        "Percent of students"
+      ],
+      "notes": [
+        "This table presents data collected from Title IV degree-granting institutions in the United States.",
+        "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Outcome Measures component final data (2017 - 2023) and provisional data (2024).",
+        "Outcome Measures: What is the percent of undergraduate degree/certificate-seeking entering students who completed an award within 8 years at degree-granting postsecondary institutions?",
+        "For cohort year 2016-17, the percent of undergraduate degree/certificate-seeking entering students who completed an award within 8 years at degree-granting postsecondary institutions was 47.3%. This is based on 3,473 institutions."
+      ],
+      "observations": [
+        {
+          "source_row": 6,
+          "period": "2016-17",
+          "expected": 0.473
+        },
+        {
+          "source_row": 7,
+          "period": "2015-16",
+          "expected": 0.461
+        },
+        {
+          "source_row": 8,
+          "period": "2014-15",
+          "expected": 0.45
+        },
+        {
+          "source_row": 9,
+          "period": "2013-14",
+          "expected": 0.428
+        },
+        {
+          "source_row": 10,
+          "period": "2012-13",
+          "expected": 0.40700000000000003
+        },
+        {
+          "source_row": 11,
+          "period": "2011-12",
+          "expected": 0.389
+        },
+        {
+          "source_row": 12,
+          "period": "2010-11",
+          "expected": 0.38
+        },
+        {
+          "source_row": 13,
+          "period": "2009-10",
+          "expected": 0.37200000000000005
+        }
+      ],
+      "sheets": [
+        "TrendGenerator"
+      ]
+    }
+  },
+  "42": {
+    "reason": "Workbook bytes changed since original manifest; parsed title, headers, notes and all observations unchanged. Q42 calculation method remains pending.",
+    "observed_on": "2026-10-21",
+    "original_sha256": "bdd8247cae6ef6a2de33634f5406455197e2ed96ee2bc6170e374520d837b382",
+    "current": {
+      "q": 42,
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\NCES\\TrendGenerator-q42-10-20-26 22-42.xlsx",
+      "sha256": "16c836e284b8a9884ff39ead74154f3d1672df540fd237c196da97758a483a3c",
+      "sheet": "TrendGenerator",
+      "title": "Percent of students enrolled in distance education courses",
+      "headers": [
+        "Year",
+        "Percent of students"
+      ],
+      "notes": [
+        "This table presents data collected from Title IV institutions in the United States.",
+        "SOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Fall Enrollment component final data (2012 - 2023) and provisional data (2024)."
+      ],
+      "observations": [
+        {
+          "source_row": 6,
+          "period": "2024",
+          "expected": 0.5379999999999999
+        },
+        {
+          "source_row": 7,
+          "period": "2023",
+          "expected": 0.532
+        },
+        {
+          "source_row": 8,
+          "period": "2022",
+          "expected": 0.5329999999999999
+        },
+        {
+          "source_row": 9,
+          "period": "2021",
+          "expected": 0.589
+        },
+        {
+          "source_row": 10,
+          "period": "2020",
+          "expected": 0.7340000000000001
+        },
+        {
+          "source_row": 11,
+          "period": "2019",
+          "expected": 0.363
+        },
+        {
+          "source_row": 12,
+          "period": "2018",
+          "expected": 0.34700000000000003
+        },
+        {
+          "source_row": 13,
+          "period": "2017",
+          "expected": 0.32899999999999996
+        },
+        {
+          "source_row": 14,
+          "period": "2016",
+          "expected": 0.312
+        },
+        {
+          "source_row": 15,
+          "period": "2015",
+          "expected": 0.293
+        },
+        {
+          "source_row": 16,
+          "period": "2014",
+          "expected": 0.27699999999999997
+        },
+        {
+          "source_row": 17,
+          "period": "2013",
+          "expected": 0.264
+        },
+        {
+          "source_row": 18,
+          "period": "2012",
+          "expected": 0.255
+        }
+      ],
+      "sheets": [
+        "TrendGenerator"
+      ]
+    }
+  }
+}

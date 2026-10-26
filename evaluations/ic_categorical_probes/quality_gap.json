@@ -1,0 +1,278 @@
+{
+  "id": "quality_gap",
+  "question": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: Smith College or Mount Holyoke College?",
+  "answer": {
+    "intent": "clarify",
+    "message": "I can\u2019t answer the original question reliably from the supplied sources inspected. Institutional Characteristics for 2024-25 has only one academic counseling field: a yes/no indicator of whether an institution offers academic/career counseling services. It says nothing about how good those services are, so it cannot show which of 167835 or 166939 has better counseling. At most it could show whether each institution reports offering the service. If both do, they would look identical. I also could not set up even that lookup here, because the analysis tools can only return numeric measures and this indicator is a coded field. No numbers were retrieved.",
+    "analysis_brief": {
+      "version": 1,
+      "id": "e5bcb89fbba90c98",
+      "status": "coverage_gap",
+      "goal": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: 167835 or 166939?",
+      "original_question": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: 167835 or 166939?",
+      "question": "I can\u2019t answer the original question reliably from the supplied sources inspected. Institutional Characteristics for 2024-25 has only one academic counseling field: a yes/no indicator of whether an institution offers academic/career counseling services. It says nothing about how good those services are, so it cannot show which of 167835 or 166939 has better counseling. At most it could show whether each institution reports offering the service. If both do, they would look identical. I also could not set up even that lookup here, because the analysis tools can only return numeric measures and this indicator is a coded field. No numbers were retrieved.",
+      "scope": {},
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [],
+      "coverage_gap": {
+        "missing_information": "A measure of the quality of academic counseling (for example counselor staffing, caseloads, student use or satisfaction). The inspected Institutional Characteristics release has no such field.",
+        "explanation": "Institutional Characteristics for 2024-25 has only one academic counseling field: a yes/no indicator of whether an institution offers academic/career counseling services. It says nothing about how good those services are, so it cannot show which of 167835 or 166939 has better counseling. At most it could show whether each institution reports offering the service. If both do, they would look identical. I also could not set up even that lookup here, because the analysis tools can only return numeric measures and this indicator is a coded field. No numbers were retrieved.",
+        "status": "coverage_gap",
+        "source_inspections": [
+          {
+            "tool": "search_catalog",
+            "input": {
+              "query": "academic counseling",
+              "year": 2024,
+              "limit": 10
+            },
+            "returned_items": 10
+          },
+          {
+            "tool": "search_catalog",
+            "input": {
+              "query": "counseling services",
+              "year": 2024,
+              "limit": 10
+            },
+            "returned_items": 10
+          },
+          {
+            "tool": "inspect_table",
+            "input": {
+              "year": 2024,
+              "table": "IC2024",
+              "offset": 0,
+              "limit": 5,
+              "keyword": "STUSRV2"
+            },
+            "returned_items": null
+          },
+          {
+            "tool": "category_values",
+            "input": {
+              "record_id": 136102,
+              "offset": 0,
+              "limit": 20
+            },
+            "returned_items": null
+          }
+        ],
+        "source_policy": "Owner-supplied sources only"
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 7,
+      "latency_seconds": 27.958442799966782,
+      "input_tokens": 89278,
+      "output_tokens": 2639,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 105329,
+      "estimated_api_usd": 0.2154789,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "planning_tool_requests": 7,
+      "semantic_repair_attempts": 2,
+      "stages": [
+        {
+          "input_tokens": 576,
+          "output_tokens": 69,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.2694427999667823,
+          "estimated_api_usd": 0.001842,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 6,
+          "latency_seconds": 26.689,
+          "input_tokens": 88702,
+          "output_tokens": 2570,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 105329,
+          "estimated_api_usd": 0.2136369,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+          "planning_tool_requests": 7,
+          "semantic_repair_attempts": 2,
+          "stages": [
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 1,
+              "latency_seconds": 4.907,
+              "input_tokens": 3830,
+              "output_tokens": 561,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 5184,
+              "estimated_api_usd": 0.0137884,
+              "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 5,
+              "planning_tool_requests": 7,
+              "semantic_repair_attempts": 2,
+              "latency_seconds": 21.782,
+              "input_tokens": 84872,
+              "output_tokens": 2009,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 100145,
+              "estimated_api_usd": 0.19984849999999998,
+              "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+            }
+          ]
+        }
+      ]
+    },
+    "coverage_gap": {
+      "missing_information": "A measure of the quality of academic counseling (for example counselor staffing, caseloads, student use or satisfaction). The inspected Institutional Characteristics release has no such field.",
+      "explanation": "Institutional Characteristics for 2024-25 has only one academic counseling field: a yes/no indicator of whether an institution offers academic/career counseling services. It says nothing about how good those services are, so it cannot show which of 167835 or 166939 has better counseling. At most it could show whether each institution reports offering the service. If both do, they would look identical. I also could not set up even that lookup here, because the analysis tools can only return numeric measures and this indicator is a coded field. No numbers were retrieved.",
+      "status": "coverage_gap",
+      "source_inspections": [
+        {
+          "tool": "search_catalog",
+          "input": {
+            "query": "academic counseling",
+            "year": 2024,
+            "limit": 10
+          },
+          "returned_items": 10
+        },
+        {
+          "tool": "search_catalog",
+          "input": {
+            "query": "counseling services",
+            "year": 2024,
+            "limit": 10
+          },
+          "returned_items": 10
+        },
+        {
+          "tool": "inspect_table",
+          "input": {
+            "year": 2024,
+            "table": "IC2024",
+            "offset": 0,
+            "limit": 5,
+            "keyword": "STUSRV2"
+          },
+          "returned_items": null
+        },
+        {
+          "tool": "category_values",
+          "input": {
+            "record_id": 136102,
+            "offset": 0,
+            "limit": 20
+          },
+          "returned_items": null
+        }
+      ],
+      "source_policy": "Owner-supplied sources only"
+    },
+    "mode": "source coverage limitation",
+    "catalog_context": {
+      "kind": "catalog_clarification",
+      "question": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: 167835 or 166939?",
+      "previous_plan": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 33.9222600000212,
+      "answer_ready_seconds": 39.06648330006283,
+      "live_model_calls": 7,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 4.475778899970464
+    },
+    "institution_identity": {
+      "unitids": [
+        166939,
+        167835
+      ],
+      "original_question": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: Smith College or Mount Holyoke College?",
+      "original_mentions": [
+        "Smith College",
+        "Mount Holyoke College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835,
+        "mount holyoke college": 166939
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Mount Holyoke College \u00b7 South Hadley, MA \u00b7 UNITID 166939",
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 39.06700590008404,
+  "events": [
+    {
+      "elapsed": 0.000480300048366189,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.7017519000219181,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 5.120656099985354,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 17.00137499999255,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 17.020796800032258,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 19.533530000015162,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 19.6938300000038,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 19.80068480002228,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 23.126491700066254,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 23.183709000004455,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 23.20717790001072,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 28.012528800056316,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 28.0831187000731,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 34.81190380000044,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 34.8493706000736,
+      "stage": "Revising the plan after validation feedback\u2026"
+    }
+  ],
+  "expected_variables": [
+    "STUSRV2"
+  ]
+}

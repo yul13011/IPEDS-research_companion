@@ -1,0 +1,38 @@
+test_all_releases_staff_rank_unit_and_scores (prototype.tests.test_shared_units.SharedUnitTests.test_all_releases_staff_rank_unit_and_scores) ... ok
+test_currency_scales_and_prepared_catalog_freshness (prototype.tests.test_shared_units.SharedUnitTests.test_currency_scales_and_prepared_catalog_freshness) ... ok
+test_old_derived_results_need_revalidation_without_changing_values (prototype.tests.test_shared_units.SharedUnitTests.test_old_derived_results_need_revalidation_without_changing_values) ... ok
+test_quantities_are_not_population_or_percentile (prototype.tests.test_shared_units.SharedUnitTests.test_quantities_are_not_population_or_percentile) ... ok
+test_real_smith_reexecution_uses_same_verified_units (prototype.tests.test_shared_units.SharedUnitTests.test_real_smith_reexecution_uses_same_verified_units) ... ok
+test_saved_smith_units_chart_and_audit_preserve_originals (prototype.tests.test_shared_units.SharedUnitTests.test_saved_smith_units_chart_and_audit_preserve_originals) ... ok
+test_smith_all_ranks_total_renders_without_stopiteration (prototype.tests.test_shared_units.SharedUnitTests.test_smith_all_ranks_total_renders_without_stopiteration) ... 2026-10-22 13:58:34.835 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 13:58:34.836 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_ui_cannot_force_an_unresolved_measurement_axis (prototype.tests.test_shared_units.SharedUnitTests.test_ui_cannot_force_an_unresolved_measurement_axis) ... 2026-10-22 13:58:42.661 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 13:58:42.661 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_unknown_and_codes_cannot_authorize_arithmetic (prototype.tests.test_shared_units.SharedUnitTests.test_unknown_and_codes_cannot_authorize_arithmetic) ... ok
+test_bar_followup_keeps_time_periods_distinct_and_ordered (prototype.tests.test_charts.ChartTests.test_bar_followup_keeps_time_periods_distinct_and_ordered) ... ok
+test_catalog_gender_trend_connects_years_and_keeps_explicit_breaks (prototype.tests.test_charts.ChartTests.test_catalog_gender_trend_connects_years_and_keeps_explicit_breaks) ... ok
+test_category_labels_percent_scale_and_immutability (prototype.tests.test_charts.ChartTests.test_category_labels_percent_scale_and_immutability) ... ok
+test_cohort_axis_and_currency_and_signed_values (prototype.tests.test_charts.ChartTests.test_cohort_axis_and_currency_and_signed_values) ... ok
+test_comparison_keeps_eight_institutions_together (prototype.tests.test_charts.ChartTests.test_comparison_keeps_eight_institutions_together) ... ok
+test_many_institution_trends_share_scale_and_keep_every_row (prototype.tests.test_charts.ChartTests.test_many_institution_trends_share_scale_and_keep_every_row) ... ok
+test_multiple_category_trends_have_at_most_four_series (prototype.tests.test_charts.ChartTests.test_multiple_category_trends_have_at_most_four_series) ... ok
+test_result_in_chat_with_new_renderer (prototype.tests.test_charts.ChartTests.test_result_in_chat_with_new_renderer) ... 2026-10-22 13:58:58.299 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 13:59:01.270 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 13:59:01.270 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_totals_are_separate_from_categories (prototype.tests.test_charts.ChartTests.test_totals_are_separate_from_categories) ... ok
+test_actual_png_svg_include_data_sources_and_exact_canvas (prototype.tests.test_chart_format.ChartFormatTests.test_actual_png_svg_include_data_sources_and_exact_canvas) ... ok
+test_bar_formatting_colors_and_hidden_labels (prototype.tests.test_chart_format.ChartFormatTests.test_bar_formatting_colors_and_hidden_labels) ... ok
+test_compound_prompt_is_atomic_and_preserves_values (prototype.tests.test_chart_format.ChartFormatTests.test_compound_prompt_is_atomic_and_preserves_values) ... ok
+test_panel_chat_undo_reset_and_preview_through_real_ui (prototype.tests.test_chart_format.ChartFormatTests.test_panel_chat_undo_reset_and_preview_through_real_ui) ... 2026-10-22 13:59:17.295 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 13:59:21.996 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 13:59:22.001 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_rendered_style_and_reference_preserve_gaps (prototype.tests.test_chart_format.ChartFormatTests.test_rendered_style_and_reference_preserve_gaps) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 71.457s
+
+OK

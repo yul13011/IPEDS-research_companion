@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-19T17:29:32.087742+00:00",
+  "tests_run": 20,
+  "failures": 0,
+  "errors": 0,
+  "benchmark_cells": {
+    "pass": 229,
+    "mismatch": 13
+  },
+  "scope": "Real-data deterministic retrieval, plan validation, local parser, full exports and Streamlit AppTest. Does not certify LLM intent accuracy or resolve source discrepancies."
+}

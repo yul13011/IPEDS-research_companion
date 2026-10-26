@@ -1,0 +1,110 @@
+[
+  {
+    "question": "how many students does mount holyoke have",
+    "intent": "analyze",
+    "message": "For Mount Holyoke College (fall 2024), Total enrollment: 2,275. The reporting period and source definitions are available below.",
+    "resolved_question": null,
+    "plan": {
+      "metrics": [
+        "total_enrollment"
+      ],
+      "institutions": [
+        "166939"
+      ],
+      "years": [
+        2024
+      ],
+      "time_basis": "observation",
+      "output": "answer"
+    },
+    "years": [
+      2024
+    ],
+    "unitids": [
+      166939
+    ],
+    "chart_type": "none",
+    "rows": 1,
+    "answer_ready_seconds": 13.091762900003232,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.858098800003063,
+      "answer_ready_seconds": 11.972508099977858,
+      "live_model_calls": 2,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 8.114390899951104
+    }
+  },
+  {
+    "question": "Show a 10-year trend.",
+    "intent": "analyze",
+    "message": "For Mount Holyoke College (fall 2024), Total enrollment: 2,275. The reporting period and source definitions are available below.",
+    "resolved_question": "Show a 10-year trend of total enrollment (fall credit headcount) for Mount Holyoke College (UNITID 166939), ending with fall 2024.",
+    "plan": {
+      "metrics": [
+        "total_enrollment"
+      ],
+      "institutions": [
+        "166939"
+      ],
+      "years": [
+        2024
+      ],
+      "time_basis": "observation",
+      "output": "chart"
+    },
+    "years": [
+      2024
+    ],
+    "unitids": [
+      166939
+    ],
+    "chart_type": "bar",
+    "rows": 1,
+    "answer_ready_seconds": 11.224927200004458,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 8.487456500006374,
+      "answer_ready_seconds": 11.224900999979582,
+      "live_model_calls": 3,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 1.6896962999599054,
+      "institution_resolution_seconds": 1.0473176999948919
+    }
+  },
+  {
+    "question": "Show a longitudinal trend",
+    "intent": "analyze",
+    "message": "For Mount Holyoke College (fall 2024), Total enrollment: 2,275. The reporting period and source definitions are available below.",
+    "resolved_question": "Show a longitudinal trend of total enrollment (fall credit headcount) for Mount Holyoke College (UNITID 166939) over the 10 fall terms ending with fall 2024.",
+    "plan": {
+      "metrics": [
+        "total_enrollment"
+      ],
+      "institutions": [
+        "166939"
+      ],
+      "years": [
+        2024
+      ],
+      "time_basis": "observation",
+      "output": "chart"
+    },
+    "years": [
+      2024
+    ],
+    "unitids": [
+      166939
+    ],
+    "chart_type": "bar",
+    "rows": 1,
+    "answer_ready_seconds": 10.937355000001844,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.4194010000210255,
+      "answer_ready_seconds": 10.93732899997849,
+      "live_model_calls": 3,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 5.013250000018161,
+      "institution_resolution_seconds": 1.5044999999809079
+    }
+  }
+]

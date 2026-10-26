@@ -1,0 +1,130 @@
+[
+  {
+    "case": "numerical",
+    "question": "Yale applicants fall 2024",
+    "wall_seconds": 19.884,
+    "live": true,
+    "intent": "analyze",
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 2,
+      "latency_seconds": 4.909956399926916,
+      "input_tokens": 3672,
+      "output_tokens": 365,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5184,
+      "estimated_api_usd": 0.011512399999999999,
+      "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+      "stages": [
+        {
+          "input_tokens": 543,
+          "output_tokens": 57,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 2.2529563999269158,
+          "estimated_api_usd": 0.001656,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 1,
+          "latency_seconds": 2.657,
+          "input_tokens": 3129,
+          "output_tokens": 308,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 5184,
+          "estimated_api_usd": 0.0098564,
+          "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+        }
+      ]
+    },
+    "has_result": true,
+    "has_documentation": false,
+    "source_evidence_count": 0,
+    "stages": [
+      "Identifying the institution in your question\u2026",
+      "Matching institutions to the IPEDS directory\u2026",
+      "Choosing an analysis approach\u2026",
+      "Validating selections and source definitions\u2026",
+      "Checking the planned scope against your request\u2026",
+      "Reading source data for 2024\u2026",
+      "Checking result coverage before publication\u2026",
+      "Checking result coverage before publication\u2026",
+      "Preparing your answer and display\u2026"
+    ]
+  },
+  {
+    "case": "mixed",
+    "question": "Define admission rate and show Yale admission rate fall 2024",
+    "wall_seconds": 5.939,
+    "live": true,
+    "intent": "analyze",
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 2,
+      "latency_seconds": 3.938227399971336,
+      "input_tokens": 2434,
+      "output_tokens": 349,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5184,
+      "estimated_api_usd": 0.0088764,
+      "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+      "stages": [
+        {},
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 2,
+          "latency_seconds": 3.938227399971336,
+          "input_tokens": 2434,
+          "output_tokens": 349,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 5184,
+          "estimated_api_usd": 0.0088764,
+          "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+          "stages": [
+            {
+              "input_tokens": 545,
+              "output_tokens": 57,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 0,
+              "calls": 1,
+              "latency_seconds": 1.2352273999713361,
+              "estimated_api_usd": 0.00166,
+              "model": "claude-sonnet-5-5",
+              "stage": "institution mention extraction"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 1,
+              "latency_seconds": 2.703,
+              "input_tokens": 1889,
+              "output_tokens": 292,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 5184,
+              "estimated_api_usd": 0.0072163999999999996,
+              "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+            }
+          ]
+        }
+      ]
+    },
+    "has_result": true,
+    "has_documentation": true,
+    "source_evidence_count": 0,
+    "stages": [
+      "Checking the requested definition and source documentation\u2026",
+      "Looking up the term in the supplied codebooks\u2026",
+      "Identifying the institution in your question\u2026",
+      "Matching institutions to the IPEDS directory\u2026",
+      "Choosing an analysis approach\u2026",
+      "Validating selections and source definitions\u2026",
+      "Checking the planned scope against your request\u2026",
+      "Reading source data for 2024\u2026",
+      "Checking result coverage before publication\u2026",
+      "Checking result coverage before publication\u2026",
+      "Preparing your answer and display\u2026"
+    ]
+  }
+]

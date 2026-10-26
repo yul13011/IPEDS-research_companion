@@ -1,0 +1,38 @@
+{
+  "completed_date": "2026-10-23",
+  "finding": "F029",
+  "server_pid": 223968,
+  "url": "http://127.0.0.1:8516",
+  "health": "ok",
+  "registered_tests": {
+    "passed": 299,
+    "failures": 0,
+    "errors": 0,
+    "log": "evaluations/typed_observations_registered_final.log"
+  },
+  "final_overlapping_checks": {
+    "passed": 18,
+    "log": "evaluations/typed_observations_display_final.log"
+  },
+  "live_source_verification": {
+    "answers": 19,
+    "cells": 256,
+    "file": "evaluations/typed_observations_live_source_verification.json"
+  },
+  "sha256": {
+    "prototype/observations.py": "1a6fb31b1b19675dabbb5babd5e1247bd93237a0698aa65f3a127d42b72083f7",
+    "prototype/category_documentation.py": "bbc3672b9b722e0012b888b1531f807ddbf8e334ac5ef1e253711c94d13b60cf",
+    "prototype/observation_ui.py": "a9111aee748483c07191dd3362544c207c4d1e819f092a6c356207227aacd992",
+    "prototype/catalog_planner.py": "663c64994df6cea7770c2e8bc90397d16e30618ab14a24b02937ca0018a87dae",
+    "prototype/institution_confirmation.py": "3ca07e6244565552bd7f682be58a2f47b1ecb8a6ea5d8b3daf4d69b6fe4a33cd",
+    "prototype/documentation.py": "1d8257a58252d71e57546280218a955cd25ca62d0d28c3c51a5e0e00ba647c8f",
+    "prototype/responses.py": "3b9811fc95c5c62d94c97e73538e0b05634d7f2e9a8fe6649174743079ac2018",
+    "prototype/components.py": "64b7c0bc666abe669c0bb7eeb29191e323958aebd14b79d02fe0a8fd76dc0756",
+    "prototype/intent_checks.py": "33b1c6725910e046aa874b71b2a7af4eee2531c0188d4c5f0d691fc0c731fabc",
+    "prototype/units.py": "3bbd4ef1b7b19105075ffbdb162285be84c3d31bc5787c08d674b0f8a935e060",
+    "prototype/memory.py": "3c41f9128a8589acd47452a0e41e5e89e26e91a8019fc01fd66506f0cd1330fc",
+    "prototype/ui.py": "d7297aa945a2c67684f70908e645207c0177300664603361755259ca630f2b66",
+    "prototype/charts.py": "efab28e2b8f1bc6d654fe2fc5dceec962d297164266b68ee017508a9150a02d2"
+  },
+  "scope": "Tested source-backed categorical and mixed observations; no claim of exhaustive catalog review. National benchmark remains paused."
+}

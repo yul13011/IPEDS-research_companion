@@ -1,0 +1,927 @@
+{
+  "id": "original_smith_round1",
+  "question": "What student services does Smith College offer, such as academic counseling, career placement, and on-campus childcare?",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "167835"
+      ],
+      "population": null,
+      "result_kind": "lookup",
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136102,
+            136103,
+            136104,
+            136105,
+            136106
+          ],
+          "filters": []
+        }
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "167835"
+        ],
+        "population": null,
+        "result_kind": "lookup",
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136102,
+              136103,
+              136104,
+              136105,
+              136106
+            ],
+            "filters": []
+          }
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::STUSRV2",
+          "IC{YEAR}::STUSRV3",
+          "IC{YEAR}::STUSRV4",
+          "IC{YEAR}::STUSRV8",
+          "IC{YEAR}::STUSRV9"
+        ],
+        "institutions": [
+          "167835"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::STUSRV2": {
+          "label": "Academic/career counseling service",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::STUSRV3": {
+          "label": "Employment services for students",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::STUSRV4": {
+          "label": "Placement services for completers",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::STUSRV8": {
+          "label": "On-campus day care for students' children",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::STUSRV9": {
+          "label": "None of the above selected services are offered",
+          "family": "observation",
+          "unit": "coded"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV2",
+          "measure": "Academic/career counseling service",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136102,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139099
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV2",
+            "record_id": 136102,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136102,
+                "excerpt": "Academic/career counseling service"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV3",
+          "measure": "Employment services for students",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136103,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139103
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV3",
+            "record_id": 136103,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136103,
+                "excerpt": "Employment services for students"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV4",
+          "measure": "Placement services for completers",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136104,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139107
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV4",
+            "record_id": 136104,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136104,
+                "excerpt": "Placement services for completers"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 0,
+          "response_label": "Implied no",
+          "response_status": "implied_no",
+          "category_record_ids": [
+            139112
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV9",
+          "measure": "None of the above selected services are offered",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136106,
+          "raw_code": 0,
+          "response_label": "Implied no",
+          "response_status": "implied_no",
+          "category_record_ids": [
+            139116
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV9",
+            "record_id": 136106,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136106,
+                "excerpt": "None of the above selected services are offered"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::STUSRV2",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "STUSRV2"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"STUSRV2\",\"STUSRV3\",\"STUSRV4\",\"STUSRV8\",\"STUSRV9\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136102,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "STUSRV2",
+              "title": "Academic/career counseling service",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10786\nvarorder: 70\nvarname: STUSRV2\nvartitle: Academic/career counseling service\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution Academic/career counseling services COUNSELING SERVICE - Activities designed to assist students in making plans and decisions related to their education, career, or personal development.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 231,
+              "long_description": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution Academic/career counseling services COUNSELING SERVICE - Activities designed to assist students in making plans and decisions related to their education, career, or personal development.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139101,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 139102,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139100,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 139099,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::STUSRV3",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "STUSRV3"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"STUSRV2\",\"STUSRV3\",\"STUSRV4\",\"STUSRV8\",\"STUSRV9\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136103,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "STUSRV3",
+              "title": "Employment services for students",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10791\nvarorder: 71\nvarname: STUSRV3\nvartitle: Employment services for students\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution Employment services for current students EMPLOYMENT SERVICES FOR CURRENT STUDENTS - Activities intended to assist students in obtaining part-time employment as a means of defraying part of the cost of their education.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 232,
+              "long_description": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution Employment services for current students EMPLOYMENT SERVICES FOR CURRENT STUDENTS - Activities intended to assist students in obtaining part-time employment as a means of defraying part of the cost of their education.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139105,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 139106,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139104,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 139103,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::STUSRV4",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "STUSRV4"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"STUSRV2\",\"STUSRV3\",\"STUSRV4\",\"STUSRV8\",\"STUSRV9\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136104,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "STUSRV4",
+              "title": "Placement services for completers",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10796\nvarorder: 72\nvarname: STUSRV4\nvartitle: Placement services for completers\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution Placement services for program completers PLACEMENT SERVICES FOR PROGRAM COMPLETERS - Assistance for students in evaluating their career alternatives as well as in obtaining full-time employment upon leaving the institution.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 233,
+              "long_description": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution Placement services for program completers PLACEMENT SERVICES FOR PROGRAM COMPLETERS - Assistance for students in evaluating their career alternatives as well as in obtaining full-time employment upon leaving the institution.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139109,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 139110,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139108,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 139107,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::STUSRV8",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "STUSRV8"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"STUSRV2\",\"STUSRV3\",\"STUSRV4\",\"STUSRV8\",\"STUSRV9\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136105,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "STUSRV8",
+              "title": "On-campus day care for students' children",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10801\nvarorder: 73\nvarname: STUSRV8\nvartitle: On-campus day care for students' children\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 234,
+              "long_description": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139113,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 139114,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139112,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 139111,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::STUSRV9",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "STUSRV9"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"STUSRV2\",\"STUSRV3\",\"STUSRV4\",\"STUSRV8\",\"STUSRV9\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136106,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "STUSRV9",
+              "title": "None of the above selected services are offered",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10806\nvarorder: 74\nvarname: STUSRV9\nvartitle: None of the above selected services are offered\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution None of the following selected students serveices are offered: Remedial services, Academic/career counseling services, Employment services for current students, Placement services for program completers, or On-campus day care for children of students\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 235,
+              "long_description": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution None of the following selected students serveices are offered: Remedial services, Academic/career counseling services, Employment services for current students, Placement services for program completers, or On-campus day care for children of students",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139117,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 139118,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139116,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 139115,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::STUSRV2": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution Academic/career counseling services COUNSELING SERVICE - Activities designed to assist students in making plans and decisions related to their education, career, or personal development.",
+        "IC{YEAR}::STUSRV3": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution Employment services for current students EMPLOYMENT SERVICES FOR CURRENT STUDENTS - Activities intended to assist students in obtaining part-time employment as a means of defraying part of the cost of their education.",
+        "IC{YEAR}::STUSRV4": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution Placement services for program completers PLACEMENT SERVICES FOR PROGRAM COMPLETERS - Assistance for students in evaluating their career alternatives as well as in obtaining full-time employment upon leaving the institution.",
+        "IC{YEAR}::STUSRV8": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.",
+        "IC{YEAR}::STUSRV9": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution None of the following selected students serveices are offered: Remedial services, Academic/career counseling services, Employment services for current students, Placement services for program completers, or On-campus day care for children of students"
+      },
+      "warnings": [
+        "Implied no is a source response distinct from Not reported and Not applicable."
+      ],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:39:01.585621+00:00",
+      "registry_sha256": "a2970bcb0328d40bd078283c7736435163e88ed07f75aa2df1b1be5e95aceca8",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 5,
+        "available_cells": 5,
+        "matching_institutions": {
+          "2024": 1
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 1
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            167835,
+            2024,
+            136102
+          ],
+          [
+            167835,
+            2024,
+            136103
+          ],
+          [
+            167835,
+            2024,
+            136104
+          ],
+          [
+            167835,
+            2024,
+            136105
+          ],
+          [
+            167835,
+            2024,
+            136106
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          167835
+        ],
+        "rows_sha256": "e21fd3e3434458f41934ca465293d71f79432abf57cb194b436704ee08c35738"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 13.650985300075263,
+        "answer_ready_seconds": 27.44564549997449,
+        "live_model_calls": 5,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 13.762167499982752
+      },
+      "result_id": "a419b0e0af407533",
+      "institution_identity": {
+        "unitids": [
+          167835
+        ],
+        "original_question": "What student services does Smith College offer, such as academic counseling, career placement, and on-campus childcare?",
+        "original_mentions": [
+          "Smith College"
+        ],
+        "confirmed_choices": {
+          "smith college": 167835
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 5,
+      "planning_tool_requests": 5,
+      "semantic_repair_attempts": 1,
+      "latency_seconds": 15.000764299998991,
+      "input_tokens": 62684,
+      "output_tokens": 1042,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 85232,
+      "estimated_api_usd": 0.1443112,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 564,
+          "output_tokens": 58,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 2.250764299998991,
+          "estimated_api_usd": 0.001708,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 4,
+          "planning_tool_requests": 5,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 12.75,
+          "input_tokens": 62120,
+          "output_tokens": 984,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 85232,
+          "estimated_api_usd": 0.1426032,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "Smith College \u2014 Academic/career counseling service: Yes (Academic year 2024-25); Smith College \u2014 Employment services for students: Yes (Academic year 2024-25); Smith College \u2014 Placement services for completers: Yes (Academic year 2024-25); Smith College \u2014 On-campus day care for students' children: Implied no (Academic year 2024-25); Smith College \u2014 None of the above selected services are offered: Implied no (Academic year 2024-25).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 13.650985300075263,
+      "answer_ready_seconds": 27.44564549997449,
+      "live_model_calls": 5,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 13.762167499982752
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "ec3136c04f160f0f",
+      "status": "completed",
+      "goal": "What student services does Smith College (UNITID 167835) offer, such as academic counseling, career placement, and on-campus childcare?",
+      "original_question": "What student services does Smith College (UNITID 167835) offer, such as academic counseling, career placement, and on-campus childcare?",
+      "question": "Smith College \u2014 Academic/career counseling service: Yes (Academic year 2024-25); Smith College \u2014 Employment services for students: Yes (Academic year 2024-25); Smith College \u2014 Placement services for completers: Yes (Academic year 2024-25); Smith College \u2014 On-campus day care for students' children: Implied no (Academic year 2024-25); Smith College \u2014 None of the above selected services are offered: Implied no (Academic year 2024-25).",
+      "scope": {
+        "institutions": [
+          "167835"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::STUSRV2",
+          "IC{YEAR}::STUSRV3",
+          "IC{YEAR}::STUSRV4",
+          "IC{YEAR}::STUSRV8",
+          "IC{YEAR}::STUSRV9"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        167835
+      ],
+      "original_question": "What student services does Smith College offer, such as academic counseling, career placement, and on-campus childcare?",
+      "original_mentions": [
+        "Smith College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 30.901568399975076,
+  "events": [
+    {
+      "elapsed": 0.1765757999382913,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 17.124723199987784,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 17.189125099917874,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 17.191040099947713,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 17.25111419998575,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 20.636390500003472,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 20.648856099927798,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 21.131962699932046,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 24.036681200028397,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 24.0715095999185,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 27.429934700019658,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 30.839699400006793,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 30.901444099959917,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "STUSRV2",
+    "STUSRV4",
+    "STUSRV8"
+  ]
+}

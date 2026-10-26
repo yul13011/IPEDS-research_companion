@@ -1,0 +1,297 @@
+{
+  "plan": {
+    "metrics": [
+      "COST1_{YEAR}::TUITION3"
+    ],
+    "institutions": [
+      "Yale"
+    ],
+    "years": [
+      2024
+    ],
+    "time_basis": "source_release",
+    "output": "answer"
+  },
+  "catalog_plan": {
+    "version": 1,
+    "institutions": [
+      "Yale"
+    ],
+    "source_years": [
+      2024
+    ],
+    "requested_time": {
+      "basis": "academic",
+      "description": "Academic year 2024-25 (COST1_2024 charges for the full academic year 2024-25)"
+    },
+    "selections": [
+      {
+        "record_id": 138053,
+        "role": "measure"
+      }
+    ],
+    "filters": [],
+    "group_by_record_ids": [],
+    "calculations": [],
+    "joins": [],
+    "output": "answer",
+    "assumptions": [
+      "Single table COST1_2024 (one row per UNITID) is sufficient; no joins needed.",
+      "TUITION3 is out-of-state average tuition for full-time undergraduates, excluding required fees (FEE3) and food/housing, matching the request.",
+      "Yale is resolved to an institution (UNITID) by name at execution; the user did not specify a campus or alternate institution."
+    ],
+    "clarification_questions": []
+  },
+  "metric_specs": {
+    "COST1_{YEAR}::TUITION3": {
+      "label": "Out-of-state average tuition for full-time undergraduates",
+      "family": "catalog",
+      "unit": "dollars"
+    }
+  },
+  "observation_years": [
+    2024
+  ],
+  "rows": [
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "Academic year 2024-25",
+      "metric": "COST1_{YEAR}::TUITION3",
+      "measure": "Out-of-state average tuition for full-time undergraduates",
+      "unit": "dollars",
+      "value": 67250,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "source release 2024"
+    }
+  ],
+  "sources": [
+    {
+      "metric": "COST1_{YEAR}::TUITION3",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "COST1_2024",
+      "columns": [
+        "TUITION3"
+      ],
+      "filters": [],
+      "formula": "direct source observation",
+      "sql": "SELECT \"TUITION3\" FROM \"COST1_2024\" WHERE \"UNITID\"=? LIMIT 2",
+      "parameters": [
+        130794
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 138053,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "COST1_2024",
+          "variable_name": "TUITION3",
+          "title": "Out-of-state average tuition for full-time undergraduates",
+          "body": "surveyorder: 110\nsurveynumber: 19\nsurvey: Cost\ntablenumber: 201\ntablename: COST1_2024\ntabletitle: Application fees, tuition and required fees, food and housing for undergraduate and graduate students\nvarnumber: 11656\nvarorder: 55\nvarname: TUITION3\nimputationvar: XTUIT3\nvartitle: Out-of-state average tuition for full-time undergraduates\ndatatype: N\nfieldwidth: 5\nformat: Cont\nmultirecord: 0\nfilenumber: 5\nsectionnumber: 3\nlongdescription: Charges to full-time undergraduate students for the full academic year 2024-25 Out-of-state average tuition OUT-OF-STATE TUITION - The tuition charged by institutions to those students who do not meet the institution's or state's residency requirements TUITION - Amount of money charged to students for instructional services. Tuition may be charged per term, per course, or per credit. UNDERGRADUATE - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate. FULL-TIME STUDENT Undergraduate - A student enrolled for 12 or more semester credits, or 12 or more quarter credits, or 24 or more clock hours a week each term ACADEMIC YEAR - The period of time generally extending from September to June; usually equated to 2 semesters or trimesters, 3 quarters, or the period covered by a 4-1-4 plan.\nvarsource: IPEDS, Fall 2024, COST component\nfiletitle: Application fees, tuition and required fees, food and housing for undergraduate and graduate students\nsectiontitle: Tuition and required fees for undergraduate and graduate students (institutions reporting by academic year)",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 2182,
+          "long_description": "Charges to full-time undergraduate students for the full academic year 2024-25 Out-of-state average tuition OUT-OF-STATE TUITION - The tuition charged by institutions to those students who do not meet the institution's or state's residency requirements TUITION - Amount of money charged to students for instructional services. Tuition may be charged per term, per course, or per credit. UNDERGRADUATE - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate. FULL-TIME STUDENT Undergraduate - A student enrolled for 12 or more semester credits, or 12 or more quarter credits, or 24 or more clock hours a week each term ACADEMIC YEAR - The period of time generally extending from September to June; usually equated to 2 semesters or trimesters, 3 quarters, or the period covered by a 4-1-4 plan.",
+          "documented_table": "COST1_2024",
+          "physical_table": "COST1_2024",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": []
+    }
+  ],
+  "warnings": [
+    "Single table COST1_2024 (one row per UNITID) is sufficient; no joins needed.",
+    "TUITION3 is out-of-state average tuition for full-time undergraduates, excluding required fees (FEE3) and food/housing, matching the request.",
+    "Yale is resolved to an institution (UNITID) by name at execution; the user did not specify a campus or alternate institution.",
+    "Source release labels are shown separately from source reporting periods. Missing, suppressed, nonnumeric and negative sentinel values remain empty; reported versus imputed status is unavailable in these source files."
+  ],
+  "definitions": {
+    "COST1_{YEAR}::TUITION3": "Charges to full-time undergraduate students for the full academic year 2024-25 Out-of-state average tuition OUT-OF-STATE TUITION - The tuition charged by institutions to those students who do not meet the institution's or state's residency requirements TUITION - Amount of money charged to students for instructional services. Tuition may be charged per term, per course, or per credit. UNDERGRADUATE - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate. FULL-TIME STUDENT Undergraduate - A student enrolled for 12 or more semester credits, or 12 or more quarter credits, or 24 or more clock hours a week each term ACADEMIC YEAR - The period of time generally extending from September to June; usually equated to 2 semesters or trimesters, 3 quarters, or the period covered by a 4-1-4 plan."
+  },
+  "created_at": "2026-10-19T17:43:08.256295+00:00",
+  "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+  "review_status": "Catalog-bound direct observations; source row keys, selectors and numeric missingness validated. No implicit aggregation or fact joins.",
+  "semantic_validation": {
+    "schema_and_catalog_binding": "passed",
+    "execution_approved": true,
+    "semantic_status": "passed",
+    "blocks": [],
+    "required_next_checks": [],
+    "execution_scope": "Direct source observations with explicit institution/population selectors; no implicit aggregation, joins or inferred year equivalence.",
+    "completed_checks": [
+      "exact physical fields and source codes",
+      "documented and observed row key",
+      "explicit row selectors",
+      "source reporting period",
+      "bounded read-only compilation",
+      "numeric missingness policy",
+      "calculation relationship where applicable"
+    ]
+  },
+  "catalog_evidence": {
+    "catalog_plan": {
+      "version": 1,
+      "institutions": [
+        "Yale"
+      ],
+      "source_years": [
+        2024
+      ],
+      "requested_time": {
+        "basis": "academic",
+        "description": "Academic year 2024-25 (COST1_2024 charges for the full academic year 2024-25)"
+      },
+      "selections": [
+        {
+          "record_id": 138053,
+          "role": "measure"
+        }
+      ],
+      "filters": [],
+      "group_by_record_ids": [],
+      "calculations": [],
+      "joins": [],
+      "output": "answer",
+      "assumptions": [
+        "Single table COST1_2024 (one row per UNITID) is sufficient; no joins needed.",
+        "TUITION3 is out-of-state average tuition for full-time undergraduates, excluding required fees (FEE3) and food/housing, matching the request.",
+        "Yale is resolved to an institution (UNITID) by name at execution; the user did not specify a campus or alternate institution."
+      ],
+      "clarification_questions": []
+    },
+    "question": "Show Yale's out-of-state undergraduate tuition for academic year 2024-25, excluding fees and room and board.",
+    "resolved_institutions": {
+      "2024": [
+        130794
+      ]
+    },
+    "definition_evidence": [
+      {
+        "record_id": 138053,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "COST1_2024",
+        "variable_name": "TUITION3",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"Cost1_2024\"]",
+        "imputation_variable": "XTUIT3",
+        "category_count": 0,
+        "definition_hash": "0893118db8c31d70b750ad492dc2b90b467a8acbc83e9aafc830b0555ced1d14",
+        "normalized_hash": "3034830dde68996f1a70e099b517b01263e899d3ec5ff0db415c71cb2b417437",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Out-of-state average tuition for full-time undergraduates",
+        "long_description": "Charges to full-time undergraduate students for the full academic year 2024-25 Out-of-state average tuition OUT-OF-STATE TUITION - The tuition charged by institutions to those students who do not meet the institution's or state's residency requirements TUITION - Amount of money charged to students for instructional services. Tuition may be charged per term, per course, or per credit. UNDERGRADUATE - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate. FULL-TIME STUDENT Undergraduate - A student enrolled for 12 or more semester credits, or 12 or more quarter credits, or 24 or more clock hours a week each term ACADEMIC YEAR - The period of time generally extending from September to June; usually equated to 2 semesters or trimesters, 3 quarters, or the period covered by a 4-1-4 plan.",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 138053,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "COST1_2024",
+          "variable_name": "TUITION3",
+          "title": "Out-of-state average tuition for full-time undergraduates",
+          "body": "surveyorder: 110\nsurveynumber: 19\nsurvey: Cost\ntablenumber: 201\ntablename: COST1_2024\ntabletitle: Application fees, tuition and required fees, food and housing for undergraduate and graduate students\nvarnumber: 11656\nvarorder: 55\nvarname: TUITION3\nimputationvar: XTUIT3\nvartitle: Out-of-state average tuition for full-time undergraduates\ndatatype: N\nfieldwidth: 5\nformat: Cont\nmultirecord: 0\nfilenumber: 5\nsectionnumber: 3\nlongdescription: Charges to full-time undergraduate students for the full academic year 2024-25 Out-of-state average tuition OUT-OF-STATE TUITION - The tuition charged by institutions to those students who do not meet the institution's or state's residency requirements TUITION - Amount of money charged to students for instructional services. Tuition may be charged per term, per course, or per credit. UNDERGRADUATE - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate. FULL-TIME STUDENT Undergraduate - A student enrolled for 12 or more semester credits, or 12 or more quarter credits, or 24 or more clock hours a week each term ACADEMIC YEAR - The period of time generally extending from September to June; usually equated to 2 semesters or trimesters, 3 quarters, or the period covered by a 4-1-4 plan.\nvarsource: IPEDS, Fall 2024, COST component\nfiletitle: Application fees, tuition and required fees, food and housing for undergraduate and graduate students\nsectiontitle: Tuition and required fees for undergraduate and graduate students (institutions reporting by academic year)",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 2182
+        }
+      }
+    ],
+    "category_evidence": [],
+    "join_key_evidence": [],
+    "table_evidence": [
+      {
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "Cost1_2024",
+        "family": "COST1_{YEAR}",
+        "profile": {
+          "candidate_key": [
+            "UNITID"
+          ],
+          "distinct_institutions": 5867,
+          "expected_rows_match": true,
+          "key_status": "observed_unique_institution_key",
+          "null_institution_ids": 0,
+          "query_count": 1,
+          "rows": 5867,
+          "status": "profiled"
+        },
+        "period_evidence": [
+          {
+            "record_id": 135870,
+            "release_date": null,
+            "release_status": "Provisional",
+            "year_coverage": "Academic year 2024-25"
+          }
+        ],
+        "population_evidence": [
+          {
+            "description": "This file contains information on student charges for Cost of Attendance estimates used to calculate an Average Net Price (ANP) for first-time, full-time undergraduate students to meet requirements of the Higher Education Act of 1965 (HEA), as amended. This file also contains information on tuition and fees and other student charges for other groups of students. For institutions that offer primarily academic programs measured in credit hoursand have a predominant calendar system of semester, quarter, trimester, or 4-1-4 or other academic calendar system report student charges for the full academic year. Student charges on this data file includes: Cost of attendance for full-time, first-time undergraduate students for the full academic year. Cost of attendance includes amounts for published tuition and required fees, books and supplies, food and housing and other expenses. Estimates for books and supplies, room and board and other expenses are those from the Cost of Attendance report used by the financial aid office in determining financial need. Average tuition and required fees for the full academic year for both full-time undergraduate and graduate ; per credit hour charges for both part-time undergraduate and graduate students. Student charges for graduates do not include Doctor's-Professional practice students. Average tuition and required fees for students in (Selected Doctor's-Professional Practice) programs including Chiropractic (D.C. or D.C.M.), Dentistry (D.D.S. or D.M.D.), Law (L.L.B. or J.D.), Medicine (M.D.), Optometry (O.D.), Osteopathic Medicine (D.O), Pharmacy (Pharm.D.), Podiatry (D.P.M., Pod.D., D.P.), or, Veterinary Medicine (D.V.M.). For institutions that measure programs in clock hours or have primarily occupational programs measured in credit hours report student charges data by the full length PROGRAM, this data file includes: The number of programs offered Cost of attendance for the largest progam by program. Cost of attendance includes amounts for published tuition and required fees, books and supplies, food and housing and other expenses. Estimates for books and supplies, room and board and other expenses are those from the Cost of Attendance report used by the financial aid office in determining financial need. Tuition and fees and costs of books and supplies by length of program for the second through sixth largest programs by enrollment. Information on application fees, institutionally-controlled housing, and food and meal plans are available for all institutitons.",
+            "record_id": 135870,
+            "title": "Application fees, tuition and required fees, food and housing for undergraduate and graduate students"
+          }
+        ],
+        "source_definitions": [
+          {
+            "record_id": 135870,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "table_definition",
+            "table_name": "COST1_2024",
+            "variable_name": "",
+            "title": "Application fees, tuition and required fees, food and housing for undergraduate and graduate students",
+            "body": "surveyorder: 110\nsurveynumber: 19\nsurvey: Cost\nyearcoverage: Academic year 2024-25\ntablename: COST1_2024\ntablenumber: 201\ntabletitle: Application fees, tuition and required fees, food and housing for undergraduate and graduate students\ndescription: This file contains information on student charges for Cost of Attendance estimates used to calculate an Average Net Price (ANP) for first-time, full-time undergraduate students to meet requirements of the Higher Education Act of 1965 (HEA), as amended. This file also contains information on tuition and fees and other student charges for other groups of students. For institutions that offer primarily academic programs measured in credit hoursand have a predominant calendar system of semester, quarter, trimester, or 4-1-4 or other academic calendar system report student charges for the full academic year. Student charges on this data file includes: Cost of attendance for full-time, first-time undergraduate students for the full academic year. Cost of attendance includes amounts for published tuition and required fees, books and supplies, food and housing and other expenses. Estimates for books and supplies, room and board and other expenses are those from the Cost of Attendance report used by the financial aid office in determining financial need. Average tuition and required fees for the full academic year for both full-time undergraduate and graduate ; per credit hour charges for both part-time undergraduate and graduate students. Student charges for graduates do not include Doctor's-Professional practice students. Average tuition and required fees for students in (Selected Doctor's-Professional Practice) programs including Chiropractic (D.C. or D.C.M.), Dentistry (D.D.S. or D.M.D.), Law (L.L.B. or J.D.), Medicine (M.D.), Optometry (O.D.), Osteopathic Medicine (D.O), Pharmacy (Pharm.D.), Podiatry (D.P.M., Pod.D., D.P.), or, Veterinary Medicine (D.V.M.). For institutions that measure programs in clock hours or have primarily occupational programs measured in credit hours report student charges data by the full length PROGRAM, this data file includes: The number of programs offered Cost of attendance for the largest progam by program. Cost of attendance includes amounts for published tuition and required fees, books and supplies, food and housing and other expenses. Estimates for books and supplies, room and board and other expenses are those from the Cost of Attendance report used by the financial aid office in determining financial need. Tuition and fees and costs of books and supplies by length of program for the second through sixth largest programs by enrollment. Information on application fees, institutionally-controlled housing, and food and meal plans are available for all institutitons.\nrelease: Provisional\nrelease_date: December 2025",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "tables24",
+            "source_row": 51
+          }
+        ]
+      }
+    ],
+    "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+    "validation": {
+      "schema_and_catalog_binding": "passed",
+      "execution_approved": true,
+      "semantic_status": "passed",
+      "blocks": [],
+      "required_next_checks": [],
+      "execution_scope": "Direct source observations with explicit institution/population selectors; no implicit aggregation, joins or inferred year equivalence.",
+      "completed_checks": [
+        "exact physical fields and source codes",
+        "documented and observed row key",
+        "explicit row selectors",
+        "source reporting period",
+        "bounded read-only compilation",
+        "numeric missingness policy",
+        "calculation relationship where applicable"
+      ]
+    },
+    "created_at": "2026-10-19T17:43:08.246366+00:00"
+  },
+  "coverage": {
+    "requested_cells": 1,
+    "available_cells": 1
+  },
+  "result_id": "e3f05fad60cad7ae",
+  "latency": {
+    "validation_seconds": 0.048641800007317215,
+    "query_seconds": 0.008050200005527586,
+    "planning_and_binding_seconds": 7.950730899989139,
+    "answer_ready_seconds": 8.008009999990463,
+    "live_model_calls": 2,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+  }
+}

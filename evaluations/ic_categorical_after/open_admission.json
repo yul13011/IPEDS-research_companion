@@ -1,0 +1,490 @@
+{
+  "id": "open_admission",
+  "question": "Did Bunker Hill Community College and Smith College have open admission policies in 2024-25?",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "165112",
+        "167835"
+      ],
+      "population": null,
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136083
+          ],
+          "filters": []
+        }
+      ],
+      "result_kind": "lookup",
+      "source_years": [
+        2024
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "165112",
+          "167835"
+        ],
+        "population": null,
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136083
+            ],
+            "filters": []
+          }
+        ],
+        "result_kind": "lookup",
+        "source_years": [
+          2024
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::OPENADMP"
+        ],
+        "institutions": [
+          "165112",
+          "167835"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::OPENADMP": {
+          "label": "Open admission policy",
+          "family": "observation",
+          "unit": "coded"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Bunker Hill Community College",
+          "unitid": 165112,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::OPENADMP",
+          "measure": "Open admission policy",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136083,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139001
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "OPENADMP",
+            "record_id": 136083,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136083,
+                "excerpt": "Open admission policy"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::OPENADMP",
+          "measure": "Open admission policy",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136083,
+          "raw_code": 2,
+          "response_label": "No",
+          "response_status": "no",
+          "category_record_ids": [
+            139002
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "OPENADMP",
+            "record_id": 136083,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136083,
+                "excerpt": "Open admission policy"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::OPENADMP",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "OPENADMP"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"OPENADMP\" FROM \"IC2024\" WHERE UNITID IN (?,?) LIMIT 20001",
+          "parameters": [
+            165112,
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136083,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "OPENADMP",
+              "title": "Open admission policy",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Admission considerations, applications, admissions, enrollees and test scores\nvarnumber: 10516\nvarorder: 36\nvarname: OPENADMP\nvartitle: Open admission policy\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 85\nsectionnumber: 6\nlongdescription: Does your institution have an open admission policy for all or most entering first-time undergraduate-level students? OPEN ADMISSION - Admission policy whereby the school will accept any student who applies. FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school).\nvarsource: IPEDS, Fall 2024, Institutional Characteristics Header component\nfiletitle: Admission considerations, applications, admissions, enrollees and test scores\nsectiontitle: Admission considerations",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 212,
+              "long_description": "Does your institution have an open admission policy for all or most entering first-time undergraduate-level students? OPEN ADMISSION - Admission policy whereby the school will accept any student who applies. FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school).",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139003,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 139004,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139001,
+              "code_value": "1",
+              "value_label": "Yes"
+            },
+            {
+              "record_id": 139002,
+              "code_value": "2",
+              "value_label": "No"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::OPENADMP": "Does your institution have an open admission policy for all or most entering first-time undergraduate-level students? OPEN ADMISSION - Admission policy whereby the school will accept any student who applies. FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school)."
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:33:17.101085+00:00",
+      "registry_sha256": "1031cbe2d845904bebe86af8a42fa856182f0253ef37bd4e2a719e3a7578b74f",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 2,
+        "available_cells": 2,
+        "matching_institutions": {
+          "2024": 2
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 2
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            165112,
+            2024,
+            136083
+          ],
+          [
+            167835,
+            2024,
+            136083
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          165112,
+          167835
+        ],
+        "rows_sha256": "6a14704619f5a99d18d7e32be24a175d3b815f07e2863be5125951a6dc449fda"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 9.904863100033253,
+        "answer_ready_seconds": 24.980173599906266,
+        "live_model_calls": 4,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 15.034586999914609
+      },
+      "result_id": "a301f44e1a27213f",
+      "institution_identity": {
+        "unitids": [
+          165112,
+          167835
+        ],
+        "original_question": "Did Bunker Hill Community College and Smith College have open admission policies in 2024-25?",
+        "original_mentions": [
+          "Bunker Hill Community College",
+          "Smith College"
+        ],
+        "confirmed_choices": {
+          "bunker hill community college": 165112,
+          "smith college": 167835
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Bunker Hill Community College \u00b7 Boston, MA \u00b7 UNITID 165112",
+          "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 4,
+      "planning_tool_requests": 5,
+      "semantic_repair_attempts": 0,
+      "latency_seconds": 11.668819699936547,
+      "input_tokens": 37879,
+      "output_tokens": 798,
+      "cache_creation_input_tokens": 21308,
+      "cache_read_input_tokens": 42616,
+      "estimated_api_usd": 0.1412696,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 562,
+          "output_tokens": 70,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.9808196999365464,
+          "estimated_api_usd": 0.001824,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 3,
+          "planning_tool_requests": 5,
+          "semantic_repair_attempts": 0,
+          "latency_seconds": 9.688,
+          "input_tokens": 37317,
+          "output_tokens": 728,
+          "cache_creation_input_tokens": 21308,
+          "cache_read_input_tokens": 42616,
+          "estimated_api_usd": 0.1394456,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "Bunker Hill Community College \u2014 Open admission policy: Yes (Academic year 2024-25); Smith College \u2014 Open admission policy: No (Academic year 2024-25).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 9.904863100033253,
+      "answer_ready_seconds": 24.980173599906266,
+      "live_model_calls": 4,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 15.034586999914609
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "cc61eb6cbb2cf279",
+      "status": "completed",
+      "goal": "Did Bunker Hill Community College (UNITID 165112) and Smith College (UNITID 167835) have open admission policies in 2024-25?",
+      "original_question": "Did Bunker Hill Community College (UNITID 165112) and Smith College (UNITID 167835) have open admission policies in 2024-25?",
+      "question": "Bunker Hill Community College \u2014 Open admission policy: Yes (Academic year 2024-25); Smith College \u2014 Open admission policy: No (Academic year 2024-25).",
+      "scope": {
+        "institutions": [
+          "165112",
+          "167835"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::OPENADMP"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        165112,
+        167835
+      ],
+      "original_question": "Did Bunker Hill Community College and Smith College have open admission policies in 2024-25?",
+      "original_mentions": [
+        "Bunker Hill Community College",
+        "Smith College"
+      ],
+      "confirmed_choices": {
+        "bunker hill community college": 165112,
+        "smith college": 167835
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Bunker Hill Community College \u00b7 Boston, MA \u00b7 UNITID 165112",
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 26.020804399973713,
+  "events": [
+    {
+      "elapsed": 0.022513799951411784,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 15.961797599913552,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 16.08574259991292,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 16.085907799890265,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 16.15132059995085,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 19.650894699967466,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 19.872884799959138,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 19.90438809990883,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 23.402552799903788,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 23.4218586999923,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 23.439924099948257,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 25.990489799994975,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 26.020767299924046,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "OPENADMP"
+  ]
+}

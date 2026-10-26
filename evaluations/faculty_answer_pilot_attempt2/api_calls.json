@@ -1,0 +1,202 @@
+[
+  {
+    "case": "yale",
+    "stage": "review_meaning",
+    "usage": {
+      "input_tokens": 6519,
+      "output_tokens": 785,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 7.839000299980398,
+      "estimated_api_usd": 0.020888,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "action": "answer",
+        "source_year": 2024,
+        "employment": "both",
+        "medical_scope": "include",
+        "interpretations": [
+          {
+            "id": "faculty_status_all_occupations",
+            "label": "Primary: all employees with faculty status, across all occupations (full- and part-time, medical school included)",
+            "occupation_code": "100",
+            "faculty_status_codes": [
+              "10"
+            ],
+            "evidence_ids": [
+              149286,
+              149318
+            ]
+          },
+          {
+            "id": "faculty_status_instructional",
+            "label": "Related, overlapping subset: instructional staff with faculty status (full- and part-time, medical school included). This is part of the primary population, not a separate count, so do not add the two.",
+            "occupation_code": "210",
+            "faculty_status_codes": [
+              "10"
+            ],
+            "evidence_ids": [
+              149288,
+              149318
+            ]
+          }
+        ],
+        "reason": "The question is an unqualified faculty headcount for Yale University (identity confirmed, UNITID 130794) with no year, employment or medical-school qualifier. The latest supplied year, Fall 2024, is used. The default is everyone with faculty status across all occupations. Instructional staff with faculty status is shown as a labelled, overlapping subset. The salary table has no tenure/faculty-status dimension and is not used.",
+        "clarification_question": ""
+      }
+    ]
+  },
+  {
+    "case": "yale_paraphrase",
+    "stage": "review_meaning",
+    "usage": {
+      "input_tokens": 6519,
+      "output_tokens": 828,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 6.30832360003842,
+      "estimated_api_usd": 0.021318,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "action": "answer",
+        "source_year": 2024,
+        "employment": "both",
+        "medical_scope": "include",
+        "interpretations": [
+          {
+            "id": "faculty_status_all_occupations",
+            "label": "Primary: Yale University employees with faculty status, across all occupations (full- and part-time, including medical school), Fall 2024",
+            "occupation_code": "100",
+            "faculty_status_codes": [
+              "10"
+            ],
+            "evidence_ids": [
+              149286,
+              149318
+            ]
+          },
+          {
+            "id": "faculty_status_instructional",
+            "label": "Related, overlapping subset: Yale University instructional staff who have faculty status (full- and part-time, including medical school), Fall 2024. This is part of, not an addition to, the primary count.",
+            "occupation_code": "210",
+            "faculty_status_codes": [
+              "10"
+            ],
+            "evidence_ids": [
+              149288,
+              149318
+            ]
+          }
+        ],
+        "reason": "Yale University's identity is confirmed (UNITID 130794), and the question is an unqualified faculty headcount for the latest available year, Fall 2024. It has no employment, medical-school or date qualifier, so both full- and part-time staff are included, with medical school staff included. The default meaning is staff with faculty status across all occupations. The related instructional-with-faculty-status population is shown separately because it overlaps with the default and must not be added to it. Salary data (SAL2024_IS) covers full-time nonmedical instructional staff and has no tenure dimension, so it does not describe this count.",
+        "clarification_question": ""
+      }
+    ]
+  },
+  {
+    "case": "harvard",
+    "stage": "review_meaning",
+    "usage": {
+      "input_tokens": 6521,
+      "output_tokens": 888,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 7.7793528999900445,
+      "estimated_api_usd": 0.021922,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "action": "answer",
+        "source_year": 2024,
+        "employment": "both",
+        "medical_scope": "include",
+        "interpretations": [
+          {
+            "id": "faculty_status_all_occupations",
+            "label": "Employees with faculty status, across all occupations (primary meaning of 'faculty'; full-time and part-time, including medical school)",
+            "occupation_code": "100",
+            "faculty_status_codes": [
+              "10"
+            ],
+            "evidence_ids": [
+              149286,
+              149318
+            ]
+          },
+          {
+            "id": "faculty_status_instructional",
+            "label": "Related, overlapping subset: instructional staff with faculty status (full-time and part-time, including medical school). This is not a separate estimate of the same quantity and must not be added to the all-occupations count.",
+            "occupation_code": "210",
+            "faculty_status_codes": [
+              "10"
+            ],
+            "evidence_ids": [
+              149288,
+              149318
+            ]
+          }
+        ],
+        "reason": "Harvard University (UNITID 166027) is confirmed, and the question is an unqualified faculty headcount with no stated year, employment type or medical-school restriction. I used the latest year supplied (Fall 2024), both full-time and part-time, and included medical school staff. The default meaning is employees with faculty status across all occupations. I also show instructional staff with faculty status as a labelled related population. It overlaps with the first one, so the two counts should not be summed. The salary table has no tenure-status dimension and covers only full-time nonmedical instructional staff, so it does not describe this population.",
+        "clarification_question": ""
+      }
+    ]
+  },
+  {
+    "case": "smith",
+    "stage": "review_meaning",
+    "usage": {
+      "input_tokens": 6520,
+      "output_tokens": 810,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 5.908158200036269,
+      "estimated_api_usd": 0.02114,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "action": "answer",
+        "source_year": 2024,
+        "employment": "both",
+        "medical_scope": "include",
+        "interpretations": [
+          {
+            "id": "all_occupations_faculty_status",
+            "label": "Employees with faculty status, all occupations (default meaning of 'faculty'; full-time and part-time combined)",
+            "occupation_code": "100",
+            "faculty_status_codes": [
+              "10"
+            ],
+            "evidence_ids": [
+              149286,
+              149318
+            ]
+          },
+          {
+            "id": "instructional_faculty_status",
+            "label": "Instructional staff with faculty status (related, overlapping subset; do not add to the all-occupations count)",
+            "occupation_code": "210",
+            "faculty_status_codes": [
+              "10"
+            ],
+            "evidence_ids": [
+              149288,
+              149318
+            ]
+          }
+        ],
+        "reason": "Smith College (confirmed institution) has Fall 2024 data in the latest supplied release. The question asks for an unqualified faculty headcount, so the default is all employees with faculty status across all occupations. Instructional staff with faculty status is a labelled, overlapping related population, not an additional amount. Employment and medical-school scope were not specified, so full-time and part-time are both included, along with any medical-school staff. The salary table is not used because it covers only full-time nonmedical instructional staff by rank, with no tenure-status dimension.",
+        "clarification_question": ""
+      }
+    ]
+  }
+]

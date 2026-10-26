@@ -1,0 +1,580 @@
+{
+  "id": "threshold",
+  "question": "In 2024-25 IPEDS Institutional Characteristics, what percentage of undergraduates at Bentley University were formally registered with disability services? Explain whether an exact percentage is available.",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "164739"
+      ],
+      "population": null,
+      "result_kind": "lookup",
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136165,
+            136166
+          ],
+          "filters": []
+        }
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "164739"
+        ],
+        "population": null,
+        "result_kind": "lookup",
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136165,
+              136166
+            ],
+            "filters": []
+          }
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::DISAB",
+          "IC{YEAR}::DISABPCT"
+        ],
+        "institutions": [
+          "164739"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::DISAB": {
+          "label": "Percent indicator of undergraduates formally registered as students with disabilities",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::DISABPCT": {
+          "label": "Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent",
+          "family": "observation",
+          "unit": "percent"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Bentley University",
+          "unitid": 164739,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Fall 2023",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::DISAB",
+          "measure": "Percent indicator of undergraduates formally registered as students with disabilities",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136165,
+          "raw_code": 1,
+          "response_label": "3 percent or less",
+          "response_status": "reported",
+          "category_record_ids": [
+            143784
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "DISAB",
+            "record_id": 136165,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136165,
+                "excerpt": "Percent indicator of undergraduates formally registered as students with disabilities"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Bentley University",
+          "unitid": 164739,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Fall 2023",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::DISABPCT",
+          "measure": "Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent",
+          "unit": "percent",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "bounded",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "bounded",
+          "record_id": 136166,
+          "raw_code": null,
+          "response_label": "3 percent or less",
+          "response_status": "bounded",
+          "category_record_ids": [],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "DISABPCT",
+            "record_id": 136166,
+            "unit": "percent",
+            "quantity_type": "percentage",
+            "status": "verified",
+            "basis": "Explicit percentage quantity",
+            "evidence": [
+              {
+                "record_id": 136166,
+                "excerpt": "Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          },
+          "conditional_evidence": {
+            "record_id": 136165,
+            "raw_code": 1,
+            "response_label": "3 percent or less",
+            "response_status": "reported",
+            "category_record_ids": [
+              143784
+            ]
+          },
+          "bound": {
+            "upper": 3.0,
+            "upper_inclusive": true,
+            "unit": "percent"
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::DISAB",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "DISAB"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"DISAB\",\"DISABPCT\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            164739
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136165,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "DISAB",
+              "title": "Percent indicator of undergraduates formally registered as students with disabilities",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nvarnumber: 24566\nvarorder: 94\nvarname: DISAB\nvartitle: Percent indicator of undergraduates formally registered as students with disabilities\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 76\nsectionnumber: 1\nlongdescription: Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nsectiontitle: Undergraduate students with disabilities: Fall 2023",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 294,
+              "long_description": "Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 143786,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 143787,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 143784,
+              "code_value": "1",
+              "value_label": "3 percent or less"
+            },
+            {
+              "record_id": 143785,
+              "code_value": "2",
+              "value_label": "More than 3 percent"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::DISABPCT",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "DISABPCT",
+            "DISAB"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"DISAB\",\"DISABPCT\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            164739
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136166,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "DISABPCT",
+              "title": "Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nvarnumber: 24571\nvarorder: 96\nvarname: DISABPCT\nimputationvar: XDISABPC\nvartitle: Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 76\nsectionnumber: 1\nlongdescription: Enter percentage when the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office) if percentage is more than 3 percent\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nsectiontitle: Undergraduate students with disabilities: Fall 2023",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 295,
+              "long_description": "Enter percentage when the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office) if percentage is more than 3 percent",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            },
+            {
+              "record_id": 136165,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "DISAB",
+              "title": "Percent indicator of undergraduates formally registered as students with disabilities",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nvarnumber: 24566\nvarorder: 94\nvarname: DISAB\nvartitle: Percent indicator of undergraduates formally registered as students with disabilities\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 76\nsectionnumber: 1\nlongdescription: Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Undergraduate students from fall 2023 with disabilities: Fall 2024\nsectiontitle: Undergraduate students with disabilities: Fall 2023",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 294,
+              "long_description": "Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 143786,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 143787,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 143784,
+              "code_value": "1",
+              "value_label": "3 percent or less"
+            },
+            {
+              "record_id": 143785,
+              "code_value": "2",
+              "value_label": "More than 3 percent"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::DISAB": "Please indicate the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office): This variable applies only to undergraduate students enrolled either full- or part-time. If fewer than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the actual percent is not indicated. However, if more than 3% of the institution\u2019s undergraduate students are registered with the disability services (or equivalent) office, the appropriate percentage is given. See variable DISABPCT.",
+        "IC{YEAR}::DISABPCT": "Enter percentage when the percentage of all undergraduates enrolled in Fall 2023 who are formally registered as students with disabilities with the institution's office of disability services (or the equivalent office) if percentage is more than 3 percent"
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:39:33.212606+00:00",
+      "registry_sha256": "2f0c716e46866d91a11fd36bba77cfb2e947eebcc917a7358811d3c05f0b35b3",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 2,
+        "available_cells": 2,
+        "matching_institutions": {
+          "2024": 1
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 1
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            164739,
+            2024,
+            136165
+          ],
+          [
+            164739,
+            2024,
+            136166
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          164739
+        ],
+        "rows_sha256": "60f371f0cf1cfe2d5ae8f1d7b77b6946029520b60e6492a2b74e068f2b4a01e1"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 11.742192599922419,
+        "answer_ready_seconds": 13.018555499962531,
+        "live_model_calls": 5,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 1.2526291999965906
+      },
+      "result_id": "ed792b2c27c4d383",
+      "institution_identity": {
+        "unitids": [
+          164739
+        ],
+        "original_question": "In 2024-25 IPEDS Institutional Characteristics, what percentage of undergraduates at Bentley University were formally registered with disability services? Explain whether an exact percentage is available.",
+        "original_mentions": [
+          "Bentley University"
+        ],
+        "confirmed_choices": {
+          "bentley university": 164739
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Bentley University \u00b7 Waltham, MA \u00b7 UNITID 164739"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 5,
+      "planning_tool_requests": 6,
+      "semantic_repair_attempts": 1,
+      "latency_seconds": 12.070170000044628,
+      "input_tokens": 50490,
+      "output_tokens": 1041,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 85232,
+      "estimated_api_usd": 0.1199132,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 594,
+          "output_tokens": 59,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.133170000044629,
+          "estimated_api_usd": 0.001778,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 4,
+          "planning_tool_requests": 6,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 10.937,
+          "input_tokens": 49896,
+          "output_tokens": 982,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 85232,
+          "estimated_api_usd": 0.1181352,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "Bentley University \u2014 Percent indicator of undergraduates formally registered as students with disabilities: 3 percent or less (Fall 2023); Bentley University \u2014 Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent: 3 percent or less (Fall 2023).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 11.742192599922419,
+      "answer_ready_seconds": 13.018555499962531,
+      "live_model_calls": 5,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 1.2526291999965906
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "2155b190a5b4fff8",
+      "status": "completed",
+      "goal": "In 2024-25 IPEDS Institutional Characteristics, what percentage of undergraduates at Bentley University (UNITID 164739) were formally registered with disability services? Explain whether an exact percentage is available.",
+      "original_question": "In 2024-25 IPEDS Institutional Characteristics, what percentage of undergraduates at Bentley University (UNITID 164739) were formally registered with disability services? Explain whether an exact percentage is available.",
+      "question": "Bentley University \u2014 Percent indicator of undergraduates formally registered as students with disabilities: 3 percent or less (Fall 2023); Bentley University \u2014 Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent: 3 percent or less (Fall 2023).",
+      "scope": {
+        "institutions": [
+          "164739"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::DISAB",
+          "IC{YEAR}::DISABPCT"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        164739
+      ],
+      "original_question": "In 2024-25 IPEDS Institutional Characteristics, what percentage of undergraduates at Bentley University were formally registered with disability services? Explain whether an exact percentage is available.",
+      "original_mentions": [
+        "Bentley University"
+      ],
+      "confirmed_choices": {
+        "bentley university": 164739
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Bentley University \u00b7 Waltham, MA \u00b7 UNITID 164739"
+      ]
+    }
+  },
+  "elapsed_seconds": 13.020233699935488,
+  "events": [
+    {
+      "elapsed": 0.0009646000107750297,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.146904099965468,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.219351099920459,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 1.219503799919039,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 1.2430292000062764,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 4.355475399992429,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 4.3938514000037685,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 5.573521499987692,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 7.499856299953535,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 7.548804899910465,
+      "stage": "Reading definitions and category codes across years\u2026"
+    },
+    {
+      "elapsed": 7.623260199907236,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 10.1478132000193,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 12.961207599961199,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 13.020142699941061,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "DISAB",
+    "DISABPCT"
+  ]
+}

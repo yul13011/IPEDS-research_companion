@@ -1,0 +1,222 @@
+{
+  "id": "quality_gap",
+  "question": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: Smith College or Mount Holyoke College?",
+  "answer": {
+    "intent": "clarify",
+    "message": "I can\u2019t answer the original question reliably from the supplied sources inspected. The 2024-25 Institutional Characteristics data have one item on this topic: whether an institution offers academic/career counseling services (yes, implied no, not reported, or not applicable). It says nothing about how good, how well-staffed or how well-used the service is. So these data cannot show whether Smith College or Mount Holyoke College has better academic counseling. At most they could show whether each college reports offering the service, which is a different question. I can look that up if you want, but it would not rank the two colleges on quality.",
+    "analysis_brief": {
+      "version": 1,
+      "id": "f22c4d75a23d5cb8",
+      "status": "coverage_gap",
+      "goal": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: Smith College (UNITID 167835) or Mount Holyoke College (UNITID 166939)?",
+      "original_question": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: Smith College (UNITID 167835) or Mount Holyoke College (UNITID 166939)?",
+      "question": "I can\u2019t answer the original question reliably from the supplied sources inspected. The 2024-25 Institutional Characteristics data have one item on this topic: whether an institution offers academic/career counseling services (yes, implied no, not reported, or not applicable). It says nothing about how good, how well-staffed or how well-used the service is. So these data cannot show whether Smith College or Mount Holyoke College has better academic counseling. At most they could show whether each college reports offering the service, which is a different question. I can look that up if you want, but it would not rank the two colleges on quality.",
+      "scope": {},
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [],
+      "coverage_gap": {
+        "missing_information": "A measure of the quality, capacity, usage or outcomes of academic counseling at each college. Institutional Characteristics has only a yes/no indicator of whether the service is offered.",
+        "explanation": "The 2024-25 Institutional Characteristics data have one item on this topic: whether an institution offers academic/career counseling services (yes, implied no, not reported, or not applicable). It says nothing about how good, how well-staffed or how well-used the service is. So these data cannot show whether Smith College or Mount Holyoke College has better academic counseling. At most they could show whether each college reports offering the service, which is a different question. I can look that up if you want, but it would not rank the two colleges on quality.",
+        "status": "coverage_gap",
+        "source_inspections": [
+          {
+            "tool": "search_catalog",
+            "input": {
+              "query": "academic counseling services",
+              "year": 2024,
+              "limit": 10
+            },
+            "returned_items": 10
+          },
+          {
+            "tool": "inspect_table",
+            "input": {
+              "year": 2024,
+              "table": "IC2024",
+              "offset": 0,
+              "limit": 20,
+              "keyword": "counseling"
+            },
+            "returned_items": null
+          },
+          {
+            "tool": "category_values",
+            "input": {
+              "record_id": 136102,
+              "offset": 0,
+              "limit": 10
+            },
+            "returned_items": null
+          }
+        ],
+        "source_policy": "Owner-supplied sources only"
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 6,
+      "planning_tool_requests": 6,
+      "semantic_repair_attempts": 1,
+      "latency_seconds": 20.056488100035118,
+      "input_tokens": 62767,
+      "output_tokens": 1748,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 106540,
+      "estimated_api_usd": 0.15366800000000003,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 576,
+          "output_tokens": 69,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 2.197488100035116,
+          "estimated_api_usd": 0.001842,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 5,
+          "planning_tool_requests": 6,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 17.859,
+          "input_tokens": 62191,
+          "output_tokens": 1679,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 106540,
+          "estimated_api_usd": 0.15182600000000002,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "coverage_gap": {
+      "missing_information": "A measure of the quality, capacity, usage or outcomes of academic counseling at each college. Institutional Characteristics has only a yes/no indicator of whether the service is offered.",
+      "explanation": "The 2024-25 Institutional Characteristics data have one item on this topic: whether an institution offers academic/career counseling services (yes, implied no, not reported, or not applicable). It says nothing about how good, how well-staffed or how well-used the service is. So these data cannot show whether Smith College or Mount Holyoke College has better academic counseling. At most they could show whether each college reports offering the service, which is a different question. I can look that up if you want, but it would not rank the two colleges on quality.",
+      "status": "coverage_gap",
+      "source_inspections": [
+        {
+          "tool": "search_catalog",
+          "input": {
+            "query": "academic counseling services",
+            "year": 2024,
+            "limit": 10
+          },
+          "returned_items": 10
+        },
+        {
+          "tool": "inspect_table",
+          "input": {
+            "year": 2024,
+            "table": "IC2024",
+            "offset": 0,
+            "limit": 20,
+            "keyword": "counseling"
+          },
+          "returned_items": null
+        },
+        {
+          "tool": "category_values",
+          "input": {
+            "record_id": 136102,
+            "offset": 0,
+            "limit": 10
+          },
+          "returned_items": null
+        }
+      ],
+      "source_policy": "Owner-supplied sources only"
+    },
+    "mode": "source coverage limitation",
+    "catalog_context": {
+      "kind": "catalog_clarification",
+      "question": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: Smith College (UNITID 167835) or Mount Holyoke College (UNITID 166939)?",
+      "previous_plan": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 18.283263699966483,
+      "answer_ready_seconds": 20.646706799976528,
+      "live_model_calls": 6,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 2.3229488999349996
+    },
+    "institution_identity": {
+      "unitids": [
+        166939,
+        167835
+      ],
+      "original_question": "Using only Institutional Characteristics, which has better academic counseling services in 2024-25: Smith College or Mount Holyoke College?",
+      "original_mentions": [
+        "Smith College",
+        "Mount Holyoke College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835,
+        "mount holyoke college": 166939
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Mount Holyoke College \u00b7 South Hadley, MA \u00b7 UNITID 166939",
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 20.64701959991362,
+  "events": [
+    {
+      "elapsed": 0.0002802999224513769,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 2.2081444999203086,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 2.329021199955605,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 2.32917699997779,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 2.3460991999600083,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 5.2296021999791265,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 5.667777199996635,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 5.69475349993445,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 7.8729807999916375,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 7.889512799913064,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 10.942084399983287,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 16.819865599973127,
+      "stage": "Revising the plan after validation feedback\u2026"
+    }
+  ],
+  "expected_variables": [
+    "STUSRV2"
+  ]
+}

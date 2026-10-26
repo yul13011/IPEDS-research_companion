@@ -1,0 +1,75 @@
+{
+  "id": "code_definition",
+  "question": "In the 2024-25 Institutional Characteristics codebook, what does \u201cImplied no\u201d mean for on-campus childcare, and how is it different from \u201cNot reported\u201d?",
+  "answer": {
+    "intent": "definition",
+    "mode": "source definition",
+    "message": "**On-campus day care for students' children**: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.\n\nSource responses: 0 = Implied no; -1 = Not reported\n\nThese are distinct source response categories; an unavailable or unreported response must not be interpreted as No.",
+    "evidence": [
+      {
+        "record_id": 136105,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "variable_definition",
+        "table_name": "IC2024",
+        "variable_name": "STUSRV8",
+        "title": "On-campus day care for students' children",
+        "definition": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "sheet_name": "varTable24",
+        "source_row": 234,
+        "codes": [
+          {
+            "code_value": "1",
+            "value_label": "Yes"
+          },
+          {
+            "code_value": "0",
+            "value_label": "Implied no"
+          },
+          {
+            "code_value": "-1",
+            "value_label": "Not reported"
+          },
+          {
+            "code_value": "-2",
+            "value_label": "Not applicable"
+          }
+        ],
+        "excerpt": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.",
+        "issues": [],
+        "physical_column_present": true
+      }
+    ],
+    "definition_lookup": {
+      "term": "source category labels",
+      "terms": [
+        "On-campus day care for students' children"
+      ],
+      "source_years": [
+        2024
+      ],
+      "comparison": false
+    },
+    "documentation_context": {
+      "kind": "label",
+      "terms": [
+        "On-campus day care for students' children"
+      ],
+      "source_years": [
+        2024
+      ]
+    },
+    "model_usage": {
+      "calls": 0,
+      "estimated_api_usd": 0
+    },
+    "latency": {
+      "live_model_calls": 0
+    }
+  },
+  "elapsed_seconds": 12.056454499950632,
+  "events": [],
+  "expected_variables": [
+    "STUSRV8"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "definition_rephrase",
+  "question": "Define the label Implied no for on-campus childcare in the 2024-25 Institutional Characteristics codebook.",
+  "answer": {
+    "intent": "definition",
+    "mode": "source definition",
+    "message": "I could not establish a direct definition of **Implied no for on-campus childcare in the 2024-25 Institutional Characteristics codebook** from this bounded search of the supplied codebooks. This does not prove the term is absent. Try its exact variable name, source table, or a more specific term.",
+    "evidence": [],
+    "definition_lookup": {
+      "term": "Implied no for on-campus childcare in the 2024-25 Institutional Characteristics codebook",
+      "source_years": [
+        2024
+      ],
+      "default_latest_release": false,
+      "status": "not_established",
+      "selection": "deterministic",
+      "reviewed_measure": null,
+      "candidate_record_ids": [],
+      "passages": [],
+      "source_policy": "Owner-supplied metadata only; no statistical values queried"
+    },
+    "latency": {
+      "answer_ready_seconds": 0.020140399923548102,
+      "live_model_calls": 0
+    },
+    "documentation_context": {
+      "kind": "label",
+      "terms": [
+        "Implied no for on-campus childcare in the 2024-25 Institutional Characteristics codebook"
+      ],
+      "source_years": [
+        2024
+      ],
+      "context_resolved": false
+    }
+  },
+  "elapsed_seconds": 0.09804850001819432,
+  "events": [
+    {
+      "elapsed": 0.08059360005427152,
+      "stage": "Looking up the term in the supplied codebooks\u2026"
+    }
+  ],
+  "expected_variables": [
+    "STUSRV8"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "question": "How many faculty does Southern Connecticut State University have?",
+  "confirmed_institution": {
+    "unitid": 130493,
+    "name": "Southern Connecticut State University"
+  },
+  "institution_policy": "No confirmed identity means ask; do not assume Yale College has a separate reporting record.",
+  "available_release_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "retrieval_year": 2024,
+  "release": "IPEDS_2024-25_Provisional",
+  "table": {
+    "record_id": 135859,
+    "title": "Number of staff by occupational category, faculty and tenure status: Fall 2024",
+    "description": "This table contains the number of staff classified by full- and part-time status, medical school status, occupational category and faculty and tenure status for applicable occupations. Faculty and tenure status categories include tenured, on-tenured-track, not-on-tenure track/no tenure system and without faculty status. Staff that are not on tenure track are further disaggregated by contract length (multi-year, indefinite, annual and less-than-annual). The multi-year and indefinite contracts began in 2016. From 2012 through 2015 the multi-year and indefinite contract lengths were combined as one category and often referred to as multi-year in past documentation. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable EAPCAT which defines occupational category and tenure status of staff.",
+    "year_coverage": "Fall 2024"
+  },
+  "fields": [
+    {
+      "record_id": 137672,
+      "variable_name": "EAPCAT",
+      "title": "Occupation and faculty/tenure status",
+      "long_description": "This variable identifies employees/staff by human resource occupation categories and faculty/tenure status Occupation code - This variable identifies postsecondary staff by IPEDS Human Resource occupation categories The IPEDS HR survey component uses the Standard Occupational Classification (SOC) system to assist institutions in classifying employees for IPEDS reporting purposes. The SOC is a system used by Federal statistical agencies to classify workers and jobs into occupational categories for the purpose of collecting, calculating, analyzing, or disseminating data. In 2018, an updated version of the SOC system (http://www.bls.gov/soc/) was released. Consequently, the IPEDS HR survey was revised to incorporate the 2018 SOC information. The new IPEDS occupational categories are effective with 2018-19 Human Resources reporting. Faculty and tenure status Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category Tenure-Status of a personnel position with respect to permanence of the position. Tenure track - Personnel positions that lead to consideration for tenure. Not on tenure track - Personnel positions that are considered non-tenure earning positions Multi-year contract - a contract or employment agreement that is in effect for more than one year (e.g., more than 365 days) where subsequent years of the contract may be contingent upon other factors such as the appropriation of funds. The renewal period of a multi-year contract is not on an annual basis (e.g., a 5-year multi-year contract is renewed every 5 years NOT annually). Annual contract - An annually-renewable contract or employment agreement that is in effect for a stated annual period within one year of execution, and may be equal to a period of 365 days, or a standard academic year, or the equivalent. Does not include contracts for partial year periods such as a single semester, quarter, term, block, or course. Less-than-annual-contract - A contract or employment agreement that is in effect for a partial year period of less than 365 days, or less than a standard academic year or the equivalent. Includes contracts for partial year periods such as a single semester, quarter, term, block, or course."
+    },
+    {
+      "record_id": 137678,
+      "variable_name": "EAPFT",
+      "title": "Full-time employees",
+      "long_description": "Total number of full-time employees/staff on the institution\u2019s payroll as of November 1 of the reporting year Full-time staff (employees) As defined by the institution. The type of appointment at the snapshot date determines whether an employee is full time or part time. The employee's term of contract is not considered in making the determination of full or part time."
+    },
+    {
+      "record_id": 137680,
+      "variable_name": "EAPFTMED",
+      "title": "Full-time employees (medical school)",
+      "long_description": "Total number of full-time employees/staff (medical school) on the institution\u2019s payroll as of November 1 of the reporting year Full-time staff (employees) As defined by the institution. The type of appointment at the snapshot date determines whether an employee is full time or part time. The employee's term of contract is not considered in making the determination of full or part time. Medical school staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school"
+    },
+    {
+      "record_id": 137679,
+      "variable_name": "EAPFTTYP",
+      "title": "Full-time employees (excluding medical schools)",
+      "long_description": "Total number of full-time employees/staff (excluding medical schools) on the institution\u2019s payroll as of November 1 of the reporting year Full-time staff (employees) As defined by the institution. The type of appointment at the snapshot date determines whether an employee is full time or part time. The employee's term of contract is not considered in making the determination of full or part time. Medical school staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school"
+    },
+    {
+      "record_id": 137676,
+      "variable_name": "EAPMED",
+      "title": "Medical school employees",
+      "long_description": "Number of medical school employees/staff Medical school staff - Staff employed by or employees working in the medical school component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene."
+    },
+    {
+      "record_id": 137681,
+      "variable_name": "EAPPT",
+      "title": "Part-time employees",
+      "long_description": "Total number of part-time employees/staff on the institution\u2019s payroll as of November 1 of the reporting year Part-time staff (employees) As determined by the institution. The type of appointment at the snapshot date determines whether an employee is full time or part time. The employee's term of contract is not considered in making the determination of full or part time. Casual employees (hired on an ad-hoc basis or occasional basis to meet short-term needs) and students in the College Work-Study Program (CWS) are not considered part-time staff."
+    },
+    {
+      "record_id": 137683,
+      "variable_name": "EAPPTMED",
+      "title": "Part-time employees (medical school)",
+      "long_description": "Total number of part-time employees/staff (medical school) on the institution\u2019s payroll as of November 1 of the reporting year Part-time staff (employees) As determined by the institution. The type of appointment at the snapshot date determines whether an employee is full time or part time. The employee's term of contract is not considered in making the determination of full or part time. Casual employees (hired on an ad-hoc basis or occasional basis to meet short-term needs) and students in the College Work-Study Program (CWS) are not considered part-time staff. Medical school staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school"
+    },
+    {
+      "record_id": 137682,
+      "variable_name": "EAPPTTYP",
+      "title": "Part-time employees (excluding medical schools)",
+      "long_description": "Total number of part-time employees/staff (excluding medical schools) on the institution\u2019s payroll as of November 1 of the reporting year Part-time staff (employees) As determined by the institution. The type of appointment at the snapshot date determines whether an employee is full time or part time. The employee's term of contract is not considered in making the determination of full or part time. Casual employees (hired on an ad-hoc basis or occasional basis to meet short-term needs) and students in the College Work-Study Program (CWS) are not considered part-time staff. Medical school staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school"
+    },
+    {
+      "record_id": 137677,
+      "variable_name": "EAPTOT",
+      "title": "Total employees",
+      "long_description": "Total number of employees/staff on the institution\u2019s payroll as of November 1 of the reporting year"
+    },
+    {
+      "record_id": 137675,
+      "variable_name": "EAPTYP",
+      "title": "Institution employees (excluding medical school)",
+      "long_description": "Number of typical employees(excluding medical if available) Institution\u2019s staff (not in medical schools) - All staff employed by or employees working in a postsecondary institution, except those employed by or working in the medical school component of the institution. Includes staff employed by or employees working in the postsecondary component of a hospital or medical center that offers postsecondary education as one of its primary missions; also includes those working in first-professional schools (e.g., law schools, dental schools, schools optometry) except medical schools."
+    },
+    {
+      "record_id": 137674,
+      "variable_name": "FACSTAT",
+      "title": "Faculty and tenure status",
+      "long_description": "Faculty and tenure status Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category Tenure-Status of a personnel position with respect to permanence of the position. Tenure track - Personnel positions that lead to consideration for tenure. Not on tenure track - Personnel positions that are considered non-tenure earning positions Multi-year contract - a contract or employment agreement that is in effect for more than one year (e.g., more than 365 days) where subsequent years of the contract may be contingent upon other factors such as the appropriation of funds. The renewal period of a multi-year contract is not on an annual basis (e.g., a 5-year multi-year contract is renewed every 5 years NOT annually). Annual contract - An annually-renewable contract or employment agreement that is in effect for a stated annual period within one year of execution, and may be equal to a period of 365 days, or a standard academic year, or the equivalent. Does not include contracts for partial year periods such as a single semester, quarter, term, block, or course. Less-than-annual-contract - A contract or employment agreement that is in effect for a partial year period of less than 365 days, or less than a standard academic year or the equivalent. Includes contracts for partial year periods such as a single semester, quarter, term, block, or course."
+    },
+    {
+      "record_id": 137673,
+      "variable_name": "OCCUPCAT",
+      "title": "Occupation",
+      "long_description": "Occupation code - This variable identifies postsecondary staff by IPEDS Human Resource occupation categories The IPEDS HR survey component uses the Standard Occupational Classification (SOC) system to assist institutions in classifying employees for IPEDS reporting purposes. The SOC is a system used by Federal statistical agencies to classify workers and jobs into occupational categories for the purpose of collecting, calculating, analyzing, or disseminating data. In 2018, an updated version of the SOC system (http://www.bls.gov/soc/) was released. Consequently, the IPEDS HR survey was revised to incorporate the 2018 SOC information. The new IPEDS occupational categories are effective with 2018-19 Human Resources reporting."
+    }
+  ],
+  "categories": [
+    {
+      "record_id": 149317,
+      "variable_name": "FACSTAT",
+      "code_value": "0",
+      "value_label": "All staff"
+    },
+    {
+      "record_id": 149318,
+      "variable_name": "FACSTAT",
+      "code_value": "10",
+      "value_label": "With faculty status, total"
+    },
+    {
+      "record_id": 149319,
+      "variable_name": "FACSTAT",
+      "code_value": "20",
+      "value_label": "With faculty status, tenured"
+    },
+    {
+      "record_id": 149320,
+      "variable_name": "FACSTAT",
+      "code_value": "30",
+      "value_label": "With faculty status, on tenure track"
+    },
+    {
+      "record_id": 149321,
+      "variable_name": "FACSTAT",
+      "code_value": "40",
+      "value_label": "With faculty status not on tenure track/No tenure system, total"
+    },
+    {
+      "record_id": 149286,
+      "variable_name": "OCCUPCAT",
+      "code_value": "100",
+      "value_label": "All staff"
+    },
+    {
+      "record_id": 149288,
+      "variable_name": "OCCUPCAT",
+      "code_value": "210",
+      "value_label": "Instructional staff, total"
+    },
+    {
+      "record_id": 149294,
+      "variable_name": "OCCUPCAT",
+      "code_value": "220",
+      "value_label": "Research"
+    },
+    {
+      "record_id": 149295,
+      "variable_name": "OCCUPCAT",
+      "code_value": "230",
+      "value_label": "Public service"
+    }
+  ],
+  "salary_scope_evidence": {
+    "table": "SAL2024_IS",
+    "scope": "Full-time nonmedical instructional staff by academic rank. No tenure-status dimension."
+  }
+}

@@ -1,0 +1,11 @@
+✔ new submission follows from old messages; pending and completion keep position at bottom (3.8637ms)
+✔ reading older messages during a query is preserved when answer and late chart arrive (0.9874ms)
+✔ scrollbar reading, return to bottom, menu resizing and formatting do not fight the user (0.915ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 158.3187

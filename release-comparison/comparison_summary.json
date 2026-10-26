@@ -1,0 +1,383 @@
+[
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2016-17_Final",
+    "comparison": "baseline",
+    "counts": {
+      "tables_added": 3,
+      "tables_period_or_wording": 56,
+      "tables_definition_or_structure": 54,
+      "variables_removed": 211,
+      "variables_added": 185,
+      "variables_definition_or_structure": 622,
+      "variables_period_or_wording": 179,
+      "codes_removed": 158,
+      "codes_added": 480,
+      "codes_definition_or_structure": 323,
+      "codes_period_or_wording": 36,
+      "db_column_removed": 211,
+      "db_column_added": 105
+    }
+  },
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2016-17_Final",
+    "comparison": "previous",
+    "counts": {
+      "tables_added": 3,
+      "tables_period_or_wording": 56,
+      "tables_definition_or_structure": 54,
+      "variables_removed": 211,
+      "variables_added": 185,
+      "variables_definition_or_structure": 622,
+      "variables_period_or_wording": 179,
+      "codes_removed": 158,
+      "codes_added": 480,
+      "codes_definition_or_structure": 323,
+      "codes_period_or_wording": 36,
+      "db_column_removed": 211,
+      "db_column_added": 105
+    }
+  },
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2017-18_Final",
+    "comparison": "baseline",
+    "counts": {
+      "tables_added": 2,
+      "tables_period_or_wording": 56,
+      "tables_definition_or_structure": 57,
+      "variables_removed": 235,
+      "variables_added": 260,
+      "variables_definition_or_structure": 629,
+      "variables_period_or_wording": 156,
+      "codes_removed": 257,
+      "codes_added": 343,
+      "codes_definition_or_structure": 330,
+      "codes_period_or_wording": 10,
+      "db_column_removed": 222,
+      "db_column_added": 127,
+      "db_type_changed": 4
+    }
+  },
+  {
+    "from_release": "IPEDS_2016-17_Final",
+    "to_release": "IPEDS_2017-18_Final",
+    "comparison": "previous",
+    "counts": {
+      "tables_removed": 1,
+      "tables_period_or_wording": 75,
+      "tables_definition_or_structure": 39,
+      "variables_removed": 79,
+      "variables_added": 130,
+      "variables_definition_or_structure": 541,
+      "variables_period_or_wording": 175,
+      "codes_removed": 371,
+      "codes_added": 135,
+      "codes_definition_or_structure": 258,
+      "codes_period_or_wording": 38,
+      "db_column_removed": 31,
+      "db_column_added": 130,
+      "db_type_changed": 4
+    }
+  },
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2018-19_Final",
+    "comparison": "baseline",
+    "counts": {
+      "tables_added": 3,
+      "tables_period_or_wording": 55,
+      "tables_definition_or_structure": 58,
+      "variables_removed": 240,
+      "variables_added": 301,
+      "variables_definition_or_structure": 633,
+      "variables_period_or_wording": 167,
+      "codes_removed": 394,
+      "codes_added": 753,
+      "codes_definition_or_structure": 423,
+      "codes_period_or_wording": 10,
+      "db_column_removed": 227,
+      "db_column_added": 139,
+      "db_type_changed": 12
+    }
+  },
+  {
+    "from_release": "IPEDS_2017-18_Final",
+    "to_release": "IPEDS_2018-19_Final",
+    "comparison": "previous",
+    "counts": {
+      "tables_added": 1,
+      "tables_period_or_wording": 73,
+      "tables_definition_or_structure": 36,
+      "variables_removed": 5,
+      "variables_added": 41,
+      "variables_definition_or_structure": 635,
+      "variables_period_or_wording": 226,
+      "codes_removed": 179,
+      "codes_added": 452,
+      "codes_definition_or_structure": 350,
+      "codes_period_or_wording": 4,
+      "db_column_added": 12,
+      "db_type_changed": 8,
+      "db_column_removed": 5
+    }
+  },
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2019-20_Final",
+    "comparison": "baseline",
+    "counts": {
+      "tables_added": 2,
+      "tables_period_or_wording": 56,
+      "tables_definition_or_structure": 58,
+      "variables_removed": 248,
+      "variables_added": 274,
+      "variables_definition_or_structure": 652,
+      "variables_period_or_wording": 164,
+      "codes_removed": 473,
+      "codes_added": 586,
+      "codes_definition_or_structure": 535,
+      "codes_period_or_wording": 10,
+      "db_column_removed": 247,
+      "db_column_added": 141,
+      "db_type_changed": 12
+    }
+  },
+  {
+    "from_release": "IPEDS_2018-19_Final",
+    "to_release": "IPEDS_2019-20_Final",
+    "comparison": "previous",
+    "counts": {
+      "tables_removed": 1,
+      "tables_period_or_wording": 76,
+      "tables_definition_or_structure": 37,
+      "variables_removed": 43,
+      "variables_added": 8,
+      "variables_definition_or_structure": 637,
+      "variables_period_or_wording": 209,
+      "codes_removed": 356,
+      "codes_added": 110,
+      "codes_definition_or_structure": 360,
+      "codes_period_or_wording": 12,
+      "db_column_removed": 26,
+      "db_column_added": 8,
+      "db_type_changed": 7
+    }
+  },
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2020-21_Final",
+    "comparison": "baseline",
+    "counts": {
+      "tables_added": 4,
+      "tables_period_or_wording": 52,
+      "tables_definition_or_structure": 65,
+      "variables_removed": 239,
+      "variables_added": 493,
+      "variables_definition_or_structure": 1189,
+      "variables_period_or_wording": 141,
+      "codes_removed": 1940,
+      "codes_added": 1440,
+      "codes_definition_or_structure": 1546,
+      "codes_period_or_wording": 11,
+      "db_column_removed": 238,
+      "db_column_added": 326,
+      "db_type_changed": 13
+    }
+  },
+  {
+    "from_release": "IPEDS_2019-20_Final",
+    "to_release": "IPEDS_2020-21_Final",
+    "comparison": "previous",
+    "counts": {
+      "tables_added": 2,
+      "tables_period_or_wording": 73,
+      "tables_definition_or_structure": 45,
+      "variables_removed": 3,
+      "variables_added": 231,
+      "variables_definition_or_structure": 1140,
+      "variables_period_or_wording": 192,
+      "codes_removed": 1631,
+      "codes_added": 1018,
+      "codes_definition_or_structure": 1316,
+      "codes_period_or_wording": 14,
+      "db_column_added": 197,
+      "db_type_changed": 2,
+      "db_column_removed": 3
+    }
+  },
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2021-22_Final",
+    "comparison": "baseline",
+    "counts": {
+      "tables_added": 5,
+      "tables_period_or_wording": 52,
+      "tables_definition_or_structure": 65,
+      "variables_removed": 251,
+      "variables_added": 627,
+      "variables_definition_or_structure": 1153,
+      "variables_period_or_wording": 154,
+      "codes_removed": 2036,
+      "codes_added": 1247,
+      "codes_definition_or_structure": 1510,
+      "codes_period_or_wording": 11,
+      "db_column_removed": 238,
+      "db_column_added": 321,
+      "db_type_changed": 12
+    }
+  },
+  {
+    "from_release": "IPEDS_2020-21_Final",
+    "to_release": "IPEDS_2021-22_Final",
+    "comparison": "previous",
+    "counts": {
+      "tables_removed": 1,
+      "tables_added": 2,
+      "tables_period_or_wording": 81,
+      "tables_definition_or_structure": 35,
+      "variables_removed": 52,
+      "variables_added": 174,
+      "variables_definition_or_structure": 619,
+      "variables_period_or_wording": 208,
+      "codes_removed": 627,
+      "codes_added": 338,
+      "codes_definition_or_structure": 193,
+      "codes_period_or_wording": 43,
+      "db_type_changed": 3,
+      "db_column_removed": 11,
+      "db_column_added": 6
+    }
+  },
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2022-23_Final",
+    "comparison": "baseline",
+    "counts": {
+      "tables_added": 6,
+      "tables_period_or_wording": 52,
+      "tables_definition_or_structure": 67,
+      "variables_removed": 242,
+      "variables_added": 742,
+      "variables_definition_or_structure": 1290,
+      "variables_period_or_wording": 146,
+      "codes_removed": 2107,
+      "codes_added": 2755,
+      "codes_definition_or_structure": 1508,
+      "codes_period_or_wording": 11,
+      "db_column_removed": 241,
+      "db_column_added": 400,
+      "db_type_changed": 14
+    }
+  },
+  {
+    "from_release": "IPEDS_2021-22_Final",
+    "to_release": "IPEDS_2022-23_Final",
+    "comparison": "previous",
+    "counts": {
+      "tables_removed": 1,
+      "tables_added": 2,
+      "tables_period_or_wording": 80,
+      "tables_definition_or_structure": 40,
+      "variables_removed": 7,
+      "variables_added": 131,
+      "variables_definition_or_structure": 1116,
+      "variables_period_or_wording": 199,
+      "codes_removed": 319,
+      "codes_added": 1756,
+      "codes_definition_or_structure": 249,
+      "codes_period_or_wording": 11,
+      "db_type_changed": 2,
+      "db_column_added": 82,
+      "db_column_removed": 7
+    }
+  },
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2023-24_Final",
+    "comparison": "baseline",
+    "counts": {
+      "tables_added": 6,
+      "tables_period_or_wording": 49,
+      "tables_definition_or_structure": 70,
+      "variables_removed": 557,
+      "variables_added": 1067,
+      "variables_definition_or_structure": 751,
+      "variables_period_or_wording": 146,
+      "codes_removed": 2023,
+      "codes_added": 2664,
+      "codes_definition_or_structure": 1691,
+      "codes_period_or_wording": 8,
+      "db_column_removed": 242,
+      "db_column_added": 420,
+      "db_type_changed": 46
+    }
+  },
+  {
+    "from_release": "IPEDS_2022-23_Final",
+    "to_release": "IPEDS_2023-24_Final",
+    "comparison": "previous",
+    "counts": {
+      "tables_removed": 1,
+      "tables_added": 1,
+      "tables_period_or_wording": 76,
+      "tables_definition_or_structure": 48,
+      "variables_removed": 367,
+      "variables_added": 377,
+      "variables_definition_or_structure": 586,
+      "variables_period_or_wording": 213,
+      "codes_removed": 405,
+      "codes_added": 398,
+      "codes_definition_or_structure": 317,
+      "codes_period_or_wording": 9,
+      "db_type_changed": 55,
+      "db_column_removed": 7,
+      "db_column_added": 26
+    }
+  },
+  {
+    "from_release": "IPEDS_2015-16_Final",
+    "to_release": "IPEDS_2024-25_Provisional",
+    "comparison": "baseline",
+    "counts": {
+      "tables_removed": 5,
+      "tables_added": 10,
+      "tables_period_or_wording": 51,
+      "tables_definition_or_structure": 61,
+      "variables_removed": 790,
+      "variables_added": 1204,
+      "variables_definition_or_structure": 460,
+      "variables_period_or_wording": 145,
+      "codes_removed": 3126,
+      "codes_added": 2878,
+      "codes_definition_or_structure": 888,
+      "codes_period_or_wording": 8,
+      "db_column_removed": 266,
+      "db_column_added": 402,
+      "db_type_changed": 64
+    }
+  },
+  {
+    "from_release": "IPEDS_2023-24_Final",
+    "to_release": "IPEDS_2024-25_Provisional",
+    "comparison": "previous",
+    "counts": {
+      "tables_removed": 7,
+      "tables_added": 6,
+      "tables_period_or_wording": 79,
+      "tables_definition_or_structure": 33,
+      "variables_removed": 760,
+      "variables_added": 664,
+      "variables_period_or_wording": 212,
+      "variables_definition_or_structure": 131,
+      "codes_removed": 2611,
+      "codes_added": 1722,
+      "codes_definition_or_structure": 20,
+      "codes_period_or_wording": 12,
+      "db_type_changed": 42,
+      "db_column_removed": 47,
+      "db_column_added": 25
+    }
+  }
+]

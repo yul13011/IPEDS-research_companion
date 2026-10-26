@@ -1,0 +1,241 @@
+{
+  "question": "what is Yale College's undergraduate population in the last 10 years.",
+  "pending": {
+    "intent": "institution_confirmation",
+    "message": "Which institution did you mean? Please confirm before I run the analysis.",
+    "institution_confirmation": {
+      "question": "what is Yale College's undergraduate population in the last 10 years.",
+      "unresolved": [
+        {
+          "text": "Yale College",
+          "key": "yale college",
+          "candidates": [
+            382267,
+            130794,
+            152798,
+            199607,
+            226204,
+            126119,
+            160995,
+            168591,
+            220598,
+            226879,
+            410520,
+            123509
+          ]
+        }
+      ],
+      "choices": {}
+    },
+    "model_usage": {
+      "input_tokens": 553,
+      "output_tokens": 58,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.3012627999996766,
+      "estimated_api_usd": 0.001686,
+      "model": "claude-sonnet-5-5",
+      "stage": "institution mention extraction"
+    },
+    "latency": {
+      "answer_ready_seconds": 8.96716210001614
+    }
+  },
+  "confirmed": {
+    "unitids": [
+      130794
+    ],
+    "original_question": "what is Yale College's undergraduate population in the last 10 years.",
+    "original_mentions": [
+      "Yale College"
+    ],
+    "confirmed_choices": {
+      "yale college": 130794
+    },
+    "labels": [
+      "Yale University \u00b7 New Haven, CT \u00b7 UNITID 130794"
+    ]
+  },
+  "rows": [
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2015,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2015",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 5532.0,
+      "release": "IPEDS_2015-16_Final",
+      "provisional": false,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2016,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2016",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 5472.0,
+      "release": "IPEDS_2016-17_Final",
+      "provisional": false,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2017,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2017",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 5746.0,
+      "release": "IPEDS_2017-18_Final",
+      "provisional": false,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2018,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2018",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 5964.0,
+      "release": "IPEDS_2018-19_Final",
+      "provisional": false,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2019,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2019",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 6092.0,
+      "release": "IPEDS_2019-20_Final",
+      "provisional": false,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2020,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2020",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 4703.0,
+      "release": "IPEDS_2020-21_Final",
+      "provisional": false,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2021,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2021",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 6536.0,
+      "release": "IPEDS_2021-22_Final",
+      "provisional": false,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2022,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2022",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 6645.0,
+      "release": "IPEDS_2022-23_Final",
+      "provisional": false,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2023,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2023",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 6818.0,
+      "release": "IPEDS_2023-24_Final",
+      "provisional": false,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    },
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "fall 2024",
+      "metric": "undergraduate_enrollment",
+      "measure": "Undergraduate enrollment",
+      "unit": "students",
+      "value": 6814.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "comparable scope"
+    }
+  ],
+  "latency": {
+    "reviewed_or_discovery_pipeline_seconds": 7.797482100024354,
+    "answer_ready_seconds": 9.501418099971488,
+    "live_model_calls": 2,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+    "conversation_resolution_seconds": 0,
+    "institution_resolution_seconds": 1.7039209999493323
+  },
+  "passed": true
+}

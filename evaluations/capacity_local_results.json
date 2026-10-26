@@ -1,0 +1,298 @@
+{
+  "platform": "win32",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "logical_cpus": 12,
+  "scope": "Offline Windows single-process probe; query workers approximate simultaneous backend work, not browser sessions. CPU time includes monitor thread. No model calls.",
+  "stages": [
+    {
+      "stage": "imports",
+      "status": "ok",
+      "wall_seconds": 2.3153,
+      "cpu_seconds": 2.2344,
+      "before": {
+        "resident_MiB": 17.79,
+        "private_commit_MiB": 10.18,
+        "process_peak_resident_MiB": 17.79
+      },
+      "after": {
+        "resident_MiB": 87.96,
+        "private_commit_MiB": 414.21,
+        "process_peak_resident_MiB": 92.61
+      },
+      "stage_peak_resident_MiB": 87.96,
+      "stage_peak_private_commit_MiB": 414.23,
+      "summary": {
+        "imports": "Streamlit/pandas/Altair/export/query modules"
+      }
+    },
+    {
+      "stage": "metadata_search",
+      "status": "ok",
+      "wall_seconds": 0.1164,
+      "cpu_seconds": 0.0938,
+      "before": {
+        "resident_MiB": 87.95,
+        "private_commit_MiB": 414.18,
+        "process_peak_resident_MiB": 92.61
+      },
+      "after": {
+        "resident_MiB": 90.0,
+        "private_commit_MiB": 415.47,
+        "process_peak_resident_MiB": 92.61
+      },
+      "stage_peak_resident_MiB": 90.0,
+      "stage_peak_private_commit_MiB": 415.48
+    },
+    {
+      "stage": "single_institution",
+      "status": "ok",
+      "wall_seconds": 0.0658,
+      "cpu_seconds": 0.0625,
+      "before": {
+        "resident_MiB": 89.99,
+        "private_commit_MiB": 415.44,
+        "process_peak_resident_MiB": 92.61
+      },
+      "after": {
+        "resident_MiB": 88.23,
+        "private_commit_MiB": 413.54,
+        "process_peak_resident_MiB": 93.2
+      },
+      "stage_peak_resident_MiB": 89.99,
+      "stage_peak_private_commit_MiB": 415.44
+    },
+    {
+      "stage": "eight_institutions_ten_years",
+      "status": "ok",
+      "wall_seconds": 0.1329,
+      "cpu_seconds": 0.125,
+      "before": {
+        "resident_MiB": 88.21,
+        "private_commit_MiB": 413.51,
+        "process_peak_resident_MiB": 93.2
+      },
+      "after": {
+        "resident_MiB": 88.52,
+        "private_commit_MiB": 414.4,
+        "process_peak_resident_MiB": 93.2
+      },
+      "stage_peak_resident_MiB": 90.59,
+      "stage_peak_private_commit_MiB": 416.99
+    },
+    {
+      "stage": "catalog_relational_query",
+      "status": "ok",
+      "wall_seconds": 0.3667,
+      "cpu_seconds": 0.3594,
+      "before": {
+        "resident_MiB": 88.5,
+        "private_commit_MiB": 414.37,
+        "process_peak_resident_MiB": 93.2
+      },
+      "after": {
+        "resident_MiB": 95.5,
+        "private_commit_MiB": 422.12,
+        "process_peak_resident_MiB": 95.51
+      },
+      "stage_peak_resident_MiB": 95.51,
+      "stage_peak_private_commit_MiB": 422.13
+    },
+    {
+      "stage": "csv_excel_audit_exports",
+      "status": "ok",
+      "wall_seconds": 0.5985,
+      "cpu_seconds": 0.5156,
+      "before": {
+        "resident_MiB": 95.49,
+        "private_commit_MiB": 422.09,
+        "process_peak_resident_MiB": 95.51
+      },
+      "after": {
+        "resident_MiB": 105.39,
+        "private_commit_MiB": 436.87,
+        "process_peak_resident_MiB": 109.82
+      },
+      "stage_peak_resident_MiB": 105.86,
+      "stage_peak_private_commit_MiB": 437.15,
+      "summary": {
+        "csv": 74180,
+        "excel": 23771,
+        "audit": 1191883
+      }
+    },
+    {
+      "stage": "national_distance_education",
+      "status": "ok",
+      "wall_seconds": 2.0711,
+      "cpu_seconds": 1.5312,
+      "before": {
+        "resident_MiB": 105.38,
+        "private_commit_MiB": 436.84,
+        "process_peak_resident_MiB": 109.82
+      },
+      "after": {
+        "resident_MiB": 124.06,
+        "private_commit_MiB": 453.8,
+        "process_peak_resident_MiB": 127.9
+      },
+      "stage_peak_resident_MiB": 127.52,
+      "stage_peak_private_commit_MiB": 456.61
+    },
+    {
+      "stage": "national_exports",
+      "status": "ok",
+      "wall_seconds": 0.5521,
+      "cpu_seconds": 0.3125,
+      "before": {
+        "resident_MiB": 124.05,
+        "private_commit_MiB": 453.77,
+        "process_peak_resident_MiB": 127.9
+      },
+      "after": {
+        "resident_MiB": 127.39,
+        "private_commit_MiB": 456.85,
+        "process_peak_resident_MiB": 128.14
+      },
+      "stage_peak_resident_MiB": 127.39,
+      "stage_peak_private_commit_MiB": 456.86,
+      "summary": {
+        "csv": 6120,
+        "excel": 79177,
+        "audit": 770036
+      }
+    },
+    {
+      "stage": "UI_session_1",
+      "status": "ok",
+      "wall_seconds": 7.8432,
+      "cpu_seconds": 6.1562,
+      "before": {
+        "resident_MiB": 127.38,
+        "private_commit_MiB": 456.82,
+        "process_peak_resident_MiB": 128.14
+      },
+      "after": {
+        "resident_MiB": 177.52,
+        "private_commit_MiB": 510.31,
+        "process_peak_resident_MiB": 180.84
+      },
+      "stage_peak_resident_MiB": 177.52,
+      "stage_peak_private_commit_MiB": 510.31,
+      "summary": {
+        "retained_UI_sessions": 1
+      }
+    },
+    {
+      "stage": "UI_session_2",
+      "status": "ok",
+      "wall_seconds": 1.9381,
+      "cpu_seconds": 3.25,
+      "before": {
+        "resident_MiB": 177.5,
+        "private_commit_MiB": 510.28,
+        "process_peak_resident_MiB": 180.84
+      },
+      "after": {
+        "resident_MiB": 181.07,
+        "private_commit_MiB": 514.16,
+        "process_peak_resident_MiB": 183.43
+      },
+      "stage_peak_resident_MiB": 181.13,
+      "stage_peak_private_commit_MiB": 514.28,
+      "summary": {
+        "retained_UI_sessions": 2
+      }
+    },
+    {
+      "stage": "one_active_backend",
+      "status": "ok",
+      "wall_seconds": 0.4262,
+      "cpu_seconds": 0.375,
+      "before": {
+        "resident_MiB": 181.05,
+        "private_commit_MiB": 514.13,
+        "process_peak_resident_MiB": 183.43
+      },
+      "after": {
+        "resident_MiB": 182.99,
+        "private_commit_MiB": 515.46,
+        "process_peak_resident_MiB": 186.43
+      },
+      "stage_peak_resident_MiB": 183.62,
+      "stage_peak_private_commit_MiB": 516.58
+    },
+    {
+      "stage": "two_active_backends",
+      "status": "ok",
+      "wall_seconds": 0.7377,
+      "cpu_seconds": 1.0,
+      "before": {
+        "resident_MiB": 182.97,
+        "private_commit_MiB": 515.43,
+        "process_peak_resident_MiB": 186.43
+      },
+      "after": {
+        "resident_MiB": 186.03,
+        "private_commit_MiB": 522.89,
+        "process_peak_resident_MiB": 190.55
+      },
+      "stage_peak_resident_MiB": 186.89,
+      "stage_peak_private_commit_MiB": 524.52,
+      "summary": {
+        "answers": 2,
+        "rows": [
+          80,
+          80
+        ]
+      }
+    },
+    {
+      "stage": "two_active_national_backends",
+      "status": "ok",
+      "wall_seconds": 2.4133,
+      "cpu_seconds": 3.1406,
+      "before": {
+        "resident_MiB": 180.27,
+        "private_commit_MiB": 517.08,
+        "process_peak_resident_MiB": 190.55
+      },
+      "after": {
+        "resident_MiB": 197.01,
+        "private_commit_MiB": 532.0,
+        "process_peak_resident_MiB": 201.93
+      },
+      "stage_peak_resident_MiB": 201.93,
+      "stage_peak_private_commit_MiB": 539.05,
+      "summary": {
+        "answers": 2,
+        "rows": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "stage": "two_users_30_answers_each",
+      "status": "ok",
+      "wall_seconds": 0.6406,
+      "cpu_seconds": 0.6094,
+      "before": {
+        "resident_MiB": 196.7,
+        "private_commit_MiB": 523.38,
+        "process_peak_resident_MiB": 201.93
+      },
+      "after": {
+        "resident_MiB": 199.22,
+        "private_commit_MiB": 525.42,
+        "process_peak_resident_MiB": 201.93
+      },
+      "stage_peak_resident_MiB": 199.22,
+      "stage_peak_private_commit_MiB": 525.44,
+      "summary": {
+        "simulated_users": 2,
+        "independent_retained_answers": 60,
+        "rows_per_answer": 80
+      }
+    }
+  ]
+}

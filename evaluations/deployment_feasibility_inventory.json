@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-26",
+  "runtime_databases": [
+    {
+      "path": "data/annual/IPEDS_2015-16_Final/IPEDS201516.sqlite",
+      "bytes": 243814400
+    },
+    {
+      "path": "data/annual/IPEDS_2016-17_Final/IPEDS201617.sqlite",
+      "bytes": 252669952
+    },
+    {
+      "path": "data/annual/IPEDS_2017-18_Final/IPEDS201718.sqlite",
+      "bytes": 246239232
+    },
+    {
+      "path": "data/annual/IPEDS_2018-19_Final/IPEDS201819.sqlite",
+      "bytes": 246308864
+    },
+    {
+      "path": "data/annual/IPEDS_2019-20_Final/IPEDS201920.sqlite",
+      "bytes": 232820736
+    },
+    {
+      "path": "data/annual/IPEDS_2020-21_Final/IPEDS202021.sqlite",
+      "bytes": 259145728
+    },
+    {
+      "path": "data/annual/IPEDS_2021-22_Final/IPEDS202122.sqlite",
+      "bytes": 250761216
+    },
+    {
+      "path": "data/annual/IPEDS_2022-23_Final/IPEDS202223.sqlite",
+      "bytes": 266817536
+    },
+    {
+      "path": "data/annual/IPEDS_2023-24_Final/IPEDS202324.sqlite",
+      "bytes": 256307200
+    },
+    {
+      "path": "data/annual/IPEDS_2024-25_Provisional/IPEDS202425.sqlite",
+      "bytes": 272990208
+    },
+    {
+      "path": "data/metadata_catalog.sqlite",
+      "bytes": 460443648
+    },
+    {
+      "path": "data/analysis_catalog.sqlite",
+      "bytes": 22380544
+    },
+    {
+      "path": "data/unit_catalog.sqlite",
+      "bytes": 46436352
+    }
+  ],
+  "database_count": 13,
+  "total_bytes": 3057135616,
+  "total_GB": 3.057135616,
+  "total_GiB": 2.847179412841797,
+  "notes": [
+    "Static inspection found field_semantics.sqlite referenced only by the preparation builder, not the production runtime. Exclude it provisionally, confirm in clean-package smoke tests.",
+    "Runtime guide is generated from metadata and module definitions; portable Markdown/JSON may be shipped as optional small documentation assets.",
+    "No files uploaded; no hosting accounts modified."
+  ]
+}

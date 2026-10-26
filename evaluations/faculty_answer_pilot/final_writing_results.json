@@ -1,0 +1,313 @@
+[
+  {
+    "id": "yale",
+    "writing": {
+      "lead_scope_id": "all_staff_faculty_status",
+      "explanation": "The first group counts everyone designated as faculty, whatever their job category, including research and public service roles. The second counts only faculty whose job is instructional, so it is a narrower, overlapping group.",
+      "evidence_ids": [
+        149286,
+        149288,
+        149318
+      ]
+    },
+    "usage": {
+      "input_tokens": 6528,
+      "output_tokens": 183,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.5231042999657802,
+      "estimated_api_usd": 0.014886,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Yale University reported **5,735 staff with faculty status in Fall 2024**.\n\n| Scope | Full-time | Part-time | Total |\n|---|---:|---:|---:|\n| All staff with faculty status | 4,688 | 1,047 | 5,735 |\n| Instructional staff with faculty status | 2,995 | 805 | 3,800 |\n\nThe first group counts everyone designated as faculty, whatever their job category, including research and public service roles. The second counts only faculty whose job is instructional, so it is a narrower, overlapping group.\n\nCounts include medical-school staff where reported. Figures refer to Yale University as the reporting institution, not a separately identified college or school.\n\nThe rows overlap and must not be added together.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release.",
+    "words": 130,
+    "source_values_reused_unchanged": true,
+    "status": "accepted"
+  },
+  {
+    "id": "yale_paraphrase",
+    "writing": {
+      "lead_scope_id": "all_staff_faculty_status",
+      "explanation": "The first group counts everyone designated as faculty, whatever their main job. The second is narrower, covering only faculty whose work is classed as instruction, so it leaves out faculty in other roles such as research or public service.",
+      "evidence_ids": [
+        149286,
+        149288,
+        149318
+      ]
+    },
+    "usage": {
+      "input_tokens": 6579,
+      "output_tokens": 189,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.523968900030013,
+      "estimated_api_usd": 0.015048,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Yale University reported **5,735 staff with faculty status in Fall 2024**.\n\n| Scope | Full-time | Part-time | Total |\n|---|---:|---:|---:|\n| All staff with faculty status | 4,688 | 1,047 | 5,735 |\n| Instructional staff with faculty status | 2,995 | 805 | 3,800 |\n\nThe first group counts everyone designated as faculty, whatever their main job. The second is narrower, covering only faculty whose work is classed as instruction, so it leaves out faculty in other roles such as research or public service.\n\nCounts include medical-school staff where reported. Figures refer to Yale University as the reporting institution, not a separately identified college or school.\n\nThe rows overlap and must not be added together.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release.",
+    "words": 135,
+    "source_values_reused_unchanged": true,
+    "status": "accepted"
+  },
+  {
+    "id": "harvard",
+    "error": "Refined explanation exceeds two sentences or 45 words",
+    "status": "fallback",
+    "rejected_writing": [
+      {
+        "lead_scope_id": "all_staff_faculty_status",
+        "explanation": "The first counts everyone with faculty status across all job categories. The second counts only those with faculty status who work in instructional roles. The definitions differ even though the reported counts match, and they overlap rather than add together.",
+        "evidence_ids": [
+          149286,
+          149288,
+          149318
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 6535,
+      "output_tokens": 187,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 4.127045699977316,
+      "estimated_api_usd": 0.01494,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Harvard University reported **2,445 staff with faculty status in Fall 2024**.\n\n| Scope | Full-time | Part-time | Total |\n|---|---:|---:|---:|\n| All staff with faculty status | 2,093 | 352 | 2,445 |\n| Instructional staff with faculty status | 2,093 | 352 | 2,445 |\n\nThe rows describe the source populations named in the table. Matching counts do not make different definitions interchangeable.\n\nCounts include medical-school staff where reported. Figures refer to Harvard University as the reporting institution, not a separately identified college or school.\n\nThe rows overlap and must not be added together.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release."
+  },
+  {
+    "id": "smith",
+    "writing": {
+      "lead_scope_id": "all_staff_faculty_status",
+      "explanation": "The first view counts everyone with faculty status across all job categories. The second narrows that group to instructional staff, so it is a related, overlapping subset rather than a separate group.",
+      "evidence_ids": [
+        149286,
+        149288,
+        149318
+      ]
+    },
+    "usage": {
+      "input_tokens": 6511,
+      "output_tokens": 176,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.2472574000130408,
+      "estimated_api_usd": 0.014782,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Smith College reported **422 staff with faculty status in Fall 2024**.\n\n| Scope | Full-time | Part-time | Total |\n|---|---:|---:|---:|\n| All staff with faculty status | 367 | 55 | 422 |\n| Instructional staff with faculty status | 351 | 55 | 406 |\n\nThe first view counts everyone with faculty status across all job categories. The second narrows that group to instructional staff, so it is a related, overlapping subset rather than a separate group.\n\nCounts include medical-school staff where reported. Figures refer to Smith College as the reporting institution, not a separately identified college or school.\n\nThe rows overlap and must not be added together.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release.",
+    "words": 128,
+    "source_values_reused_unchanged": true,
+    "status": "accepted"
+  },
+  {
+    "id": "southern",
+    "writing": {
+      "lead_scope_id": "all_staff_faculty_status",
+      "explanation": "The first group counts everyone with faculty status in any job category. The second counts only those with faculty status whose work is instruction, so it is a narrower, overlapping group within the first.",
+      "evidence_ids": [
+        149286,
+        149288,
+        149318
+      ]
+    },
+    "usage": {
+      "input_tokens": 6555,
+      "output_tokens": 177,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.2292747999890707,
+      "estimated_api_usd": 0.01488,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Southern Connecticut State University reported **1,164 staff with faculty status in Fall 2024**.\n\n| Scope | Full-time | Part-time | Total |\n|---|---:|---:|---:|\n| All staff with faculty status | 516 | 648 | 1,164 |\n| Instructional staff with faculty status | 404 | 648 | 1,052 |\n\nThe first group counts everyone with faculty status in any job category. The second counts only those with faculty status whose work is instruction, so it is a narrower, overlapping group within the first.\n\nCounts include medical-school staff where reported. Figures refer to Southern Connecticut State University as the reporting institution, not a separately identified college or school.\n\nThe rows overlap and must not be added together.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release.",
+    "words": 134,
+    "source_values_reused_unchanged": true,
+    "status": "accepted"
+  },
+  {
+    "id": "historical",
+    "writing": {
+      "lead_scope_id": "all_occupations_faculty_status",
+      "explanation": "The first group counts everyone with faculty status across all job categories. The second is narrower, counting only those with faculty status whose job category is instruction, so it overlaps with the first and is not additional.",
+      "evidence_ids": [
+        89010,
+        89012,
+        89042
+      ]
+    },
+    "usage": {
+      "input_tokens": 6516,
+      "output_tokens": 183,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.180917199992109,
+      "estimated_api_usd": 0.014862,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Yale University reported **4,937 staff with faculty status in Fall 2020**.\n\n| Scope | Full-time | Part-time | Total |\n|---|---:|---:|---:|\n| All staff with faculty status | 3,983 | 954 | 4,937 |\n| Instructional staff with faculty status | 2,715 | 745 | 3,460 |\n\nThe first group counts everyone with faculty status across all job categories. The second is narrower, counting only those with faculty status whose job category is instruction, so it overlaps with the first and is not additional.\n\nCounts include medical-school staff where reported. Figures refer to Yale University as the reporting institution, not a separately identified college or school.\n\nThe rows overlap and must not be added together.\n\nSource: local IPEDS Human Resources, Fall 2020, EAP2020; November 1 snapshot; final release.",
+    "words": 133,
+    "source_values_reused_unchanged": true,
+    "status": "accepted"
+  },
+  {
+    "id": "fulltime_nonmedical",
+    "writing": {
+      "lead_scope_id": "all_staff_faculty_status",
+      "explanation": "The first group counts everyone with faculty status across all job categories, including research and public service roles. The second counts only those with faculty status whose work is classified as instructional, so it is a narrower, overlapping group.",
+      "evidence_ids": [
+        149286,
+        149288,
+        149318
+      ]
+    },
+    "usage": {
+      "input_tokens": 6485,
+      "output_tokens": 186,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.164412300044205,
+      "estimated_api_usd": 0.01483,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Yale University reported **1,731 full-time staff with faculty status in Fall 2024**.\n\n| Scope | Full-time |\n|---|---:|\n| All staff with faculty status | 1,731 |\n| Instructional staff with faculty status | 1,475 |\n\nThe first group counts everyone with faculty status across all job categories, including research and public service roles. The second counts only those with faculty status whose work is classified as instructional, so it is a narrower, overlapping group.\n\nCounts exclude medical-school staff. Figures refer to Yale University as the reporting institution, not a separately identified college or school.\n\nThe rows overlap and must not be added together.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release.",
+    "words": 122,
+    "source_values_reused_unchanged": true,
+    "status": "accepted"
+  },
+  {
+    "id": "parttime",
+    "writing": {
+      "lead_scope_id": "all_faculty_status",
+      "explanation": "The first group covers everyone with faculty status in any job category. The second is narrower, counting only those whose work is classed as instructional, so it sits inside the first and the counts differ.",
+      "evidence_ids": [
+        149286,
+        149288,
+        149318
+      ]
+    },
+    "usage": {
+      "input_tokens": 6430,
+      "output_tokens": 175,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.2305305999470875,
+      "estimated_api_usd": 0.01461,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Yale University reported **1,047 part-time staff with faculty status in Fall 2024**.\n\n| Scope | Part-time |\n|---|---:|\n| All staff with faculty status | 1,047 |\n| Instructional staff with faculty status | 805 |\n\nThe first group covers everyone with faculty status in any job category. The second is narrower, counting only those whose work is classed as instructional, so it sits inside the first and the counts differ.\n\nCounts include medical-school staff where reported. Figures refer to Yale University as the reporting institution, not a separately identified college or school.\n\nThe rows overlap and must not be added together.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release.",
+    "words": 120,
+    "source_values_reused_unchanged": true,
+    "status": "accepted"
+  },
+  {
+    "id": "explicit_all",
+    "writing": {
+      "lead_scope_id": "all_occupations_faculty_status",
+      "explanation": "This group counts every employee the university identifies as having faculty status, across all occupation categories, rather than only instructional staff or the wider workforce that includes people without faculty status.",
+      "evidence_ids": [
+        149286,
+        149318
+      ]
+    },
+    "usage": {
+      "input_tokens": 6371,
+      "output_tokens": 173,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.8735314000514336,
+      "estimated_api_usd": 0.014472,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Yale University reported **5,735 staff with faculty status in Fall 2024**.\n\n| Scope | Full-time | Part-time | Total |\n|---|---:|---:|---:|\n| All staff with faculty status | 4,688 | 1,047 | 5,735 |\n\nThis group counts every employee the university identifies as having faculty status, across all occupation categories, rather than only instructional staff or the wider workforce that includes people without faculty status.\n\nCounts include medical-school staff where reported. Figures refer to Yale University as the reporting institution, not a separately identified college or school.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release.",
+    "words": 105,
+    "source_values_reused_unchanged": true,
+    "status": "accepted"
+  },
+  {
+    "id": "instructional_staff",
+    "error": "Refined explanation exceeds two sentences or 45 words",
+    "status": "fallback",
+    "rejected_writing": [
+      {
+        "lead_scope_id": "instructional_all",
+        "explanation": "The first count covers all instructional staff regardless of faculty standing. The second covers only those instructional staff who hold faculty status. The counts match, but the definitions still differ, and the second group is a subset of the first.",
+        "evidence_ids": [
+          149288,
+          149317,
+          149318
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 6534,
+      "output_tokens": 184,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.336508899985347,
+      "estimated_api_usd": 0.014908,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Yale University reported **3,800 instructional staff in Fall 2024**.\n\n| Scope | Full-time | Part-time | Total |\n|---|---:|---:|---:|\n| Instructional staff | 2,995 | 805 | 3,800 |\n| Instructional staff with faculty status | 2,995 | 805 | 3,800 |\n\nThe rows describe the source populations named in the table. Matching counts do not make different definitions interchangeable.\n\nCounts include medical-school staff where reported. Figures refer to Yale University as the reporting institution, not a separately identified college or school.\n\nThe rows overlap and must not be added together.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release."
+  },
+  {
+    "id": "instructional_faculty",
+    "writing": {
+      "lead_scope_id": "instructional_with_faculty_status",
+      "explanation": "This counts instructional staff who also hold faculty status: people primarily teaching, or teaching combined with research or public service. It does not include all staff with faculty status in other occupations, or instructional staff without faculty status.",
+      "evidence_ids": [
+        149288,
+        149318,
+        137802
+      ]
+    },
+    "usage": {
+      "input_tokens": 6369,
+      "output_tokens": 168,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.222299600020051,
+      "estimated_api_usd": 0.014418,
+      "model": "claude-sonnet-5-5"
+    },
+    "answer": "In our local IPEDS data, Yale University reported **3,800 instructional staff with faculty status in Fall 2024**.\n\n| Scope | Full-time | Part-time | Total |\n|---|---:|---:|---:|\n| Instructional staff with faculty status | 2,995 | 805 | 3,800 |\n\nThis counts instructional staff who also hold faculty status: people primarily teaching, or teaching combined with research or public service. It does not include all staff with faculty status in other occupations, or instructional staff without faculty status.\n\nCounts include medical-school staff where reported. Figures refer to Yale University as the reporting institution, not a separately identified college or school.\n\nSource: local IPEDS Human Resources, Fall 2024, EAP2024; November 1 snapshot; provisional release.",
+    "words": 104,
+    "source_values_reused_unchanged": true,
+    "status": "accepted_after_source_definition_repair",
+    "initial_semantic_failure": {
+      "lead_scope_id": "instructional_with_faculty_status",
+      "explanation": "This population counts only staff whose main job is teaching and who the university formally designates as faculty. It leaves out other employees and instructional staff without faculty status.",
+      "evidence_ids": [
+        149288,
+        149318
+      ]
+    },
+    "semantic_repair_usage": {
+      "input_tokens": 6915,
+      "output_tokens": 191,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 3.870517000032123,
+      "estimated_api_usd": 0.01574,
+      "model": "claude-sonnet-5-5"
+    },
+    "additional_source_evidence": {
+      "record_id": 137802,
+      "variable_name": "SISTOTL",
+      "title": "All ranks",
+      "long_description": "Instructional Staff is an occupational category that is comprised of staff who are either: 1) Primarily Instruction or 2) Instruction combined with research and/or public service. The intent of the Instructional Staff category is to include all individuals whose primary occupation includes instruction at the institution. Instruction (only) - Persons whose specific assignments customarily are made for the purpose of providing instruction or teaching. Regardless of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction or teaching. Instruction combined with research and/or public service (IRPS) - Persons for whom it is not possible to differentiate between instruction or teaching, research, and public service because each of these functions is an integral component of his/her regular assignment. Regardless, of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction, research, and/or public service. Full-time staff (employees) As defined by the institution. The type of appointment at the snapshot date determines whether an employee is full-time or part-time. The employee's term of contract is not considered in making the determination of full- or part-time. A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer."
+    }
+  }
+]

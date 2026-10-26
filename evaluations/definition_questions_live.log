@@ -1,0 +1,8 @@
+{"question": "What is the definition of instructional staff?", "checks": {"definition_route": true, "no_statistics": true, "exact_source_passages": true, "definition_found": true}, "passed": true, "wall_seconds": 19.051848600036465}
+{"question": "What does UNITID mean?", "checks": {"definition_route": true, "no_statistics": true, "exact_source_passages": true, "definition_found": true}, "passed": true, "wall_seconds": 4.192570999963209}
+{"question": "Define graduation rate", "checks": {"definition_route": true, "no_statistics": true, "exact_source_passages": true, "definition_found": true}, "passed": true, "wall_seconds": 3.6521329999668524}
+{"question": "How is full-time undergraduate enrollment defined?", "checks": {"definition_route": true, "no_statistics": true, "exact_source_passages": true, "definition_found": true}, "passed": true, "wall_seconds": 3.939700699993409}
+{"question": "What is faculty?", "checks": {"definition_route": true, "no_statistics": true, "exact_source_passages": true, "definition_found": true}, "passed": true, "wall_seconds": 4.600932799978182}
+{"question": "What does SAL2023_IS.SAOUTLT mean?", "checks": {"definition_route": true, "no_statistics": true, "exact_source_passages": true, "definition_found": true}, "passed": true, "wall_seconds": 2.481575799989514}
+{"question": "What is admission rate?", "checks": {"definition_route": true, "no_statistics": true, "exact_source_passages": true, "definition_found": true}, "passed": true, "wall_seconds": 2.778152999933809}
+{"question": "Define quantum banana index", "checks": {"definition_route": true, "no_statistics": true, "exact_source_passages": true, "bounded_unknown": true}, "passed": true, "wall_seconds": 0.0246286999899894}

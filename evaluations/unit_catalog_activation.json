@@ -1,0 +1,17 @@
+{
+  "status": "active",
+  "rule_version": 2,
+  "catalog": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\unit_catalog.sqlite",
+  "sha256": "50a1962d1ef2c055ea5967d8f02c43e29eaa74bab33a78e2015a8dafcaf6f0ce",
+  "fields": 23990,
+  "unresolved": 2484,
+  "cross_year_flags": 5,
+  "final_tests": 66,
+  "final_test_seconds": 148.025,
+  "additional_ui_tests": 1,
+  "additional_ui_seconds": 9.175,
+  "app_pid": 186012,
+  "port": 8516,
+  "source_data_modified": false,
+  "new_model_calls_for_unit_repair": 0
+}

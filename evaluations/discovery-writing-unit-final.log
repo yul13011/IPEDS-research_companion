@@ -1,0 +1,16 @@
+test_all_routes_forward_writer_settings_and_skip_analytical_planning (prototype.tests.test_discovery_narrative.NarrativeTests.test_all_routes_forward_writer_settings_and_skip_analytical_planning) ... ok
+test_chat_displays_rewrite_with_detailed_coverage_and_audit (prototype.tests.test_discovery_narrative.NarrativeTests.test_chat_displays_rewrite_with_detailed_coverage_and_audit) ... 2026-10-20 23:33:55.274 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 23:33:57.639 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_invalid_or_unavailable_writer_falls_back_and_preserves_billed_usage (prototype.tests.test_discovery_narrative.NarrativeTests.test_invalid_or_unavailable_writer_falls_back_and_preserves_billed_usage) ... ok
+test_material_scope_and_different_concepts_cannot_be_dropped_or_merged (prototype.tests.test_discovery_narrative.NarrativeTests.test_material_scope_and_different_concepts_cannot_be_dropped_or_merged) ... ok
+test_offline_no_match_and_missing_key_make_no_api_calls (prototype.tests.test_discovery_narrative.NarrativeTests.test_offline_no_match_and_missing_key_make_no_api_calls) ... ok
+test_package_has_full_source_definitions_and_required_qualifications (prototype.tests.test_discovery_narrative.NarrativeTests.test_package_has_full_source_definitions_and_required_qualifications) ... ok
+test_reject_bad_references_quotes_numbers_scope_and_unreadable_drafts (prototype.tests.test_discovery_narrative.NarrativeTests.test_reject_bad_references_quotes_numbers_scope_and_unreadable_drafts) ... ok
+test_release_year_qualification_is_preserved (prototype.tests.test_discovery_narrative.NarrativeTests.test_release_year_qualification_is_preserved) ... ok
+test_validated_rewrite_preserves_qualifications_evidence_and_cost (prototype.tests.test_discovery_narrative.NarrativeTests.test_validated_rewrite_preserves_qualifications_evidence_and_cost) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 10.499s
+
+OK

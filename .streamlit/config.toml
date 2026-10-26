@@ -1,0 +1,12 @@
+[theme]
+primaryColor = "#196F66"
+backgroundColor = "#F8F7F3"
+secondaryBackgroundColor = "#EDF3F0"
+textColor = "#183344"
+font = "sans serif"
+
+[global]
+developmentMode = false
+
+[logger]
+level = "warning"

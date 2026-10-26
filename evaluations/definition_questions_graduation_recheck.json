@@ -1,0 +1,95 @@
+{
+  "model": "claude-sonnet-5-5",
+  "cases": [
+    {
+      "question": "Define graduation rate",
+      "answer": {
+        "intent": "definition",
+        "mode": "source definition",
+        "message": "For **graduation rate**, the supplied codebook gives these source passages:\n\n**Graduation rate, total cohort** (2024-25 \u00b7 Provisional \u00b7 DRVGR2024 \u00b7 GRRTTOT)\n\n> Graduation rate of first-time, full-time degree or certificate-seeking students - 2018 cohort (4-year institutions) and 2021 cohort (less-than-4-year institutions). The graduation rate is the rate required for disclosure and/or reporting purposes under Student Right-to-Know. This rate is calculated as the total number of completers within 150% of normal time divided by the revised cohort minus any allowable exclusions.\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+        "evidence": [
+          {
+            "record_id": 136963,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "DRVGR2024",
+            "variable_name": "GRRTTOT",
+            "title": "Graduation rate, total cohort",
+            "definition": "Graduation rate of first-time, full-time degree or certificate-seeking students - 2018 cohort (4-year institutions) and 2021 cohort (less-than-4-year institutions). The graduation rate is the rate required for disclosure and/or reporting purposes under Student Right-to-Know. This rate is calculated as the total number of completers within 150% of normal time divided by the revised cohort minus any allowable exclusions. For 4-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=2 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=3. GRTYPE=2 and 3 include both the bachelor's or equivalent degree/certificate-seeking subcohort and the other degree/certificate-seeking subcohort (Table gr2024). For 2-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=29 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=30 (Table gr2024). For less-than-2-year institutions the adjusted cohort defined by the variable LINE_50 and the total completers within 150% of normal time is LINE_11 (Table gr2024_L2) Normal time to completion - The amount of time necessary for a student to complete all requirements for a degree or certificate according to the institution's catalog. This is typically 4 years (8 semesters or trimesters, or 12 quarters, excluding summer terms) for a bachelor's degree in a standard term-based institution Allowable exclusions - Those students who may be removed (deleted) from the GRS cohort according to the Student Right-to-Know legislation. These include students who died or were totally and permanently disabled; those who left school to serve in the armed forces; those who left to serve with a foreign aid service of the federal government, such as the Peace Corps; and those who left to serve on official church mission.",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "sheet_name": "varTable24",
+            "source_row": 1092,
+            "excerpt": "Graduation rate of first-time, full-time degree or certificate-seeking students - 2018 cohort (4-year institutions) and 2021 cohort (less-than-4-year institutions). The graduation rate is the rate required for disclosure and/or reporting purposes under Student Right-to-Know. This rate is calculated as the total number of completers within 150% of normal time divided by the revised cohort minus any allowable exclusions.",
+            "glossary_excerpt": null,
+            "direct_match": true,
+            "score": 559.8144,
+            "physical_column_present": true,
+            "issues": []
+          }
+        ],
+        "definition_lookup": {
+          "term": "graduation rate",
+          "source_years": [
+            2024
+          ],
+          "default_latest_release": true,
+          "status": "defined",
+          "selection": "accepted",
+          "reviewed_measure": null,
+          "candidate_record_ids": [
+            136974,
+            136976,
+            136975,
+            136963,
+            135849,
+            136961,
+            136954,
+            136956,
+            135851,
+            136991,
+            136981,
+            136984,
+            136985,
+            136979,
+            136980,
+            136988,
+            136983,
+            136992,
+            136982,
+            136989
+          ],
+          "passages": [
+            {
+              "record_id": 136963,
+              "excerpt": "Graduation rate of first-time, full-time degree or certificate-seeking students - 2018 cohort (4-year institutions) and 2021 cohort (less-than-4-year institutions). The graduation rate is the rate required for disclosure and/or reporting purposes under Student Right-to-Know. This rate is calculated as the total number of completers within 150% of normal time divided by the revised cohort minus any allowable exclusions."
+            }
+          ],
+          "source_policy": "Owner-supplied metadata only; no statistical values queried"
+        },
+        "latency": {
+          "answer_ready_seconds": 15.360234300023876,
+          "live_model_calls": 1
+        },
+        "model_usage": {
+          "model": "claude-sonnet-5-5",
+          "calls": 1,
+          "latency_seconds": 15.26604200003203,
+          "input_tokens": 6742,
+          "output_tokens": 262,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "estimated_api_usd": 0.016104,
+          "stage": "definition passage selection"
+        }
+      },
+      "checks": {
+        "definition_route": true,
+        "no_statistics": true,
+        "exact_source_passages": true,
+        "definition_found": true
+      },
+      "passed": true,
+      "wall_seconds": 15.377669999958016
+    }
+  ]
+}

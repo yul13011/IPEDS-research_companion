@@ -1,0 +1,438 @@
+{
+  "id": "distance_definition_followup",
+  "question": "What is the difference between those two categories?",
+  "answer": {
+    "intent": "catalog_plan",
+    "catalog_plan": {
+      "version": 2,
+      "institutions": [
+        "168218"
+      ],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136136,
+            136137
+          ],
+          "filters": [],
+          "group_by_record_ids": [
+            136136,
+            136137
+          ],
+          "aggregates": [
+            {
+              "id": "n",
+              "operator": "count_distinct",
+              "record_id": null,
+              "weight_record_id": null
+            }
+          ]
+        }
+      ],
+      "joins": [],
+      "expressions": [
+        {
+          "id": "cnt",
+          "operator": "sum",
+          "inputs": [
+            "as1_n"
+          ],
+          "group_by_references": [
+            "fs1_136136",
+            "fs1_136137"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "reference": "xcnt",
+          "label": "Wellesley College: institution count by category of undergraduate distance education courses offered and complete undergraduate distance education programs offered (1 Yes, 0 Implied no, -1 Not reported, -2 Not applicable)"
+        }
+      ],
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "IC2024 has one row per institution, so no row selectors are needed.",
+        "Both fields are coded categories, not quantities; the 'difference' is shown as the pair of source categories for courses versus complete programs, not a numeric subtraction.",
+        "Not reported (-1) and Not applicable (-2) are source categories, not 'no'; Implied no (0) is a separate category.",
+        "Period is academic year 2024-25."
+      ],
+      "clarification_questions": []
+    },
+    "catalog_proposal": {
+      "catalog_plan": {
+        "version": 2,
+        "institutions": [
+          "168218"
+        ],
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "id": "s1",
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136136,
+              136137
+            ],
+            "filters": [],
+            "group_by_record_ids": [
+              136136,
+              136137
+            ],
+            "aggregates": [
+              {
+                "id": "n",
+                "operator": "count_distinct",
+                "record_id": null,
+                "weight_record_id": null
+              }
+            ]
+          }
+        ],
+        "joins": [],
+        "expressions": [
+          {
+            "id": "cnt",
+            "operator": "sum",
+            "inputs": [
+              "as1_n"
+            ],
+            "group_by_references": [
+              "fs1_136136",
+              "fs1_136137"
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "reference": "xcnt",
+            "label": "Wellesley College: institution count by category of undergraduate distance education courses offered and complete undergraduate distance education programs offered (1 Yes, 0 Implied no, -1 Not reported, -2 Not applicable)"
+          }
+        ],
+        "missing_policy": "propagate",
+        "time_basis": "source_period",
+        "assumptions": [
+          "IC2024 has one row per institution, so no row selectors are needed.",
+          "Both fields are coded categories, not quantities; the 'difference' is shown as the pair of source categories for courses versus complete programs, not a numeric subtraction.",
+          "Not reported (-1) and Not applicable (-2) are source categories, not 'no'; Implied no (0) is a separate category.",
+          "Period is academic year 2024-25."
+        ],
+        "clarification_questions": []
+      },
+      "question": "For Wellesley College (UNITID 168218) in the 2024-25 IC2024 release, what is the difference between the two categories \"undergraduate distance education courses offered\" and \"complete undergraduate distance education programs offered\"? Preserve that Not reported (-1) and Not applicable (-2) are source categories, not \"no\".",
+      "definition_evidence": [],
+      "category_evidence": [],
+      "validation": {
+        "execution_approved": false,
+        "preflight_eligible": false,
+        "semantic_status": "blocked",
+        "blocks": [
+          "This aggregate needs a numerical field or distinct identifier."
+        ]
+      },
+      "created_at": "2026-10-22T18:42:17.425002+00:00",
+      "proposal_id": "0c59adcd0ecc6321fcc6"
+    },
+    "message": "The query could not be validated: This aggregate needs a numerical field or distinct identifier.",
+    "mode": "catalog relational planner",
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 6,
+      "planning_tool_requests": 7,
+      "semantic_repair_attempts": 2,
+      "latency_seconds": 24.402232100016437,
+      "input_tokens": 62071,
+      "output_tokens": 2946,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 80116,
+      "estimated_api_usd": 0.1616136,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 543,
+          "output_tokens": 53,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 2.3613445999799296,
+          "estimated_api_usd": 0.001616,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 5,
+          "planning_tool_requests": 7,
+          "semantic_repair_attempts": 2,
+          "latency_seconds": 22.040887500036508,
+          "input_tokens": 61528,
+          "output_tokens": 2893,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 80116,
+          "estimated_api_usd": 0.1599976,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+          "stages": [
+            {
+              "input_tokens": 4820,
+              "output_tokens": 440,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 0,
+              "model": "claude-sonnet-5-5",
+              "calls": 1,
+              "latency_seconds": 3.758887500036508,
+              "estimated_api_usd": 0.01404,
+              "stage": "conversation resolution"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 4,
+              "planning_tool_requests": 7,
+              "semantic_repair_attempts": 2,
+              "latency_seconds": 18.282,
+              "input_tokens": 56708,
+              "output_tokens": 2453,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 80116,
+              "estimated_api_usd": 0.1459576,
+              "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+            }
+          ]
+        }
+      ]
+    },
+    "validation_attempts": [
+      {
+        "attempt": 1,
+        "blocks": [
+          "No numerical measure was selected.",
+          "Grouped extracts need an explicit row-output and subtotal policy; this executor currently returns explicitly selected institution observations."
+        ]
+      },
+      {
+        "attempt": 2,
+        "blocks": [
+          "Aggregate input is not a continuous numeric observation."
+        ]
+      }
+    ],
+    "latency": {
+      "validation_seconds": 0.0,
+      "query_seconds": 0.0,
+      "planning_and_binding_seconds": 18.94637350004632,
+      "answer_ready_seconds": 25.08129109989386,
+      "live_model_calls": 6,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 3.758887500036508,
+      "institution_resolution_seconds": 2.374993599834852
+    },
+    "resolved_question": "For Wellesley College (UNITID 168218) in the 2024-25 IC2024 release, what is the difference between the two categories \"undergraduate distance education courses offered\" and \"complete undergraduate distance education programs offered\"? Preserve that Not reported (-1) and Not applicable (-2) are source categories, not \"no\".",
+    "conversation_resolution": {
+      "kind": "followup",
+      "question": "For Wellesley College (UNITID 168218) in the 2024-25 IC2024 release, what is the difference between the two categories \"undergraduate distance education courses offered\" and \"complete undergraduate distance education programs offered\"? Preserve that Not reported (-1) and Not applicable (-2) are source categories, not \"no\".",
+      "referenced_turns": [
+        1
+      ]
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "7ba6929a66b8ad0b",
+      "status": "revising",
+      "goal": "Did 168218 offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+      "original_question": "Did 168218 offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+      "question": "The query could not be validated: Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs.",
+      "scope": {
+        "institutions": [
+          "168218"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          {
+            "reference": "fs1_136136",
+            "label": "Undergraduate distance education courses offered (1=Yes, 0=Implied no, -1=Not reported, -2=Not applicable)"
+          },
+          {
+            "reference": "fs1_136137",
+            "label": "Complete undergraduate distance education programs offered (1=Yes, 0=Implied no, -1=Not reported, -2=Not applicable)"
+          }
+        ],
+        "breakdowns": [
+          []
+        ],
+        "time_basis": "source_period",
+        "assumptions": [
+          "IC2024 is one row per institution (key UNITID), so no row selectors are needed.",
+          "Both flags are coded Yes/No fields from the 2024-25 Institutional Characteristics release: both Yes = both; one Yes = that one only.",
+          "Not reported (-1) and Not applicable (-2) are source categories, not 'no'."
+        ]
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [
+        "The query could not be validated: Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs."
+      ],
+      "revised_request": "For Wellesley College (UNITID 168218) in the 2024-25 IC2024 release, what is the difference between the two categories \"undergraduate distance education courses offered\" and \"complete undergraduate distance education programs offered\"? Preserve that Not reported (-1) and Not applicable (-2) are source categories, not \"no\"."
+    },
+    "institution_identity": {
+      "unitids": [
+        168218
+      ],
+      "original_question": "What is the difference between those two categories?",
+      "original_mentions": [],
+      "confirmed_choices": {
+        "wellesley college": 168218
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Wellesley College \u00b7 Wellesley, MA \u00b7 UNITID 168218"
+      ]
+    }
+  },
+  "elapsed_seconds": 25.084294499945827,
+  "events": [
+    {
+      "elapsed": 0.00033329997677356005,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.4290215999353677,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.51872229995206,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 1.5192247999366373,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 1.5439138999208808,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 4.504199899965897,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 5.447364999912679,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 5.487437899922952,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 7.520526199950837,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 7.566721600014716,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 7.594292499939911,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 11.849505899939686,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 11.966977300005965,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 15.784266299917363,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 15.947724499972537,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 20.533210099907592,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    },
+    {
+      "elapsed": 0.00295290001668036,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 2.3775104000233114,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 2.3780907000182196,
+      "stage": "Resolving your question using the conversation\u2026"
+    },
+    {
+      "elapsed": 6.137514099944383,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 6.1384703000076115,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 6.165912299999036,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 9.292965000029653,
+      "stage": "Reading a source definition\u2026"
+    },
+    {
+      "elapsed": 9.356614000047557,
+      "stage": "Reading a source definition\u2026"
+    },
+    {
+      "elapsed": 9.42160480003804,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 9.47869899997022,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 9.506071700016037,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 14.448535199975595,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 14.610089599969797,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 19.691188500029966,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    },
+    {
+      "elapsed": 20.08700019994285,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 24.633227100013755,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    }
+  ],
+  "expected_variables": [
+    "DSTNUGC",
+    "DSTNUGP"
+  ]
+}

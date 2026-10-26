@@ -1,0 +1,810 @@
+{
+  "id": "award_levels",
+  "question": "Did Smith College, Mount Holyoke College, and Wellesley College offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "167835",
+        "166939",
+        "168218"
+      ],
+      "population": null,
+      "result_kind": "lookup",
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136075,
+            136077
+          ],
+          "filters": []
+        }
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "167835",
+          "166939",
+          "168218"
+        ],
+        "population": null,
+        "result_kind": "lookup",
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136075,
+              136077
+            ],
+            "filters": []
+          }
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::LEVEL5",
+          "IC{YEAR}::LEVEL7"
+        ],
+        "institutions": [
+          "167835",
+          "166939",
+          "168218"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::LEVEL5": {
+          "label": "Bachelor's degree",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::LEVEL7": {
+          "label": "Master's degree",
+          "family": "observation",
+          "unit": "coded"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Mount Holyoke College",
+          "unitid": 166939,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::LEVEL5",
+          "measure": "Bachelor's degree",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136075,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            138970
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "LEVEL5",
+            "record_id": 136075,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136075,
+                "excerpt": "Bachelor's degree"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::LEVEL5",
+          "measure": "Bachelor's degree",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136075,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            138970
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "LEVEL5",
+            "record_id": 136075,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136075,
+                "excerpt": "Bachelor's degree"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Wellesley College",
+          "unitid": 168218,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::LEVEL5",
+          "measure": "Bachelor's degree",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136075,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            138970
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "LEVEL5",
+            "record_id": 136075,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136075,
+                "excerpt": "Bachelor's degree"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Mount Holyoke College",
+          "unitid": 166939,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::LEVEL7",
+          "measure": "Master's degree",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136077,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            138978
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "LEVEL7",
+            "record_id": 136077,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136077,
+                "excerpt": "Master's degree"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::LEVEL7",
+          "measure": "Master's degree",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136077,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            138978
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "LEVEL7",
+            "record_id": 136077,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136077,
+                "excerpt": "Master's degree"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Wellesley College",
+          "unitid": 168218,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::LEVEL7",
+          "measure": "Master's degree",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136077,
+          "raw_code": 0,
+          "response_label": "Implied no",
+          "response_status": "implied_no",
+          "category_record_ids": [
+            138979
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "LEVEL7",
+            "record_id": 136077,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136077,
+                "excerpt": "Master's degree"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::LEVEL5",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "LEVEL5"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"LEVEL5\",\"LEVEL7\" FROM \"IC2024\" WHERE UNITID IN (?,?,?) LIMIT 20001",
+          "parameters": [
+            167835,
+            166939,
+            168218
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136075,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "LEVEL5",
+              "title": "Bachelor's degree",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10431\nvarorder: 19\nvarname: LEVEL5\nvartitle: Bachelor's degree\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 4\nlongdescription: What award levels are offered by your institution? [Check all that apply] Bachelor's degree or equivalent BACHELOR'S DEGREE - An award (baccalaureate or equivalent degree, as determined by the Secretary, U.S. Department of Education) that normally requires at least 4 but not more than 5 years of full-time equivalent college-level work. This includes all bachelor's degrees conferred in a 5-year cooperative (work-study plan) program. A cooperative plan provides for alternate class attendance and employment in business, industry, or government; thus, it allows students to combine actual work experience with their college studies. Also, includes bachelor's degrees in which the normal 4 years of work are completed in 3 years.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics Header component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Award levels offered",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 204,
+              "long_description": "What award levels are offered by your institution? [Check all that apply] Bachelor's degree or equivalent BACHELOR'S DEGREE - An award (baccalaureate or equivalent degree, as determined by the Secretary, U.S. Department of Education) that normally requires at least 4 but not more than 5 years of full-time equivalent college-level work. This includes all bachelor's degrees conferred in a 5-year cooperative (work-study plan) program. A cooperative plan provides for alternate class attendance and employment in business, industry, or government; thus, it allows students to combine actual work experience with their college studies. Also, includes bachelor's degrees in which the normal 4 years of work are completed in 3 years.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 138972,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 138973,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 138971,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 138970,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::LEVEL7",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "LEVEL7"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"LEVEL5\",\"LEVEL7\" FROM \"IC2024\" WHERE UNITID IN (?,?,?) LIMIT 20001",
+          "parameters": [
+            167835,
+            166939,
+            168218
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136077,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "LEVEL7",
+              "title": "Master's degree",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10441\nvarorder: 21\nvarname: LEVEL7\nvartitle: Master's degree\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 4\nlongdescription: What award levels are offered by your institution? [Check all that apply] Master's degree MASTER'S DEGREE - An award that requires the successful completion of a program of study of at least the full-time equivalent of 1 but not more than 2 academic years of work beyond the bachelor's degree.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics Header component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Award levels offered",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 206,
+              "long_description": "What award levels are offered by your institution? [Check all that apply] Master's degree MASTER'S DEGREE - An award that requires the successful completion of a program of study of at least the full-time equivalent of 1 but not more than 2 academic years of work beyond the bachelor's degree.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 138980,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 138981,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 138979,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 138978,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::LEVEL5": "What award levels are offered by your institution? [Check all that apply] Bachelor's degree or equivalent BACHELOR'S DEGREE - An award (baccalaureate or equivalent degree, as determined by the Secretary, U.S. Department of Education) that normally requires at least 4 but not more than 5 years of full-time equivalent college-level work. This includes all bachelor's degrees conferred in a 5-year cooperative (work-study plan) program. A cooperative plan provides for alternate class attendance and employment in business, industry, or government; thus, it allows students to combine actual work experience with their college studies. Also, includes bachelor's degrees in which the normal 4 years of work are completed in 3 years.",
+        "IC{YEAR}::LEVEL7": "What award levels are offered by your institution? [Check all that apply] Master's degree MASTER'S DEGREE - An award that requires the successful completion of a program of study of at least the full-time equivalent of 1 but not more than 2 academic years of work beyond the bachelor's degree."
+      },
+      "warnings": [
+        "Implied no is a source response distinct from Not reported and Not applicable."
+      ],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:36:39.160732+00:00",
+      "registry_sha256": "b15fcadccf2a1a61fadf5379a6e880a2e0c22f5fe11187a98bff0b5b64af4128",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 6,
+        "available_cells": 6,
+        "matching_institutions": {
+          "2024": 3
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 3
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            166939,
+            2024,
+            136075
+          ],
+          [
+            167835,
+            2024,
+            136075
+          ],
+          [
+            168218,
+            2024,
+            136075
+          ],
+          [
+            166939,
+            2024,
+            136077
+          ],
+          [
+            167835,
+            2024,
+            136077
+          ],
+          [
+            168218,
+            2024,
+            136077
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          166939,
+          167835,
+          168218
+        ],
+        "rows_sha256": "cf89822174e2e11afbce758979dc550a44d75902584c1551afeb5b4125ae3805"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 14.22115220001433,
+        "answer_ready_seconds": 20.602940899902023,
+        "live_model_calls": 5,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 6.3403568000067025
+      },
+      "result_id": "11782b3549d1e86a",
+      "institution_identity": {
+        "unitids": [
+          166939,
+          167835,
+          168218
+        ],
+        "original_question": "Did Smith College, Mount Holyoke College, and Wellesley College offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+        "original_mentions": [
+          "Smith College",
+          "Mount Holyoke College",
+          "Wellesley College"
+        ],
+        "confirmed_choices": {
+          "smith college": 167835,
+          "mount holyoke college": 166939,
+          "wellesley college": 168218
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Mount Holyoke College \u00b7 South Hadley, MA \u00b7 UNITID 166939",
+          "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835",
+          "Wellesley College \u00b7 Wellesley, MA \u00b7 UNITID 168218"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 5,
+      "planning_tool_requests": 6,
+      "semantic_repair_attempts": 1,
+      "latency_seconds": 20.211324300028384,
+      "input_tokens": 70415,
+      "output_tokens": 1124,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 85232,
+      "estimated_api_usd": 0.16059320000000002,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 578,
+          "output_tokens": 77,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 6.179324300028384,
+          "estimated_api_usd": 0.001926,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 4,
+          "planning_tool_requests": 6,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 14.032,
+          "input_tokens": 69837,
+          "output_tokens": 1047,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 85232,
+          "estimated_api_usd": 0.1586672,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "Mount Holyoke College \u2014 Bachelor's degree: Yes (Academic year 2024-25); Smith College \u2014 Bachelor's degree: Yes (Academic year 2024-25); Wellesley College \u2014 Bachelor's degree: Yes (Academic year 2024-25); Mount Holyoke College \u2014 Master's degree: Yes (Academic year 2024-25); Smith College \u2014 Master's degree: Yes (Academic year 2024-25); Wellesley College \u2014 Master's degree: Implied no (Academic year 2024-25).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 14.22115220001433,
+      "answer_ready_seconds": 20.602940899902023,
+      "live_model_calls": 5,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 6.3403568000067025
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "85f6c667a55c459a",
+      "status": "completed",
+      "goal": "Did Smith College (UNITID 167835), Mount Holyoke College (UNITID 166939), and Wellesley College (UNITID 168218) offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+      "original_question": "Did Smith College (UNITID 167835), Mount Holyoke College (UNITID 166939), and Wellesley College (UNITID 168218) offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+      "question": "Mount Holyoke College \u2014 Bachelor's degree: Yes (Academic year 2024-25); Smith College \u2014 Bachelor's degree: Yes (Academic year 2024-25); Wellesley College \u2014 Bachelor's degree: Yes (Academic year 2024-25); Mount Holyoke College \u2014 Master's degree: Yes (Academic year 2024-25); Smith College \u2014 Master's degree: Yes (Academic year 2024-25); Wellesley College \u2014 Master's degree: Implied no (Academic year 2024-25).",
+      "scope": {
+        "institutions": [
+          "167835",
+          "166939",
+          "168218"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::LEVEL5",
+          "IC{YEAR}::LEVEL7"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        166939,
+        167835,
+        168218
+      ],
+      "original_question": "Did Smith College, Mount Holyoke College, and Wellesley College offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+      "original_mentions": [
+        "Smith College",
+        "Mount Holyoke College",
+        "Wellesley College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835,
+        "mount holyoke college": 166939,
+        "wellesley college": 168218
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Mount Holyoke College \u00b7 South Hadley, MA \u00b7 UNITID 166939",
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835",
+        "Wellesley College \u00b7 Wellesley, MA \u00b7 UNITID 168218"
+      ]
+    }
+  },
+  "elapsed_seconds": 20.604503700044006,
+  "events": [
+    {
+      "elapsed": 0.0011091000633314252,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 6.190189399989322,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 6.339396000024863,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 6.339624800020829,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 6.367504900088534,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 9.129339100094512,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 10.09418320003897,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 10.44484570005443,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 14.128322300035506,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 14.16347200004384,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 14.176319900085218,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 17.55105910007842,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 20.560395800042897,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 20.604453500011005,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "LEVEL5",
+    "LEVEL7"
+  ]
+}

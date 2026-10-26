@@ -1,0 +1,13 @@
+{
+  "scope": "Real local annual data; mocked context-model transport. Not live unfamiliar-question latency.",
+  "questions": [
+    "Show Yale undergraduate enrollment by gender in fall 2024",
+    "Show a 10-year trend.",
+    "Show percentages"
+  ],
+  "answer_seconds": [
+    0.13439699995797127,
+    0.4749292000196874,
+    0.5170404000673443
+  ]
+}

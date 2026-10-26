@@ -1,0 +1,633 @@
+{
+  "timestamp": "2026-10-26T15:31:44.333647+00:00",
+  "n_cases": 19,
+  "cases": [
+    {
+      "id": "rev_adm",
+      "category": "reviewed",
+      "question": "What was Yale's admission rate in fall 2024?",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "language model planner",
+      "published": true,
+      "n_rows": 1,
+      "observation_years": [
+        2024
+      ],
+      "metrics": [
+        "admission_rate"
+      ],
+      "top_rows": [
+        {
+          "metric": "admission_rate",
+          "value": 3.871898742980336,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        }
+      ],
+      "message": "For Yale University (fall 2024), Admission rate: 3.87%. The reporting period and source definitions are available below.",
+      "answer_ready_seconds": 38.01852869999129,
+      "live_model_calls": 2,
+      "estimated_api_usd": 0.0024687900000000002,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 38.02
+    },
+    {
+      "id": "rev_grad",
+      "category": "reviewed-trend",
+      "question": "Plot Yale's six-year graduation rate for entering cohorts 2009 through 2018.",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "language model planner",
+      "published": true,
+      "n_rows": 10,
+      "observation_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "metrics": [
+        "graduation_rate"
+      ],
+      "top_rows": [
+        {
+          "metric": "graduation_rate",
+          "value": 96.7816091954023,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "graduation_rate",
+          "value": 97.76619508562919,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "graduation_rate",
+          "value": 97.40163325909428,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "graduation_rate",
+          "value": 96.60265878877401,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "graduation_rate",
+          "value": 97.1997052321297,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "graduation_rate",
+          "value": 96.3917525773196,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        }
+      ],
+      "message": "Yale University’s all: six-year bachelor graduation rate was 96.78% in 2015 and 95.74% in 2024. Outcome/reporting years and entering cohort years are identified separately in the results.",
+      "answer_ready_seconds": 12.528130399994552,
+      "live_model_calls": 2,
+      "estimated_api_usd": 0.00246617,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 12.53
+    },
+    {
+      "id": "cat_lib",
+      "category": "catalog-1inst",
+      "question": "How many books were in Harvard's library collection in 2023?",
+      "followup_of": null,
+      "intent": "discover",
+      "mode": "data discovery",
+      "published": false,
+      "n_rows": 0,
+      "observation_years": null,
+      "metrics": null,
+      "top_rows": [],
+      "message": "Here are the main data areas found in the local IPEDS files:\n\n**Survey: Academic Libraries**\n\nReporting periods: Fiscal year 2023.\n\n- **Library collection totals.** Explore library collection counts, physical and electronic, plus library characteristics and expenditures. Library data apply only to degree-granting institutions.\n- **Collection mix by material type.** Derived indicators show physical",
+      "answer_ready_seconds": 18.796898799948394,
+      "live_model_calls": 3,
+      "estimated_api_usd": 0.049080515,
+      "n_evidence": 40,
+      "ok": true,
+      "wall_seconds": 18.8
+    },
+    {
+      "id": "cat_enr",
+      "category": "catalog-1inst",
+      "question": "What was Smith College's total fall enrollment in 2023?",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "language model planner",
+      "published": true,
+      "n_rows": 1,
+      "observation_years": [
+        2023
+      ],
+      "metrics": [
+        "total_enrollment"
+      ],
+      "top_rows": [
+        {
+          "metric": "total_enrollment",
+          "value": 2830.0,
+          "unitid": 167835,
+          "period": null,
+          "label": "Smith College"
+        }
+      ],
+      "message": "For Smith College (fall 2023), Total enrollment: 2,830. The reporting period and source definitions are available below.",
+      "answer_ready_seconds": 8.92631110001821,
+      "live_model_calls": 2,
+      "estimated_api_usd": 0.0017972700000000001,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 8.93
+    },
+    {
+      "id": "cat_fin",
+      "category": "catalog-1inst",
+      "question": "What was Yale's total revenue from tuition and fees in 2022-23?",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "catalog language-model planner",
+      "published": true,
+      "n_rows": 1,
+      "observation_years": [
+        2022
+      ],
+      "metrics": null,
+      "top_rows": [
+        {
+          "metric": "F{YEAR}_F2::F2D01",
+          "value": 354023874,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        }
+      ],
+      "message": "For Yale University (Fiscal year 2022), Tuition and fees - Total: $354,023,874. The reporting period and source definitions are available below.",
+      "answer_ready_seconds": 13.43867089995183,
+      "live_model_calls": 3,
+      "estimated_api_usd": 0.06027229,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 13.44
+    },
+    {
+      "id": "cat_ret",
+      "category": "catalog-1inst",
+      "question": "What was the first-year student retention rate at Mount Holyoke College in 2023?",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "catalog language-model planner",
+      "published": true,
+      "n_rows": 2,
+      "observation_years": [
+        2023
+      ],
+      "metrics": null,
+      "top_rows": [
+        {
+          "metric": "EF{YEAR}D::RET_PCF",
+          "value": 90,
+          "unitid": 166939,
+          "period": null,
+          "label": "Mount Holyoke College"
+        },
+        {
+          "metric": "EF{YEAR}D::RET_PCP",
+          "value": null,
+          "unitid": 166939,
+          "period": null,
+          "label": "Mount Holyoke College"
+        }
+      ],
+      "message": "For Mount Holyoke College (Fall 2023), Full-time retention rate, 2023: 90.00%. 1 value(s) were not reported and 0 were not collected; neither is treated as zero.",
+      "answer_ready_seconds": 12.6558244000189,
+      "live_model_calls": 3,
+      "estimated_api_usd": 0.017366490000000002,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 12.66
+    },
+    {
+      "id": "agg_grad",
+      "category": "aggregate",
+      "question": "What was the overall six-year graduation rate for four-year institutions in the United States for the 2016 entering cohort?",
+      "followup_of": null,
+      "intent": "catalog_plan",
+      "mode": "catalog relational planner",
+      "published": false,
+      "n_rows": 0,
+      "observation_years": null,
+      "metrics": null,
+      "top_rows": [],
+      "message": "This part did not produce a validated analytical result. This query did not pass validation; no numerical result was published. Only one reporting period was returned for a longitudinal request. No trend has been published; please restate the interval.",
+      "answer_ready_seconds": 24.67937099991832,
+      "live_model_calls": 5,
+      "estimated_api_usd": 0.08841029,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 24.68
+    },
+    {
+      "id": "agg_count",
+      "category": "aggregate",
+      "question": "How many degree-granting institutions reported to IPEDS in 2023?",
+      "followup_of": null,
+      "intent": "task_response",
+      "mode": "tracked request",
+      "published": false,
+      "n_rows": 0,
+      "observation_years": null,
+      "metrics": null,
+      "top_rows": [],
+      "message": "Request status: 1 needs clarification, 1 blocked.",
+      "answer_ready_seconds": 7.148428900050931,
+      "live_model_calls": 1,
+      "estimated_api_usd": 0.00135599,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 7.15
+    },
+    {
+      "id": "agg_enr",
+      "category": "aggregate",
+      "question": "What was the total fall enrollment across all U.S. degree-granting institutions in 2023?",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "catalog relational planner",
+      "published": true,
+      "n_rows": 1,
+      "observation_years": [
+        2023
+      ],
+      "metrics": null,
+      "top_rows": [
+        {
+          "metric": "xtotal",
+          "value": 19038434.0,
+          "unitid": null,
+          "period": null,
+          "label": "United States · Title IV"
+        }
+      ],
+      "message": "For United States · Title IV (Fall 2023), Total fall 2023 enrollment, all students (degree-granting Title IV institutions): 19,038,434. The reporting period and source definitions are available below.",
+      "answer_ready_seconds": 18.676151500083506,
+      "live_model_calls": 4,
+      "estimated_api_usd": 0.03764769,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 18.68
+    },
+    {
+      "id": "cmp_grad",
+      "category": "comparison",
+      "question": "Compare the six-year graduation rates of Yale, Harvard, and Princeton for the 2015 entering cohort.",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "language model planner",
+      "published": true,
+      "n_rows": 3,
+      "observation_years": [
+        2021
+      ],
+      "metrics": [
+        "graduation_rate"
+      ],
+      "top_rows": [
+        {
+          "metric": "graduation_rate",
+          "value": 96.91629955947137,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "graduation_rate",
+          "value": 96.74306393244873,
+          "unitid": 166027,
+          "period": null,
+          "label": "Harvard University"
+        },
+        {
+          "metric": "graduation_rate",
+          "value": 97.56838905775076,
+          "unitid": 186131,
+          "period": null,
+          "label": "Princeton University"
+        }
+      ],
+      "message": "Yale University — All: six-year bachelor graduation rate: 96.92%; Harvard University — All: six-year bachelor graduation rate: 96.74%; Princeton University — All: six-year bachelor graduation rate: 97.57% (six-year outcome 2021). Outcome/reporting years and entering cohort years are identified separately in the results.",
+      "answer_ready_seconds": 9.826037600054406,
+      "live_model_calls": 2,
+      "estimated_api_usd": 0.0020435699999999998,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 9.83
+    },
+    {
+      "id": "cmp_sal",
+      "category": "comparison",
+      "question": "Compare the average full-time instructional faculty salary at Smith, Mount Holyoke, and Wellesley in 2023-24.",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "catalog relational planner",
+      "published": true,
+      "n_rows": 3,
+      "observation_years": [
+        2023
+      ],
+      "metrics": null,
+      "top_rows": [
+        {
+          "metric": "xavg",
+          "value": 101151.0,
+          "unitid": 166939,
+          "period": null,
+          "label": "Mount Holyoke College"
+        },
+        {
+          "metric": "xavg",
+          "value": 115221.0,
+          "unitid": 167835,
+          "period": null,
+          "label": "Smith College"
+        },
+        {
+          "metric": "xavg",
+          "value": 120638.0,
+          "unitid": 168218,
+          "period": null,
+          "label": "Wellesley College"
+        }
+      ],
+      "message": "Mount Holyoke College — Average full-time instructional faculty salary, equated to 9 months (all ranks, 2023-24): $101,151; Smith College — Average full-time instructional faculty salary, equated to 9 months (all ranks, 2023-24): $115,221; Wellesley College — Average full-time instructional faculty salary, equated to 9 months (all ranks, 2023-24): $120,638 (2023-24). The reporting period and sourc",
+      "answer_ready_seconds": 20.49045079993084,
+      "live_model_calls": 5,
+      "estimated_api_usd": 0.050895789999999996,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 20.49
+    },
+    {
+      "id": "amb_fac",
+      "category": "ambiguous",
+      "question": "How many faculty does Yale have?",
+      "followup_of": null,
+      "intent": "clarify",
+      "mode": "source-backed clarification",
+      "published": false,
+      "n_rows": 0,
+      "observation_years": null,
+      "metrics": null,
+      "top_rows": [],
+      "message": "How should \"faculty\" at Yale be counted?\n\n**A. All instructional staff**\n\nTotal instructional staff at Yale University in Fall 2024 (full-time plus part-time, including medical school staff), regardless of faculty status.\n\nIncludes all instructional staff, whether or not they hold formal faculty status. Full-time and part-time are shown as separate counts; they are headcounts, not FTE. Fall 2024 s",
+      "answer_ready_seconds": 27.860805900068954,
+      "live_model_calls": 5,
+      "estimated_api_usd": 0.10908419000000001,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 27.86
+    },
+    {
+      "id": "amb_aid",
+      "category": "ambiguous",
+      "question": "What is Yale's financial aid?",
+      "followup_of": null,
+      "intent": "clarify",
+      "mode": "intent clarification",
+      "published": false,
+      "n_rows": 0,
+      "observation_years": null,
+      "metrics": null,
+      "top_rows": [],
+      "message": "Which aspect of Yale's financial aid do you want? In this app, financial aid can mean the share of undergraduates awarded grants or scholarships, the aid amounts or loans in the student financial assistance data, or graduation outcomes for Pell recipients compared with non-Pell students. Tell me which one, and any years you want, and I'll run it.",
+      "answer_ready_seconds": 6.2712680998956785,
+      "live_model_calls": 1,
+      "estimated_api_usd": 0.00128229,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 6.27
+    },
+    {
+      "id": "trd_awd",
+      "category": "catalog-trend",
+      "question": "Plot the number of bachelor's degrees Yale awarded each year from 2015 to 2024.",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "language model planner",
+      "published": true,
+      "n_rows": 10,
+      "observation_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "metrics": [
+        "bachelors_degrees"
+      ],
+      "top_rows": [
+        {
+          "metric": "bachelors_degrees",
+          "value": 1327.0,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "bachelors_degrees",
+          "value": 1395.0,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "bachelors_degrees",
+          "value": 1359.0,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "bachelors_degrees",
+          "value": 1313.0,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "bachelors_degrees",
+          "value": 1407.0,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        },
+        {
+          "metric": "bachelors_degrees",
+          "value": 1392.0,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        }
+      ],
+      "message": "Yale University’s bachelor's degrees awarded was 1,327 in 2015 and 1,665 in 2024. The reporting period and source definitions are available below.",
+      "answer_ready_seconds": 10.95793000003323,
+      "live_model_calls": 2,
+      "estimated_api_usd": 0.00231547,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 10.96
+    },
+    {
+      "id": "def_grad",
+      "category": "definition",
+      "question": "What is the definition of the six-year graduation rate?",
+      "followup_of": null,
+      "intent": "definition",
+      "mode": "source definition",
+      "published": false,
+      "n_rows": 0,
+      "observation_years": null,
+      "metrics": null,
+      "top_rows": [],
+      "message": "I could not establish a direct definition of **six-year bachelor graduation rate** from this bounded search of the supplied codebooks. This does not prove the term is absent. Try its exact variable name, source table, or a more specific term.",
+      "answer_ready_seconds": 5.084733199910261,
+      "live_model_calls": 1,
+      "estimated_api_usd": 0.0009632900000000001,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 5.08
+    },
+    {
+      "id": "disc_aid",
+      "category": "discovery",
+      "question": "What data do you have on student financial aid?",
+      "followup_of": null,
+      "intent": "guide",
+      "mode": "data guide",
+      "published": false,
+      "n_rows": 0,
+      "observation_years": null,
+      "metrics": null,
+      "top_rows": [],
+      "message": "These documented data areas may help with your question:\n\n- **Student financial assistance** — Counts and amounts of grants, scholarships and loans from specified sources, including Pell grants and military/veterans benefits. First-time undergraduate and broader undergraduate populations must not be treated as interchangeable.\n- **Graduation rates and defined entering cohorts** — Completion outcom",
+      "answer_ready_seconds": 3.374622799921781,
+      "live_model_calls": 1,
+      "estimated_api_usd": 0.00095189,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 3.37
+    },
+    {
+      "id": "edge_urm",
+      "category": "unsupported",
+      "question": "What is the URM six-year graduation rate at Yale?",
+      "followup_of": null,
+      "intent": "clarify",
+      "mode": "intent clarification",
+      "published": false,
+      "n_rows": 0,
+      "observation_years": null,
+      "metrics": null,
+      "top_rows": [],
+      "message": "I can't find a URM graduation-rate measure in the loaded data, so I can't answer that one directly. The loaded six-year graduation measures are: all students, men, women, U.S. nonresident, Pell recipients, and non-Pell students. Which of these would you like for Yale, and which year or years?",
+      "answer_ready_seconds": 5.544986700057052,
+      "live_model_calls": 1,
+      "estimated_api_usd": 0.00114899,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 5.55
+    },
+    {
+      "id": "fu_base",
+      "category": "followup",
+      "question": "How many bachelor's degrees did Yale award in 2015?",
+      "followup_of": null,
+      "intent": "analyze",
+      "mode": "language model planner",
+      "published": true,
+      "n_rows": 1,
+      "observation_years": [
+        2015
+      ],
+      "metrics": [
+        "bachelors_degrees"
+      ],
+      "top_rows": [
+        {
+          "metric": "bachelors_degrees",
+          "value": 1327.0,
+          "unitid": 130794,
+          "period": null,
+          "label": "Yale University"
+        }
+      ],
+      "message": "For Yale University (2014–15), Bachelor's degrees awarded: 1,327. The reporting period and source definitions are available below.",
+      "answer_ready_seconds": 6.784232800011523,
+      "live_model_calls": 2,
+      "estimated_api_usd": 0.00195407,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 6.78
+    },
+    {
+      "id": "fu_next",
+      "category": "followup",
+      "question": "What about Harvard?",
+      "followup_of": "fu_base",
+      "intent": "analyze",
+      "mode": "language model planner",
+      "published": true,
+      "n_rows": 1,
+      "observation_years": [
+        2015
+      ],
+      "metrics": [
+        "bachelors_degrees"
+      ],
+      "top_rows": [
+        {
+          "metric": "bachelors_degrees",
+          "value": 1757.0,
+          "unitid": 166027,
+          "period": null,
+          "label": "Harvard University"
+        }
+      ],
+      "message": "For Harvard University (2014–15), Bachelor's degrees awarded: 1,757. The reporting period and source definitions are available below.",
+      "answer_ready_seconds": 7.669359499937855,
+      "live_model_calls": 2,
+      "estimated_api_usd": 0.00250027,
+      "n_evidence": 0,
+      "ok": true,
+      "wall_seconds": 7.67
+    }
+  ]
+}

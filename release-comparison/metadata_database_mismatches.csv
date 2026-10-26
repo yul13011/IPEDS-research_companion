@@ -1,0 +1,1249 @@
+﻿release,table,variable,issue,source_row
+IPEDS_2015-16_Final,ADM2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,AL2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,C2015_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,C2015_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,C2015_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,C2015DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,CUSTOMCGIDS2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,DRVADM2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,DRVAL2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,DRVC2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,DRVEF122015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,DRVEF2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,DRVF2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,DRVGR2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,DRVHR2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,DRVIC2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,EAP2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,EF2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,EF2015A,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,EF2015A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,EF2015B,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,EF2015C,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,EF2015D,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,EFFY2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,EFIA2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,F1415_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,F1415_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,F1415_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,FLAGS2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,GR200_15,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,GR2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,GR2015_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,HD2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,IC2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,IC2015_AY,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,IC2015_PY,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,IC2015MISSION,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,OM2015,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,S2015_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,S2015_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,S2015_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,S2015_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,SAL2015_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,SAL2015_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,SFA1415_P1,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,SFA1415_P2,UNITID,Database column absent from variable dictionary,
+IPEDS_2015-16_Final,SFAV1415,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,ADM2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,AL2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,C2016_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,C2016_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,C2016_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,C2016DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,CUSTOMCGIDS2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVADM2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVAL2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVC2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVEF122016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVEF2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVF2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVGR2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVHR2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVIC2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,DRVOM2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EAP2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EF2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EF2016A,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EF2016A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EF2016B,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EF2016C,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EF2016CP,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EF2016D,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EFFY2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,EFIA2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,F1516_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,F1516_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,F1516_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,FLAGS2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,GR200_16,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,GR2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,GR2016_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,GR2016_PELL_SSL,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,HD2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,IC2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,IC2016_AY,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,IC2016_PY,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,IC2016Mission,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,OM2016,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,S2016_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,S2016_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,S2016_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,S2016_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,SAL2016_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,SAL2016_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,SFA1516_P1,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,SFA1516_P2,UNITID,Database column absent from variable dictionary,
+IPEDS_2016-17_Final,SFAV1516,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,ADM2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,AL2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,C2017_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,C2017_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,C2017_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,C2017DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,CUSTOMCGIDS2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,CUSTOMCGIDS2017,CGCITY,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVADM2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVAL2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVC2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVEF122017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVEF2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVF2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVGR2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVHR2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVIC2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,DRVOM2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,EAP2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,EF2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,EF2017A,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,EF2017A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,EF2017B,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,EF2017C,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,EF2017D,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,EFFY2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,EFIA2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,F1617_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,F1617_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,F1617_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_IC,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_C,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_E12,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_SFA,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_GR,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_GR2,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_OM,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_ADM,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_HR,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_EF,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_F,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,FLAGS2017,REV_AL,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,GR200_17,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,GR2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,GR2017_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,GR2017_PELL_SSL,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,HD2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,IC2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,IC2017_AY,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,IC2017_PY,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,IC2017MISSION,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,OM2017,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,S2017_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,S2017_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,S2017_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,S2017_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,SAL2017_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,SAL2017_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,SFA1617_P1,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,SFA1617_P2,UNITID,Database column absent from variable dictionary,
+IPEDS_2017-18_Final,SFAV1617,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,ADM2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,AL2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,C2018_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,C2018_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,C2018_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,C2018DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,CUSTOMCGIDS2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,CUSTOMCGIDS2018,CGCITY,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVADM2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVAL2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVC2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVEF122018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVEF2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVF2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVGR2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVHR2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVIC2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,DRVOM2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EAP2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EF2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EF2018A,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EF2018A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EF2018B,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EF2018C,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EF2018CP,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EF2018D,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EFFY2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,EFIA2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,F1718_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,F1718_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,F1718_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_IC,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_C,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_E12,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_SFA,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_GR,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_GR2,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_OM,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_ADM,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_HR,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_EF,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_F,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,FLAGS2018,REV_AL,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,GR200_18,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,GR2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,GR2018_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,GR2018_PELL_SSL,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,HD2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,IC2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,IC2018_AY,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,IC2018_PY,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,IC2018MISSION,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,OM2018,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,S2018_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,S2018_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,S2018_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,S2018_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,SAL2018_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,SAL2018_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,SFA1718_P1,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,SFA1718_P2,UNITID,Database column absent from variable dictionary,
+IPEDS_2018-19_Final,SFAV1718,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,ADM2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,AL2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,C2019_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,C2019_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,C2019_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,C2019DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,CUSTOMCGIDS2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,CUSTOMCGIDS2019,CGCITY,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVADM2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVAL2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVC2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVEF122019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVEF2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVF2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVGR2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVHR2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVIC2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,DRVOM2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,EAP2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,EF2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,EF2019A,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,EF2019A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,EF2019B,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,EF2019C,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,EF2019D,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,EFFY2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,EFIA2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,F1819_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,F1819_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,F1819_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,FLAGS2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,GR200_19,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,GR2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,GR2019_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,GR2019_PELL_SSL,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,HD2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,IC2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,IC2019_AY,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,IC2019_PY,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,IC2019Mission,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,OM2019,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,S2019_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,S2019_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,S2019_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,S2019_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,SAL2019_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,SAL2019_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,SFA1819_P1,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,SFA1819_P2,UNITID,Database column absent from variable dictionary,
+IPEDS_2019-20_Final,SFAV1819,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,ADM2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,AL2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,C2020_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,C2020_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,C2020_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,C2020DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,CUSTOMCGIDS2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,CUSTOMCGIDS2020,CGCITY,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVADM2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVAL2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVC2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVEF122020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVEF2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVF2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVGR2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVHR2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVIC2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,DRVOM2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EAP2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EF2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EF2020A,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EF2020A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EF2020B,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EF2020C,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EF2020CP,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EF2020D,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EFFY2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EFFY2020_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,EFIA2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,F1920_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,F1920_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,F1920_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,FLAGS2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,GR200_20,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,GR2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,GR2020_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,GR2020_PELL_SSL,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,HD2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,IC2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,IC2020_AY,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,IC2020_PY,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,IC2020Mission,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,OM2020,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,S2020_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,S2020_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,S2020_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,S2020_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,SAL2020_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,SAL2020_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,SFA1920_P1,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,SFA1920_P2,UNITID,Database column absent from variable dictionary,
+IPEDS_2020-21_Final,SFAV1920,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EFxxxxCP,,Documented table absent from database,19
+IPEDS_2021-22_Final,ADM2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,AL2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,C2021_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,C2021_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,C2021_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,C2021DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,CUSTOMCGIDS2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,CUSTOMCGIDS2021,CGCITY,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVADM2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVAL2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVC2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVEF122021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVEF2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVF2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVGR2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVHR2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVIC2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,DRVOM2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EAP2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EF2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EF2021A,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EF2021A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EF2021B,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EF2021C,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EF2021D,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EFFY2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EFFY2021_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,EFIA2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,F2021_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,F2021_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,F2021_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_IC,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_C,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_E12,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_SFA,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_GR,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_GR2,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_OM,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_ADM,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_HR,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_EF,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_F,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,FLAGS2021,REV_AL,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,GR200_21,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,GR2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,GR2021_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,GR2021_PELL_SSL,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,HD2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,IC2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,IC2021_AY,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,IC2021_PCCAMPUSES,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,IC2021_PY,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,IC2021Mission,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,OM2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,S2021_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,S2021_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,S2021_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,S2021_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,SAL2021_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,SAL2021_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,SFA2021_P1,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,SFA2021_P2,UNITID,Database column absent from variable dictionary,
+IPEDS_2021-22_Final,SFAV2021,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,SFA2122_P1,SCFA2ND,Documented variable absent from database,1242
+IPEDS_2022-23_Final,SFA2122_P1,PCCAMPUS,Documented variable absent from database,1314
+IPEDS_2022-23_Final,ADM2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,AL2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,C2022_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,C2022_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,C2022_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,C2022DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,CUSTOMCGIDS2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,CUSTOMCGIDS2022,CGCITY,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVADM2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVAL2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVC2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVEF122022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVEF2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVF2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVGR2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVHR2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVIC2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,DRVOM2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EAP2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EF2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EF2022A,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EF2022A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EF2022B,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EF2022C,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EF2022CP,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EF2022D,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EFFY2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EFFY2022_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,EFIA2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,F2122_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,F2122_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,F2122_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,FLAGS2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,GR200_22,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,GR2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,GR2022_GENDER,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,GR2022_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,GR2022_PELL_SSL,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,HD2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,IC2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,IC2022_AY,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,IC2022_PCCAMPUSES,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,IC2022_PY,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,IC2022Mission,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,OM2022,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,S2022_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,S2022_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,S2022_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,S2022_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,SAL2022_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,SAL2022_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,SFA2122_P1,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,SFA2122_P2,UNITID,Database column absent from variable dictionary,
+IPEDS_2022-23_Final,SFAV2122,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,SFA2223_P1,GISTN2,Documented variable absent from database,1227
+IPEDS_2023-24_Final,SFA2223_P1,GISTON2,Documented variable absent from database,1228
+IPEDS_2023-24_Final,SFA2223_P1,GISTWF2,Documented variable absent from database,1229
+IPEDS_2023-24_Final,SFA2223_P1,GISTOF2,Documented variable absent from database,1230
+IPEDS_2023-24_Final,SFA2223_P1,GISTUN2,Documented variable absent from database,1231
+IPEDS_2023-24_Final,SFA2223_P1,GISTT2,Documented variable absent from database,1232
+IPEDS_2023-24_Final,SFA2223_P1,GISTA2,Documented variable absent from database,1233
+IPEDS_2023-24_Final,SFA2223_P1,GISTN1,Documented variable absent from database,1234
+IPEDS_2023-24_Final,SFA2223_P1,GISTON1,Documented variable absent from database,1235
+IPEDS_2023-24_Final,SFA2223_P1,GISTWF1,Documented variable absent from database,1236
+IPEDS_2023-24_Final,SFA2223_P1,GISTOF1,Documented variable absent from database,1237
+IPEDS_2023-24_Final,SFA2223_P1,GISTUN1,Documented variable absent from database,1238
+IPEDS_2023-24_Final,SFA2223_P1,GISTT1,Documented variable absent from database,1239
+IPEDS_2023-24_Final,SFA2223_P1,GISTA1,Documented variable absent from database,1240
+IPEDS_2023-24_Final,SFA2223_P1,GISTN0,Documented variable absent from database,1241
+IPEDS_2023-24_Final,SFA2223_P1,GISTON0,Documented variable absent from database,1242
+IPEDS_2023-24_Final,SFA2223_P1,GISTWF0,Documented variable absent from database,1243
+IPEDS_2023-24_Final,SFA2223_P1,GISTOF0,Documented variable absent from database,1244
+IPEDS_2023-24_Final,SFA2223_P1,GISTUN0,Documented variable absent from database,1245
+IPEDS_2023-24_Final,SFA2223_P1,GISTT0,Documented variable absent from database,1246
+IPEDS_2023-24_Final,SFA2223_P1,GISTA0,Documented variable absent from database,1247
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N2,Documented variable absent from database,1248
+IPEDS_2023-24_Final,SFA2223_P1,GIS4ON2,Documented variable absent from database,1249
+IPEDS_2023-24_Final,SFA2223_P1,GIS4WF2,Documented variable absent from database,1250
+IPEDS_2023-24_Final,SFA2223_P1,GIS4OF2,Documented variable absent from database,1251
+IPEDS_2023-24_Final,SFA2223_P1,GIS4UN2,Documented variable absent from database,1252
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G2,Documented variable absent from database,1253
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T2,Documented variable absent from database,1254
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A2,Documented variable absent from database,1255
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N12,Documented variable absent from database,1256
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G12,Documented variable absent from database,1257
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T12,Documented variable absent from database,1258
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A12,Documented variable absent from database,1259
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N22,Documented variable absent from database,1260
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G22,Documented variable absent from database,1261
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T22,Documented variable absent from database,1262
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A22,Documented variable absent from database,1263
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N32,Documented variable absent from database,1264
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G32,Documented variable absent from database,1265
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T32,Documented variable absent from database,1266
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A32,Documented variable absent from database,1267
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N42,Documented variable absent from database,1268
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G42,Documented variable absent from database,1269
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T42,Documented variable absent from database,1270
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A42,Documented variable absent from database,1271
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N52,Documented variable absent from database,1272
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G52,Documented variable absent from database,1273
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T52,Documented variable absent from database,1274
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A52,Documented variable absent from database,1275
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N1,Documented variable absent from database,1276
+IPEDS_2023-24_Final,SFA2223_P1,GIS4ON1,Documented variable absent from database,1277
+IPEDS_2023-24_Final,SFA2223_P1,GIS4WF1,Documented variable absent from database,1278
+IPEDS_2023-24_Final,SFA2223_P1,GIS4OF1,Documented variable absent from database,1279
+IPEDS_2023-24_Final,SFA2223_P1,GIS4UN1,Documented variable absent from database,1280
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G1,Documented variable absent from database,1281
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T1,Documented variable absent from database,1282
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A1,Documented variable absent from database,1283
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N11,Documented variable absent from database,1284
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G11,Documented variable absent from database,1285
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T11,Documented variable absent from database,1286
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A11,Documented variable absent from database,1287
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N21,Documented variable absent from database,1288
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G21,Documented variable absent from database,1289
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T21,Documented variable absent from database,1290
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A21,Documented variable absent from database,1291
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N31,Documented variable absent from database,1292
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G31,Documented variable absent from database,1293
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T31,Documented variable absent from database,1294
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A31,Documented variable absent from database,1295
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N41,Documented variable absent from database,1296
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G41,Documented variable absent from database,1297
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T41,Documented variable absent from database,1298
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A41,Documented variable absent from database,1299
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N51,Documented variable absent from database,1300
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G51,Documented variable absent from database,1301
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T51,Documented variable absent from database,1302
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A51,Documented variable absent from database,1303
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N0,Documented variable absent from database,1304
+IPEDS_2023-24_Final,SFA2223_P1,GIS4ON0,Documented variable absent from database,1305
+IPEDS_2023-24_Final,SFA2223_P1,GIS4WF0,Documented variable absent from database,1306
+IPEDS_2023-24_Final,SFA2223_P1,GIS4OF0,Documented variable absent from database,1307
+IPEDS_2023-24_Final,SFA2223_P1,GIS4UN0,Documented variable absent from database,1308
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G0,Documented variable absent from database,1309
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T0,Documented variable absent from database,1310
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A0,Documented variable absent from database,1311
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N10,Documented variable absent from database,1312
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G10,Documented variable absent from database,1313
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T10,Documented variable absent from database,1314
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A10,Documented variable absent from database,1315
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N20,Documented variable absent from database,1316
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G20,Documented variable absent from database,1317
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T20,Documented variable absent from database,1318
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A20,Documented variable absent from database,1319
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N30,Documented variable absent from database,1320
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G30,Documented variable absent from database,1321
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T30,Documented variable absent from database,1322
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A30,Documented variable absent from database,1323
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N40,Documented variable absent from database,1324
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G40,Documented variable absent from database,1325
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T40,Documented variable absent from database,1326
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A40,Documented variable absent from database,1327
+IPEDS_2023-24_Final,SFA2223_P1,GIS4N50,Documented variable absent from database,1328
+IPEDS_2023-24_Final,SFA2223_P1,GIS4G50,Documented variable absent from database,1329
+IPEDS_2023-24_Final,SFA2223_P1,GIS4T50,Documented variable absent from database,1330
+IPEDS_2023-24_Final,SFA2223_P1,GIS4A50,Documented variable absent from database,1331
+IPEDS_2023-24_Final,SFA2223_P1,NPIST2,Documented variable absent from database,1332
+IPEDS_2023-24_Final,SFA2223_P1,NPIST1,Documented variable absent from database,1333
+IPEDS_2023-24_Final,SFA2223_P1,NPIST0,Documented variable absent from database,1334
+IPEDS_2023-24_Final,SFA2223_P1,NPIS412,Documented variable absent from database,1335
+IPEDS_2023-24_Final,SFA2223_P1,NPIS422,Documented variable absent from database,1336
+IPEDS_2023-24_Final,SFA2223_P1,NPIS432,Documented variable absent from database,1337
+IPEDS_2023-24_Final,SFA2223_P1,NPIS442,Documented variable absent from database,1338
+IPEDS_2023-24_Final,SFA2223_P1,NPIS452,Documented variable absent from database,1339
+IPEDS_2023-24_Final,SFA2223_P1,NPIS411,Documented variable absent from database,1340
+IPEDS_2023-24_Final,SFA2223_P1,NPIS421,Documented variable absent from database,1341
+IPEDS_2023-24_Final,SFA2223_P1,NPIS431,Documented variable absent from database,1342
+IPEDS_2023-24_Final,SFA2223_P1,NPIS441,Documented variable absent from database,1343
+IPEDS_2023-24_Final,SFA2223_P1,NPIS451,Documented variable absent from database,1344
+IPEDS_2023-24_Final,SFA2223_P1,NPIS410,Documented variable absent from database,1345
+IPEDS_2023-24_Final,SFA2223_P1,NPIS420,Documented variable absent from database,1346
+IPEDS_2023-24_Final,SFA2223_P1,NPIS430,Documented variable absent from database,1347
+IPEDS_2023-24_Final,SFA2223_P1,NPIS440,Documented variable absent from database,1348
+IPEDS_2023-24_Final,SFA2223_P1,NPIS450,Documented variable absent from database,1349
+IPEDS_2023-24_Final,SFA2223_P1,GRNTN2,Documented variable absent from database,1350
+IPEDS_2023-24_Final,SFA2223_P1,GRNTON2,Documented variable absent from database,1351
+IPEDS_2023-24_Final,SFA2223_P1,GRNTWF2,Documented variable absent from database,1352
+IPEDS_2023-24_Final,SFA2223_P1,GRNTOF2,Documented variable absent from database,1353
+IPEDS_2023-24_Final,SFA2223_P1,GRNTUN2,Documented variable absent from database,1354
+IPEDS_2023-24_Final,SFA2223_P1,GRNTT2,Documented variable absent from database,1355
+IPEDS_2023-24_Final,SFA2223_P1,GRNTA2,Documented variable absent from database,1356
+IPEDS_2023-24_Final,SFA2223_P1,GRNTN1,Documented variable absent from database,1357
+IPEDS_2023-24_Final,SFA2223_P1,GRNTON1,Documented variable absent from database,1358
+IPEDS_2023-24_Final,SFA2223_P1,GRNTWF1,Documented variable absent from database,1359
+IPEDS_2023-24_Final,SFA2223_P1,GRNTOF1,Documented variable absent from database,1360
+IPEDS_2023-24_Final,SFA2223_P1,GRNTUN1,Documented variable absent from database,1361
+IPEDS_2023-24_Final,SFA2223_P1,GRNTT1,Documented variable absent from database,1362
+IPEDS_2023-24_Final,SFA2223_P1,GRNTA1,Documented variable absent from database,1363
+IPEDS_2023-24_Final,SFA2223_P1,GRNTN0,Documented variable absent from database,1364
+IPEDS_2023-24_Final,SFA2223_P1,GRNTON0,Documented variable absent from database,1365
+IPEDS_2023-24_Final,SFA2223_P1,GRNTWF0,Documented variable absent from database,1366
+IPEDS_2023-24_Final,SFA2223_P1,GRNTOF0,Documented variable absent from database,1367
+IPEDS_2023-24_Final,SFA2223_P1,GRNTUN0,Documented variable absent from database,1368
+IPEDS_2023-24_Final,SFA2223_P1,GRNTT0,Documented variable absent from database,1369
+IPEDS_2023-24_Final,SFA2223_P1,GRNTA0,Documented variable absent from database,1370
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N2,Documented variable absent from database,1371
+IPEDS_2023-24_Final,SFA2223_P1,GRN4ON2,Documented variable absent from database,1372
+IPEDS_2023-24_Final,SFA2223_P1,GRN4WF2,Documented variable absent from database,1373
+IPEDS_2023-24_Final,SFA2223_P1,GRN4OF2,Documented variable absent from database,1374
+IPEDS_2023-24_Final,SFA2223_P1,GRN4UN2,Documented variable absent from database,1375
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G2,Documented variable absent from database,1376
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T2,Documented variable absent from database,1377
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A2,Documented variable absent from database,1378
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N12,Documented variable absent from database,1379
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G12,Documented variable absent from database,1380
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T12,Documented variable absent from database,1381
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A12,Documented variable absent from database,1382
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N22,Documented variable absent from database,1383
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G22,Documented variable absent from database,1384
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T22,Documented variable absent from database,1385
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A22,Documented variable absent from database,1386
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N32,Documented variable absent from database,1387
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G32,Documented variable absent from database,1388
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T32,Documented variable absent from database,1389
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A32,Documented variable absent from database,1390
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N42,Documented variable absent from database,1391
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G42,Documented variable absent from database,1392
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T42,Documented variable absent from database,1393
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A42,Documented variable absent from database,1394
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N52,Documented variable absent from database,1395
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G52,Documented variable absent from database,1396
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T52,Documented variable absent from database,1397
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A52,Documented variable absent from database,1398
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N1,Documented variable absent from database,1399
+IPEDS_2023-24_Final,SFA2223_P1,GRN4ON1,Documented variable absent from database,1400
+IPEDS_2023-24_Final,SFA2223_P1,GRN4WF1,Documented variable absent from database,1401
+IPEDS_2023-24_Final,SFA2223_P1,GRN4OF1,Documented variable absent from database,1402
+IPEDS_2023-24_Final,SFA2223_P1,GRN4UN1,Documented variable absent from database,1403
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G1,Documented variable absent from database,1404
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T1,Documented variable absent from database,1405
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A1,Documented variable absent from database,1406
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N11,Documented variable absent from database,1407
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G11,Documented variable absent from database,1408
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T11,Documented variable absent from database,1409
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A11,Documented variable absent from database,1410
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N21,Documented variable absent from database,1411
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G21,Documented variable absent from database,1412
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T21,Documented variable absent from database,1413
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A21,Documented variable absent from database,1414
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N31,Documented variable absent from database,1415
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G31,Documented variable absent from database,1416
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T31,Documented variable absent from database,1417
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A31,Documented variable absent from database,1418
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N41,Documented variable absent from database,1419
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G41,Documented variable absent from database,1420
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T41,Documented variable absent from database,1421
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A41,Documented variable absent from database,1422
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N51,Documented variable absent from database,1423
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G51,Documented variable absent from database,1424
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T51,Documented variable absent from database,1425
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A51,Documented variable absent from database,1426
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N0,Documented variable absent from database,1427
+IPEDS_2023-24_Final,SFA2223_P1,GRN4ON0,Documented variable absent from database,1428
+IPEDS_2023-24_Final,SFA2223_P1,GRN4WF0,Documented variable absent from database,1429
+IPEDS_2023-24_Final,SFA2223_P1,GRN4OF0,Documented variable absent from database,1430
+IPEDS_2023-24_Final,SFA2223_P1,GRN4UN0,Documented variable absent from database,1431
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G0,Documented variable absent from database,1432
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T0,Documented variable absent from database,1433
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A0,Documented variable absent from database,1434
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N10,Documented variable absent from database,1435
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G10,Documented variable absent from database,1436
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T10,Documented variable absent from database,1437
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A10,Documented variable absent from database,1438
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N20,Documented variable absent from database,1439
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G20,Documented variable absent from database,1440
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T20,Documented variable absent from database,1441
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A20,Documented variable absent from database,1442
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N30,Documented variable absent from database,1443
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G30,Documented variable absent from database,1444
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T30,Documented variable absent from database,1445
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A30,Documented variable absent from database,1446
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N40,Documented variable absent from database,1447
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G40,Documented variable absent from database,1448
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T40,Documented variable absent from database,1449
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A40,Documented variable absent from database,1450
+IPEDS_2023-24_Final,SFA2223_P1,GRN4N50,Documented variable absent from database,1451
+IPEDS_2023-24_Final,SFA2223_P1,GRN4G50,Documented variable absent from database,1452
+IPEDS_2023-24_Final,SFA2223_P1,GRN4T50,Documented variable absent from database,1453
+IPEDS_2023-24_Final,SFA2223_P1,GRN4A50,Documented variable absent from database,1454
+IPEDS_2023-24_Final,SFA2223_P1,NPGRN2,Documented variable absent from database,1455
+IPEDS_2023-24_Final,SFA2223_P1,NPGRN1,Documented variable absent from database,1456
+IPEDS_2023-24_Final,SFA2223_P1,NPGRN0,Documented variable absent from database,1457
+IPEDS_2023-24_Final,SFA2223_P1,NPT412,Documented variable absent from database,1458
+IPEDS_2023-24_Final,SFA2223_P1,NPT422,Documented variable absent from database,1459
+IPEDS_2023-24_Final,SFA2223_P1,NPT432,Documented variable absent from database,1460
+IPEDS_2023-24_Final,SFA2223_P1,NPT442,Documented variable absent from database,1461
+IPEDS_2023-24_Final,SFA2223_P1,NPT452,Documented variable absent from database,1462
+IPEDS_2023-24_Final,SFA2223_P1,NPT411,Documented variable absent from database,1463
+IPEDS_2023-24_Final,SFA2223_P1,NPT421,Documented variable absent from database,1464
+IPEDS_2023-24_Final,SFA2223_P1,NPT431,Documented variable absent from database,1465
+IPEDS_2023-24_Final,SFA2223_P1,NPT441,Documented variable absent from database,1466
+IPEDS_2023-24_Final,SFA2223_P1,NPT451,Documented variable absent from database,1467
+IPEDS_2023-24_Final,SFA2223_P1,NPT410,Documented variable absent from database,1468
+IPEDS_2023-24_Final,SFA2223_P1,NPT420,Documented variable absent from database,1469
+IPEDS_2023-24_Final,SFA2223_P1,NPT430,Documented variable absent from database,1470
+IPEDS_2023-24_Final,SFA2223_P1,NPT440,Documented variable absent from database,1471
+IPEDS_2023-24_Final,SFA2223_P1,NPT450,Documented variable absent from database,1472
+IPEDS_2023-24_Final,SFA2223_P2,SCUGRAD,Documented variable absent from database,1473
+IPEDS_2023-24_Final,SFA2223_P2,SCUGDGSK,Documented variable absent from database,1474
+IPEDS_2023-24_Final,SFA2223_P2,SCUGNDGS,Documented variable absent from database,1475
+IPEDS_2023-24_Final,SFA2223_P2,SCUGFFN,Documented variable absent from database,1476
+IPEDS_2023-24_Final,SFA2223_P2,SCFA2,Documented variable absent from database,1478
+IPEDS_2023-24_Final,SFA2223_P2,SCFA2DG,Documented variable absent from database,1479
+IPEDS_2023-24_Final,SFA2223_P2,SCFA2ND,Documented variable absent from database,1480
+IPEDS_2023-24_Final,SFA2223_P2,SCFA1N,Documented variable absent from database,1481
+IPEDS_2023-24_Final,SFA2223_P2,SCFA1P,Documented variable absent from database,1482
+IPEDS_2023-24_Final,SFA2223_P2,SCFA11N,Documented variable absent from database,1483
+IPEDS_2023-24_Final,SFA2223_P2,SCFA11P,Documented variable absent from database,1484
+IPEDS_2023-24_Final,SFA2223_P2,SCFA12N,Documented variable absent from database,1485
+IPEDS_2023-24_Final,SFA2223_P2,SCFA12P,Documented variable absent from database,1486
+IPEDS_2023-24_Final,SFA2223_P2,SCFA13N,Documented variable absent from database,1487
+IPEDS_2023-24_Final,SFA2223_P2,SCFA13P,Documented variable absent from database,1488
+IPEDS_2023-24_Final,SFA2223_P2,SCFA14N,Documented variable absent from database,1489
+IPEDS_2023-24_Final,SFA2223_P2,SCFA14P,Documented variable absent from database,1490
+IPEDS_2023-24_Final,SFA2223_P2,SCFY2,Documented variable absent from database,1491
+IPEDS_2023-24_Final,SFA2223_P2,SCFY2DG,Documented variable absent from database,1492
+IPEDS_2023-24_Final,SFA2223_P2,SCFY2ND,Documented variable absent from database,1493
+IPEDS_2023-24_Final,SFA2223_P2,SCFY1N,Documented variable absent from database,1494
+IPEDS_2023-24_Final,SFA2223_P2,SCFY1P,Documented variable absent from database,1495
+IPEDS_2023-24_Final,SFA2223_P2,UAGRNTN,Documented variable absent from database,1496
+IPEDS_2023-24_Final,SFA2223_P2,UAGRNTP,Documented variable absent from database,1497
+IPEDS_2023-24_Final,SFA2223_P2,UAGRNTT,Documented variable absent from database,1498
+IPEDS_2023-24_Final,SFA2223_P2,UAGRNTA,Documented variable absent from database,1499
+IPEDS_2023-24_Final,SFA2223_P2,UDGAGRNTN,Documented variable absent from database,1500
+IPEDS_2023-24_Final,SFA2223_P2,UDGAGRNTP,Documented variable absent from database,1501
+IPEDS_2023-24_Final,SFA2223_P2,UDGAGRNTT,Documented variable absent from database,1502
+IPEDS_2023-24_Final,SFA2223_P2,UDGAGRNTA,Documented variable absent from database,1503
+IPEDS_2023-24_Final,SFA2223_P2,UNDAGRNTN,Documented variable absent from database,1504
+IPEDS_2023-24_Final,SFA2223_P2,UNDAGRNTP,Documented variable absent from database,1505
+IPEDS_2023-24_Final,SFA2223_P2,UNDAGRNTT,Documented variable absent from database,1506
+IPEDS_2023-24_Final,SFA2223_P2,UNDAGRNTA,Documented variable absent from database,1507
+IPEDS_2023-24_Final,SFA2223_P2,UPGRNTN,Documented variable absent from database,1508
+IPEDS_2023-24_Final,SFA2223_P2,UPGRNTP,Documented variable absent from database,1509
+IPEDS_2023-24_Final,SFA2223_P2,UPGRNTT,Documented variable absent from database,1510
+IPEDS_2023-24_Final,SFA2223_P2,UPGRNTA,Documented variable absent from database,1511
+IPEDS_2023-24_Final,SFA2223_P2,UDGPGRNTN,Documented variable absent from database,1512
+IPEDS_2023-24_Final,SFA2223_P2,UDGPGRNTP,Documented variable absent from database,1513
+IPEDS_2023-24_Final,SFA2223_P2,UDGPGRNTT,Documented variable absent from database,1514
+IPEDS_2023-24_Final,SFA2223_P2,UDGPGRNTA,Documented variable absent from database,1515
+IPEDS_2023-24_Final,SFA2223_P2,UNDPGRNTN,Documented variable absent from database,1516
+IPEDS_2023-24_Final,SFA2223_P2,UNDPGRNTP,Documented variable absent from database,1517
+IPEDS_2023-24_Final,SFA2223_P2,UNDPGRNTT,Documented variable absent from database,1518
+IPEDS_2023-24_Final,SFA2223_P2,UNDPGRNTA,Documented variable absent from database,1519
+IPEDS_2023-24_Final,SFA2223_P2,UFLOANN,Documented variable absent from database,1520
+IPEDS_2023-24_Final,SFA2223_P2,UFLOANP,Documented variable absent from database,1521
+IPEDS_2023-24_Final,SFA2223_P2,UFLOANT,Documented variable absent from database,1522
+IPEDS_2023-24_Final,SFA2223_P2,UFLOANA,Documented variable absent from database,1523
+IPEDS_2023-24_Final,SFA2223_P2,UDGFLOANN,Documented variable absent from database,1524
+IPEDS_2023-24_Final,SFA2223_P2,UDGFLOANP,Documented variable absent from database,1525
+IPEDS_2023-24_Final,SFA2223_P2,UDGFLOANT,Documented variable absent from database,1526
+IPEDS_2023-24_Final,SFA2223_P2,UDGFLOANA,Documented variable absent from database,1527
+IPEDS_2023-24_Final,SFA2223_P2,UNDFLOANN,Documented variable absent from database,1528
+IPEDS_2023-24_Final,SFA2223_P2,UNDFLOANP,Documented variable absent from database,1529
+IPEDS_2023-24_Final,SFA2223_P2,UNDFLOANT,Documented variable absent from database,1530
+IPEDS_2023-24_Final,SFA2223_P2,UNDFLOANA,Documented variable absent from database,1531
+IPEDS_2023-24_Final,SFA2223_P2,ANYAIDN,Documented variable absent from database,1532
+IPEDS_2023-24_Final,SFA2223_P2,ANYAIDP,Documented variable absent from database,1533
+IPEDS_2023-24_Final,SFA2223_P2,AIDFSIN,Documented variable absent from database,1534
+IPEDS_2023-24_Final,SFA2223_P2,AIDFSIP,Documented variable absent from database,1535
+IPEDS_2023-24_Final,SFA2223_P2,AGRNT_N,Documented variable absent from database,1536
+IPEDS_2023-24_Final,SFA2223_P2,AGRNT_P,Documented variable absent from database,1537
+IPEDS_2023-24_Final,SFA2223_P2,AGRNT_T,Documented variable absent from database,1538
+IPEDS_2023-24_Final,SFA2223_P2,AGRNT_A,Documented variable absent from database,1539
+IPEDS_2023-24_Final,SFA2223_P2,FGRNT_N,Documented variable absent from database,1540
+IPEDS_2023-24_Final,SFA2223_P2,FGRNT_P,Documented variable absent from database,1541
+IPEDS_2023-24_Final,SFA2223_P2,FGRNT_T,Documented variable absent from database,1542
+IPEDS_2023-24_Final,SFA2223_P2,FGRNT_A,Documented variable absent from database,1543
+IPEDS_2023-24_Final,SFA2223_P2,PGRNT_N,Documented variable absent from database,1544
+IPEDS_2023-24_Final,SFA2223_P2,PGRNT_P,Documented variable absent from database,1545
+IPEDS_2023-24_Final,SFA2223_P2,PGRNT_T,Documented variable absent from database,1546
+IPEDS_2023-24_Final,SFA2223_P2,PGRNT_A,Documented variable absent from database,1547
+IPEDS_2023-24_Final,SFA2223_P2,OFGRT_N,Documented variable absent from database,1548
+IPEDS_2023-24_Final,SFA2223_P2,OFGRT_P,Documented variable absent from database,1549
+IPEDS_2023-24_Final,SFA2223_P2,OFGRT_T,Documented variable absent from database,1550
+IPEDS_2023-24_Final,SFA2223_P2,OFGRT_A,Documented variable absent from database,1551
+IPEDS_2023-24_Final,SFA2223_P2,SGRNT_N,Documented variable absent from database,1552
+IPEDS_2023-24_Final,SFA2223_P2,SGRNT_P,Documented variable absent from database,1553
+IPEDS_2023-24_Final,SFA2223_P2,SGRNT_T,Documented variable absent from database,1554
+IPEDS_2023-24_Final,SFA2223_P2,SGRNT_A,Documented variable absent from database,1555
+IPEDS_2023-24_Final,SFA2223_P2,IGRNT_N,Documented variable absent from database,1556
+IPEDS_2023-24_Final,SFA2223_P2,IGRNT_P,Documented variable absent from database,1557
+IPEDS_2023-24_Final,SFA2223_P2,IGRNT_T,Documented variable absent from database,1558
+IPEDS_2023-24_Final,SFA2223_P2,IGRNT_A,Documented variable absent from database,1559
+IPEDS_2023-24_Final,SFA2223_P2,LOAN_N,Documented variable absent from database,1560
+IPEDS_2023-24_Final,SFA2223_P2,LOAN_P,Documented variable absent from database,1561
+IPEDS_2023-24_Final,SFA2223_P2,LOAN_T,Documented variable absent from database,1562
+IPEDS_2023-24_Final,SFA2223_P2,LOAN_A,Documented variable absent from database,1563
+IPEDS_2023-24_Final,SFA2223_P2,FLOAN_N,Documented variable absent from database,1564
+IPEDS_2023-24_Final,SFA2223_P2,FLOAN_P,Documented variable absent from database,1565
+IPEDS_2023-24_Final,SFA2223_P2,FLOAN_T,Documented variable absent from database,1566
+IPEDS_2023-24_Final,SFA2223_P2,FLOAN_A,Documented variable absent from database,1567
+IPEDS_2023-24_Final,SFA2223_P2,OLOAN_N,Documented variable absent from database,1568
+IPEDS_2023-24_Final,SFA2223_P2,OLOAN_P,Documented variable absent from database,1569
+IPEDS_2023-24_Final,SFA2223_P2,OLOAN_T,Documented variable absent from database,1570
+IPEDS_2023-24_Final,SFA2223_P2,OLOAN_A,Documented variable absent from database,1571
+IPEDS_2023-24_Final,ADM2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,AL2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,C2023_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,C2023_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,C2023_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,C2023DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,CUSTOMCGIDS2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,CUSTOMCGIDS2023,CGCITY,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,CUSTOMCGIDS2023,SECTOR,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,CUSTOMCGIDS2023,CYACTIVE,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,CUSTOMCGIDS2023,MATCH,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVADM2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVAL2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVC2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVEF122023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVEF2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVF2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVGR2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVHR2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVIC2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,DRVOM2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EAP2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EF2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EF2023A,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EF2023A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EF2023B,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EF2023C,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EF2023D,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EFFY2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EFFY2023_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EFFY2023_HS,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,EFIA2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,F2223_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,F2223_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,F2223_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,FLAGS2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,GR200_23,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,GR2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,GR2023_GENDER,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,GR2023_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,GR2023_PELL_SSL,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,HD2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,IC2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,IC2023,TUITVRY1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,IC2023,TUITVRY2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,IC2023,TUITVRY3,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,IC2023_AY,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,IC2023_PCCAMPUSES,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,IC2023_PY,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,IC2023Mission,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,OM2023,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,S2023_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,S2023_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,S2023_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,S2023_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,SAL2023_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,SAL2023_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCUGRAD,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCUGDGSK,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCUGNDGS,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCUGFFN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA2DG,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA1N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA1P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA11N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA11P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA12N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA12P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA13N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA13P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA14N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFA14P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFY2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFY2DG,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFY2ND,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFY1N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SCFY1P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UAGRNTN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UAGRNTP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UAGRNTT,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UAGRNTA,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGAGRNTN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGAGRNTP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGAGRNTT,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGAGRNTA,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDAGRNTN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDAGRNTP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDAGRNTT,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDAGRNTA,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UPGRNTN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UPGRNTP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UPGRNTT,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UPGRNTA,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGPGRNTN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGPGRNTP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGPGRNTT,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGPGRNTA,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDPGRNTN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDPGRNTP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDPGRNTT,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDPGRNTA,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UFLOANN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UFLOANP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UFLOANT,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UFLOANA,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGFLOANN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGFLOANP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGFLOANT,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UDGFLOANA,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDFLOANN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDFLOANP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDFLOANT,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,UNDFLOANA,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,ANYAIDN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,ANYAIDP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,AIDFSIN,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,AIDFSIP,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,AGRNT_N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,AGRNT_P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,AGRNT_T,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,AGRNT_A,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,FGRNT_N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,FGRNT_P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,FGRNT_T,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,FGRNT_A,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,PGRNT_N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,PGRNT_P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,PGRNT_T,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,PGRNT_A,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,OFGRT_N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,OFGRT_P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,OFGRT_T,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,OFGRT_A,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SGRNT_N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SGRNT_P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SGRNT_T,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,SGRNT_A,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,IGRNT_N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,IGRNT_P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,IGRNT_T,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,IGRNT_A,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,LOAN_N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,LOAN_P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,LOAN_T,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,LOAN_A,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,FLOAN_N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,FLOAN_P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,FLOAN_T,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,FLOAN_A,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,OLOAN_N,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,OLOAN_P,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,OLOAN_T,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p1,OLOAN_A,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,UNITID,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIST2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIST1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIST0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS412,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS422,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS432,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS442,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS452,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS411,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS421,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS431,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS441,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS451,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS410,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS420,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS430,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS440,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPIS450,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPGRN2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPGRN1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPGRN0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT412,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT422,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT432,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT442,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT452,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT411,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT421,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT431,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT441,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT451,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT410,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT420,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT430,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT440,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,NPT450,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTN2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTON2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTWF2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTOF2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTUN2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTT2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTA2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTN1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTON1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTWF1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTOF1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTUN1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTT1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTA1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTN0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTON0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTWF0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTOF0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTUN0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTT0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GISTA0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4ON2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4WF2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4OF2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4UN2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N12,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G12,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T12,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A12,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N22,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G22,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T22,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A22,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N32,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G32,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T32,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A32,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N42,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G42,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T42,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A42,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N52,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G52,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T52,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A52,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4ON1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4WF1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4OF1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4UN1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N11,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G11,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T11,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A11,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N21,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G21,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T21,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A21,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N31,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G31,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T31,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A31,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N41,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G41,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T41,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A41,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N51,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G51,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T51,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A51,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4ON0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4WF0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4OF0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4UN0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N10,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G10,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T10,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A10,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N20,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G20,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T20,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A20,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N30,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G30,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T30,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A30,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N40,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G40,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T40,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A40,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4N50,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4G50,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4T50,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GIS4A50,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTN2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTON2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTWF2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTOF2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTUN2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTT2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTA2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTN1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTON1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTWF1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTOF1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTUN1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTT1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTA1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTN0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTON0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTWF0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTOF0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTUN0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTT0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRNTA0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4ON2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4WF2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4OF2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4UN2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A2,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N12,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G12,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T12,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A12,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N22,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G22,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T22,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A22,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N32,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G32,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T32,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A32,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N42,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G42,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T42,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A42,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N52,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G52,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T52,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A52,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4ON1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4WF1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4OF1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4UN1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A1,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N11,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G11,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T11,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A11,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N21,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G21,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T21,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A21,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N31,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G31,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T31,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A31,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N41,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G41,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T41,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A41,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N51,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G51,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T51,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A51,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4ON0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4WF0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4OF0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4UN0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A0,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N10,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G10,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T10,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A10,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N20,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G20,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T20,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A20,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N30,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G30,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T30,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A30,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N40,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G40,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T40,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A40,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4N50,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4G50,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4T50,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,sfa2223_p2,GRN4A50,Database column absent from variable dictionary,
+IPEDS_2023-24_Final,SFAV2223,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,ADM2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,AL2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,C2024_A,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,C2024_B,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,C2024_C,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,C2024DEP,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,Cost1_2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,Cost2_2024_FinancialAid,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,COST2_2024_NetPrice,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,CUSTOMCGIDS2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,CUSTOMCGIDS2024,CGCITY,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,CUSTOMCGIDS2024,SECTOR,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,CUSTOMCGIDS2024,CYACTIVE,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,CUSTOMCGIDS2024,MATCH,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVADM2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVAL2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVC2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVCOST2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVEF122024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVEF2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVF2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVGR2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVHR2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,DRVOM2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EAP2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EF2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EF2024A,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EF2024A_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EF2024B,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EF2024C,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EF2024CP,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EF2024D,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EFFY2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EFFY2024_DIST,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EFFY2024_HS,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,EFIA2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,F2324_F1A,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,F2324_F2,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,F2324_F3,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,FLAGS2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,GR200_24,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,GR2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,GR2024_L2,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,GR2024_PELL_SSL,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,HD2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,IC2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,IC2024Mission,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,OM2024,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,S2024_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,S2024_NH,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,S2024_OC,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,S2024_SIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,SAL2024_IS,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,SAL2024_NIS,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,SFA2324,UNITID,Database column absent from variable dictionary,
+IPEDS_2024-25_Provisional,SFAV2324,UNITID,Database column absent from variable dictionary,

@@ -1,0 +1,812 @@
+[
+  {
+    "q": 1,
+    "question": "National aggregate for the United States: Number of postsecondary institutions in the United States that award federal student aid. Periods: 2025-26, 2024-25, 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09, 2007-08, 2006-07, 2005-06, 2004-05, 2003-04, 2002-03.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.03884600003948435,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 0.001139500003773719,
+      "answer_ready_seconds": 0.024580800032708794,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 2,
+    "question": "National aggregate for the United States: Number of students enrolled in postsecondary institutions annually. Periods: 2024-25, 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09, 2007-09, 2006-07, 2005-06, 2004-05, 2003-04, 2002-03, 2001-02.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0008513000211678445,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.999997327104211e-05,
+      "answer_ready_seconds": 0.0004460999625734985,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 3,
+    "question": "National aggregate for the United States: Number of students enrolled in postsecondary institutions in the fall. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0009210000280290842,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.509999416768551e-05,
+      "answer_ready_seconds": 0.00043950002873316407,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 4,
+    "question": "National aggregate for the United States: Number of degree-seeking undergraduate students enrolled in postsecondary institutions in the fall who are transfer-in students. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0008780999924056232,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.9499951526522636e-05,
+      "answer_ready_seconds": 0.0003865999751724303,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 5,
+    "question": "National aggregate for the United States: Number of degree-seeking undergraduate students enrolled in postsecondary institutions for the first-time in the fall. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.000825399998575449,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.240003181621432e-05,
+      "answer_ready_seconds": 0.00042159995064139366,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 8,
+    "question": "National aggregate for the United States: Number of students, by age category, enrolled in postsecondary institutions in the fall. Periods: 2023, 2021, 2019, 2017, 2015, 2013, 2011, 2009, 2007, 2005, 2003.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0006674000178463757,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.1599949579685926e-05,
+      "answer_ready_seconds": 0.0002891999902203679,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 12,
+    "question": "National aggregate for the United States: Number of full-time instructional staff are employed by degree-granting postsecondary institutions. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0006229999708011746,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.589998232200742e-05,
+      "answer_ready_seconds": 0.00032679998548701406,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 13,
+    "question": "National aggregate for the United States: Revenues (in thousands) of public postsecondary institutions using GASB standards. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007625999860465527,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.99000127799809e-05,
+      "answer_ready_seconds": 0.000368200009688735,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 15,
+    "question": "National aggregate for the United States: Revenues (in thousands) of private not-for-profit postsecondary institutions using FASB standards. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.001171400013845414,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.980001201853156e-05,
+      "answer_ready_seconds": 0.0004997999640181661,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 17,
+    "question": "National aggregate for the United States: Revenues (in thousands) of private for-profit postsecondary institutions using FASB standards. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.000735800014808774,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.860000288113952e-05,
+      "answer_ready_seconds": 0.00037159997737035155,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 19,
+    "question": "National aggregate for the United States: Graduation rate within 150% of normal time at 4-year postsecondary institutions. Periods: 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007913000299595296,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.659998765215278e-05,
+      "answer_ready_seconds": 0.0003823000006377697,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 20,
+    "question": "National aggregate for the United States: Graduation rate within 150% of normal time for bachelor's or equivalent degree-seeking undergraduate students who received a bachelor’s or equivalent degree at 4-year postsecondary institutions.. Periods: 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0011803999659605324,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 0.00011389999417588115,
+      "answer_ready_seconds": 0.0007203000131994486,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 21,
+    "question": "National aggregate for the United States: Graduation rate within 150% of normal time at 2-year postsecondary institutions. Periods: 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0008030000026337802,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.160002572461963e-05,
+      "answer_ready_seconds": 0.0003855999675579369,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 22,
+    "question": "National aggregate for the United States: Graduation rate within 150% of normal time at less-than 2-year postsecondary institutions. Periods: 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0008641000022180378,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.069996066391468e-05,
+      "answer_ready_seconds": 0.0003744999994523823,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 24,
+    "question": "National aggregate for the United States: Number of degrees/certificates awarded at postsecondary institutions. Periods: 2024-25, 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09, 2007-08, 2006-07, 2005-06, 2004-05, 2003-04, 2002-03.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0009630999993532896,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.1899969801306725e-05,
+      "answer_ready_seconds": 0.0004474000306800008,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 25,
+    "question": "National aggregate for the United States: Number of full-time, first-time students receiving financial aid. Periods: 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09, 2007-08, 2006-07, 2005-06, 2004-05, 2003-04, 2002-03, 2001-02.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0009277999633923173,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 6.610003765672445e-05,
+      "answer_ready_seconds": 0.0005218999576754868,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 30,
+    "question": "National aggregate for the United States: Number of people employed by postsecondary institutions. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007609999738633633,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.749999450519681e-05,
+      "answer_ready_seconds": 0.00036759994691237807,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 32,
+    "question": "National aggregate for the United States: Full-time retention rate in postsecondary institutions. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007066999678499997,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.120000474154949e-05,
+      "answer_ready_seconds": 0.00029930000891909003,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 33,
+    "question": "National aggregate for the United States: Part-time retention rate in postsecondary institutions. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007333999965339899,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.5400036722421646e-05,
+      "answer_ready_seconds": 0.00033660000190138817,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 34,
+    "question": "National aggregate for the United States: Percent of full-time, first-time students receiving financial aid. Periods: 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09, 2007-08, 2006-07, 2005-06, 2004-05, 2003-04, 2002-03, 2001-02.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0013253999641165137,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 6.709998706355691e-05,
+      "answer_ready_seconds": 0.0008196999551728368,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 35,
+    "question": "National aggregate for the United States: Percent of undergraduate students receiving Pell grants. Periods: 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0008518999675288796,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.9499951526522636e-05,
+      "answer_ready_seconds": 0.0004143000114709139,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 36,
+    "question": "National aggregate for the United States: Average amount of Pell grants for undergraduate students. Periods: 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0009809000184759498,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.4299970138818026e-05,
+      "answer_ready_seconds": 0.0003456000122241676,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 37,
+    "question": "National aggregate for the United States: Percent of undergraduate students receiving federal student loans. Periods: 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007716999971307814,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.8200017772614956e-05,
+      "answer_ready_seconds": 0.0003665999975055456,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 38,
+    "question": "National aggregate for the United States: Average amount of federal student loans received by undergraduate students. Periods: 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007318999851122499,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.71999922208488e-05,
+      "answer_ready_seconds": 0.00032839999767020345,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 39,
+    "question": "National aggregate for the United States: Expenses (in thousands) of public postsecondary institutions using GASB standards. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007291000219993293,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.619998460635543e-05,
+      "answer_ready_seconds": 0.0003288000007160008,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 40,
+    "question": "National aggregate for the United States: Expenses (in thousands) of private not-for-profit postsecondary institutions using FASB standards. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0008070000330917537,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 5.5500015150755644e-05,
+      "answer_ready_seconds": 0.00036880001425743103,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 41,
+    "question": "National aggregate for the United States: Expenses (in thousands) of private for-profit  postsecondary institutions using FASB standards. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007792999967932701,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.809999907389283e-05,
+      "answer_ready_seconds": 0.0003732999903149903,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 42,
+    "question": "National aggregate for the United States: Percent of students enrolled in distance education courses. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0006816999521106482,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 2.9699993319809437e-05,
+      "answer_ready_seconds": 0.0002739000483416021,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 43,
+    "question": "National aggregate for the United States: Number of full-time equivalent students enroll in postsecondary institutions annually. Periods: 2024-25, 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007501999498344958,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.7999998312443495e-05,
+      "answer_ready_seconds": 0.00034470000537112355,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 50,
+    "question": "National aggregate for the United States: Adjusted 9-month average salary. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.00044870004057884216,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 2.2199994418770075e-05,
+      "answer_ready_seconds": 0.00019150000298395753,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 51,
+    "question": "National aggregate for the United States: Number of full-time instructional staff. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2013.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0005932999774813652,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 2.6600027922540903e-05,
+      "answer_ready_seconds": 0.00024119997397065163,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 101,
+    "question": "National aggregate for the United States: Number of applications for admission from first-time, degree/certificate-seeking undergraduate students were received by postsecondary institutions in the fall. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0009376999805681407,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.529999569058418e-05,
+      "answer_ready_seconds": 0.0004020999767817557,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 102,
+    "question": "National aggregate for the United States: Percent of first-time, degree/certificate-seeking applicants to postsecondary institutions who were granted admission to enroll in the fall. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.000705599959474057,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.6400044336915016e-05,
+      "answer_ready_seconds": 0.0003170999698340893,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 103,
+    "question": "National aggregate for the United States: Percent of admitted first-time degree/certificate-seeking undergraduate students who enrolled at postsecondary institutions in the fall. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0008162999874912202,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.0499959141016006e-05,
+      "answer_ready_seconds": 0.0003440000000409782,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 110,
+    "question": "National aggregate for the United States: The total core expenses per full-time equivalent enrollment of public and private not-for-profit postsecondary institutions. Periods: 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0009221999789588153,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.980001201853156e-05,
+      "answer_ready_seconds": 0.00039060000563040376,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 150,
+    "question": "National aggregate for the United States: Number of degree-seeking undergraduate students enrolled in postsecondary institutions for the first time in the fall. Periods: 2024, 2022, 2020, 2018, 2016, 2014, 2012, 2010, 2008, 2006, 2004.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0006135000148788095,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.360002301633358e-05,
+      "answer_ready_seconds": 0.0002923999563790858,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 155,
+    "question": "National aggregate for the United States: Number of degree-seeking undergraduate students who enrolled in postsecondary institutions within 12-months of graduating high school for the first time in the fall. Periods: 2024, 2022, 2020, 2018, 2016, 2014, 2012, 2010, 2008, 2006, 2004.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.000798200024291873,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.4300046283751726e-05,
+      "answer_ready_seconds": 0.0003784999717026949,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 200,
+    "question": "National aggregate for the United States: Percent of undergraduate degree/certificate-seeking entering students. Periods: 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007575000054202974,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.400002606213093e-05,
+      "answer_ready_seconds": 0.00031759997364133596,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 205,
+    "question": "National aggregate for the United States: Average amount of tuition and required fees for full-time undergraduate students at public postsecondary institutions operating on an academic year calendar system. Periods: 2024-25, 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09, 2007-08, 2006-07, 2005-06, 2004-05, 2003-04, 2002-03.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0009092999971471727,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 5.4500007536262274e-05,
+      "answer_ready_seconds": 0.0006062000175006688,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 206,
+    "question": "National aggregate for the United States: Average amount of tuition and required fees for full-time undergraduate students at private postsecondary institutions operating on an academic year calendar system. Periods: 2024-25, 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09, 2007-08, 2006-07, 2005-06, 2004-05, 2003-04, 2002-03.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0009895000257529318,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 5.189998773857951e-05,
+      "answer_ready_seconds": 0.0005132000078447163,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 207,
+    "question": "National aggregate for the United States: Average amount of tuition and required fees for full-time graduate students at public postsecondary institutions operating on an academic year calendar system. Periods: 2024-25, 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09, 2007-08, 2006-07, 2005-06, 2004-05, 2003-04, 2002-03.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0008901000255718827,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 5.229999078437686e-05,
+      "answer_ready_seconds": 0.0005255999858491123,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 208,
+    "question": "National aggregate for the United States: average amount of tuition and required fees for full-time graduate students at private postsecondary institutions operating on an academic year calendar system. Periods: 2024-25, 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09, 2007-08, 2006-07, 2005-06, 2004-05, 2003-04, 2002-03.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0009103999473154545,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 5.1499984692782164e-05,
+      "answer_ready_seconds": 0.0005238000303506851,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 210,
+    "question": "National aggregate for the United States: Number of students awarded degrees/certificates at postsecondary institutions. Periods: 2024-25, 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0006985000218264759,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.5999983083456755e-05,
+      "answer_ready_seconds": 0.0003461999585852027,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 220,
+    "question": "National aggregate for the United States: Average amount of grant or scholarship aid from the federal government, state/local government, or the institution awarded to full-time, first-time  undergraduate students. Periods: 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0008407999994233251,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 4.780001472681761e-05,
+      "answer_ready_seconds": 0.0004570000455714762,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  },
+  {
+    "q": 221,
+    "question": "National aggregate for the United States: Average amount of student loans  awarded to full-time, first-time undergraduate students. Periods: 2023-24, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14, 2012-13, 2011-12, 2010-11, 2009-10, 2008-09.",
+    "intent": "clarify",
+    "message": "National/state/sector aggregation is deferred until missing-count, reporting-unit and geography rules are reviewed. I can compare specific institutions or help discover source definitions instead.",
+    "status": "blocked_national_scope",
+    "wall_seconds": 0.0007141000241972506,
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 3.860000288113952e-05,
+      "answer_ready_seconds": 0.00036100001307204366,
+      "live_model_calls": 0,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0
+    },
+    "estimated_api_usd": 0,
+    "model_calls": 0,
+    "entry_point": "prototype.agent.ask, fresh context, use_model=True; production analytical route, without browser/institution-name UI stage"
+  }
+]

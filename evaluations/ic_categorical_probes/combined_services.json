@@ -1,0 +1,50 @@
+{
+  "id": "combined_services",
+  "question": "Which Massachusetts degree-granting institutions offered both study abroad and on-campus childcare for students\u2019 children in 2024-25? List their names.",
+  "error_type": "ValueError",
+  "error": "Too many planning tool requests in one call.",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\evaluations\\probe_ic_categorical.py\", line 52, in run_turn\n    answer=finalize_answer(ask(question, previous=previous, use_model=True, conversation=history),question)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\prototype\\institution_confirmation.py\", line 171, in ask\n    answer=analytical_ask(effective,previous,use_model,model,conversation=conversation)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\prototype\\agent.py\", line 336, in ask\n    try:answer=_answer(effective,previous,use_model,model)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\prototype\\agent.py\", line 272, in _answer\n    answer=_ask(question,previous,use_model,model)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\prototype\\agent.py\", line 244, in _ask\n    answer=plan_catalog_question(question,catalog_previous,use_model,model)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\prototype\\catalog_planner.py\", line 760, in plan_catalog_question\n    if use_model:return finish(model_catalog_plan(question,previous,model))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\prototype\\catalog_planner.py\", line 667, in model_catalog_plan\n    if len(blocks)>4:raise ValueError('Too many planning tool requests in one call.')\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Too many planning tool requests in one call.\n",
+  "elapsed_seconds": 19.11576280009467,
+  "events": [
+    {
+      "elapsed": 0.00046550005208700895,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.5287783000385389,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.530364100006409,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 9.73969890002627,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 9.759507999988273,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 13.675991700030863,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 13.76000740006566,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 14.0907836999977,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 14.11006420000922,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    }
+  ],
+  "expected_variables": [
+    "SLO6",
+    "STUSRV8"
+  ]
+}

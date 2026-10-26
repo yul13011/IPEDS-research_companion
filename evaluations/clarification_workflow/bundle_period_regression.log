@@ -1,0 +1,6 @@
+test_confirmed_bundle_finishes_without_reasking_or_double_query (prototype.tests.test_analysis_clarification.ClarificationTests.test_confirmed_bundle_finishes_without_reasking_or_double_query) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.680s
+
+OK

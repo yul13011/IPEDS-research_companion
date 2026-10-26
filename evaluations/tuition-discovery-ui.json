@@ -1,0 +1,7 @@
+{
+  "scope": "Actual Streamlit UI using real catalog and saved live model draft; no additional live API request.",
+  "exceptions": 0,
+  "status": "accepted",
+  "fallback_caption": false,
+  "chat_messages": 2
+}

@@ -1,0 +1,1765 @@
+{
+  "timestamp": "2026-10-21T04:09:36.753097+00:00",
+  "cases": [
+    {
+      "label": "family cost",
+      "question": "What data do we have on what families actually pay?",
+      "baseline_keywords": "families actually pay",
+      "baseline_seconds": 0.18293130001984537,
+      "baseline_titles": [
+        "Student financial aid and net price",
+        "Student financial aid and net price",
+        "Average net price for full-time, first-time degree/certificate-seeking undergraduate students, 2021-22 to 2023-24",
+        "Financial aid for full-time, first-time degree/certificate-seeking undergraduate students, 2021-22 to 2023-24",
+        "Educational offerings, organization, admissions, services and athletic associations",
+        "Application fees, tuition and required fees, food and housing for undergraduate and graduate students",
+        "Public institutions - GASB 34/35",
+        "Student charges by program (vocational programs)"
+      ],
+      "expanded_titles": [
+        "Student financial aid and net price",
+        "Educational offerings, organization, admissions, services and athletic associations",
+        "Frequently used derived variables (Cost): Total cost of attendance",
+        "Application fees, tuition and required fees, food and housing for undergraduate and graduate students",
+        "Student financial aid",
+        "Branch campus locations listed on College Navigator",
+        "Private not-for-profit institutions or Public institutions using FASB",
+        "Frequently used derived variables (IC): Total cost of attendance"
+      ],
+      "baseline_target_found": true,
+      "expanded_target_found": true,
+      "original_hits_preserved": true,
+      "interpretation": {
+        "status": "verified",
+        "original_question": "What data do we have on what families actually pay?",
+        "original_keywords": "families actually pay",
+        "verified": [
+          {
+            "concept": "Net price",
+            "search_terms": [
+              "net price",
+              "average net price by income"
+            ],
+            "uncertainty": "Net price is cost of attendance minus grant aid; may or may not match what the user means by 'actually pay'.",
+            "record_ids": [
+              14723,
+              90205,
+              30242,
+              12455,
+              45040,
+              14765,
+              60154,
+              30284,
+              74983,
+              45082,
+              89689,
+              60196,
+              103968,
+              75025,
+              119944,
+              89731,
+              35,
+              104009,
+              135872,
+              104529,
+              14696,
+              120508,
+              9,
+              119987,
+              138432,
+              138438,
+              138444,
+              138459,
+              138465,
+              138471,
+              138454,
+              138460,
+              138466,
+              138458,
+              138464,
+              138470
+            ],
+            "source_matches": [
+              {
+                "record_id": 14723,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "SFA1516_P2",
+                "variable": "",
+                "title": "Student financial aid and net price: 2015-16"
+              },
+              {
+                "record_id": 90205,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "IC2021_PCCAMPUSES",
+                "variable": "PCNPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 30242,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "SFA1617_P2",
+                "variable": "",
+                "title": "Student financial aid and net price: 2016-17"
+              },
+              {
+                "record_id": 12455,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "HD2015",
+                "variable": "NPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 45040,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "SFA1718_P2",
+                "variable": "",
+                "title": "Student financial aid and net price: 2017-18"
+              },
+              {
+                "record_id": 14765,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "HD2016",
+                "variable": "NPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 60154,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "SFA1819_P2",
+                "variable": "",
+                "title": "Student financial aid and net price: 2018-19"
+              },
+              {
+                "record_id": 30284,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "HD2017",
+                "variable": "NPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 74983,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "SFA1920_P2",
+                "variable": "",
+                "title": "Student financial aid and net price: 2019-20"
+              },
+              {
+                "record_id": 45082,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "HD2018",
+                "variable": "NPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 89689,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "SFA2021_P2",
+                "variable": "",
+                "title": "Student financial aid and net price: 2020-21"
+              },
+              {
+                "record_id": 60196,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "HD2019",
+                "variable": "NPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 103968,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "SFA2122_P2",
+                "variable": "",
+                "title": "Student financial aid and net price: 2021-22"
+              },
+              {
+                "record_id": 75025,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "HD2020",
+                "variable": "NPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 119944,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "SFA2223_P2",
+                "variable": "",
+                "title": "Student financial aid and net price: 2022-23"
+              },
+              {
+                "record_id": 89731,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "HD2021",
+                "variable": "NPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 35,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "SFA1415_P2",
+                "variable": "",
+                "title": "Student financial aid and net price: 2014-15"
+              },
+              {
+                "record_id": 104009,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "HD2022",
+                "variable": "NPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 135872,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_NetPrice",
+                "variable": "",
+                "title": "Average net price for full-time, first-time degree/certificate-seeking undergraduate students, 2021-22 to 2023-24"
+              },
+              {
+                "record_id": 104529,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "IC2022_PCCAMPUSES",
+                "variable": "PCNPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 14696,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "HD2016",
+                "variable": "",
+                "title": "Directory information"
+              },
+              {
+                "record_id": 120508,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "IC2023_PCCAMPUSES",
+                "variable": "PCNPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 9,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "HD2015",
+                "variable": "",
+                "title": "Directory information"
+              },
+              {
+                "record_id": 119987,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "HD2023",
+                "variable": "NPRICURL",
+                "title": "Net price calculator web address"
+              },
+              {
+                "record_id": 138432,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPIS42",
+                "title": "Average net price - all students awarded Title IV federal financial aid, 2023-24"
+              },
+              {
+                "record_id": 138438,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPIS41",
+                "title": "Average net price - all students awarded Title IV federal financial aid, 2022-23"
+              },
+              {
+                "record_id": 138444,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPIS40",
+                "title": "Average net price - all students awarded Title IV federal financial aid, 2021-22"
+              },
+              {
+                "record_id": 138459,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPT42",
+                "title": "Average net price -all students awarded Title IV federal financial aid, 2023-24"
+              },
+              {
+                "record_id": 138465,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPT41",
+                "title": "Average net price -all students awarded Title IV federal financial aid, 2022-23"
+              },
+              {
+                "record_id": 138471,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPT40",
+                "title": "Average net price -all students awarded Title IV federal financial aid, 2021-22"
+              },
+              {
+                "record_id": 138454,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPT412",
+                "title": "Average net price (income 0-30,000)-students awarded Title IV federal financial aid, 2023-24"
+              },
+              {
+                "record_id": 138460,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPT411",
+                "title": "Average net price (income 0-30,000)-students awarded Title IV federal financial aid, 2022-23"
+              },
+              {
+                "record_id": 138466,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPT410",
+                "title": "Average net price (income 0-30,000)-students awarded Title IV federal financial aid, 2021-22"
+              },
+              {
+                "record_id": 138458,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPT452",
+                "title": "Average net price (income over 110,000)-students awarded Title IV federal financial aid, 2023-24"
+              },
+              {
+                "record_id": 138464,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPT451",
+                "title": "Average net price (income over 110,000)-students awarded Title IV federal financial aid, 2022-23"
+              },
+              {
+                "record_id": 138470,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "NPT450",
+                "title": "Average net price (income over 110,000)-students awarded Title IV federal financial aid, 2021-22"
+              }
+            ],
+            "term_checks": [
+              {
+                "term": "net price",
+                "record_ids": [
+                  14723,
+                  90205,
+                  30242,
+                  12455,
+                  45040,
+                  14765,
+                  60154,
+                  30284,
+                  74983,
+                  45082,
+                  89689,
+                  60196,
+                  103968,
+                  75025,
+                  119944,
+                  89731,
+                  35,
+                  104009,
+                  135872,
+                  104529,
+                  14696,
+                  120508,
+                  9,
+                  119987
+                ]
+              },
+              {
+                "term": "average net price by income",
+                "record_ids": [
+                  138432,
+                  138438,
+                  138444,
+                  138459,
+                  138465,
+                  138471,
+                  138454,
+                  138460,
+                  138466,
+                  138458,
+                  138464,
+                  138470
+                ]
+              }
+            ]
+          },
+          {
+            "concept": "Cost of attendance",
+            "search_terms": [
+              "cost of attendance",
+              "total price of attendance"
+            ],
+            "uncertainty": "This is a published sticker-style price, not necessarily what families actually pay.",
+            "record_ids": [
+              135869,
+              137989,
+              14,
+              137990,
+              14701,
+              137991,
+              30221,
+              138157,
+              45018,
+              138046,
+              60133,
+              138045,
+              74960,
+              138424,
+              89665,
+              138425,
+              103944,
+              138426,
+              119920,
+              138418,
+              135870,
+              138419,
+              14700,
+              138420,
+              135872,
+              135871,
+              89668,
+              103947,
+              119923,
+              137958,
+              137959,
+              138451,
+              138452
+            ],
+            "source_matches": [
+              {
+                "record_id": 135869,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "DRVCOST2024",
+                "variable": "",
+                "title": "Frequently used derived variables (Cost): Total cost of attendance"
+              },
+              {
+                "record_id": 137989,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "chg4py0",
+                "title": "Books and supplies 2021-22"
+              },
+              {
+                "record_id": 14,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "DRVIC2015",
+                "variable": "",
+                "title": "Frequently used derived variables (IC): Total cost of attendance"
+              },
+              {
+                "record_id": 137990,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "chg4py1",
+                "title": "Books and supplies 2022-23"
+              },
+              {
+                "record_id": 14701,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "DRVIC2016",
+                "variable": "",
+                "title": "Frequently used derived variables (IC): Total cost of attendance"
+              },
+              {
+                "record_id": 137991,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "chg4py2",
+                "title": "Books and supplies 2023-24"
+              },
+              {
+                "record_id": 30221,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "DRVIC2017",
+                "variable": "",
+                "title": "Frequently used derived variables (IC): Total cost of attendance"
+              },
+              {
+                "record_id": 138157,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "chg4py3",
+                "title": "Books and supplies 2024-25"
+              },
+              {
+                "record_id": 45018,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "DRVIC2018",
+                "variable": "",
+                "title": "Frequently used derived variables (IC): Total cost of attendance"
+              },
+              {
+                "record_id": 138046,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "LNAYWK1",
+                "title": "Total length of academic year (as used to calculate your Pell budget) in weeks"
+              },
+              {
+                "record_id": 60133,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "DRVIC2019",
+                "variable": "",
+                "title": "Frequently used derived variables (IC): Total cost of attendance"
+              },
+              {
+                "record_id": 138045,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "LNAYHR1",
+                "title": "Total length of academic year (as used to calculate your Pell budget) in clock or credit hours"
+              },
+              {
+                "record_id": 74960,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "DRVIC2020",
+                "variable": "",
+                "title": "Frequently used derived variables (IC): Total cost of attendance"
+              },
+              {
+                "record_id": 138424,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "COAIST42",
+                "title": "Total cost of attendance -students awarded Title IV federal financial aid, 2023-24"
+              },
+              {
+                "record_id": 89665,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "DRVIC2021",
+                "variable": "",
+                "title": "Frequently used derived variables (IC): Total cost of attendance"
+              },
+              {
+                "record_id": 138425,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "COAIST41",
+                "title": "Total cost of attendance -students awarded Title IV federal financial aid, 2022-23"
+              },
+              {
+                "record_id": 103944,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "DRVIC2022",
+                "variable": "",
+                "title": "Frequently used derived variables (IC): Total cost of attendance"
+              },
+              {
+                "record_id": 138426,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "COAIST40",
+                "title": "Total cost of attendance -students awarded Title IV federal financial aid, 2021-22"
+              },
+              {
+                "record_id": 119920,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "DRVIC2023",
+                "variable": "",
+                "title": "Frequently used derived variables (IC): Total cost of attendance"
+              },
+              {
+                "record_id": 138418,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "COAISGS2",
+                "title": "Total cost of attendance -students awarded grant and scholarsip aid, 2023-24"
+              },
+              {
+                "record_id": 135870,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "",
+                "title": "Application fees, tuition and required fees, food and housing for undergraduate and graduate students"
+              },
+              {
+                "record_id": 138419,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "COAISGS1",
+                "title": "Total cost of attendance -students awarded grant and scholarsip aid, 2022-23"
+              },
+              {
+                "record_id": 14700,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "IC2016_PY",
+                "variable": "",
+                "title": "Student charges by program (vocational programs)"
+              },
+              {
+                "record_id": 138420,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "COAISGS0",
+                "title": "Total cost of attendance -students awarded grant and scholarsip aid, 2021-22"
+              },
+              {
+                "record_id": 135872,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_NetPrice",
+                "variable": "",
+                "title": "Average net price for full-time, first-time degree/certificate-seeking undergraduate students, 2021-22 to 2023-24"
+              },
+              {
+                "record_id": 135871,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_FinancialAid",
+                "variable": "",
+                "title": "Financial aid for full-time, first-time degree/certificate-seeking undergraduate students, 2021-22 to 2023-24"
+              },
+              {
+                "record_id": 89668,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "IC2021_PCCAMPUSES",
+                "variable": "",
+                "title": "Branch campus locations listed on College Navigator"
+              },
+              {
+                "record_id": 103947,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "IC2022_PCCAMPUSES",
+                "variable": "",
+                "title": "Branch campus locations listed on College Navigator"
+              },
+              {
+                "record_id": 119923,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "IC2023_PCCAMPUSES",
+                "variable": "",
+                "title": "Branch campus locations listed on College Navigator"
+              },
+              {
+                "record_id": 137958,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "DRVCOST2024",
+                "variable": "CINDON",
+                "title": "Total price for in-district students living on campus 2024-25"
+              },
+              {
+                "record_id": 137959,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "DRVCOST2024",
+                "variable": "CINSON",
+                "title": "Total price for in-state students living on campus 2024-25"
+              },
+              {
+                "record_id": 138451,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "COAT42",
+                "title": "Total cost of attendance-students awarded Title IV federal financial aid, 2023-24"
+              },
+              {
+                "record_id": 138452,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST2_2024_netprice",
+                "variable": "COAT41",
+                "title": "Total cost of attendance-students awarded Title IV federal financial aid, 2022-23"
+              }
+            ],
+            "term_checks": [
+              {
+                "term": "cost of attendance",
+                "record_ids": [
+                  135869,
+                  137989,
+                  14,
+                  137990,
+                  14701,
+                  137991,
+                  30221,
+                  138157,
+                  45018,
+                  138046,
+                  60133,
+                  138045,
+                  74960,
+                  138424,
+                  89665,
+                  138425,
+                  103944,
+                  138426,
+                  119920,
+                  138418,
+                  135870,
+                  138419,
+                  14700,
+                  138420
+                ]
+              },
+              {
+                "term": "total price of attendance",
+                "record_ids": [
+                  135872,
+                  138424,
+                  135871,
+                  138425,
+                  89668,
+                  138426,
+                  103947,
+                  138046,
+                  119923,
+                  138418,
+                  138419,
+                  138420,
+                  138045,
+                  137958,
+                  137959,
+                  138451,
+                  138452
+                ]
+              }
+            ]
+          },
+          {
+            "concept": "Tuition and fees",
+            "search_terms": [
+              "tuition and fees",
+              "published tuition charges"
+            ],
+            "uncertainty": "Published charges, which differ from amounts paid after aid.",
+            "record_ids": [
+              135870,
+              137971,
+              14699,
+              138175,
+              30219,
+              137972,
+              60131,
+              138176,
+              74958,
+              14165,
+              89663,
+              31473,
+              103942,
+              46315,
+              119918,
+              61389,
+              12,
+              15995,
+              45016,
+              120265,
+              14700,
+              31317,
+              30220,
+              46158,
+              120377,
+              60583,
+              75424,
+              90125,
+              104423,
+              120349,
+              120363,
+              60514,
+              60525,
+              75355,
+              60132,
+              75366,
+              74959,
+              90056
+            ],
+            "source_matches": [
+              {
+                "record_id": 135870,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "",
+                "title": "Application fees, tuition and required fees, food and housing for undergraduate and graduate students"
+              },
+              {
+                "record_id": 137971,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "APPLFEEU",
+                "title": "Undergraduate program application fee"
+              },
+              {
+                "record_id": 14699,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "IC2016_AY",
+                "variable": "",
+                "title": "Student charges for academic year programs"
+              },
+              {
+                "record_id": 138175,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "APPFEEUW",
+                "title": "Undergraduate program application fee waiver"
+              },
+              {
+                "record_id": 30219,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "IC2017_AY",
+                "variable": "",
+                "title": "Student charges for academic year programs"
+              },
+              {
+                "record_id": 137972,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "APPLFEEG",
+                "title": "Graduate program application fee"
+              },
+              {
+                "record_id": 60131,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "IC2019_AY",
+                "variable": "",
+                "title": "Student charges for academic year programs"
+              },
+              {
+                "record_id": 138176,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "COST1_2024",
+                "variable": "APPFEEGW",
+                "title": "Graduate program application fee waiver"
+              },
+              {
+                "record_id": 74958,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "IC2020_AY",
+                "variable": "",
+                "title": "Student charges for academic year programs"
+              },
+              {
+                "record_id": 14165,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "F1415_F3",
+                "variable": "F3C06",
+                "title": "Allowances applied to tuition and fees"
+              },
+              {
+                "record_id": 89663,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "IC2021_AY",
+                "variable": "",
+                "title": "Student charges for academic year programs"
+              },
+              {
+                "record_id": 31473,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "F1617_F3",
+                "variable": "F3C06",
+                "title": "Discounts and allowances applied to tuition and fees"
+              },
+              {
+                "record_id": 103942,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "IC2022_AY",
+                "variable": "",
+                "title": "Student charges for academic year programs"
+              },
+              {
+                "record_id": 46315,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "F1718_F3",
+                "variable": "F3C06",
+                "title": "Discounts and allowances applied to tuition and fees"
+              },
+              {
+                "record_id": 119918,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "IC2023_AY",
+                "variable": "",
+                "title": "Student charges for academic year programs"
+              },
+              {
+                "record_id": 61389,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "F1819_F3",
+                "variable": "F3C06",
+                "title": "Discounts and allowances applied to tuition and fees"
+              },
+              {
+                "record_id": 12,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "IC2015_AY",
+                "variable": "",
+                "title": "Student charges for academic year programs"
+              },
+              {
+                "record_id": 15995,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "F1516_F3",
+                "variable": "F3C06",
+                "title": "Discounts and allowances applied to tuition and fees"
+              },
+              {
+                "record_id": 45016,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "IC2018_AY",
+                "variable": "",
+                "title": "Student charges for academic year programs"
+              },
+              {
+                "record_id": 120265,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "IC2023",
+                "variable": "APPLFEEU",
+                "title": "Undergraduate application fee"
+              },
+              {
+                "record_id": 14700,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "IC2016_PY",
+                "variable": "",
+                "title": "Student charges by program (vocational programs)"
+              },
+              {
+                "record_id": 31317,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "F1617_F2",
+                "variable": "F2C08",
+                "title": "Allowances applied to tuition and fees"
+              },
+              {
+                "record_id": 30220,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "IC2017_PY",
+                "variable": "",
+                "title": "Student charges by program (vocational programs)"
+              },
+              {
+                "record_id": 46158,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "F1718_F2",
+                "variable": "F2C08",
+                "title": "Allowances applied to tuition and fees"
+              },
+              {
+                "record_id": 120377,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "IC2023_AY",
+                "variable": "chg3fgtd",
+                "title": "Published out-of-state fees 2023-24 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 60583,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "IC2019_AY",
+                "variable": "chg3fgtd",
+                "title": "Published out-of-state fees 2019-20 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 75424,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "IC2020_AY",
+                "variable": "chg3fgtd",
+                "title": "Published out-of-state fees 2020-21 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 90125,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "IC2021_AY",
+                "variable": "chg3fgtd",
+                "title": "Published out-of-state fees 2021-22 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 104423,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "IC2022_AY",
+                "variable": "chg3fgtd",
+                "title": "Published out-of-state fees 2022-23 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 120349,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "IC2023_AY",
+                "variable": "CHG1FGTD",
+                "title": "Published in-district fees 2023-24 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 120363,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "IC2023_AY",
+                "variable": "CHG2FGTD",
+                "title": "Published in-state fees 2023-24 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 60514,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "IC2019_AY",
+                "variable": "CHG1FGTD",
+                "title": "Published in-district fees 2019-20 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 60525,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "IC2019_AY",
+                "variable": "CHG2FGTD",
+                "title": "Published in-state fees 2019-20 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 75355,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "IC2020_AY",
+                "variable": "CHG1FGTD",
+                "title": "Published in-district fees 2020-21 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 60132,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "IC2019_PY",
+                "variable": "",
+                "title": "Student charges by program (vocational programs)"
+              },
+              {
+                "record_id": 75366,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "IC2020_AY",
+                "variable": "CHG2FGTD",
+                "title": "Published in-state fees 2020-21 guaranteed percent increase (if applicable)"
+              },
+              {
+                "record_id": 74959,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "IC2020_PY",
+                "variable": "",
+                "title": "Student charges by program (vocational programs)"
+              },
+              {
+                "record_id": 90056,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "IC2021_AY",
+                "variable": "CHG1FGTD",
+                "title": "Published in-district fees 2021-22 guaranteed percent increase (if applicable)"
+              }
+            ],
+            "term_checks": [
+              {
+                "term": "tuition and fees",
+                "record_ids": [
+                  135870,
+                  137971,
+                  14699,
+                  138175,
+                  30219,
+                  137972,
+                  60131,
+                  138176,
+                  74958,
+                  14165,
+                  89663,
+                  31473,
+                  103942,
+                  46315,
+                  119918,
+                  61389,
+                  12,
+                  15995,
+                  45016,
+                  120265,
+                  14700,
+                  31317,
+                  30220,
+                  46158
+                ]
+              },
+              {
+                "term": "published tuition charges",
+                "record_ids": [
+                  135870,
+                  120377,
+                  14699,
+                  60583,
+                  30219,
+                  75424,
+                  60131,
+                  90125,
+                  74958,
+                  104423,
+                  89663,
+                  120349,
+                  103942,
+                  120363,
+                  119918,
+                  60514,
+                  14700,
+                  60525,
+                  30220,
+                  75355,
+                  60132,
+                  75366,
+                  74959,
+                  90056
+                ]
+              }
+            ]
+          },
+          {
+            "concept": "Grant aid received",
+            "search_terms": [
+              "average grant aid",
+              "students receiving financial aid"
+            ],
+            "uncertainty": "Aid amounts could be what the user wants in order to understand out-of-pocket cost.",
+            "record_ids": [
+              14722,
+              31313,
+              30241,
+              46154,
+              45039,
+              61222,
+              60153,
+              13980,
+              74982,
+              15828,
+              89688,
+              91010,
+              34,
+              137298,
+              103967,
+              31312,
+              119943,
+              46153,
+              14727,
+              61221,
+              30246,
+              76189,
+              45044,
+              106026
+            ],
+            "source_matches": [
+              {
+                "record_id": 14722,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "SFA1516_P1",
+                "variable": "",
+                "title": "Student financial aid: 2015-16"
+              },
+              {
+                "record_id": 31313,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "F1617_F2",
+                "variable": "F2C04",
+                "title": "Local grants"
+              },
+              {
+                "record_id": 30241,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "SFA1617_P1",
+                "variable": "",
+                "title": "Student financial aid: 2016-17"
+              },
+              {
+                "record_id": 46154,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "F1718_F2",
+                "variable": "F2C04",
+                "title": "Local grants"
+              },
+              {
+                "record_id": 45039,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "SFA1718_P1",
+                "variable": "",
+                "title": "Student financial aid: 2017-18"
+              },
+              {
+                "record_id": 61222,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "F1819_F2",
+                "variable": "F2C04",
+                "title": "Local grants"
+              },
+              {
+                "record_id": 60153,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "SFA1819_P1",
+                "variable": "",
+                "title": "Student financial aid: 2018-19"
+              },
+              {
+                "record_id": 13980,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "F1415_F2",
+                "variable": "F2C04",
+                "title": "Local grants"
+              },
+              {
+                "record_id": 74982,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "SFA1920_P1",
+                "variable": "",
+                "title": "Student financial aid: 2019-20"
+              },
+              {
+                "record_id": 15828,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "F1516_F2",
+                "variable": "F2C04",
+                "title": "Local grants"
+              },
+              {
+                "record_id": 89688,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "SFA2021_P1",
+                "variable": "",
+                "title": "Student financial aid: 2020-21"
+              },
+              {
+                "record_id": 91010,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "F2021_F2",
+                "variable": "F2C04",
+                "title": "Local grants"
+              },
+              {
+                "record_id": 34,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "SFA1415_P1",
+                "variable": "",
+                "title": "Student financial aid: 2014-15"
+              },
+              {
+                "record_id": 137298,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "F2324_F2",
+                "variable": "F2C04",
+                "title": "Local grants"
+              },
+              {
+                "record_id": 103967,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "SFA2122_P1",
+                "variable": "",
+                "title": "Student financial aid: 2021-22"
+              },
+              {
+                "record_id": 31312,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "F1617_F2",
+                "variable": "F2C03",
+                "title": "State grants"
+              },
+              {
+                "record_id": 119943,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "SFA2223_P1",
+                "variable": "",
+                "title": "Student financial aid: 2022-23"
+              },
+              {
+                "record_id": 46153,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "F1718_F2",
+                "variable": "F2C03",
+                "title": "State grants"
+              },
+              {
+                "record_id": 14727,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "GR2016_PELL_SSL",
+                "variable": "",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2010 (4-year) and cohort year 2013 (2-year) institutions"
+              },
+              {
+                "record_id": 61221,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "F1819_F2",
+                "variable": "F2C03",
+                "title": "State grants"
+              },
+              {
+                "record_id": 30246,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "GR2017_PELL_SSL",
+                "variable": "",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2011 (4-year) and cohort year 2014 (2-year) institutions"
+              },
+              {
+                "record_id": 76189,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "F1920_F2",
+                "variable": "F2C04",
+                "title": "Local grants"
+              },
+              {
+                "record_id": 45044,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "GR2018_PELL_SSL",
+                "variable": "",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2012 (4-year) and cohort year 2015 (2-year) institutions"
+              },
+              {
+                "record_id": 106026,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "F2122_F2",
+                "variable": "F2C04",
+                "title": "Local grants"
+              }
+            ],
+            "term_checks": [
+              {
+                "term": "average grant aid",
+                "record_ids": [
+                  14722,
+                  30241,
+                  45039,
+                  60153,
+                  74982,
+                  89688,
+                  34,
+                  103967,
+                  119943
+                ]
+              },
+              {
+                "term": "students receiving financial aid",
+                "record_ids": []
+              }
+            ]
+          }
+        ],
+        "rejected": [],
+        "ambiguous": true,
+        "calls": 1,
+        "verification_policy": "Concept tokens plus search-phrase tokens must match a single source record with a physical table/field in the requested releases. Catalog matching does not prove semantic equivalence to everyday wording.",
+        "proposal": {
+          "interpretations": [
+            {
+              "concept": "Net price",
+              "search_terms": [
+                "net price",
+                "average net price by income"
+              ],
+              "uncertainty": "Net price is cost of attendance minus grant aid; may or may not match what the user means by 'actually pay'."
+            },
+            {
+              "concept": "Cost of attendance",
+              "search_terms": [
+                "cost of attendance",
+                "total price of attendance"
+              ],
+              "uncertainty": "This is a published sticker-style price, not necessarily what families actually pay."
+            },
+            {
+              "concept": "Tuition and fees",
+              "search_terms": [
+                "tuition and fees",
+                "published tuition charges"
+              ],
+              "uncertainty": "Published charges, which differ from amounts paid after aid."
+            },
+            {
+              "concept": "Grant aid received",
+              "search_terms": [
+                "average grant aid",
+                "students receiving financial aid"
+              ],
+              "uncertainty": "Aid amounts could be what the user wants in order to understand out-of-pocket cost."
+            }
+          ],
+          "ambiguous": true
+        },
+        "elapsed_seconds": 8.488631599990185,
+        "original_hit_record_ids": [
+          14723,
+          30242,
+          45040,
+          60154,
+          74983,
+          89689,
+          103968,
+          119944,
+          35,
+          135872,
+          135871,
+          30731,
+          45494,
+          60631,
+          12710,
+          15193,
+          30728,
+          45491,
+          60628,
+          12707,
+          15190,
+          90174,
+          75472,
+          90171,
+          75469,
+          104241,
+          104238,
+          136148,
+          120205,
+          136145,
+          120202,
+          30729,
+          45492,
+          60629,
+          12708,
+          15191,
+          90172,
+          75470,
+          104239,
+          136146,
+          120203,
+          30727,
+          45490,
+          60627,
+          90170,
+          12706,
+          15189,
+          75468,
+          104237,
+          136144,
+          120201,
+          30730,
+          45493,
+          60630,
+          12709,
+          15192,
+          90173,
+          75471,
+          104240,
+          136147,
+          120204,
+          30726,
+          45489,
+          60626,
+          12705,
+          15188,
+          90169,
+          75467,
+          104236,
+          136143,
+          120238,
+          120200,
+          30671,
+          45433,
+          12694,
+          15146,
+          60570,
+          90112,
+          75411,
+          104297,
+          138161,
+          31371,
+          46212,
+          61280,
+          91098,
+          137138,
+          13799,
+          15886,
+          76277,
+          105857,
+          121845,
+          120236,
+          30669,
+          45431,
+          12692,
+          15144,
+          60568,
+          90110,
+          75409,
+          104295,
+          138159,
+          120441,
+          120447,
+          120453,
+          120459,
+          120465,
+          12867,
+          12873,
+          12879,
+          12885,
+          12891
+        ],
+        "merged_hit_record_ids": [
+          14723,
+          30731,
+          135869,
+          135870,
+          14722,
+          30242,
+          45494,
+          90205,
+          137989,
+          137971,
+          31313,
+          45040,
+          60631,
+          14,
+          14699,
+          30241,
+          60154,
+          12710,
+          12455,
+          137990,
+          138175,
+          46154,
+          74983,
+          15193,
+          14701,
+          30219,
+          45039,
+          89689,
+          30728,
+          14765,
+          137991,
+          137972,
+          61222,
+          103968,
+          45491,
+          30221,
+          60131,
+          60153,
+          119944,
+          60628,
+          30284,
+          138157,
+          138176,
+          13980,
+          35,
+          12707,
+          45018,
+          74958,
+          74982,
+          135872,
+          15190,
+          45082,
+          138046,
+          14165,
+          15828,
+          135871,
+          90174,
+          60133,
+          89663,
+          89688,
+          75472,
+          60196,
+          138045,
+          31473,
+          91010,
+          90171,
+          74960,
+          103942,
+          34,
+          75469,
+          75025,
+          138424,
+          46315,
+          137298,
+          104241,
+          89665,
+          119918,
+          103967,
+          104238,
+          89731,
+          138425,
+          61389,
+          31312,
+          136148,
+          103944,
+          12,
+          119943,
+          120205,
+          104009,
+          138426,
+          15995,
+          46153,
+          136145,
+          119920,
+          45016,
+          14727,
+          120202,
+          104529,
+          138418,
+          120265,
+          61221,
+          30729,
+          14696,
+          14700,
+          30246,
+          45492,
+          120508,
+          138419,
+          31317,
+          76189,
+          60629,
+          9,
+          30220,
+          45044,
+          12708,
+          119987,
+          138420,
+          46158,
+          106026,
+          15191,
+          138432,
+          120377,
+          90172,
+          138438,
+          60583,
+          75470,
+          138444,
+          89668,
+          75424,
+          104239,
+          138459,
+          103947,
+          90125,
+          136146,
+          138465,
+          119923,
+          104423,
+          120203,
+          138471,
+          137958,
+          120349,
+          30727,
+          138454,
+          137959,
+          120363,
+          45490,
+          138460,
+          138451,
+          60514,
+          60627,
+          138466,
+          138452,
+          60525,
+          90170,
+          138458,
+          75355,
+          12706,
+          138464,
+          60132,
+          15189,
+          138470,
+          75366,
+          75468,
+          74959,
+          104237,
+          90056,
+          136144,
+          120201,
+          30730,
+          45493,
+          60630,
+          12709,
+          15192,
+          90173,
+          75471,
+          104240,
+          136147,
+          120204,
+          30726,
+          45489,
+          60626,
+          12705,
+          15188,
+          90169,
+          75467,
+          104236,
+          136143,
+          120238,
+          120200,
+          30671,
+          45433,
+          12694,
+          15146,
+          60570,
+          90112,
+          75411,
+          104297,
+          138161,
+          31371,
+          46212,
+          61280,
+          91098,
+          137138,
+          13799,
+          15886,
+          76277,
+          105857,
+          121845,
+          120236,
+          30669,
+          45431,
+          12692,
+          15144,
+          60568,
+          90110,
+          75409,
+          104295,
+          138159,
+          120441,
+          120447,
+          120453,
+          120459,
+          120465,
+          12867,
+          12873,
+          12879,
+          12885,
+          12891
+        ],
+        "ranking_policy": "Prioritize catalog-verified interpretations; also retain original-keyword matches directly in source titles. All original hits remain in the search audit and are the fallback if no expansion verifies."
+      },
+      "narrative_status": "accepted",
+      "narrative_reason": null,
+      "message": "Here are the main data areas found in the local IPEDS files:\n\n**Survey: Student Financial Aid**\n\nReporting periods vary by data area; exact coverage is in Definitions & sources.\n\n- **Average net price after grant aid.** Average net price for full-time, first-time degree or certificate-seeking undergraduates, for those awarded grants or federal aid, with some income-level groups. Public institutions cover in-state or in-district payers.\n- **Aid types and dollar amounts.** Counts of first-time full-time and all undergraduates receiving grants and loans, with total and average aid dollars. Aid types reported differ by group and year.\n\n**Survey: Cost**\n\nReporting periods: Academic year 2024-25.\n\n- **Total cost of attendance by residency.** Derived total cost of attendance for full-time, first-time degree-seeking undergraduates, by residency and housing plan. Applies to institutions that charge by academic year.\n- **Published charges, fees, food and housing.** Published charges: application fees, tuition and required fees, and food and housing, for undergraduate and graduate students. Cost estimates feed the average net price calculation.\n\n**Survey: Institutional Characteristics**\n\nReporting periods vary by data area; exact coverage is in Definitions & sources.\n\n- **Programs, admissions and services context.** Background on program and award offerings, control, affiliation and special learning opportunities. Includes veterans' support service items. Not a price measure.\n- **Branch campus locations and costs.** Branch campus locations listed on College Navigator, with addresses and cost of attendance for branches enrolling first-time full-time undergraduates. Not a complete list.\n- **Derived cost of attendance and tuition.** Derived total cost of attendance for full-time, first-time degree-seeking undergraduates by residency and housing plan, plus published tuition and fees by year, for academic-year reporters.\n\n**Survey: Finance**\n\nReporting periods: Fiscal year 2015 through Fiscal year 2024.\n\n- **Institution finances for nonprofit and FASB schools.** Institution-level revenues, expenditures, assets and liabilities for private not-for-profit and some public FASB institutions. Gives context on costs of education, not family payments.\n\nThis is a bounded search of the local IPEDS files, not a complete inventory. Populations, coverage and definitions vary by measure and year; availability does not guarantee reported values for every institution. Some matched records come from a provisional release; see source details. Your wording can have more than one meaning; these data areas are not treated as equivalent.\n\nTell me the institution, measure and years you would like to explore.",
+      "latency": {
+        "answer_ready_seconds": 17.666390600032173,
+        "live_model_calls": 2,
+        "discovery_interpretation_seconds": 8.488631599990185,
+        "discovery_writing_seconds": 8.95910040003946
+      },
+      "wall_seconds": 17.682042800006457,
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 2,
+        "input_tokens": 50082,
+        "output_tokens": 1619,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": 0.116354,
+        "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+        "usage_complete": true,
+        "stage": "discovery writing",
+        "latency_seconds": 17.448,
+        "stages": [
+          {
+            "stage": "discovery interpretation",
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "input_tokens": 1022,
+            "output_tokens": 349,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "estimated_api_usd": 0.005534,
+            "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+            "usage_complete": true,
+            "latency_seconds": 8.489
+          },
+          {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "input_tokens": 49060,
+            "output_tokens": 1270,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "estimated_api_usd": 0.11082,
+            "pricing_basis": "Estimated standard Anthropic API rates checked 2026-10-20; excludes taxes/provider adjustments.",
+            "usage_complete": true,
+            "stage": "discovery writing",
+            "latency_seconds": 8.959
+          }
+        ]
+      }
+    }
+  ],
+  "scope": "Real local metadata and configured provider, one fresh run per phrase. Baseline is offline original keywords. Timings exclude browser paint; small descriptive sample, no SLA. Target checks are source-description substrings, not proof of semantic recall or precision. Catalog verification establishes existence, not equivalence to everyday wording.",
+  "summary": {
+    "cases": 1,
+    "baseline_targets_found": 1,
+    "expanded_targets_found": 1,
+    "original_hits_preserved": true,
+    "median_answer_seconds": 17.682042800006457,
+    "median_interpretation_seconds": 8.488631599990185,
+    "estimated_total_usd": 0.116354
+  }
+}

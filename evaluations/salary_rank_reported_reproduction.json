@@ -1,0 +1,2432 @@
+{
+  "question": "show me Yale's Average salaries equated to nine months for faculty by rank",
+  "context": "fresh conversation, Automatic",
+  "answer": {
+    "intent": "analyze",
+    "catalog_plan": {
+      "version": 2,
+      "institutions": [
+        "Yale University"
+      ],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "s",
+          "year": 2024,
+          "table": "SAL2024_IS",
+          "field_record_ids": [
+            137684,
+            137724
+          ],
+          "filters": [
+            {
+              "record_id": 137684,
+              "operator": "in",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "code_record_ids": [
+                148747,
+                148748,
+                148749,
+                148750,
+                148751,
+                148752
+              ]
+            }
+          ],
+          "group_by_record_ids": [
+            137684
+          ],
+          "aggregates": []
+        }
+      ],
+      "joins": [],
+      "expressions": [
+        {
+          "id": "avg",
+          "operator": "mean",
+          "inputs": [
+            "fs_137724"
+          ],
+          "group_by_references": [
+            "fs_137684"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "reference": "xavg",
+          "label": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25"
+        }
+      ],
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "Latest supplied release (academic year 2024-25) used since no year was specified.",
+        "Source-reported total (men and women combined) average salary equated to a 9-month contract, for full-time nonmedical instructional staff.",
+        "Single institution, one row per rank, so the mean reducer only passes through the reported value; no weighting is applied.",
+        "The all-ranks total row is excluded; ranks are professor, associate, assistant, instructor, lecturer, and no academic rank."
+      ],
+      "clarification_questions": []
+    },
+    "catalog_proposal": {
+      "catalog_plan": {
+        "version": 2,
+        "institutions": [
+          "Yale University"
+        ],
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "id": "s",
+            "year": 2024,
+            "table": "SAL2024_IS",
+            "field_record_ids": [
+              137684,
+              137724
+            ],
+            "filters": [
+              {
+                "record_id": 137684,
+                "operator": "in",
+                "values": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ],
+                "code_record_ids": [
+                  148747,
+                  148748,
+                  148749,
+                  148750,
+                  148751,
+                  148752
+                ]
+              }
+            ],
+            "group_by_record_ids": [
+              137684
+            ],
+            "aggregates": []
+          }
+        ],
+        "joins": [],
+        "expressions": [
+          {
+            "id": "avg",
+            "operator": "mean",
+            "inputs": [
+              "fs_137724"
+            ],
+            "group_by_references": [
+              "fs_137684"
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "reference": "xavg",
+            "label": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25"
+          }
+        ],
+        "missing_policy": "propagate",
+        "time_basis": "source_period",
+        "assumptions": [
+          "Latest supplied release (academic year 2024-25) used since no year was specified.",
+          "Source-reported total (men and women combined) average salary equated to a 9-month contract, for full-time nonmedical instructional staff.",
+          "Single institution, one row per rank, so the mean reducer only passes through the reported value; no weighting is applied.",
+          "The all-ranks total row is excluded; ranks are professor, associate, assistant, instructor, lecturer, and no academic rank."
+        ],
+        "clarification_questions": []
+      },
+      "question": "What are Yale University (UNITID 130794)'s average faculty salaries equated to nine months, by faculty rank?",
+      "definition_evidence": [
+        {
+          "record_id": 137684,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "physical_status": "documented_location_present",
+          "physical_locations_json": "[\"SAL2024_IS\"]",
+          "imputation_variable": "",
+          "category_count": 7,
+          "definition_hash": "0946befdaa44fe4b6477036796158f3ee364dde6c9f19ab18eb186be2f519630",
+          "normalized_hash": "9aa1ce946ce5015b223b2c099acf46029f51536a01fd25db0f937ea2803f6a13",
+          "category_hash": "d0591dd9a300aa714e6a9dd2d5b0daf6b6c7a19d39bd20e12d43ab4cdf7907aa",
+          "title": "Academic rank",
+          "long_description": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+          "data_type": "N",
+          "format": "Disc",
+          "evidence": {
+            "record_id": 137684,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "title": "Academic rank",
+            "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\nvartitle: Academic rank\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "varTable24",
+            "source_row": 1813
+          }
+        },
+        {
+          "record_id": 137724,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SAEQ9AT",
+          "physical_status": "documented_location_present",
+          "physical_locations_json": "[\"SAL2024_IS\"]",
+          "imputation_variable": "XSAEQ9AT",
+          "category_count": 0,
+          "definition_hash": "8a33a7f704fb5ce094ce0b14293d866db3b2df0051b65787783b833d15c5a531",
+          "normalized_hash": "0dfa3404cbda82f378163b1f31ee2de0abc1bf2e6420bb8d78d84a678026ae14",
+          "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "title": "Average salary for instructional staff equated to a 9-month contract-total",
+          "long_description": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+          "data_type": "N",
+          "format": "Cont",
+          "evidence": {
+            "record_id": 137724,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "SAL2024_IS",
+            "variable_name": "SAEQ9AT",
+            "title": "Average salary for instructional staff equated to a 9-month contract-total",
+            "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40967\nvarorder: 82\nvarname: SAEQ9AT\nimputationvar: XSAEQ9AT\nvartitle: Average salary for instructional staff equated to a 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "varTable24",
+            "source_row": 1853
+          }
+        }
+      ],
+      "category_evidence": [
+        {
+          "record_id": 148747,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Professor",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 1\nfrequency: 2450\npercent: 16.1\nvalueorder: 2\nvaluelabel: Professor\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10277
+        },
+        {
+          "record_id": 148748,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Associate professor",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 2\nfrequency: 2310\npercent: 15.18\nvalueorder: 3\nvaluelabel: Associate professor\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10278
+        },
+        {
+          "record_id": 148749,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Assistant professor",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 3\nfrequency: 2301\npercent: 15.12\nvalueorder: 4\nvaluelabel: Assistant professor\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10279
+        },
+        {
+          "record_id": 148750,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Instructor",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 4\nfrequency: 2593\npercent: 17.04\nvalueorder: 5\nvaluelabel: Instructor\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10280
+        },
+        {
+          "record_id": 148751,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Lecturer",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 5\nfrequency: 787\npercent: 5.17\nvalueorder: 6\nvaluelabel: Lecturer\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10281
+        },
+        {
+          "record_id": 148752,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "No academic rank",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 6\nfrequency: 993\npercent: 6.53\nvalueorder: 7\nvaluelabel: No academic rank\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10282
+        }
+      ],
+      "validation": {
+        "execution_approved": false,
+        "preflight_eligible": true,
+        "semantic_status": "runtime_cardinality_pending",
+        "blocks": []
+      },
+      "created_at": "2026-10-26T14:13:32.451862+00:00",
+      "proposal_id": "e709b8acdf8632eec864"
+    },
+    "message": "For Selected institutions combined (2024-25), Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Professor: $288,239; Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Associate professor: $176,668; Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Assistant professor: $146,018; Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Lecturer: $105,115. The reporting period and source definitions are available below.",
+    "mode": "catalog relational planner",
+    "model_usage": {
+      "model": "automatic",
+      "stages": [
+        {
+          "input_tokens": 5875,
+          "output_tokens": 1074,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 5309,
+          "model": "claude-haiku-5-5",
+          "calls": 1,
+          "latency_seconds": 6.740343099925667,
+          "estimated_api_usd": 0.0011775899999999998,
+          "stage": "initial intent interpretation",
+          "context_seconds": 16.269850500044413,
+          "client_setup_seconds": 7.129996083676815e-05,
+          "provider_seconds": 6.740283699939027
+        },
+        {
+          "model": "claude-haiku-5-5",
+          "calls": 5,
+          "planning_tool_requests": 5,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 20.032,
+          "input_tokens": 12,
+          "output_tokens": 1674,
+          "cache_creation_input_tokens": 9138,
+          "cache_read_input_tokens": 155811,
+          "estimated_api_usd": 0.0551901,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+          "stages": [
+            {
+              "calls": 0,
+              "latency_seconds": 0,
+              "estimated_api_usd": 0
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 5,
+              "planning_tool_requests": 5,
+              "semantic_repair_attempts": 1,
+              "latency_seconds": 20.032,
+              "input_tokens": 12,
+              "output_tokens": 1674,
+              "cache_creation_input_tokens": 9138,
+              "cache_read_input_tokens": 155811,
+              "estimated_api_usd": 0.0551901,
+              "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+              "stages": [
+                {
+                  "calls": 0,
+                  "latency_seconds": 0,
+                  "estimated_api_usd": 0,
+                  "stage": "institution mentions reused from initial interpretation"
+                },
+                {
+                  "model": "claude-sonnet-5-5",
+                  "calls": 5,
+                  "planning_tool_requests": 5,
+                  "semantic_repair_attempts": 1,
+                  "latency_seconds": 20.032,
+                  "input_tokens": 12,
+                  "output_tokens": 1674,
+                  "cache_creation_input_tokens": 9138,
+                  "cache_read_input_tokens": 155811,
+                  "estimated_api_usd": 0.0551901,
+                  "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "usage_complete": true,
+      "calls": 6,
+      "latency_seconds": 26.772343099925667,
+      "input_tokens": 5887,
+      "output_tokens": 2748,
+      "cache_creation_input_tokens": 9138,
+      "cache_read_input_tokens": 161120,
+      "estimated_api_usd": 0.05636769
+    },
+    "validation_attempts": [
+      {
+        "attempt": 1,
+        "blocks": [
+          "Grouped extracts need an explicit row-output and subtotal policy; this executor currently returns explicitly selected institution observations.",
+          "SAL2024_IS: select one source-documented ARANK population row before execution."
+        ]
+      }
+    ],
+    "result": {
+      "plan": {
+        "metrics": [
+          "xavg"
+        ],
+        "institutions": [
+          "Yale University"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_period",
+        "output": "table"
+      },
+      "catalog_plan": {
+        "version": 2,
+        "institutions": [
+          "Yale University"
+        ],
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "id": "s",
+            "year": 2024,
+            "table": "SAL2024_IS",
+            "field_record_ids": [
+              137684,
+              137724
+            ],
+            "filters": [
+              {
+                "record_id": 137684,
+                "operator": "in",
+                "values": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ],
+                "code_record_ids": [
+                  148747,
+                  148748,
+                  148749,
+                  148750,
+                  148751,
+                  148752
+                ]
+              }
+            ],
+            "group_by_record_ids": [
+              137684
+            ],
+            "aggregates": []
+          }
+        ],
+        "joins": [],
+        "expressions": [
+          {
+            "id": "avg",
+            "operator": "mean",
+            "inputs": [
+              "fs_137724"
+            ],
+            "group_by_references": [
+              "fs_137684"
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "reference": "xavg",
+            "label": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25"
+          }
+        ],
+        "missing_policy": "propagate",
+        "time_basis": "source_period",
+        "assumptions": [
+          "Latest supplied release (academic year 2024-25) used since no year was specified.",
+          "Source-reported total (men and women combined) average salary equated to a 9-month contract, for full-time nonmedical instructional staff.",
+          "Single institution, one row per rank, so the mean reducer only passes through the reported value; no weighting is applied.",
+          "The all-ranks total row is excluded; ranks are professor, associate, assistant, instructor, lecturer, and no academic rank."
+        ],
+        "clarification_questions": []
+      },
+      "metric_specs": {
+        "xavg": {
+          "label": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25",
+          "family": "query",
+          "unit": "monetary amount"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Selected institutions combined",
+          "unitid": null,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "2024-25",
+          "metric": "xavg",
+          "measure": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Professor",
+          "unit": "monetary amount",
+          "value": 288239.0,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "[\"Academic rank: Professor\"]",
+          "groups": [
+            "Academic rank: Professor"
+          ],
+          "available_rows": 1,
+          "requested_rows": 1,
+          "unit_metadata": {
+            "version": 1,
+            "unit": "monetary amount",
+            "status": "verified",
+            "basis": "Validated query expression",
+            "inputs": [
+              {
+                "version": 3,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "SAL2024_IS",
+                "variable": "SAEQ9AT",
+                "record_id": 137724,
+                "unit": "monetary amount",
+                "quantity_type": "currency",
+                "status": "verified",
+                "basis": "Monetary source quantity; currency/scale checked separately",
+                "evidence": [
+                  {
+                    "record_id": 137724,
+                    "excerpt": "Average salary for instructional staff equated to a 9-month contract-total"
+                  },
+                  {
+                    "record_id": 135860,
+                    "excerpt": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology."
+                  }
+                ],
+                "scale": 1,
+                "currency": null,
+                "population": null,
+                "rule_version": 3,
+                "scale_basis": "Unscaled source amount; display checks reporting convention",
+                "currency_status": "requires reporting-convention verification"
+              }
+            ]
+          }
+        },
+        {
+          "institution": "Selected institutions combined",
+          "unitid": null,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "2024-25",
+          "metric": "xavg",
+          "measure": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Associate professor",
+          "unit": "monetary amount",
+          "value": 176668.0,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "[\"Academic rank: Associate professor\"]",
+          "groups": [
+            "Academic rank: Associate professor"
+          ],
+          "available_rows": 1,
+          "requested_rows": 1,
+          "unit_metadata": {
+            "version": 1,
+            "unit": "monetary amount",
+            "status": "verified",
+            "basis": "Validated query expression",
+            "inputs": [
+              {
+                "version": 3,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "SAL2024_IS",
+                "variable": "SAEQ9AT",
+                "record_id": 137724,
+                "unit": "monetary amount",
+                "quantity_type": "currency",
+                "status": "verified",
+                "basis": "Monetary source quantity; currency/scale checked separately",
+                "evidence": [
+                  {
+                    "record_id": 137724,
+                    "excerpt": "Average salary for instructional staff equated to a 9-month contract-total"
+                  },
+                  {
+                    "record_id": 135860,
+                    "excerpt": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology."
+                  }
+                ],
+                "scale": 1,
+                "currency": null,
+                "population": null,
+                "rule_version": 3,
+                "scale_basis": "Unscaled source amount; display checks reporting convention",
+                "currency_status": "requires reporting-convention verification"
+              }
+            ]
+          }
+        },
+        {
+          "institution": "Selected institutions combined",
+          "unitid": null,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "2024-25",
+          "metric": "xavg",
+          "measure": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Assistant professor",
+          "unit": "monetary amount",
+          "value": 146018.0,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "[\"Academic rank: Assistant professor\"]",
+          "groups": [
+            "Academic rank: Assistant professor"
+          ],
+          "available_rows": 1,
+          "requested_rows": 1,
+          "unit_metadata": {
+            "version": 1,
+            "unit": "monetary amount",
+            "status": "verified",
+            "basis": "Validated query expression",
+            "inputs": [
+              {
+                "version": 3,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "SAL2024_IS",
+                "variable": "SAEQ9AT",
+                "record_id": 137724,
+                "unit": "monetary amount",
+                "quantity_type": "currency",
+                "status": "verified",
+                "basis": "Monetary source quantity; currency/scale checked separately",
+                "evidence": [
+                  {
+                    "record_id": 137724,
+                    "excerpt": "Average salary for instructional staff equated to a 9-month contract-total"
+                  },
+                  {
+                    "record_id": 135860,
+                    "excerpt": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology."
+                  }
+                ],
+                "scale": 1,
+                "currency": null,
+                "population": null,
+                "rule_version": 3,
+                "scale_basis": "Unscaled source amount; display checks reporting convention",
+                "currency_status": "requires reporting-convention verification"
+              }
+            ]
+          }
+        },
+        {
+          "institution": "Selected institutions combined",
+          "unitid": null,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "2024-25",
+          "metric": "xavg",
+          "measure": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Lecturer",
+          "unit": "monetary amount",
+          "value": 105115.0,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "[\"Academic rank: Lecturer\"]",
+          "groups": [
+            "Academic rank: Lecturer"
+          ],
+          "available_rows": 1,
+          "requested_rows": 1,
+          "unit_metadata": {
+            "version": 1,
+            "unit": "monetary amount",
+            "status": "verified",
+            "basis": "Validated query expression",
+            "inputs": [
+              {
+                "version": 3,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "SAL2024_IS",
+                "variable": "SAEQ9AT",
+                "record_id": 137724,
+                "unit": "monetary amount",
+                "quantity_type": "currency",
+                "status": "verified",
+                "basis": "Monetary source quantity; currency/scale checked separately",
+                "evidence": [
+                  {
+                    "record_id": 137724,
+                    "excerpt": "Average salary for instructional staff equated to a 9-month contract-total"
+                  },
+                  {
+                    "record_id": 135860,
+                    "excerpt": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology."
+                  }
+                ],
+                "scale": 1,
+                "currency": null,
+                "population": null,
+                "rule_version": 3,
+                "scale_basis": "Unscaled source amount; display checks reporting convention",
+                "currency_status": "requires reporting-convention verification"
+              }
+            ]
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "xavg",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "SAL2024_IS",
+          "columns": [
+            "SAEQ9AT"
+          ],
+          "filters": [
+            {
+              "record_id": 137684,
+              "operator": "in",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "code_record_ids": [
+                148747,
+                148748,
+                148749,
+                148750,
+                148751,
+                148752
+              ]
+            }
+          ],
+          "formula": {
+            "aggregates": [],
+            "expressions": [
+              {
+                "id": "avg",
+                "operator": "mean",
+                "inputs": [
+                  "fs_137724"
+                ],
+                "group_by_references": [
+                  "fs_137684"
+                ]
+              }
+            ]
+          },
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"ARANK\" AS \"ARANK\",\"SAEQ9AT\" AS \"SAEQ9AT\" FROM \"SAL2024_IS\" WHERE \"UNITID\" IN (?) AND \"ARANK\" IN (?,?,?,?,?,?) LIMIT 20001",
+          "parameters": [
+            130794,
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 137724,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "SAL2024_IS",
+              "variable_name": "SAEQ9AT",
+              "title": "Average salary for instructional staff equated to a 9-month contract-total",
+              "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40967\nvarorder: 82\nvarname: SAEQ9AT\nimputationvar: XSAEQ9AT\nvartitle: Average salary for instructional staff equated to a 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 1853,
+              "long_description": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+              "documented_table": "SAL2024_IS",
+              "physical_table": "SAL2024_IS",
+              "location_override": false,
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 148747,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 1\nfrequency: 2450\npercent: 16.1\nvalueorder: 2\nvaluelabel: Professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10277
+            },
+            {
+              "record_id": 148748,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Associate professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 2\nfrequency: 2310\npercent: 15.18\nvalueorder: 3\nvaluelabel: Associate professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10278
+            },
+            {
+              "record_id": 148749,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Assistant professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 3\nfrequency: 2301\npercent: 15.12\nvalueorder: 4\nvaluelabel: Assistant professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10279
+            },
+            {
+              "record_id": 148750,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Instructor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 4\nfrequency: 2593\npercent: 17.04\nvalueorder: 5\nvaluelabel: Instructor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10280
+            },
+            {
+              "record_id": 148751,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Lecturer",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 5\nfrequency: 787\npercent: 5.17\nvalueorder: 6\nvaluelabel: Lecturer\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10281
+            },
+            {
+              "record_id": 148752,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "No academic rank",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 6\nfrequency: 993\npercent: 6.53\nvalueorder: 7\nvaluelabel: No academic rank\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10282
+            }
+          ]
+        },
+        {
+          "metric": "xavg",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "SAL2024_IS",
+          "columns": [
+            "SAEQ9AT"
+          ],
+          "filters": [
+            {
+              "record_id": 137684,
+              "operator": "in",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "code_record_ids": [
+                148747,
+                148748,
+                148749,
+                148750,
+                148751,
+                148752
+              ]
+            }
+          ],
+          "formula": {
+            "aggregates": [],
+            "expressions": [
+              {
+                "id": "avg",
+                "operator": "mean",
+                "inputs": [
+                  "fs_137724"
+                ],
+                "group_by_references": [
+                  "fs_137684"
+                ]
+              }
+            ]
+          },
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"ARANK\" AS \"ARANK\",\"SAEQ9AT\" AS \"SAEQ9AT\" FROM \"SAL2024_IS\" WHERE \"UNITID\" IN (?) AND \"ARANK\" IN (?,?,?,?,?,?) LIMIT 20001",
+          "parameters": [
+            130794,
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 137724,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "SAL2024_IS",
+              "variable_name": "SAEQ9AT",
+              "title": "Average salary for instructional staff equated to a 9-month contract-total",
+              "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40967\nvarorder: 82\nvarname: SAEQ9AT\nimputationvar: XSAEQ9AT\nvartitle: Average salary for instructional staff equated to a 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 1853,
+              "long_description": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+              "documented_table": "SAL2024_IS",
+              "physical_table": "SAL2024_IS",
+              "location_override": false,
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 148747,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 1\nfrequency: 2450\npercent: 16.1\nvalueorder: 2\nvaluelabel: Professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10277
+            },
+            {
+              "record_id": 148748,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Associate professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 2\nfrequency: 2310\npercent: 15.18\nvalueorder: 3\nvaluelabel: Associate professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10278
+            },
+            {
+              "record_id": 148749,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Assistant professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 3\nfrequency: 2301\npercent: 15.12\nvalueorder: 4\nvaluelabel: Assistant professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10279
+            },
+            {
+              "record_id": 148750,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Instructor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 4\nfrequency: 2593\npercent: 17.04\nvalueorder: 5\nvaluelabel: Instructor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10280
+            },
+            {
+              "record_id": 148751,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Lecturer",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 5\nfrequency: 787\npercent: 5.17\nvalueorder: 6\nvaluelabel: Lecturer\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10281
+            },
+            {
+              "record_id": 148752,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "No academic rank",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 6\nfrequency: 993\npercent: 6.53\nvalueorder: 7\nvaluelabel: No academic rank\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10282
+            }
+          ]
+        },
+        {
+          "metric": "xavg",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "SAL2024_IS",
+          "columns": [
+            "SAEQ9AT"
+          ],
+          "filters": [
+            {
+              "record_id": 137684,
+              "operator": "in",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "code_record_ids": [
+                148747,
+                148748,
+                148749,
+                148750,
+                148751,
+                148752
+              ]
+            }
+          ],
+          "formula": {
+            "aggregates": [],
+            "expressions": [
+              {
+                "id": "avg",
+                "operator": "mean",
+                "inputs": [
+                  "fs_137724"
+                ],
+                "group_by_references": [
+                  "fs_137684"
+                ]
+              }
+            ]
+          },
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"ARANK\" AS \"ARANK\",\"SAEQ9AT\" AS \"SAEQ9AT\" FROM \"SAL2024_IS\" WHERE \"UNITID\" IN (?) AND \"ARANK\" IN (?,?,?,?,?,?) LIMIT 20001",
+          "parameters": [
+            130794,
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 137724,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "SAL2024_IS",
+              "variable_name": "SAEQ9AT",
+              "title": "Average salary for instructional staff equated to a 9-month contract-total",
+              "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40967\nvarorder: 82\nvarname: SAEQ9AT\nimputationvar: XSAEQ9AT\nvartitle: Average salary for instructional staff equated to a 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 1853,
+              "long_description": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+              "documented_table": "SAL2024_IS",
+              "physical_table": "SAL2024_IS",
+              "location_override": false,
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 148747,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 1\nfrequency: 2450\npercent: 16.1\nvalueorder: 2\nvaluelabel: Professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10277
+            },
+            {
+              "record_id": 148748,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Associate professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 2\nfrequency: 2310\npercent: 15.18\nvalueorder: 3\nvaluelabel: Associate professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10278
+            },
+            {
+              "record_id": 148749,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Assistant professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 3\nfrequency: 2301\npercent: 15.12\nvalueorder: 4\nvaluelabel: Assistant professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10279
+            },
+            {
+              "record_id": 148750,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Instructor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 4\nfrequency: 2593\npercent: 17.04\nvalueorder: 5\nvaluelabel: Instructor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10280
+            },
+            {
+              "record_id": 148751,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Lecturer",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 5\nfrequency: 787\npercent: 5.17\nvalueorder: 6\nvaluelabel: Lecturer\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10281
+            },
+            {
+              "record_id": 148752,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "No academic rank",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 6\nfrequency: 993\npercent: 6.53\nvalueorder: 7\nvaluelabel: No academic rank\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10282
+            }
+          ]
+        },
+        {
+          "metric": "xavg",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "SAL2024_IS",
+          "columns": [
+            "SAEQ9AT"
+          ],
+          "filters": [
+            {
+              "record_id": 137684,
+              "operator": "in",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "code_record_ids": [
+                148747,
+                148748,
+                148749,
+                148750,
+                148751,
+                148752
+              ]
+            }
+          ],
+          "formula": {
+            "aggregates": [],
+            "expressions": [
+              {
+                "id": "avg",
+                "operator": "mean",
+                "inputs": [
+                  "fs_137724"
+                ],
+                "group_by_references": [
+                  "fs_137684"
+                ]
+              }
+            ]
+          },
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"ARANK\" AS \"ARANK\",\"SAEQ9AT\" AS \"SAEQ9AT\" FROM \"SAL2024_IS\" WHERE \"UNITID\" IN (?) AND \"ARANK\" IN (?,?,?,?,?,?) LIMIT 20001",
+          "parameters": [
+            130794,
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 137724,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "SAL2024_IS",
+              "variable_name": "SAEQ9AT",
+              "title": "Average salary for instructional staff equated to a 9-month contract-total",
+              "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40967\nvarorder: 82\nvarname: SAEQ9AT\nimputationvar: XSAEQ9AT\nvartitle: Average salary for instructional staff equated to a 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 1853,
+              "long_description": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+              "documented_table": "SAL2024_IS",
+              "physical_table": "SAL2024_IS",
+              "location_override": false,
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 148747,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 1\nfrequency: 2450\npercent: 16.1\nvalueorder: 2\nvaluelabel: Professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10277
+            },
+            {
+              "record_id": 148748,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Associate professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 2\nfrequency: 2310\npercent: 15.18\nvalueorder: 3\nvaluelabel: Associate professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10278
+            },
+            {
+              "record_id": 148749,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Assistant professor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 3\nfrequency: 2301\npercent: 15.12\nvalueorder: 4\nvaluelabel: Assistant professor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10279
+            },
+            {
+              "record_id": 148750,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Instructor",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 4\nfrequency: 2593\npercent: 17.04\nvalueorder: 5\nvaluelabel: Instructor\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10280
+            },
+            {
+              "record_id": 148751,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Lecturer",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 5\nfrequency: 787\npercent: 5.17\nvalueorder: 6\nvaluelabel: Lecturer\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10281
+            },
+            {
+              "record_id": 148752,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "No academic rank",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 6\nfrequency: 993\npercent: 6.53\nvalueorder: 7\nvaluelabel: No academic rank\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10282
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "xavg": "Average salary for instructional staff equated to a 9-month contract-total: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)"
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Latest supplied release (academic year 2024-25) used since no year was specified.",
+        "Source-reported total (men and women combined) average salary equated to a 9-month contract, for full-time nonmedical instructional staff.",
+        "Single institution, one row per rank, so the mean reducer only passes through the reported value; no weighting is applied.",
+        "The all-ranks total row is excluded; ranks are professor, associate, assistant, instructor, lecturer, and no academic rank.",
+        "Source row domains, missingness policy, join cardinality and typed calculations are retained in the audit. Missing values are not zeros."
+      ],
+      "created_at": "2026-10-26T14:13:33.241330+00:00",
+      "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+      "review_status": "Source-bound relational plan with observed grain, bounded domains, cardinality and typed-operation validation.",
+      "coverage": {
+        "requested_cells": 4,
+        "available_cells": 4
+      },
+      "query_audit": [
+        {
+          "source_id": "s",
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"ARANK\" AS \"ARANK\",\"SAEQ9AT\" AS \"SAEQ9AT\" FROM \"SAL2024_IS\" WHERE \"UNITID\" IN (?) AND \"ARANK\" IN (?,?,?,?,?,?) LIMIT 20001",
+          "parameters": [
+            130794,
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "selected_rows": 4,
+          "raw_keys": [
+            "UNITID",
+            "ARANK"
+          ],
+          "row_limit": 20000,
+          "requested_unitids": [
+            130794
+          ],
+          "missing_unitids": [],
+          "missing_codes": {
+            "137724": [],
+            "137684": []
+          }
+        }
+      ],
+      "join_validation": [],
+      "semantic_validation": {
+        "execution_approved": true,
+        "version": 2,
+        "missing_policy": "propagate",
+        "time_basis": "source_period"
+      },
+      "catalog_evidence": {
+        "definition_evidence": [
+          {
+            "record_id": 137684,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "physical_status": "documented_location_present",
+            "physical_locations_json": "[\"SAL2024_IS\"]",
+            "imputation_variable": "",
+            "category_count": 7,
+            "definition_hash": "0946befdaa44fe4b6477036796158f3ee364dde6c9f19ab18eb186be2f519630",
+            "normalized_hash": "9aa1ce946ce5015b223b2c099acf46029f51536a01fd25db0f937ea2803f6a13",
+            "category_hash": "d0591dd9a300aa714e6a9dd2d5b0daf6b6c7a19d39bd20e12d43ab4cdf7907aa",
+            "title": "Academic rank",
+            "long_description": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+            "data_type": "N",
+            "format": "Disc",
+            "evidence": {
+              "record_id": 137684,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "Academic rank",
+              "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\nvartitle: Academic rank\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 1813
+            }
+          },
+          {
+            "record_id": 137724,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table_name": "SAL2024_IS",
+            "variable_name": "SAEQ9AT",
+            "physical_status": "documented_location_present",
+            "physical_locations_json": "[\"SAL2024_IS\"]",
+            "imputation_variable": "XSAEQ9AT",
+            "category_count": 0,
+            "definition_hash": "8a33a7f704fb5ce094ce0b14293d866db3b2df0051b65787783b833d15c5a531",
+            "normalized_hash": "0dfa3404cbda82f378163b1f31ee2de0abc1bf2e6420bb8d78d84a678026ae14",
+            "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "title": "Average salary for instructional staff equated to a 9-month contract-total",
+            "long_description": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+            "data_type": "N",
+            "format": "Cont",
+            "evidence": {
+              "record_id": 137724,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "SAL2024_IS",
+              "variable_name": "SAEQ9AT",
+              "title": "Average salary for instructional staff equated to a 9-month contract-total",
+              "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40967\nvarorder: 82\nvarname: SAEQ9AT\nimputationvar: XSAEQ9AT\nvartitle: Average salary for instructional staff equated to a 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 1853
+            }
+          }
+        ],
+        "category_evidence": [
+          {
+            "record_id": 148747,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "code_value",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "title": "Professor",
+            "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 1\nfrequency: 2450\npercent: 16.1\nvalueorder: 2\nvaluelabel: Professor\nvartitle: Academic rank",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "valueSets24",
+            "source_row": 10277
+          },
+          {
+            "record_id": 148748,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "code_value",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "title": "Associate professor",
+            "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 2\nfrequency: 2310\npercent: 15.18\nvalueorder: 3\nvaluelabel: Associate professor\nvartitle: Academic rank",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "valueSets24",
+            "source_row": 10278
+          },
+          {
+            "record_id": 148749,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "code_value",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "title": "Assistant professor",
+            "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 3\nfrequency: 2301\npercent: 15.12\nvalueorder: 4\nvaluelabel: Assistant professor\nvartitle: Academic rank",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "valueSets24",
+            "source_row": 10279
+          },
+          {
+            "record_id": 148750,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "code_value",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "title": "Instructor",
+            "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 4\nfrequency: 2593\npercent: 17.04\nvalueorder: 5\nvaluelabel: Instructor\nvartitle: Academic rank",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "valueSets24",
+            "source_row": 10280
+          },
+          {
+            "record_id": 148751,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "code_value",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "title": "Lecturer",
+            "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 5\nfrequency: 787\npercent: 5.17\nvalueorder: 6\nvaluelabel: Lecturer\nvartitle: Academic rank",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "valueSets24",
+            "source_row": 10281
+          },
+          {
+            "record_id": 148752,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "code_value",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "title": "No academic rank",
+            "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 6\nfrequency: 993\npercent: 6.53\nvalueorder: 7\nvaluelabel: No academic rank\nvartitle: Academic rank",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "valueSets24",
+            "source_row": 10282
+          }
+        ],
+        "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+        "table_evidence": [
+          {
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table_name": "SAL2024_IS",
+            "family": "SAL{YEAR}_IS",
+            "profile": {
+              "candidate_key": [
+                "UNITID",
+                "ARANK"
+              ],
+              "distinct_institutions": 3782,
+              "expected_rows_match": true,
+              "key_status": "observed_unique_candidate_review_required",
+              "null_institution_ids": 0,
+              "query_count": 2,
+              "rows": 15216,
+              "status": "profiled"
+            },
+            "period_evidence": [
+              {
+                "record_id": 135860,
+                "release_date": null,
+                "release_status": "Provisional",
+                "year_coverage": "2024-25"
+              }
+            ],
+            "population_evidence": [
+              {
+                "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology.",
+                "record_id": 135860,
+                "title": "Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25"
+              }
+            ],
+            "source_definitions": [
+              {
+                "record_id": 135860,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "table_definition",
+                "table_name": "SAL2024_IS",
+                "variable_name": "",
+                "title": "Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\nyearcoverage: 2024-25\ntablename: SAL2024_IS\ntablenumber: 91\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\ndescription: This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology.\nrelease: Provisional\nrelease_date: January 2026",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "tables24",
+                "source_row": 41
+              }
+            ]
+          }
+        ]
+      },
+      "population_evidence": {},
+      "field_semantics": {
+        "137684": {
+          "version": 3,
+          "record_id": 137684,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table": "SAL2024_IS",
+          "variable": "ARANK",
+          "source_title": "Academic rank",
+          "measure_base": "academic rank",
+          "dimensions": {},
+          "unit": "coded",
+          "numeric_kind": "coded_or_other",
+          "additive": false,
+          "total_scope": false,
+          "reporting_periods": [
+            "2024-25"
+          ],
+          "field_time_qualifiers": [],
+          "population_evidence": [
+            {
+              "record_id": 135860,
+              "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution"
+            }
+          ],
+          "required_row_selectors": [
+            "ARANK"
+          ],
+          "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+          "category_overlap_warning": false,
+          "evidence": {
+            "variable_record_id": 137684,
+            "table_record_ids": [
+              135860
+            ],
+            "title_excerpt": "Academic rank",
+            "definition_excerpt": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+            "unit_basis_excerpt": "Academic rank"
+          },
+          "readiness": "described",
+          "execution_approved": false,
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "SAL2024_IS",
+            "variable": "ARANK",
+            "record_id": 137684,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 137684,
+                "excerpt": "Academic rank"
+              },
+              {
+                "record_id": 135860,
+                "excerpt": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology."
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        "137724": {
+          "version": 3,
+          "record_id": 137724,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table": "SAL2024_IS",
+          "variable": "SAEQ9AT",
+          "source_title": "Average salary for instructional staff equated to a 9-month contract-total",
+          "measure_base": "average salary for instructional staff equated to a 9 month contract",
+          "dimensions": {},
+          "unit": "monetary amount",
+          "numeric_kind": "continuous",
+          "additive": false,
+          "total_scope": true,
+          "reporting_periods": [
+            "2024-25"
+          ],
+          "field_time_qualifiers": [],
+          "population_evidence": [
+            {
+              "record_id": 135860,
+              "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution"
+            }
+          ],
+          "required_row_selectors": [
+            "ARANK"
+          ],
+          "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+          "category_overlap_warning": false,
+          "evidence": {
+            "variable_record_id": 137724,
+            "table_record_ids": [
+              135860
+            ],
+            "title_excerpt": "Average salary for instructional staff equated to a 9-month contract-total",
+            "definition_excerpt": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+            "unit_basis_excerpt": "Average salary for instructional staff equated to a 9-month contract-total"
+          },
+          "readiness": "described",
+          "execution_approved": false,
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "SAL2024_IS",
+            "variable": "SAEQ9AT",
+            "record_id": 137724,
+            "unit": "monetary amount",
+            "quantity_type": "currency",
+            "status": "verified",
+            "basis": "Monetary source quantity; currency/scale checked separately",
+            "evidence": [
+              {
+                "record_id": 137724,
+                "excerpt": "Average salary for instructional staff equated to a 9-month contract-total"
+              },
+              {
+                "record_id": 135860,
+                "excerpt": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology."
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3,
+            "scale_basis": "Unscaled source amount; display checks reporting convention",
+            "currency_status": "requires reporting-convention verification"
+          }
+        }
+      },
+      "latency": {
+        "answer_ready_seconds": 47.98466259997804,
+        "live_model_calls": 6
+      },
+      "result_id": "26b949550f2c9a7a",
+      "intent_validation": {
+        "contract": {
+          "version": 1,
+          "original_question": "What are Yale University (UNITID 130794)'s average faculty salaries equated to nine months, by faculty rank?",
+          "scope_question": "What are Yale University (UNITID 130794)'s average faculty salaries equated to nine months, by faculty rank?",
+          "expected_years": null,
+          "time_basis": "observation",
+          "temporal": false,
+          "period_count": null,
+          "unitids": [
+            130794
+          ],
+          "inherit_institutions": false,
+          "dimensions": [],
+          "percentage": false,
+          "undergraduate": false
+        },
+        "plan_checks": [
+          "requested institutions",
+          "requested time scope"
+        ],
+        "policy": "Bounded independent checks; existing source/population/formula validators remain authoritative. Unknown semantic equivalence is not certified.",
+        "result_checks": [
+          "institution scope",
+          "actual reporting periods",
+          "requested output kind and breakdown cardinality"
+        ],
+        "status": "passed"
+      },
+      "planning_validation": {
+        "repair_attempts": [
+          {
+            "attempt": 1,
+            "blocks": [
+              "Grouped extracts need an explicit row-output and subtotal policy; this executor currently returns explicitly selected institution observations.",
+              "SAL2024_IS: select one source-documented ARANK population row before execution."
+            ]
+          }
+        ]
+      },
+      "institution_identity": {
+        "unitids": [
+          130794
+        ],
+        "original_question": "What are Yale's average faculty salaries equated to nine months, by faculty rank?",
+        "original_mentions": [
+          "Yale"
+        ],
+        "confirmed_choices": {
+          "yale": 130794
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Yale University \u00b7 New Haven, CT \u00b7 UNITID 130794"
+        ]
+      }
+    },
+    "latency": {
+      "answer_ready_seconds": 47.98466259997804,
+      "live_model_calls": 6
+    },
+    "presentation": {
+      "chart_type": "bar",
+      "show_table": false,
+      "table_reason": null,
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "da0293f7ad7cd93e",
+      "status": "completed",
+      "goal": "What are Yale University (UNITID 130794)'s average faculty salaries equated to nine months, by faculty rank?",
+      "original_question": "What are Yale University (UNITID 130794)'s average faculty salaries equated to nine months, by faculty rank?",
+      "question": "For Selected institutions combined (2024-25), Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Professor: $288,239; Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Associate professor: $176,668; Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Assistant professor: $146,018; Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25 \u00b7 Academic rank: Lecturer: $105,115. The reporting period and source definitions are available below.",
+      "scope": {
+        "institutions": [
+          "Yale University"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          {
+            "reference": "xavg",
+            "label": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25"
+          }
+        ],
+        "breakdowns": [
+          [
+            137684
+          ]
+        ],
+        "time_basis": "source_period",
+        "assumptions": [
+          "Latest supplied release (academic year 2024-25) used since no year was specified.",
+          "Source-reported total (men and women combined) average salary equated to a 9-month contract, for full-time nonmedical instructional staff.",
+          "Single institution, one row per rank, so the mean reducer only passes through the reported value; no weighting is applied.",
+          "The all-ranks total row is excluded; ranks are professor, associate, assistant, instructor, lecturer, and no academic rank."
+        ]
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        130794
+      ],
+      "original_question": "What are Yale's average faculty salaries equated to nine months, by faculty rank?",
+      "original_mentions": [
+        "Yale"
+      ],
+      "confirmed_choices": {
+        "yale": 130794
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Yale University \u00b7 New Haven, CT \u00b7 UNITID 130794"
+      ]
+    },
+    "intent_interpretation": {
+      "route": "numerical",
+      "relationship": "new",
+      "question": "What are Yale's average faculty salaries equated to nine months, by faculty rank?",
+      "message": "",
+      "institution_mentions": [
+        "Yale"
+      ],
+      "referenced_turns": [],
+      "target_result_id": "",
+      "chart_edits": [],
+      "documentation": {
+        "kind": "none",
+        "terms": [],
+        "years": []
+      },
+      "original_question": "show me Yale's Average salaries equated to nine months for faculty by rank"
+    },
+    "resolved_question": "What are Yale's average faculty salaries equated to nine months, by faculty rank?",
+    "task_tracking": {
+      "tasks": [
+        {
+          "id": "t1",
+          "request": "show me Yale's Average salaries equated to nine months for faculty by rank",
+          "depends_on": [],
+          "status": "answered"
+        }
+      ],
+      "all_parts_accounted_for": true,
+      "complete": true
+    },
+    "request_plan": {
+      "tasks": [
+        {
+          "route": "numerical",
+          "relationship": "new",
+          "question": "What are Yale's average faculty salaries equated to nine months, by faculty rank?",
+          "message": "",
+          "institution_mentions": [
+            "Yale"
+          ],
+          "referenced_turns": [],
+          "target_result_id": "",
+          "chart_edits": [],
+          "documentation": {
+            "kind": "none",
+            "terms": [],
+            "years": []
+          },
+          "id": "t1",
+          "request": "show me Yale's Average salaries equated to nine months for faculty by rank",
+          "depends_on": [],
+          "binding": "new",
+          "subject_result_id": "",
+          "changes": [
+            "measure",
+            "population"
+          ],
+          "period_selection": "as_requested",
+          "coverage": {
+            "operation": "none",
+            "measure_ids": [],
+            "field_record_ids": [],
+            "institutions": [],
+            "topic": "",
+            "time_basis": "observation",
+            "requested_years": [],
+            "inherit_working": false,
+            "requested_chart": "",
+            "scope_mode": "explicit"
+          }
+        }
+      ]
+    },
+    "working_analysis": {
+      "version": 1,
+      "subject": {
+        "question": "What are Yale's average faculty salaries equated to nine months, by faculty rank?",
+        "plan": {
+          "version": 2,
+          "institutions": [
+            "Yale University"
+          ],
+          "source_years": [
+            2024
+          ],
+          "sources": [
+            {
+              "id": "s",
+              "year": 2024,
+              "table": "SAL2024_IS",
+              "field_record_ids": [
+                137684,
+                137724
+              ],
+              "filters": [
+                {
+                  "record_id": 137684,
+                  "operator": "in",
+                  "values": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                  ],
+                  "code_record_ids": [
+                    148747,
+                    148748,
+                    148749,
+                    148750,
+                    148751,
+                    148752
+                  ]
+                }
+              ],
+              "group_by_record_ids": [
+                137684
+              ],
+              "aggregates": []
+            }
+          ],
+          "joins": [],
+          "expressions": [
+            {
+              "id": "avg",
+              "operator": "mean",
+              "inputs": [
+                "fs_137724"
+              ],
+              "group_by_references": [
+                "fs_137684"
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "reference": "xavg",
+              "label": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25"
+            }
+          ],
+          "missing_policy": "propagate",
+          "time_basis": "source_period",
+          "assumptions": [
+            "Latest supplied release (academic year 2024-25) used since no year was specified.",
+            "Source-reported total (men and women combined) average salary equated to a 9-month contract, for full-time nonmedical instructional staff.",
+            "Single institution, one row per rank, so the mean reducer only passes through the reported value; no weighting is applied.",
+            "The all-ranks total row is excluded; ranks are professor, associate, assistant, instructor, lecturer, and no academic rank."
+          ],
+          "clarification_questions": []
+        },
+        "measure_ids": [],
+        "field_record_ids": [
+          137684,
+          137724
+        ],
+        "institutions": [
+          "130794"
+        ],
+        "periods": [
+          2024
+        ],
+        "time_basis": "source_period",
+        "population_signature": {
+          "directory_population": null,
+          "selectors": {
+            "SAL{year}_IS.ARANK": [
+              [
+                "domain",
+                [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ]
+              ]
+            ]
+          }
+        },
+        "quantity_fields": [
+          "SAL{year}_IS.SAEQ9AT"
+        ]
+      },
+      "artifact": {
+        "result_id": "26b949550f2c9a7a",
+        "turn": 1,
+        "subject": {
+          "question": "What are Yale's average faculty salaries equated to nine months, by faculty rank?",
+          "plan": {
+            "version": 2,
+            "institutions": [
+              "Yale University"
+            ],
+            "source_years": [
+              2024
+            ],
+            "sources": [
+              {
+                "id": "s",
+                "year": 2024,
+                "table": "SAL2024_IS",
+                "field_record_ids": [
+                  137684,
+                  137724
+                ],
+                "filters": [
+                  {
+                    "record_id": 137684,
+                    "operator": "in",
+                    "values": [
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "6"
+                    ],
+                    "code_record_ids": [
+                      148747,
+                      148748,
+                      148749,
+                      148750,
+                      148751,
+                      148752
+                    ]
+                  }
+                ],
+                "group_by_record_ids": [
+                  137684
+                ],
+                "aggregates": []
+              }
+            ],
+            "joins": [],
+            "expressions": [
+              {
+                "id": "avg",
+                "operator": "mean",
+                "inputs": [
+                  "fs_137724"
+                ],
+                "group_by_references": [
+                  "fs_137684"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "reference": "xavg",
+                "label": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25"
+              }
+            ],
+            "missing_policy": "propagate",
+            "time_basis": "source_period",
+            "assumptions": [
+              "Latest supplied release (academic year 2024-25) used since no year was specified.",
+              "Source-reported total (men and women combined) average salary equated to a 9-month contract, for full-time nonmedical instructional staff.",
+              "Single institution, one row per rank, so the mean reducer only passes through the reported value; no weighting is applied.",
+              "The all-ranks total row is excluded; ranks are professor, associate, assistant, instructor, lecturer, and no academic rank."
+            ],
+            "clarification_questions": []
+          },
+          "measure_ids": [],
+          "field_record_ids": [
+            137684,
+            137724
+          ],
+          "institutions": [
+            "130794"
+          ],
+          "periods": [
+            2024
+          ],
+          "time_basis": "source_period",
+          "population_signature": {
+            "directory_population": null,
+            "selectors": {
+              "SAL{year}_IS.ARANK": [
+                [
+                  "domain",
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                  ]
+                ]
+              ]
+            }
+          },
+          "quantity_fields": [
+            "SAL{year}_IS.SAEQ9AT"
+          ]
+        }
+      },
+      "last_coverage": null,
+      "open_tasks": []
+    },
+    "model_policy": {
+      "strategy": "conservative automatic",
+      "router_model": "claude-haiku-5-5",
+      "reviewed_planner_model": "claude-haiku-5-5",
+      "catalog_planner_model": "claude-sonnet-5-5",
+      "discovery_writer_model": "claude-sonnet-5-5",
+      "interpretation_retries": [],
+      "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+    }
+  },
+  "calls": [
+    {
+      "model": "claude-haiku-5-5",
+      "cost": 0.0011775899999999998,
+      "tool_inputs": [
+        {
+          "tasks": [
+            {
+              "route": "numerical",
+              "relationship": "new",
+              "question": "What are Yale's average faculty salaries equated to nine months, by faculty rank?",
+              "message": "",
+              "institution_mentions": [
+                "Yale"
+              ],
+              "referenced_turns": [],
+              "target_result_id": "",
+              "chart_edits": [],
+              "documentation": {
+                "kind": "none",
+                "terms": [],
+                "years": []
+              },
+              "id": "t1",
+              "request": "show me Yale's Average salaries equated to nine months for faculty by rank",
+              "depends_on": [],
+              "binding": "new",
+              "subject_result_id": "",
+              "changes": [
+                "measure",
+                "population"
+              ],
+              "period_selection": "as_requested",
+              "coverage": {
+                "operation": "none",
+                "measure_ids": [],
+                "field_record_ids": [],
+                "institutions": [],
+                "topic": "",
+                "time_basis": "observation",
+                "requested_years": [],
+                "inherit_working": false,
+                "requested_chart": "",
+                "scope_mode": "explicit"
+              }
+            }
+          ]
+        }
+      ],
+      "input_tokens": 5875,
+      "output_tokens": 1074,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5309
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "cost": 0.005106899999999999,
+      "tool_inputs": [
+        {
+          "year": 2024,
+          "table": "SAL2024_IS",
+          "offset": 0,
+          "limit": 80,
+          "keyword": ""
+        }
+      ],
+      "input_tokens": 4,
+      "output_tokens": 160,
+      "cache_creation_input_tokens": 248,
+      "cache_read_input_tokens": 28789
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "cost": 0.004840200000000001,
+      "tool_inputs": [
+        {
+          "year": 2024,
+          "table": "SAL2024_IS",
+          "offset": 0,
+          "limit": 60,
+          "keyword": ""
+        }
+      ],
+      "input_tokens": 2,
+      "output_tokens": 144,
+      "cache_creation_input_tokens": 197,
+      "cache_read_input_tokens": 29037
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "cost": 0.0164199,
+      "tool_inputs": [
+        {
+          "record_id": 137684,
+          "offset": 0,
+          "limit": 30
+        }
+      ],
+      "input_tokens": 2,
+      "output_tokens": 114,
+      "cache_creation_input_tokens": 4941,
+      "cache_read_input_tokens": 29234
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "cost": 0.010044,
+      "tool_inputs": [
+        {
+          "version": 1,
+          "institutions": [
+            "Yale University"
+          ],
+          "source_years": [
+            2024
+          ],
+          "requested_time": {
+            "basis": "academic",
+            "description": "Academic year 2024-25 (latest supplied; no year specified)"
+          },
+          "selections": [
+            {
+              "record_id": 137684,
+              "role": "dimension"
+            },
+            {
+              "record_id": 137724,
+              "role": "measure"
+            }
+          ],
+          "filters": [],
+          "group_by_record_ids": [
+            137684
+          ],
+          "calculations": [],
+          "joins": [],
+          "output": "table",
+          "assumptions": [
+            "Uses total (men and women combined) average salary equated to a 9-month contract, as source-reported per academic rank; no recomputation.",
+            "Ranks returned are the source ARANK categories (professor through no academic rank, plus the all-ranks total row as reported).",
+            "Full-time nonmedical instructional staff, academic year 2024-25 (latest supplied release)."
+          ],
+          "clarification_questions": []
+        }
+      ],
+      "input_tokens": 2,
+      "output_tokens": 562,
+      "cache_creation_input_tokens": 401,
+      "cache_read_input_tokens": 34175
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "cost": 0.0187791,
+      "tool_inputs": [
+        {
+          "version": 2,
+          "institutions": [
+            "Yale University"
+          ],
+          "source_years": [
+            2024
+          ],
+          "sources": [
+            {
+              "id": "s",
+              "year": 2024,
+              "table": "SAL2024_IS",
+              "field_record_ids": [
+                137684,
+                137724
+              ],
+              "filters": [
+                {
+                  "record_id": 137684,
+                  "operator": "in",
+                  "values": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                  ],
+                  "code_record_ids": [
+                    148747,
+                    148748,
+                    148749,
+                    148750,
+                    148751,
+                    148752
+                  ]
+                }
+              ],
+              "group_by_record_ids": [
+                137684
+              ],
+              "aggregates": []
+            }
+          ],
+          "joins": [],
+          "expressions": [
+            {
+              "id": "avg",
+              "operator": "mean",
+              "inputs": [
+                "fs_137724"
+              ],
+              "group_by_references": [
+                "fs_137684"
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "reference": "xavg",
+              "label": "Average salary equated to 9 months (men and women combined), by academic rank, Yale University, 2024-25"
+            }
+          ],
+          "missing_policy": "propagate",
+          "time_basis": "source_period",
+          "assumptions": [
+            "Latest supplied release (academic year 2024-25) used since no year was specified.",
+            "Source-reported total (men and women combined) average salary equated to a 9-month contract, for full-time nonmedical instructional staff.",
+            "Single institution, one row per rank, so the mean reducer only passes through the reported value; no weighting is applied.",
+            "The all-ranks total row is excluded; ranks are professor, associate, assistant, instructor, lecturer, and no academic rank."
+          ],
+          "clarification_questions": []
+        }
+      ],
+      "input_tokens": 2,
+      "output_tokens": 694,
+      "cache_creation_input_tokens": 3351,
+      "cache_read_input_tokens": 34576
+    }
+  ],
+  "seconds": 47.98559019993991,
+  "estimated_api_usd": 0.056367690000000005
+}

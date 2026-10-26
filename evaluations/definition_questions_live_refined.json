@@ -1,0 +1,645 @@
+{
+  "model": "claude-sonnet-5-5",
+  "cases": [
+    {
+      "question": "What is the definition of instructional staff?",
+      "answer": {
+        "intent": "definition",
+        "mode": "source definition",
+        "message": "For **instructional staff**, the supplied codebook gives these source passages:\n\n**Instructional staff - total** (2024-25 \u00b7 Provisional \u00b7 SAL2024_IS \u00b7 SAINSTT)\n\n> Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+        "evidence": [
+          {
+            "record_id": 137688,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "SAL2024_IS",
+            "variable_name": "SAINSTT",
+            "title": "Instructional staff - total",
+            "definition": "Number of full-time, non-medical, instructional staff - total as of November 1, on 9, 10, 11 or 12 month contract and less less-than 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "sheet_name": "varTable24",
+            "source_row": 1817,
+            "excerpt": "Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service",
+            "glossary_excerpt": "Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service",
+            "direct_match": true,
+            "score": 759.8862,
+            "physical_column_present": true,
+            "issues": []
+          }
+        ],
+        "definition_lookup": {
+          "term": "instructional staff",
+          "source_years": [
+            2024
+          ],
+          "default_latest_release": true,
+          "status": "defined",
+          "selection": "accepted",
+          "reviewed_measure": null,
+          "candidate_record_ids": [
+            137694,
+            137697,
+            137700,
+            137703,
+            137687,
+            137691,
+            137688,
+            137727,
+            137730,
+            137733,
+            137736,
+            137709,
+            137712,
+            137715,
+            137718,
+            137721,
+            137885,
+            137884,
+            137706,
+            137873
+          ],
+          "passages": [
+            {
+              "record_id": 137688,
+              "excerpt": "Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service"
+            }
+          ],
+          "source_policy": "Owner-supplied metadata only; no statistical values queried"
+        },
+        "latency": {
+          "answer_ready_seconds": 15.329405199969187,
+          "live_model_calls": 1
+        },
+        "model_usage": {
+          "model": "claude-sonnet-5-5",
+          "calls": 1,
+          "latency_seconds": 15.07649880007375,
+          "input_tokens": 3105,
+          "output_tokens": 188,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "estimated_api_usd": 0.00809,
+          "stage": "definition passage selection"
+        }
+      },
+      "checks": {
+        "definition_route": true,
+        "no_statistics": true,
+        "exact_source_passages": true,
+        "definition_found": true
+      },
+      "passed": true,
+      "wall_seconds": 15.361361399991438
+    },
+    {
+      "question": "What does UNITID mean?",
+      "answer": {
+        "intent": "definition",
+        "mode": "source definition",
+        "message": "For **UNITID**, the supplied codebook gives these source passages:\n\n**Number of students receiving awards/degrees, by race/ethnicity and gender: July 1, 2023 to June 30, 2024** (2024-25 \u00b7 Provisional \u00b7 C2024_B \u00b7 table documentation)\n\n> This table contains one record per institution. Each record is uniquely defined by the variables IPEDS ID (UNITID).\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+        "evidence": [
+          {
+            "record_id": 135842,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "table_definition",
+            "table_name": "C2024_B",
+            "variable_name": "",
+            "title": "Number of students receiving awards/degrees, by race/ethnicity and gender: July 1, 2023 to June 30, 2024",
+            "definition": "This table contains the number of students who completed any degree or certificate by race/ethnicity and gender. Data covers all awards granted between July 1, 2023 and June 30, 2024. This table contains one record per institution. Each record is uniquely defined by the variables IPEDS ID (UNITID). Each record will contain the total number of students, men and women, and the total number of students for men and women for all nine race/ethnicity categories. Variables containing information on students that do not fit the IPEDS binary gender (men/women) are available for total undergraduate and graduate levels. In 2023-24, if the reported value for another gender would be nonzero but less than 5 students, the institution was instructed to not report the value.",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "sheet_name": "tables24",
+            "source_row": 23,
+            "excerpt": "This table contains one record per institution. Each record is uniquely defined by the variables IPEDS ID (UNITID).",
+            "glossary_excerpt": null,
+            "direct_match": true,
+            "score": 729.9232,
+            "physical_column_present": null,
+            "issues": []
+          }
+        ],
+        "definition_lookup": {
+          "term": "UNITID",
+          "source_years": [
+            2024
+          ],
+          "default_latest_release": true,
+          "status": "defined",
+          "selection": "accepted",
+          "reviewed_measure": null,
+          "candidate_record_ids": [
+            135842,
+            135825,
+            135831,
+            135862,
+            135830,
+            135833,
+            135836,
+            135859,
+            135843,
+            135863,
+            135835,
+            135853,
+            135839,
+            135837,
+            135841,
+            135834,
+            135850,
+            135848,
+            135864,
+            135828
+          ],
+          "passages": [
+            {
+              "record_id": 135842,
+              "excerpt": "This table contains one record per institution. Each record is uniquely defined by the variables IPEDS ID (UNITID)."
+            }
+          ],
+          "source_policy": "Owner-supplied metadata only; no statistical values queried"
+        },
+        "latency": {
+          "answer_ready_seconds": 9.834351300029084,
+          "live_model_calls": 1
+        },
+        "model_usage": {
+          "model": "claude-sonnet-5-5",
+          "calls": 1,
+          "latency_seconds": 9.742791699944064,
+          "input_tokens": 5164,
+          "output_tokens": 185,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "estimated_api_usd": 0.012178,
+          "stage": "definition passage selection"
+        }
+      },
+      "checks": {
+        "definition_route": true,
+        "no_statistics": true,
+        "exact_source_passages": true,
+        "definition_found": true
+      },
+      "passed": true,
+      "wall_seconds": 9.835056100040674
+    },
+    {
+      "question": "Define graduation rate",
+      "answer": {
+        "intent": "definition",
+        "mode": "source definition",
+        "message": "For **graduation rate**, the supplied codebook gives these source passages:\n\n**Graduation rate, total cohort** (2024-25 \u00b7 Provisional \u00b7 DRVGR2024 \u00b7 GRRTTOT)\n\n> graduation rate is the rate required for disclosure and/or reporting purposes under Student Right-to-Know. This rate is calculated as the total number of completers within 150% of normal time divided by the revised cohort minus any allowable exclusions. For 4-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=2 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=3. GRTYPE=2 and 3 include both the bachelor's or equivalent degree/certificate-seeking subcohort and the other degree/certificate-seeking subcohort (Table gr2024). For 2-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=29 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=30 (Table gr2024). For less-than-2-year institutions the adjusted cohort defined by the variable LINE_50 and the total completers within 150% of normal time is LINE_11 (Table gr2024_L2)\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+        "evidence": [
+          {
+            "record_id": 136963,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "DRVGR2024",
+            "variable_name": "GRRTTOT",
+            "title": "Graduation rate, total cohort",
+            "definition": "Graduation rate of first-time, full-time degree or certificate-seeking students - 2018 cohort (4-year institutions) and 2021 cohort (less-than-4-year institutions). The graduation rate is the rate required for disclosure and/or reporting purposes under Student Right-to-Know. This rate is calculated as the total number of completers within 150% of normal time divided by the revised cohort minus any allowable exclusions. For 4-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=2 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=3. GRTYPE=2 and 3 include both the bachelor's or equivalent degree/certificate-seeking subcohort and the other degree/certificate-seeking subcohort (Table gr2024). For 2-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=29 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=30 (Table gr2024). For less-than-2-year institutions the adjusted cohort defined by the variable LINE_50 and the total completers within 150% of normal time is LINE_11 (Table gr2024_L2) Normal time to completion - The amount of time necessary for a student to complete all requirements for a degree or certificate according to the institution's catalog. This is typically 4 years (8 semesters or trimesters, or 12 quarters, excluding summer terms) for a bachelor's degree in a standard term-based institution Allowable exclusions - Those students who may be removed (deleted) from the GRS cohort according to the Student Right-to-Know legislation. These include students who died or were totally and permanently disabled; those who left school to serve in the armed forces; those who left to serve with a foreign aid service of the federal government, such as the Peace Corps; and those who left to serve on official church mission.",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "sheet_name": "varTable24",
+            "source_row": 1092,
+            "excerpt": "graduation rate is the rate required for disclosure and/or reporting purposes under Student Right-to-Know. This rate is calculated as the total number of completers within 150% of normal time divided by the revised cohort minus any allowable exclusions. For 4-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=2 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=3. GRTYPE=2 and 3 include both the bachelor's or equivalent degree/certificate-seeking subcohort and the other degree/certificate-seeking subcohort (Table gr2024). For 2-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=29 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=30 (Table gr2024). For less-than-2-year institutions the adjusted cohort defined by the variable LINE_50 and the total completers within 150% of normal time is LINE_11 (Table gr2024_L2)",
+            "glossary_excerpt": "graduation rate is the rate required for disclosure and/or reporting purposes under Student Right-to-Know. This rate is calculated as the total number of completers within 150% of normal time divided by the revised cohort minus any allowable exclusions. For 4-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=2 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=3. GRTYPE=2 and 3 include both the bachelor's or equivalent degree/certificate-seeking subcohort and the other degree/certificate-seeking subcohort (Table gr2024). For 2-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=29 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=30 (Table gr2024). For less-than-2-year institutions the adjusted cohort defined by the variable LINE_50 and the total completers within 150% of normal time is LINE_11 (Table gr2024_L2)",
+            "direct_match": true,
+            "score": 759.8144,
+            "physical_column_present": true,
+            "issues": []
+          }
+        ],
+        "definition_lookup": {
+          "term": "graduation rate",
+          "source_years": [
+            2024
+          ],
+          "default_latest_release": true,
+          "status": "defined",
+          "selection": "accepted",
+          "reviewed_measure": null,
+          "candidate_record_ids": [
+            136963,
+            136989,
+            136966,
+            136970,
+            136965,
+            136964,
+            136987,
+            136969,
+            136968,
+            136990,
+            136967,
+            136971,
+            136972,
+            136974,
+            136976,
+            136975,
+            135849,
+            136961,
+            136954,
+            136956
+          ],
+          "passages": [
+            {
+              "record_id": 136963,
+              "excerpt": "graduation rate is the rate required for disclosure and/or reporting purposes under Student Right-to-Know. This rate is calculated as the total number of completers within 150% of normal time divided by the revised cohort minus any allowable exclusions. For 4-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=2 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=3. GRTYPE=2 and 3 include both the bachelor's or equivalent degree/certificate-seeking subcohort and the other degree/certificate-seeking subcohort (Table gr2024). For 2-year institutions the adjusted cohort is defined by the variable GRTOTLT when GRTYPE=29 and the total completers within 150% of normal time is GRTOTLT when GRTYPE=30 (Table gr2024). For less-than-2-year institutions the adjusted cohort defined by the variable LINE_50 and the total completers within 150% of normal time is LINE_11 (Table gr2024_L2)"
+            }
+          ],
+          "source_policy": "Owner-supplied metadata only; no statistical values queried"
+        },
+        "latency": {
+          "answer_ready_seconds": 3.7991128999274224,
+          "live_model_calls": 1
+        },
+        "model_usage": {
+          "model": "claude-sonnet-5-5",
+          "calls": 1,
+          "latency_seconds": 3.6827934000175446,
+          "input_tokens": 5825,
+          "output_tokens": 491,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "estimated_api_usd": 0.01656,
+          "stage": "definition passage selection"
+        }
+      },
+      "checks": {
+        "definition_route": true,
+        "no_statistics": true,
+        "exact_source_passages": true,
+        "definition_found": true
+      },
+      "passed": true,
+      "wall_seconds": 3.7992555999662727
+    },
+    {
+      "question": "How is full-time undergraduate enrollment defined?",
+      "answer": {
+        "intent": "definition",
+        "mode": "source definition",
+        "message": "For **full-time undergraduate enrollment**, the supplied codebook gives these source passages:\n\n**Full-time undergraduate enrollment** (2024-25 \u00b7 Provisional \u00b7 DRVEF2024 \u00b7 EFUGFT)\n\n> Full-time undergraduate men and women enrolled for credit in the fall of the academic year. Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term.\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+        "evidence": [
+          {
+            "record_id": 136540,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "DRVEF2024",
+            "variable_name": "EFUGFT",
+            "title": "Full-time undergraduate enrollment",
+            "definition": "Full-time undergraduate men and women enrolled for credit in the fall of the academic year. Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution's official fall reporting date or October 15.",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "sheet_name": "varTable24",
+            "source_row": 669,
+            "excerpt": "Full-time undergraduate men and women enrolled for credit in the fall of the academic year. Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term.",
+            "glossary_excerpt": null,
+            "direct_match": true,
+            "score": 1079.9294,
+            "physical_column_present": true,
+            "issues": []
+          }
+        ],
+        "definition_lookup": {
+          "term": "full-time undergraduate enrollment",
+          "source_years": [
+            2024
+          ],
+          "default_latest_release": true,
+          "status": "defined",
+          "selection": "accepted",
+          "reviewed_measure": null,
+          "candidate_record_ids": [
+            136540,
+            136522,
+            136282,
+            136280,
+            136544,
+            136543,
+            136542,
+            136541,
+            136123,
+            136436,
+            136386,
+            136531,
+            136765,
+            136329,
+            136323,
+            136124,
+            136507,
+            136446,
+            136795,
+            136333
+          ],
+          "passages": [
+            {
+              "record_id": 136540,
+              "excerpt": "Full-time undergraduate men and women enrolled for credit in the fall of the academic year. Full-time undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate and enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term."
+            }
+          ],
+          "source_policy": "Owner-supplied metadata only; no statistical values queried"
+        },
+        "latency": {
+          "answer_ready_seconds": 3.6307738999603316,
+          "live_model_calls": 1
+        },
+        "model_usage": {
+          "model": "claude-sonnet-5-5",
+          "calls": 1,
+          "latency_seconds": 3.3250285999383777,
+          "input_tokens": 5191,
+          "output_tokens": 222,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "estimated_api_usd": 0.012602,
+          "stage": "definition passage selection"
+        }
+      },
+      "checks": {
+        "definition_route": true,
+        "no_statistics": true,
+        "exact_source_passages": true,
+        "definition_found": true
+      },
+      "passed": true,
+      "wall_seconds": 3.631739000091329
+    },
+    {
+      "question": "What is faculty?",
+      "answer": {
+        "intent": "definition",
+        "mode": "source definition",
+        "message": "For **faculty**, the supplied codebook gives these source passages:\n\n**Faculty and tenure status** (2024-25 \u00b7 Provisional \u00b7 EAP2024 \u00b7 FACSTAT)\n\n> Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+        "evidence": [
+          {
+            "record_id": 137674,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "EAP2024",
+            "variable_name": "FACSTAT",
+            "title": "Faculty and tenure status",
+            "definition": "Faculty and tenure status Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category Tenure-Status of a personnel position with respect to permanence of the position. Tenure track - Personnel positions that lead to consideration for tenure. Not on tenure track - Personnel positions that are considered non-tenure earning positions Multi-year contract - a contract or employment agreement that is in effect for more than one year (e.g., more than 365 days) where subsequent years of the contract may be contingent upon other factors such as the appropriation of funds. The renewal period of a multi-year contract is not on an annual basis (e.g., a 5-year multi-year contract is renewed every 5 years NOT annually). Annual contract - An annually-renewable contract or employment agreement that is in effect for a stated annual period within one year of execution, and may be equal to a period of 365 days, or a standard academic year, or the equivalent. Does not include contracts for partial year periods such as a single semester, quarter, term, block, or course. Less-than-annual-contract - A contract or employment agreement that is in effect for a partial year period of less than 365 days, or less than a standard academic year or the equivalent. Includes contracts for partial year periods such as a single semester, quarter, term, block, or course.",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "sheet_name": "varTable24",
+            "source_row": 1803,
+            "excerpt": "Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category",
+            "glossary_excerpt": "Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category",
+            "direct_match": true,
+            "score": 719.7706,
+            "physical_column_present": true,
+            "issues": []
+          }
+        ],
+        "definition_lookup": {
+          "term": "faculty",
+          "source_years": [
+            2024
+          ],
+          "default_latest_release": true,
+          "status": "defined",
+          "selection": "accepted",
+          "reviewed_measure": null,
+          "candidate_record_ids": [
+            137674,
+            137801,
+            137840,
+            137875,
+            137672,
+            137839,
+            137873,
+            137767,
+            135838,
+            137205,
+            137343,
+            137517,
+            137183,
+            137479,
+            137196,
+            137316,
+            137983,
+            137321,
+            137478,
+            135859
+          ],
+          "passages": [
+            {
+              "record_id": 137674,
+              "excerpt": "Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category"
+            }
+          ],
+          "source_policy": "Owner-supplied metadata only; no statistical values queried"
+        },
+        "latency": {
+          "answer_ready_seconds": 5.425928800017573,
+          "live_model_calls": 1
+        },
+        "model_usage": {
+          "model": "claude-sonnet-5-5",
+          "calls": 1,
+          "latency_seconds": 5.270023599965498,
+          "input_tokens": 4997,
+          "output_tokens": 439,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "estimated_api_usd": 0.014384,
+          "stage": "definition passage selection"
+        }
+      },
+      "checks": {
+        "definition_route": true,
+        "no_statistics": true,
+        "exact_source_passages": true,
+        "definition_found": true
+      },
+      "passed": true,
+      "wall_seconds": 5.605183799983934
+    },
+    {
+      "question": "What does SAL2023_IS.SAOUTLT mean?",
+      "answer": {
+        "intent": "definition",
+        "mode": "source definition",
+        "message": "For **SAL2023_IS.SAOUTLT**, the supplied codebook gives these source passages:\n\n**Salary outlays - total** (2023-24 \u00b7 Final \u00b7 SAL2023_IS \u00b7 SAOUTLT)\n\n> Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff.\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+        "evidence": [
+          {
+            "record_id": 122411,
+            "release_id": "IPEDS_2023-24_Final",
+            "kind": "variable_definition",
+            "table_name": "SAL2023_IS",
+            "variable_name": "SAOUTLT",
+            "title": "Salary outlays - total",
+            "definition": "Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+            "sheet_name": "varTable23",
+            "source_row": 2445,
+            "excerpt": "Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff.",
+            "glossary_excerpt": null,
+            "direct_match": true,
+            "score": 1019.8853,
+            "physical_column_present": true,
+            "issues": []
+          }
+        ],
+        "definition_lookup": {
+          "term": "SAL2023_IS.SAOUTLT",
+          "source_years": [
+            2023
+          ],
+          "default_latest_release": false,
+          "status": "defined",
+          "selection": "accepted",
+          "reviewed_measure": null,
+          "candidate_record_ids": [
+            122411
+          ],
+          "passages": [
+            {
+              "record_id": 122411,
+              "excerpt": "Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff."
+            }
+          ],
+          "source_policy": "Owner-supplied metadata only; no statistical values queried"
+        },
+        "latency": {
+          "answer_ready_seconds": 3.348339100019075,
+          "live_model_calls": 1
+        },
+        "model_usage": {
+          "model": "claude-sonnet-5-5",
+          "calls": 1,
+          "latency_seconds": 3.3329212999669835,
+          "input_tokens": 1544,
+          "output_tokens": 294,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "estimated_api_usd": 0.006028,
+          "stage": "definition passage selection"
+        }
+      },
+      "checks": {
+        "definition_route": true,
+        "no_statistics": true,
+        "exact_source_passages": true,
+        "definition_found": true
+      },
+      "passed": true,
+      "wall_seconds": 3.3484624000266194
+    },
+    {
+      "question": "What is admission rate?",
+      "answer": {
+        "intent": "definition",
+        "mode": "source definition",
+        "message": "**Admission rate \u2014 reviewed app definition:** First-time degree/certificate-seeking undergraduates for fall, including prior-summer entrants; not graduate admissions. Rates use raw counts, not rounded derived percentages.\n\nCalculation: Admissions total \u00f7 Applicants total \u00d7 100.\n\nI could not establish a direct definition of **admission rate** from this bounded search of the supplied codebooks. This does not prove the term is absent. Try its exact variable name, source table, or a more specific term.",
+        "evidence": [
+          {
+            "record_id": 136224,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "ADM2024",
+            "variable_name": "APPLCN",
+            "title": "Applicants total",
+            "definition": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "sheet_name": "varTable24",
+            "source_row": 353,
+            "codes": [],
+            "excerpt": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of applicants APPLICANT - An individual who has fulfilled the institution\u2019s requirements to be considered for admission (including payment or waiving of the application fee, if any) and who has been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possib",
+            "direct_match": true,
+            "score": 1000,
+            "issues": [],
+            "physical_column_present": null
+          },
+          {
+            "record_id": 136225,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "ADM2024",
+            "variable_name": "ADMSSN",
+            "title": "Admissions total",
+            "definition": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of admissions ADMISSIONS - Applicants that have been granted an official offer to enroll in a college or university. FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admission decision well in advance of the regular notification dates. If admitted, the candidate is not committed to enroll (unlike early decision). Students may reply to the offer under the college's regular reply policy.",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "sheet_name": "varTable24",
+            "source_row": 354,
+            "codes": [],
+            "excerpt": "Please provide the number of first-time, degree/certificate-seeking undergraduate students who applied, were admitted, and enrolled (full or part time) at your institution for the most recent fall period available. Include early decision, early action, and students who began studies during the summer prior to that fall. This is applicable to institutions that have no open admission policy for entering first-time undergraduate students Total number of admissions ADMISSIONS - Applicants that have been granted an official offer to enroll in a college or university. FIRST-TIME STUDENT (UNDERGRADUATE) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs. Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). DEGREE/CERTIFICATE-SEEKING STUDENTS Students enrolled in courses for credit who are recognized by the institution as seeking a degree or formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs. EARLY DECISION A plan that allows students to apply and be notified of an admission decision (and financial aid offer, if applicable) well in advance of the regular notification date. Applicants agree to accept an offer of admission and, if admitted, to withdraw their applications from other colleges. There are three possible decision applications: admitted, denied, or not admitted but forwarded for consideration with the regular applicant pool, without prejudice. EARLY ACTION An admission plan that allows students to apply and be notified of an admis",
+            "direct_match": true,
+            "score": 1000,
+            "issues": [],
+            "physical_column_present": null
+          }
+        ],
+        "definition_lookup": {
+          "term": "admission rate",
+          "source_years": [
+            2024
+          ],
+          "default_latest_release": true,
+          "status": "not_established",
+          "selection": "accepted",
+          "reviewed_measure": "admission_rate",
+          "candidate_record_ids": [
+            136224,
+            136225
+          ],
+          "passages": [],
+          "source_policy": "Owner-supplied metadata only; no statistical values queried"
+        },
+        "latency": {
+          "answer_ready_seconds": 3.45704939996358,
+          "live_model_calls": 1
+        },
+        "model_usage": {
+          "model": "claude-sonnet-5-5",
+          "calls": 1,
+          "latency_seconds": 3.310374699998647,
+          "input_tokens": 2479,
+          "output_tokens": 91,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "estimated_api_usd": 0.005868,
+          "stage": "definition passage selection"
+        }
+      },
+      "checks": {
+        "definition_route": true,
+        "no_statistics": true,
+        "exact_source_passages": true,
+        "definition_found": false
+      },
+      "passed": false,
+      "wall_seconds": 3.500467700068839
+    },
+    {
+      "question": "Define quantum banana index",
+      "answer": {
+        "intent": "definition",
+        "mode": "source definition",
+        "message": "I could not establish a direct definition of **quantum banana index** from this bounded search of the supplied codebooks. This does not prove the term is absent. Try its exact variable name, source table, or a more specific term.",
+        "evidence": [],
+        "definition_lookup": {
+          "term": "quantum banana index",
+          "source_years": [
+            2024
+          ],
+          "default_latest_release": true,
+          "status": "not_established",
+          "selection": "deterministic",
+          "reviewed_measure": null,
+          "candidate_record_ids": [],
+          "passages": [],
+          "source_policy": "Owner-supplied metadata only; no statistical values queried"
+        },
+        "latency": {
+          "answer_ready_seconds": 0.016466900007799268,
+          "live_model_calls": 0
+        }
+      },
+      "checks": {
+        "definition_route": true,
+        "no_statistics": true,
+        "exact_source_passages": true,
+        "bounded_unknown": true
+      },
+      "passed": true,
+      "wall_seconds": 0.016590000013820827
+    }
+  ]
+}

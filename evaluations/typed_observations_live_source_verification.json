@@ -1,0 +1,101 @@
+{
+  "answers_checked": 19,
+  "cells_checked": 256,
+  "results": [
+    {
+      "file": "evaluations\\ic_categorical_acceptance\\original_comparison_round1.json",
+      "checked_cells": 12,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_acceptance\\original_comparison_round2.json",
+      "checked_cells": 12,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_acceptance\\original_massachusetts_round1.json",
+      "checked_cells": 83,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_acceptance\\original_massachusetts_round2.json",
+      "checked_cells": 83,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_acceptance\\original_smith_round1.json",
+      "checked_cells": 5,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_acceptance\\original_smith_round2.json",
+      "checked_cells": 5,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_acceptance\\threshold.json",
+      "checked_cells": 2,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_final_checks\\calendar.json",
+      "checked_cells": 1,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_final_checks\\calendar_followup.json",
+      "checked_cells": 1,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_final_checks\\mixed.json",
+      "checked_cells": 3,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_after_final\\affiliation.json",
+      "checked_cells": 2,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_after_final\\award_levels.json",
+      "checked_cells": 6,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_after_final\\calendar.json",
+      "checked_cells": 1,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_after_final\\combined_services.json",
+      "checked_cells": 28,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_after_final\\conditional_numeric.json",
+      "checked_cells": 2,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_after_final\\distance_distinction.json",
+      "checked_cells": 3,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_after_final\\mixed.json",
+      "checked_cells": 3,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_after_final\\open_admission.json",
+      "checked_cells": 2,
+      "source_values_and_labels_match": true
+    },
+    {
+      "file": "evaluations\\ic_categorical_after_final\\temporal.json",
+      "checked_cells": 2,
+      "source_values_and_labels_match": true
+    }
+  ]
+}

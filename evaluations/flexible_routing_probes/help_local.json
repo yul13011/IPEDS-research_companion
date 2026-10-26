@@ -1,0 +1,16 @@
+{
+  "intent": "conversation",
+  "mode": "conversation",
+  "message": "I can explain definitions and labels, describe available data, look up school attributes, find institutions matching source categories, and compare numerical measures across schools or releases. For example: “What does Pell mean?”, “What student services does Smith College offer?”, or “Compare undergraduate enrollment at Smith and Wellesley.” I use the supplied IPEDS data and codebooks. If they cannot answer a question, I explain the coverage gap first.",
+  "purpose": {
+    "kind": "app_help",
+    "method": "local complete-message match"
+  },
+  "model_usage": {
+    "calls": 0,
+    "estimated_api_usd": 0
+  },
+  "latency": {
+    "live_model_calls": 0
+  }
+}

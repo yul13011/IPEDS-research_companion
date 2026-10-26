@@ -1,0 +1,148 @@
+Table documentation for the IPEDS Access database, 2019-20
+Final release
+Overview
+This spreadsheet contains the documentation for the IPEDS 2019-20 access database. It contains all variables that were collected in the 2019-20 IPEDS data collection. The IPEDS data collection consists of 3 collection modules. Institutional Characteristics 2019-20, 12-month enrollment 2018-19 and completions 2018-19 were collected in the Fall 2019. Admissions Fall 2019, Graduation Rates 2019, Outcome Measures 2019 and Student Financial Aid 2018-19 were collected in the winter of 2019-20. Fall Enrollment 2019, Finance fiscal year 2019, Human Resources 2019 components and the Academic Libraries fiscal year 2019 were collected in the Spring 2020. The data in this database are final released data. During the 2020-21 collection, institutions were allowed to submit revisions to their 2019-20 submission through the 2019-20 Prior Year Data Revision system. The 2019-20 provisional data were then updated with these revisions for the final release. There are some data tables and variables that institutions are not allowed to revise. Revised data tables and variables are identified in the spreadsheet in this workbook. Note that the tables below also exist in the database.
+Contents of spreadsheet
+Tables19
+Table List: List all data tables included in the downloadable access database and all tables in SQL data base that contains the data available through the Use the Data function (IPEDS Data Center). http://nces.ed.gov/ipeds/home/usethedata.
+Vartable19
+Variable list: Lists all variables for each data table in the IPEDS data base. Includes the variable name, variable label, description, data type, format and maximum field width of each variable. The data type describes a variable as either a numeric (N) or Alphanumeric (A) and the format of a variable defines a variable as either continuous (Cont) or categorical (Disc). It all also lists the variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. Imputation flag variables are not included in the Access database, because of limitations on maximum number of variables allowed in an Access table.
+ValueSets19
+This worksheet contains the code values and value labels for of all categorical variables in the database. It also lists the frequency and percent distribution for each code value by variable.
+Metadata definitions
+This worksheet describes each of the metadata variables found in tables19, vartable19 and valuesets19.
+Table
+Metadata variable
+Description
+Table19
+SurveyOrder
+Code used to sort surveys in a particular order
+Table19
+SurveyNumber
+Code assigned to each IPEDS survey component
+Table19
+Survey
+Name of Survey
+Table19
+YearCoverage
+Defines the year the data covers for each survey component. IPEDS data base for 2019-20 will have some survey components that will cover Academic year 2019-20 or Fall 2019, such as Institutional Characteristics and Fall enrollment. However surveys that cover data over a 12-month period such as completions, 12-month enrollment and finance refer to the preceding 12-month period (2018-19)
+Table19
+TableName
+Name of data table within a survey component
+Table19
+Tablenumber
+Unique code assigned to each table
+Table19
+TableTitle
+Table title
+Table19
+Description
+Gives summary of data presented in table. Also identifies the variables (primary keys), that uniquely identifies a record for tables that have multiple records per institutions (IPEDS ID/UNITID)
+Table19
+Release
+This meta data variable identifies which tables are released as provisional or as final/revised data tables. Some survey components or data tables within a survey are available for revisions through our revision system, such as directory information on the Institutional characteristics component.
+Table19
+Release date
+The date the table was released as provisional or final/revised.
+VarTable19
+Surveyorder
+Code used to sort surveys in a particular order
+VarTable19
+Surveynumber
+Code assigned to each IPEDS survey component
+VarTable19
+Survey
+Name of survey
+VarTable19
+Tablenumber
+Unique code assigned to each table
+VarTable19
+Tablename
+Name of data table within a survey component
+VarTable19
+Tabletitle
+Table title
+VarTable19
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+VarTable19
+Varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+VarTable19
+Varname
+Variable name
+VarTable19
+Imputationvar
+Identifies variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. The item imputation variables are not available in the access data base to reduce and meet the variable limitations of the access data base. To access these variables please use the "Use the Data Function" on the IPEDS home page. However please be aware that institutional response variables are available in the database.
+VarTable19
+Vartitle
+Variable title
+VarTable19
+Datatype
+The data type describes a variable as either a numeric (N) or Alphanumeric (A)
+VarTable19
+Fieldwidth
+Field width defines maximum number of characters of digits for the variable.
+VarTable19
+Format
+Format of a variable defines a variable as either continuous (Cont) or categorical (Disc).
+VarTable19
+Multirecord
+Identifies variables that are on tables that have multiple records per institution (Unitid). 1=Yes multirecord, 2=Single record per institution
+VarTable19
+Hasrv
+Identifies variables that are eligible for institutions to revise
+VarTable19
+Filenumber
+File number used to group variables by subject in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables by subject within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable19
+Sectionnumber
+Section number used to group variables within a file group in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables within a subject (file group) within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable19
+LongDescription
+Long detailed description of each variable
+VarTable19
+VarSource
+Source of variable - identifies survey component and IPEDS collection cycle . Becomes part of the description in the online Use the data function (data center)
+VarTable19
+Filetitle
+Name given to file group
+VarTable19
+SectionTitle
+Name given to section within file group
+ValueSets19
+Surveyorder
+Code used to sort surveys in a particular order
+ValueSets19
+Tablenumber
+Code assigned to each table
+ValueSets19
+Tablename
+Name of data table within a survey component
+ValueSets19
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+ValueSets19
+varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+ValueSets19
+varname
+Variable name
+ValueSets19
+codevalue
+Code values for a categorical variable
+ValueSets19
+frequency
+Number of occurrences for a code value for a variable in a table
+ValueSets19
+percent
+Percent of occurrences for a code value for a variable in a table
+ValueSets19
+valueOrder
+Code used to sort code values for a variable.
+ValueSets19
+valueLabel
+Description of code values
+ValueSets19
+vartitle
+Variable title

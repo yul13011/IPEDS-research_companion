@@ -1,0 +1,204 @@
+{
+  "timestamp": "2026-10-19T17:42:17.677638+00:00",
+  "model": "claude-sonnet-5-5",
+  "cases": [
+    {
+      "label": "enrollment shortcut",
+      "question": "Show Yale's undergrad population by race and ethnicity",
+      "live_model_requested": false,
+      "outcome": "analyze",
+      "message": "For Yale University (Fall 2024), American Indian or Alaska Native total: 20; Asian total: 1,161; Black or African American total: 479; Hispanic total: 831. The table or download includes the remaining requested measures.",
+      "latency": {
+        "validation_seconds": 0.03090490004979074,
+        "query_seconds": 0.0042277000029571354,
+        "planning_and_binding_seconds": 0.19777420000173151,
+        "answer_ready_seconds": 0.23749569995561615,
+        "live_model_calls": 0,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": null,
+      "rows": 10,
+      "observations": [
+        {
+          "measure": "American Indian or Alaska Native total",
+          "value": 20,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        },
+        {
+          "measure": "Asian total",
+          "value": 1161,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        },
+        {
+          "measure": "Black or African American total",
+          "value": 479,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        },
+        {
+          "measure": "Hispanic total",
+          "value": 831,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        },
+        {
+          "measure": "Native Hawaiian or Other Pacific Islander total",
+          "value": 9,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        },
+        {
+          "measure": "White total",
+          "value": 1631,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        },
+        {
+          "measure": "Two or more races total",
+          "value": 378,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        },
+        {
+          "measure": "Race/ethnicity unknown total",
+          "value": 88,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        },
+        {
+          "measure": "U.S. Nonresident total",
+          "value": 584,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        },
+        {
+          "measure": "Grand total",
+          "value": 5181,
+          "reporting_period": "Fall 2024",
+          "status": "ok"
+        }
+      ],
+      "export_seconds": {
+        "csv": 0.015257399994879961,
+        "excel": 0.4191291999886744,
+        "audit_json": 0.006897200015373528
+      },
+      "export_bytes": {
+        "csv": 1730,
+        "excel": 22451,
+        "audit_json": 409795
+      },
+      "test_wall_seconds": 0.6852227000053972,
+      "accuracy_status": "Historical enrollment acceptance result used EFALEVEL=20 (continuing subgroup). It is not an all-undergraduate result. Corrected source selector is exact label All students, Undergraduate total (code 2); corrected verification is evaluations/race_breakdown_wording_fix.json."
+    },
+    {
+      "label": "unfamiliar library",
+      "question": "How many physical books did Yale's library report for fiscal year 2024?",
+      "live_model_requested": true,
+      "outcome": "analyze",
+      "message": "For Yale University (Fiscal year 2024), Number of physical books: 9,042,536. The reporting period and source definitions are available below.",
+      "latency": {
+        "validation_seconds": 0.043627900013234466,
+        "query_seconds": 0.007071300002280623,
+        "planning_and_binding_seconds": 20.676205299969297,
+        "answer_ready_seconds": 20.727579300000798,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 2,
+        "latency_seconds": 15.266,
+        "input_tokens": 23387,
+        "output_tokens": 867,
+        "cache_creation_input_tokens": 2908,
+        "cache_read_input_tokens": 2908,
+        "estimated_api_usd": 0.0630048,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+      },
+      "rows": 1,
+      "observations": [
+        {
+          "measure": "Number of physical books",
+          "value": 9042536,
+          "reporting_period": "Fiscal year 2024",
+          "status": "ok"
+        }
+      ],
+      "export_seconds": {
+        "csv": 0.007980800000950694,
+        "excel": 0.04626289999578148,
+        "audit_json": 0.0006415999960154295
+      },
+      "export_bytes": {
+        "csv": 332,
+        "excel": 9263,
+        "audit_json": 14221
+      },
+      "test_wall_seconds": 20.785304600023665
+    },
+    {
+      "label": "unfamiliar tuition",
+      "question": "Show Yale's out-of-state undergraduate tuition for academic year 2024-25, excluding fees and room and board.",
+      "live_model_requested": true,
+      "outcome": "error",
+      "error_type": "StopIteration",
+      "test_wall_seconds": 13.082556100038346
+    },
+    {
+      "label": "unfamiliar library repeat",
+      "question": "How many physical books did Yale's library report for fiscal year 2024?",
+      "live_model_requested": true,
+      "outcome": "analyze",
+      "message": "For Yale University (Fiscal year 2024), Number of physical books: 9,042,536. The reporting period and source definitions are available below.",
+      "latency": {
+        "validation_seconds": 0.0478311000042595,
+        "query_seconds": 0.006660500017460436,
+        "planning_and_binding_seconds": 8.750690000015311,
+        "answer_ready_seconds": 8.805644200008828,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 2,
+        "latency_seconds": 8.609,
+        "input_tokens": 23688,
+        "output_tokens": 947,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5816,
+        "estimated_api_usd": 0.05742760000000001,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+      },
+      "rows": 1,
+      "observations": [
+        {
+          "measure": "Number of physical books",
+          "value": 9042536,
+          "reporting_period": "Fiscal year 2024",
+          "status": "ok"
+        }
+      ],
+      "export_seconds": {
+        "csv": 0.007256300013978034,
+        "excel": 0.043536299956031144,
+        "audit_json": 0.0008300999761559069
+      },
+      "export_bytes": {
+        "csv": 332,
+        "excel": 9321,
+        "audit_json": 14616
+      },
+      "test_wall_seconds": 8.859504599997308
+    }
+  ],
+  "measurement": "Serial fresh questions in one Python process; answer-ready includes planning, catalog binding, validation, query, and summary. Exports separate. Browser/network paint excluded. Repeated questions can benefit from caches. Small descriptive sample, not a service-level guarantee.",
+  "live_answer_ready_summary": {
+    "n": 2,
+    "min_seconds": 8.805644200008828,
+    "median_seconds": 14.766611750004813,
+    "max_seconds": 20.727579300000798
+  }
+}

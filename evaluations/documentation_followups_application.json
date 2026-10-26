@@ -1,0 +1,1642 @@
+[
+  {
+    "question": "What information do you have on Pell?",
+    "answer": {
+      "intent": "discover",
+      "mode": "data discovery",
+      "query": "Pell",
+      "message": "Here are relevant data areas I found in the local IPEDS files:\n\n**Survey: Outcome Measures**\n\nOutcome dates (unless noted): August 31: 2018.\n\n- **Award and enrollment data at four, six and eight years for four entering undergraduate cohorts, by Pell status in degree granting institutions**.  \n  Entering cohorts: 2010-11.  \n  Example fields: Cohort category; 2010-11 cohort; Exclusions to 2010-11 cohort; Adjusted 2010-11 cohort.\n- **Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates** \u2014 Outcome dates: August 31: 2017 through 2024.  \n  Entering cohorts: 2009; 2010-11; 2011-12; 2012-13; 2013-14; 2014-15; 2015-16; 2016-17.  \n  Example fields: Percent full-time first-time, Pell grant recipients receiving an award - 4 years; Percent full-time first-time, Pell grant recipients receiving an award - 6 years; Percent full-time first-time, Pell grant recipients receiving an award - 8 years; Percent full-time first-time, Pell grant recipients still enrolled at same institution - 8 years.\n- **Award and enrollment data at six and eight years for four entering undergraduate cohorts - degree granting institutions** \u2014 Outcome dates: August 31: 2015 through 2017; 2019.  \n  Entering cohorts: 2007 through 2009; 2011.  \n  Example fields: Cohort category; 2011-12 cohort; Exclusions to 2011-12 cohort; Adjusted 2011-12 cohort.\n- **Award and enrollment data at six and eight years for entering undergraduate cohorts degree granting institutions** \u2014 Outcome dates: August 31: 2020 through 2022.  \n  Entering cohorts: 2012-13 through 2014-15.  \n  Example fields: Cohort category; 2014-15 cohort; Exclusions to 2014-15 cohort; Adjusted 2014-15 cohort.\n- **Award and enrollment data at four, six and eight years for entering undergraduate cohorts degree granting institutions** \u2014 Outcome dates: August 31: 2023; 2024.  \n  Entering cohorts: 2015-16; 2016-17.  \n  Example fields: Cohort category; 2016-17 cohort; Exclusions to 2016-17 cohort; Adjusted 2016-17 cohort.\n\n**Survey: Graduation Rates**\n\nOutcome dates (unless noted): August 31: 2016 through 2022.\n\n- **Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete (4-year, 2-year institutions)**.  \n  Entering cohorts: 4-year institutions: 2010 through 2016; 2-year institutions: 2013 through 2019.  \n  Example fields: Pell Grant recipients - revised cohort; Pell Grant recipients - exclusions; Pell Grant recipients - adjusted cohort (revised minus exclusions); Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time.\n- **Graduation rate data for Pell Grant and Direct Subsidized Loan recipients, 150% of normal time to complete (4-year, 2-year institutions)** \u2014 Outcome dates: August 31: 2023; 2024.  \n  Entering cohorts: 4-year institutions: 2017; 2018; 2-year institutions: 2020; 2021.  \n  Example fields: Pell Grant recipients - revised cohort; Pell Grant recipients - exclusions; Pell Grant recipients - adjusted cohort (revised minus exclusions); Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time.\n\n**Survey: Student Financial Aid**\n\nReporting periods: July 1, 2022 - June 30, 2023.\n\n- **Student financial aid**.  \n  Example fields could not be verified for this data area.\n\nThese are codebook and physical-table matches, not confirmation that every institution has reported values. Definitions, populations and available breakdowns can differ by year. This is a bounded topic search, not an exhaustive inventory.\n\nTo continue, tell me the institution, data area and years you want to analyze.",
+      "discovery": {
+        "topics": [
+          {
+            "title": "Award and enrollment data at four, six and eight years for four entering undergraduate cohorts, by Pell status in degree granting institutions",
+            "survey": "Outcome Measures",
+            "periods": [
+              "Status of student as of August 31, 2018"
+            ],
+            "tables": [
+              "OM2018"
+            ],
+            "releases": [
+              "IPEDS_2018-19_Final"
+            ],
+            "fields": [
+              "Cohort category",
+              "2010-11 cohort",
+              "Exclusions to 2010-11 cohort",
+              "Adjusted 2010-11 cohort"
+            ],
+            "field_record_ids": [
+              47080,
+              47081,
+              47082,
+              47083
+            ],
+            "cohorts": "2010-11",
+            "grouping_note": "",
+            "record_ids": [
+              45047
+            ],
+            "annual_coverage": [
+              {
+                "release_id": "IPEDS_2018-19_Final",
+                "table_name": "OM2018",
+                "title": "Award and enrollment data at four, six and eight years for four entering undergraduate cohorts from 2010-11, by Pell status in degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2018",
+                "record_id": 45047
+              }
+            ]
+          },
+          {
+            "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates",
+            "survey": "Outcome Measures",
+            "periods": [
+              "Status of student as of August 31, 2017",
+              "Status of student as of August 31, 2018",
+              "Status of student as of August 31, 2019",
+              "Status of student as of August 31, 2020",
+              "Status of student as of August 31, 2021",
+              "Status of student as of August 31, 2022",
+              "Status of student as of August 31, 2023",
+              "Status of student as of August 31, 2024"
+            ],
+            "tables": [
+              "DRVOM2017",
+              "DRVOM2018",
+              "DRVOM2019",
+              "DRVOM2020",
+              "DRVOM2021",
+              "DRVOM2022",
+              "DRVOM2023",
+              "DRVOM2024"
+            ],
+            "releases": [
+              "IPEDS_2017-18_Final",
+              "IPEDS_2018-19_Final",
+              "IPEDS_2019-20_Final",
+              "IPEDS_2020-21_Final",
+              "IPEDS_2021-22_Final",
+              "IPEDS_2022-23_Final",
+              "IPEDS_2023-24_Final",
+              "IPEDS_2024-25_Provisional"
+            ],
+            "fields": [
+              "Percent full-time first-time, Pell grant recipients receiving an award - 4 years",
+              "Percent full-time first-time, Pell grant recipients receiving an award - 6 years",
+              "Percent full-time first-time, Pell grant recipients receiving an award - 8 years",
+              "Percent full-time first-time, Pell grant recipients still enrolled at same institution - 8 years"
+            ],
+            "field_record_ids": [
+              137035,
+              137036,
+              137037,
+              137038
+            ],
+            "cohorts": "2009; 2010-11; 2011-12; 2012-13; 2013-14; 2014-15; 2015-16; 2016-17",
+            "grouping_note": "",
+            "record_ids": [
+              30250,
+              45048,
+              60162,
+              74991,
+              89697,
+              103977,
+              119953,
+              135854
+            ],
+            "annual_coverage": [
+              {
+                "release_id": "IPEDS_2017-18_Final",
+                "table_name": "DRVOM2017",
+                "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2009 cohort",
+                "reporting_period": "Status of student as of August 31, 2017",
+                "record_id": 30250
+              },
+              {
+                "release_id": "IPEDS_2018-19_Final",
+                "table_name": "DRVOM2018",
+                "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2010-11 cohort",
+                "reporting_period": "Status of student as of August 31, 2018",
+                "record_id": 45048
+              },
+              {
+                "release_id": "IPEDS_2019-20_Final",
+                "table_name": "DRVOM2019",
+                "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2011-12 cohort",
+                "reporting_period": "Status of student as of August 31, 2019",
+                "record_id": 60162
+              },
+              {
+                "release_id": "IPEDS_2020-21_Final",
+                "table_name": "DRVOM2020",
+                "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2012-13 cohort",
+                "reporting_period": "Status of student as of August 31, 2020",
+                "record_id": 74991
+              },
+              {
+                "release_id": "IPEDS_2021-22_Final",
+                "table_name": "DRVOM2021",
+                "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2013-14 cohort",
+                "reporting_period": "Status of student as of August 31, 2021",
+                "record_id": 89697
+              },
+              {
+                "release_id": "IPEDS_2022-23_Final",
+                "table_name": "DRVOM2022",
+                "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2014-15 cohort",
+                "reporting_period": "Status of student as of August 31, 2022",
+                "record_id": 103977
+              },
+              {
+                "release_id": "IPEDS_2023-24_Final",
+                "table_name": "DRVOM2023",
+                "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2015-16 cohort",
+                "reporting_period": "Status of student as of August 31, 2023",
+                "record_id": 119953
+              },
+              {
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "DRVOM2024",
+                "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2016-17 cohort",
+                "reporting_period": "Status of student as of August 31, 2024",
+                "record_id": 135854
+              }
+            ]
+          },
+          {
+            "title": "Award and enrollment data at six and eight years for four entering undergraduate cohorts - degree granting institutions",
+            "survey": "Outcome Measures",
+            "periods": [
+              "Status of student as of August 31, 2015.",
+              "Status of student as of August 31, 2016",
+              "Status of student as of August 31, 2017",
+              "Status of student as of August 31, 2019"
+            ],
+            "tables": [
+              "OM2015",
+              "OM2016",
+              "OM2017",
+              "OM2019"
+            ],
+            "releases": [
+              "IPEDS_2015-16_Final",
+              "IPEDS_2016-17_Final",
+              "IPEDS_2017-18_Final",
+              "IPEDS_2019-20_Final"
+            ],
+            "fields": [
+              "Cohort category",
+              "2011-12 cohort",
+              "Exclusions to 2011-12 cohort",
+              "Adjusted 2011-12 cohort"
+            ],
+            "field_record_ids": [
+              62164,
+              62165,
+              62166,
+              62167
+            ],
+            "cohorts": "2007 through 2009; 2011",
+            "grouping_note": "",
+            "record_ids": [
+              41,
+              14730,
+              30249,
+              60161
+            ],
+            "annual_coverage": [
+              {
+                "release_id": "IPEDS_2015-16_Final",
+                "table_name": "OM2015",
+                "title": "Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2007 - degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2015.",
+                "record_id": 41
+              },
+              {
+                "release_id": "IPEDS_2016-17_Final",
+                "table_name": "OM2016",
+                "title": "Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2008 - degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2016",
+                "record_id": 14730
+              },
+              {
+                "release_id": "IPEDS_2017-18_Final",
+                "table_name": "OM2017",
+                "title": "Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2009 - degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2017",
+                "record_id": 30249
+              },
+              {
+                "release_id": "IPEDS_2019-20_Final",
+                "table_name": "OM2019",
+                "title": "Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2011 - degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2019",
+                "record_id": 60161
+              }
+            ]
+          },
+          {
+            "title": "Award and enrollment data at six and eight years for entering undergraduate cohorts degree granting institutions",
+            "survey": "Outcome Measures",
+            "periods": [
+              "Status of student as of August 31, 2020",
+              "Status of student as of August 31, 2021",
+              "Status of student as of August 31, 2022"
+            ],
+            "tables": [
+              "OM2020",
+              "OM2021",
+              "OM2022"
+            ],
+            "releases": [
+              "IPEDS_2020-21_Final",
+              "IPEDS_2021-22_Final",
+              "IPEDS_2022-23_Final"
+            ],
+            "fields": [
+              "Cohort category",
+              "2014-15 cohort",
+              "Exclusions to 2014-15 cohort",
+              "Adjusted 2014-15 cohort"
+            ],
+            "field_record_ids": [
+              105718,
+              105719,
+              105720,
+              105721
+            ],
+            "cohorts": "2012-13 through 2014-15",
+            "grouping_note": "",
+            "record_ids": [
+              74990,
+              89696,
+              103976
+            ],
+            "annual_coverage": [
+              {
+                "release_id": "IPEDS_2020-21_Final",
+                "table_name": "OM2020",
+                "title": "Award and enrollment data at six and eight years for entering undergraduate cohorts from 2012-13 degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2020",
+                "record_id": 74990
+              },
+              {
+                "release_id": "IPEDS_2021-22_Final",
+                "table_name": "OM2021",
+                "title": "Award and enrollment data at six and eight years for entering undergraduate cohorts from 2013-14 degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2021",
+                "record_id": 89696
+              },
+              {
+                "release_id": "IPEDS_2022-23_Final",
+                "table_name": "OM2022",
+                "title": "Award and enrollment data at six and eight years for entering undergraduate cohorts from 2014-15 degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2022",
+                "record_id": 103976
+              }
+            ]
+          },
+          {
+            "title": "Award and enrollment data at four, six and eight years for entering undergraduate cohorts degree granting institutions",
+            "survey": "Outcome Measures",
+            "periods": [
+              "Status of student as of August 31, 2023",
+              "Status of student as of August 31, 2024"
+            ],
+            "tables": [
+              "OM2023",
+              "OM2024"
+            ],
+            "releases": [
+              "IPEDS_2023-24_Final",
+              "IPEDS_2024-25_Provisional"
+            ],
+            "fields": [
+              "Cohort category",
+              "2016-17 cohort",
+              "Exclusions to 2016-17 cohort",
+              "Adjusted 2016-17 cohort"
+            ],
+            "field_record_ids": [
+              136999,
+              137000,
+              137001,
+              137002
+            ],
+            "cohorts": "2015-16; 2016-17",
+            "grouping_note": "",
+            "record_ids": [
+              119952,
+              135853
+            ],
+            "annual_coverage": [
+              {
+                "release_id": "IPEDS_2023-24_Final",
+                "table_name": "OM2023",
+                "title": "Award and enrollment data at four, six and eight years for entering undergraduate cohorts from 2015-16 degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2023",
+                "record_id": 119952
+              },
+              {
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "OM2024",
+                "title": "Award and enrollment data at four, six and eight years for entering undergraduate cohorts from 2016-17 degree granting institutions",
+                "reporting_period": "Status of student as of August 31, 2024",
+                "record_id": 135853
+              }
+            ]
+          },
+          {
+            "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete (4-year, 2-year institutions)",
+            "survey": "Graduation Rates",
+            "periods": [
+              "Status of student as of August 31, 2016",
+              "Status of student as of August 31, 2017",
+              "Status of student as of August 31, 2018",
+              "Status of student as of August 31, 2019",
+              "Status of student as of August 31, 2020",
+              "Status of student as of August 31, 2021",
+              "Status of student as of August 31, 2022"
+            ],
+            "tables": [
+              "GR2016_PELL_SSL",
+              "GR2017_PELL_SSL",
+              "GR2018_PELL_SSL",
+              "GR2019_PELL_SSL",
+              "GR2020_PELL_SSL",
+              "GR2021_PELL_SSL",
+              "GR2022_PELL_SSL"
+            ],
+            "releases": [
+              "IPEDS_2016-17_Final",
+              "IPEDS_2017-18_Final",
+              "IPEDS_2018-19_Final",
+              "IPEDS_2019-20_Final",
+              "IPEDS_2020-21_Final",
+              "IPEDS_2021-22_Final",
+              "IPEDS_2022-23_Final"
+            ],
+            "fields": [
+              "Pell Grant recipients - revised cohort",
+              "Pell Grant recipients - exclusions",
+              "Pell Grant recipients - adjusted cohort (revised minus exclusions)",
+              "Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time"
+            ],
+            "field_record_ids": [
+              105626,
+              105627,
+              105628,
+              105629
+            ],
+            "cohorts": "4-year institutions: 2010 through 2016; 2-year institutions: 2013 through 2019",
+            "grouping_note": "",
+            "record_ids": [
+              14727,
+              30246,
+              45044,
+              60158,
+              74987,
+              89693,
+              103972
+            ],
+            "annual_coverage": [
+              {
+                "release_id": "IPEDS_2016-17_Final",
+                "table_name": "GR2016_PELL_SSL",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2010 (4-year) and cohort year 2013 (2-year) institutions",
+                "reporting_period": "Status of student as of August 31, 2016",
+                "record_id": 14727
+              },
+              {
+                "release_id": "IPEDS_2017-18_Final",
+                "table_name": "GR2017_PELL_SSL",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2011 (4-year) and cohort year 2014 (2-year) institutions",
+                "reporting_period": "Status of student as of August 31, 2017",
+                "record_id": 30246
+              },
+              {
+                "release_id": "IPEDS_2018-19_Final",
+                "table_name": "GR2018_PELL_SSL",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2012 (4-year) and cohort year 2015 (2-year) institutions",
+                "reporting_period": "Status of student as of August 31, 2018",
+                "record_id": 45044
+              },
+              {
+                "release_id": "IPEDS_2019-20_Final",
+                "table_name": "GR2019_PELL_SSL",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2013 (4-year) and cohort year 2016 (2-year) institutions",
+                "reporting_period": "Status of student as of August 31, 2019",
+                "record_id": 60158
+              },
+              {
+                "release_id": "IPEDS_2020-21_Final",
+                "table_name": "GR2020_PELL_SSL",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2014 (4-year) and cohort year 2017 (2-year) institutions",
+                "reporting_period": "Status of student as of August 31, 2020",
+                "record_id": 74987
+              },
+              {
+                "release_id": "IPEDS_2021-22_Final",
+                "table_name": "GR2021_PELL_SSL",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2015 (4-year) and cohort year 2018 (2-year) institutions",
+                "reporting_period": "Status of student as of August 31, 2021",
+                "record_id": 89693
+              },
+              {
+                "release_id": "IPEDS_2022-23_Final",
+                "table_name": "GR2022_PELL_SSL",
+                "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions",
+                "reporting_period": "Status of student as of August 31, 2022",
+                "record_id": 103972
+              }
+            ]
+          },
+          {
+            "title": "Graduation rate data for Pell Grant and Direct Subsidized Loan recipients, 150% of normal time to complete (4-year, 2-year institutions)",
+            "survey": "Graduation Rates",
+            "periods": [
+              "Status of student as of August 31, 2023",
+              "Status of student as of August 31, 2024"
+            ],
+            "tables": [
+              "GR2023_PELL_SSL",
+              "GR2024_PELL_SSL"
+            ],
+            "releases": [
+              "IPEDS_2023-24_Final",
+              "IPEDS_2024-25_Provisional"
+            ],
+            "fields": [
+              "Pell Grant recipients - revised cohort",
+              "Pell Grant recipients - exclusions",
+              "Pell Grant recipients - adjusted cohort (revised minus exclusions)",
+              "Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time"
+            ],
+            "field_record_ids": [
+              136913,
+              136914,
+              136915,
+              136916
+            ],
+            "cohorts": "4-year institutions: 2017; 2018; 2-year institutions: 2020; 2021",
+            "grouping_note": "",
+            "record_ids": [
+              119948,
+              135850
+            ],
+            "annual_coverage": [
+              {
+                "release_id": "IPEDS_2023-24_Final",
+                "table_name": "GR2023_PELL_SSL",
+                "title": "Graduation rate data for Pell Grant and Direct Subsidized loan recipients, 150% of normal time to complete - cohort year 2017 (4-year) and cohort year 2020 (2-year) institutions",
+                "reporting_period": "Status of student as of August 31, 2023",
+                "record_id": 119948
+              },
+              {
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "GR2024_PELL_SSL",
+                "title": "Graduation rate data for Pell Grant and Direct Subsidized Loan recipients, 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions",
+                "reporting_period": "Status of student as of August 31, 2024",
+                "record_id": 135850
+              }
+            ]
+          },
+          {
+            "title": "Student financial aid",
+            "survey": "Student Financial Aid",
+            "periods": [
+              "July 1, 2022 - June 30, 2023"
+            ],
+            "tables": [
+              "SFA2223_P1"
+            ],
+            "releases": [
+              "IPEDS_2023-24_Final"
+            ],
+            "fields": [],
+            "field_record_ids": [],
+            "cohorts": "",
+            "grouping_note": "",
+            "record_ids": [
+              119943
+            ],
+            "annual_coverage": [
+              {
+                "release_id": "IPEDS_2023-24_Final",
+                "table_name": "SFA2223_P1",
+                "title": "Student financial aid: 2022-23",
+                "reporting_period": "July 1, 2022 - June 30, 2023",
+                "record_id": 119943
+              }
+            ]
+          }
+        ],
+        "requested_release_years": [],
+        "bounded": true,
+        "grouping_policy": "Exact survey and stable description/population; at most one table per release; at least two shared columns and 60% overlap relative to the smaller schema. Navigation grouping does not certify numerical comparability."
+      },
+      "evidence": [
+        {
+          "record_id": 45047,
+          "release_id": "IPEDS_2018-19_Final",
+          "kind": "table_definition",
+          "table_name": "OM2018",
+          "variable_name": "",
+          "title": "Award and enrollment data at four, six and eight years for four entering undergraduate cohorts from 2010-11, by Pell status in degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2018\ntablename: OM2018\ntablenumber: 181\ntabletitle: Award and enrollment data at four, six and eight years for four entering undergraduate cohorts from 2010-11, by Pell status in degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2010-11 at three points in time: four-year (August 31, 2014) six-year (August 31, 2016) and eight-year (August 31, 2018). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2010 and June 30, 2011 are reported in one of the subcohorts. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled.\nrelease: Final\nrelease date: September 2020",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819TablesDoc.xlsx",
+          "sheet_name": "Tables18",
+          "source_row": 36,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 47080,
+          "release_id": "IPEDS_2018-19_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2018",
+          "variable_name": "OMCHRT",
+          "title": "Cohort category",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2018\ntabletitle: Award and enrollment data at four, six and eight years for four entering undergraduate cohorts from 2010-11, by Pell status in degree granting institutions\nvarnumber: 83001\nvarorder: 1\nvarname: OMCHRT\nvartitle: Cohort category\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: At three status points (4-, 6-, and 8-years after entry), the OM component collects award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient Entering students (undergraduate) - Students at the undergraduate level, both full-time and part-time, coming into the institution for the first time using a full-year cohort. Entering students are identified as those students who entered the institution between July 1 of one year and June 30 of the following year. This includes all first-time undergraduate students, students, who transfer into the institution at the undergraduate level for the first time, and non- degree/certificate seeking undergraduates. First-time entering (undergraduate) - A student who has no prior postsecondary experience (except as noted below) attending any institution for the first time at the undergraduate level. This includes students enrolled in academic or occupational programs. It also includes students enrolled in the fall term, who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Non-first-time entering (undergraduate) - A student wh",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819TablesDoc.xlsx",
+          "sheet_name": "vartable18",
+          "source_row": 2019,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 47081,
+          "release_id": "IPEDS_2018-19_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2018",
+          "variable_name": "OMRCHRT",
+          "title": "2010-11 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2018\ntabletitle: Award and enrollment data at four, six and eight years for four entering undergraduate cohorts from 2010-11, by Pell status in degree granting institutions\nvarnumber: 83002\nvarorder: 2\nvarname: OMRCHRT\nimputationvar: XOMRCHRT\nvartitle: 2010-11 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2010 and June 30, 2011 are reported in one of the subcohorts. All institutions report using a full-year cohort, which counts all students who entered the institution between July 1, 2010 and June 30, 2011 Academic reporting institutions reported students who were enrolled through the term's Census Date for enrollment purposes. Program/hybrid reporting institutions reported students who were enrolled for at least 15 days in a program of up to, and including, one year in length, or 30 days in a program of greater than one year in length.\nvarsource: IPEDS, Winter 2018-19, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2010-11 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819TablesDoc.xlsx",
+          "sheet_name": "vartable18",
+          "source_row": 2020,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 47082,
+          "release_id": "IPEDS_2018-19_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2018",
+          "variable_name": "OMEXCLS",
+          "title": "Exclusions to 2010-11 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2018\ntabletitle: Award and enrollment data at four, six and eight years for four entering undergraduate cohorts from 2010-11, by Pell status in degree granting institutions\nvarnumber: 83003\nvarorder: 3\nvarname: OMEXCLS\nimputationvar: XOMEXCLS\nvartitle: Exclusions to 2010-11 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: The total number of students who left institution after the point of entry through August 31, 2018 for one of the following allowable reasons: (a) The student is deceased or is totally and permanently disabled and thus unable to return to school. (b) The student left school to serve in the armed forces or was called to active duty. (DO NOT include students already in the military who transfer to another duty station). (c) The student left school to serve with a foreign aid service of the Federal Government, such as the Peace Corps. (d) The student left school to serve on an official church mission. Students who leave the institution for one of the reasons noted in b, c, or d above, but return prior to the 8-year status point, may be subtracted from the cohort.\nvarsource: IPEDS, Winter 2018-19, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2010-11 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819TablesDoc.xlsx",
+          "sheet_name": "vartable18",
+          "source_row": 2021,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 47083,
+          "release_id": "IPEDS_2018-19_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2018",
+          "variable_name": "OMACHRT",
+          "title": "Adjusted 2010-11 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2018\ntabletitle: Award and enrollment data at four, six and eight years for four entering undergraduate cohorts from 2010-11, by Pell status in degree granting institutions\nvarnumber: 83004\nvarorder: 4\nvarname: OMACHRT\nimputationvar: XOMACHRT\nvartitle: Adjusted 2010-11 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: Adjusted cohort is the revised cohort minus exclusions\nvarsource: IPEDS, Winter 2018-19, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2010-11 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819TablesDoc.xlsx",
+          "sheet_name": "vartable18",
+          "source_row": 2022,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 30250,
+          "release_id": "IPEDS_2017-18_Final",
+          "kind": "table_definition",
+          "table_name": "DRVOM2017",
+          "variable_name": "",
+          "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2009 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2017\ntablename: DRVOM2017\ntablenumber: 182\ntabletitle: Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2009 cohort\ndescription: This table contains derived award and enrollment rates from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2009-10 at three points in time: four-year (August 31, 2013) six-year (August 31, 2015) and eight-year (August 31, 2017). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2009 and June 30, 2010 are reported in one of the subcohorts. Frequently used derived variables may include data for child campuses derived from allocation factors that are reported by the parent institution. Parent/child indicators can be found in table FLAGS2017.\nrelease: Final\nrelease date: October 2019",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2017-18_Final\\IPEDS201718TablesDoc.xlsx",
+          "sheet_name": "Tables17",
+          "source_row": 36,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 45048,
+          "release_id": "IPEDS_2018-19_Final",
+          "kind": "table_definition",
+          "table_name": "DRVOM2018",
+          "variable_name": "",
+          "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2010-11 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2018\ntablename: DRVOM2018\ntablenumber: 182\ntabletitle: Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2010-11 cohort\ndescription: This table contains derived award and enrollment rates from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2010-11 at three points in time: four-year (August 31, 2014) six-year (August 31, 2016) and eight-year (August 31, 2018). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2010 and June 30, 2011 are reported in one of the subcohorts. Frequently used derived variables may include data for child campuses derived from allocation factors that are reported by the parent institution. Parent/child indicators can be found in table FLAGS2018.\nrelease: Final\nrelease date: September 2020",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819TablesDoc.xlsx",
+          "sheet_name": "Tables18",
+          "source_row": 37,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 60162,
+          "release_id": "IPEDS_2019-20_Final",
+          "kind": "table_definition",
+          "table_name": "DRVOM2019",
+          "variable_name": "",
+          "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2011-12 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2019\ntablename: DRVOM2019\ntablenumber: 182\ntabletitle: Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2011-12 cohort\ndescription: This table contains derived award and enrollment rates from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2011-12 at three points in time: four-year (August 31, 2015) six-year (August 31, 2017) and eight-year (August 31, 2019). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2011 and June 30, 2012 are reported in one of the subcohorts. Frequently used derived variables may include data for child campuses derived from allocation factors that are reported by the parent institution. Parent/child indicators can be found in table FLAGS2019.\nrelease: Final\nrelease date: October 2021",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920TablesDoc.xlsx",
+          "sheet_name": "Tables19",
+          "source_row": 36,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 74991,
+          "release_id": "IPEDS_2020-21_Final",
+          "kind": "table_definition",
+          "table_name": "DRVOM2020",
+          "variable_name": "",
+          "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2012-13 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2020\ntablename: DRVOM2020\ntablenumber: 182\ntabletitle: Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2012-13 cohort\ndescription: This table contains derived award and enrollment rates from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2012-3 at three points in time: four-year (August 31, 2016) six-year (August 31, 2018) and eight-year (August 31, 2020). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2012 and June 30, 2013 are reported in one of the subcohorts. Frequently used derived variables may include data for child campuses derived from allocation factors that are reported by the parent institution. Parent/child indicators can be found in table flags2020.\nrelease: Final\nrelease date: 'October 2022",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2020-21_Final\\IPEDS202021TablesDoc.xlsx",
+          "sheet_name": "Tables20",
+          "source_row": 38,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 89697,
+          "release_id": "IPEDS_2021-22_Final",
+          "kind": "table_definition",
+          "table_name": "DRVOM2021",
+          "variable_name": "",
+          "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2013-14 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2021\ntablename: DRVOM2021\ntablenumber: 182\ntabletitle: Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2013-14 cohort\ndescription: This table contains derived award and enrollment rates from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2013-14 at three points in time: four-year (August 31, 2017) six-year (August 31, 2019) and eight-year (August 31, 2021). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2013 and June 30, 2014 are reported in one of the subcohorts. Frequently used derived variables may include data for child campuses derived from allocation factors that are reported by the parent institution. Parent/child indicators can be found in table flags2021.\nrelease: Final\nrelease date: November 2023",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2021-22_Final\\IPEDS202122TablesDoc.xlsx",
+          "sheet_name": "Tables21",
+          "source_row": 39,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 103977,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "table_definition",
+          "table_name": "DRVOM2022",
+          "variable_name": "",
+          "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2014-15 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2022\ntablename: DRVOM2022\ntablenumber: 182\ntabletitle: Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2014-15 cohort\ndescription: This table contains derived award and enrollment rates from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2014-15 at three points in time: four-year (August 31, 2018) six-year (August 31, 2020) and eight-year (August 31, 2022). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2014 and June 30, 2015 are reported in one of the subcohorts. Frequently used derived variables may include data for child campuses derived from allocation factors that are reported by the parent institution. Parent/child indicators can be found in table flags2022.\nrelease: Final\nrelease date: September 2024",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "Tables22",
+          "source_row": 40,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 119953,
+          "release_id": "IPEDS_2023-24_Final",
+          "kind": "table_definition",
+          "table_name": "DRVOM2023",
+          "variable_name": "",
+          "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2015-16 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2023\ntablename: DRVOM2023\ntablenumber: 182\ntabletitle: Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2015-16 cohort\ndescription: This table contains derived award and enrollment rates from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2015-16 at three points in time: four-year (August 31, 2019) six-year (August 31, 2021) and eight-year (August 31, 2023). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2015 and June 30, 2016 are reported in one of the subcohorts. Frequently used derived variables may include data for child campuses derived from allocation factors that are reported by the parent institution. Parent/child indicators can be found in table flags2023.\nrelease: Final\nrelease date: December 2025",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+          "sheet_name": "Tables23",
+          "source_row": 40,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 135854,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "table_definition",
+          "table_name": "DRVOM2024",
+          "variable_name": "",
+          "title": "Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2016-17 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2024\ntablename: DRVOM2024\ntablenumber: 182\ntabletitle: Frequently used derived variables (OM) Award and enrollment rates of degree/certificate-seeking undergraduates, 2016-17 cohort\ndescription: This table contains derived award and enrollment rates from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2016-17 at three points in time: four-year (August 31, 2020) six-year (August 31, 2022) and eight-year (August 31, 2024). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2016 and June 30, 2017 are reported in one of the subcohorts. Frequently used derived variables may include data for child campuses derived from allocation factors that are reported by the parent institution. Parent/child indicators can be found in table flags2024.\nrelease: Provisional\nrelease_date: December 2025",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "tables24",
+          "source_row": 35,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 137035,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVOM2024",
+          "variable_name": "OM1PellAwdp4",
+          "title": "Percent full-time first-time, Pell grant recipients receiving an award - 4 years",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 182\ntablename: DRVOM2024\ntabletitle: Outcome measure rates\nvarnumber: 84111\nvarorder: 11\nvarname: OM1PellAwdp4\nvartitle: Percent full-time first-time, Pell grant recipients receiving an award - 4 years\ndatatype: N\nfieldwidth: 5\nformat: Cont\nmultirecord: 0\nfilenumber: 90\nsectionnumber: 1\nlongdescription: This variable is the proportion of full-time first-time, entering degree/certifcate-seeking Pell grant recipients who received an award (degree or certificate) from the reporting institution. Number of students receiving an award from the reporting institution through August 31, 2020 (OMAWDN4) is divided by the 2016-17 adjusted cohort (OMACHRT), for the full-time first-time, Pell subcohort (OMCHRT=11).\nvarsource: Derived DFR - IPEDS Winter 2024-25, Outcome Measures component\nfiletitle: Outcome measure rates\nsectiontitle: Full-time first-time",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1164,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137036,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVOM2024",
+          "variable_name": "OM1PellAwdp6",
+          "title": "Percent full-time first-time, Pell grant recipients receiving an award - 6 years",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 182\ntablename: DRVOM2024\ntabletitle: Outcome measure rates\nvarnumber: 84112\nvarorder: 12\nvarname: OM1PellAwdp6\nvartitle: Percent full-time first-time, Pell grant recipients receiving an award - 6 years\ndatatype: N\nfieldwidth: 5\nformat: Cont\nmultirecord: 0\nfilenumber: 90\nsectionnumber: 1\nlongdescription: This variable is the proportion of full-time first-time, entering degree/certifcate-seeking Pell grant recipients who received an award (degree or certificate) from the reporting institution. Number of students receiving an award from the reporting institution through August 31, 2022 (OMAWDN6) is divided by the 2016-17 adjusted cohort (OMACHRT), for the full-time first-time, Pell subcohort (OMCHRT=11).\nvarsource: Derived DFR - IPEDS Winter 2024-25, Outcome Measures component\nfiletitle: Outcome measure rates\nsectiontitle: Full-time first-time",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1165,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137037,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVOM2024",
+          "variable_name": "OM1PellAwdp8",
+          "title": "Percent full-time first-time, Pell grant recipients receiving an award - 8 years",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 182\ntablename: DRVOM2024\ntabletitle: Outcome measure rates\nvarnumber: 84113\nvarorder: 13\nvarname: OM1PellAwdp8\nvartitle: Percent full-time first-time, Pell grant recipients receiving an award - 8 years\ndatatype: N\nfieldwidth: 5\nformat: Cont\nmultirecord: 0\nfilenumber: 90\nsectionnumber: 1\nlongdescription: This variable is the proportion of full-time first-time, entering degree/certifcate-seeking Pell grant recipients who received an award (degree or certificate) from the reporting institution. Number of students receiving an award from the reporting institution through August 31, 2024 (OMAWDN8) is divided by the 2016-17 adjusted cohort (OMACHRT), for the full-time first-time, Pell subcohort (OMCHRT=11).\nvarsource: Derived DFR - IPEDS Winter 2024-25, Outcome Measures component\nfiletitle: Outcome measure rates\nsectiontitle: Full-time first-time",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1166,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137038,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "DRVOM2024",
+          "variable_name": "OM1PellEnYp8",
+          "title": "Percent full-time first-time, Pell grant recipients still enrolled at same institution - 8 years",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 182\ntablename: DRVOM2024\ntabletitle: Outcome measure rates\nvarnumber: 84114\nvarorder: 14\nvarname: OM1PellEnYp8\nvartitle: Percent full-time first-time, Pell grant recipients still enrolled at same institution - 8 years\ndatatype: N\nfieldwidth: 5\nformat: Cont\nmultirecord: 0\nfilenumber: 90\nsectionnumber: 1\nlongdescription: This variable is the proportion of full-time first-time, entering degree/certificate-seeking Pell grant recipents who are still enrolled through August 31, 2024 at the reporting institution. Number still enrolled at the reporting institution (OMENRYI) is divided by the 2016-17 adjusted cohort (OMACHRT) for the full-time first-time Pell subcohort (OMCHRT=11)\nvarsource: Derived DFR - IPEDS Winter 2024-25, Outcome Measures component\nfiletitle: Outcome measure rates\nsectiontitle: Full-time first-time",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1167,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 41,
+          "release_id": "IPEDS_2015-16_Final",
+          "kind": "table_definition",
+          "table_name": "OM2015",
+          "variable_name": "",
+          "title": "Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2007 - degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2015.\ntablename: OM2015\ntablenumber: 181\ntabletitle: Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2007 - degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four undergraduate cohorts that entered an institution in 2007 at two points in time: six-year (August 31, 2013) and eight-year (August 31, 2015). The four cohorts of degree/certificate-seeking undergraduates are: Full-time, first-time entering (FTFT) Part-time, first-time entering (PTFT) Full-time, non-first-time entering (FTNFT) Part-time, non-first-time entering (PTNFT) This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled. See detailed information in the spreadsheets below. There was no provisional release of the 2015 Outcome Measure data. In the 2015-16 collection year, after the quality control procedures had been conducted, inconsistencies were identified between outcome data in the Graduation Rates (GR), 200 Percent Graduation Rates (GR200), and Outcome Measures (OM) survey components for students who entered postsecondary institutions in 2007 (referred to as the 2007 cohort). Institutions with data inconsistencies were identified and were provided an opportunity to review, edit, and resubmit their data through the 2015-16 Prior Year Revision (PYR) system. Some data inconsistencies remain on this final release. The variable OMFLAG, (see varlist) identifies institutions that had at least one inconsistency. Six additional flag variables were added to the response data file FLAGS2015 to identify institutions by type of inconsi",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2015-16_Final\\IPEDS201516TablesDoc.xlsx",
+          "sheet_name": "Tables15",
+          "source_row": 34,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 14730,
+          "release_id": "IPEDS_2016-17_Final",
+          "kind": "table_definition",
+          "table_name": "OM2016",
+          "variable_name": "",
+          "title": "Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2008 - degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2016\ntablename: OM2016\ntablenumber: 181\ntabletitle: Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2008 - degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four undergraduate cohorts that entered an institution in 2008 at two points in time: six-year (August 31, 2014) and eight-year (August 31, 2016). The four cohorts of degree/certificate-seeking undergraduates are: Full-time, first-time entering (FTFT) Part-time, first-time entering (PTFT) Full-time, non-first-time entering (FTNFT) Part-time, non-first-time entering (PTNFT) This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled. See detailed information in the spreadsheets below.\nrelease: Final\nrelease date: December 2018",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2016-17_Final\\IPEDS201617TablesDoc.xlsx",
+          "sheet_name": "Tables16",
+          "source_row": 36,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 30249,
+          "release_id": "IPEDS_2017-18_Final",
+          "kind": "table_definition",
+          "table_name": "OM2017",
+          "variable_name": "",
+          "title": "Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2009 - degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2017\ntablename: OM2017\ntablenumber: 181\ntabletitle: Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2009 - degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2009-10 at three points in time: four-year (August 31, 2013) six-year (August 31, 2015) and eight-year (August 31, 2017). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2009 and June 30, 2010 are reported in one of the subcohorts. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled.\nrelease: Final\nrelease date: October 2019",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2017-18_Final\\IPEDS201718TablesDoc.xlsx",
+          "sheet_name": "Tables17",
+          "source_row": 35,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 60161,
+          "release_id": "IPEDS_2019-20_Final",
+          "kind": "table_definition",
+          "table_name": "OM2019",
+          "variable_name": "",
+          "title": "Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2011 - degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2019\ntablename: OM2019\ntablenumber: 181\ntabletitle: Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2011 - degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2011-12 at three points in time: four-year (August 31, 2015) six-year (August 31, 2017) and eight-year (August 31, 2019). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2011 and June 30, 2012 are reported in one of the subcohorts. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled.\nrelease: Final\nrelease date: October 2021",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920TablesDoc.xlsx",
+          "sheet_name": "Tables19",
+          "source_row": 35,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 62164,
+          "release_id": "IPEDS_2019-20_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2019",
+          "variable_name": "OMCHRT",
+          "title": "Cohort category",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2019\ntabletitle: Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2009 - degree granting institutions\nvarnumber: 83001\nvarorder: 1\nvarname: OMCHRT\nvartitle: Cohort category\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: At three status points (4-, 6-, and 8-years after entry), the OM component collects award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient Entering students (undergraduate) - Students at the undergraduate level, both full-time and part-time, coming into the institution for the first time using a full-year cohort. Entering students are identified as those students who entered the institution between July 1 of one year and June 30 of the following year. This includes all first-time undergraduate students, students, who transfer into the institution at the undergraduate level for the first time, and non- degree/certificate seeking undergraduates. First-time entering (undergraduate) - A student who has no prior postsecondary experience (except as noted below) attending any institution for the first time at the undergraduate level. This includes students enrolled in academic or occupational programs. It also includes students enrolled in the fall term, who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Non-first-time entering (undergraduate) - A student who has prior postsecondary ",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920TablesDoc.xlsx",
+          "sheet_name": "vartable19",
+          "source_row": 1989,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 62165,
+          "release_id": "IPEDS_2019-20_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2019",
+          "variable_name": "OMRCHRT",
+          "title": "2011-12 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2019\ntabletitle: Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2009 - degree granting institutions\nvarnumber: 83002\nvarorder: 2\nvarname: OMRCHRT\nimputationvar: XOMRCHRT\nvartitle: 2011-12 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2011 and June 30, 2012 are reported in one of the subcohorts. All institutions report using a full-year cohort, which counts all students who entered the institution between July 1, 2011 and June 30, 2012 Academic reporting institutions reported students who were enrolled through the term's Census Date for enrollment purposes. Program/hybrid reporting institutions reported students who were enrolled for at least 15 days in a program of up to, and including, one year in length, or 30 days in a program of greater than one year in length.\nvarsource: IPEDS, Winter 2019-20, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2011-12 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920TablesDoc.xlsx",
+          "sheet_name": "vartable19",
+          "source_row": 1990,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 62166,
+          "release_id": "IPEDS_2019-20_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2019",
+          "variable_name": "OMEXCLS",
+          "title": "Exclusions to 2011-12 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2019\ntabletitle: Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2009 - degree granting institutions\nvarnumber: 83003\nvarorder: 3\nvarname: OMEXCLS\nimputationvar: XOMEXCLS\nvartitle: Exclusions to 2011-12 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: The total number of students who left institution after the point of entry through August 31, 2019 for one of the following allowable reasons: (a) The student is deceased or is totally and permanently disabled and thus unable to return to school. (b) The student left school to serve in the armed forces or was called to active duty. (DO NOT include students already in the military who transfer to another duty station). (c) The student left school to serve with a foreign aid service of the Federal Government, such as the Peace Corps. (d) The student left school to serve on an official church mission. Students who leave the institution for one of the reasons noted in b, c, or d above, but return prior to the 8-year status point, may be subtracted from the cohort.\nvarsource: IPEDS, Winter 2019-20, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2011-12 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920TablesDoc.xlsx",
+          "sheet_name": "vartable19",
+          "source_row": 1991,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 62167,
+          "release_id": "IPEDS_2019-20_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2019",
+          "variable_name": "OMACHRT",
+          "title": "Adjusted 2011-12 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2019\ntabletitle: Award and enrollment data at six and eight years for four entering undergraduate cohorts from 2009 - degree granting institutions\nvarnumber: 83004\nvarorder: 4\nvarname: OMACHRT\nimputationvar: XOMACHRT\nvartitle: Adjusted 2011-12 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: Adjusted cohort is the revised cohort minus exclusions\nvarsource: IPEDS, Winter 2019-20, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2011-12 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920TablesDoc.xlsx",
+          "sheet_name": "vartable19",
+          "source_row": 1992,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 74990,
+          "release_id": "IPEDS_2020-21_Final",
+          "kind": "table_definition",
+          "table_name": "OM2020",
+          "variable_name": "",
+          "title": "Award and enrollment data at six and eight years for entering undergraduate cohorts from 2012-13 degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2020\ntablename: OM2020\ntablenumber: 181\ntabletitle: Award and enrollment data at six and eight years for entering undergraduate cohorts from 2012-13 degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2012-13 at three points in time: four-year (August 31, 2016) six-year (August 31, 2018) and eight-year (August 31, 2020). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2012 and June 30, 2013 are reported in one of the subcohorts. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled.\nrelease: Final\nrelease date: 'October 2022",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2020-21_Final\\IPEDS202021TablesDoc.xlsx",
+          "sheet_name": "Tables20",
+          "source_row": 37,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 89696,
+          "release_id": "IPEDS_2021-22_Final",
+          "kind": "table_definition",
+          "table_name": "OM2021",
+          "variable_name": "",
+          "title": "Award and enrollment data at six and eight years for entering undergraduate cohorts from 2013-14 degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2021\ntablename: OM2021\ntablenumber: 181\ntabletitle: Award and enrollment data at six and eight years for entering undergraduate cohorts from 2013-14 degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2013-14 at three points in time: four-year (August 31, 2017) six-year (August 31, 2019) and eight-year (August 31, 2021). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2013 and June 30, 2014 are reported in one of the subcohorts. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled.\nrelease: Final\nrelease date: November 2023",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2021-22_Final\\IPEDS202122TablesDoc.xlsx",
+          "sheet_name": "Tables21",
+          "source_row": 38,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 103976,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "table_definition",
+          "table_name": "OM2022",
+          "variable_name": "",
+          "title": "Award and enrollment data at six and eight years for entering undergraduate cohorts from 2014-15 degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2022\ntablename: OM2022\ntablenumber: 181\ntabletitle: Award and enrollment data at six and eight years for entering undergraduate cohorts from 2014-15 degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2014-15 at three points in time: four-year (August 31, 2018) six-year (August 31, 2020) and eight-year (August 31, 2022). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2013 and June 30, 2014 are reported in one of the subcohorts. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled.\nrelease: Final\nrelease date: September 2024",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "Tables22",
+          "source_row": 39,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 105718,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2022",
+          "variable_name": "OMCHRT",
+          "title": "Cohort category",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2022\ntabletitle: Award and enrollment data at six and eight years for entering undergraduate cohorts from 2014-15 degree granting institutions\nvarnumber: 83001\nvarorder: 1\nvarname: OMCHRT\nvartitle: Cohort category\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nhasrv: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: At three status points (4-, 6-, and 8-years after entry), the OM component collects award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient Entering students (undergraduate) - Students at the undergraduate level, both full-time and part-time, coming into the institution for the first time using a full-year cohort. Entering students are identified as those students who entered the institution between July 1 of one year and June 30 of the following year. This includes all first-time undergraduate students, students, who transfer into the institution at the undergraduate level for the first time, and non- degree/certificate seeking undergraduates. First-time entering (undergraduate) - A student who has no prior postsecondary experience (except as noted below) attending any institution for the first time at the undergraduate level. This includes students enrolled in academic or occupational programs. It also includes students enrolled in the fall term, who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Non-first-time entering (undergraduate) - A student who has prior postsecon",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "vartable22",
+          "source_row": 1728,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 105719,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2022",
+          "variable_name": "OMRCHRT",
+          "title": "2014-15 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2022\ntabletitle: Award and enrollment data at six and eight years for entering undergraduate cohorts from 2014-15 degree granting institutions\nvarnumber: 83002\nvarorder: 2\nvarname: OMRCHRT\nimputationvar: XOMRCHRT\nvartitle: 2014-15 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nhasrv: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2014 and June 30, 2015 are reported in one of the subcohorts. All institutions report using a full-year cohort, which counts all students who entered the institution between July 1, 2014 and June 30, 2015 Academic reporting institutions reported students who were enrolled through the term's Census Date for enrollment purposes. Program/hybrid reporting institutions reported students who were enrolled for at least 15 days in a program of up to, and including, one year in length, or 30 days in a program of greater than one year in length.\nvarsource: IPEDS, Winter 2022-23, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2014-15 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "vartable22",
+          "source_row": 1729,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 105720,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2022",
+          "variable_name": "OMEXCLS",
+          "title": "Exclusions to 2014-15 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2022\ntabletitle: Award and enrollment data at six and eight years for entering undergraduate cohorts from 2014-15 degree granting institutions\nvarnumber: 83003\nvarorder: 3\nvarname: OMEXCLS\nimputationvar: XOMEXCLS\nvartitle: Exclusions to 2014-15 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nhasrv: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: The total number of students who left institution after the point of entry through August 31, 2022 for one of the following allowable reasons: (a) The student is deceased or is totally and permanently disabled and thus unable to return to school. (b) The student left school to serve in the armed forces or was called to active duty. (DO NOT include students already in the military who transfer to another duty station). (c) The student left school to serve with a foreign aid service of the Federal Government, such as the Peace Corps. (d) The student left school to serve on an official church mission. Students who leave the institution for one of the reasons noted in b, c, or d above, but return prior to the 8-year status point, may be subtracted from the cohort.\nvarsource: IPEDS, Winter 2022-23, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2014-15 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "vartable22",
+          "source_row": 1730,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 105721,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "variable_definition",
+          "table_name": "OM2022",
+          "variable_name": "OMACHRT",
+          "title": "Adjusted 2014-15 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2022\ntabletitle: Award and enrollment data at six and eight years for entering undergraduate cohorts from 2014-15 degree granting institutions\nvarnumber: 83004\nvarorder: 4\nvarname: OMACHRT\nimputationvar: XOMACHRT\nvartitle: Adjusted 2014-15 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nhasrv: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: Adjusted cohort is the revised cohort minus exclusions\nvarsource: IPEDS, Winter 2022-23, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2014-15 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "vartable22",
+          "source_row": 1731,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 119952,
+          "release_id": "IPEDS_2023-24_Final",
+          "kind": "table_definition",
+          "table_name": "OM2023",
+          "variable_name": "",
+          "title": "Award and enrollment data at four, six and eight years for entering undergraduate cohorts from 2015-16 degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2023\ntablename: OM2023\ntablenumber: 181\ntabletitle: Award and enrollment data at four, six and eight years for entering undergraduate cohorts from 2015-16 degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2015-16 at three points in time: four-year (August 31, 2019) six-year (August 31, 2021) and eight-year (August 31, 2023). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2015 and June 30, 2016 are reported in one of the subcohorts. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled.\nrelease: Final\nrelease date: December 2025",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+          "sheet_name": "Tables23",
+          "source_row": 39,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 135853,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "table_definition",
+          "table_name": "OM2024",
+          "variable_name": "",
+          "title": "Award and enrollment data at four, six and eight years for entering undergraduate cohorts from 2016-17 degree granting institutions",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\nyearcoverage: Status of student as of August 31, 2024\ntablename: OM2024\ntablenumber: 181\ntabletitle: Award and enrollment data at four, six and eight years for entering undergraduate cohorts from 2016-17 degree granting institutions\ndescription: This table contains award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates who entered an institution in 2016-17 at three points in time: four-year (August 31, 2020) six-year (August 31, 2022) and eight-year (August 31, 2024). The cohorts of degree/certificate-seeking undergraduates are: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2016 and June 30, 2017 are reported in one of the subcohorts. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (OMCHRT) described above. Each record (cohort) will contain the revised and adjusted size of the cohorts, the number and percent that completed and the number and percent still enrolled.\nrelease: Provisional\nrelease_date: December 2025",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "tables24",
+          "source_row": 34,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 136999,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "OM2024",
+          "variable_name": "OMCHRT",
+          "title": "Cohort category",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2024\ntabletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2016-17 at degree-granting institutions, by Pell status\nvarnumber: 83001\nvarorder: 2\nvarname: OMCHRT\nvartitle: Cohort category\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: At three status points (4-, 6-, and 8-years after entry), the OM component collects award and enrollment data from degree-granting institutions on four cohorts and eight subcohorts of undergraduates: (1) First-time full-time entering; (a) Pell-recipient (b) Non-Pell recipient (2) First-time part-time entering (a) Pell-recipient (b) Non-Pell recipient (3) Non-first-time full-time entering (a) Pell-recipient (b) Non-Pell recipient (4) Non-first-time part-time entering (a) Pell-recipient (b) Non-Pell recipient Entering students (undergraduate) - Students at the undergraduate level, both full-time and part-time, coming into the institution for the first time using a full-year cohort. Entering students are identified as those students who entered the institution between July 1 of one year and June 30 of the following year. This includes all first-time undergraduate students, students, who transfer into the institution at the undergraduate level for the first time, and non- degree/certificate seeking undergraduates. First-time entering (undergraduate) - A student who has no prior postsecondary experience (except as noted below) attending any institution for the first time at the undergraduate level. This includes students enrolled in academic or occupational programs. It also includes students enrolled in the fall term, who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Non-first-time entering (undergraduate) - A student who has pr",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1128,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137000,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "OM2024",
+          "variable_name": "OMRCHRT",
+          "title": "2016-17 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2024\ntabletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2016-17 at degree-granting institutions, by Pell status\nvarnumber: 83002\nvarorder: 4\nvarname: OMRCHRT\nimputationvar: XOMRCHRT\nvartitle: 2016-17 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: All degree/certificate-seeking undergraduate students entering the institution during the 12-month period July 1, 2016 and June 30, 2017 are reported in one of the subcohorts. All institutions report using a full-year cohort, which counts all students who entered the institution between July 1, 2016 and June 30, 2017 Academic reporting institutions reported students who were enrolled through the term's Census Date for enrollment purposes. Program/hybrid reporting institutions reported students who were enrolled for at least 15 days in a program of up to, and including, one year in length, or 30 days in a program of greater than one year in length.\nvarsource: IPEDS, Winter 2024-25, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2016-17 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1129,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137001,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "OM2024",
+          "variable_name": "OMEXCLS",
+          "title": "Exclusions to 2016-17 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2024\ntabletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2016-17 at degree-granting institutions, by Pell status\nvarnumber: 83003\nvarorder: 6\nvarname: OMEXCLS\nimputationvar: XOMEXCLS\nvartitle: Exclusions to 2016-17 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: The total number of students who left institution after the point of entry through August 31, 2024 for one of the following allowable reasons: (a) The student is deceased or is totally and permanently disabled and thus unable to return to school. (b) The student left school to serve in the armed forces or was called to active duty. (DO NOT include students already in the military who transfer to another duty station). (c) The student left school to serve with a foreign aid service of the Federal Government, such as the Peace Corps. (d) The student left school to serve on an official church mission. Students who leave the institution for one of the reasons noted in b, c, or d above, but return prior to the 8-year status point, may be subtracted from the cohort.\nvarsource: IPEDS, Winter 2024-25, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2016-17 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1130,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 137002,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "OM2024",
+          "variable_name": "OMACHRT",
+          "title": "Adjusted 2016-17 cohort",
+          "definition": "surveyorder: 55\nsurveynumber: 18\nsurvey: Outcome Measures\ntablenumber: 181\ntablename: OM2024\ntabletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2016-17 at degree-granting institutions, by Pell status\nvarnumber: 83004\nvarorder: 8\nvarname: OMACHRT\nimputationvar: XOMACHRT\nvartitle: Adjusted 2016-17 cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 48\nsectionnumber: 1\nlongdescription: Adjusted cohort is the revised cohort minus exclusions\nvarsource: IPEDS, Winter 2024-25, Outcome Measures component\nfiletitle: Award and enrollment data of entering degree/certificate-seeking undergraduate cohorts from 2016-17 at degree-granting institutions, by Pell status\nsectiontitle: Outcome measures",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1131,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 14727,
+          "release_id": "IPEDS_2016-17_Final",
+          "kind": "table_definition",
+          "table_name": "GR2016_PELL_SSL",
+          "variable_name": "",
+          "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2010 (4-year) and cohort year 2013 (2-year) institutions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\nyearcoverage: Status of student as of August 31, 2016\ntablename: GR2016_PELL_SSL\ntablenumber: 82\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2010 (4-year) and cohort year 2013 (2-year) institutions\ndescription: This file contains the graduation rate status as of August 31, 2016 for three subcohorts of full-time, first-time degree/certificate-seeking undergraduates. The three subcohorts are students who received a Pell grant; students who received a subsidized Stafford Loan and did \"NOT\" receive a Pell grant; and students who did not receive either a Pell grant or Stafford Loan. In four year institutions each of the subcohorts will include the number of bachelor degree-seeking students who were enrolled in 2010, the number of bachelor degree seeking students who completed any degree/certificate within 150 percent of normal time, the number who completed a bachelor's degree within 150 percent on normal time. Data for students seeking a degree/certificate other than a bachelor's degree are also included for four year institutions. Data for two year and less-than 2-year institutions include the number of full-time, first-time students who were enrolled in 2013, the number of students who completed any degree/certificate 150 percent of normal time. This file has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (PSGRTYPE, see frequencies for details). Each record will contain data for each of the financial aid subcohorts.\nrelease: Final\nrelease date: December 2018",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2016-17_Final\\IPEDS201617TablesDoc.xlsx",
+          "sheet_name": "Tables16",
+          "source_row": 33,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 30246,
+          "release_id": "IPEDS_2017-18_Final",
+          "kind": "table_definition",
+          "table_name": "GR2017_PELL_SSL",
+          "variable_name": "",
+          "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2011 (4-year) and cohort year 2014 (2-year) institutions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\nyearcoverage: Status of student as of August 31, 2017\ntablename: GR2017_PELL_SSL\ntablenumber: 82\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2011 (4-year) and cohort year 2014 (2-year) institutions\ndescription: This file contains the graduation rate status as of August 31, 2017 for three subcohorts of full-time, first-time degree/certificate-seeking undergraduates. The three subcohorts are students who received a Pell grant; students who received a subsidized Stafford Loan and did \"NOT\" receive a Pell grant; and students who did not receive either a Pell grant or Stafford Loan. In four year institutions each of the subcohorts will include the number of bachelor degree-seeking students who were enrolled in 2011, the number of bachelor degree seeking students who completed any degree/certificate within 150 percent of normal time, the number who completed a bachelor's degree within 150 percent on normal time. Data for students seeking a degree/certificate other than a bachelor's degree are also included for four year institutions. Data for two year and less-than 2-year institutions include the number of full-time, first-time students who were enrolled in 2014, the number of students who completed any degree/certificate 150 percent of normal time. This file has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (PSGRTYPE, see frequencies for details). Each record will contain data for each of the financial aid subcohorts.\nrelease: Final\nrelease date: October 2019",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2017-18_Final\\IPEDS201718TablesDoc.xlsx",
+          "sheet_name": "Tables17",
+          "source_row": 32,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 45044,
+          "release_id": "IPEDS_2018-19_Final",
+          "kind": "table_definition",
+          "table_name": "GR2018_PELL_SSL",
+          "variable_name": "",
+          "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2012 (4-year) and cohort year 2015 (2-year) institutions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\nyearcoverage: Status of student as of August 31, 2018\ntablename: GR2018_PELL_SSL\ntablenumber: 82\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2012 (4-year) and cohort year 2015 (2-year) institutions\ndescription: This file contains the graduation rate status as of August 31, 2018 for three subcohorts of full-time, first-time degree/certificate-seeking undergraduates. The three subcohorts are students who received a Pell grant; students who received a subsidized Stafford Loan and did \"NOT\" receive a Pell grant; and students who did not receive either a Pell grant or Stafford Loan. In four year institutions each of the subcohorts will include the number of bachelor degree-seeking students who were enrolled in 2012, the number of bachelor degree seeking students who completed any degree/certificate within 150 percent of normal time, the number who completed a bachelor's degree within 150 percent on normal time. Data for students seeking a degree/certificate other than a bachelor's degree are also included for four year institutions. Data for two year and less-than 2-year institutions include the number of full-time, first-time students who were enrolled in 2015, the number of students who completed any degree/certificate 150 percent of normal time. This file has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (PSGRTYPE, see frequencies for details). Each record will contain data for each of the financial aid subcohorts.\nrelease: Final\nrelease date: September 2020",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819TablesDoc.xlsx",
+          "sheet_name": "Tables18",
+          "source_row": 33,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 60158,
+          "release_id": "IPEDS_2019-20_Final",
+          "kind": "table_definition",
+          "table_name": "GR2019_PELL_SSL",
+          "variable_name": "",
+          "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2013 (4-year) and cohort year 2016 (2-year) institutions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\nyearcoverage: Status of student as of August 31, 2019\ntablename: GR2019_PELL_SSL\ntablenumber: 82\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2013 (4-year) and cohort year 2016 (2-year) institutions\ndescription: This file contains the graduation rate status as of August 31, 2019 for three subcohorts of full-time, first-time degree/certificate-seeking undergraduates. The three subcohorts are students who received a Pell grant; students who received a subsidized Stafford Loan and did \"NOT\" receive a Pell grant; and students who did not receive either a Pell grant or Stafford Loan. In four year institutions each of the subcohorts will include the number of bachelor degree-seeking students who were enrolled in 2013, the number of bachelor degree seeking students who completed any degree/certificate within 150 percent of normal time, the number who completed a bachelor's degree within 150 percent on normal time. Data for students seeking a degree/certificate other than a bachelor's degree are also included for four year institutions. Data for two year and less-than 2-year institutions include the number of full-time, first-time students who were enrolled in 2016, the number of students who completed any degree/certificate 150 percent of normal time. This file has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (PSGRTYPE, see frequencies for details). Each record will contain data for each of the financial aid subcohorts.\nrelease: Final\nrelease date: October 2021",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920TablesDoc.xlsx",
+          "sheet_name": "Tables19",
+          "source_row": 32,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 74987,
+          "release_id": "IPEDS_2020-21_Final",
+          "kind": "table_definition",
+          "table_name": "GR2020_PELL_SSL",
+          "variable_name": "",
+          "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2014 (4-year) and cohort year 2017 (2-year) institutions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\nyearcoverage: Status of student as of August 31, 2020\ntablename: GR2020_PELL_SSL\ntablenumber: 82\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2014 (4-year) and cohort year 2017 (2-year) institutions\ndescription: This file contains the graduation rate status as of August 31, 2020 for three subcohorts of full-time, first-time degree/certificate-seeking undergraduates. The three subcohorts are students who received a Pell grant; students who received a subsidized Stafford Loan and did \"NOT\" receive a Pell grant; and students who did not receive either a Pell grant or Stafford Loan. In four year institutions each of the subcohorts will include the number of bachelor degree-seeking students who were enrolled in 2014, the number of bachelor degree seeking students who completed any degree/certificate within 150 percent of normal time, the number who completed a bachelor's degree within 150 percent on normal time. Data for students seeking a degree/certificate other than a bachelor's degree are also included for four year institutions. Data for two year and less-than 2-year institutions include the number of full-time, first-time students who were enrolled in 2017, the number of students who completed any degree/certificate 150 percent of normal time. This file has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (PSGRTYPE, see frequencies for details). Each record will contain data for each of the financial aid subcohorts.\nrelease: Final\nrelease date: 'October 2022",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2020-21_Final\\IPEDS202021TablesDoc.xlsx",
+          "sheet_name": "Tables20",
+          "source_row": 34,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 89693,
+          "release_id": "IPEDS_2021-22_Final",
+          "kind": "table_definition",
+          "table_name": "GR2021_PELL_SSL",
+          "variable_name": "",
+          "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2015 (4-year) and cohort year 2018 (2-year) institutions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\nyearcoverage: Status of student as of August 31, 2021\ntablename: GR2021_PELL_SSL\ntablenumber: 82\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2015 (4-year) and cohort year 2018 (2-year) institutions\ndescription: This file contains the graduation rate status as of August 31, 2021 for three subcohorts of full-time, first-time degree/certificate-seeking undergraduates. The three subcohorts are students who received a Pell grant; students who received a subsidized Stafford Loan and did \"NOT\" receive a Pell grant; and students who did not receive either a Pell grant or Stafford Loan. In four year institutions each of the subcohorts will include the number of bachelor degree-seeking students who were enrolled in 2015, the number of bachelor degree seeking students who completed any degree/certificate within 150 percent of normal time, the number who completed a bachelor's degree within 150 percent on normal time. Data for students seeking a degree/certificate other than a bachelor's degree are also included for four year institutions. Data for two year and less-than 2-year institutions include the number of full-time, first-time students who were enrolled in 2018, the number of students who completed any degree/certificate 150 percent of normal time. This file has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (PSGRTYPE, see frequencies for details). Each record will contain data for each of the financial aid subcohorts.\nrelease: Final\nrelease date: November 2023",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2021-22_Final\\IPEDS202122TablesDoc.xlsx",
+          "sheet_name": "Tables21",
+          "source_row": 35,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 103972,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "table_definition",
+          "table_name": "GR2022_PELL_SSL",
+          "variable_name": "",
+          "title": "Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\nyearcoverage: Status of student as of August 31, 2022\ntablename: GR2022_PELL_SSL\ntablenumber: 82\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions\ndescription: This file contains the graduation rate status as of August 31, 2022 for three subcohorts of full-time, first-time degree/certificate-seeking undergraduates. The three subcohorts are students who received a Pell grant; students who received a subsidized Stafford Loan and did \"NOT\" receive a Pell grant; and students who did not receive either a Pell grant or Stafford Loan. In four year institutions each of the subcohorts will include the number of bachelor degree-seeking students who were enrolled in 2016, the number of bachelor degree seeking students who completed any degree/certificate within 150 percent of normal time, the number who completed a bachelor's degree within 150 percent on normal time. Data for students seeking a degree/certificate other than a bachelor's degree are also included for four year institutions. Data for two year and less-than 2-year institutions include the number of full-time, first-time students who were enrolled in 2019, the number of students who completed any degree/certificate 150 percent of normal time. This file has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (PSGRTYPE, see frequencies for details). Each record will contain data for each of the financial aid subcohorts.\nrelease: Final\nrelease date: September 2024",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "Tables22",
+          "source_row": 35,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 105626,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "variable_definition",
+          "table_name": "GR2022_PELL_SSL",
+          "variable_name": "PGREVCT",
+          "title": "Pell Grant recipients - revised cohort",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\ntablenumber: 82\ntablename: GR2022_PELL_SSL\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions\nvarnumber: 81506\nvarorder: 20\nvarname: PGREVCT\nimputationvar: XPGREVCT\nvartitle: Pell Grant recipients - revised cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nhasrv: 1\nfilenumber: 89\nsectionnumber: 1\nlongdescription: Number of students in the cohort/subcohort identified by the cohort type (PSGRTYPE), who were recipients of a Pell Grant in the cohort year. Recipients are defined as those students receiving and using their Pell Grant. These students must receive the award upon entry into the institution. Students that are recipients of an award at a later point after entry, are not included.\nvarsource: IPEDS, Winter 2022-23, Graduation Rates component\nfiletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions\nsectiontitle: Pell and Direct Subsidized loan cohorts",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "vartable22",
+          "source_row": 1636,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 105627,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "variable_definition",
+          "table_name": "GR2022_PELL_SSL",
+          "variable_name": "PGEXCLU",
+          "title": "Pell Grant recipients - exclusions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\ntablenumber: 82\ntablename: GR2022_PELL_SSL\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions\nvarnumber: 81511\nvarorder: 21\nvarname: PGEXCLU\nimputationvar: XPGEXCLU\nvartitle: Pell Grant recipients - exclusions\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nhasrv: 1\nfilenumber: 89\nsectionnumber: 1\nlongdescription: Exclusions from the Pell grant cohort within 150% percent of normal time Exclusions who left institution within 150% of normal time and have neither graduated nor transferred to another institution) because of one of the following documented reasons: The student is deceased or is totally and permanently disabled and thus unable to return to school. The student left school to serve in the armed forces or was called to active duty. ( students already in the military who transfer to another duty station are not included.) The student left school to serve with a foreign aid service of the Federal Government, such as the Peace Corps. The student left school to serve on an official church mission. NOTE: Students who leave the institution for one of the above reasons, but return prior to the 150 percent status date of August 31, may still be reported as exclusions.\nvarsource: IPEDS, Winter 2022-23, Graduation Rates component\nfiletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions\nsectiontitle: Pell and Direct Subsidized loan cohorts",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "vartable22",
+          "source_row": 1637,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 105628,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "variable_definition",
+          "table_name": "GR2022_PELL_SSL",
+          "variable_name": "PGADJCT",
+          "title": "Pell Grant recipients - adjusted cohort (revised minus exclusions)",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\ntablenumber: 82\ntablename: GR2022_PELL_SSL\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions\nvarnumber: 81516\nvarorder: 22\nvarname: PGADJCT\nimputationvar: XPGADJCT\nvartitle: Pell Grant recipients - adjusted cohort (revised minus exclusions)\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nhasrv: 1\nfilenumber: 89\nsectionnumber: 1\nlongdescription: This is the number of Pell grant recipients in the revised cohort minus the number of exclusions.\nvarsource: IPEDS, Winter 2022-23, Graduation Rates component\nfiletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions\nsectiontitle: Pell and Direct Subsidized loan cohorts",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "vartable22",
+          "source_row": 1638,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 105629,
+          "release_id": "IPEDS_2022-23_Final",
+          "kind": "variable_definition",
+          "table_name": "GR2022_PELL_SSL",
+          "variable_name": "PGCMBAC",
+          "title": "Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\ntablenumber: 82\ntablename: GR2022_PELL_SSL\ntabletitle: Graduation rate data for Pell Grant and Subsidized Stafford loan recipients, 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions\nvarnumber: 81521\nvarorder: 23\nvarname: PGCMBAC\nimputationvar: XPGCMBAC\nvartitle: Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nhasrv: 1\nfilenumber: 89\nsectionnumber: 1\nlongdescription: This is the number of Pell grant recipients of the cohorts specified: total cohort (PSGRTYPE=1), bachelor's cohort (PSGRTYPE=2), other than bachelor's cohort (PSGRTYPE=3) that completed a bachelor's degree in 150% percent of normal time 6-years (4-year institutions only) 150 percent of normal time to complete - Students who completed their program within 150% of the normal (or expected) time for completion. Normal time is the amount of time necessary for a student to complete all requirements for a degree or certificate according to the institution's catalog. This is typically 4 years (8 semesters or trimesters, or 12 quarters, excluding summer terms) for a bachelor's degree in a standard term-based institution; 2 years (4 semesters or trimesters, or 6 quarters, excluding summer terms) for an associate's degree in a standard term-based institution; and the various scheduled times for certificate programs.\nvarsource: IPEDS, Winter 2022-23, Graduation Rates component\nfiletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2016 (4-year) and cohort year 2019 (2-year) institutions\nsectiontitle: Pell and Direct Subsidized loan cohorts",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "sheet_name": "vartable22",
+          "source_row": 1639,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 119948,
+          "release_id": "IPEDS_2023-24_Final",
+          "kind": "table_definition",
+          "table_name": "GR2023_PELL_SSL",
+          "variable_name": "",
+          "title": "Graduation rate data for Pell Grant and Direct Subsidized loan recipients, 150% of normal time to complete - cohort year 2017 (4-year) and cohort year 2020 (2-year) institutions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\nyearcoverage: Status of student as of August 31, 2023\ntablename: GR2023_PELL_SSL\ntablenumber: 82\ntabletitle: Graduation rate data for Pell Grant and Direct Subsidized loan recipients, 150% of normal time to complete - cohort year 2017 (4-year) and cohort year 2020 (2-year) institutions\ndescription: This file contains the graduation rate status as of August 31, 2023 for three subcohorts of full-time, first-time degree/certificate-seeking undergraduates. The three subcohorts are students who received a Pell grant; students who received a Direct Subsidized Loan and did \"NOT\" receive a Pell grant; and students who did not receive either a Pell grant or Direct Subsidized Loan. In four year institutions each of the subcohorts will include the number of bachelor degree-seeking students who were enrolled in 2017, the number of bachelor degree seeking students who completed any degree/certificate within 150 percent of normal time, the number who completed a bachelor's degree within 150 percent on normal time. Data for students seeking a degree/certificate other than a bachelor's degree are also included for four year institutions. Data for two year and less-than 2-year institutions include the number of full-time, first-time students who were enrolled in 2020, the number of students who completed any degree/certificate 150 percent of normal time. This file has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (PSGRTYPE, see frequencies for details). Each record will contain data for each of the financial aid subcohorts.\nrelease: Final\nrelease date: December 2025",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+          "sheet_name": "Tables23",
+          "source_row": 35,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 135850,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "table_definition",
+          "table_name": "GR2024_PELL_SSL",
+          "variable_name": "",
+          "title": "Graduation rate data for Pell Grant and Direct Subsidized Loan recipients, 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\nyearcoverage: Status of student as of August 31, 2024\ntablename: GR2024_PELL_SSL\ntablenumber: 82\ntabletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients, 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions\ndescription: This file contains the graduation rate status as of August 31, 2024 for three subcohorts of full-time, first-time degree/certificate-seeking undergraduates. The three subcohorts are students who received a Pell grant; students who received a Direct Subsidized Loan and did \"NOT\" receive a Pell grant; and students who did not receive either a Pell grant or Direct Subsidized Loan. In four year institutions each of the subcohorts will include the number of bachelor degree-seeking students who were enrolled in 2018, the number of bachelor degree seeking students who completed any degree/certificate within 150 percent of normal time, the number who completed a bachelor's degree within 150 percent on normal time. Data for students seeking a degree/certificate other than a bachelor's degree are also included for four year institutions. Data for two year and less-than 2-year institutions include the number of full-time, first-time students who were enrolled in 2020, the number of students who completed any degree/certificate 150 percent of normal time. This file has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the cohort (PSGRTYPE, see frequencies for details). Each record will contain data for each of the financial aid subcohorts.\nrelease: Provisional\nrelease_date: December 2025",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "tables24",
+          "source_row": 31,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 136913,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "GR2024_PELL_SSL",
+          "variable_name": "PGREVCT",
+          "title": "Pell Grant recipients - revised cohort",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\ntablenumber: 82\ntablename: GR2024_PELL_SSL\ntabletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions\nvarnumber: 81506\nvarorder: 4\nvarname: PGREVCT\nimputationvar: XPGREVCT\nvartitle: Pell Grant recipients - revised cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 89\nsectionnumber: 1\nlongdescription: Number of students in the cohort/subcohort identified by the cohort type (PSGRTYPE), who were recipients of a Pell Grant in the cohort year. Recipients are defined as those students receiving and using their Pell Grant. These students must receive the award upon entry into the institution. Students that are recipients of an award at a later point after entry, are not included.\nvarsource: IPEDS, Winter 2024-25, Graduation Rates component\nfiletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions\nsectiontitle: Pell and Direct Subsidized loan cohorts",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1042,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136914,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "GR2024_PELL_SSL",
+          "variable_name": "PGEXCLU",
+          "title": "Pell Grant recipients - exclusions",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\ntablenumber: 82\ntablename: GR2024_PELL_SSL\ntabletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions\nvarnumber: 81511\nvarorder: 6\nvarname: PGEXCLU\nimputationvar: XPGEXCLU\nvartitle: Pell Grant recipients - exclusions\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 89\nsectionnumber: 1\nlongdescription: Exclusions from the Pell grant cohort within 150% percent of normal time Exclusions who left institution within 150% of normal time and have neither graduated nor transferred to another institution) because of one of the following documented reasons: The student is deceased or is totally and permanently disabled and thus unable to return to school. The student left school to serve in the armed forces or was called to active duty. ( students already in the military who transfer to another duty station are not included.) The student left school to serve with a foreign aid service of the Federal Government, such as the Peace Corps. The student left school to serve on an official church mission. NOTE: Students who leave the institution for one of the above reasons, but return prior to the 150 percent status date of August 31, may still be reported as exclusions.\nvarsource: IPEDS, Winter 2024-25, Graduation Rates component\nfiletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions\nsectiontitle: Pell and Direct Subsidized loan cohorts",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1043,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136915,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "GR2024_PELL_SSL",
+          "variable_name": "PGADJCT",
+          "title": "Pell Grant recipients - adjusted cohort (revised minus exclusions)",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\ntablenumber: 82\ntablename: GR2024_PELL_SSL\ntabletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions\nvarnumber: 81516\nvarorder: 8\nvarname: PGADJCT\nimputationvar: XPGADJCT\nvartitle: Pell Grant recipients - adjusted cohort (revised minus exclusions)\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 89\nsectionnumber: 1\nlongdescription: This is the number of Pell grant recipients in the revised cohort minus the number of exclusions.\nvarsource: IPEDS, Winter 2024-25, Graduation Rates component\nfiletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions\nsectiontitle: Pell and Direct Subsidized loan cohorts",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1044,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136916,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "GR2024_PELL_SSL",
+          "variable_name": "PGCMBAC",
+          "title": "Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time",
+          "definition": "surveyorder: 50\nsurveynumber: 8\nsurvey: Graduation Rates\ntablenumber: 82\ntablename: GR2024_PELL_SSL\ntabletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions\nvarnumber: 81521\nvarorder: 10\nvarname: PGCMBAC\nimputationvar: XPGCMBAC\nvartitle: Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 89\nsectionnumber: 1\nlongdescription: This is the number of Pell grant recipients of the cohorts specified: total cohort (PSGRTYPE=1), bachelor's cohort (PSGRTYPE=2), other than bachelor's cohort (PSGRTYPE=3) that completed a bachelor's degree in 150% percent of normal time 6-years (4-year institutions only) 150 percent of normal time to complete - Students who completed their program within 150% of the normal (or expected) time for completion. Normal time is the amount of time necessary for a student to complete all requirements for a degree or certificate according to the institution's catalog. This is typically 4 years (8 semesters or trimesters, or 12 quarters, excluding summer terms) for a bachelor's degree in a standard term-based institution; 2 years (4 semesters or trimesters, or 6 quarters, excluding summer terms) for an associate's degree in a standard term-based institution; and the various scheduled times for certificate programs.\nvarsource: IPEDS, Winter 2024-25, Graduation Rates component\nfiletitle: Graduation rate data for Pell Grant and Direct Subsidized Loan recipients , 150% of normal time to complete - cohort year 2018 (4-year) and cohort year 2021 (2-year) institutions\nsectiontitle: Pell and Direct Subsidized loan cohorts",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 1045,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 119943,
+          "release_id": "IPEDS_2023-24_Final",
+          "kind": "table_definition",
+          "table_name": "SFA2223_P1",
+          "variable_name": "",
+          "title": "Student financial aid: 2022-23",
+          "definition": "surveyorder: 40\nsurveynumber: 7\nsurvey: Student Financial Aid\nyearcoverage: July 1, 2022 - June 30, 2023\ntablename: SFA2223_P1\ntablenumber: 70\ntabletitle: Student financial aid: 2022-23\ndescription: This table contains data on the number of full-time, first-time degree/certificate-seeking undergraduate students and all undergraduate students who receive different types of student financial aid, including grants and loans, from different sources at each institution. Sources and types of aid reported for full-time, first-time degree/certificate-seeking undergraduate students include federal grants, Pell grants, other federal grants, state/local grants, grants from the institution, federal and nonfederal student loans. Types of aid reported for all undergraduates include total grants, pell grants and federal loans. Included are the total and average dollar amount of aid received by these students. Beginning with academic year 2021-22 all undergraduates were disaggregated by degree/certificate seeking status. Total grants or scholarships were reported for both degree/certificate-seeking and non-degree/non-certificate-seeking undergraduates. Federal Pell grants and federal loans were reported for degree/certificate-seeking undergraduate students. For academic year 2022-23 Federal Pell grants and federal loans were reported for non-degree/non-certificate-seeking undergraduate students. Included are the total and average dollar amounts of aid awarded to these students.\nrelease: Final\nrelease date: December 2025",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+          "sheet_name": "Tables23",
+          "source_row": 30,
+          "physical_column_present": null,
+          "issues": []
+        }
+      ],
+      "latency": {
+        "answer_ready_seconds": 0.7498752000974491,
+        "live_model_calls": 0,
+        "discovery_interpretation_seconds": 0
+      },
+      "documentation_context": {
+        "kind": "discovery",
+        "terms": [
+          "Pell"
+        ],
+        "source_years": [],
+        "context_resolved": false
+      }
+    }
+  },
+  {
+    "question": "What does that label mean?",
+    "answer": {
+      "intent": "clarify",
+      "mode": "source definition",
+      "message": "Which label, measure, or topic do you mean? Available labels: Cohort category; 2010-11 cohort; Exclusions to 2010-11 cohort; Adjusted 2010-11 cohort; Percent full-time first-time, Pell grant recipients receiving an award - 4 years; Percent full-time first-time, Pell grant recipients receiving an award - 6 years; Percent full-time first-time, Pell grant recipients receiving an award - 8 years; Percent full-time first-time, Pell grant recipients still enrolled at same institution - 8 years.",
+      "documentation_context": {
+        "kind": "label",
+        "terms": [
+          "Cohort category",
+          "2010-11 cohort",
+          "Exclusions to 2010-11 cohort",
+          "Adjusted 2010-11 cohort",
+          "Percent full-time first-time, Pell grant recipients receiving an award - 4 years",
+          "Percent full-time first-time, Pell grant recipients receiving an award - 6 years",
+          "Percent full-time first-time, Pell grant recipients receiving an award - 8 years",
+          "Percent full-time first-time, Pell grant recipients still enrolled at same institution - 8 years",
+          "2011-12 cohort",
+          "Exclusions to 2011-12 cohort",
+          "Adjusted 2011-12 cohort",
+          "2014-15 cohort",
+          "Exclusions to 2014-15 cohort",
+          "Adjusted 2014-15 cohort",
+          "2016-17 cohort",
+          "Exclusions to 2016-17 cohort",
+          "Adjusted 2016-17 cohort",
+          "Pell Grant recipients - revised cohort",
+          "Pell Grant recipients - exclusions",
+          "Pell Grant recipients - adjusted cohort (revised minus exclusions)",
+          "Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time"
+        ],
+        "source_years": []
+      }
+    }
+  },
+  {
+    "question": "What does UPGRNTN mean?",
+    "answer": {
+      "intent": "definition",
+      "mode": "source definition",
+      "message": "For **UPGRNTN**, the supplied codebook gives these source passages:\n\n**Number of undergraduate students awarded Federal Pell grants** (2024-25 \u00b7 Provisional \u00b7 SFA2324 \u00b7 UPGRNTN)\n\n> Number of undergraduate students who were awarded Pell grants Pell Grant program (Higher Education Act of 1965, Title IV, Part A, Subpart I, as amended.) - Provides grant assistance to eligible undergraduate postsecondary students with demonstrated financial need to help meet education expenses.\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+      "evidence": [
+        {
+          "record_id": 136769,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SFA2324",
+          "variable_name": "UPGRNTN",
+          "title": "Number of undergraduate students awarded Federal Pell grants",
+          "definition": "Number of undergraduate students who were awarded Pell grants Pell Grant program (Higher Education Act of 1965, Title IV, Part A, Subpart I, as amended.) - Provides grant assistance to eligible undergraduate postsecondary students with demonstrated financial need to help meet education expenses.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 898,
+          "excerpt": "Number of undergraduate students who were awarded Pell grants Pell Grant program (Higher Education Act of 1965, Title IV, Part A, Subpart I, as amended.) - Provides grant assistance to eligible undergraduate postsecondary students with demonstrated financial need to help meet education expenses.",
+          "glossary_excerpt": null,
+          "direct_match": true,
+          "score": 978.9704,
+          "physical_column_present": true,
+          "issues": []
+        }
+      ],
+      "definition_lookup": {
+        "term": "UPGRNTN",
+        "source_years": [
+          2024
+        ],
+        "default_latest_release": true,
+        "status": "defined",
+        "selection": "deterministic",
+        "reviewed_measure": null,
+        "candidate_record_ids": [
+          136769
+        ],
+        "passages": [
+          {
+            "record_id": 136769,
+            "excerpt": "Number of undergraduate students who were awarded Pell grants Pell Grant program (Higher Education Act of 1965, Title IV, Part A, Subpart I, as amended.) - Provides grant assistance to eligible undergraduate postsecondary students with demonstrated financial need to help meet education expenses."
+          }
+        ],
+        "source_policy": "Owner-supplied metadata only; no statistical values queried"
+      },
+      "latency": {
+        "answer_ready_seconds": 0.01743390003684908,
+        "live_model_calls": 0
+      },
+      "documentation_context": {
+        "kind": "definition",
+        "terms": [
+          "UPGRNTN"
+        ],
+        "source_years": [
+          2024
+        ],
+        "context_resolved": false
+      }
+    }
+  },
+  {
+    "question": "How is it calculated?",
+    "answer": {
+      "intent": "definition",
+      "mode": "source definition",
+      "message": "I have not established an app calculation formula for **UPGRNTN**. The source documentation below may describe how the reported field is constructed; I will not infer a formula from its label.\n\nFor **UPGRNTN**, the supplied codebook gives these source passages:\n\n**Number of undergraduate students awarded Federal Pell grants** (2024-25 \u00b7 Provisional \u00b7 SFA2324 \u00b7 UPGRNTN)\n\n> Number of undergraduate students who were awarded Pell grants Pell Grant program (Higher Education Act of 1965, Title IV, Part A, Subpart I, as amended.) - Provides grant assistance to eligible undergraduate postsecondary students with demonstrated financial need to help meet education expenses.\n\nThese excerpts retain their source-specific scope. Full definitions and source locations are under Definitions & sources.",
+      "evidence": [
+        {
+          "record_id": 136769,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SFA2324",
+          "variable_name": "UPGRNTN",
+          "title": "Number of undergraduate students awarded Federal Pell grants",
+          "definition": "Number of undergraduate students who were awarded Pell grants Pell Grant program (Higher Education Act of 1965, Title IV, Part A, Subpart I, as amended.) - Provides grant assistance to eligible undergraduate postsecondary students with demonstrated financial need to help meet education expenses.",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 898,
+          "excerpt": "Number of undergraduate students who were awarded Pell grants Pell Grant program (Higher Education Act of 1965, Title IV, Part A, Subpart I, as amended.) - Provides grant assistance to eligible undergraduate postsecondary students with demonstrated financial need to help meet education expenses.",
+          "glossary_excerpt": null,
+          "direct_match": true,
+          "score": 978.9704,
+          "physical_column_present": true,
+          "issues": []
+        }
+      ],
+      "definition_lookup": {
+        "term": "UPGRNTN",
+        "source_years": [
+          2024
+        ],
+        "default_latest_release": false,
+        "status": "defined",
+        "selection": "deterministic",
+        "reviewed_measure": null,
+        "candidate_record_ids": [
+          136769
+        ],
+        "passages": [
+          {
+            "record_id": 136769,
+            "excerpt": "Number of undergraduate students who were awarded Pell grants Pell Grant program (Higher Education Act of 1965, Title IV, Part A, Subpart I, as amended.) - Provides grant assistance to eligible undergraduate postsecondary students with demonstrated financial need to help meet education expenses."
+          }
+        ],
+        "source_policy": "Owner-supplied metadata only; no statistical values queried"
+      },
+      "latency": {
+        "answer_ready_seconds": 0.014373500016517937,
+        "live_model_calls": 0
+      },
+      "documentation_context": {
+        "kind": "calculation",
+        "terms": [
+          "UPGRNTN"
+        ],
+        "source_years": [
+          2024
+        ],
+        "context_resolved": true
+      }
+    }
+  },
+  {
+    "question": "What data do you have on that?",
+    "answer": {
+      "intent": "discover",
+      "mode": "data discovery",
+      "query": "UPGRNTN",
+      "message": "Here are relevant data areas I found in the local IPEDS files:\n\n**Survey: Student Financial Aid**\n\nReporting periods: July 1, 2023 - June 30, 2024.\n\n- **Student financial aid**.  \n  Example fields: Number of students in fall cohort; Students in fall cohort as a percentage of all undergraduates; Total number of undergraduates - fall cohort; Number of students in full-year cohort.\n\nThese are codebook and physical-table matches, not confirmation that every institution has reported values. Definitions, populations and available breakdowns can differ by year. This is a bounded topic search, not an exhaustive inventory.\n\nThe year filter selects source releases; reporting periods are listed separately above.\n\nTo continue, tell me the institution, data area and years you want to analyze.",
+      "discovery": {
+        "topics": [
+          {
+            "title": "Student financial aid",
+            "survey": "Student Financial Aid",
+            "periods": [
+              "July 1, 2023 - June 30, 2024"
+            ],
+            "tables": [
+              "SFA2324"
+            ],
+            "releases": [
+              "IPEDS_2024-25_Provisional"
+            ],
+            "fields": [
+              "Number of students in fall cohort",
+              "Students in fall cohort as a percentage of all undergraduates",
+              "Total number of undergraduates - fall cohort",
+              "Number of students in full-year cohort"
+            ],
+            "field_record_ids": [
+              136745,
+              136746,
+              136747,
+              136748
+            ],
+            "cohorts": "",
+            "grouping_note": "",
+            "record_ids": [
+              135846
+            ],
+            "annual_coverage": [
+              {
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table_name": "SFA2324",
+                "title": "Student financial aid: 2023-24",
+                "reporting_period": "July 1, 2023 - June 30, 2024",
+                "record_id": 135846
+              }
+            ]
+          }
+        ],
+        "requested_release_years": [
+          2024
+        ],
+        "bounded": true,
+        "grouping_policy": "Exact survey and stable description/population; at most one table per release; at least two shared columns and 60% overlap relative to the smaller schema. Navigation grouping does not certify numerical comparability."
+      },
+      "evidence": [
+        {
+          "record_id": 135846,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "table_definition",
+          "table_name": "SFA2324",
+          "variable_name": "",
+          "title": "Student financial aid: 2023-24",
+          "definition": "surveyorder: 40\nsurveynumber: 7\nsurvey: Student Financial Aid\nyearcoverage: July 1, 2023 - June 30, 2024\ntablename: SFA2324\ntablenumber: 70\ntabletitle: Student financial aid: 2023-24\ndescription: This file contains data on the number of full-time, first-time degree/certificate-seeking undergraduate students and all undergraduate students who were awarded different types of student financial aid, including grants and loans, from different sources at each institution. Sources and types of aid reported for full-time, first-time degree/certificate-seeking undergraduate students include Federal Pell grants, other federal grants, state/local grants, grants from the institution, federal and nonfederal student loans. Beginning with academic year 2021-22 all undergraduates were disaggregated by degree/certificate seeking status. Federal Pell grants and federal loans were reported for degree/certificate-seeking undergraduate students. Total grants or scholarships were reported for both degree/certificate-seeking and non-degree/non-certificate-seeking undergraduates. In academic year 2022-23, both Federal Pell grants and federal loans were reported for non-degree/non-certificate-seeking undergraduates. Included are the total and average dollar amounts of aid awarded to these students.\nrelease: Provisional\nrelease_date: December 2025",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "tables24",
+          "source_row": 27,
+          "physical_column_present": null,
+          "issues": []
+        },
+        {
+          "record_id": 136745,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SFA2324",
+          "variable_name": "SCFA1N",
+          "title": "Number of students in fall cohort",
+          "definition": "surveyorder: 40\nsurveynumber: 7\nsurvey: Student Financial Aid\ntablenumber: 70\ntablename: SFA2324\ntabletitle: Financial aid for all undergraduates and full-time, first-time, degree/certificate-seeking undergraduate students, 2023-24\nvarnumber: 70126\nvarorder: 19\nvarname: SCFA1N\nimputationvar: XSCFA1N\nvartitle: Number of students in fall cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 39\nsectionnumber: 1\nlongdescription: Student Financial Aid and Student Counts - Fall Cohort The number of full-time first-time degree/certificate-seeking undergraduates (2023 fall cohort). Undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate Full-time student - Undergraduate\u2014 A student enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. First-time student (undergraduate) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs . Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Degree/certificate-seeking students - Students enrolled in courses for credit who are recognized by the institution as seeking a degree or other formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs.\nvarsource: IPEDS, Winter 2024-25, Student Financial Aid component\nfiletitle: Financial aid for all undergraduates and full-time, first-time, degree/certificate-seeking undergraduate students, 2023-24\nsectiontitle: Student counts: Full-time, first-time degree/certificate-seeking undergraduates - 2023 fall cohort",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 874,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136746,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SFA2324",
+          "variable_name": "SCFA1P",
+          "title": "Students in fall cohort as a percentage of all undergraduates",
+          "definition": "surveyorder: 40\nsurveynumber: 7\nsurvey: Student Financial Aid\ntablenumber: 70\ntablename: SFA2324\ntabletitle: Financial aid for all undergraduates and full-time, first-time, degree/certificate-seeking undergraduate students, 2023-24\nvarnumber: 70131\nvarorder: 21\nvarname: SCFA1P\nimputationvar: XSCFA1P\nvartitle: Students in fall cohort as a percentage of all undergraduates\ndatatype: N\nfieldwidth: 3\nformat: Cont\nmultirecord: 0\nfilenumber: 39\nsectionnumber: 1\nlongdescription: Student Financial Aid and Student Counts - Fall Cohort Percentage of all undergraduates who were full-time, first-time degree/certificate-seeking (2023 fall cohort). Undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate Full-time student - Undergraduate\u2014 A student enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. First-time student (undergraduate) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs . Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Degree/certificate-seeking students - Students enrolled in courses for credit who are recognized by the institution as seeking a degree or other formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs.\nvarsource: IPEDS, Winter 2024-25, Student Financial Aid component\nfiletitle: Financial aid for all undergraduates and full-time, first-time, degree/certificate-seeking undergraduate students, 2023-24\nsectiontitle: Student counts: Full-time, first-time degree/certificate-seeking undergraduates - 2023 fall cohort",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 875,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136747,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SFA2324",
+          "variable_name": "SCFA2",
+          "title": "Total number of undergraduates - fall cohort",
+          "definition": "surveyorder: 40\nsurveynumber: 7\nsurvey: Student Financial Aid\ntablenumber: 70\ntablename: SFA2324\ntabletitle: Financial aid for all undergraduates and full-time, first-time, degree/certificate-seeking undergraduate students, 2023-24\nvarnumber: 70176\nvarorder: 13\nvarname: SCFA2\nimputationvar: XSCFA2\nvartitle: Total number of undergraduates - fall cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 39\nsectionnumber: 1\nlongdescription: Student Financial Aid and Student Counts - Fall Cohort Total number of undergraduate students. Undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate.\nvarsource: IPEDS, Winter 2024-25, Student Financial Aid component\nfiletitle: Financial aid for all undergraduates and full-time, first-time, degree/certificate-seeking undergraduate students, 2023-24\nsectiontitle: Student counts: Full-time, first-time degree/certificate-seeking undergraduates - 2023 fall cohort",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 876,
+          "physical_column_present": true,
+          "issues": []
+        },
+        {
+          "record_id": 136748,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SFA2324",
+          "variable_name": "SCFY1N",
+          "title": "Number of students in full-year cohort",
+          "definition": "surveyorder: 40\nsurveynumber: 7\nsurvey: Student Financial Aid\ntablenumber: 70\ntablename: SFA2324\ntabletitle: Financial aid for all undergraduates and full-time, first-time, degree/certificate-seeking undergraduate students, 2023-24\nvarnumber: 70181\nvarorder: 29\nvarname: SCFY1N\nimputationvar: XSCFY1N\nvartitle: Number of students in full-year cohort\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 0\nfilenumber: 39\nsectionnumber: 2\nlongdescription: Student Financial Aid and Student Counts - Full Year Cohort Unduplicated count of full-time first-time degree\\certificate-seeking undergraduate students (2023-24 full-year cohort). Unduplicated count - The sum of students enrolled for credit with each student counted only once during the reporting period, regardless of when the student enrolled. Undergraduate - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate Full-time student - Undergraduate\u2014 A student enrolled for 12 or more semester credits , or 12 or more quarter credits, or 24 or more clock hours a week each term. First-time student (undergraduate) - A student attending any institution for the first time at the undergraduate level. Includes students enrolled in academic or occupational programs . Also includes students enrolled in the fall term who attended college for the first time in the prior summer term, and students who entered with advanced standing (college credits earned before graduation from high school). Degree/certificate-seeking students - Students enrolled in courses for credit who are recognized by the institution as seeking a degree or other formal award. At the undergraduate level, this is intended to include students enrolled in vocational or occupational programs.\nvarsource: IPEDS, Winter 2024-25, Student Financial Aid component\nfiletitle: Financial aid for all undergraduates and full-time, first-time, degree/certificate-seeking undergraduate",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "sheet_name": "varTable24",
+          "source_row": 877,
+          "physical_column_present": true,
+          "issues": []
+        }
+      ],
+      "latency": {
+        "answer_ready_seconds": 0.15938029997050762,
+        "live_model_calls": 0,
+        "discovery_interpretation_seconds": 0
+      },
+      "documentation_context": {
+        "kind": "discovery",
+        "terms": [
+          "UPGRNTN"
+        ],
+        "source_years": [
+          2024
+        ],
+        "context_resolved": true
+      }
+    }
+  }
+]

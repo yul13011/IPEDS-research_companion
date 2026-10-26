@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-25",
+  "scope": "Selected affected regressions; not a full registered suite or completed live qualification.",
+  "combined_run": {
+    "tests": 112,
+    "passed": 111,
+    "errors": 1,
+    "remaining_issue": "Automatic UI test addressed the follow-up widget before any conversation; fixture corrected to initial_question."
+  },
+  "focused_reruns": [
+    {
+      "tests": 7,
+      "passed": 7,
+      "scope": "Automatic policy including corrected Streamlit fixture and release-label normalization"
+    },
+    {
+      "tests": 30,
+      "passed": 30,
+      "scope": "Final query-engine and institution-confirmation checks, including salary population/table/contract guards"
+    },
+    {
+      "tests": 8,
+      "passed": 8,
+      "scope": "Final automatic policy/UI and benchmark account-limit stopping/availability grading"
+    }
+  ],
+  "outcome": "All selected methods verified across combined run and affected reruns; no unresolved test failures.",
+  "live_status": "Incomplete: Anthropic configured account limit. Automatic remains opt-in; default unchanged."
+}

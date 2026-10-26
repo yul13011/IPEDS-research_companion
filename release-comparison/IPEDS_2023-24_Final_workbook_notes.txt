@@ -1,0 +1,624 @@
+Table documentation for the IPEDS Access database, 2023-24
+Final/revised release
+Overview
+This spreadsheet contains the documentation for the IPEDS 2023-24 access database. It contains all variables that were collected in the 2023-24 IPEDS data collection. The IPEDS data collection consists of 3 collection modules. Institutional Characteristics 2023-24, 12-month enrollment 2022-23 and completions 2022-23 were collected in the Fall 2023. Admissions Fall 2023, Graduation Rates 2023, Outcome Measures 2023 and Student Financial Aid 2022-23 were collected in the winter of 2023-24. Fall Enrollment 2023, Finance fiscal year 2023, Human Resources 2023 components and the Academic Libraries fiscal year 2023 were collected in the Spring 2024. The data in this database are final/revised released data. During the 2024-25 collection, institutions were allowed to submit revisions to their 2023-24 submission through the 2023-24 Prior Year Data Revision system. The 2023-24 provisional data were then updated with these revisions for the final release. There are some data tables and variables that institutions are not allowed to revise. Revised data tables and variables are identified in the spreadsheet in this workbook. Note that the tables below also exist in the database. There were some additional items added in 2023-24 compared to the previous year. Within the 12-Month Enrollment component, counts of high school students enrolled in college courses for credit were added. These data are disaggregated by race/ethnicity and gender. Federal Pell grants and federal loans are reported for both degree/certificate-seeking and non-degree/non-certificate-seeking undergraduates within the Student Financial Aid survey component. Included are the total and average dollar amounts of aid awarded to these students. Refer to the Newvariables23 worksheet in this workbook for a complete list of new variables added in 2023-24.
+Contents of spreadsheet
+Tables23
+Table List: List all data tables included in the downloadable access database and all tables in SQL data base that contains the data available through the Use the Data function (IPEDS Data Center). http://nces.ed.gov/ipeds/home/usethedata.
+Vartable23
+Variable list: Lists all variables for each data table in the IPEDS data base. Includes the variable name, variable label, description, data type, format and maximum field width of each variable. The data type describes a variable as either a numeric (N) or Alphanumeric (A) and the format of a variable defines a variable as either continuous (Cont) or categorical (Disc). It all also lists the variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. Imputation flag variables are not included in the Access database, because of limitations on maximum number of variables allowed in an Access table.
+ValueSets23
+This worksheet contains the code values and value labels for of all categorical variables in the database. It also lists the frequency and percent distribution for each code value by variable.
+Newvariables23
+This worksheet lists all new variables that were added to the 2023-24 IPEDS data base
+Metadata definitions
+This worksheet describes each of the metadata variables found in tables23, vartable23, Newvariables23, and valuesets23.
+SurveyOrder
+SurveyNumber
+Survey
+TableName
+VarNumber
+VarName
+VarTitle
+FileNumber
+SectionNumber
+40
+7
+Student Financial Aid
+SFA2223_P2
+73092
+UDGFLOANA
+Average amount of federal student loans awarded to degree/certificate-seeking undergraduate students
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73089
+UDGFLOANN
+Number of degree/certificate-seeking undergraduate students awarded federal student loans
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73091
+UDGFLOANT
+Total amount of federal student loans awarded to degree/certificate-seeking undergraduate students
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73082
+UDGPGRNTA
+Average amount of Federal Pell Grant aid awarded to degree/certificate-seeking undergraduate students
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73079
+UDGPGRNTN
+Number of degree/certificate-seeking undergraduate students awarded Federal Pell Grants
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73081
+UDGPGRNTT
+Total amount of Federal Pell Grant aid awarded to degree/certificate-seeking undergraduate students
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73097
+UNDFLOANA
+Average amount of federal student loans awarded to non-degree/non-certificate-seeking undergraduate students
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73094
+UNDFLOANN
+Number of non-degree/non-certificate-seeking undergraduate students awarded federal student loans
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73095
+UNDFLOANP
+Percent of non-degree/non-certificate-seeking undergraduate students awarded federal student loans
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73096
+UNDFLOANT
+Total amount of federal student loans awarded to non-degree/non-certificate-seeking undergraduate students
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73087
+UNDPGRNTA
+Average amount of Federal Pell Grant aid awarded to non-degree/non-certificate-seeking undergraduate students
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73084
+UNDPGRNTN
+Number of non-degree/non-certificate-seeking undergraduate students awarded Federal Pell Grants
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73085
+UNDPGRNTP
+Percent of non-degree/non-certificate-seeking undergraduate students awarded Federal Pell Grants
+39
+4
+40
+7
+Student Financial Aid
+SFA2223_P2
+73086
+UNDPGRNTT
+Total amount of Federal Pell Grant aid awarded to non-degree/non-certificate-seeking undergraduate students
+39
+4
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26357
+EFY2MORM
+Two or more races men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26356
+EFY2MORT
+Two or more races total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26358
+EFY2MORW
+Two or more races women
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26327
+EFYAIANM
+American Indian or Alaska Native men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26326
+EFYAIANT
+American Indian or Alaska Native total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26328
+EFYAIANW
+American Indian or Alaska Native women
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26332
+EFYASIAM
+Asian men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26331
+EFYASIAT
+Asian total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26333
+EFYASIAW
+Asian women
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26337
+EFYBKAAM
+Black or African American men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26336
+EFYBKAAT
+Black or African American total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26338
+EFYBKAAW
+Black or African American women
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26342
+EFYHISPM
+Hispanic or Latino men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26341
+EFYHISPT
+Hispanic or Latino total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26343
+EFYHISPW
+Hispanic or Latino women
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26347
+EFYNHPIM
+Native Hawaiian or Other Pacific Islander men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26346
+EFYNHPIT
+Native Hawaiian or Other Pacific Islander total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26348
+EFYNHPIW
+Native Hawaiian or Other Pacific Islander women
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26367
+EFYNRALM
+U.S. Nonresident men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26366
+EFYNRALT
+U.S. Nonresident total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26368
+EFYNRALW
+U.S. Nonresident women
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26322
+EFYTOTLM
+Grand total men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26321
+EFYTOTLT
+Grand total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26323
+EFYTOTLW
+Grand total women
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26362
+EFYUNKNM
+Race/ethnicity unknown men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26361
+EFYUNKNT
+Race/ethnicity unknown total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26363
+EFYUNKNW
+Race/ethnicity unknown women
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26352
+EFYWHITM
+White men
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26351
+EFYWHITT
+White total
+94
+1
+14
+14
+12-month Enrollment
+EFFY2023_HS
+26353
+EFYWHITW
+White women
+94
+1
+10
+1
+Institutional Characteristics
+IC2023
+17031
+ENRHSST
+Enolls high school students in college courses for credit
+1
+12
+10
+1
+Institutional Characteristics
+IC2023
+17032
+ENRHSST1
+Enolls high school students in college courses for credit within a dual enrollment program
+1
+12
+10
+1
+Institutional Characteristics
+IC2023
+17033
+ENRHSST2
+Enolls high school students in college courses for credit outside a dual enrollment program
+1
+12
+Table
+Metadata variable
+Description
+Table23
+SurveyOrder
+Code used to sort surveys in a particular order
+Table23
+SurveyNumber
+Code assigned to each IPEDS survey component
+Table23
+Survey
+Name of Survey
+Table23
+YearCoverage
+Defines the year the data covers for each survey component. IPEDS data base for 2023-24 will have some survey components that will cover Academic year 2023-24 or Fall 2023, such as Institutional Characteristics and Fall enrollment. However surveys that cover data over a 12-month period such as completions, 12-month enrollment and finance refer to the preceding 12-month period (2022-23)
+Table23
+TableName
+Name of data table within a survey component
+Table23
+Tablenumber
+Unique code assigned to each table
+Table23
+TableTitle
+Table title
+Table23
+Description
+Gives summary of data presented in table. Also identifies the variables (primary keys), that uniquely identifies a record for tables that have multiple records per institutions (IPEDS ID/UNITID)
+Table23
+Release
+This meta data variable identifies which tables are released as provisional or as final/revised data tables. Some survey components or data tables within a survey are available for revisions through our revision system, such as directory information on the Institutional characteristics component.
+Table23
+Release date
+The date (month/year) the table was released as provisional or final/revised through the various data tools at http://nces.ed.gov/ipeds/use-the data.
+VarTable23
+Surveyorder
+Code used to sort surveys in a particular order
+VarTable23
+Surveynumber
+Code assigned to each IPEDS survey component
+VarTable23
+Survey
+Name of survey
+VarTable23
+Tablenumber
+Unique code assigned to each table
+VarTable23
+Tablename
+Name of data table within a survey component
+VarTable23
+Tabletitle
+Table title
+VarTable23
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+VarTable23
+Varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+VarTable23
+Varname
+Variable name
+VarTable23
+Imputationvar
+Identifies variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. The item imputation variables are not available in the access data base to reduce and meet the variable limitations of the access data base. To access these variables please use the "Use the Data Function" on the IPEDS home page. However please be aware that institutional response variables are available in the database.
+VarTable23
+Vartitle
+Variable title
+VarTable23
+Datatype
+The data type describes a variable as either a numeric (N) or Alphanumeric (A)
+VarTable23
+Fieldwidth
+Field width defines maximum number of characters of digits for the variable.
+VarTable23
+Format
+Format of a variable defines a variable as either continuous (Cont) or categorical (Disc).
+VarTable23
+Multirecord
+Identifies variables that are on tables that have multiple records per institution (Unitid). 1=Yes multirecord, 2=Single record per institution
+VarTable23
+Hasrv
+Identifies variables that are eligible for institutions to revise
+VarTable23
+Filenumber
+File number used to group variables by subject in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables by subject within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable23
+Sectionnumber
+Section number used to group variables within a file group in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables within a subject (file group) within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable23
+LongDescription
+Long detailed description of each variable
+VarTable23
+VarSource
+Source of variable - identifies survey component and IPEDS collection cycle . Becomes part of the description in the online Use the data function (data center)
+VarTable23
+Filetitle
+Name given to file group
+VarTable23
+SectionTitle
+Name given to section within file group
+ValueSets23
+Surveyorder
+Code used to sort surveys in a particular order
+ValueSets23
+Tablenumber
+Code assigned to each table
+ValueSets23
+Tablename
+Name of data table within a survey component
+ValueSets23
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+ValueSets23
+varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+ValueSets23
+varname
+Variable name
+ValueSets23
+codevalue
+Code values for a categorical variable
+ValueSets23
+frequency
+Number of occurrences for a code value for a variable in a table
+ValueSets23
+percent
+Percent of occurrences for a code value for a variable in a table
+ValueSets23
+valueOrder
+Code used to sort code values for a variable.
+ValueSets23
+valueLabel
+Description of code values
+ValueSets23
+vartitle
+Variable title
+NewVariables23
+surveyOrder
+Code used to sort surveys in a particular order
+NewVariables23
+surveynumber
+Code assigned to each IPEDS survey component
+NewVariables23
+survey
+Name of survey
+NewVariables23
+tablename
+Name of data table within a survey component
+NewVariables23
+varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+NewVariables23
+varname
+Variable name
+NewVariables23
+vartitle
+Variable title
+NewVariables23
+FileNumber
+File number used to group variables by subject in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables by subject within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+NewVariables23
+sectionnumber
+Section number used to group variables within a file group in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables within a subject (file group) within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+NewValues22
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+NewValues22
+Varname
+Variable name
+NewValues22
+valueOrder
+Code used to sort code values for a variable.
+NewValues22
+Codevalue
+Code values for a categorical variable
+NewValues22
+valueLabel
+Description of code values

@@ -1,0 +1,40 @@
+{
+  "libraries": [
+    {
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\outputs\\access_conversion\\jackcess.jar",
+      "version": "4.0.7",
+      "sha256": "ca9df6790d20e188709801176ef9c4f1d336d505baed670487998f7efb3c6497"
+    },
+    {
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\outputs\\access_conversion\\commons-lang3.jar",
+      "version": "3.18.0",
+      "sha256": "4eeeae8d20c078abb64b015ec158add383ac581571cddc45c68f0c9ae0230720"
+    },
+    {
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\outputs\\access_conversion\\commons-logging.jar",
+      "version": "1.3.5",
+      "sha256": "6d7a744e4027649fbb50895df9497d109f98c766a637062fe8d2eabbb3140ba4"
+    },
+    {
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\outputs\\access_conversion\\sqlite-jdbc.jar",
+      "version": "3.46.1.0",
+      "sha256": "6dc7464e3803648d3ff18a7359bab6adf079fcd8495b18991f6f5edcb8ac6e3b"
+    },
+    {
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\outputs\\access_conversion\\slf4j-api.jar",
+      "version": "1.7.36",
+      "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0"
+    },
+    {
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\outputs\\access_conversion\\slf4j-nop.jar",
+      "version": "1.7.36",
+      "sha256": "c214958b07816cb4412b30c7bdbd4308ffdc6ba2a83767b8f3a9229cbd9274d6"
+    },
+    {
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\outputs\\access_conversion\\compiler.jar",
+      "version": "ECJ 3.26.0",
+      "sha256": "ac0ba5876eaf7ebb47749a0d1be179c51f194b9dd0b875d1c09e1b530f5a2db5"
+    }
+  ],
+  "scope": "Local conversion and catalog preparation; no external data upload"
+}

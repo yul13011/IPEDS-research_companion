@@ -1,0 +1,2120 @@
+Table documentation for the IPEDS Access database, 2020-21
+Final release
+Overview
+This spreadsheet contains the documentation for the IPEDS 2020-21 access database. It contains all variables that were collected in the 2020-21 IPEDS data collection. The IPEDS data collection consists of 3 collection modules. Institutional Characteristics 2020-21, 12-month enrollment 2019-20 and completions 2019-20 were collected in the Fall 2020. Admissions Fall 2020, Graduation Rates 2020, Outcome Measures 2020 and Student Financial Aid 2019-20 were collected in the winter of 2020-21. Fall Enrollment 2020, Finance fiscal year 2020, Human Resources 2020 components and the Academic Libraries fiscal year 2020 were collected in the Spring 2021. The data in this database are final released data. During the 2021-22 collection, institutions were allowed to submit revisions to their 2020-21 submission through the 2020-21 Prior Year Data Revision system. The 2020-21 provisional data were then updated with these revisions for the final release. There are some data tables and variables that institutions are not allowed to revise. Revised data tables and variables are identified in the spreadsheet in this workbook. Note that the tables below also exist in the database. Several survey components contains substantive changes in 2020-21 compared to the previous year. Within the Completions component there were 3 notable changes. First, the less-than-1-year certificate award level was divided into two award level categories. Second, the 2020 version of the Classification of Instructional Programs was required when reporting the program of study associated with an award. Finally, the distance education classification for each program was expanded to collect more detail. Within the 12-Month Enrollment component, institutions were required to disaggregate undergraduate students by enrollment and degree-seeking status, similar to the Fall Enrollment component, and were also required to report distance education data for both undergraduate and graduate students enrolled. Within the Academic Libraries component, new data were collected that specify the number of full-time equivalent staff employed by the library. In the Finance component, there were 3 notable changes. First, a new part was added to collect financial health measures from degree-granting institutions. Second, the Scholarships and Fellowships part of the component was expanded to collect the amount of discounts and allowances attributed to several detail categories. Finally, some new measures were added to the part of the component focused on endowments to further detail the changes to endowment value. Details regarding these changes can be found in the new variables and new value set worksheets listed below.
+Contents of spreadsheet
+Tables20
+Table List: List all data tables included in the downloadable access database and all tables in SQL data base that contains the data available through the Use the Data function (IPEDS Data Center). http://nces.ed.gov/ipeds/home/usethedata.
+Vartable20
+Variable list: Lists all variables for each data table in the IPEDS data base. Includes the variable name, variable label, description, data type, format and maximum field width of each variable. The data type describes a variable as either a numeric (N) or Alphanumeric (A) and the format of a variable defines a variable as either continuous (Cont) or categorical (Disc). It all also lists the variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. Imputation flag variables are not included in the Access database, because of limitations on maximum number of variables allowed in an Access table.
+ValueSets20
+This worksheet contains the code values and value labels for of all categorical variables in the database. It also lists the frequency and percent distribution for each code value by variable.
+NewVariables20
+This worksheet lists all new variables that were added to the IPEDS data base in 2020-21.
+NewValueSets20
+This worksheet contains variables that have new code values and labels in the IPEDS data base for 2020-21. Not included in this list are the 2020 CIP codes used to classify programs on the completions data table. For Information on the CIP classification taxonomy, including a crosswalk between CIP 2010 and 2020 is available at https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56
+Metadata definitions
+This worksheet describes each of the metadata variables found in tables20, vartable20 and valuesets20.
+surveyOrder
+surveynumber
+survey
+tablename
+varnumber
+varname
+vartitle
+FileNumber
+sectionnumber
+20
+1
+Institutional Characteristics
+IC2020
+10412
+LEVEL1A
+Certificate of less than 12 weeks
+1
+4
+20
+1
+Institutional Characteristics
+IC2020
+10413
+LEVEL1B
+Certificate of at least 12 weeks, but less than 1 year
+1
+4
+45
+14
+12-Month Enrollment
+EFFY2020
+20662
+EFFYALEV
+Level and degree/certificate-seeking status of student
+12
+1
+45
+14
+12-Month Enrollment
+EFFY2020_DIST
+25001
+EFFYDLEV
+Level of student
+14
+1
+45
+14
+12-Month Enrollment
+EFFY2020_DIST
+25006
+EFYDETOT
+All students enrolled
+14
+1
+45
+14
+12-Month Enrollment
+EFFY2020_DIST
+25011
+EFYDEEXC
+Students enrolled exclusively in distance education courses
+14
+1
+45
+14
+12-Month Enrollment
+EFFY2020_DIST
+25016
+EFYDESOM
+Students enrolled in some but not all distance education courses
+14
+1
+45
+14
+12-Month Enrollment
+EFFY2020_DIST
+25021
+EFYDENON
+Students not enrolled in any distance education courses
+14
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26006
+E12UG1ST
+First-time degree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26011
+E12UGTRN
+Transfer-in degree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26016
+E12UGCNT
+Continuing degree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26021
+E12UGNDG
+Nondegree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26026
+E12GRAD
+Graduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26031
+E12UGFT
+Full-time undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26036
+E12UG1SFT
+Full-time first-time degree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26041
+E12UGTRFT
+Full-time transfer-in degree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26046
+E12UGCNFT
+Full-time continuing degree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26051
+E12UGNDFT
+Full-time nondegree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26056
+E12UGPT
+Part-time undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26061
+E12UG1SPT
+Part-time first-time degree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26066
+E12UGTRPT
+Part-time transfer-in degree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26071
+E12UGCNPT
+Part-time continuing degree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26076
+E12UGNDPT
+Part-time nondegree/certificate-seeking undergraduate 12-month unduplicated headcount
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26081
+PCTE12AN
+Percent of 12-month unduplicated headcount that are American Indian or Alaska Native
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26086
+PCTE12AS
+Percent of 12-month unduplicated headcount that are Asian
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26091
+PCTE12BK
+Percent of 12-month unduplicated headcount that are Black or African American
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26096
+PCTE12HS
+Percent of 12-month unduplicated headcount that are Hispanic/Latino
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26101
+PCTE12NH
+Percent of 12-month unduplicated headcount that are Native Hawaiian or Other Pacific Islander
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26106
+PCTE12WH
+Percent of 12-month unduplicated headcount that are White
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26111
+PCTE122M
+Percent of 12-month unduplicated headcount that are two or more races
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26116
+PCTE12UN
+Percent of 12-month unduplicated headcount that are race/ethnicity unknown
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26121
+PCTE12NR
+Percent of 12-month unduplicated headcount that are Nonresident Alien
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26126
+PCTE12W
+Percent of 12-month unduplicated headcount that are women
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26131
+PCTE12UGAN
+Percent of undergraduate 12-month unduplicated headcount that are American Indian or Alaska Native
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26136
+PCTE12UGAS
+Percent of undergraduate 12-month unduplicated headcount that are Asian
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26141
+PCTE12UGBK
+Percent of undergraduate 12-month unduplicated headcount that are Black or African American
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26146
+PCTE12UGHS
+Percent of undergraduate 12-month unduplicated headcount that are Hispanic/Latino
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26151
+PCTE12UGNH
+Percent of undergraduate 12-month unduplicated headcount that are Native Hawaiian or Other Pacific Islander
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26156
+PCTE12UGWH
+Percent of undergraduate 12-month unduplicated headcount that are White
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26161
+PCTE12UG2M
+Percent of undergraduate 12-month unduplicated headcount that are two or more races
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26166
+PCTE12UGUN
+Percent of undergraduate 12-month unduplicated headcount that are race/ethnicity unknown
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26171
+PCTE12UGNR
+Percent of undergraduate 12-month unduplicated headcount that are Nonresident Alien
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26176
+PCTE12UGW
+Percent of undergraduate 12-month unduplicated headcount that are women
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26181
+PCTE12GRADAN
+Percent of graduate 12-month unduplicated headcount that are American Indian or Alaska Native
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26186
+PCTE12GRADAS
+Percent of graduate 12-month unduplicated headcount that are Asian
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26191
+PCTE12GRADBK
+Percent of graduate 12-month unduplicated headcount that are Black or African American
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26196
+PCTE12GRADHS
+Percent of graduate 12-month unduplicated headcount that are Hispanic/Latino
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26201
+PCTE12GRADNH
+Percent of graduate 12-month unduplicated headcount that are Native Hawaiian or Other Pacific Islander
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26206
+PCTE12GRADWH
+Percent of graduate 12-month unduplicated headcount that are White
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26211
+PCTE12GRAD2M
+Percent of graduate 12-month unduplicated headcount that are two or more races
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26216
+PCTE12GRADUN
+Percent of graduate 12-month unduplicated headcount that are race/ethnicity unknown
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26221
+PCTE12GRADNR
+Percent of graduate 12-month unduplicated headcount that are Nonresident Alien
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26226
+PCTE12GRADW
+Percent of graduate 12-month unduplicated headcount that are women
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26231
+PCTE12DEEXC
+Percent of 12-month unduplicated headcount enrolled exclusively in distance education courses
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26236
+PCTE12DESOM
+Percent of 12-month unduplicated headcount enrolled in some but not all distance education courses
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26241
+PCTE12DENON
+Percent of 12-month unduplicated headcount not enrolled in any distance education courses
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26246
+PCTE12UGDEEX
+Percent of undergraduate 12-month unduplicated headcount enrolled exclusively in distance education courses
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26251
+PCTE12UGDESO
+Percent of undergraduate 12-month unduplicated headcount enrolled in some but not all distance education courses
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26256
+PCTE12UGDENO
+Percent of undergraduate 12-month unduplicated headcount not enrolled in any distance education courses
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26261
+PCTE12GRADDE
+Percent of graduate 12-month unduplicated headcount enrolled exclusively in distance education courses
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26266
+PCTE12GRADDE
+Percent of graduate 12-month unduplicated headcount enrolled in some but not all distance education courses
+62
+1
+45
+14
+12-Month Enrollment
+DRVEF122020
+26271
+PCTE12GRADDE
+Percent of graduate 12-month unduplicated headcount not enrolled in any distance education courses
+62
+1
+50
+3
+Completions
+C2020_A
+35000
+CIPCODE
+CIP Code - 2020 Classification
+4
+1
+50
+3
+Completions
+C2020_A
+35005
+AWLEVEL
+Award Level code
+4
+1
+50
+3
+Completions
+DRVC2020
+31375
+CERT1A
+Certificate of less than 12 weeks
+63
+1
+50
+3
+Completions
+DRVC2020
+31376
+CERT1B
+Certificate of at least 12 weeks, but less than 1 year
+63
+1
+50
+3
+Completions
+DRVC2020
+33331
+SCERT1A
+Number of students receiving certificates of less than 12 weeks
+63
+1
+50
+3
+Completions
+DRVC2020
+33332
+SCERT1B
+Number of students receiving certificates of at least 12 weeks, but less than 1 year
+63
+1
+50
+3
+Completions
+C2020_C
+33201
+AWLEVELC
+Award Level code
+81
+1
+50
+3
+Completions
+C2020DEP
+33341
+CIPCODE
+CIPCODE - 2020 Classification
+83
+1
+50
+3
+Completions
+C2020DEP
+33351
+PTOTALDES
+All award levels - number of programs with some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33361
+PASSOCDES
+Associate's degree - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33371
+PBACHLDES
+Bachelor's degree - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33381
+PMASTRDES
+Master's degree - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33391
+PDOCRSDES
+Doctor's degree-research/scholarship - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33401
+PDOCPPDES
+Doctor's degree-professional practice - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33411
+PDOCOTDES
+Doctor's degree-other - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33431
+PCERT2DES
+Certificates of 1 year, but less than 2 years - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33441
+PCERT4DES
+Certificates of 2 years, but less than 4 years - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33451
+PPBACCDES
+Postbaccalaureate certificate - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33461
+PPMASTDES
+Post-master's certificate - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33465
+PCERT1A
+Certificates of less than 12 weeks - programs offered
+83
+1
+50
+3
+Completions
+C2020DEP
+33470
+PCERT1ADE
+Certificates of less than 12 weeks - all programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33471
+PCERT1ADES
+Certificates of less than 12 weeks - some programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33475
+PCERT1B
+Certificates of at least 12 weeks, but less than 1 year - programs offered
+83
+1
+50
+3
+Completions
+C2020DEP
+33480
+PCERT1BDE
+Certificates of at least 12 weeks, but less than 1 year - all programs in a CIP code can be completed entirely via distance education
+83
+1
+50
+3
+Completions
+C2020DEP
+33481
+PCERT1BDES
+Certificates of at least 12 weeks, but less than 1 year - some programs in a CIP code can be completed entirely via distance education
+83
+1
+80
+6
+Finance
+FLAGS2020
+60091
+F_ATHRV1
+Are intercollegiate athletic revenues included with sales and services of educational activities
+26
+1
+80
+6
+Finance
+FLAGS2020
+60092
+F_ATHRV2
+Are intercollegiate athletic revenues included with sales and services of auxiliary enterprises
+26
+1
+80
+6
+Finance
+FLAGS2020
+60093
+F_ATHRV3
+Does not have intercollegiate athletics revenues
+26
+1
+80
+6
+Finance
+FLAGS2020
+60094
+F_ATHRV9
+Are intercollegiate athletic revenues included with a source other than educational activities or auxiliary enterprises
+26
+1
+80
+6
+Finance
+F1920_F2
+61283
+F2C12
+Total discounts and allowances from Pell grants
+28
+3
+80
+6
+Finance
+F1920_F2
+61285
+F2C121
+Discounts and allowances from Pell grants applied to tuition and fees
+28
+3
+80
+6
+Finance
+F1920_F2
+61287
+F2C122
+Discounts and allowances from Pell grants applied to auxiliary enterprises
+28
+3
+80
+6
+Finance
+F1920_F2
+61289
+F2C13
+Total discounts and allowances from other federal grants
+28
+3
+80
+6
+Finance
+F1920_F2
+61291
+F2C131
+Discounts and allowances from other federal grants applied to tuition and fees
+28
+3
+80
+6
+Finance
+F1920_F2
+61293
+F2C132
+Discounts and allowances from other federal grants applied to auxiliary enterprises
+28
+3
+80
+6
+Finance
+F1920_F2
+61295
+F2C14
+Total discounts and allowances from state government grants
+28
+3
+80
+6
+Finance
+F1920_F2
+61297
+F2C141
+Discounts and allowances from state government grants applied to tuition and fees
+28
+3
+80
+6
+Finance
+F1920_F2
+61299
+F2C142
+Discounts and allowances from state government grants applied to auxiliary enterprises
+28
+3
+80
+6
+Finance
+F1920_F2
+61301
+F2C15
+Discounts and allowances from local government grants
+28
+3
+80
+6
+Finance
+F1920_F2
+61303
+F2C151
+Discounts and allowances from local government grants applied to tuition and fees
+28
+3
+80
+6
+Finance
+F1920_F2
+61305
+F2C152
+Discounts and allowances from local government grants applied to auxiliary enterprises
+28
+3
+80
+6
+Finance
+F1920_F2
+61307
+F2C16
+Total discounts and allowances from endowments and gifts
+28
+3
+80
+6
+Finance
+F1920_F2
+61309
+F2C161
+Discounts and allowances from endowments and gifts applied to tuition and fees
+28
+3
+80
+6
+Finance
+F1920_F2
+61311
+F2C162
+Discounts and allowances from endowments and gifts applied to auxiliary enterprises
+28
+3
+80
+6
+Finance
+F1920_F2
+61313
+F2C17
+Total discounts and allowances from other institutional sources
+28
+3
+80
+6
+Finance
+F1920_F2
+61315
+F2C171
+Discounts and allowances from other institutional sources applied to tuition and fees
+28
+3
+80
+6
+Finance
+F1920_F2
+61317
+F2C172
+Discounts and allowances from other institutional sources applied to auxiliary enterprises
+28
+3
+80
+6
+Finance
+F1920_F2
+61319
+F2H03
+Change in value of endowment net assets
+28
+6
+80
+6
+Finance
+F1920_F2
+61321
+F2H03A
+New gifts and additions
+28
+6
+80
+6
+Finance
+F1920_F2
+61323
+F2H03B
+Endowment net investment return
+28
+6
+80
+6
+Finance
+F1920_F2
+61325
+F2H03C
+Spending distribution for current use
+28
+6
+80
+6
+Finance
+F1920_F2
+61327
+F2H03D
+Other changes in value of endowment net assets
+28
+6
+80
+6
+Finance
+F1920_F2
+61329
+F2I01
+Change in unrestricted net assets
+28
+7
+80
+6
+Finance
+F1920_F2
+61331
+F2I02
+Total unrestricted operating revenues
+28
+7
+80
+6
+Finance
+F1920_F2
+61333
+F2I03
+Change in net assets
+28
+7
+80
+6
+Finance
+F1920_F2
+61335
+F2I04
+Total net assets
+28
+7
+80
+6
+Finance
+F1920_F2
+61337
+F2I05
+Expendable net assets
+28
+7
+80
+6
+Finance
+F1920_F2
+61339
+F2I06
+Plant-related debt
+28
+7
+80
+6
+Finance
+F1920_F2
+61341
+F2I07
+Total expenses
+28
+7
+80
+6
+Finance
+F1920_F3
+68283
+F3C12
+Total discounts and allowances from Pell grants
+29
+3
+80
+6
+Finance
+F1920_F3
+68285
+F3C121
+Discounts and allowances from Pell grants applied to tuition and fees
+29
+3
+80
+6
+Finance
+F1920_F3
+68287
+F3C122
+Discounts and allowances from Pell grants applied to auxiliary enterprises
+29
+3
+80
+6
+Finance
+F1920_F3
+68289
+F3C13
+Total discounts and allowances from other federal grants
+29
+3
+80
+6
+Finance
+F1920_F3
+68291
+F3C131
+Discounts and allowances from other federal grants applied to tuition and fees
+29
+3
+80
+6
+Finance
+F1920_F3
+68293
+F3C132
+Discounts and allowances from other federal grants applied to auxiliary enterprises
+29
+3
+80
+6
+Finance
+F1920_F3
+68295
+F3C14
+Total discounts and allowances from state government grants
+29
+3
+80
+6
+Finance
+F1920_F3
+68297
+F3C141
+Discounts and allowances from state government grants applied to tuition and fees
+29
+3
+80
+6
+Finance
+F1920_F3
+68299
+F3C142
+Discounts and allowances from state government grants applied to auxiliary enterprises
+29
+3
+80
+6
+Finance
+F1920_F3
+68301
+F3C15
+Total discounts and allowances from local government grants
+29
+3
+80
+6
+Finance
+F1920_F3
+68303
+F3C151
+Discounts and allowances from local government grants applied to tuition and fees
+29
+3
+80
+6
+Finance
+F1920_F3
+68305
+F3C152
+Discounts and allowances from local government grants applied to auxiliary enterprises
+29
+3
+80
+6
+Finance
+F1920_F3
+68307
+F3C16
+Total discounts and allowances from endowments and gifts
+29
+3
+80
+6
+Finance
+F1920_F3
+68309
+F3C161
+Discounts and allowances from endowments and gifts applied to tuition and fees
+29
+3
+80
+6
+Finance
+F1920_F3
+68311
+F3C162
+Discounts and allowances from endowments and gifts applied to auxiliary enterprises
+29
+3
+80
+6
+Finance
+F1920_F3
+68313
+F3C17
+Total discounts and allowances from other institutional sources
+29
+3
+80
+6
+Finance
+F1920_F3
+68315
+F3C171
+Discounts and allowances from other institutional sources applied to tuition and fees
+29
+3
+80
+6
+Finance
+F1920_F3
+68317
+F3C172
+Discounts and allowances from other institutional sources applied to auxiliary enterprises
+29
+3
+80
+6
+Finance
+F1920_F3
+68319
+F3G01
+Pretax income
+29
+7
+80
+6
+Finance
+F1920_F3
+68321
+F3G02
+Total revenues
+29
+7
+80
+6
+Finance
+F1920_F3
+68323
+F3G03
+Total equity
+29
+7
+80
+6
+Finance
+F1920_F3
+68325
+F3G04
+Total assets
+29
+7
+80
+6
+Finance
+F1920_F3
+68327
+F3G05
+Adjusted equity
+29
+7
+80
+6
+Finance
+F1920_F3
+68329
+F3G06
+Plant-related debt
+29
+7
+80
+6
+Finance
+F1920_F3
+68331
+F3G07
+Total expenses
+29
+7
+80
+6
+Finance
+F1920_F1A
+67052
+F1MHOP
+Postemployment benefits other than pension (OPEB) reported
+35
+5
+80
+6
+Finance
+F1920_F1A
+62378
+F1E12
+Total discounts and allowances from Pell grants
+35
+7
+80
+6
+Finance
+F1920_F1A
+62380
+F1E121
+Discounts and allowances from Pell grants applied to tuition and fees
+35
+7
+80
+6
+Finance
+F1920_F1A
+62382
+F1E122
+Discounts and allowances from Pell grants applied to auxiliary enterprises
+35
+7
+80
+6
+Finance
+F1920_F1A
+62384
+F1E13
+Total discounts and allowances from other federal grants
+35
+7
+80
+6
+Finance
+F1920_F1A
+62386
+F1E131
+Discounts and allowances from other federal grants applied to tuition and fees
+35
+7
+80
+6
+Finance
+F1920_F1A
+62388
+F1E132
+Discounts and allowances from other federal grants applied to auxiliary enterprises
+35
+7
+80
+6
+Finance
+F1920_F1A
+62390
+F1E14
+Total discounts and allowances from state government grants
+35
+7
+80
+6
+Finance
+F1920_F1A
+62392
+F1E141
+Discounts and allowances from state government grants applied to tuition and fees
+35
+7
+80
+6
+Finance
+F1920_F1A
+62394
+F1E142
+Discounts and allowances from state government grants applied to auxiliary enterprises
+35
+7
+80
+6
+Finance
+F1920_F1A
+62396
+F1E15
+Discounts and allowances from local government grants
+35
+7
+80
+6
+Finance
+F1920_F1A
+62398
+F1E151
+Discounts and allowances from local government grants applied to tuition and fees
+35
+7
+80
+6
+Finance
+F1920_F1A
+62400
+F1E152
+Discounts and allowances from local government grants applied to auxiliary enterprises
+35
+7
+80
+6
+Finance
+F1920_F1A
+62402
+F1E16
+Total discounts and allowances from endowments and gifts
+35
+7
+80
+6
+Finance
+F1920_F1A
+62404
+F1E161
+Discounts and allowances from endowments and gifts applied to tuition and fees
+35
+7
+80
+6
+Finance
+F1920_F1A
+62406
+F1E162
+Discounts and allowances from endowments and gifts applied to auxiliary enterprises
+35
+7
+80
+6
+Finance
+F1920_F1A
+62408
+F1E17
+Total discounts and allowances from other institutional sources
+35
+7
+80
+6
+Finance
+F1920_F1A
+62410
+F1E171
+Discounts and allowances from other institutional sources applied to tuition and fees
+35
+7
+80
+6
+Finance
+F1920_F1A
+62412
+F1E172
+Discounts and allowances from other institutional sources applied to auxiliary enterprises
+35
+7
+80
+6
+Finance
+F1920_F1A
+62414
+F1H03
+Change in value of endowment net assets
+35
+8
+80
+6
+Finance
+F1920_F1A
+62416
+F1H03A
+New gifts and additions
+35
+8
+80
+6
+Finance
+F1920_F1A
+62418
+F1H03B
+Endowment net investment return
+35
+8
+80
+6
+Finance
+F1920_F1A
+62420
+F1H03C
+Spending distribution for current use
+35
+8
+80
+6
+Finance
+F1920_F1A
+62422
+F1H03D
+Other changes in value of endowment net assets
+35
+8
+80
+6
+Finance
+F1920_F1A
+62426
+F1N01
+Operating income (Loss) + net nonoperating revenues (expenses)
+35
+9
+80
+6
+Finance
+F1920_F1A
+62428
+F1N02
+Operating revenues + nonoperating revenues
+35
+9
+80
+6
+Finance
+F1920_F1A
+62430
+F1N03
+Change in net position
+35
+9
+80
+6
+Finance
+F1920_F1A
+62432
+F1N04
+Net position
+35
+9
+80
+6
+Finance
+F1920_F1A
+62434
+F1N05
+Expendable net assets
+35
+9
+80
+6
+Finance
+F1920_F1A
+62436
+F1N06
+Plant-related debt
+35
+9
+80
+6
+Finance
+F1920_F1A
+62438
+F1N07
+Total expenses
+35
+9
+120
+16
+Academic Libraries
+AL2020
+160325
+LILSYN
+Does institution have Library Staff?
+87
+5
+120
+16
+Academic Libraries
+AL2020
+160330
+LSTOTAL
+Total library FTE staff
+87
+5
+120
+16
+Academic Libraries
+AL2020
+160335
+LSLIBRN
+Librarians FTE staff
+87
+5
+120
+16
+Academic Libraries
+AL2020
+160340
+LSOPROF
+Other professional FTE staff
+87
+5
+120
+16
+Academic Libraries
+AL2020
+160345
+LSOPAID
+All other paid FTE staff (Except Student Assistants)
+87
+5
+120
+16
+Academic Libraries
+AL2020
+160350
+LSSTAST
+Student assistants FTE
+87
+5
+Varnumber
+Varname
+valueOrder
+Codevalue
+valueLabel
+20662
+EFFYALEV
+10
+1
+All students total
+20662
+EFFYALEV
+20
+2
+All students, Undergraduate total
+20662
+EFFYALEV
+30
+3
+All students, Undergraduate, Degree/certificate-seeking total
+20662
+EFFYALEV
+40
+4
+All students, Undergraduate, Degree/certificate-seeking, First-time
+20662
+EFFYALEV
+50
+5
+All students, Undergraduate, Other degree/certificate-seeking
+20662
+EFFYALEV
+55
+19
+All students, Undergraduate, Other degree/certificatee-seeking, Transfer-ins
+20662
+EFFYALEV
+56
+20
+All students, Undergraduate, Other degree/certificatee-seeking, Continuing
+20662
+EFFYALEV
+60
+11
+All students, Undergraduate, Non-degree/certificate-seeking
+20662
+EFFYALEV
+70
+12
+All students, Graduate
+20662
+EFFYALEV
+100
+22
+Full-time students, Undergraduate total
+20662
+EFFYALEV
+110
+23
+Full-time students, Undergraduate, Degree/certificate-seeking total
+20662
+EFFYALEV
+120
+24
+Full-time students, Undergraduate, Degree/certificate-seeking, First-time
+20662
+EFFYALEV
+130
+25
+Full-time students, Undergraduate, Degree/certificate-seeking, Other degree/certificate-seeking
+20662
+EFFYALEV
+135
+39
+Full-time students, Undergraduate, Other degree/certificatee-seeking, Transfer-ins
+20662
+EFFYALEV
+136
+40
+Full-time students, Undergraduate, Other degree/certificatee-seeking, Continuing
+20662
+EFFYALEV
+140
+31
+Full-time students, Undergraduate, Non-degree/certificate-seeking
+20662
+EFFYALEV
+180
+42
+Part-time students, Undergraduate total
+20662
+EFFYALEV
+190
+43
+Part-time students, Undergraduate, Degree/certificate-seeking total
+20662
+EFFYALEV
+200
+44
+Part-time students, Undergraduate, Degree/certificate-seeking, First-time
+20662
+EFFYALEV
+210
+45
+Part-time students, Undergraduate, Degree/certificate-seeking, Other degree/certificate-seeking
+20662
+EFFYALEV
+215
+59
+Part-time students, Undergraduate, Other degree/certificatee-seeking, Transfer-ins
+20662
+EFFYALEV
+216
+60
+Part-time students, Undergraduate, Other degree/certificatee-seeking, Continuing
+20662
+EFFYALEV
+220
+51
+Part-time students, Undergraduate, Non-degree/certificate-seeking
+25001
+EFFYDLEV
+10
+1
+All students total
+25001
+EFFYDLEV
+20
+2
+Undergraduate total
+25001
+EFFYDLEV
+30
+3
+Undergraduate, degree/certificate-seeking
+25001
+EFFYDLEV
+60
+11
+Undergraduate, non-degree/certificate-seeking
+25001
+EFFYDLEV
+70
+12
+Graduate
+33201
+AWLEVELC
+3
+3
+Associate's degree
+33201
+AWLEVELC
+4
+5
+Bachelor's degree
+33201
+AWLEVELC
+5
+7
+Master's degree
+33201
+AWLEVELC
+6
+9
+Doctor's degree
+33201
+AWLEVELC
+7
+10
+Postbaccalaureate or Post-master's certificate
+33201
+AWLEVELC
+10
+11
+Certificate of less than 12 weeks
+33201
+AWLEVELC
+11
+12
+Certificate of at least 12 weeks but less than 1 year
+33201
+AWLEVELC
+12
+2
+Certificate of at least 1 but less than 4 years
+35005
+AWLEVEL
+1
+15
+Degrees/certificates total
+35005
+AWLEVEL
+2
+12
+Degrees total
+35005
+AWLEVEL
+3
+3
+Associate's degree
+35005
+AWLEVEL
+4
+5
+Bachelor's degree
+35005
+AWLEVEL
+5
+7
+Master's degree
+35005
+AWLEVEL
+8
+17
+Doctor's degree - research/scholarship
+35005
+AWLEVEL
+9
+18
+Doctor's degree - professional practice
+35005
+AWLEVEL
+11
+19
+Doctor's degree - other
+35005
+AWLEVEL
+18
+13
+Certificates below the baccalaureate total
+35005
+AWLEVEL
+19
+1
+Certificates of less than 1 year
+35005
+AWLEVEL
+20
+20
+Certificates of less than 12 weeks
+35005
+AWLEVEL
+21
+21
+Certificates of at least 12 weeks but less than 1 year
+35005
+AWLEVEL
+22
+2
+Certificates of at least 1 but less than 2 years
+35005
+AWLEVEL
+23
+4
+Certificates of at least 2 but less than 4 years
+35005
+AWLEVEL
+24
+14
+Certificates above the baccalaureate total
+35005
+AWLEVEL
+25
+6
+Postbaccalaureate certificate
+35005
+AWLEVEL
+26
+8
+Post-master's certificate
+Table
+Metadata variable
+Description
+Table20
+SurveyOrder
+Code used to sort surveys in a particular order
+Table20
+SurveyNumber
+Code assigned to each IPEDS survey component
+Table20
+Survey
+Name of Survey
+Table20
+YearCoverage
+Defines the year the data covers for each survey component. IPEDS data base for 2020-21 will have some survey components that will cover Academic year 2020-21 or Fall 2020, such as Institutional Characteristics and Fall enrollment. However surveys that cover data over a 12-month period such as completions, 12-month enrollment and finance refer to the preceding 12-month period (2019-20)
+Table20
+TableName
+Name of data table within a survey component
+Table20
+Tablenumber
+Unique code assigned to each table
+Table20
+TableTitle
+Table title
+Table20
+Description
+Gives summary of data presented in table. Also identifies the variables (primary keys), that uniquely identifies a record for tables that have multiple records per institutions (IPEDS ID/UNITID)
+Table20
+Release
+This meta data variable identifies which tables are released as provisional or as final/revised data tables. Some survey components or data tables within a survey are available for revisions through our revision system, such as directory information on the Institutional characteristics component.
+Table20
+Release date
+The date the table was released as provisional or final/revised.
+VarTable20
+Surveyorder
+Code used to sort surveys in a particular order
+VarTable20
+Surveynumber
+Code assigned to each IPEDS survey component
+VarTable20
+Survey
+Name of survey
+VarTable20
+Tablenumber
+Unique code assigned to each table
+VarTable20
+Tablename
+Name of data table within a survey component
+VarTable20
+Tabletitle
+Table title
+VarTable20
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+VarTable20
+Varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+VarTable20
+Varname
+Variable name
+VarTable20
+Imputationvar
+Identifies variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. The item imputation variables are not available in the access data base to reduce and meet the variable limitations of the access data base. To access these variables please use the "Use the Data Function" on the IPEDS home page. However please be aware that institutional response variables are available in the database.
+VarTable20
+Vartitle
+Variable title
+VarTable20
+Datatype
+The data type describes a variable as either a numeric (N) or Alphanumeric (A)
+VarTable20
+Fieldwidth
+Field width defines maximum number of characters of digits for the variable.
+VarTable20
+Format
+Format of a variable defines a variable as either continuous (Cont) or categorical (Disc).
+VarTable20
+Multirecord
+Identifies variables that are on tables that have multiple records per institution (Unitid). 1=Yes multirecord, 2=Single record per institution
+VarTable20
+Hasrv
+Identifies variables that are eligible for institutions to revise
+VarTable20
+Filenumber
+File number used to group variables by subject in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables by subject within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable20
+Sectionnumber
+Section number used to group variables within a file group in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables within a subject (file group) within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable20
+LongDescription
+Long detailed description of each variable
+VarTable20
+VarSource
+Source of variable - identifies survey component and IPEDS collection cycle . Becomes part of the description in the online Use the data function (data center)
+VarTable20
+Filetitle
+Name given to file group
+VarTable20
+SectionTitle
+Name given to section within file group
+ValueSets20
+Surveyorder
+Code used to sort surveys in a particular order
+ValueSets20
+Tablenumber
+Code assigned to each table
+ValueSets20
+Tablename
+Name of data table within a survey component
+ValueSets20
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+ValueSets20
+varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+ValueSets20
+varname
+Variable name
+ValueSets20
+codevalue
+Code values for a categorical variable
+ValueSets20
+frequency
+Number of occurrences for a code value for a variable in a table
+ValueSets20
+percent
+Percent of occurrences for a code value for a variable in a table
+ValueSets20
+valueOrder
+Code used to sort code values for a variable.
+ValueSets20
+valueLabel
+Description of code values
+ValueSets20
+vartitle
+Variable title
+NewVariables20
+surveyOrder
+Code used to sort surveys in a particular order
+NewVariables20
+surveynumber
+Code assigned to each IPEDS survey component
+NewVariables20
+survey
+Name of survey
+NewVariables20
+tablename
+Name of data table within a survey component
+NewVariables20
+varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+NewVariables20
+varname
+Variable name
+NewVariables20
+vartitle
+Variable title
+NewVariables20
+FileNumber
+File number used to group variables by subject in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables by subject within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+NewVariables20
+sectionnumber
+Section number used to group variables within a file group in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables within a subject (file group) within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+NewVariables20
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+NewVariables20
+Varname
+Variable name
+NewVariables20
+valueOrder
+Code used to sort code values for a variable.
+NewVariables20
+Codevalue
+Code values for a categorical variable
+NewVariables20
+valueLabel
+Description of code values

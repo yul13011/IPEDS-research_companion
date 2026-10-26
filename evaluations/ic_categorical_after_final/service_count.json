@@ -1,0 +1,1392 @@
+{
+  "id": "service_count",
+  "question": "How many Massachusetts degree-granting institutions offered on-campus childcare for students\u2019 children in 2024-25?",
+  "answer": {
+    "intent": "analyze",
+    "catalog_plan": {
+      "version": 2,
+      "institutions": [],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "ic",
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136105
+          ],
+          "filters": [
+            {
+              "record_id": 136105,
+              "operator": "eq",
+              "values": [
+                "1"
+              ],
+              "code_record_ids": [
+                139111
+              ]
+            }
+          ],
+          "group_by_record_ids": [],
+          "aggregates": []
+        }
+      ],
+      "joins": [],
+      "expressions": [
+        {
+          "id": "n",
+          "operator": "count",
+          "inputs": [
+            "fic_136105"
+          ],
+          "group_by_references": []
+        }
+      ],
+      "outputs": [
+        {
+          "reference": "xn",
+          "label": "Massachusetts degree-granting institutions offering on-campus day care for students' children (2024-25)"
+        }
+      ],
+      "population": {
+        "fips": [
+          25
+        ],
+        "controls": [],
+        "levels": [],
+        "degree_granting": true,
+        "title_iv": false,
+        "administrative_offices": false
+      },
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "Counts institutions whose 2024-25 IC response for on-campus day care for students' children is Yes (code 1); Implied no, Not reported and Not applicable are excluded.",
+        "Population is Massachusetts degree-granting institutions per the 2024-25 directory; Title IV participation is not required."
+      ],
+      "clarification_questions": []
+    },
+    "catalog_proposal": {
+      "catalog_plan": {
+        "version": 2,
+        "institutions": [],
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "id": "ic",
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136105
+            ],
+            "filters": [
+              {
+                "record_id": 136105,
+                "operator": "eq",
+                "values": [
+                  "1"
+                ],
+                "code_record_ids": [
+                  139111
+                ]
+              }
+            ],
+            "group_by_record_ids": [],
+            "aggregates": []
+          }
+        ],
+        "joins": [],
+        "expressions": [
+          {
+            "id": "n",
+            "operator": "count",
+            "inputs": [
+              "fic_136105"
+            ],
+            "group_by_references": []
+          }
+        ],
+        "outputs": [
+          {
+            "reference": "xn",
+            "label": "Massachusetts degree-granting institutions offering on-campus day care for students' children (2024-25)"
+          }
+        ],
+        "population": {
+          "fips": [
+            25
+          ],
+          "controls": [],
+          "levels": [],
+          "degree_granting": true,
+          "title_iv": false,
+          "administrative_offices": false
+        },
+        "missing_policy": "propagate",
+        "time_basis": "source_period",
+        "assumptions": [
+          "Counts institutions whose 2024-25 IC response for on-campus day care for students' children is Yes (code 1); Implied no, Not reported and Not applicable are excluded.",
+          "Population is Massachusetts degree-granting institutions per the 2024-25 directory; Title IV participation is not required."
+        ],
+        "clarification_questions": []
+      },
+      "question": "How many Massachusetts degree-granting institutions offered on-campus childcare for students\u2019 children in 2024-25?",
+      "definition_evidence": [
+        {
+          "record_id": 136105,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table_name": "IC2024",
+          "variable_name": "STUSRV8",
+          "physical_status": "documented_location_present",
+          "physical_locations_json": "[\"IC2024\"]",
+          "imputation_variable": "",
+          "category_count": 4,
+          "definition_hash": "a63de261f8a612ca1f5d1c25ad4b77705fa25eb8e24ff7ecf163ccfb4f82813f",
+          "normalized_hash": "bfdd0056967539a517cf853f8e7b62340b42ffa26db5e5182d23f0ba96383555",
+          "category_hash": "1c180db30a34bc51763fc2b6eab20fbee4addf5a58464a6fd7a5b61bd7124881",
+          "title": "On-campus day care for students' children",
+          "long_description": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.",
+          "data_type": "N",
+          "format": "Disc",
+          "evidence": {
+            "record_id": 136105,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "IC2024",
+            "variable_name": "STUSRV8",
+            "title": "On-campus day care for students' children",
+            "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10801\nvarorder: 73\nvarname: STUSRV8\nvartitle: On-campus day care for students' children\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "varTable24",
+            "source_row": 234
+          }
+        }
+      ],
+      "category_evidence": [
+        {
+          "record_id": 139111,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "IC2024",
+          "variable_name": "STUSRV8",
+          "title": "Yes",
+          "body": "surveyorder: 10\ntablenumber: 12\ntablename: IC2024\nvarnumber: 10801\nvarorder: 73\nvarname: STUSRV8\ncodevalue: 1\nfrequency: 808\npercent: 13.55\nvalueorder: 1\nvaluelabel: Yes\nvartitle: On-campus day care for students' children",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 641
+        }
+      ],
+      "validation": {
+        "execution_approved": false,
+        "preflight_eligible": true,
+        "semantic_status": "runtime_cardinality_pending",
+        "blocks": []
+      },
+      "created_at": "2026-10-23T01:36:59.530065+00:00",
+      "proposal_id": "7e62e90b0bb20daf521c"
+    },
+    "message": "For Selected states/areas (Academic year 2024-25), Massachusetts degree-granting institutions offering on-campus day care for students' children (2024-25): 20. The reporting period and source definitions are available below.",
+    "mode": "catalog relational planner",
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 5,
+      "planning_tool_requests": 8,
+      "semantic_repair_attempts": 1,
+      "latency_seconds": 22.881987400038167,
+      "input_tokens": 65388,
+      "output_tokens": 2346,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 85232,
+      "estimated_api_usd": 0.1627592,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 569,
+          "output_tokens": 107,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 2.693987400038168,
+          "estimated_api_usd": 0.002208,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 4,
+          "planning_tool_requests": 8,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 20.188,
+          "input_tokens": 64819,
+          "output_tokens": 2239,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 85232,
+          "estimated_api_usd": 0.1605512,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "validation_attempts": [
+      {
+        "attempt": 1,
+        "blocks": [
+          "Use named institutions or an explicit directory population and 1\u201320 source relations."
+        ]
+      }
+    ],
+    "result": {
+      "plan": {
+        "metrics": [
+          "xn"
+        ],
+        "institutions": [],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_period",
+        "output": "table"
+      },
+      "catalog_plan": {
+        "version": 2,
+        "institutions": [],
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "id": "ic",
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136105
+            ],
+            "filters": [
+              {
+                "record_id": 136105,
+                "operator": "eq",
+                "values": [
+                  "1"
+                ],
+                "code_record_ids": [
+                  139111
+                ]
+              }
+            ],
+            "group_by_record_ids": [],
+            "aggregates": []
+          }
+        ],
+        "joins": [],
+        "expressions": [
+          {
+            "id": "n",
+            "operator": "count",
+            "inputs": [
+              "fic_136105"
+            ],
+            "group_by_references": []
+          }
+        ],
+        "outputs": [
+          {
+            "reference": "xn",
+            "label": "Massachusetts degree-granting institutions offering on-campus day care for students' children (2024-25)"
+          }
+        ],
+        "population": {
+          "fips": [
+            25
+          ],
+          "controls": [],
+          "levels": [],
+          "degree_granting": true,
+          "title_iv": false,
+          "administrative_offices": false
+        },
+        "missing_policy": "propagate",
+        "time_basis": "source_period",
+        "assumptions": [
+          "Counts institutions whose 2024-25 IC response for on-campus day care for students' children is Yes (code 1); Implied no, Not reported and Not applicable are excluded.",
+          "Population is Massachusetts degree-granting institutions per the 2024-25 directory; Title IV participation is not required."
+        ],
+        "clarification_questions": []
+      },
+      "metric_specs": {
+        "xn": {
+          "label": "Massachusetts degree-granting institutions offering on-campus day care for students' children (2024-25)",
+          "family": "query",
+          "unit": "records"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Selected states/areas",
+          "unitid": null,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "metric": "xn",
+          "measure": "Massachusetts degree-granting institutions offering on-campus day care for students' children (2024-25)",
+          "unit": "records",
+          "value": 20.0,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "[]",
+          "groups": [],
+          "available_rows": 20,
+          "requested_rows": 20,
+          "unit_metadata": {
+            "version": 1,
+            "unit": "records",
+            "status": "verified",
+            "basis": "Validated query expression",
+            "inputs": [
+              {
+                "version": 3,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "IC2024",
+                "variable": "STUSRV8",
+                "record_id": 136105,
+                "unit": "coded",
+                "quantity_type": "category",
+                "status": "verified",
+                "basis": "Source coded/non-continuous field",
+                "evidence": [
+                  {
+                    "record_id": 136105,
+                    "excerpt": "On-campus day care for students' children"
+                  },
+                  {
+                    "record_id": 135823,
+                    "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+                  }
+                ],
+                "scale": 1,
+                "currency": null,
+                "population": null,
+                "rule_version": 3
+              }
+            ]
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "xn",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "STUSRV8"
+          ],
+          "filters": [
+            {
+              "record_id": 136105,
+              "operator": "eq",
+              "values": [
+                "1"
+              ],
+              "code_record_ids": [
+                139111
+              ]
+            }
+          ],
+          "formula": {
+            "aggregates": [],
+            "expressions": [
+              {
+                "id": "n",
+                "operator": "count",
+                "inputs": [
+                  "fic_136105"
+                ],
+                "group_by_references": []
+              }
+            ]
+          },
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"STUSRV8\" AS \"STUSRV8\" FROM \"IC2024\" WHERE \"UNITID\" IN (SELECT UNITID FROM \"HD2024\" WHERE \"FIPS\" IN (?) AND \"PSET4FLG\" IN (?,?,?,?,?,?) AND \"DEGGRANT\" IN (?) AND \"SECTOR\" IN (?,?,?,?,?,?,?,?,?)) AND \"STUSRV8\" IN (?) LIMIT 20001",
+          "parameters": [
+            25,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            "1"
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136105,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "STUSRV8",
+              "title": "On-campus day care for students' children",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10801\nvarorder: 73\nvarname: STUSRV8\nvartitle: On-campus day care for students' children\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 234,
+              "long_description": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "location_override": false,
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139111,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "IC2024",
+              "variable_name": "STUSRV8",
+              "title": "Yes",
+              "body": "surveyorder: 10\ntablenumber: 12\ntablename: IC2024\nvarnumber: 10801\nvarorder: 73\nvarname: STUSRV8\ncodevalue: 1\nfrequency: 808\npercent: 13.55\nvalueorder: 1\nvaluelabel: Yes\nvartitle: On-campus day care for students' children",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 641
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "xn": "On-campus day care for students' children: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs."
+      },
+      "warnings": [
+        "Some requested institution/source scopes have no matching rows. Missing source institutions are listed in the query audit; returned rows are not a complete institution-by-category grid.",
+        "Aggregates use the selected source reporting units and available observations. Counts are sums of institutional reports, not deduplicated people across institutions. Coverage and exclusions are in Definitions & sources and downloads."
+      ],
+      "technical_notes": [
+        "Counts institutions whose 2024-25 IC response for on-campus day care for students' children is Yes (code 1); Implied no, Not reported and Not applicable are excluded.",
+        "Population is Massachusetts degree-granting institutions per the 2024-25 directory; Title IV participation is not required.",
+        "Source row domains, missingness policy, join cardinality and typed calculations are retained in the audit. Missing values are not zeros.",
+        "Directory filters and exact source category evidence are retained in population_evidence; source reporting units need not equal every directory entry."
+      ],
+      "created_at": "2026-10-23T01:37:01.574507+00:00",
+      "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+      "review_status": "Source-bound relational plan with observed grain, bounded domains, cardinality and typed-operation validation.",
+      "coverage": {
+        "requested_cells": 1,
+        "available_cells": 1
+      },
+      "query_audit": [
+        {
+          "source_id": "ic",
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "sql": "SELECT \"UNITID\" AS \"UNITID\",\"STUSRV8\" AS \"STUSRV8\" FROM \"IC2024\" WHERE \"UNITID\" IN (SELECT UNITID FROM \"HD2024\" WHERE \"FIPS\" IN (?) AND \"PSET4FLG\" IN (?,?,?,?,?,?) AND \"DEGGRANT\" IN (?) AND \"SECTOR\" IN (?,?,?,?,?,?,?,?,?)) AND \"STUSRV8\" IN (?) LIMIT 20001",
+          "parameters": [
+            25,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            "1"
+          ],
+          "selected_rows": 20,
+          "raw_keys": [
+            "UNITID"
+          ],
+          "row_limit": 20000,
+          "requested_unitids": [
+            164368,
+            164447,
+            164465,
+            164492,
+            164562,
+            164580,
+            164614,
+            164632,
+            164739,
+            164748,
+            164775,
+            164872,
+            164915,
+            164924,
+            164988,
+            165015,
+            165024,
+            165033,
+            165112,
+            165167,
+            165194,
+            165264,
+            165334,
+            165495,
+            165529,
+            165574,
+            165644,
+            165662,
+            165671,
+            165699,
+            165802,
+            165820,
+            165866,
+            165884,
+            165936,
+            165945,
+            165981,
+            166018,
+            166027,
+            166045,
+            166054,
+            166124,
+            166133,
+            166391,
+            166407,
+            166452,
+            166489,
+            166513,
+            166629,
+            166638,
+            166647,
+            166656,
+            166674,
+            166683,
+            166692,
+            166708,
+            166717,
+            166823,
+            166850,
+            166869,
+            166887,
+            166911,
+            166939,
+            166957,
+            167057,
+            167093,
+            167215,
+            167260,
+            167288,
+            167312,
+            167358,
+            167376,
+            167394,
+            167464,
+            167525,
+            167534,
+            167598,
+            167631,
+            167677,
+            167729,
+            167783,
+            167792,
+            167835,
+            167899,
+            167905,
+            167987,
+            167996,
+            168005,
+            168148,
+            168218,
+            168227,
+            168254,
+            168263,
+            168281,
+            168342,
+            168421,
+            168430,
+            217606,
+            369002,
+            429128,
+            436599,
+            441982,
+            475273,
+            482705,
+            494542
+          ],
+          "missing_unitids": [
+            164368,
+            164447,
+            164465,
+            164492,
+            164562,
+            164580,
+            164614,
+            164632,
+            164739,
+            164748,
+            164775,
+            164872,
+            164915,
+            165015,
+            165112,
+            165167,
+            165194,
+            165264,
+            165334,
+            165495,
+            165529,
+            165574,
+            165644,
+            165662,
+            165671,
+            165699,
+            165802,
+            165820,
+            165884,
+            165936,
+            165945,
+            165981,
+            166027,
+            166045,
+            166054,
+            166124,
+            166391,
+            166407,
+            166452,
+            166489,
+            166513,
+            166638,
+            166647,
+            166656,
+            166674,
+            166692,
+            166717,
+            166823,
+            166850,
+            166887,
+            166911,
+            166939,
+            167057,
+            167093,
+            167215,
+            167260,
+            167288,
+            167312,
+            167394,
+            167464,
+            167631,
+            167677,
+            167729,
+            167783,
+            167792,
+            167835,
+            167899,
+            167987,
+            167996,
+            168005,
+            168148,
+            168218,
+            168227,
+            168254,
+            168263,
+            168281,
+            168421,
+            168430,
+            217606,
+            369002,
+            429128,
+            436599,
+            441982,
+            475273,
+            494542
+          ],
+          "missing_codes": {
+            "136105": [
+              "-1",
+              "-2"
+            ]
+          }
+        }
+      ],
+      "join_validation": [],
+      "semantic_validation": {
+        "execution_approved": true,
+        "version": 2,
+        "missing_policy": "propagate",
+        "time_basis": "source_period"
+      },
+      "catalog_evidence": {
+        "definition_evidence": [
+          {
+            "record_id": 136105,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table_name": "IC2024",
+            "variable_name": "STUSRV8",
+            "physical_status": "documented_location_present",
+            "physical_locations_json": "[\"IC2024\"]",
+            "imputation_variable": "",
+            "category_count": 4,
+            "definition_hash": "a63de261f8a612ca1f5d1c25ad4b77705fa25eb8e24ff7ecf163ccfb4f82813f",
+            "normalized_hash": "bfdd0056967539a517cf853f8e7b62340b42ffa26db5e5182d23f0ba96383555",
+            "category_hash": "1c180db30a34bc51763fc2b6eab20fbee4addf5a58464a6fd7a5b61bd7124881",
+            "title": "On-campus day care for students' children",
+            "long_description": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.",
+            "data_type": "N",
+            "format": "Disc",
+            "evidence": {
+              "record_id": 136105,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "STUSRV8",
+              "title": "On-campus day care for students' children",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10801\nvarorder: 73\nvarname: STUSRV8\nvartitle: On-campus day care for students' children\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 234
+            }
+          }
+        ],
+        "category_evidence": [
+          {
+            "record_id": 139111,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "code_value",
+            "table_name": "IC2024",
+            "variable_name": "STUSRV8",
+            "title": "Yes",
+            "body": "surveyorder: 10\ntablenumber: 12\ntablename: IC2024\nvarnumber: 10801\nvarorder: 73\nvarname: STUSRV8\ncodevalue: 1\nfrequency: 808\npercent: 13.55\nvalueorder: 1\nvaluelabel: Yes\nvartitle: On-campus day care for students' children",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "valueSets24",
+            "source_row": 641
+          }
+        ],
+        "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+        "table_evidence": [
+          {
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table_name": "IC2024",
+            "family": "IC{YEAR}",
+            "profile": {
+              "candidate_key": [
+                "UNITID"
+              ],
+              "distinct_institutions": 5963,
+              "expected_rows_match": true,
+              "key_status": "observed_unique_institution_key",
+              "null_institution_ids": 0,
+              "query_count": 1,
+              "rows": 5963,
+              "status": "profiled"
+            },
+            "period_evidence": [
+              {
+                "record_id": 135823,
+                "release_date": null,
+                "release_status": "Provisional",
+                "year_coverage": "Academic year 2024-25"
+              }
+            ],
+            "population_evidence": [
+              {
+                "description": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year",
+                "record_id": 135823,
+                "title": "Educational offerings, organization, admissions, services and athletic associations"
+              }
+            ],
+            "source_definitions": [
+              {
+                "record_id": 135823,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "table_definition",
+                "table_name": "IC2024",
+                "variable_name": "",
+                "title": "Educational offerings, organization, admissions, services and athletic associations",
+                "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\nyearcoverage: Academic year 2024-25\ntablename: IC2024\ntablenumber: 12\ntabletitle: Educational offerings, organization, admissions, services and athletic associations\ndescription: This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year\nrelease: Provisional\nrelease_date: September 2025",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "tables24",
+                "source_row": 4
+              }
+            ]
+          }
+        ]
+      },
+      "population_evidence": {
+        "2024": {
+          "unitids": [
+            164368,
+            164447,
+            164465,
+            164492,
+            164562,
+            164580,
+            164614,
+            164632,
+            164739,
+            164748,
+            164775,
+            164872,
+            164915,
+            164924,
+            164988,
+            165015,
+            165024,
+            165033,
+            165112,
+            165167,
+            165194,
+            165264,
+            165334,
+            165495,
+            165529,
+            165574,
+            165644,
+            165662,
+            165671,
+            165699,
+            165802,
+            165820,
+            165866,
+            165884,
+            165936,
+            165945,
+            165981,
+            166018,
+            166027,
+            166045,
+            166054,
+            166124,
+            166133,
+            166391,
+            166407,
+            166452,
+            166489,
+            166513,
+            166629,
+            166638,
+            166647,
+            166656,
+            166674,
+            166683,
+            166692,
+            166708,
+            166717,
+            166823,
+            166850,
+            166869,
+            166887,
+            166911,
+            166939,
+            166957,
+            167057,
+            167093,
+            167215,
+            167260,
+            167288,
+            167312,
+            167358,
+            167376,
+            167394,
+            167464,
+            167525,
+            167534,
+            167598,
+            167631,
+            167677,
+            167729,
+            167783,
+            167792,
+            167835,
+            167899,
+            167905,
+            167987,
+            167996,
+            168005,
+            168148,
+            168218,
+            168227,
+            168254,
+            168263,
+            168281,
+            168342,
+            168421,
+            168430,
+            217606,
+            369002,
+            429128,
+            436599,
+            441982,
+            475273,
+            482705,
+            494542
+          ],
+          "label": "Selected states/areas",
+          "directory_sql": "SELECT UNITID,INSTNM FROM \"HD2024\" WHERE \"FIPS\" IN (?) AND \"PSET4FLG\" IN (?,?,?,?,?,?) AND \"DEGGRANT\" IN (?) AND \"SECTOR\" IN (?,?,?,?,?,?,?,?,?)",
+          "parameters": [
+            25,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "directory_count": 105,
+          "code_evidence": [
+            {
+              "field": "FIPS",
+              "codes": [
+                {
+                  "record_id": 138552,
+                  "code_value": "25",
+                  "value_label": "Massachusetts"
+                }
+              ]
+            },
+            {
+              "field": "PSET4FLG",
+              "codes": [
+                {
+                  "record_id": 138709,
+                  "code_value": "1",
+                  "value_label": "Title IV postsecondary institution"
+                },
+                {
+                  "record_id": 138710,
+                  "code_value": "2",
+                  "value_label": "Non-Title IV postsecondary institution"
+                },
+                {
+                  "record_id": 138711,
+                  "code_value": "3",
+                  "value_label": "Title IV NOT primarily postsecondary institution"
+                },
+                {
+                  "record_id": 138712,
+                  "code_value": "4",
+                  "value_label": "Non-Title IV NOT primarily postsecondary institution"
+                },
+                {
+                  "record_id": 138713,
+                  "code_value": "5",
+                  "value_label": "Title IV postsecondary institution that is NOT open to the public"
+                },
+                {
+                  "record_id": 138714,
+                  "code_value": "6",
+                  "value_label": "Non-Title IV postsecondary institution that is NOT open to the public"
+                }
+              ]
+            },
+            {
+              "field": "DEGGRANT",
+              "codes": [
+                {
+                  "record_id": 138653,
+                  "code_value": "1",
+                  "value_label": "Degree-granting"
+                }
+              ]
+            },
+            {
+              "field": "SECTOR",
+              "codes": [
+                {
+                  "record_id": 138609,
+                  "code_value": "1",
+                  "value_label": "Public, 4-year or above"
+                },
+                {
+                  "record_id": 138610,
+                  "code_value": "2",
+                  "value_label": "Private not-for-profit, 4-year or above"
+                },
+                {
+                  "record_id": 138611,
+                  "code_value": "3",
+                  "value_label": "Private for-profit, 4-year or above"
+                },
+                {
+                  "record_id": 138612,
+                  "code_value": "4",
+                  "value_label": "Public, 2-year"
+                },
+                {
+                  "record_id": 138613,
+                  "code_value": "5",
+                  "value_label": "Private not-for-profit, 2-year"
+                },
+                {
+                  "record_id": 138614,
+                  "code_value": "6",
+                  "value_label": "Private for-profit, 2-year"
+                },
+                {
+                  "record_id": 138615,
+                  "code_value": "7",
+                  "value_label": "Public, less-than 2-year"
+                },
+                {
+                  "record_id": 138616,
+                  "code_value": "8",
+                  "value_label": "Private not-for-profit, less-than 2-year"
+                },
+                {
+                  "record_id": 138617,
+                  "code_value": "9",
+                  "value_label": "Private for-profit, less-than 2-year"
+                }
+              ]
+            }
+          ],
+          "year": 2024,
+          "filters": {
+            "fips": [
+              25
+            ],
+            "controls": [],
+            "levels": [],
+            "degree_granting": true,
+            "title_iv": false,
+            "administrative_offices": false
+          }
+        }
+      },
+      "field_semantics": {
+        "136105": {
+          "version": 3,
+          "record_id": 136105,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table": "IC2024",
+          "variable": "STUSRV8",
+          "source_title": "On-campus day care for students' children",
+          "measure_base": "on campus day care for students children",
+          "dimensions": {},
+          "unit": "coded",
+          "numeric_kind": "coded_or_other",
+          "additive": false,
+          "total_scope": false,
+          "reporting_periods": [
+            "Academic year 2024-25"
+          ],
+          "field_time_qualifiers": [],
+          "population_evidence": [
+            {
+              "record_id": 135823,
+              "description": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+            }
+          ],
+          "required_row_selectors": [],
+          "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+          "category_overlap_warning": false,
+          "evidence": {
+            "variable_record_id": 136105,
+            "table_record_ids": [
+              135823
+            ],
+            "title_excerpt": "On-campus day care for students' children",
+            "definition_excerpt": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can part",
+            "unit_basis_excerpt": "On-campus day care for students' children"
+          },
+          "readiness": "described",
+          "execution_approved": false,
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      },
+      "latency": {
+        "validation_seconds": 1.929042899981141,
+        "query_seconds": 0.11130029999185354,
+        "planning_and_binding_seconds": 21.4916134000523,
+        "answer_ready_seconds": 26.246622300008312,
+        "live_model_calls": 5,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 2.7032538999337703
+      },
+      "result_id": "d2d5039eabe84776",
+      "intent_validation": {
+        "contract": {
+          "version": 1,
+          "original_question": "How many Massachusetts degree-granting institutions offered on-campus childcare for students\u2019 children in 2024-25?",
+          "scope_question": "How many Massachusetts degree-granting institutions offered on-campus childcare for students\u2019 children in 2024-25?",
+          "expected_years": [
+            2025
+          ],
+          "time_basis": "observation",
+          "temporal": false,
+          "period_count": null,
+          "unitids": [],
+          "inherit_institutions": false,
+          "dimensions": [],
+          "percentage": false,
+          "undergraduate": false
+        },
+        "plan_checks": [
+          "requested institutions",
+          "requested time scope"
+        ],
+        "policy": "Bounded independent checks; existing source/population/formula validators remain authoritative. Unknown semantic equivalence is not certified.",
+        "result_checks": [
+          "institution scope",
+          "actual reporting periods",
+          "requested output kind and breakdown cardinality"
+        ],
+        "status": "passed"
+      },
+      "planning_validation": {
+        "repair_attempts": [
+          {
+            "attempt": 1,
+            "blocks": [
+              "Use named institutions or an explicit directory population and 1\u201320 source relations."
+            ]
+          }
+        ]
+      },
+      "institution_identity": {
+        "unitids": [],
+        "original_question": "How many Massachusetts degree-granting institutions offered on-campus childcare for students\u2019 children in 2024-25?",
+        "original_mentions": [],
+        "confirmed_choices": {},
+        "scope_mentions": [],
+        "labels": []
+      }
+    },
+    "latency": {
+      "validation_seconds": 1.929042899981141,
+      "query_seconds": 0.11130029999185354,
+      "planning_and_binding_seconds": 21.4916134000523,
+      "answer_ready_seconds": 26.246622300008312,
+      "live_model_calls": 5,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 2.7032538999337703
+    },
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": null,
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "054478be329e8cad",
+      "status": "completed",
+      "goal": "How many Massachusetts degree-granting institutions offered on-campus childcare for students\u2019 children in 2024-25?",
+      "original_question": "How many Massachusetts degree-granting institutions offered on-campus childcare for students\u2019 children in 2024-25?",
+      "question": "For Selected states/areas (Academic year 2024-25), Massachusetts degree-granting institutions offering on-campus day care for students' children (2024-25): 20. The reporting period and source definitions are available below.",
+      "scope": {
+        "institutions": [],
+        "population": {
+          "fips": [
+            25
+          ],
+          "controls": [],
+          "levels": [],
+          "degree_granting": true,
+          "title_iv": false,
+          "administrative_offices": false
+        },
+        "years": [
+          2024
+        ],
+        "measures": [
+          {
+            "reference": "xn",
+            "label": "Massachusetts degree-granting institutions offering on-campus day care for students' children (2024-25)"
+          }
+        ],
+        "breakdowns": [
+          []
+        ],
+        "time_basis": "source_period",
+        "assumptions": [
+          "Counts institutions whose 2024-25 IC response for on-campus day care for students' children is Yes (code 1); Implied no, Not reported and Not applicable are excluded.",
+          "Population is Massachusetts degree-granting institutions per the 2024-25 directory; Title IV participation is not required."
+        ]
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [],
+      "original_question": "How many Massachusetts degree-granting institutions offered on-campus childcare for students\u2019 children in 2024-25?",
+      "original_mentions": [],
+      "confirmed_choices": {},
+      "scope_mentions": [],
+      "labels": []
+    }
+  },
+  "elapsed_seconds": 26.247072299942374,
+  "events": [
+    {
+      "elapsed": 0.0002234999556094408,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 2.703229899983853,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 2.703943599946797,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 2.704111999948509,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 2.7181823999853805,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 5.599684999906458,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 6.39331809990108,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 6.418688799953088,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 11.12160039995797,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 11.14551889989525,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 11.17974619998131,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 11.219140799948946,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 11.247485299943946,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 17.6385367999319,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    },
+    {
+      "elapsed": 17.76406709989533,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 22.96299899998121,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    },
+    {
+      "elapsed": 24.195809299941175,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    },
+    {
+      "elapsed": 26.124676599982195,
+      "stage": "Checking the planned scope against your request\u2026"
+    },
+    {
+      "elapsed": 26.12519719998818,
+      "stage": "Reading source data for 2024\u2026"
+    },
+    {
+      "elapsed": 26.204153399914503,
+      "stage": "Calculating results from the validated data\u2026"
+    },
+    {
+      "elapsed": 26.238499199971557,
+      "stage": "Checking result coverage before publication\u2026"
+    },
+    {
+      "elapsed": 26.24098719994072,
+      "stage": "Checking result coverage before publication\u2026"
+    },
+    {
+      "elapsed": 26.241114899981767,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 26.246877299970947,
+      "stage": "Checking result coverage before publication\u2026"
+    },
+    {
+      "elapsed": 26.246965399943292,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "STUSRV8"
+  ]
+}

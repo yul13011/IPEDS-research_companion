@@ -1,0 +1,372 @@
+[
+  {
+    "question": "How many ladder faculty does Southern Connecticut State University have, and what are their average salaries by academic rank?",
+    "seconds": 29.918866799969692,
+    "intent": "clarify",
+    "message": "How many ladder faculty does 130493 have, and what are their average salaries by academic rank?\n\n**A. Tenured + tenure-track counts by rank, with salaries for all full-time instructional staff by rank**\n\nLadder faculty = faculty status tenured (20) plus on tenure track (30), shown as separate disjoint counts by academic rank (S2024_SIS, Fall 2024). Separate panel: average equated-9-month salary by academic rank for ALL full-time nonmedical instructional staff (SAL2024_IS, AY 2024-25), since IPEDS does not publish salary by tenure status.\n\nIPEDS has no 'ladder faculty' category; defined here as tenured plus on-tenure-track with faculty status. Salary panel covers all full-time nonmedical instructional staff (including non-ladder, and excluding medical), not only ladder faculty; do not read it as ladder salaries. Count source is Fall 2024 (Nov 1 snapshot, degree-granting institutions); salary source is academic year 2024-25 and a different population; no cross-panel arithmetic. Tenured and tenure-track counts are shown separately; the user can add them.\n\n**B. Comparable all-instructional-staff view (no ladder restriction)**\n\nBoth panels cover all full-time instructional staff by academic rank: counts from S2024_SIS (FACSTAT=0, all staff) and average salaries from SAL2024_IS.\n\nDoes not isolate ladder faculty; use Option A for the ladder count. Count is Fall 2024 including medical staff scope differences; salary is AY 2024-25 nonmedical only.",
+    "usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 4,
+      "planning_tool_requests": 6,
+      "semantic_repair_attempts": 0,
+      "latency_seconds": 22.728553399987984,
+      "input_tokens": 47808,
+      "output_tokens": 3119,
+      "cache_creation_input_tokens": 15470,
+      "cache_read_input_tokens": 30940,
+      "estimated_api_usd": 0.168575,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 567,
+          "output_tokens": 64,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 2.2755533999879844,
+          "estimated_api_usd": 0.001774,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 3,
+          "planning_tool_requests": 6,
+          "semantic_repair_attempts": 0,
+          "latency_seconds": 20.453,
+          "input_tokens": 47241,
+          "output_tokens": 3055,
+          "cache_creation_input_tokens": 15470,
+          "cache_read_input_tokens": 30940,
+          "estimated_api_usd": 0.166801,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "brief_status": "pending",
+    "rows": []
+  },
+  {
+    "question": "A",
+    "seconds": 0.40964339999482036,
+    "intent": "analyze",
+    "message": "Using Tenured + tenure-track counts by rank, with salaries for all full-time instructional staff by rank. IPEDS has no 'ladder faculty' category; defined here as tenured plus on-tenure-track with faculty status. Salary panel covers all full-time nonmedical instructional staff (including non-ladder, and excluding medical), not only ladder faculty; do not read it as ladder salaries. Count source is Fall 2024 (Nov 1 snapshot, degree-granting institutions); salary source is academic year 2024-25 and a different population; no cross-panel arithmetic. Tenured and tenure-track counts are shown separately; the user can add them.",
+    "usage": {
+      "calls": 0,
+      "latency_seconds": 0,
+      "estimated_api_usd": 0,
+      "stage": "saved clarification selection"
+    },
+    "brief_status": "completed",
+    "rows": [
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137803",
+        "measure": "Professors (full-time, by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, tenured",
+        "unit": "unknown",
+        "value": 191.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, tenured\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, tenured"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137804",
+        "measure": "Associate professors (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, tenured",
+        "unit": "unknown",
+        "value": 128.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, tenured\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, tenured"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137805",
+        "measure": "Assistant professors (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, tenured",
+        "unit": "unknown",
+        "value": 4.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, tenured\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, tenured"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137806",
+        "measure": "Instructors (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, tenured",
+        "unit": "unknown",
+        "value": 0.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, tenured\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, tenured"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137807",
+        "measure": "Lecturers (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, tenured",
+        "unit": "unknown",
+        "value": 0.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, tenured\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, tenured"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137808",
+        "measure": "No academic rank (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, tenured",
+        "unit": "unknown",
+        "value": 0.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, tenured\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, tenured"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137802",
+        "measure": "All ranks (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, tenured",
+        "unit": "unknown",
+        "value": 323.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, tenured\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, tenured"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137803",
+        "measure": "Professors (full-time, by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, on tenure track",
+        "unit": "unknown",
+        "value": 1.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, on tenure track\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, on tenure track"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137804",
+        "measure": "Associate professors (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, on tenure track",
+        "unit": "unknown",
+        "value": 5.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, on tenure track\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, on tenure track"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137805",
+        "measure": "Assistant professors (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, on tenure track",
+        "unit": "unknown",
+        "value": 52.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, on tenure track\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, on tenure track"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137806",
+        "measure": "Instructors (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, on tenure track",
+        "unit": "unknown",
+        "value": 0.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, on tenure track\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, on tenure track"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137807",
+        "measure": "Lecturers (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, on tenure track",
+        "unit": "unknown",
+        "value": 0.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, on tenure track\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, on tenure track"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137808",
+        "measure": "No academic rank (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, on tenure track",
+        "unit": "unknown",
+        "value": 0.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, on tenure track\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, on tenure track"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      },
+      {
+        "institution": "Southern Connecticut State University",
+        "unitid": 130493,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "Fall 2024",
+        "metric": "fs_137802",
+        "measure": "All ranks (by tenured/tenure-track status) \u00b7 Faculty and tenure status: With faculty status, on tenure track",
+        "unit": "unknown",
+        "value": 58.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Faculty and tenure status: With faculty status, on tenure track\"]",
+        "groups": [
+          "Faculty and tenure status: With faculty status, on tenure track"
+        ],
+        "available_rows": null,
+        "requested_rows": null
+      }
+    ]
+  }
+]

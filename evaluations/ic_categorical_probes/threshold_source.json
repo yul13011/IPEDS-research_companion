@@ -1,0 +1,10 @@
+{
+  "sql": "select UNITID,DISAB,DISABPCT from IC2024 where UNITID=164739",
+  "rows": [
+    {
+      "UNITID": 164739,
+      "DISAB": 1,
+      "DISABPCT": null
+    }
+  ]
+}

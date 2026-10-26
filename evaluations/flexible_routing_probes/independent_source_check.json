@@ -1,0 +1,16 @@
+[
+  {
+    "case": "numerical",
+    "metric": "applicants",
+    "actual": 57517.0,
+    "expected": 57517,
+    "matches": true
+  },
+  {
+    "case": "mixed",
+    "metric": "admission_rate",
+    "actual": 3.871898742980336,
+    "expected": 3.871898742980336,
+    "matches": true
+  }
+]

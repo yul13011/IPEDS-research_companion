@@ -1,0 +1,140 @@
+test_affiliation_summary_is_per_institution (prototype.tests.test_observations.ObservationTests.test_affiliation_summary_is_per_institution) ... ok
+test_category_definition_and_blocked_followup (prototype.tests.test_observations.ObservationTests.test_category_definition_and_blocked_followup) ... ok
+test_companion_bound_exact_percentage_and_observation_date (prototype.tests.test_observations.ObservationTests.test_companion_bound_exact_percentage_and_observation_date) ... ok
+test_cross_release_cells_and_missing_year_block (prototype.tests.test_observations.ObservationTests.test_cross_release_cells_and_missing_year_block) ... ok
+test_decode_negative_unknown_missing_and_conflicting_codes (prototype.tests.test_observations.ObservationTests.test_decode_negative_unknown_missing_and_conflicting_codes) ... ok
+test_explicit_no_and_award_levels (prototype.tests.test_observations.ObservationTests.test_explicit_no_and_award_levels) ... ok
+test_institution_lists_match_independent_sql (prototype.tests.test_observations.ObservationTests.test_institution_lists_match_independent_sql) ... ok
+test_mixed_values_exports_and_render (prototype.tests.test_observations.ObservationTests.test_mixed_values_exports_and_render) ... 2026-10-22 21:33:27.347 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_three_school_services_and_source_codes (prototype.tests.test_observations.ObservationTests.test_three_school_services_and_source_codes) ... ok
+test_types_roll_back_and_integrity (prototype.tests.test_observations.ObservationTests.test_types_roll_back_and_integrity) ... ok
+test_comparison_and_followup_use_metadata_without_mutating_history (prototype.tests.test_definitions.DefinitionTests.test_comparison_and_followup_use_metadata_without_mutating_history) ... ok
+test_complete_glossary_entry_cannot_be_shortened_to_drop_qualifications (prototype.tests.test_definitions.DefinitionTests.test_complete_glossary_entry_cannot_be_shortened_to_drop_qualifications) ... ok
+test_definitions_are_exact_supplied_source_excerpts (prototype.tests.test_definitions.DefinitionTests.test_definitions_are_exact_supplied_source_excerpts) ... ok
+test_explicit_definition_routes_before_identity_and_statistical_planning (prototype.tests.test_definitions.DefinitionTests.test_explicit_definition_routes_before_identity_and_statistical_planning) ... ok
+test_generic_graduation_rate_does_not_claim_universal_six_year_definition (prototype.tests.test_definitions.DefinitionTests.test_generic_graduation_rate_does_not_claim_universal_six_year_definition) ... ok
+test_instructional_staff_retains_combined_functions_and_faculty_separation (prototype.tests.test_definitions.DefinitionTests.test_instructional_staff_retains_combined_functions_and_faculty_separation) ... ok
+test_model_can_select_only_verbatim_inspected_passages (prototype.tests.test_definitions.DefinitionTests.test_model_can_select_only_verbatim_inspected_passages) ... ok
+test_noncompact_usage_handles_unknown_tokens_and_cost (prototype.tests.test_definitions.DefinitionTests.test_noncompact_usage_handles_unknown_tokens_and_cost) ... 2026-10-22 21:33:47.509 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:33:47.510 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_reviewed_rate_uses_its_actual_formula_and_supporting_definitions (prototype.tests.test_definitions.DefinitionTests.test_reviewed_rate_uses_its_actual_formula_and_supporting_definitions) ... ok
+test_transport_failure_preserves_unknown_cost_and_safe_fallback (prototype.tests.test_definitions.DefinitionTests.test_transport_failure_preserves_unknown_cost_and_safe_fallback) ... ok
+test_ui_keeps_full_source_evidence_under_popover (prototype.tests.test_definitions.DefinitionTests.test_ui_keeps_full_source_evidence_under_popover) ... 2026-10-22 21:34:02.625 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:34:02.625 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_unknown_term_and_mixed_questions_do_not_invent_or_drop_scope (prototype.tests.test_definitions.DefinitionTests.test_unknown_term_and_mixed_questions_do_not_invent_or_drop_scope) ... ok
+test_variable_table_year_scope_and_unavailable_year (prototype.tests.test_definitions.DefinitionTests.test_variable_table_year_scope_and_unavailable_year) ... ok
+test_ambiguous_followup_then_named_selection (prototype.tests.test_documentation.DocumentationTests.test_ambiguous_followup_then_named_selection) ... ok
+test_analysis_followup_preserves_label_and_release (prototype.tests.test_documentation.DocumentationTests.test_analysis_followup_preserves_label_and_release) ... ok
+test_definition_to_calculation_and_discovery (prototype.tests.test_documentation.DocumentationTests.test_definition_to_calculation_and_discovery) ... ok
+test_explicit_topic_overrides_history_and_mixed_request_not_captured (prototype.tests.test_documentation.DocumentationTests.test_explicit_topic_overrides_history_and_mixed_request_not_captured) ... ok
+test_initial_types_route_without_institution_or_statistics (prototype.tests.test_documentation.DocumentationTests.test_initial_types_route_without_institution_or_statistics) ... ok
+test_missing_context_and_unknown_formula_do_not_invent (prototype.tests.test_documentation.DocumentationTests.test_missing_context_and_unknown_formula_do_not_invent) ... ok
+test_multiyear_followup_asks_release_and_accepts_year (prototype.tests.test_documentation.DocumentationTests.test_multiyear_followup_asks_release_and_accepts_year) ... ok
+test_actual_ui_labels_proxy_as_optional_and_keeps_gap_first (prototype.tests.test_coverage_gap.CoverageGapTests.test_actual_ui_labels_proxy_as_optional_and_keeps_gap_first) ... 2026-10-22 21:34:15.132 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:34:15.132 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_gap_is_a_complete_response_without_forced_choices (prototype.tests.test_coverage_gap.CoverageGapTests.test_gap_is_a_complete_response_without_forced_choices) ... ok
+test_invalid_optional_plan_is_never_offered (prototype.tests.test_coverage_gap.CoverageGapTests.test_invalid_optional_plan_is_never_offered) ... ok
+test_one_optional_proxy_preserves_gap_and_runs_only_after_selection (prototype.tests.test_coverage_gap.CoverageGapTests.test_one_optional_proxy_preserves_gap_and_runs_only_after_selection) ... ok
+test_production_planner_dispatch_preserves_local_source_evidence (prototype.tests.test_coverage_gap.CoverageGapTests.test_production_planner_dispatch_preserves_local_source_evidence) ... ok
+test_proxy_cannot_masquerade_as_ordinary_definition_choice (prototype.tests.test_coverage_gap.CoverageGapTests.test_proxy_cannot_masquerade_as_ordinary_definition_choice) ... ok
+test_source_inspection_required_and_incomplete_search_not_absence (prototype.tests.test_coverage_gap.CoverageGapTests.test_source_inspection_required_and_incomplete_search_not_absence) ... ok
+test_unrequested_proxy_submission_gets_repair_feedback_not_execution (prototype.tests.test_coverage_gap.CoverageGapTests.test_unrequested_proxy_submission_gets_repair_feedback_not_execution) ... ok
+test_actual_table_ui_uses_dollars_for_saved_result (prototype.tests.test_units.UnitTests.test_actual_table_ui_uses_dollars_for_saved_result) ... 2026-10-22 21:34:35.876 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:34:35.876 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_real_salary_outlays_averages_tuition_finance_and_exports (prototype.tests.test_units.UnitTests.test_real_salary_outlays_averages_tuition_finance_and_exports) ... ok
+test_scale_uncertainty_conflicts_and_nonmoney (prototype.tests.test_units.UnitTests.test_scale_uncertainty_conflicts_and_nonmoney) ... ok
+test_all_releases_staff_rank_unit_and_scores (prototype.tests.test_shared_units.SharedUnitTests.test_all_releases_staff_rank_unit_and_scores) ... ok
+test_currency_scales_and_prepared_catalog_freshness (prototype.tests.test_shared_units.SharedUnitTests.test_currency_scales_and_prepared_catalog_freshness) ... ok
+test_old_derived_results_need_revalidation_without_changing_values (prototype.tests.test_shared_units.SharedUnitTests.test_old_derived_results_need_revalidation_without_changing_values) ... ok
+test_quantities_are_not_population_or_percentile (prototype.tests.test_shared_units.SharedUnitTests.test_quantities_are_not_population_or_percentile) ... ok
+test_real_smith_reexecution_uses_same_verified_units (prototype.tests.test_shared_units.SharedUnitTests.test_real_smith_reexecution_uses_same_verified_units) ... ok
+test_saved_smith_units_chart_and_audit_preserve_originals (prototype.tests.test_shared_units.SharedUnitTests.test_saved_smith_units_chart_and_audit_preserve_originals) ... ok
+test_smith_all_ranks_total_renders_without_stopiteration (prototype.tests.test_shared_units.SharedUnitTests.test_smith_all_ranks_total_renders_without_stopiteration) ... 2026-10-22 21:34:53.005 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:34:53.005 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_ui_cannot_force_an_unresolved_measurement_axis (prototype.tests.test_shared_units.SharedUnitTests.test_ui_cannot_force_an_unresolved_measurement_axis) ... 2026-10-22 21:35:05.353 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:35:05.354 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_unknown_and_codes_cannot_authorize_arithmetic (prototype.tests.test_shared_units.SharedUnitTests.test_unknown_and_codes_cannot_authorize_arithmetic) ... ok
+test_credit_and_clock_hours_resolve_from_actual_rows (prototype.tests.test_unit_resolution.ResolutionTests.test_credit_and_clock_hours_resolve_from_actual_rows) ... ok
+test_definition_and_section_resolutions (prototype.tests.test_unit_resolution.ResolutionTests.test_definition_and_section_resolutions) ... ok
+test_first_program_length_is_not_a_student_count (prototype.tests.test_unit_resolution.ResolutionTests.test_first_program_length_is_not_a_student_count) ... ok
+test_new_financial_fields_display_currency_and_preserve_values (prototype.tests.test_unit_resolution.ResolutionTests.test_new_financial_fields_display_currency_and_preserve_values) ... ok
+test_previous_unresolved_batch_has_no_unexamined_unknowns (prototype.tests.test_unit_resolution.ResolutionTests.test_previous_unresolved_batch_has_no_unexamined_unknowns) ... ok
+test_relational_direct_result_resolves_program_basis (prototype.tests.test_unit_resolution.ResolutionTests.test_relational_direct_result_resolves_program_basis) ... ok
+test_saved_old_verified_program_count_is_revalidated (prototype.tests.test_unit_resolution.ResolutionTests.test_saved_old_verified_program_count_is_revalidated) ... ok
+test_shorthand_finance_sections_are_exact_source_evidence (prototype.tests.test_unit_resolution.ResolutionTests.test_shorthand_finance_sections_are_exact_source_evidence) ... ok
+test_bare_coverage_period_uses_matching_source_title_only (prototype.tests.test_analysis_clarification.ClarificationTests.test_bare_coverage_period_uses_matching_source_title_only) ... ok
+test_choices_cannot_change_institution_scope (prototype.tests.test_analysis_clarification.ClarificationTests.test_choices_cannot_change_institution_scope) ... ok
+test_confirmed_bundle_finishes_without_reasking_or_double_query (prototype.tests.test_analysis_clarification.ClarificationTests.test_confirmed_bundle_finishes_without_reasking_or_double_query) ... ok
+test_exact_letters_ordinals_and_labels (prototype.tests.test_analysis_clarification.ClarificationTests.test_exact_letters_ordinals_and_labels) ... ok
+test_failed_execution_keeps_choice_for_retry (prototype.tests.test_analysis_clarification.ClarificationTests.test_failed_execution_keeps_choice_for_retry) ... ok
+test_invalid_choice_preserves_pending (prototype.tests.test_analysis_clarification.ClarificationTests.test_invalid_choice_preserves_pending) ... ok
+test_invalid_option_is_not_offered (prototype.tests.test_analysis_clarification.ClarificationTests.test_invalid_option_is_not_offered) ... ok
+test_model_tool_options_are_preflighted (prototype.tests.test_analysis_clarification.ClarificationTests.test_model_tool_options_are_preflighted) ... ok
+test_modified_reply_uses_brief_and_invalidates_old_plan (prototype.tests.test_analysis_clarification.ClarificationTests.test_modified_reply_uses_brief_and_invalidates_old_plan) ... ok
+test_new_topic_discards_pending (prototype.tests.test_analysis_clarification.ClarificationTests.test_new_topic_discards_pending) ... ok
+test_no_partial_publication_if_one_panel_fails (prototype.tests.test_analysis_clarification.ClarificationTests.test_no_partial_publication_if_one_panel_fails) ... ok
+test_offering_options_never_queries_statistical_values (prototype.tests.test_analysis_clarification.ClarificationTests.test_offering_options_never_queries_statistical_values) ... ok
+test_outer_identity_guard_skips_model_for_selection (prototype.tests.test_analysis_clarification.ClarificationTests.test_outer_identity_guard_skips_model_for_selection) ... ok
+test_selected_plan_runs_without_llm_or_replanning (prototype.tests.test_analysis_clarification.ClarificationTests.test_selected_plan_runs_without_llm_or_replanning) ... ok
+test_separate_populations_are_executed_as_separate_panels (prototype.tests.test_analysis_clarification.ClarificationTests.test_separate_populations_are_executed_as_separate_panels) ... ok
+test_ui_buttons_submit_saved_choice_and_clear_removes_brief (prototype.tests.test_analysis_clarification.ClarificationTests.test_ui_buttons_submit_saved_choice_and_clear_removes_brief) ... 2026-10-22 21:35:32.716 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:35:33.705 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_wide_staff_rank_count_units_and_disjoint_sum (prototype.tests.test_analysis_clarification.ClarificationTests.test_wide_staff_rank_count_units_and_disjoint_sum) ... ok
+test_submission_completion_and_controls_keep_one_container_and_request (prototype.tests.test_transcript_scroll.TranscriptScrollTests.test_submission_completion_and_controls_keep_one_container_and_request) ... 2026-10-22 21:35:47.112 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:35:47.112 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:35:47.112 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_cutoff_table_and_explicit_chart_preserve_all_categories (prototype.tests.test_chart_density.ChartDensityTests.test_cutoff_table_and_explicit_chart_preserve_all_categories) ... ok
+test_missing_categories_are_retained_and_units_are_separate (prototype.tests.test_chart_density.ChartDensityTests.test_missing_categories_are_retained_and_units_are_separate) ... ok
+test_years_and_cluster_cells_are_not_extra_categories (prototype.tests.test_chart_density.ChartDensityTests.test_years_and_cluster_cells_are_not_extra_categories) ... ok
+test_missing_category_and_long_label_exports (prototype.tests.test_chart_workflow.ChartWorkflowTests.test_missing_category_and_long_label_exports) ... ok
+test_whole_salary_workflow_ui_and_exports (prototype.tests.test_chart_workflow.ChartWorkflowTests.test_whole_salary_workflow_ui_and_exports) ... 2026-10-22 21:36:32.763 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:36:45.644 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:36:45.645 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:38:12.540 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:38:12.540 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:38:12.540 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_all_values_match_independent_source_rows (prototype.tests.test_faculty_examples.FacultyExampleTests.test_all_values_match_independent_source_rows) ... ok
+test_annual_named_templates_keep_scope_bounds (prototype.tests.test_faculty_examples.FacultyExampleTests.test_annual_named_templates_keep_scope_bounds) ... ok
+test_click_each_example_from_both_surfaces_without_chat_planning (prototype.tests.test_faculty_examples.FacultyExampleTests.test_click_each_example_from_both_surfaces_without_chat_planning) ... 2026-10-22 21:39:47.085 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:41:05.957 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_salary_bars_have_clear_gaps_and_match_legend_order (prototype.tests.test_faculty_examples.FacultyExampleTests.test_salary_bars_have_clear_gaps_and_match_legend_order) ... ok
+test_style_colors_match_salary_chart_and_recolor_actual_bars (prototype.tests.test_faculty_examples.FacultyExampleTests.test_style_colors_match_salary_chart_and_recolor_actual_bars) ... 2026-10-22 21:42:58.213 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:43:34.947 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:43:34.948 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_alias_reference_normalization_retains_exact_field (prototype.tests.test_populations.PopulationTests.test_alias_reference_normalization_retains_exact_field) ... ok
+test_annual_trend_source_binding_and_intent (prototype.tests.test_populations.PopulationTests.test_annual_trend_source_binding_and_intent) ... ok
+test_cannot_sum_institutional_rates (prototype.tests.test_populations.PopulationTests.test_cannot_sum_institutional_rates) ... ok
+test_distance_participation_matches_nces_and_discloses_derivation (prototype.tests.test_populations.PopulationTests.test_distance_participation_matches_nces_and_discloses_derivation) ... ok
+test_distance_partition_zeros_require_count_identity (prototype.tests.test_populations.PopulationTests.test_distance_partition_zeros_require_count_identity) ... ok
+test_entering_cohort_is_bound_from_source_evidence (prototype.tests.test_populations.PopulationTests.test_entering_cohort_is_bound_from_source_evidence) ... ok
+test_known_discrepancy_blocks_method_not_named_queries (prototype.tests.test_populations.PopulationTests.test_known_discrepancy_blocks_method_not_named_queries) ... ok
+test_named_scope_is_not_silently_dropped (prototype.tests.test_populations.PopulationTests.test_named_scope_is_not_silently_dropped) ... ok
+test_national_count_and_pooled_rates_match_nces (prototype.tests.test_populations.PopulationTests.test_national_count_and_pooled_rates_match_nces) ... ok
+test_outcome_measures_eight_year_pooled_completion (prototype.tests.test_populations.PopulationTests.test_outcome_measures_eight_year_pooled_completion) ... ok
+test_pooled_missing_pair_excluded_from_both_counts (prototype.tests.test_populations.PopulationTests.test_pooled_missing_pair_excluded_from_both_counts) ... ok
+test_provider_route_and_exports (prototype.tests.test_populations.PopulationTests.test_provider_route_and_exports) ... ok
+test_scope_and_raw_output_substitution_rejected (prototype.tests.test_populations.PopulationTests.test_scope_and_raw_output_substitution_rejected) ... ok
+test_sector_sums_match_independent_sql_and_reconcile_national (prototype.tests.test_populations.PopulationTests.test_sector_sums_match_independent_sql_and_reconcile_national) ... ok
+test_unweighted_tuition_and_revenues (prototype.tests.test_populations.PopulationTests.test_unweighted_tuition_and_revenues) ... ok
+test_discovery_skips_analytical_and_identity_planning (prototype.tests.test_discovery.DiscoveryTests.test_discovery_skips_analytical_and_identity_planning) ... ok
+test_exact_survey_groups_and_different_periods (prototype.tests.test_discovery.DiscoveryTests.test_exact_survey_groups_and_different_periods) ... ok
+test_examples_retrieved_for_each_selected_feature (prototype.tests.test_discovery.DiscoveryTests.test_examples_retrieved_for_each_selected_feature) ... ok
+test_generic_college_word_does_not_dilute_specific_topic (prototype.tests.test_discovery.DiscoveryTests.test_generic_college_word_does_not_dilute_specific_topic) ... ok
+test_graduation_annual_versions_and_cohort_coverage (prototype.tests.test_discovery.DiscoveryTests.test_graduation_annual_versions_and_cohort_coverage) ... ok
+test_metadata_and_schema_grouping_is_conservative (prototype.tests.test_discovery.DiscoveryTests.test_metadata_and_schema_grouping_is_conservative) ... ok
+test_readable_answer_with_optional_sources_in_chat (prototype.tests.test_discovery.DiscoveryTests.test_readable_answer_with_optional_sources_in_chat) ... 2026-10-22 21:45:23.282 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 21:45:39.855 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_real_topics_and_latency (prototype.tests.test_discovery.DiscoveryTests.test_real_topics_and_latency) ... 

@@ -1,0 +1,10 @@
+test_all_values_match_independent_source_rows (prototype.tests.test_faculty_examples.FacultyExampleTests.test_all_values_match_independent_source_rows) ... ok
+test_annual_named_templates_keep_scope_bounds (prototype.tests.test_faculty_examples.FacultyExampleTests.test_annual_named_templates_keep_scope_bounds) ... ok
+test_click_each_example_from_both_surfaces_without_chat_planning (prototype.tests.test_faculty_examples.FacultyExampleTests.test_click_each_example_from_both_surfaces_without_chat_planning) ... 2026-10-21 14:07:22.375 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 14:07:29.899 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 25.194s
+
+OK

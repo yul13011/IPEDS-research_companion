@@ -1,0 +1,15 @@
+test_actual_ui_labels_proxy_as_optional_and_keeps_gap_first (prototype.tests.test_coverage_gap.CoverageGapTests.test_actual_ui_labels_proxy_as_optional_and_keeps_gap_first) ... 2026-10-21 22:33:21.397 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:33:21.397 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_gap_is_a_complete_response_without_forced_choices (prototype.tests.test_coverage_gap.CoverageGapTests.test_gap_is_a_complete_response_without_forced_choices) ... ok
+test_invalid_optional_plan_is_never_offered (prototype.tests.test_coverage_gap.CoverageGapTests.test_invalid_optional_plan_is_never_offered) ... ok
+test_one_optional_proxy_preserves_gap_and_runs_only_after_selection (prototype.tests.test_coverage_gap.CoverageGapTests.test_one_optional_proxy_preserves_gap_and_runs_only_after_selection) ... ok
+test_production_planner_dispatch_preserves_local_source_evidence (prototype.tests.test_coverage_gap.CoverageGapTests.test_production_planner_dispatch_preserves_local_source_evidence) ... ok
+test_proxy_cannot_masquerade_as_ordinary_definition_choice (prototype.tests.test_coverage_gap.CoverageGapTests.test_proxy_cannot_masquerade_as_ordinary_definition_choice) ... ok
+test_source_inspection_required_and_incomplete_search_not_absence (prototype.tests.test_coverage_gap.CoverageGapTests.test_source_inspection_required_and_incomplete_search_not_absence) ... ok
+test_unrequested_proxy_submission_gets_repair_feedback_not_execution (prototype.tests.test_coverage_gap.CoverageGapTests.test_unrequested_proxy_submission_gets_repair_feedback_not_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 12.644s
+
+OK

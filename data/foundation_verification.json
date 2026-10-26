@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "annual_copies": [
+    {
+      "release": "IPEDS_2015-16_Final",
+      "tables": 52,
+      "rows": 3299056,
+      "all_values_verified": true,
+      "output_sha256": "e12ccab680b3ba0f49e47a96029cafc118392686e6cceefe6d3bb9bff2ee7b25",
+      "independent_row_counts_and_catalog_schema_match": true
+    },
+    {
+      "release": "IPEDS_2016-17_Final",
+      "tables": 55,
+      "rows": 3386220,
+      "all_values_verified": true,
+      "output_sha256": "4bda9f245680f79c74372a9b13b56728f1b075250e3bc6638f1b0a514c208241",
+      "independent_row_counts_and_catalog_schema_match": true
+    },
+    {
+      "release": "IPEDS_2017-18_Final",
+      "tables": 54,
+      "rows": 3333620,
+      "all_values_verified": true,
+      "output_sha256": "58a64ae1f2ee91a0d95d1f1b9b69279c27d22f5b9a1ca2173c4ed7c42a57fe1f",
+      "independent_row_counts_and_catalog_schema_match": true
+    },
+    {
+      "release": "IPEDS_2018-19_Final",
+      "tables": 55,
+      "rows": 3279594,
+      "all_values_verified": true,
+      "output_sha256": "447486102b8f6d82bc1e0290fae4afda95769a9a48b1c31e71755d84af550b99",
+      "independent_row_counts_and_catalog_schema_match": true
+    },
+    {
+      "release": "IPEDS_2019-20_Final",
+      "tables": 55,
+      "rows": 3140338,
+      "all_values_verified": true,
+      "output_sha256": "30a73bbc50ec2ae48f717f158e97447851eb2b0bc5350d085e34d3a8889ad876",
+      "independent_row_counts_and_catalog_schema_match": true
+    },
+    {
+      "release": "IPEDS_2020-21_Final",
+      "tables": 56,
+      "rows": 3394088,
+      "all_values_verified": true,
+      "output_sha256": "d680d4858ec3536e6eef6022a2b0bb03c210efac3cf1fd039976af57ac725af2",
+      "independent_row_counts_and_catalog_schema_match": true
+    },
+    {
+      "release": "IPEDS_2021-22_Final",
+      "tables": 56,
+      "rows": 3314879,
+      "all_values_verified": true,
+      "output_sha256": "007100904dcddd8b5c1efa7550197c3cf342a998797ac49a16500e86f80704fd",
+      "independent_row_counts_and_catalog_schema_match": true
+    },
+    {
+      "release": "IPEDS_2022-23_Final",
+      "tables": 58,
+      "rows": 3474592,
+      "all_values_verified": true,
+      "output_sha256": "e262217eaf1f8d08e05ac2d64a3a7fa7806f9dd7d6b70df6ad53aae3b7c478f6",
+      "independent_row_counts_and_catalog_schema_match": true
+    },
+    {
+      "release": "IPEDS_2023-24_Final",
+      "tables": 57,
+      "rows": 3363672,
+      "all_values_verified": true,
+      "output_sha256": "948cda65a9fbe9845c6c737536070bafc3c9f18e934d5c333c60e5411856336d",
+      "independent_row_counts_and_catalog_schema_match": true
+    },
+    {
+      "release": "IPEDS_2024-25_Provisional",
+      "tables": 56,
+      "rows": 3498252,
+      "all_values_verified": true,
+      "output_sha256": "6671016bcc5039f75c51e9aabe326ed9be16f79c01155e98612672c22a5125ff",
+      "independent_row_counts_and_catalog_schema_match": true
+    }
+  ],
+  "total_tables": 554,
+  "total_rows": 33484311,
+  "known_2023_documentation_placement_warnings": 344,
+  "scope": "Faithful conversion and comprehensive searchable metadata only. No measure mappings or analytical benchmark questions tested."
+}

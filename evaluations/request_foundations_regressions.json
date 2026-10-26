@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-26",
+  "modules": [
+    "prototype.tests.test_request_tasks",
+    "prototype.tests.test_memory",
+    "prototype.tests.test_intent_router",
+    "prototype.tests.test_data_guide",
+    "prototype.tests.test_model_policy",
+    "prototype.tests.test_intent_checks",
+    "prototype.tests.test_analysis_clarification",
+    "prototype.tests.test_documentation",
+    "prototype.tests.test_discovery",
+    "prototype.tests.test_discovery_interpretation",
+    "prototype.tests.test_discovery_narrative",
+    "prototype.tests.test_catalog_planner",
+    "prototype.tests.test_query_engine",
+    "prototype.tests.test_institution_confirmation",
+    "prototype.tests.test_coverage_gap"
+  ],
+  "broad_run": {
+    "tests": 179,
+    "failures": 2,
+    "notes": [
+      "Streamlit source inspection read a test function while its file was being reorganized; rerun on stable files passed.",
+      "A discovery fixture assumed Sonnet pricing while the UI default is Automatic; the fixture now selects Sonnet explicitly."
+    ]
+  },
+  "affected_module_rerun": {
+    "modules": [
+      "test_intent_checks",
+      "test_data_guide",
+      "test_discovery_interpretation"
+    ],
+    "tests": 28,
+    "failures": 0,
+    "seconds": 18.847
+  },
+  "new_functionality": "Shared source coverage, working-analysis state, task tracking, source-backed beginner guide",
+  "live_report": "request_foundations_live.json",
+  "limits": "Small acceptance suite, not a production reliability estimate.",
+  "final_live_acceptance": {
+    "cases": 11,
+    "passed": 11,
+    "estimated_api_usd": 0.26177852
+  },
+  "syntax_checked_modules": 14
+}

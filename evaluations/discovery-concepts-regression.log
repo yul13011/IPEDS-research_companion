@@ -1,0 +1,22 @@
+test_discovery_skips_analytical_and_identity_planning (prototype.tests.test_discovery.DiscoveryTests.test_discovery_skips_analytical_and_identity_planning) ... ok
+test_exact_survey_groups_and_different_periods (prototype.tests.test_discovery.DiscoveryTests.test_exact_survey_groups_and_different_periods) ... ok
+test_examples_retrieved_for_each_selected_feature (prototype.tests.test_discovery.DiscoveryTests.test_examples_retrieved_for_each_selected_feature) ... FAIL
+test_graduation_annual_versions_and_cohort_coverage (prototype.tests.test_discovery.DiscoveryTests.test_graduation_annual_versions_and_cohort_coverage) ... ok
+test_metadata_and_schema_grouping_is_conservative (prototype.tests.test_discovery.DiscoveryTests.test_metadata_and_schema_grouping_is_conservative) ... ok
+test_readable_answer_with_optional_sources_in_chat (prototype.tests.test_discovery.DiscoveryTests.test_readable_answer_with_optional_sources_in_chat) ... 2026-10-20 22:37:19.920 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_real_topics_and_latency (prototype.tests.test_discovery.DiscoveryTests.test_real_topics_and_latency) ... ok
+test_year_scope_unknown_topic_and_empty_topic (prototype.tests.test_discovery.DiscoveryTests.test_year_scope_unknown_topic_and_empty_topic) ... ok
+
+======================================================================
+FAIL: test_examples_retrieved_for_each_selected_feature (prototype.tests.test_discovery.DiscoveryTests.test_examples_retrieved_for_each_selected_feature)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\liyuj\OneDrive\2026\IPEDS Project\agent-redesign\prototype\tests\test_discovery.py", line 75, in test_examples_retrieved_for_each_selected_feature
+    self.assertNotRegex(item['title'],r'\b(?:19|20)\d{2}\b')
+AssertionError: Regex matched: '2015' matches '\\b(?:19|20)\\d{2}\\b' in 'Academic Libraries, 2015-16'
+
+----------------------------------------------------------------------
+Ran 8 tests in 17.140s
+
+FAILED (failures=1)

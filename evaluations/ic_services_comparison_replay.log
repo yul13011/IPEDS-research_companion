@@ -1,0 +1,1 @@
+{"intent": "catalog_plan", "message": "The query could not be validated: Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs.", "rows": [], "elapsed_seconds": 48.790014599915594}

@@ -1,0 +1,487 @@
+{
+  "release_id": "IPEDS_2024-25_Provisional",
+  "table_name": "EF2024A",
+  "column_name": "EFASIAT",
+  "physical_type": "INTEGER",
+  "null_count": 0,
+  "definition_status": "exact_definition",
+  "definition_ids": [
+    136408
+  ],
+  "candidate_definition_ids": [],
+  "role": "continuous_field",
+  "unit_hints": [
+    {
+      "hint": "not_inferred",
+      "record_id": 136408,
+      "status": "not_validated_unit"
+    }
+  ],
+  "imputation_links": [
+    {
+      "locations": [],
+      "record_id": 136408,
+      "status": "not_in_supplied_schema",
+      "variable": "XEFASIAT"
+    }
+  ],
+  "issue_ids": [],
+  "semantic_review": "requires_semantic_review",
+  "definitions": [
+    {
+      "record_id": 136408,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table_name": "EF2024A",
+      "variable_name": "EFASIAT",
+      "variable_number": "24438",
+      "title": "Asian total",
+      "long_description": "Asian men and women enrolled for credit during the fall. Asian - A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian Subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution^s official fall reporting date or October 15.",
+      "data_type": "N",
+      "format": "Cont",
+      "field_width": "6",
+      "multi_record": "1",
+      "imputation_variable": "XEFASIAT",
+      "variable_source": "IPEDS, Spring 2025, Fall Enrollment component",
+      "file_title": "Race/ethnicity, gender, attendance status, and level of student: Fall 2024",
+      "section_title": "Enrollment by race/ethnicity and gender",
+      "evidence": {
+        "record_id": 136408,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "variable_definition",
+        "table_name": "EF2024A",
+        "variable_name": "EFASIAT",
+        "title": "Asian total",
+        "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\ntablenumber: 21\ntablename: EF2024A\ntabletitle: Race/ethnicity, gender, attendance status, and level of student: Fall 2024\nvarnumber: 24438\nvarorder: 19\nvarname: EFASIAT\nimputationvar: XEFASIAT\nvartitle: Asian total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 7\nsectionnumber: 1\nlongdescription: Asian men and women enrolled for credit during the fall. Asian - A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian Subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. CREDIT - Recognition of attendance or performance in an instructional activity (course or program) that can be applied by a recipient toward the requirements for a degree, diploma, certificate, or other formal award. NOTE: Enrollment reported is of the institution^s official fall reporting date or October 15.\nvarsource: IPEDS, Spring 2025, Fall Enrollment component\nfiletitle: Race/ethnicity, gender, attendance status, and level of student: Fall 2024\nsectiontitle: Enrollment by race/ethnicity and gender",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "varTable24",
+        "source_row": 537
+      }
+    }
+  ],
+  "candidate_definitions": [],
+  "warnings": [],
+  "null_policy": "Preserve SQL NULL; no zero substitution. Do not infer not-collected, suppressed, not-applicable or imputed solely from a null or numeric sign.",
+  "unit_policy": "Unit hints are retrieval aids only. Read source definitions for units, scale, denominator and precision; decimal TEXT requires explicit numeric conversion.",
+  "approval_status": "evidence_only_not_an_executable_measure",
+  "categories": {
+    "total": 0,
+    "offset": 0,
+    "limit": 100,
+    "next_offset": null,
+    "codes": [],
+    "policy": "Source codes are preserved as strings. Missing/not-applicable labels are field-specific; unknown race is not a numeric missing sentinel."
+  },
+  "table": {
+    "release_id": "IPEDS_2024-25_Provisional",
+    "table_name": "EF2024A",
+    "family": "EF{YEAR}A",
+    "year": 2024,
+    "kind": "institution_data",
+    "row_count": 113833,
+    "table_document_ids": [
+      135834
+    ],
+    "period_evidence": [
+      {
+        "record_id": 135834,
+        "release_date": null,
+        "release_status": "Provisional",
+        "year_coverage": "Fall 2024"
+      }
+    ],
+    "time_hints": [
+      "fall_snapshot"
+    ],
+    "population_evidence": [
+      {
+        "description": "This table contains the number of students enrolled in the fall, by race/ethnicity, gender, attendance (full- or part-time) status and level of student. Institutions with traditional academic year calendar systems (semester, quarter, trimester or 4-1-4) report their enrollment as of October 15 or the official fall reporting date of the institution. Institutions with calendar systems that differ by program or allow continuous enrollment report students that are enrolled at any time between August 1 and October 31. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the attendance status and level of student (EFALEVEL). Each record will contain the total enrollment, enrollment for men and women, and the total enrollment and enrollment for men and women for all nine race/ethnicity categories. Beginning with fall 2022, variables containing information on students that do not fit the IPEDS binary gender (men/women) are available for total undergraduate and graduate levels. In fall 2023, if the reported value for another gender would be nonzero but less than 5 students, the institution was instructed to not report the value.These data are not disaggregated by the detailed undergraduate categories or by attendance status.",
+        "record_id": 135834,
+        "title": "Race/ethnicity, gender, attendance status, and level of student: Fall 2024"
+      }
+    ],
+    "dimension_fields": [
+      "EFALEVEL",
+      "LINE",
+      "LSTUDY",
+      "SECTION"
+    ],
+    "profile": {
+      "candidate_key": [
+        "UNITID",
+        "EFALEVEL"
+      ],
+      "distinct_institutions": 5842,
+      "expected_rows_match": true,
+      "key_status": "observed_unique_candidate_review_required",
+      "null_institution_ids": 0,
+      "query_count": 2,
+      "rows": 113833,
+      "status": "profiled"
+    },
+    "issues": [
+      1219
+    ],
+    "readiness": "evidence_linked_review_required",
+    "source_definitions": [
+      {
+        "record_id": 135834,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "table_definition",
+        "table_name": "EF2024A",
+        "variable_name": "",
+        "title": "Race/ethnicity, gender, attendance status, and level of student: Fall 2024",
+        "body": "surveyorder: 20\nsurveynumber: 2\nsurvey: Fall Enrollment\nyearcoverage: Fall 2024\ntablename: EF2024A\ntablenumber: 21\ntabletitle: Race/ethnicity, gender, attendance status, and level of student: Fall 2024\ndescription: This table contains the number of students enrolled in the fall, by race/ethnicity, gender, attendance (full- or part-time) status and level of student. Institutions with traditional academic year calendar systems (semester, quarter, trimester or 4-1-4) report their enrollment as of October 15 or the official fall reporting date of the institution. Institutions with calendar systems that differ by program or allow continuous enrollment report students that are enrolled at any time between August 1 and October 31. This table has multiple records per institution. Records are uniquely defined by the variables IPEDS ID (UNITID), and the attendance status and level of student (EFALEVEL). Each record will contain the total enrollment, enrollment for men and women, and the total enrollment and enrollment for men and women for all nine race/ethnicity categories. Beginning with fall 2022, variables containing information on students that do not fit the IPEDS binary gender (men/women) are available for total undergraduate and graduate levels. In fall 2023, if the reported value for another gender would be nonzero but less than 5 students, the institution was instructed to not report the value.These data are not disaggregated by the detailed undergraduate categories or by attendance status.\nrelease: Provisional\nrelease_date: January 2026",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "tables24",
+        "source_row": 15
+      }
+    ],
+    "fields": [
+      {
+        "column_name": "EF2MORM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EF2MORT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EF2MORW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFAIANM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFAIANT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFAIANW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFALEVEL",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "coded_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFASIAM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFASIAT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFASIAW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFBKAAM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFBKAAT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFBKAAW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFGNDRAN",
+        "physical_type": "INTEGER",
+        "null_count": 110271,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFGNDRKN",
+        "physical_type": "INTEGER",
+        "null_count": 102457,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFGNDRUA",
+        "physical_type": "INTEGER",
+        "null_count": 102457,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFGNDRUN",
+        "physical_type": "INTEGER",
+        "null_count": 100373,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFHISPM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFHISPT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFHISPW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFNHPIM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFNHPIT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFNHPIW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFNRALM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFNRALT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFNRALW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFTOTLM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFTOTLT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFTOTLW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFUNKNM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFUNKNT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFUNKNW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFWHITM",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFWHITT",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "EFWHITW",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "continuous_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "LINE",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "coded_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "LSTUDY",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "coded_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "SECTION",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "exact_definition",
+        "role": "coded_field",
+        "semantic_review": "requires_semantic_review"
+      },
+      {
+        "column_name": "UNITID",
+        "physical_type": "INTEGER",
+        "null_count": 0,
+        "definition_status": "shared_identifier",
+        "role": "institution_identifier",
+        "semantic_review": "identifier_only"
+      }
+    ],
+    "institution_relationships": [
+      {
+        "release_id": "IPEDS_2024-25_Provisional",
+        "from_table": "EF2024A",
+        "to_table": "HD2024",
+        "join_fields": [
+          "UNITID"
+        ],
+        "cardinality": "many_to_one",
+        "orphan_institutions": 0,
+        "status": "validated_institution_decoration",
+        "rule": "Same-release LEFT JOIN for institution attributes only. Preserve all source rows; do not infer aggregation, branch consolidation or fact-to-fact joins."
+      }
+    ],
+    "warnings": [
+      {
+        "issue_id": 1219,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "issue_type": "physical_column_not_in_dictionary",
+        "severity": "informational",
+        "source_record_id": null,
+        "table_name": "EF2024A",
+        "variable_name": "UNITID",
+        "description": "Physical column lacks a variable entry at this table location. Shared identifiers and helper fields may legitimately be omitted.",
+        "candidate_locations_json": "[]",
+        "status": "observed_not_corrected"
+      }
+    ],
+    "period_policy": "Use source year_coverage plus variable-specific definitions. Release year is not necessarily observation year. Cohort and multi-period columns require explicit binding.",
+    "population_policy": "Use table and field definitions plus coded row selectors. Category totals/subtotals may overlap; never sum all rows by default.",
+    "aggregation_policy": "No universal additive/ratio/average rule is approved by catalog membership or observed row uniqueness."
+  }
+}

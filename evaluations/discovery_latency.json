@@ -1,0 +1,30 @@
+{
+  "scope": "Local metadata discovery; no model or statistical queries, excludes browser rendering. Single run per topic.",
+  "cases": [
+    {
+      "topic": "faculty",
+      "answer_ready_seconds": 0.4853338000830263,
+      "model_calls": 0
+    },
+    {
+      "topic": "enrollment",
+      "answer_ready_seconds": 0.36322579998522997,
+      "model_calls": 0
+    },
+    {
+      "topic": "financial aid",
+      "answer_ready_seconds": 0.970105400076136,
+      "model_calls": 0
+    },
+    {
+      "topic": "institutional finances",
+      "answer_ready_seconds": 0.6394259000662714,
+      "model_calls": 0
+    },
+    {
+      "topic": "graduation rates",
+      "answer_ready_seconds": 0.5645772999851033,
+      "model_calls": 0
+    }
+  ]
+}

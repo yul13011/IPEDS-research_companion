@@ -1,0 +1,683 @@
+{
+  "model": "claude-sonnet-5-5",
+  "scope": "Live initial intent interpretation only, with chart patches applied locally. Analytical/discovery/definition executors tested separately. Not a broad accuracy certification.",
+  "passed": 13,
+  "total": 13,
+  "estimated_api_usd": 0.08165680000000003,
+  "cases": [
+    {
+      "case": "greeting",
+      "question": "Hi",
+      "decision": {
+        "route": "conversation",
+        "relationship": "new",
+        "question": "Hi",
+        "message": "Hello! I can help you explore institutional data: find what data is available, define terms, look up numbers and trends, compare schools, and adjust charts. What would you like to look at?",
+        "institution_mentions": [],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 314,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.6548611000180244,
+        "estimated_api_usd": 0.0046776000000000005,
+        "stage": "initial intent interpretation",
+        "context_seconds": 4.135134799988009,
+        "client_setup_seconds": 0.12246450001839548,
+        "provider_seconds": 2.5324063000734895
+      },
+      "passed": true,
+      "wall_seconds": 12.734
+    },
+    {
+      "case": "thanks",
+      "question": "Thanks, that helps!",
+      "decision": {
+        "route": "conversation",
+        "relationship": "new",
+        "question": "Thanks, that helps!",
+        "message": "You're welcome! Let me know if you'd like to look at other institutions or measures, or adjust the chart.",
+        "institution_mentions": [],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 1927,
+        "output_tokens": 300,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 3.593408500077203,
+        "estimated_api_usd": 0.007103600000000001,
+        "stage": "initial intent interpretation",
+        "context_seconds": 0.04503489995840937,
+        "client_setup_seconds": 2.789997961372137e-05,
+        "provider_seconds": 3.593393300077878
+      },
+      "passed": true,
+      "wall_seconds": 3.639
+    },
+    {
+      "case": "discovery",
+      "question": "What information do you have on faculty?",
+      "decision": {
+        "route": "discovery",
+        "relationship": "new",
+        "question": "What data do you have on faculty?",
+        "message": "",
+        "institution_mentions": [],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 651,
+        "output_tokens": 267,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 9.55440310004633,
+        "estimated_api_usd": 0.004221600000000001,
+        "stage": "initial intent interpretation",
+        "context_seconds": 3.360002301633358e-05,
+        "client_setup_seconds": 2.889998722821474e-05,
+        "provider_seconds": 9.554382900008932
+      },
+      "passed": true,
+      "wall_seconds": 9.554
+    },
+    {
+      "case": "definition",
+      "question": "What does Pell mean?",
+      "decision": {
+        "route": "definition",
+        "relationship": "new",
+        "question": "What does Pell mean?",
+        "message": "",
+        "institution_mentions": [],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [],
+        "documentation": {
+          "kind": "meaning",
+          "terms": [
+            "Pell"
+          ],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 649,
+        "output_tokens": 270,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.150791499996558,
+        "estimated_api_usd": 0.004247600000000001,
+        "stage": "initial intent interpretation",
+        "context_seconds": 2.3999949917197227e-05,
+        "client_setup_seconds": 2.1799933165311813e-05,
+        "provider_seconds": 2.1507836000528187
+      },
+      "passed": true,
+      "wall_seconds": 2.151
+    },
+    {
+      "case": "numerical",
+      "question": "Show Yale's admission rate for the past ten years ending in fall 2024",
+      "decision": {
+        "route": "numerical",
+        "relationship": "new",
+        "question": "Show Yale's admission rate for 2015 through 2024",
+        "message": "",
+        "institution_mentions": [
+          "Yale"
+        ],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 665,
+        "output_tokens": 280,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.200446499977261,
+        "estimated_api_usd": 0.0043796,
+        "stage": "initial intent interpretation",
+        "context_seconds": 2.6700086891651154e-05,
+        "client_setup_seconds": 2.1099927835166454e-05,
+        "provider_seconds": 2.2004359000129625
+      },
+      "passed": true,
+      "wall_seconds": 2.201
+    },
+    {
+      "case": "categorical",
+      "question": "Which schools in Massachusetts offer distance education in fall 2024?",
+      "decision": {
+        "route": "categorical",
+        "relationship": "new",
+        "question": "Which schools in Massachusetts offer distance education in fall 2024?",
+        "message": "",
+        "institution_mentions": [],
+        "referenced_turns": [],
+        "target_result_id": "",
+        "chart_edits": [],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 664,
+        "output_tokens": 280,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 9.198830100009218,
+        "estimated_api_usd": 0.004377600000000001,
+        "stage": "initial intent interpretation",
+        "context_seconds": 2.920010592788458e-05,
+        "client_setup_seconds": 2.080004196614027e-05,
+        "provider_seconds": 9.19881820003502
+      },
+      "passed": true,
+      "wall_seconds": 9.199
+    },
+    {
+      "case": "axis_owner",
+      "question": "reset x-axis range to 0-10",
+      "decision": {
+        "route": "chart_edit",
+        "relationship": "followup",
+        "question": "Set the X-axis range to 0-10 on the Ivy League admission rates chart.",
+        "message": "",
+        "institution_mentions": [],
+        "referenced_turns": [
+          1
+        ],
+        "target_result_id": "1c32e0aecdadf498",
+        "chart_edits": [
+          {
+            "setting": "x_min",
+            "value": 0,
+            "series": ""
+          },
+          {
+            "setting": "x_max",
+            "value": 10,
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 1930,
+        "output_tokens": 338,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.3295336000155658,
+        "estimated_api_usd": 0.007489600000000001,
+        "stage": "initial intent interpretation",
+        "context_seconds": 0.012509800028055906,
+        "client_setup_seconds": 1.850002445280552e-05,
+        "provider_seconds": 2.3295226999325678
+      },
+      "passed": true,
+      "same_result": true,
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide \u00b7 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": 0,
+        "y_max": 10,
+        "sort": "auto",
+        "color": null
+      },
+      "wall_seconds": 2.729
+    },
+    {
+      "case": "axis_paraphrase",
+      "question": "Could you zoom the horizontal percentage scale to between zero and ten?",
+      "decision": {
+        "route": "chart_edit",
+        "relationship": "followup",
+        "question": "Set the horizontal percentage axis range to 0-10 on the Ivy League admission rates chart.",
+        "message": "",
+        "institution_mentions": [],
+        "referenced_turns": [
+          1
+        ],
+        "target_result_id": "1c32e0aecdadf498",
+        "chart_edits": [
+          {
+            "setting": "x_min",
+            "value": 0,
+            "series": ""
+          },
+          {
+            "setting": "x_max",
+            "value": 10,
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 1942,
+        "output_tokens": 343,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.2525519999908283,
+        "estimated_api_usd": 0.0075636,
+        "stage": "initial intent interpretation",
+        "context_seconds": 0.011540499981492758,
+        "client_setup_seconds": 2.420006785541773e-05,
+        "provider_seconds": 2.252535599982366
+      },
+      "passed": true,
+      "same_result": true,
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide \u00b7 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": 0,
+        "y_max": 10,
+        "sort": "auto",
+        "color": null
+      },
+      "wall_seconds": 2.444
+    },
+    {
+      "case": "compound",
+      "question": "Make Harvard red, put the legend at the bottom, and set the font size to 18.",
+      "decision": {
+        "route": "chart_edit",
+        "relationship": "followup",
+        "question": "Make Harvard red, put the legend at the bottom, and set the font size to 18.",
+        "message": "",
+        "institution_mentions": [],
+        "referenced_turns": [
+          1
+        ],
+        "target_result_id": "1c32e0aecdadf498",
+        "chart_edits": [
+          {
+            "setting": "series_color",
+            "value": "red",
+            "series": "Harvard University"
+          },
+          {
+            "setting": "legend",
+            "value": "bottom",
+            "series": ""
+          },
+          {
+            "setting": "font_size",
+            "value": 18,
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 1945,
+        "output_tokens": 363,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.751209200010635,
+        "estimated_api_usd": 0.007769600000000001,
+        "stage": "initial intent interpretation",
+        "context_seconds": 0.011005499982275069,
+        "client_setup_seconds": 1.6200006939470768e-05,
+        "provider_seconds": 2.7512010000646114
+      },
+      "passed": true,
+      "same_result": true,
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 18,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "bottom",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {
+          "Harvard University": "red"
+        },
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide \u00b7 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      },
+      "wall_seconds": 3.126
+    },
+    {
+      "case": "quoted_title",
+      "question": "Set the title to 'Admissions, and show table'",
+      "decision": {
+        "route": "chart_edit",
+        "relationship": "followup",
+        "question": "Set the title to 'Admissions, and show table'",
+        "message": "",
+        "institution_mentions": [],
+        "referenced_turns": [
+          1
+        ],
+        "target_result_id": "1c32e0aecdadf498",
+        "chart_edits": [
+          {
+            "setting": "title",
+            "value": "Admissions, and show table",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 1934,
+        "output_tokens": 375,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.565301000024192,
+        "estimated_api_usd": 0.0078676,
+        "stage": "initial intent interpretation",
+        "context_seconds": 0.008409100002609193,
+        "client_setup_seconds": 1.6000005416572094e-05,
+        "provider_seconds": 2.5652996000135317
+      },
+      "passed": true,
+      "same_result": true,
+      "presentation": {
+        "subtitle": null,
+        "footnote": "",
+        "font": "Arial",
+        "font_size": 13,
+        "title_size": 24,
+        "label_size": 12,
+        "legend": "top",
+        "value_labels": "auto",
+        "markers": true,
+        "line_width": 2.5,
+        "marker_size": 32,
+        "bar_size": 18,
+        "gridlines": true,
+        "background": "#ffffff",
+        "series_colors": {},
+        "label_angle": "auto",
+        "decimals": null,
+        "number_format": "auto",
+        "tick_count": 5,
+        "separate_panels": false,
+        "reference_value": null,
+        "reference_label": "Reference",
+        "layout": "Full slide \u00b7 16:9",
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": "Admissions, and show table",
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      },
+      "wall_seconds": 2.797
+    },
+    {
+      "case": "mixed",
+      "question": "Add MIT to this comparison and make the bars blue.",
+      "decision": {
+        "route": "mixed",
+        "relationship": "followup",
+        "question": "Compare Ivy League admission rates and MIT admission rate in fall 2024.",
+        "message": "",
+        "institution_mentions": [
+          "Ivy League",
+          "MIT"
+        ],
+        "referenced_turns": [
+          1
+        ],
+        "target_result_id": "",
+        "chart_edits": [
+          {
+            "setting": "color",
+            "value": "blue",
+            "series": ""
+          }
+        ],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 1936,
+        "output_tokens": 318,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.3814946999773383,
+        "estimated_api_usd": 0.0073016,
+        "stage": "initial intent interpretation",
+        "context_seconds": 0.011278700083494186,
+        "client_setup_seconds": 1.650000922381878e-05,
+        "provider_seconds": 2.3814877999247983
+      },
+      "passed": true,
+      "wall_seconds": 2.393
+    },
+    {
+      "case": "followup",
+      "question": "What about in 2023?",
+      "decision": {
+        "route": "numerical",
+        "relationship": "followup",
+        "question": "Compare Ivy League admission rates in fall 2023.",
+        "message": "",
+        "institution_mentions": [
+          "Ivy League"
+        ],
+        "referenced_turns": [
+          1
+        ],
+        "target_result_id": "",
+        "chart_edits": [],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 1925,
+        "output_tokens": 284,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.0673559999559075,
+        "estimated_api_usd": 0.006939600000000001,
+        "stage": "initial intent interpretation",
+        "context_seconds": 0.014016999979503453,
+        "client_setup_seconds": 2.389994915574789e-05,
+        "provider_seconds": 2.0673434999771416
+      },
+      "passed": true,
+      "wall_seconds": 2.081
+    },
+    {
+      "case": "unsupported",
+      "question": "Can you make the lines dashed?",
+      "decision": {
+        "route": "clarify",
+        "relationship": "clarify",
+        "question": "Can you make the lines dashed?",
+        "message": "Dashed lines aren't a supported chart setting, so I haven't changed anything. The current chart is also a bar chart, so it has no lines. I can change the line width, markers, colors or gridlines. I can also switch the chart type to a line chart.",
+        "institution_mentions": [],
+        "referenced_turns": [
+          1
+        ],
+        "target_result_id": "1c32e0aecdadf498",
+        "chart_edits": [],
+        "documentation": {
+          "kind": "none",
+          "terms": [],
+          "years": []
+        }
+      },
+      "usage": {
+        "input_tokens": 1929,
+        "output_tokens": 361,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2496,
+        "model": "claude-sonnet-5-5",
+        "calls": 1,
+        "latency_seconds": 2.545970599981956,
+        "estimated_api_usd": 0.007717600000000001,
+        "stage": "initial intent interpretation",
+        "context_seconds": 0.015676999930292368,
+        "client_setup_seconds": 3.790005575865507e-05,
+        "provider_seconds": 2.5459410999901593
+      },
+      "passed": true,
+      "wall_seconds": 2.562
+    }
+  ]
+}

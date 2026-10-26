@@ -1,0 +1,515 @@
+{
+  "id": "calendar_followup",
+  "question": "And Mount Holyoke College?",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "166939"
+      ],
+      "population": null,
+      "result_kind": "lookup",
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136122
+          ],
+          "filters": []
+        }
+      ],
+      "source_years": [
+        2024
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "166939"
+        ],
+        "population": null,
+        "result_kind": "lookup",
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136122
+            ],
+            "filters": []
+          }
+        ],
+        "source_years": [
+          2024
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::CALSYS"
+        ],
+        "institutions": [
+          "166939"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::CALSYS": {
+          "label": "Calendar system",
+          "family": "observation",
+          "unit": "coded"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Mount Holyoke College",
+          "unitid": 166939,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::CALSYS",
+          "measure": "Calendar system",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136122,
+          "raw_code": 1,
+          "response_label": "Semester",
+          "response_status": "reported",
+          "category_record_ids": [
+            139841
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "CALSYS",
+            "record_id": 136122,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136122,
+                "excerpt": "Calendar system"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::CALSYS",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "CALSYS"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"CALSYS\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            166939
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136122,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "CALSYS",
+              "title": "Calendar system",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10901\nvarorder: 27\nvarname: CALSYS\nvartitle: Calendar system\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 11\nlongdescription: What is the predominant calendar system at the institution? [Choose one] Standard academic terms Checking one of these systems determines that your institution will provide graduation rates data based on a FALL COHORT and student charges based on a FULL ACADEMIC YEAR Semester Quarter Trimester 4-1-4 or similar plan Other academic calendar Other calendar systems (for primarily occupational schools) Checking one of the following determines that your institution will provide graduation rates data based on a FULL YEAR COHORT and student charges data will be requested by PROGRAM. Differs by program Continuous basis (every 2 weeks, monthly, or other period) SEMESTER calendar SYSTEM -A calendar system that consists of two semesters during the academic year with about 16 weeks for each semester of instruction. There may be an additional summer session. QUARTER calendar SYSTEM - A calendar system in which the academic year consists of 3 sessions called quarters of about 12 weeks each. The range may be from 10 to 15 weeks. There may be an additional quarter in the summer TRIMESTER calendar SYSTEM - An academic year consisting of 3 terms of about 15 weeks each. FOUR-ONE-FOUR PLAN - The 4-1-4 calendar consists of 4 courses taken for 4 months, 1 course taken for 1 month, and 4 courses taken for 4 months. There may be an additional summer session. OTHER ACADEMIC calendar SYSTEM - Category used to describe \"non-traditional\" calendar systems at 4-year and 2-year degree-granting institutions. These can include schools that offer primarily on-line courses or \"one course at a time\". DIFFERS BY PROGRAM (calendar SYSTEM) - A calendar system classification that is used by institutions that have occupational/vocational programs of varying lengths. These schools may enroll students at specific times depending on the program desired. For example, a school might offer a 2-month program in January, March, May, September, and November; and a 3-month program in January, April, and October. CONTINUOUS BASIS (FOR PROGRAM ENROLLMENT) - A calendar system classification that is used by institutions that enroll students at any time during the academic year. For example, a cosmetology school or a word processing school might allow students to enroll and begin studies at various times, with no requirement that classes begin on a certain date.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Enrollment levels offered",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 251,
+              "long_description": "What is the predominant calendar system at the institution? [Choose one] Standard academic terms Checking one of these systems determines that your institution will provide graduation rates data based on a FALL COHORT and student charges based on a FULL ACADEMIC YEAR Semester Quarter Trimester 4-1-4 or similar plan Other academic calendar Other calendar systems (for primarily occupational schools) Checking one of the following determines that your institution will provide graduation rates data based on a FULL YEAR COHORT and student charges data will be requested by PROGRAM. Differs by program Continuous basis (every 2 weeks, monthly, or other period) SEMESTER calendar SYSTEM -A calendar system that consists of two semesters during the academic year with about 16 weeks for each semester of instruction. There may be an additional summer session. QUARTER calendar SYSTEM - A calendar system in which the academic year consists of 3 sessions called quarters of about 12 weeks each. The range may be from 10 to 15 weeks. There may be an additional quarter in the summer TRIMESTER calendar SYSTEM - An academic year consisting of 3 terms of about 15 weeks each. FOUR-ONE-FOUR PLAN - The 4-1-4 calendar consists of 4 courses taken for 4 months, 1 course taken for 1 month, and 4 courses taken for 4 months. There may be an additional summer session. OTHER ACADEMIC calendar SYSTEM - Category used to describe \"non-traditional\" calendar systems at 4-year and 2-year degree-granting institutions. These can include schools that offer primarily on-line courses or \"one course at a time\". DIFFERS BY PROGRAM (calendar SYSTEM) - A calendar system classification that is used by institutions that have occupational/vocational programs of varying lengths. These schools may enroll students at specific times depending on the program desired. For example, a school might offer a 2-month program in January, March, May, September, and November; and a 3-month program in January, April, and October. CONTINUOUS BASIS (FOR PROGRAM ENROLLMENT) - A calendar system classification that is used by institutions that enroll students at any time during the academic year. For example, a cosmetology school or a word processing school might allow students to enroll and begin studies at various times, with no requirement that classes begin on a certain date.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139848,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139841,
+              "code_value": "1",
+              "value_label": "Semester"
+            },
+            {
+              "record_id": 139842,
+              "code_value": "2",
+              "value_label": "Quarter"
+            },
+            {
+              "record_id": 139843,
+              "code_value": "3",
+              "value_label": "Trimester"
+            },
+            {
+              "record_id": 139844,
+              "code_value": "4",
+              "value_label": "Four-one-four plan"
+            },
+            {
+              "record_id": 139845,
+              "code_value": "5",
+              "value_label": "Other academic year"
+            },
+            {
+              "record_id": 139846,
+              "code_value": "6",
+              "value_label": "Differs by program"
+            },
+            {
+              "record_id": 139847,
+              "code_value": "7",
+              "value_label": "Continuous"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::CALSYS": "What is the predominant calendar system at the institution? [Choose one] Standard academic terms Checking one of these systems determines that your institution will provide graduation rates data based on a FALL COHORT and student charges based on a FULL ACADEMIC YEAR Semester Quarter Trimester 4-1-4 or similar plan Other academic calendar Other calendar systems (for primarily occupational schools) Checking one of the following determines that your institution will provide graduation rates data based on a FULL YEAR COHORT and student charges data will be requested by PROGRAM. Differs by program Continuous basis (every 2 weeks, monthly, or other period) SEMESTER calendar SYSTEM -A calendar system that consists of two semesters during the academic year with about 16 weeks for each semester of instruction. There may be an additional summer session. QUARTER calendar SYSTEM - A calendar system in which the academic year consists of 3 sessions called quarters of about 12 weeks each. The range may be from 10 to 15 weeks. There may be an additional quarter in the summer TRIMESTER calendar SYSTEM - An academic year consisting of 3 terms of about 15 weeks each. FOUR-ONE-FOUR PLAN - The 4-1-4 calendar consists of 4 courses taken for 4 months, 1 course taken for 1 month, and 4 courses taken for 4 months. There may be an additional summer session. OTHER ACADEMIC calendar SYSTEM - Category used to describe \"non-traditional\" calendar systems at 4-year and 2-year degree-granting institutions. These can include schools that offer primarily on-line courses or \"one course at a time\". DIFFERS BY PROGRAM (calendar SYSTEM) - A calendar system classification that is used by institutions that have occupational/vocational programs of varying lengths. These schools may enroll students at specific times depending on the program desired. For example, a school might offer a 2-month program in January, March, May, September, and November; and a 3-month program in January, April, and October. CONTINUOUS BASIS (FOR PROGRAM ENROLLMENT) - A calendar system classification that is used by institutions that enroll students at any time during the academic year. For example, a cosmetology school or a word processing school might allow students to enroll and begin studies at various times, with no requirement that classes begin on a certain date."
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:45:29.649007+00:00",
+      "registry_sha256": "bbd8eab15a7777dfbaff545ca9c1a2cc6b7dff948eeddcf876b84c109fd375c1",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 1,
+        "available_cells": 1,
+        "matching_institutions": {
+          "2024": 1
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 1
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            166939,
+            2024,
+            136122
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          166939
+        ],
+        "rows_sha256": "3adf7b401b279d46892d8457019c833b1e0b6d4682ee90fe6280289b06b8870b"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 7.192841900046915,
+        "answer_ready_seconds": 10.139148200047202,
+        "live_model_calls": 4,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 1.6168436999432743,
+        "institution_resolution_seconds": 1.3174377001123503
+      },
+      "result_id": "766482c6742b470f",
+      "conversation_resolution": {
+        "original_question": "And Mount Holyoke College (UNITID 166939)?",
+        "kind": "followup",
+        "question": "What academic calendar system did Mount Holyoke College (UNITID 166939) use in 2024-25?",
+        "referenced_turns": [
+          1
+        ]
+      },
+      "institution_identity": {
+        "unitids": [
+          166939,
+          167835
+        ],
+        "original_question": "And Mount Holyoke College?",
+        "original_mentions": [
+          "Mount Holyoke College"
+        ],
+        "confirmed_choices": {
+          "smith college": 167835,
+          "mount holyoke college": 166939
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Mount Holyoke College \u00b7 South Hadley, MA \u00b7 UNITID 166939",
+          "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 4,
+      "planning_tool_requests": 2,
+      "semantic_repair_attempts": 0,
+      "latency_seconds": 9.756274299928918,
+      "input_tokens": 23305,
+      "output_tokens": 514,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 42616,
+      "estimated_api_usd": 0.0560116,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 543,
+          "output_tokens": 63,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.2644305999856442,
+          "estimated_api_usd": 0.001716,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 3,
+          "planning_tool_requests": 2,
+          "semantic_repair_attempts": 0,
+          "latency_seconds": 8.491843699943274,
+          "input_tokens": 22762,
+          "output_tokens": 451,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 42616,
+          "estimated_api_usd": 0.0542956,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+          "stages": [
+            {
+              "input_tokens": 3761,
+              "output_tokens": 133,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 0,
+              "model": "claude-sonnet-5-5",
+              "calls": 1,
+              "latency_seconds": 1.6168436999432743,
+              "estimated_api_usd": 0.008852,
+              "stage": "conversation resolution"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "calls": 2,
+              "planning_tool_requests": 2,
+              "semantic_repair_attempts": 0,
+              "latency_seconds": 6.875,
+              "input_tokens": 19001,
+              "output_tokens": 318,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 42616,
+              "estimated_api_usd": 0.0454436,
+              "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+            }
+          ]
+        }
+      ]
+    },
+    "message": "Mount Holyoke College \u2014 Calendar system: Semester (Academic year 2024-25).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 7.192841900046915,
+      "answer_ready_seconds": 10.139148200047202,
+      "live_model_calls": 4,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 1.6168436999432743,
+      "institution_resolution_seconds": 1.3174377001123503
+    },
+    "resolved_question": "What academic calendar system did Mount Holyoke College (UNITID 166939) use in 2024-25?",
+    "conversation_resolution": {
+      "kind": "followup",
+      "question": "What academic calendar system did Mount Holyoke College (UNITID 166939) use in 2024-25?",
+      "referenced_turns": [
+        1
+      ]
+    },
+    "interpreted_as": "What academic calendar system did Mount Holyoke College (UNITID Mount Holyoke College) use in 2024-25?",
+    "analysis_brief": {
+      "version": 1,
+      "id": "19d1fac6de08507b",
+      "status": "completed",
+      "goal": "What academic calendar system did Smith College (UNITID 167835) use in 2024-25?",
+      "original_question": "What academic calendar system did Smith College (UNITID 167835) use in 2024-25?",
+      "question": "Smith College \u2014 Calendar system: Semester (Academic year 2024-25).",
+      "scope": {},
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [],
+      "revised_request": "What academic calendar system did Mount Holyoke College (UNITID 166939) use in 2024-25?"
+    },
+    "institution_identity": {
+      "unitids": [
+        166939,
+        167835
+      ],
+      "original_question": "And Mount Holyoke College?",
+      "original_mentions": [
+        "Mount Holyoke College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835,
+        "mount holyoke college": 166939
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Mount Holyoke College \u00b7 South Hadley, MA \u00b7 UNITID 166939",
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 10.139657099964097,
+  "events": [
+    {
+      "elapsed": 0.14816660003270954,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 20.963909000041895,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 21.032455899985507,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 21.033803700003773,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 21.476892200065777,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 26.295263100066222,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 26.799310600035824,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 28.811336799990386,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 28.931616500020027,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 28.96116870001424,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 31.400219900067896,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 33.64625460002571,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 33.657599100028165,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 0.00023060000967234373,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.2713906000135466,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.2955170000204816,
+      "stage": "Resolving your question using the conversation\u2026"
+    },
+    {
+      "elapsed": 2.9236071000341326,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 2.9236620999872684,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 2.9356277000624686,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 7.051919299992733,
+      "stage": "Reading definitions and category codes across years\u2026"
+    },
+    {
+      "elapsed": 7.076283999951556,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 10.116303900023922,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 10.13959789997898,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "CALSYS"
+  ]
+}

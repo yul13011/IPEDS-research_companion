@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-10-17T03:54:32.165563+00:00",
+  "model": "claude-sonnet-4-6",
+  "passed": 5,
+  "total": 5,
+  "cases": [
+    {
+      "question": "Yale applicants, admits and admission rate for class of 2028 entering fall 2024",
+      "expected_intent": "analyze",
+      "actual_intent": "analyze",
+      "passed": true,
+      "plan": {
+        "metrics": [
+          "applicants",
+          "admits",
+          "admission_rate"
+        ],
+        "institutions": [
+          "Yale University"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "table"
+      },
+      "message": "Analyzing Yale admissions data for fall 2024 (class of 2028). \"Class of 2028\" entering fall 2024 maps to observation year 2024 under the class time basis (class-of 2028 minus 4 = fall 2024), and the two are consistent. Metrics: applicants, admits, and admission rate from ADM2024.",
+      "evidence_records": 0
+    },
+    {
+      "question": "How many matriculated in that year and what was the yield rate?",
+      "expected_intent": "analyze",
+      "actual_intent": "analyze",
+      "passed": true,
+      "plan": {
+        "metrics": [
+          "applicants",
+          "admits",
+          "admission_rate",
+          "matriculants",
+          "yield_rate"
+        ],
+        "institutions": [
+          "Yale University"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "observation",
+        "output": "table"
+      },
+      "message": "Extending the previous Yale University 2024 admissions query to add matriculants and yield rate, preserving all prior metrics and scope.",
+      "evidence_records": 0
+    },
+    {
+      "question": "What data do we have on faculty?",
+      "expected_intent": "discover",
+      "actual_intent": "discover",
+      "passed": true,
+      "plan": null,
+      "message": "The codebook returned IPEDS Human Resources (HR/Staff) survey data on instructional staff with faculty status. The retrieved records cover the variable SNHCAT (staff category) from tables S2015_NH through S2024_NH, spanning 2015–2024. Two faculty-status subcategories are visible in the catalog: (1) Instructional staff with faculty status, On Tenure Track, and (2) Instructional staff with faculty status, Not on Tenure Track / No Tenure System. These are headcount staff variables from the HR survey — they are not currently mapped as supported measures in this prototype, so they cannot be analyzed yet.",
+      "evidence_records": 40
+    },
+    {
+      "question": "What percentage of Yale College students were on financial aid in 2024?",
+      "expected_intent": "clarify",
+      "actual_intent": "clarify",
+      "passed": true,
+      "plan": null,
+      "message": "The question asks about \"financial aid\" for Yale College students in 2024, but \"financial aid\" is ambiguous in IPEDS. Two different measures are available, and they cover different populations and aid types: (1) **Grants/scholarships for all undergraduates** (`undergraduate_grant_percent`) — the percentage of all undergraduates awarded grant or scholarship aid from federal, state/local, or institutional sources. (2) **Pell Grant recipients** — a narrower federal need-based grant measure (available via graduation subcohort data, not a direct enrollment-year percentage). Please note: loans, work-study, and private/outside aid are NOT included in the IPEDS grant measure. Which did you have in mind — the percentage of all undergraduates receiving grants/scholarships, or something else (e.g., Pell Grant recipients specifically)?",
+      "evidence_records": 0
+    },
+    {
+      "question": "Plot Yale six-year graduation rate for entering cohorts 2009 through 2018",
+      "expected_intent": "analyze",
+      "actual_intent": "analyze",
+      "passed": true,
+      "plan": {
+        "metrics": [
+          "graduation_rate"
+        ],
+        "institutions": [
+          "Yale University"
+        ],
+        "years": [
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ],
+        "time_basis": "entry_cohort",
+        "output": "chart"
+      },
+      "message": "Plotting Yale's six-year bachelor graduation rate for entering cohorts 2009–2018. Using entry_cohort time basis, so observation years are cohort + 6 = 2015–2024, all within the available range. Years parameter carries the entry cohort years directly.",
+      "evidence_records": 0
+    }
+  ],
+  "scope": "Five live planner smoke cases only; not comprehensive natural-language reliability certification."
+}

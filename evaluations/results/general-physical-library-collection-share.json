@@ -1,0 +1,644 @@
+{
+  "plan": {
+    "metrics": [
+      "AL{YEAR}::LPCLLCT::percent::0"
+    ],
+    "institutions": [
+      "Yale"
+    ],
+    "years": [
+      2024
+    ],
+    "time_basis": "source_release",
+    "output": "answer"
+  },
+  "catalog_plan": {
+    "version": 1,
+    "institutions": [
+      "Yale"
+    ],
+    "source_years": [
+      2024
+    ],
+    "requested_time": {
+      "basis": "fiscal",
+      "description": "Fiscal year 2024"
+    },
+    "selections": [
+      {
+        "record_id": 137908,
+        "role": "measure"
+      },
+      {
+        "record_id": 137910,
+        "role": "denominator"
+      }
+    ],
+    "filters": [],
+    "group_by_record_ids": [],
+    "calculations": [
+      {
+        "label": "Physical collection units as percent of total library collection",
+        "operator": "percent",
+        "input_record_ids": [
+          137908
+        ],
+        "denominator_record_id": 137910,
+        "group_by_record_ids": [],
+        "interpretation": "LPCLLCT (total physical collections: books, media, serials) divided by LTCLLCT (total physical and electronic collections) times 100; LTCLLCT is defined as the sum of physical books/media/serials and electronic books/databases/media/serials, so the numerator is a component of the denominator."
+      }
+    ],
+    "joins": [],
+    "output": "answer",
+    "assumptions": [
+      "Single table AL2024 (fiscal year 2024), one row per UNITID; Yale resolved by name to its UNITID.",
+      "All collection types included via the totals LPCLLCT (books, media, serials) and LTCLLCT, not just physical books.",
+      "Pre-computed DRVAL2024 percent fields are per-type shares and not used."
+    ],
+    "clarification_questions": []
+  },
+  "metric_specs": {
+    "AL{YEAR}::LPCLLCT::percent::0": {
+      "label": "Physical collection units as percent of total library collection",
+      "family": "catalog",
+      "unit": "percent"
+    }
+  },
+  "observation_years": [
+    2024
+  ],
+  "rows": [
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "Fiscal year 2024",
+      "metric": "AL{YEAR}::LPCLLCT::percent::0",
+      "measure": "Physical collection units as percent of total library collection",
+      "unit": "percent",
+      "value": 75.33224938892654,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": 9661648,
+      "denominator": 12825381,
+      "series_segment": "source release 2024",
+      "source_value": 9661648.0,
+      "input_values": [
+        9661648
+      ],
+      "calculation_evidence": {
+        "label": "Physical collection units as percent of total library collection",
+        "operator": "percent",
+        "approved": true,
+        "input_record_ids": [
+          137908
+        ],
+        "denominator_record_id": 137910,
+        "evidence_record_ids": [
+          137908,
+          137910
+        ],
+        "reason": "Source population, row selection, period, units and relationship agree.",
+        "proof": {
+          "kind": "category_containment",
+          "axes": [
+            "medium"
+          ]
+        },
+        "unit": "percent",
+        "bounded_share": true
+      }
+    }
+  ],
+  "sources": [
+    {
+      "metric": "AL{YEAR}::LPCLLCT::percent::0",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "AL2024",
+      "columns": [
+        "LPCLLCT",
+        "LTCLLCT"
+      ],
+      "filters": [],
+      "formula": {
+        "label": "Physical collection units as percent of total library collection",
+        "operator": "percent",
+        "input_record_ids": [
+          137908
+        ],
+        "denominator_record_id": 137910,
+        "group_by_record_ids": [],
+        "interpretation": "LPCLLCT (total physical collections: books, media, serials) divided by LTCLLCT (total physical and electronic collections) times 100; LTCLLCT is defined as the sum of physical books/media/serials and electronic books/databases/media/serials, so the numerator is a component of the denominator."
+      },
+      "sql": "SELECT \"LPCLLCT\", \"LTCLLCT\" FROM \"AL2024\" WHERE \"UNITID\"=? LIMIT 2",
+      "parameters": [
+        130794
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 137908,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "AL2024",
+          "variable_name": "LPCLLCT",
+          "title": "Total physical library collections (books, media and serials)",
+          "body": "surveyorder: 100\nsurveynumber: 16\nsurvey: Academic Libraries\ntablenumber: 160\ntablename: AL2024\ntabletitle: Academic Libraries: Fiscal year 2024\nvarnumber: 160130\nvarorder: 19\nvarname: LPCLLCT\nimputationvar: XLPCOLLC\nvartitle: Total physical library collections (books, media and serials)\ndatatype: N\nfieldwidth: 8\nformat: Cont\nmultirecord: 0\nfilenumber: 87\nsectionnumber: 2\nlongdescription: This calculated value is the sum of the number of physical books, media and serials. Serials were not included prior to 2019.\nvarsource: IPEDS, Spring 2025, Academic Libaries component\nfiletitle: Academic Libraries: Fiscal year 2024\nsectiontitle: Collections",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 2037,
+          "long_description": "This calculated value is the sum of the number of physical books, media and serials. Serials were not included prior to 2019.",
+          "documented_table": "AL2024",
+          "physical_table": "AL2024",
+          "location_override": false,
+          "issues": []
+        },
+        {
+          "record_id": 137910,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "AL2024",
+          "variable_name": "LTCLLCT",
+          "title": "Total library collections (physical and electronic)",
+          "body": "surveyorder: 100\nsurveynumber: 16\nsurvey: Academic Libraries\ntablenumber: 160\ntablename: AL2024\ntabletitle: Academic Libraries: Fiscal year 2024\nvarnumber: 160136\nvarorder: 23\nvarname: LTCLLCT\nimputationvar: XLTCLLCT\nvartitle: Total library collections (physical and electronic)\ndatatype: N\nfieldwidth: 8\nformat: Cont\nmultirecord: 0\nfilenumber: 87\nsectionnumber: 2\nlongdescription: This calculated value is the sum of the number of physical books, media, and serials and the number of digital/electronic books, databases, media and serials. Serials were not included prior to 2019.\nvarsource: IPEDS, Spring 2025, Academic Libaries component\nfiletitle: Academic Libraries: Fiscal year 2024\nsectiontitle: Collections",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 2039,
+          "long_description": "This calculated value is the sum of the number of physical books, media, and serials and the number of digital/electronic books, databases, media and serials. Serials were not included prior to 2019.",
+          "documented_table": "AL2024",
+          "physical_table": "AL2024",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": []
+    }
+  ],
+  "warnings": [
+    "Single table AL2024 (fiscal year 2024), one row per UNITID; Yale resolved by name to its UNITID.",
+    "All collection types included via the totals LPCLLCT (books, media, serials) and LTCLLCT, not just physical books.",
+    "Pre-computed DRVAL2024 percent fields are per-type shares and not used.",
+    "Source release labels are shown separately from source reporting periods. Missing, suppressed and nonnumeric values remain empty. These answers do not infer reported versus imputed status."
+  ],
+  "definitions": {
+    "AL{YEAR}::LPCLLCT::percent::0": "This calculated value is the sum of the number of physical books, media and serials. Serials were not included prior to 2019. Formula: LPCLLCT (total physical collections: books, media, serials) divided by LTCLLCT (total physical and electronic collections) times 100; LTCLLCT is defined as the sum of physical books/media/serials and electronic books/databases/media/serials, so the numerator is a component of the denominator."
+  },
+  "created_at": "2026-10-19T18:40:24.750759+00:00",
+  "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+  "review_status": "Catalog-bound direct observations; source row keys, selectors and numeric missingness validated. No implicit aggregation or fact joins.",
+  "semantic_validation": {
+    "schema_and_catalog_binding": "passed",
+    "execution_approved": true,
+    "semantic_status": "passed",
+    "blocks": [],
+    "required_next_checks": [],
+    "execution_scope": "Direct source observations with explicit institution/population selectors; no implicit aggregation, joins or inferred year equivalence.",
+    "completed_checks": [
+      "exact physical fields and source codes",
+      "documented and observed row key",
+      "explicit row selectors",
+      "source reporting period",
+      "bounded read-only compilation",
+      "numeric missingness policy",
+      "calculation relationship where applicable"
+    ]
+  },
+  "catalog_evidence": {
+    "catalog_plan": {
+      "version": 1,
+      "institutions": [
+        "Yale"
+      ],
+      "source_years": [
+        2024
+      ],
+      "requested_time": {
+        "basis": "fiscal",
+        "description": "Fiscal year 2024"
+      },
+      "selections": [
+        {
+          "record_id": 137908,
+          "role": "measure"
+        },
+        {
+          "record_id": 137910,
+          "role": "denominator"
+        }
+      ],
+      "filters": [],
+      "group_by_record_ids": [],
+      "calculations": [
+        {
+          "label": "Physical collection units as percent of total library collection",
+          "operator": "percent",
+          "input_record_ids": [
+            137908
+          ],
+          "denominator_record_id": 137910,
+          "group_by_record_ids": [],
+          "interpretation": "LPCLLCT (total physical collections: books, media, serials) divided by LTCLLCT (total physical and electronic collections) times 100; LTCLLCT is defined as the sum of physical books/media/serials and electronic books/databases/media/serials, so the numerator is a component of the denominator."
+        }
+      ],
+      "joins": [],
+      "output": "answer",
+      "assumptions": [
+        "Single table AL2024 (fiscal year 2024), one row per UNITID; Yale resolved by name to its UNITID.",
+        "All collection types included via the totals LPCLLCT (books, media, serials) and LTCLLCT, not just physical books.",
+        "Pre-computed DRVAL2024 percent fields are per-type shares and not used."
+      ],
+      "clarification_questions": []
+    },
+    "question": "For fiscal year 2024, what percentage of Yale's total physical and electronic library collection units were physical collection units? Include all collection types, not just books.",
+    "resolved_institutions": {
+      "2024": [
+        130794
+      ]
+    },
+    "definition_evidence": [
+      {
+        "record_id": 137908,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "AL2024",
+        "variable_name": "LPCLLCT",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"AL2024\"]",
+        "imputation_variable": "XLPCOLLC",
+        "category_count": 0,
+        "definition_hash": "9d5c05da0ffaa34dedd6b94ee5da287e0d010d0f308c0c59061ae4f5b2d7005e",
+        "normalized_hash": "8d0b13963f6ae2c62d34c0a7ec2f99f8bd1d856017f5ae7ed37e6a54631b81f8",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Total physical library collections (books, media and serials)",
+        "long_description": "This calculated value is the sum of the number of physical books, media and serials. Serials were not included prior to 2019.",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 137908,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "AL2024",
+          "variable_name": "LPCLLCT",
+          "title": "Total physical library collections (books, media and serials)",
+          "body": "surveyorder: 100\nsurveynumber: 16\nsurvey: Academic Libraries\ntablenumber: 160\ntablename: AL2024\ntabletitle: Academic Libraries: Fiscal year 2024\nvarnumber: 160130\nvarorder: 19\nvarname: LPCLLCT\nimputationvar: XLPCOLLC\nvartitle: Total physical library collections (books, media and serials)\ndatatype: N\nfieldwidth: 8\nformat: Cont\nmultirecord: 0\nfilenumber: 87\nsectionnumber: 2\nlongdescription: This calculated value is the sum of the number of physical books, media and serials. Serials were not included prior to 2019.\nvarsource: IPEDS, Spring 2025, Academic Libaries component\nfiletitle: Academic Libraries: Fiscal year 2024\nsectiontitle: Collections",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 2037
+        }
+      },
+      {
+        "record_id": 137910,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "AL2024",
+        "variable_name": "LTCLLCT",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"AL2024\"]",
+        "imputation_variable": "XLTCLLCT",
+        "category_count": 0,
+        "definition_hash": "27437b0cf016053adcce5d114863e9e6f1bfdbfbcc2a99a7fb07ee70a0201130",
+        "normalized_hash": "b70f258941ef6b0596fd4b41dedff0be882a590d9f8782baedce6b70ef560b23",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Total library collections (physical and electronic)",
+        "long_description": "This calculated value is the sum of the number of physical books, media, and serials and the number of digital/electronic books, databases, media and serials. Serials were not included prior to 2019.",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 137910,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "AL2024",
+          "variable_name": "LTCLLCT",
+          "title": "Total library collections (physical and electronic)",
+          "body": "surveyorder: 100\nsurveynumber: 16\nsurvey: Academic Libraries\ntablenumber: 160\ntablename: AL2024\ntabletitle: Academic Libraries: Fiscal year 2024\nvarnumber: 160136\nvarorder: 23\nvarname: LTCLLCT\nimputationvar: XLTCLLCT\nvartitle: Total library collections (physical and electronic)\ndatatype: N\nfieldwidth: 8\nformat: Cont\nmultirecord: 0\nfilenumber: 87\nsectionnumber: 2\nlongdescription: This calculated value is the sum of the number of physical books, media, and serials and the number of digital/electronic books, databases, media and serials. Serials were not included prior to 2019.\nvarsource: IPEDS, Spring 2025, Academic Libaries component\nfiletitle: Academic Libraries: Fiscal year 2024\nsectiontitle: Collections",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 2039
+        }
+      }
+    ],
+    "category_evidence": [],
+    "join_key_evidence": [],
+    "table_evidence": [
+      {
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "AL2024",
+        "family": "AL{YEAR}",
+        "profile": {
+          "candidate_key": [
+            "UNITID"
+          ],
+          "distinct_institutions": 3652,
+          "expected_rows_match": true,
+          "key_status": "observed_unique_institution_key",
+          "null_institution_ids": 0,
+          "query_count": 1,
+          "rows": 3652,
+          "status": "profiled"
+        },
+        "period_evidence": [
+          {
+            "record_id": 135867,
+            "release_date": null,
+            "release_status": "Provisional",
+            "year_coverage": "Fiscal year 2024"
+          }
+        ],
+        "population_evidence": [
+          {
+            "description": "The Academic Library survey became part of the Integrated Postsecondary Education Data system in collection year 2014-15. Data include characteristics of the library, collections, expenditures and services. The number of full-time equivalent staff employed by the library were added in fiscal year 2020. Library data are only applicable for degree-granting institutions. Degree-granting institutions with total expenditures over $100,000 dollars will have expenditure data. In 2016-17 the types of collections was expanded to collect information on physical and electronic serials.",
+            "record_id": 135867,
+            "title": "Academic Libraries, Fiscal year 2024"
+          }
+        ],
+        "source_definitions": [
+          {
+            "record_id": 135867,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "table_definition",
+            "table_name": "AL2024",
+            "variable_name": "",
+            "title": "Academic Libraries, Fiscal year 2024",
+            "body": "surveyorder: 100\nsurveynumber: 16\nsurvey: Academic Libraries\nyearcoverage: Fiscal year 2024\ntablename: AL2024\ntablenumber: 160\ntabletitle: Academic Libraries, Fiscal year 2024\ndescription: The Academic Library survey became part of the Integrated Postsecondary Education Data system in collection year 2014-15. Data include characteristics of the library, collections, expenditures and services. The number of full-time equivalent staff employed by the library were added in fiscal year 2020. Library data are only applicable for degree-granting institutions. Degree-granting institutions with total expenditures over $100,000 dollars will have expenditure data. In 2016-17 the types of collections was expanded to collect information on physical and electronic serials.\nrelease: Provisional\nrelease_date: January 2026",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "tables24",
+            "source_row": 48
+          }
+        ]
+      }
+    ],
+    "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+    "validation": {
+      "schema_and_catalog_binding": "passed",
+      "execution_approved": true,
+      "semantic_status": "passed",
+      "blocks": [],
+      "required_next_checks": [],
+      "execution_scope": "Direct source observations with explicit institution/population selectors; no implicit aggregation, joins or inferred year equivalence.",
+      "completed_checks": [
+        "exact physical fields and source codes",
+        "documented and observed row key",
+        "explicit row selectors",
+        "source reporting period",
+        "bounded read-only compilation",
+        "numeric missingness policy",
+        "calculation relationship where applicable"
+      ]
+    },
+    "created_at": "2026-10-19T18:40:24.746587+00:00",
+    "normalization": [],
+    "field_semantics": {
+      "137908": {
+        "version": 1,
+        "record_id": 137908,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table": "AL2024",
+        "variable": "LPCLLCT",
+        "source_title": "Total physical library collections (books, media and serials)",
+        "measure_base": "library collections",
+        "dimensions": {
+          "medium": "physical"
+        },
+        "unit": "items",
+        "numeric_kind": "continuous",
+        "additive": true,
+        "total_scope": true,
+        "reporting_periods": [
+          "Fiscal year 2024"
+        ],
+        "field_time_qualifiers": [],
+        "population_evidence": [
+          {
+            "record_id": 135867,
+            "description": "The Academic Library survey became part of the Integrated Postsecondary Education Data system in collection year 2014-15. Data include characteristics of the library, collections, expenditures and services. The number of full-time equivalent staff employed by the library were added in fiscal year 2020. Library data are only applicable for degree-granting institutions. Degree-granting institutions with total expenditures over $100,000 dollars will have expenditure data. In 2016-17 the types of collections was expanded to collect information on physical and electronic serials."
+          }
+        ],
+        "required_row_selectors": [],
+        "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+        "category_overlap_warning": false,
+        "evidence": {
+          "variable_record_id": 137908,
+          "table_record_ids": [
+            135867
+          ],
+          "title_excerpt": "Total physical library collections (books, media and serials)",
+          "definition_excerpt": "This calculated value is the sum of the number of physical books, media and serials. Serials were not included prior to 2019."
+        },
+        "readiness": "described"
+      },
+      "137910": {
+        "version": 1,
+        "record_id": 137910,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table": "AL2024",
+        "variable": "LTCLLCT",
+        "source_title": "Total library collections (physical and electronic)",
+        "measure_base": "library collections",
+        "dimensions": {},
+        "unit": "items",
+        "numeric_kind": "continuous",
+        "additive": true,
+        "total_scope": true,
+        "reporting_periods": [
+          "Fiscal year 2024"
+        ],
+        "field_time_qualifiers": [],
+        "population_evidence": [
+          {
+            "record_id": 135867,
+            "description": "The Academic Library survey became part of the Integrated Postsecondary Education Data system in collection year 2014-15. Data include characteristics of the library, collections, expenditures and services. The number of full-time equivalent staff employed by the library were added in fiscal year 2020. Library data are only applicable for degree-granting institutions. Degree-granting institutions with total expenditures over $100,000 dollars will have expenditure data. In 2016-17 the types of collections was expanded to collect information on physical and electronic serials."
+          }
+        ],
+        "required_row_selectors": [],
+        "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+        "category_overlap_warning": false,
+        "evidence": {
+          "variable_record_id": 137910,
+          "table_record_ids": [
+            135867
+          ],
+          "title_excerpt": "Total library collections (physical and electronic)",
+          "definition_excerpt": "This calculated value is the sum of the number of physical books, media, and serials and the number of digital/electronic books, databases, media and serials. Serials were not included prior to 2019."
+        },
+        "readiness": "described"
+      }
+    },
+    "calculation_validation": [
+      {
+        "label": "Physical collection units as percent of total library collection",
+        "operator": "percent",
+        "approved": true,
+        "input_record_ids": [
+          137908
+        ],
+        "denominator_record_id": 137910,
+        "evidence_record_ids": [
+          137908,
+          137910
+        ],
+        "reason": "Source population, row selection, period, units and relationship agree.",
+        "proof": {
+          "kind": "category_containment",
+          "axes": [
+            "medium"
+          ]
+        },
+        "unit": "percent",
+        "bounded_share": true
+      }
+    ]
+  },
+  "field_semantics": {
+    "137908": {
+      "version": 1,
+      "record_id": 137908,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "AL2024",
+      "variable": "LPCLLCT",
+      "source_title": "Total physical library collections (books, media and serials)",
+      "measure_base": "library collections",
+      "dimensions": {
+        "medium": "physical"
+      },
+      "unit": "items",
+      "numeric_kind": "continuous",
+      "additive": true,
+      "total_scope": true,
+      "reporting_periods": [
+        "Fiscal year 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135867,
+          "description": "The Academic Library survey became part of the Integrated Postsecondary Education Data system in collection year 2014-15. Data include characteristics of the library, collections, expenditures and services. The number of full-time equivalent staff employed by the library were added in fiscal year 2020. Library data are only applicable for degree-granting institutions. Degree-granting institutions with total expenditures over $100,000 dollars will have expenditure data. In 2016-17 the types of collections was expanded to collect information on physical and electronic serials."
+        }
+      ],
+      "required_row_selectors": [],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 137908,
+        "table_record_ids": [
+          135867
+        ],
+        "title_excerpt": "Total physical library collections (books, media and serials)",
+        "definition_excerpt": "This calculated value is the sum of the number of physical books, media and serials. Serials were not included prior to 2019."
+      },
+      "readiness": "described"
+    },
+    "137910": {
+      "version": 1,
+      "record_id": 137910,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "AL2024",
+      "variable": "LTCLLCT",
+      "source_title": "Total library collections (physical and electronic)",
+      "measure_base": "library collections",
+      "dimensions": {},
+      "unit": "items",
+      "numeric_kind": "continuous",
+      "additive": true,
+      "total_scope": true,
+      "reporting_periods": [
+        "Fiscal year 2024"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135867,
+          "description": "The Academic Library survey became part of the Integrated Postsecondary Education Data system in collection year 2014-15. Data include characteristics of the library, collections, expenditures and services. The number of full-time equivalent staff employed by the library were added in fiscal year 2020. Library data are only applicable for degree-granting institutions. Degree-granting institutions with total expenditures over $100,000 dollars will have expenditure data. In 2016-17 the types of collections was expanded to collect information on physical and electronic serials."
+        }
+      ],
+      "required_row_selectors": [],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 137910,
+        "table_record_ids": [
+          135867
+        ],
+        "title_excerpt": "Total library collections (physical and electronic)",
+        "definition_excerpt": "This calculated value is the sum of the number of physical books, media, and serials and the number of digital/electronic books, databases, media and serials. Serials were not included prior to 2019."
+      },
+      "readiness": "described"
+    }
+  },
+  "calculation_validation": [
+    {
+      "label": "Physical collection units as percent of total library collection",
+      "operator": "percent",
+      "approved": true,
+      "input_record_ids": [
+        137908
+      ],
+      "denominator_record_id": 137910,
+      "evidence_record_ids": [
+        137908,
+        137910
+      ],
+      "reason": "Source population, row selection, period, units and relationship agree.",
+      "proof": {
+        "kind": "category_containment",
+        "axes": [
+          "medium"
+        ]
+      },
+      "unit": "percent",
+      "bounded_share": true
+    }
+  ],
+  "planning_validation": {
+    "preflight": {
+      "execution_eligible": true,
+      "blocks": [],
+      "normalization": [],
+      "calculation_validation": [
+        {
+          "label": "Physical collection units as percent of total library collection",
+          "operator": "percent",
+          "approved": true,
+          "input_record_ids": [
+            137908
+          ],
+          "denominator_record_id": 137910,
+          "evidence_record_ids": [
+            137908,
+            137910
+          ],
+          "reason": "Source population, row selection, period, units and relationship agree.",
+          "proof": {
+            "kind": "category_containment",
+            "axes": [
+              "medium"
+            ]
+          },
+          "unit": "percent",
+          "bounded_share": true
+        }
+      ]
+    },
+    "repair_attempts": []
+  },
+  "coverage": {
+    "requested_cells": 1,
+    "available_cells": 1
+  },
+  "result_id": "99c1e8a9ab475ed8",
+  "latency": {
+    "validation_seconds": 0.03486489999340847,
+    "query_seconds": 0.003725400019902736,
+    "planning_and_binding_seconds": 12.57328770001186,
+    "answer_ready_seconds": 12.612317799997982,
+    "live_model_calls": 3,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+  }
+}

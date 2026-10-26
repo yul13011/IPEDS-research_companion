@@ -1,0 +1,111 @@
+{
+  "policy": "Known method/scope discrepancies only; general source-backed aggregate queries remain supported. No benchmark answer values are used by execution.",
+  "generated_at": "2026-10-21T16:01:12.565281+00:00",
+  "blocked": {
+    "9a147b049b624e3bbbb9e70c9063beb73394bf6ce38d5d068baab9e47b4e4151": {
+      "q": 2,
+      "source_year": 2024,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "6759b2d0a77ebe5e14293b8903a6ab04001e83ab04126c7cd55e5cdd312419d7": {
+      "q": 19,
+      "source_year": 2022,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "ea13807cbfcdcbd407db4573794ba4ce08cbedef7e8df894c8e094f50a332246": {
+      "q": 20,
+      "source_year": 2022,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "a01e046c4022ab482fc6a4c54772c0fbda78ea07ab1e429cde167b1a900c5829": {
+      "q": 20,
+      "source_year": 2020,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "e6ac41cec730c9a475d79bbd85a6d8f284a2cf15309c6faaf3f842029831fcc2": {
+      "q": 20,
+      "source_year": 2015,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "6d2eff87a3be08aaf9e3d2182ed6d625479423f8c2d6a4b95c052b18e5319a2e": {
+      "q": 24,
+      "source_year": 2024,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "93307a5babca09fc0fe3ec9c07262f67149f1d850a65d3f302d11107b26bf78b": {
+      "q": 25,
+      "source_year": 2015,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "c506ba4cfe39722967dbbd70aeaa8c6156ed2d990ef7e8d52bc96f212cdaf606": {
+      "q": 34,
+      "source_year": 2015,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "8853c7f8d497ce6f597ebcc4c6726c2e26d0e3b86d6d91f71a458084379153a0": {
+      "q": 35,
+      "source_year": 2015,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "4a4c25d8b29f006e5be14583b64c12cc4b4f915c53cf3f2475f5cf3e6ab8e3c3": {
+      "q": 36,
+      "source_year": 2015,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "d36a16f20fe9e2cd39f0d4a68326c327de73099c47471c47100f041e125a1b19": {
+      "q": 38,
+      "source_year": 2015,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "d08018f271d4034494911e6a544932dfe727ce0b2dca75ab59612c6bffc73e38": {
+      "q": 43,
+      "source_year": 2024,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "55a8f8772a234669ec83300871d9c3d50379f4b5ffb353988675a48a76eb05de": {
+      "q": 205,
+      "source_year": 2022,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "65e9b55118de777a347e8ea436c5dceca1b7a0790ce55a16e440df841429c814": {
+      "q": 206,
+      "source_year": 2024,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "f370b2a17b1450254fd23761afa5edb023db4f69dc05183b269ac2ab4eddfa32": {
+      "q": 206,
+      "source_year": 2023,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "677522be01da98a3643363387d25d211e68a32597e0240d87f51a95cf9737e31": {
+      "q": 206,
+      "source_year": 2022,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "3474d6890afd8997bc9291f091465e8caafdf4da720e67bbe55445aac859cda3": {
+      "q": 208,
+      "source_year": 2024,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "ee35a6c005e2761bb419457a165ddb9c97129d4bbc04922d672162af05ada4d3": {
+      "q": 208,
+      "source_year": 2016,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "901be2268613e469dfb8bb9eb0fe430f5380fc2b3c4c02d121f5b6b310edde0c": {
+      "q": 208,
+      "source_year": 2015,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "d2e616e66952dd81cae996b87172c627c9599078438031a8e9e2266f51eec349": {
+      "q": 210,
+      "source_year": 2024,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    },
+    "2f6242e81a4d75a510add0fa24e411c2af1c1d2d6ad6e78fddbb78f4c33bff23": {
+      "q": 221,
+      "source_year": 2015,
+      "reason": "Unresolved NCES comparator discrepancy; expected statistical values are not stored in production."
+    }
+  }
+}

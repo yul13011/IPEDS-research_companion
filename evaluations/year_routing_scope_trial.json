@@ -1,0 +1,803 @@
+{
+  "records": [
+    {
+      "case": "fresh_automatic",
+      "passed": true,
+      "checks": {
+        "coverage_route": true,
+        "coverage_answer": true,
+        "no_discovery_dump": true,
+        "no_statistical_planner": true
+      },
+      "message": "Loaded source releases: 2015-16 Final, 2016-17 Final, 2017-18 Final, 2018-19 Final, 2019-20 Final, 2020-21 Final, 2021-22 Final, 2022-23 Final, 2023-24 Final, 2024-25 Provisional. Observation periods depend on the measure.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "coverage",
+            "relationship": "new",
+            "question": "Which years do you have?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Which years do you have?",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "releases",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "observation",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "none",
+              "scope_mode": "dataset"
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "operation": "releases",
+        "scope": {
+          "measure_ids": [],
+          "field_record_ids": [],
+          "institutions": [],
+          "topic": "",
+          "time_basis": "observation"
+        },
+        "time_basis": "source_release",
+        "requested_periods": [],
+        "loaded_release_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "status": "answered",
+        "available_periods": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "limits": [
+          "This describes the supplied local files, not whether IPEDS has published other data."
+        ]
+      },
+      "seconds": 9.002931700088084
+    },
+    {
+      "case": "after_general_guide",
+      "passed": true,
+      "checks": {
+        "coverage_route": true,
+        "coverage_answer": true,
+        "no_discovery_dump": true,
+        "no_statistical_planner": true
+      },
+      "message": "Loaded source releases: 2015-16 Final, 2016-17 Final, 2017-18 Final, 2018-19 Final, 2019-20 Final, 2020-21 Final, 2021-22 Final, 2022-23 Final, 2023-24 Final, 2024-25 Provisional. Observation periods depend on the measure.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "coverage",
+            "relationship": "new",
+            "question": "Which years do you have?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Which years do you have?",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "releases",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "source_release",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "dataset"
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "operation": "releases",
+        "scope": {
+          "measure_ids": [],
+          "field_record_ids": [],
+          "institutions": [],
+          "topic": "",
+          "time_basis": "source_release"
+        },
+        "time_basis": "source_release",
+        "requested_periods": [],
+        "loaded_release_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "status": "answered",
+        "available_periods": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "limits": [
+          "This describes the supplied local files, not whether IPEDS has published other data."
+        ]
+      },
+      "seconds": 3.746778800035827
+    },
+    {
+      "case": "after_faculty_guide",
+      "passed": true,
+      "checks": {
+        "coverage_route": true,
+        "coverage_answer": true,
+        "no_discovery_dump": true,
+        "no_statistical_planner": true
+      },
+      "message": "Loaded source releases: 2015-16 Final, 2016-17 Final, 2017-18 Final, 2018-19 Final, 2019-20 Final, 2020-21 Final, 2021-22 Final, 2022-23 Final, 2023-24 Final, 2024-25 Provisional. Observation periods depend on the measure.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "coverage",
+            "relationship": "new",
+            "question": "Which years do you have?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Which years do you have?",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "releases",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "source_release",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "dataset"
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "operation": "releases",
+        "scope": {
+          "measure_ids": [],
+          "field_record_ids": [],
+          "institutions": [],
+          "topic": "",
+          "time_basis": "source_release"
+        },
+        "time_basis": "source_release",
+        "requested_periods": [],
+        "loaded_release_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "status": "answered",
+        "available_periods": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "limits": [
+          "This describes the supplied local files, not whether IPEDS has published other data."
+        ]
+      },
+      "seconds": 4.431988399941474
+    },
+    {
+      "case": "after_legacy_faculty_discovery",
+      "passed": true,
+      "checks": {
+        "coverage_route": true,
+        "coverage_answer": true,
+        "no_discovery_dump": true,
+        "no_statistical_planner": true
+      },
+      "message": "Loaded source releases: 2015-16 Final, 2016-17 Final, 2017-18 Final, 2018-19 Final, 2019-20 Final, 2020-21 Final, 2021-22 Final, 2022-23 Final, 2023-24 Final, 2024-25 Provisional. Observation periods depend on the measure.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "coverage",
+            "relationship": "new",
+            "question": "Which years of source releases are available in the loaded dataset?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Which years do you have?",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "releases",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "source_release",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "dataset"
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "operation": "releases",
+        "scope": {
+          "measure_ids": [],
+          "field_record_ids": [],
+          "institutions": [],
+          "topic": "",
+          "time_basis": "source_release"
+        },
+        "time_basis": "source_release",
+        "requested_periods": [],
+        "loaded_release_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "status": "answered",
+        "available_periods": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "limits": [
+          "This describes the supplied local files, not whether IPEDS has published other data."
+        ]
+      },
+      "seconds": 4.154936600010842
+    },
+    {
+      "case": "after_legacy_year_word_search",
+      "passed": true,
+      "checks": {
+        "coverage_route": true,
+        "coverage_answer": true,
+        "no_discovery_dump": true,
+        "no_statistical_planner": true
+      },
+      "message": "Loaded source releases: 2015-16 Final, 2016-17 Final, 2017-18 Final, 2018-19 Final, 2019-20 Final, 2020-21 Final, 2021-22 Final, 2022-23 Final, 2023-24 Final, 2024-25 Provisional. Observation periods depend on the measure.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "coverage",
+            "relationship": "new",
+            "question": "Which years do you have?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Which years do you have?",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "releases",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "source_release",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "none",
+              "scope_mode": "dataset"
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "operation": "releases",
+        "scope": {
+          "measure_ids": [],
+          "field_record_ids": [],
+          "institutions": [],
+          "topic": "",
+          "time_basis": "source_release"
+        },
+        "time_basis": "source_release",
+        "requested_periods": [],
+        "loaded_release_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "status": "answered",
+        "available_periods": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "limits": [
+          "This describes the supplied local files, not whether IPEDS has published other data."
+        ]
+      },
+      "seconds": 3.67855569999665
+    },
+    {
+      "case": "bound_sat_median_measure",
+      "passed": false,
+      "checks": {
+        "coverage_route": true,
+        "coverage_answer": false,
+        "no_discovery_dump": true,
+        "no_statistical_planner": true
+      },
+      "message": "Loaded source releases: 2015-16 Final, 2016-17 Final, 2017-18 Final, 2018-19 Final, 2019-20 Final, 2020-21 Final, 2021-22 Final, 2022-23 Final, 2023-24 Final, 2024-25 Provisional. Observation periods depend on the measure.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "coverage",
+            "relationship": "new",
+            "question": "Which years do you have?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Which years do you have?",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "releases",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "observation",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "dataset"
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "operation": "releases",
+        "scope": {
+          "measure_ids": [],
+          "field_record_ids": [],
+          "institutions": [],
+          "topic": "",
+          "time_basis": "observation"
+        },
+        "time_basis": "source_release",
+        "requested_periods": [],
+        "loaded_release_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "status": "answered",
+        "available_periods": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "limits": [
+          "This describes the supplied local files, not whether IPEDS has published other data."
+        ]
+      },
+      "seconds": 4.528703600051813
+    },
+    {
+      "case": "fresh_sonnet",
+      "passed": true,
+      "checks": {
+        "coverage_route": true,
+        "coverage_answer": true,
+        "no_discovery_dump": true,
+        "no_statistical_planner": true
+      },
+      "message": "Loaded source releases: 2015-16 Final, 2016-17 Final, 2017-18 Final, 2018-19 Final, 2019-20 Final, 2020-21 Final, 2021-22 Final, 2022-23 Final, 2023-24 Final, 2024-25 Provisional. Observation periods depend on the measure.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "coverage",
+            "relationship": "new",
+            "question": "Which years do you have?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Which years do you have?",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "releases",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "observation",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "dataset"
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "operation": "releases",
+        "scope": {
+          "measure_ids": [],
+          "field_record_ids": [],
+          "institutions": [],
+          "topic": "",
+          "time_basis": "observation"
+        },
+        "time_basis": "source_release",
+        "requested_periods": [],
+        "loaded_release_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "status": "answered",
+        "available_periods": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "limits": [
+          "This describes the supplied local files, not whether IPEDS has published other data."
+        ]
+      },
+      "seconds": 2.122379899956286
+    },
+    {
+      "case": "detailed_variables",
+      "passed": true,
+      "routes": [
+        "discovery"
+      ],
+      "expected": "discovery",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "discovery",
+            "relationship": "new",
+            "question": "What data do you have on staff occupational categories?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Which source variables describe staff occupational categories?",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "none",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "observation",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "none",
+              "scope_mode": "context"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "definition",
+      "passed": true,
+      "routes": [
+        "definition"
+      ],
+      "expected": "definition",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "definition",
+            "relationship": "new",
+            "question": "What does the variable SAOUTLT mean?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "meaning",
+              "terms": [
+                "SAOUTLT"
+              ],
+              "years": []
+            },
+            "id": "t1",
+            "request": "What does the variable SAOUTLT mean?",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "none",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "observation",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "context"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "calls": [
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 5858,
+      "output_tokens": 722,
+      "cache_creation_input_tokens": 5106,
+      "cache_read_input_tokens": 0,
+      "estimated_api_usd": 0.0015850500000000002
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 6831,
+      "output_tokens": 760,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5106,
+      "estimated_api_usd": 0.00111416
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 6519,
+      "output_tokens": 525,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5106,
+      "estimated_api_usd": 0.00096546
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 6080,
+      "output_tokens": 751,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5106,
+      "estimated_api_usd": 0.00103456
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 6080,
+      "output_tokens": 555,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5106,
+      "estimated_api_usd": 0.0009365599999999999
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 7597,
+      "output_tokens": 688,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5106,
+      "estimated_api_usd": 0.00115476
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 5858,
+      "output_tokens": 290,
+      "cache_creation_input_tokens": 5106,
+      "cache_read_input_tokens": 0,
+      "estimated_api_usd": 0.027381
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 5866,
+      "output_tokens": 788,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5106,
+      "estimated_api_usd": 0.00103166
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 5866,
+      "output_tokens": 592,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5106,
+      "estimated_api_usd": 0.0009336600000000001
+    }
+  ],
+  "estimated_api_usd": 0.03613687
+}

@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "checks": {
+    "What is the definition of instructional staff? / definition route": true,
+    "What is the definition of instructional staff? / supported status": true,
+    "What is the definition of instructional staff? / source 137688": true,
+    "What does UNITID mean? / definition route": true,
+    "What does UNITID mean? / supported status": true,
+    "What does UNITID mean? / source 135842": true,
+    "Define graduation rate / definition route": true,
+    "Define graduation rate / supported status": true,
+    "Define graduation rate / source 136963": true,
+    "How is full-time undergraduate enrollment defined? / definition route": true,
+    "How is full-time undergraduate enrollment defined? / supported status": true,
+    "How is full-time undergraduate enrollment defined? / source 136540": true,
+    "What is faculty? / definition route": true,
+    "What is faculty? / supported status": true,
+    "What is faculty? / source 137674": true,
+    "What does SAL2023_IS.SAOUTLT mean? / definition route": true,
+    "What does SAL2023_IS.SAOUTLT mean? / supported status": true,
+    "What does SAL2023_IS.SAOUTLT mean? / source 122411": true,
+    "What is admission rate? / definition route": true,
+    "What is admission rate? / supported status": true,
+    "What is admission rate? / source 136224": true,
+    "What is admission rate? / source 136225": true,
+    "Define quantum banana index / definition route": true,
+    "Define quantum banana index / supported status": true,
+    "Instructional functions retained": true,
+    "No unrelated salary-outlay passage": true,
+    "Faculty designation distinct": true,
+    "Graduation cohort population retained": true,
+    "Generic graduation not bound to reviewed six-year default": true,
+    "Reviewed rate coherent": true,
+    "Explicit salary release retained": true
+  },
+  "questions": 8,
+  "source_passages_verified": 8,
+  "final_case_origins": [
+    "definition_questions_live_refined.json",
+    "definition_questions_graduation_recheck.json",
+    "definition_questions_reviewed_rate_recheck.json"
+  ],
+  "median_supported_seconds": 5.605183799983934,
+  "supported_range_seconds": [
+    0.047357300063595176,
+    15.377669999958016
+  ],
+  "estimated_final_case_api_usd": 0.069386,
+  "scope": "Final accepted cases combine the refined suite with explicitly preserved targeted rechecks. Timing/cost exclude earlier attempts and browser rendering."
+}

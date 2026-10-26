@@ -1,0 +1,62 @@
+{
+  "measure_id": "undergraduate_grant_aid_percent",
+  "display_name": "Percentage of undergraduates receiving grants or scholarships",
+  "status": "illustrative_draft_not_approved_for_runtime",
+  "definition": "Percentage of all undergraduate students awarded grant or scholarship aid from federal, state/local, institutional, or other sources known to the institution.",
+  "unit": "percent_0_to_100",
+  "population": "All undergraduates in the financial-aid reporting population",
+  "does_not_measure": "Any financial aid including loans and work-study, or exclusively Yale-funded need-based aid",
+  "institution_key": "UNITID",
+  "annual_mappings": [
+    {
+      "collection_cycle": "2015-16",
+      "aid_reporting_period": "2014-15",
+      "release": "final",
+      "database_path_relative_to_project": "IPEDS Data/IPEDS_2015-16_Final/IPEDS201516.sqlite",
+      "sqlite_copy_status": "File exists; reverify designated source-root copy before production use",
+      "table": "SFA1415_P1",
+      "percentage_column": "UAGRNTP",
+      "recipient_count_column": "UAGRNTN",
+      "population_count_column": "SCUGRAD",
+      "codebook_path_relative_to_project": "IPEDS Data/IPEDS_2015-16_Final/IPEDS201516TablesDoc.xlsx",
+      "codebook_sheet": "vartable15",
+      "percentage_definition_row": 932,
+      "physical_columns_verified_in_access": true
+    },
+    {
+      "collection_cycle": "2016-17",
+      "aid_reporting_period": "2015-16",
+      "release": "final",
+      "database_path_relative_to_project": "IPEDS Data/IPEDS_2016-17_Final/IPEDS201617.sqlite",
+      "sqlite_copy_status": "Planned output; this SQLite file has not been created",
+      "table": "SFA1516_P1",
+      "percentage_column": "UAGRNTP",
+      "recipient_count_column": "UAGRNTN",
+      "population_count_column": "SCUGRAD",
+      "codebook_path_relative_to_project": "IPEDS Data/IPEDS_2016-17_Final/IPEDS201617TablesDoc.xlsx",
+      "codebook_sheet": "vartable16",
+      "percentage_definition_row": 1591,
+      "physical_columns_verified_in_access": true
+    }
+  ],
+  "comparability": {
+    "status": "pending_full_review",
+    "finding": "The same named measure and physical columns are present in both releases. This example does not certify every aspect of longitudinal comparability.",
+    "required_checks": [
+      "Confirm population and grant/scholarship coverage agree across years",
+      "Confirm annual reporting periods and denominator basis",
+      "Check institutional reporting-unit changes",
+      "Check missing/suppressed values before presenting a trend"
+    ]
+  },
+  "calculation_rules": {
+    "institution_rate": "Use the published percentage; retain original rounding. A separately labeled calculation may use 100 * recipient count / population count when both counts are valid and definitions match.",
+    "aggregation": "Never sum percentages. Multi-institution aggregation requires its own validated population, reporting-unit and matched-count rules.",
+    "missing_values": "Preserve missingness; do not replace absent values with zero."
+  },
+  "provenance": {
+    "created_on": "2026-10-16",
+    "purpose": "Explain the proposed registry format to the project owner",
+    "evidence": "Annual codebooks and Access schema inspections recorded in agent-redesign/release-comparison/"
+  }
+}

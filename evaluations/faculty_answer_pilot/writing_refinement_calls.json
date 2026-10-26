@@ -1,0 +1,275 @@
+[
+  {
+    "case": "yale",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6528,
+      "output_tokens": 183,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.5231042999657802,
+      "estimated_api_usd": 0.014886,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "all_staff_faculty_status",
+        "explanation": "The first group counts everyone designated as faculty, whatever their job category, including research and public service roles. The second counts only faculty whose job is instructional, so it is a narrower, overlapping group.",
+        "evidence_ids": [
+          149286,
+          149288,
+          149318
+        ]
+      }
+    ]
+  },
+  {
+    "case": "yale_paraphrase",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6579,
+      "output_tokens": 189,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.523968900030013,
+      "estimated_api_usd": 0.015048,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "all_staff_faculty_status",
+        "explanation": "The first group counts everyone designated as faculty, whatever their main job. The second is narrower, covering only faculty whose work is classed as instruction, so it leaves out faculty in other roles such as research or public service.",
+        "evidence_ids": [
+          149286,
+          149288,
+          149318
+        ]
+      }
+    ]
+  },
+  {
+    "case": "harvard",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6535,
+      "output_tokens": 187,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 4.127045699977316,
+      "estimated_api_usd": 0.01494,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "all_staff_faculty_status",
+        "explanation": "The first counts everyone with faculty status across all job categories. The second counts only those with faculty status who work in instructional roles. The definitions differ even though the reported counts match, and they overlap rather than add together.",
+        "evidence_ids": [
+          149286,
+          149288,
+          149318
+        ]
+      }
+    ]
+  },
+  {
+    "case": "smith",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6511,
+      "output_tokens": 176,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.2472574000130408,
+      "estimated_api_usd": 0.014782,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "all_staff_faculty_status",
+        "explanation": "The first view counts everyone with faculty status across all job categories. The second narrows that group to instructional staff, so it is a related, overlapping subset rather than a separate group.",
+        "evidence_ids": [
+          149286,
+          149288,
+          149318
+        ]
+      }
+    ]
+  },
+  {
+    "case": "southern",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6555,
+      "output_tokens": 177,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.2292747999890707,
+      "estimated_api_usd": 0.01488,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "all_staff_faculty_status",
+        "explanation": "The first group counts everyone with faculty status in any job category. The second counts only those with faculty status whose work is instruction, so it is a narrower, overlapping group within the first.",
+        "evidence_ids": [
+          149286,
+          149288,
+          149318
+        ]
+      }
+    ]
+  },
+  {
+    "case": "historical",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6516,
+      "output_tokens": 183,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.180917199992109,
+      "estimated_api_usd": 0.014862,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "all_occupations_faculty_status",
+        "explanation": "The first group counts everyone with faculty status across all job categories. The second is narrower, counting only those with faculty status whose job category is instruction, so it overlaps with the first and is not additional.",
+        "evidence_ids": [
+          89010,
+          89012,
+          89042
+        ]
+      }
+    ]
+  },
+  {
+    "case": "fulltime_nonmedical",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6485,
+      "output_tokens": 186,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.164412300044205,
+      "estimated_api_usd": 0.01483,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "all_staff_faculty_status",
+        "explanation": "The first group counts everyone with faculty status across all job categories, including research and public service roles. The second counts only those with faculty status whose work is classified as instructional, so it is a narrower, overlapping group.",
+        "evidence_ids": [
+          149286,
+          149288,
+          149318
+        ]
+      }
+    ]
+  },
+  {
+    "case": "parttime",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6430,
+      "output_tokens": 175,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.2305305999470875,
+      "estimated_api_usd": 0.01461,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "all_faculty_status",
+        "explanation": "The first group covers everyone with faculty status in any job category. The second is narrower, counting only those whose work is classed as instructional, so it sits inside the first and the counts differ.",
+        "evidence_ids": [
+          149286,
+          149288,
+          149318
+        ]
+      }
+    ]
+  },
+  {
+    "case": "explicit_all",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6371,
+      "output_tokens": 173,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.8735314000514336,
+      "estimated_api_usd": 0.014472,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "all_occupations_faculty_status",
+        "explanation": "This group counts every employee the university identifies as having faculty status, across all occupation categories, rather than only instructional staff or the wider workforce that includes people without faculty status.",
+        "evidence_ids": [
+          149286,
+          149318
+        ]
+      }
+    ]
+  },
+  {
+    "case": "instructional_staff",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6534,
+      "output_tokens": 184,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.336508899985347,
+      "estimated_api_usd": 0.014908,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "instructional_all",
+        "explanation": "The first count covers all instructional staff regardless of faculty standing. The second covers only those instructional staff who hold faculty status. The counts match, but the definitions still differ, and the second group is a subset of the first.",
+        "evidence_ids": [
+          149288,
+          149317,
+          149318
+        ]
+      }
+    ]
+  },
+  {
+    "case": "instructional_faculty",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6369,
+      "output_tokens": 168,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 2.222299600020051,
+      "estimated_api_usd": 0.014418,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "instructional_with_faculty_status",
+        "explanation": "This population counts only staff whose main job is teaching and who the university formally designates as faculty. It leaves out other employees and instructional staff without faculty status.",
+        "evidence_ids": [
+          149288,
+          149318
+        ]
+      }
+    ]
+  }
+]

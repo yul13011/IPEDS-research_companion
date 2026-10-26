@@ -1,0 +1,3 @@
+{"id": "calendar", "seconds": 33.66, "intent": "analyze", "message": "Smith College \u2014 Calendar system: Semester (Academic year 2024-25)."}
+{"id": "calendar_followup", "seconds": 10.14, "intent": "analyze", "message": "Mount Holyoke College \u2014 Calendar system: Semester (Academic year 2024-25)."}
+{"id": "mixed", "seconds": 14.06, "intent": "analyze", "message": "Smith College \u2014 Calendar system: Semester (Academic year 2024-25); Smith College \u2014 Percent indicator of undergraduates formally registered as students with disabilities: More than 3 percent (Fall 2023); Smith College \u2014 Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent: 38.00% (Fall 2023)."}

@@ -1,0 +1,24 @@
+{
+  "as_of": "2026-10-19T17:31:38.081679+00:00",
+  "stage": 3,
+  "planner_tests": {
+    "run": 18,
+    "failures": 0,
+    "errors": 0
+  },
+  "existing_regression": {
+    "run": 20,
+    "failures": 0,
+    "errors": 0
+  },
+  "model_transport": "mocked; no live API calls",
+  "numerical_coverage": "Existing 36 reviewed measures execute. Catalog-discovered plans are proposed only, execution_approved=false.",
+  "source_scope": "All supplied IPEDS Data releases and codebooks, via the analytical catalog.",
+  "input_needed_from_owner": false,
+  "next_stage": "4: semantic validation, controlled compilation/execution and dynamic results",
+  "limits": [
+    "Not a live-model accuracy evaluation.",
+    "Existing Yale benchmark: 229 matches / 13 retained mismatches.",
+    "Unfamiliar-plan question coverage, units, populations, time, missingness, aggregation and comparability require semantic validation before execution."
+  ]
+}

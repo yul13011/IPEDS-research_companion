@@ -1,0 +1,168 @@
+[
+  {
+    "round": 1,
+    "question": "For Yale University, calculate the weighted average nine-month salary of full-time nonmedical instructional staff across professor, associate professor and assistant professor ranks in the 2024-25 release. Weight each rank's nine-month average salary by its nine-month staff count. Exclude all other ranks and the all-ranks total.",
+    "plan": {
+      "version": 2,
+      "institutions": [
+        "130794"
+      ],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "s",
+          "year": 2024,
+          "table": "SAL2024_IS",
+          "field_record_ids": [
+            137727,
+            137694
+          ],
+          "filters": [
+            {
+              "record_id": 137684,
+              "operator": "in",
+              "values": [
+                "1",
+                "2",
+                "3"
+              ],
+              "code_record_ids": [
+                148747,
+                148748,
+                148749
+              ]
+            }
+          ],
+          "group_by_record_ids": [
+            137684
+          ],
+          "aggregates": []
+        }
+      ],
+      "joins": [],
+      "expressions": [
+        {
+          "id": "wavg",
+          "operator": "weighted_mean",
+          "inputs": [
+            "fs_137727",
+            "fs_137694"
+          ],
+          "group_by_references": []
+        }
+      ],
+      "outputs": [
+        {
+          "reference": "xwavg",
+          "label": "Weighted average 9-month salary, full-time nonmedical instructional staff (professor, associate, assistant), Yale, 2024-25"
+        }
+      ],
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "Weighted mean of each rank's 9-month average salary (all genders) weighted by that rank's 9-month staff count.",
+        "Only ranks professor (1), associate professor (2), assistant professor (3); all-ranks total (7), instructor, lecturer and no-rank excluded.",
+        "Covers staff on 9-month contracts only, not equated 9-month salaries.",
+        "Academic year 2024-25 release, staff as of November 1, 2024."
+      ],
+      "clarification_questions": []
+    }
+  },
+  {
+    "round": 2,
+    "question": "For Yale University, calculate the weighted average nine-month salary of full-time nonmedical instructional staff across professor, associate professor and assistant professor ranks in the 2024-25 release. Weight each rank's nine-month average salary by its nine-month staff count. Exclude all other ranks and the all-ranks total.",
+    "plan": {
+      "version": 2,
+      "institutions": [
+        "130794"
+      ],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "s",
+          "year": 2024,
+          "table": "SAL2024_IS",
+          "field_record_ids": [
+            137728,
+            137694
+          ],
+          "filters": [
+            {
+              "record_id": 137684,
+              "operator": "in",
+              "values": [
+                "1",
+                "2",
+                "3"
+              ],
+              "code_record_ids": [
+                148747,
+                148748,
+                148749
+              ]
+            }
+          ],
+          "group_by_record_ids": [
+            137684
+          ],
+          "aggregates": []
+        }
+      ],
+      "joins": [],
+      "expressions": [
+        {
+          "id": "prod",
+          "operator": "multiply",
+          "inputs": [
+            "fs_137728",
+            "fs_137694"
+          ],
+          "group_by_references": []
+        },
+        {
+          "id": "num",
+          "operator": "sum",
+          "inputs": [
+            "xprod"
+          ],
+          "group_by_references": []
+        },
+        {
+          "id": "den",
+          "operator": "sum",
+          "inputs": [
+            "fs_137694"
+          ],
+          "group_by_references": []
+        },
+        {
+          "id": "wavg",
+          "operator": "divide",
+          "inputs": [
+            "xnum",
+            "xden"
+          ],
+          "group_by_references": []
+        }
+      ],
+      "outputs": [
+        {
+          "reference": "xwavg",
+          "label": "Staff-weighted average 9-month salary, full-time nonmedical instructional staff (professor, associate, assistant), Yale, 2024-25"
+        }
+      ],
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "Weighted average = sum over ranks of (9-month average salary SA09MAT x 9-month staff count SA09MCT) divided by sum of SA09MCT, for Professor, Associate professor and Assistant professor only.",
+        "Excludes Instructor, Lecturer, No academic rank and the all-ranks total.",
+        "Covers only staff on 9-month contracts; period is academic year 2024-25."
+      ],
+      "clarification_questions": []
+    }
+  }
+]

@@ -1,0 +1,1624 @@
+{
+  "scope": "Completed live comparison.",
+  "expected_per_model": 52,
+  "models": [
+    {
+      "model": "claude-haiku-5-5",
+      "completed": 52,
+      "passed": 46,
+      "unavailable": 0,
+      "median_seconds": 8.128,
+      "matched_success_median_seconds": 7.366,
+      "estimated_completed_task_usd": 0.109344265,
+      "narratives_accepted": 0,
+      "narratives_attempted": 4,
+      "interpretation_retries": 0,
+      "completed_cases": [
+        {
+          "case": "greeting",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "definition",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "discovery",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "admissions",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "yield_followup",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "cohort_trend",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "services",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ma_distance",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "axis_reset",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "compound_style",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ambiguous_aid",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "weighted_salary",
+          "round": 1,
+          "passed": false
+        },
+        {
+          "case": "mixed",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "greeting__help",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "definition__long_release",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "discovery__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "admissions__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "yield_followup__variation",
+          "round": 1,
+          "passed": false
+        },
+        {
+          "case": "cohort_trend__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "services__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ma_distance__california",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "axis_reset__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "compound_style__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ambiguous_aid__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "weighted_salary__male",
+          "round": 1,
+          "passed": false
+        },
+        {
+          "case": "mixed__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "greeting",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "definition",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "discovery",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "admissions",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "yield_followup",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "cohort_trend",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "services",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "ma_distance",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "axis_reset",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "compound_style",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "ambiguous_aid",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "weighted_salary",
+          "round": 2,
+          "passed": false
+        },
+        {
+          "case": "mixed",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "greeting__help",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "definition__long_release",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "discovery__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "admissions__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "yield_followup__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "cohort_trend__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "services__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "ma_distance__california",
+          "round": 2,
+          "passed": false
+        },
+        {
+          "case": "axis_reset__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "compound_style__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "ambiguous_aid__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "weighted_salary__male",
+          "round": 2,
+          "passed": false
+        },
+        {
+          "case": "mixed__variation",
+          "round": 2,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "completed": 52,
+      "passed": 49,
+      "unavailable": 0,
+      "median_seconds": 7.79,
+      "matched_success_median_seconds": 6.83,
+      "estimated_completed_task_usd": 1.5762563,
+      "narratives_accepted": 4,
+      "narratives_attempted": 4,
+      "interpretation_retries": 0,
+      "completed_cases": [
+        {
+          "case": "greeting",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "definition",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "discovery",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "admissions",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "yield_followup",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "cohort_trend",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "services",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ma_distance",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "axis_reset",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "compound_style",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ambiguous_aid",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "weighted_salary",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "mixed",
+          "round": 1,
+          "passed": false
+        },
+        {
+          "case": "greeting__help",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "definition__long_release",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "discovery__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "admissions__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "yield_followup__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "cohort_trend__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "services__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ma_distance__california",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "axis_reset__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "compound_style__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ambiguous_aid__variation",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "weighted_salary__male",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "mixed__variation",
+          "round": 1,
+          "passed": false
+        },
+        {
+          "case": "greeting",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "definition",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "discovery",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "admissions",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "yield_followup",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "cohort_trend",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "services",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "ma_distance",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "axis_reset",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "compound_style",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "ambiguous_aid",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "weighted_salary",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "mixed",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "greeting__help",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "definition__long_release",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "discovery__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "admissions__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "yield_followup__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "cohort_trend__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "services__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "ma_distance__california",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "axis_reset__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "compound_style__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "ambiguous_aid__variation",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "weighted_salary__male",
+          "round": 2,
+          "passed": true
+        },
+        {
+          "case": "mixed__variation",
+          "round": 2,
+          "passed": false
+        }
+      ]
+    }
+  ],
+  "narrative_settings": [
+    {
+      "configuration": "haiku_current",
+      "completed": 6,
+      "accepted": 2,
+      "unavailable": 0,
+      "median_seconds": 16.128500000000003,
+      "estimated_usd": 0.0271838,
+      "rejections": [
+        {
+          "topic": "graduation rates",
+          "reason": "No complete structured discovery narrative."
+        },
+        {
+          "topic": "graduation rates",
+          "reason": "No complete structured discovery narrative."
+        },
+        {
+          "topic": "admissions",
+          "reason": "Technical dates or formatting in narrative."
+        },
+        {
+          "topic": "admissions",
+          "reason": "No complete structured discovery narrative."
+        }
+      ]
+    },
+    {
+      "configuration": "haiku_larger",
+      "completed": 6,
+      "accepted": 3,
+      "unavailable": 0,
+      "median_seconds": 20.588,
+      "estimated_usd": 0.0334773,
+      "rejections": [
+        {
+          "topic": "faculty",
+          "reason": "Unsupported universal or equivalence claim."
+        },
+        {
+          "topic": "graduation rates",
+          "reason": "Narrative number lacks cited support."
+        },
+        {
+          "topic": "admissions",
+          "reason": "No complete structured discovery narrative."
+        }
+      ]
+    },
+    {
+      "configuration": "haiku_no_reasoning",
+      "completed": 6,
+      "accepted": 1,
+      "unavailable": 0,
+      "median_seconds": 5.144500000000001,
+      "estimated_usd": 0.02117587,
+      "rejections": [
+        {
+          "topic": "faculty",
+          "reason": "Unsupported universal or equivalence claim."
+        },
+        {
+          "topic": "graduation rates",
+          "reason": "Distinct source concepts were merged."
+        },
+        {
+          "topic": "graduation rates",
+          "reason": "Unsupported universal or equivalence claim."
+        },
+        {
+          "topic": "admissions",
+          "reason": "Invalid topic coverage."
+        },
+        {
+          "topic": "admissions",
+          "reason": "Technical dates or formatting in narrative."
+        }
+      ]
+    },
+    {
+      "configuration": "sonnet_current",
+      "completed": 6,
+      "accepted": 4,
+      "unavailable": 0,
+      "median_seconds": 7.449,
+      "estimated_usd": 0.407741,
+      "rejections": [
+        {
+          "topic": "admissions",
+          "reason": "Overview exceeds the total reading budget."
+        },
+        {
+          "topic": "admissions",
+          "reason": "Overview exceeds the total reading budget."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Unavailable provider requests are excluded from model accuracy and latency.",
+    "Narratives use identical deterministic evidence per topic; this differs from live model-expanded discovery.",
+    "Main-run scope failures preceded a verified-name/ID annotation repair; post-fix targeted results are separate, not substituted into the original scores.",
+    "One paired SQLite timeout coincided with concurrent offline regressions; isolated follow-ups must be read separately from the main results.",
+    "A small repeated workload does not establish general model superiority or production reliability."
+  ],
+  "failures": [
+    {
+      "case": "weighted_salary",
+      "round": 1,
+      "model": "claude-haiku-5-5",
+      "checks": {
+        "one_value": false,
+        "exact_weighted_mean": false,
+        "release": false,
+        "seed_unchanged": true
+      },
+      "message": "The query could not be validated: A population query cannot also contain named institutions.",
+      "error": null,
+      "rows": []
+    },
+    {
+      "case": "yield_followup__variation",
+      "round": 1,
+      "model": "claude-haiku-5-5",
+      "checks": null,
+      "message": null,
+      "error": "Documentation parameters were attached to an incompatible route.",
+      "rows": null
+    },
+    {
+      "case": "weighted_salary__male",
+      "round": 1,
+      "model": "claude-haiku-5-5",
+      "checks": {
+        "one_value": false,
+        "exact_weighted_mean": false,
+        "release": false,
+        "seed_unchanged": true
+      },
+      "message": "The query could not be validated: A population query cannot also contain named institutions.",
+      "error": null,
+      "rows": []
+    },
+    {
+      "case": "weighted_salary",
+      "round": 2,
+      "model": "claude-haiku-5-5",
+      "checks": null,
+      "message": null,
+      "error": "Documentation parameters were attached to an incompatible route.",
+      "rows": null
+    },
+    {
+      "case": "ma_distance__california",
+      "round": 2,
+      "model": "claude-haiku-5-5",
+      "checks": {
+        "typed": false,
+        "exact_institution_set": false,
+        "release": false,
+        "seed_unchanged": true
+      },
+      "message": "I could not validate the requested source observations. No partial answer was published. The observation plan omits requested source concepts in 2024: DSTNUGC",
+      "error": null,
+      "rows": []
+    },
+    {
+      "case": "weighted_salary__male",
+      "round": 2,
+      "model": "claude-haiku-5-5",
+      "checks": {
+        "one_value": false,
+        "exact_weighted_mean": false,
+        "release": false,
+        "seed_unchanged": true
+      },
+      "message": "The query could not be validated: A population query cannot also contain named institutions.",
+      "error": null,
+      "rows": []
+    },
+    {
+      "case": "mixed",
+      "round": 1,
+      "model": "claude-sonnet-5-5",
+      "checks": {
+        "two_institutions": false,
+        "values": false,
+        "blue": false,
+        "seed_unchanged": true
+      },
+      "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+      "error": null,
+      "rows": []
+    },
+    {
+      "case": "mixed__variation",
+      "round": 1,
+      "model": "claude-sonnet-5-5",
+      "checks": {
+        "two_institutions": false,
+        "values": false,
+        "blue": false,
+        "seed_unchanged": true
+      },
+      "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+      "error": null,
+      "rows": []
+    },
+    {
+      "case": "mixed__variation",
+      "round": 2,
+      "model": "claude-sonnet-5-5",
+      "checks": {
+        "two_institutions": false,
+        "values": false,
+        "blue": false,
+        "seed_unchanged": true
+      },
+      "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+      "error": null,
+      "rows": []
+    }
+  ],
+  "grading_corrections": [
+    {
+      "model": "claude-haiku-5-5",
+      "round": 1,
+      "case": "compound_style__variation",
+      "check": "color",
+      "value": "#ff0000",
+      "reason": "CSS color name and its exact six-digit hexadecimal equivalent are identical."
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "round": 2,
+      "case": "yield_followup__variation",
+      "reason": "Requested yield/count are correct; the only extra row is the independently verified admitted denominator."
+    }
+  ],
+  "matched_successful_pairs": 43,
+  "complete": true,
+  "automatic_comparison": {
+    "expected_per_model": 52,
+    "models": [
+      {
+        "model": "automatic",
+        "completed": 52,
+        "passed": 51,
+        "unavailable": 0,
+        "median_seconds": 9.343,
+        "matched_success_median_seconds": 9.343,
+        "estimated_completed_task_usd": 0.99389371,
+        "narratives_accepted": 4,
+        "narratives_attempted": 4,
+        "interpretation_retries": 2,
+        "completed_cases": [
+          {
+            "case": "greeting",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "definition",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "discovery",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "admissions",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "yield_followup",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "cohort_trend",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "services",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "ma_distance",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "axis_reset",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "compound_style",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "ambiguous_aid",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "weighted_salary",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "greeting__help",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "definition__long_release",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "discovery__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "admissions__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "yield_followup__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "cohort_trend__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "services__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "ma_distance__california",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "axis_reset__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "compound_style__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "ambiguous_aid__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "weighted_salary__male",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 1,
+            "passed": false
+          },
+          {
+            "case": "greeting",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "definition",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "discovery",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "admissions",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "yield_followup",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "cohort_trend",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "services",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "ma_distance",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "axis_reset",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "compound_style",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "ambiguous_aid",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "weighted_salary",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "mixed",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "greeting__help",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "definition__long_release",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "discovery__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "admissions__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "yield_followup__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "cohort_trend__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "services__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "ma_distance__california",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "axis_reset__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "compound_style__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "ambiguous_aid__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "weighted_salary__male",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 2,
+            "passed": true
+          }
+        ]
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "completed": 52,
+        "passed": 48,
+        "unavailable": 0,
+        "median_seconds": 8.77,
+        "matched_success_median_seconds": 8.77,
+        "estimated_completed_task_usd": 1.4942905000000002,
+        "narratives_accepted": 4,
+        "narratives_attempted": 4,
+        "interpretation_retries": 0,
+        "completed_cases": [
+          {
+            "case": "greeting",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "definition",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "discovery",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "admissions",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "yield_followup",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "cohort_trend",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "services",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "ma_distance",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "axis_reset",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "compound_style",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "ambiguous_aid",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "weighted_salary",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed",
+            "round": 1,
+            "passed": false
+          },
+          {
+            "case": "greeting__help",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "definition__long_release",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "discovery__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "admissions__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "yield_followup__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "cohort_trend__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "services__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "ma_distance__california",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "axis_reset__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "compound_style__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "ambiguous_aid__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "weighted_salary__male",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 1,
+            "passed": false
+          },
+          {
+            "case": "greeting",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "definition",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "discovery",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "admissions",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "yield_followup",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "cohort_trend",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "services",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "ma_distance",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "axis_reset",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "compound_style",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "ambiguous_aid",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "weighted_salary",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "mixed",
+            "round": 2,
+            "passed": false
+          },
+          {
+            "case": "greeting__help",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "definition__long_release",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "discovery__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "admissions__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "yield_followup__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "cohort_trend__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "services__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "ma_distance__california",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "axis_reset__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "compound_style__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "ambiguous_aid__variation",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "weighted_salary__male",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 2,
+            "passed": false
+          }
+        ]
+      }
+    ],
+    "failures": [
+      {
+        "case": "mixed__variation",
+        "round": 1,
+        "model": "automatic",
+        "checks": null,
+        "message": null,
+        "error": "interrupted",
+        "rows": null
+      },
+      {
+        "case": "mixed",
+        "round": 1,
+        "model": "claude-sonnet-5-5",
+        "checks": {
+          "two_institutions": false,
+          "values": false,
+          "blue": false,
+          "seed_unchanged": true
+        },
+        "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+        "error": null,
+        "rows": []
+      },
+      {
+        "case": "mixed__variation",
+        "round": 1,
+        "model": "claude-sonnet-5-5",
+        "checks": null,
+        "message": null,
+        "error": "interrupted",
+        "rows": null
+      },
+      {
+        "case": "mixed",
+        "round": 2,
+        "model": "claude-sonnet-5-5",
+        "checks": {
+          "two_institutions": false,
+          "values": false,
+          "blue": false,
+          "seed_unchanged": true
+        },
+        "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+        "error": null,
+        "rows": []
+      },
+      {
+        "case": "mixed__variation",
+        "round": 2,
+        "model": "claude-sonnet-5-5",
+        "checks": {
+          "two_institutions": false,
+          "values": false,
+          "blue": false,
+          "seed_unchanged": true
+        },
+        "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+        "error": null,
+        "rows": []
+      }
+    ],
+    "grading_corrections": [],
+    "matched_successful_pairs": 48,
+    "complete": true
+  },
+  "model_policy_followup": {
+    "expected_per_model": 4,
+    "models": [
+      {
+        "model": "automatic",
+        "completed": 4,
+        "passed": 4,
+        "unavailable": 0,
+        "median_seconds": 9.1765,
+        "matched_success_median_seconds": null,
+        "estimated_completed_task_usd": 0.00550152,
+        "narratives_accepted": 0,
+        "narratives_attempted": 0,
+        "interpretation_retries": 0,
+        "completed_cases": [
+          {
+            "case": "mixed",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 2,
+            "passed": true
+          }
+        ]
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "completed": 4,
+        "passed": 0,
+        "unavailable": 0,
+        "median_seconds": 6.590999999999999,
+        "matched_success_median_seconds": null,
+        "estimated_completed_task_usd": 0.0715508,
+        "narratives_accepted": 0,
+        "narratives_attempted": 0,
+        "interpretation_retries": 0,
+        "completed_cases": [
+          {
+            "case": "mixed",
+            "round": 1,
+            "passed": false
+          },
+          {
+            "case": "mixed__variation",
+            "round": 1,
+            "passed": false
+          },
+          {
+            "case": "mixed",
+            "round": 2,
+            "passed": false
+          },
+          {
+            "case": "mixed__variation",
+            "round": 2,
+            "passed": false
+          }
+        ]
+      }
+    ],
+    "failures": [
+      {
+        "case": "mixed",
+        "round": 1,
+        "model": "claude-sonnet-5-5",
+        "checks": {
+          "two_institutions": false,
+          "values": false,
+          "blue": false,
+          "seed_unchanged": true
+        },
+        "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+        "error": null,
+        "rows": []
+      },
+      {
+        "case": "mixed__variation",
+        "round": 1,
+        "model": "claude-sonnet-5-5",
+        "checks": {
+          "two_institutions": false,
+          "values": false,
+          "blue": false,
+          "seed_unchanged": true
+        },
+        "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+        "error": null,
+        "rows": []
+      },
+      {
+        "case": "mixed",
+        "round": 2,
+        "model": "claude-sonnet-5-5",
+        "checks": {
+          "two_institutions": false,
+          "values": false,
+          "blue": false,
+          "seed_unchanged": true
+        },
+        "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+        "error": null,
+        "rows": []
+      },
+      {
+        "case": "mixed__variation",
+        "round": 2,
+        "model": "claude-sonnet-5-5",
+        "checks": {
+          "two_institutions": false,
+          "values": false,
+          "blue": false,
+          "seed_unchanged": true
+        },
+        "message": "The plan does not include every requested institution. Please restate which institutions to include.",
+        "error": null,
+        "rows": []
+      }
+    ],
+    "grading_corrections": [],
+    "matched_successful_pairs": 0,
+    "complete": true
+  },
+  "model_policy_annotation_fix": {
+    "expected_per_model": 4,
+    "models": [
+      {
+        "model": "automatic",
+        "completed": 4,
+        "passed": 4,
+        "unavailable": 0,
+        "median_seconds": 11.157499999999999,
+        "matched_success_median_seconds": 11.157499999999999,
+        "estimated_completed_task_usd": 0.00565362,
+        "narratives_accepted": 0,
+        "narratives_attempted": 0,
+        "interpretation_retries": 0,
+        "completed_cases": [
+          {
+            "case": "mixed",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 2,
+            "passed": true
+          }
+        ]
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "completed": 4,
+        "passed": 4,
+        "unavailable": 0,
+        "median_seconds": 8.978000000000002,
+        "matched_success_median_seconds": 8.978000000000002,
+        "estimated_completed_task_usd": 0.0717308,
+        "narratives_accepted": 0,
+        "narratives_attempted": 0,
+        "interpretation_retries": 0,
+        "completed_cases": [
+          {
+            "case": "mixed",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 1,
+            "passed": true
+          },
+          {
+            "case": "mixed",
+            "round": 2,
+            "passed": true
+          },
+          {
+            "case": "mixed__variation",
+            "round": 2,
+            "passed": true
+          }
+        ]
+      }
+    ],
+    "failures": [],
+    "grading_corrections": [],
+    "matched_successful_pairs": 4,
+    "complete": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "first_intent": "analyze",
+  "second_intent": "analyze",
+  "remembered": {
+    "unitids": [
+      130794
+    ],
+    "original_question": "Show a breakdown of Yale College's undergraduate race/ethnicity distribution in Fall 2024",
+    "original_mentions": [
+      "Yale College"
+    ],
+    "confirmed_choices": {
+      "yale college": 130794
+    },
+    "labels": [
+      "Yale University \u00b7 New Haven, CT \u00b7 UNITID 130794"
+    ]
+  },
+  "candidates": [
+    "Yale University"
+  ],
+  "latency": {
+    "validation_seconds": 0.07293300004675984,
+    "query_seconds": 0.008564500021748245,
+    "planning_and_binding_seconds": 31.245710099989083,
+    "answer_ready_seconds": 50.054005999991205,
+    "live_model_calls": 5,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+    "conversation_resolution_seconds": 3.7536514999810606,
+    "institution_resolution_seconds": 14.967207800014876
+  },
+  "wall_seconds": 67.54047260002699
+}

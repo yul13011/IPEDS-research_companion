@@ -1,0 +1,105 @@
+{
+  "scope": "Offline replay of saved live drafts through final deterministic rendering/qualifications, including the provisional-release note added after the live run. No additional model calls. Does not remeasure response latency or predict future drafts.",
+  "cases": [
+    {
+      "topic": "graduation rates",
+      "message": "Here are the main data areas found in the local IPEDS files:\n\n**Survey: Graduation Rates**\n\nReporting periods vary by data area; exact coverage is in Definitions & sources.\n\n- **Ready-made 150% graduation rates.** Derived rates for first-time, full-time students at 4-year and 2-year institutions, with race/ethnicity and gender breakdowns and transfer-out rates.\n- **Underlying 150% cohort counts.** Cohort and completer counts for 4-year and 2-year institutions, including bachelor's-seeking and other students, transfer-outs, and gender and race/ethnicity detail.\n- **Less-than-2-year institutions.** Cohort counts, exclusions, completers and transfer-outs, plus students still enrolled or no longer enrolled, for less-than-2-year institutions.\n- **Longer 200% completion windows.** Completion within 100, 150 or 200 percent of normal time: bachelor's degrees at 4-year institutions, any degree or certificate at less-than-4-year ones.\n- **Gender-unknown cohort counts.** Counts of students with unknown or another gender in revised cohorts. This table has no completion information.\n- **Pell and Stafford loan subcohorts.** Graduation data for Pell recipients, subsidized Stafford loan recipients, and students with neither, at 4-year and 2-year institutions, in the earlier loan-label series.\n- **Pell and Direct Subsidized subcohorts.** The same kind of aid-group graduation data, labeled Direct Subsidized Loan, for 4-year and 2-year institutions in the later loan-label series.\n\n**Survey: Outcome Measures**\n\nOutcome dates: August 31, 2016.\n\n- **Award and enrollment rates.** Award rates at 6 and 8 years, plus still-enrolled and enrolled-elsewhere rates, for full-time and part-time, first-time and non-first-time undergraduates at degree-granting institutions.\n\nThis is a bounded search of the local IPEDS files, not a complete inventory. Populations, coverage and definitions vary by measure and year; availability does not guarantee reported values for every institution. Entering cohorts and outcome dates are different; exact coverage is in Definitions & sources. Loan-program labels differ across years; equivalence between those source series is not assumed. Some matched records come from a provisional release; see source details.\n\nTell me the institution, measure and years you would like to explore.",
+      "metrics": {
+        "words": 311,
+        "bullets": 8,
+        "mean_bullet_words": 24.38,
+        "max_bullet_words": 28,
+        "mean_sentence_words": 18.29
+      },
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 16,
+        "points": 8,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "missing_required_qualifications": [],
+      "evidence_sha256": "614af323210ff9ff0d148b9c70883e25c2f69f8f8ed740c0e3af621dddcbe7d1"
+    },
+    {
+      "topic": "faculty",
+      "message": "Here are the main data areas found in the local IPEDS files:\n\n**Survey: Human Resources**\n\nReporting periods vary by data area; exact coverage is in Definitions & sources.\n\n- **Full-time instructional staff by rank.** Counts of full-time instructional staff by academic rank, faculty status and tenure status, for degree-granting institutions.\n- **Instructional staff by race and gender.** Full-time instructional staff counts by faculty and tenure status, rank, race/ethnicity and gender, for degree-granting institutions.\n- **Staff counts by occupation and tenure.** Staff counts by occupational category and faculty and tenure status, split by full- or part-time and medical school status where applicable.\n- **Instructional staff numbers and salary outlays.** Full-time nonmedical instructional staff counts and salary outlays by gender and academic rank, including months-worked categories.\n- **New hires by occupation and demographics.** Full-time new hires by occupation, race/ethnicity and gender, with faculty and tenure status for instructional staff, for degree-granting institutions.\n- **Noninstructional staff numbers and outlays.** Full-time nonmedical noninstructional staff counts and salary outlays by occupational category.\n- **Derived salary and staffing variables.** Ready-made average salaries equated to nine months for full-time nonmedical instructional staff by rank, plus full-time-equivalent staff by occupation.\n\n**Survey: Fall Enrollment**\n\nReporting periods: Fall 2015 through Fall 2024.\n\n- **Student-to-faculty ratio and entering class.** Student-to-faculty ratio alongside entering class size and first-year retention, for institutions with undergraduate students.\n\nThis is a bounded search of the local IPEDS files, not a complete inventory. Populations, coverage and definitions vary by measure and year; availability does not guarantee reported values for every institution. Some matched records come from a provisional release; see source details.\n\nTell me the institution, measure and years you would like to explore.",
+      "metrics": {
+        "words": 270,
+        "bullets": 8,
+        "mean_bullet_words": 22.25,
+        "max_bullet_words": 27,
+        "mean_sentence_words": 19.29
+      },
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 8,
+        "points": 8,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "missing_required_qualifications": [],
+      "evidence_sha256": "a1e57ea5220bcceea495f4166bb74af6714d0f766910651b620750e13806f40e"
+    },
+    {
+      "topic": "expenses",
+      "message": "Here are the main data areas found in the local IPEDS files:\n\n**Survey: Finance**\n\nReporting periods: Fiscal year 2015 through Fiscal year 2024.\n\n- **Institution spending by function.** Finance indicators cover core expenses by category, shares of total expenses, and expenses per full-time equivalent student. Separate indicator sets exist for different accounting standards.\n\n**Survey: Institutional Characteristics**\n\nReporting periods vary by data area; exact coverage is in Definitions & sources.\n\n- **Vocational program student charges.** Charges for programs measured in clock hours or mainly occupational programs, including price of attendance with an other-expenses estimate for the largest program.\n- **Academic year student charges.** Full academic year charges, including tuition and fees and price of attendance for full-time, first-time undergraduates, with other-expenses estimates.\n- **Branch campus cost of attendance.** Branch campus locations listed in the college search tool, with cost of attendance for branches enrolling full-time, first-time undergraduates. The list is not comprehensive.\n\n**Survey: Cost**\n\nReporting periods: Academic year 2024-25.\n\n- **Cost of attendance and student charges.** Application fees, tuition, food and housing for undergraduate and graduate students, plus cost of attendance estimates for first-time, full-time undergraduates.\n\n**Survey: Academic Libraries**\n\nReporting periods: 2015-16; 2016-17; 2017-18; 2019-20; Fiscal year 2020; Fiscal year 2021; Fiscal year 2022; Fiscal year 2023; Fiscal year 2024.\n\n- **Library expense distribution.** Library indicators include the percent distribution of library expenses by function and total library spending per full-time equivalent student, alongside collection mix.\n\nThis is a bounded search of the local IPEDS files, not a complete inventory. Populations, coverage and definitions vary by measure and year; availability does not guarantee reported values for every institution. Some matched records come from a provisional release; see source details.\n\nTell me the institution, measure and years you would like to explore.",
+      "metrics": {
+        "words": 283,
+        "bullets": 6,
+        "mean_bullet_words": 26.5,
+        "max_bullet_words": 29,
+        "mean_sentence_words": 17.69
+      },
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 6,
+        "verified_quotes": 6,
+        "points": 6,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "missing_required_qualifications": [],
+      "evidence_sha256": "df59d8ff16f202e97a01d5b689c5f068cc3e1685a1bec10e29850c1998051452"
+    },
+    {
+      "topic": "institution characteristics",
+      "message": "Here are the main data areas found in the local IPEDS files:\n\n**Survey: Institutional Characteristics**\n\nReporting periods vary by data area; exact coverage is in Definitions & sources.\n\n- **Directory information for institutions.** Look up names, locations, website links, sector, control and level, and Carnegie classifications. Active status is also flagged in this directory.\n- **Mission statements, first series.** Find each institution's mission statement text or a web address pointing to it, in one group of years.\n- **Mission statements, second series.** A separate mission statement table gives the statement or a web link to it for one year.\n- **Mission statements, third series.** Another separate mission statement table gives the statement or its web address for one year.\n- **Mission statements, fourth series.** One more mission statement table offers the statement or a link to it for a single year.\n- **Mission statements, fifth series.** A further mission statement table provides the statement or its web address for one year.\n- **Mission statements, sixth series.** Another mission statement table lists the statement or a web link for one year.\n- **Mission statements, seventh series.** The latest mission statement table gives the statement or a web address for one year.\n\nThis is a bounded search of the local IPEDS files, not a complete inventory. Populations, coverage and definitions vary by measure and year; availability does not guarantee reported values for every institution. Some source series remain separate because their definitions or structures differ. Some matched records come from a provisional release; see source details.\n\nTell me the institution, measure and years you would like to explore.",
+      "metrics": {
+        "words": 257,
+        "bullets": 8,
+        "mean_bullet_words": 20.5,
+        "max_bullet_words": 25,
+        "mean_sentence_words": 17.13
+      },
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 9,
+        "points": 8,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "missing_required_qualifications": [],
+      "evidence_sha256": "46231704980ed9f11e88b6e9f49fb62547719d7bfd82dc567804f9464e83e5bc"
+    },
+    {
+      "topic": "academic libraries",
+      "message": "Here are the main data areas found in the local IPEDS files:\n\n**Survey: Academic Libraries**\n\nReporting periods: 2015-16; 2016-17; 2017-18; 2019-20; Fiscal year 2020; Fiscal year 2021; Fiscal year 2022; Fiscal year 2023; Fiscal year 2024.\n\n- **Library characteristics, collections and services.** Covers library characteristics, collections, expenditures and services for degree-granting institutions. Expenditure data apply to those with higher total expenditures.\n- **Library collection and spending indicators.** Derived indicators show how the collection splits by material type, how expenses split by function, and library spending per full-time-equivalent enrollment.\n\n**Survey: Human Resources**\n\nReporting periods vary by data area; exact coverage is in Definitions & sources.\n\n- **Instructional staff pay by rank and gender.** Counts and salary outlays for full-time nonmedical instructional staff, by academic rank and gender, with months-worked categories.\n- **Noninstructional staff, including librarians.** Counts and salary outlays for full-time nonmedical noninstructional staff by occupation, including a librarian-related category.\n- **Instructional staff by rank and tenure.** Counts of full-time instructional staff by academic rank, faculty and tenure status at degree-granting institutions.\n- **Instructional staff by race and gender.** Counts of full-time instructional staff by faculty and tenure status, rank, race/ethnicity and gender at degree-granting institutions.\n\n**Survey: Institutional Characteristics**\n\nReporting periods: Academic year 2015-16 through Academic year 2023-24.\n\n- **Academic-year student charges.** Tuition, required fees and per credit hour charges for a full academic year, for institutions reporting academic-year charges.\n\n**Survey: Cost**\n\nReporting periods: Academic year 2024-25.\n\n- **Total cost of attendance.** Derived total cost for full-time, first-time degree-seeking undergraduates, by residency and housing plan, for institutions charging by academic year.\n\nThis is a bounded search of the local IPEDS files, not a complete inventory. Populations, coverage and definitions vary by measure and year; availability does not guarantee reported values for every institution. Some matched records come from a provisional release; see source details.\n\nTell me the institution, measure and years you would like to explore.",
+      "metrics": {
+        "words": 307,
+        "bullets": 8,
+        "mean_bullet_words": 22.75,
+        "max_bullet_words": 26,
+        "mean_sentence_words": 18.06
+      },
+      "validation": {
+        "status": "accepted",
+        "topic_coverage": 8,
+        "verified_quotes": 11,
+        "points": 8,
+        "limits": "References, quotes, numeric support and topic coverage checked in code; these do not prove semantic entailment of every paraphrase."
+      },
+      "missing_required_qualifications": [],
+      "evidence_sha256": "9e426daa3c14575bae713bc51576a3823560bb3ebb5f4f1b924e8931211eb52d"
+    }
+  ]
+}

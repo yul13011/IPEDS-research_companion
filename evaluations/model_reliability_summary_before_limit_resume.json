@@ -1,0 +1,213 @@
+{
+  "scope": "Partial live comparison; Anthropic account usage limit prevented completion.",
+  "expected_per_model": 52,
+  "models": [
+    {
+      "model": "claude-haiku-5-5",
+      "completed": 10,
+      "passed": 10,
+      "unavailable": 42,
+      "median_seconds": 10.374500000000001,
+      "estimated_completed_task_usd": 0.02116299,
+      "completed_cases": [
+        {
+          "case": "greeting",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "definition",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "discovery",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "admissions",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "yield_followup",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "cohort_trend",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "services",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ma_distance",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "axis_reset",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "compound_style",
+          "round": 1,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "completed": 10,
+      "passed": 10,
+      "unavailable": 42,
+      "median_seconds": 10.822,
+      "estimated_completed_task_usd": 0.3752515,
+      "completed_cases": [
+        {
+          "case": "greeting",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "definition",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "discovery",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "admissions",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "yield_followup",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "cohort_trend",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "services",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "ma_distance",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "axis_reset",
+          "round": 1,
+          "passed": true
+        },
+        {
+          "case": "compound_style",
+          "round": 1,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "narrative_settings": [
+    {
+      "configuration": "haiku_current",
+      "completed": 5,
+      "accepted": 2,
+      "unavailable": 1,
+      "median_seconds": 15.974,
+      "estimated_usd": 0.02390896,
+      "rejections": [
+        {
+          "topic": "graduation rates",
+          "reason": "No complete structured discovery narrative."
+        },
+        {
+          "topic": "graduation rates",
+          "reason": "No complete structured discovery narrative."
+        },
+        {
+          "topic": "admissions",
+          "reason": "Technical dates or formatting in narrative."
+        }
+      ]
+    },
+    {
+      "configuration": "haiku_larger",
+      "completed": 5,
+      "accepted": 2,
+      "unavailable": 1,
+      "median_seconds": 23.862,
+      "estimated_usd": 0.0297181,
+      "rejections": [
+        {
+          "topic": "faculty",
+          "reason": "Unsupported universal or equivalence claim."
+        },
+        {
+          "topic": "graduation rates",
+          "reason": "Narrative number lacks cited support."
+        },
+        {
+          "topic": "admissions",
+          "reason": "No complete structured discovery narrative."
+        }
+      ]
+    },
+    {
+      "configuration": "haiku_no_reasoning",
+      "completed": 4,
+      "accepted": 1,
+      "unavailable": 2,
+      "median_seconds": 5.144500000000001,
+      "estimated_usd": 0.016721465,
+      "rejections": [
+        {
+          "topic": "faculty",
+          "reason": "Unsupported universal or equivalence claim."
+        },
+        {
+          "topic": "graduation rates",
+          "reason": "Distinct source concepts were merged."
+        },
+        {
+          "topic": "graduation rates",
+          "reason": "Unsupported universal or equivalence claim."
+        }
+      ]
+    },
+    {
+      "configuration": "sonnet_current",
+      "completed": 5,
+      "accepted": 4,
+      "unavailable": 1,
+      "median_seconds": 7.492,
+      "estimated_usd": 0.3677307,
+      "rejections": [
+        {
+          "topic": "admissions",
+          "reason": "Overview exceeds the total reading budget."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No automatic-policy live qualification was completed.",
+    "Unavailable provider requests are excluded from model accuracy and latency.",
+    "Narratives use identical deterministic evidence per topic; this differs from live model-expanded discovery."
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "topics": [
+    {
+      "id": "admissions",
+      "title": "Getting in",
+      "subtitle": "Admissions",
+      "icon": "🎓",
+      "summary": "Applicants, offers, first-year enrollment, and test scores.",
+      "description": "Explore how many students apply, receive admission offers, and enroll. Compare admission and yield rates, and discover available SAT and ACT score statistics.",
+      "scope": "The loaded admissions data cover first-time, degree/certificate-seeking undergraduates at institutions without open admission, for Fall 2015–2024. Graduate admissions are not included in these tables. Reported SAT section medians are available from Fall 2022 where institutions report them.",
+      "families": [
+        "admissions",
+        "sat"
+      ],
+      "discovery_query": "admissions test scores",
+      "examples": [
+        {
+          "id": "admissions-point",
+          "kind": "analyze",
+          "purpose": "One data point",
+          "question": "What was Yale’s admission rate in fall 2024?",
+          "plan": {
+            "metrics": [
+              "applicants",
+              "admits",
+              "admission_rate"
+            ],
+            "institutions": [
+              "Yale"
+            ],
+            "years": [
+              2024
+            ],
+            "output": "table"
+          }
+        },
+        {
+          "id": "admissions-compare",
+          "kind": "analyze",
+          "purpose": "Compare institutions",
+          "question": "Compare Ivy League admission rates in fall 2024.",
+          "plan": {
+            "metrics": [
+              "admission_rate"
+            ],
+            "institutions": [
+              "Ivy League"
+            ],
+            "years": [
+              2024
+            ],
+            "output": "table"
+          }
+        },
+        {
+          "id": "admissions-trend",
+          "kind": "analyze",
+          "purpose": "Explore a trend",
+          "question": "Show Yale, Harvard, and Princeton admission rates from 2015 through 2024.",
+          "plan": {
+            "metrics": [
+              "admission_rate"
+            ],
+            "institutions": [
+              "Yale",
+              "Harvard",
+              "Princeton"
+            ],
+            "years": [
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024
+            ],
+            "output": "chart"
+          }
+        }
+      ]
+    },
+    {
+      "id": "enrollment",
+      "title": "Who attends",
+      "subtitle": "Enrollment",
+      "icon": "👥",
+      "summary": "Student counts and undergraduate or graduate enrollment.",
+      "description": "Explore undergraduate and graduate enrollment, attendance status, race/ethnicity, gender, age, and 12-month enrollment. Compare institutions or follow changes over time where the source data support the requested population and years.",
+      "scope": "Fall headcount, 12-month unduplicated enrollment, and full-time equivalent enrollment are different measures. Fall FTE and 12-month FTE also differ. Available breakdowns vary by year; check Definitions & sources for the population, reporting period, and enrollment measure used.",
+      "families": [
+        "enrollment"
+      ],
+      "discovery_query": "graduate enrollment",
+      "examples": [
+        {
+          "id": "enrollment-point",
+          "kind": "analyze",
+          "purpose": "One data point",
+          "question": "How many graduate students did Yale enroll in fall 2024?",
+          "plan": {
+            "metrics": [
+              "graduate_enrollment"
+            ],
+            "institutions": [
+              "Yale"
+            ],
+            "years": [
+              2024
+            ],
+            "output": "table"
+          }
+        },
+        {
+          "id": "enrollment-compare",
+          "kind": "analyze",
+          "purpose": "Compare institutions",
+          "question": "Compare Ivy League undergraduate enrollment in fall 2024.",
+          "plan": {
+            "metrics": [
+              "undergraduate_enrollment"
+            ],
+            "institutions": [
+              "Ivy League"
+            ],
+            "years": [
+              2024
+            ],
+            "output": "table"
+          }
+        },
+        {
+          "id": "enrollment-trend",
+          "kind": "analyze",
+          "purpose": "Explore a trend",
+          "question": "Give me Yale undergraduate and graduate enrollment from 2015 through 2024.",
+          "plan": {
+            "metrics": [
+              "undergraduate_enrollment",
+              "graduate_enrollment"
+            ],
+            "institutions": [
+              "Yale"
+            ],
+            "years": [
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024
+            ],
+            "output": "chart"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aid",
+      "title": "Paying for college",
+      "subtitle": "Costs & financial aid",
+      "icon": "💳",
+      "summary": "Tuition, grants, scholarships, and other financial aid.",
+      "description": "Explore tuition, costs, net price, grants, scholarships, and student loans. The examples below show the percentage of all undergraduates receiving grants or scholarships; Ask & Analyze can explore other source-backed aid measures.",
+      "scope": "Grant/scholarship aid, loans, and any financial aid are different measures. Results may cover all undergraduates or a subgroup, such as full-time, first-time degree/certificate-seeking students. Percentages and average amounts can use different denominators. Check Definitions & sources for eligibility, the denominator, reporting period, and missing values; enrollment totals from another survey may describe a different population.",
+      "families": [
+        "aid"
+      ],
+      "discovery_query": "financial aid tuition net price",
+      "examples": [
+        {
+          "id": "aid-point",
+          "kind": "analyze",
+          "purpose": "One data point",
+          "question": "What percentage of Yale undergraduates received grants or scholarships in 2023–24?",
+          "plan": {
+            "metrics": [
+              "undergraduate_grant_percent"
+            ],
+            "institutions": [
+              "Yale"
+            ],
+            "years": [
+              2024
+            ],
+            "output": "table"
+          }
+        },
+        {
+          "id": "aid-compare",
+          "kind": "analyze",
+          "purpose": "Compare institutions",
+          "question": "Compare Ivy League undergraduate grant and scholarship percentages for 2023–24.",
+          "plan": {
+            "metrics": [
+              "undergraduate_grant_percent"
+            ],
+            "institutions": [
+              "Ivy League"
+            ],
+            "years": [
+              2024
+            ],
+            "output": "table"
+          }
+        },
+        {
+          "id": "aid-trend",
+          "kind": "analyze",
+          "purpose": "Explore a trend",
+          "question": "Show Yale’s undergraduate grant and scholarship percentages from 2014–15 through 2023–24.",
+          "plan": {
+            "metrics": [
+              "undergraduate_grant_percent"
+            ],
+            "institutions": [
+              "Yale"
+            ],
+            "years": [
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024
+            ],
+            "output": "chart"
+          }
+        }
+      ]
+    },
+    {
+      "id": "outcomes",
+      "title": "Graduation & degrees",
+      "subtitle": "Student outcomes",
+      "icon": "📈",
+      "summary": "Completion rates, graduating cohorts, and degrees awarded.",
+      "description": "Explore graduation rates, entering-cohort outcomes, and degrees or certificates awarded. Ask & Analyze also supports source-backed national and sector aggregates, using counts from the same population to calculate pooled rates.",
+      "scope": "These six-year bachelor graduation examples follow first-time, full-time bachelor's-seeking adjusted cohorts: outcomes in 2015–2024 correspond to entry in 2009–2018. Other graduation and Outcome Measures data use different populations and follow-up periods. Annual awards cover July–June and are distinct from cohort graduation rates.",
+      "families": [
+        "graduation",
+        "pell",
+        "completions"
+      ],
+      "discovery_query": "graduation completions degrees",
+      "examples": [
+        {
+          "id": "outcomes-point",
+          "kind": "analyze",
+          "purpose": "One data point",
+          "question": "How many bachelor’s degrees did Yale award in 2014–15?",
+          "plan": {
+            "metrics": [
+              "bachelors_degrees"
+            ],
+            "institutions": [
+              "Yale"
+            ],
+            "years": [
+              2015
+            ],
+            "output": "table"
+          }
+        },
+        {
+          "id": "outcomes-compare",
+          "kind": "analyze",
+          "purpose": "Compare institutions",
+          "question": "Compare Ivy League six-year bachelor graduation rates for the 2015 outcome year.",
+          "plan": {
+            "metrics": [
+              "graduation_rate"
+            ],
+            "institutions": [
+              "Ivy League"
+            ],
+            "years": [
+              2015
+            ],
+            "output": "table"
+          }
+        },
+        {
+          "id": "outcomes-trend",
+          "kind": "analyze",
+          "purpose": "Explore a trend",
+          "question": "Show Yale’s six-year bachelor graduation rate for entering cohorts 2009 through 2018.",
+          "plan": {
+            "metrics": [
+              "graduation_rate"
+            ],
+            "institutions": [
+              "Yale"
+            ],
+            "years": [
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+              2018
+            ],
+            "time_basis": "entry_cohort",
+            "output": "chart"
+          }
+        }
+      ]
+    },
+    {
+      "id": "faculty",
+      "title": "Faculty & Staff",
+      "subtitle": "Faculty & Staff",
+      "icon": "🧑‍🏫",
+      "summary": "Staff counts, roles, appointment categories, and salaries.",
+      "description": "Explore instructional staff and other employees, faculty status, employment categories, new hires, and salaries. Try the examples below for staff counts, salary comparisons, and a ten-year staffing trend.",
+      "scope": "Faculty status and instructional work are different classifications. Staff counts depend on the employment and occupational groups selected; salary measures may also differ by academic rank and appointment period. Definitions can change across years, so compare compatible populations and periods.",
+      "families": [],
+      "discovery_query": "faculty instructional staff",
+      "examples": [
+        {
+          "id": "faculty-counts",
+          "kind": "analyze",
+          "purpose": "One data point",
+          "question": "How many full-time and part-time instructional staff did Yale have in Fall 2024?",
+          "catalog_plan_key": "faculty-counts"
+        },
+        {
+          "id": "faculty-salaries",
+          "kind": "analyze",
+          "purpose": "Compare institutions",
+          "question": "Compare nine-month-equivalent average salaries of full-time professors, associate professors, and assistant professors at Yale, Harvard, and Princeton in 2023–24, excluding medical-school staff.",
+          "catalog_plan_key": "faculty-salaries"
+        },
+        {
+          "id": "faculty-changes",
+          "kind": "analyze",
+          "purpose": "Explore a trend",
+          "question": "Show Yale’s instructional staff count from Fall 2015 through Fall 2024, split by full-time and part-time.",
+          "catalog_plan_key": "faculty-changes"
+        }
+      ]
+    },
+    {
+      "id": "institution",
+      "title": "About the institution",
+      "subtitle": "Institutional characteristics",
+      "icon": "🏛️",
+      "summary": "Student services, degree offerings, distance education, and institutional profiles.",
+      "description": "Explore reported student services, degree offerings, distance education, and institutional profiles. Try a school lookup, a matching-institution list, or a comparison across schools. These examples use the 2024–25 IPEDS release and preserve the original response labels.",
+      "scope": "Institution names, characteristics, and reporting status can change over time. Analyses use institution records associated with the relevant source release, which may differ from the cohort or observation year. Branches or campuses may report separately or as part of a larger institution; confirm the reporting institution when the intended scope is unclear. Unresolved source relationships may require technical investigation.",
+      "families": [],
+      "discovery_query": "institutional characteristics control location",
+      "examples": [
+        {
+          "id": "institution-services",
+          "kind": "analyze",
+          "purpose": "Look up a school",
+          "question": "What student services did Smith College report in the 2024–25 IPEDS release: academic counseling, career placement, and on-campus childcare?",
+          "observation_plan_key": "institution-services"
+        },
+        {
+          "id": "institution-distance",
+          "kind": "analyze",
+          "purpose": "Find matching institutions",
+          "question": "Which Massachusetts degree-granting institutions reported undergraduate distance education in the 2024–25 IPEDS release?",
+          "observation_plan_key": "institution-distance"
+        },
+        {
+          "id": "institution-awards",
+          "kind": "analyze",
+          "purpose": "Compare institutions",
+          "question": "Compare whether Smith College, Mount Holyoke College, and Wellesley College offered bachelor’s and master’s degrees in the 2024–25 IPEDS release.",
+          "observation_plan_key": "institution-awards"
+        }
+      ]
+    }
+  ]
+}

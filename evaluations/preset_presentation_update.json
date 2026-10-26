@@ -1,0 +1,34 @@
+{
+  "runs": [
+    {
+      "elapsed_seconds": 0.33550689998082817,
+      "chart_type": "line",
+      "series": {
+        "Undergraduate enrollment": 10,
+        "Graduate enrollment": 10
+      },
+      "source_comparisons_passed": 20,
+      "model_calls": 0
+    },
+    {
+      "elapsed_seconds": 0.1425057000014931,
+      "chart_type": "line",
+      "series": {
+        "Undergraduate enrollment": 10,
+        "Graduate enrollment": 10
+      },
+      "source_comparisons_passed": 20,
+      "model_calls": 0
+    }
+  ],
+  "routing": "unchanged; reviewed numerical plans and legacy discovery search",
+  "descriptions_updated": [
+    "enrollment",
+    "aid",
+    "outcomes",
+    "faculty",
+    "institution"
+  ],
+  "question_texts_changed": false,
+  "model_calls": 0
+}

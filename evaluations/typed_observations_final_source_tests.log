@@ -1,0 +1,21 @@
+test_affiliation_summary_is_per_institution (prototype.tests.test_observations.ObservationTests.test_affiliation_summary_is_per_institution) ... ok
+test_category_definition_and_blocked_followup (prototype.tests.test_observations.ObservationTests.test_category_definition_and_blocked_followup) ... ok
+test_companion_bound_exact_percentage_and_observation_date (prototype.tests.test_observations.ObservationTests.test_companion_bound_exact_percentage_and_observation_date) ... ok
+test_cross_release_cells_and_missing_year_block (prototype.tests.test_observations.ObservationTests.test_cross_release_cells_and_missing_year_block) ... ok
+test_decode_negative_unknown_missing_and_conflicting_codes (prototype.tests.test_observations.ObservationTests.test_decode_negative_unknown_missing_and_conflicting_codes) ... ok
+test_explicit_no_and_award_levels (prototype.tests.test_observations.ObservationTests.test_explicit_no_and_award_levels) ... ok
+test_institution_lists_match_independent_sql (prototype.tests.test_observations.ObservationTests.test_institution_lists_match_independent_sql) ... ok
+test_lossless_legacy_projection_and_arithmetic_stays_numeric (prototype.tests.test_observations.ObservationTests.test_lossless_legacy_projection_and_arithmetic_stays_numeric) ... ok
+test_mixed_calendar_and_direct_enrollment_with_source_selector (prototype.tests.test_observations.ObservationTests.test_mixed_calendar_and_direct_enrollment_with_source_selector) ... ok
+test_mixed_values_exports_and_render (prototype.tests.test_observations.ObservationTests.test_mixed_values_exports_and_render) ... 2026-10-22 22:01:11.750 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_numerical_selector_dimension_does_not_change_executor (prototype.tests.test_observations.ObservationTests.test_numerical_selector_dimension_does_not_change_executor) ... ok
+test_requested_identity_and_source_concepts_cannot_drop (prototype.tests.test_observations.ObservationTests.test_requested_identity_and_source_concepts_cannot_drop) ... ok
+test_three_school_services_and_source_codes (prototype.tests.test_observations.ObservationTests.test_three_school_services_and_source_codes) ... ok
+test_tool_batch_limit_recovers_with_usage (prototype.tests.test_observations.ObservationTests.test_tool_batch_limit_recovers_with_usage) ... ok
+test_types_roll_back_and_integrity (prototype.tests.test_observations.ObservationTests.test_types_roll_back_and_integrity) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 31.714s
+
+OK

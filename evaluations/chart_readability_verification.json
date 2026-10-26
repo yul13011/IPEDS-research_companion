@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-19T20:38:23.972231+00:00",
+  "combined_regressions": 119,
+  "combined_failures": 0,
+  "final_chart_tests": 8,
+  "final_chart_failures": 0,
+  "visual_checks": [
+    "900-pixel category chart with full labels and values",
+    "360-pixel category chart with wrapped labels",
+    "Eight-institution trend divided into four-series panels",
+    "Per-panel legend domain excludes other panels"
+  ],
+  "browser_previews": [
+    "chart-readability-normal.png",
+    "chart-readability-narrow.png",
+    "chart-readability-preview.png"
+  ],
+  "scope": "Real local result fixtures, no model calls for chart generation. Source rows and exports preserved. Narrow-container inspection does not certify every mobile device."
+}

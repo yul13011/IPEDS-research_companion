@@ -1,0 +1,23 @@
+{
+  "tests": 158,
+  "passed": 158,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 177.72714919992723,
+  "modules": [
+    "prototype.tests.test_model_policy",
+    "prototype.tests.test_model_evaluations",
+    "prototype.tests.test_institution_confirmation",
+    "prototype.tests.test_intent_router",
+    "prototype.tests.test_intent_checks",
+    "prototype.tests.test_query_engine",
+    "prototype.tests.test_catalog_planner",
+    "prototype.tests.test_observations",
+    "prototype.tests.test_populations",
+    "prototype.tests.test_discovery_narrative",
+    "prototype.tests.test_latency_improvements",
+    "prototype.tests.test_prototype"
+  ],
+  "details": []
+}

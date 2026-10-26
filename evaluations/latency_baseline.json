@@ -1,0 +1,128 @@
+{
+  "scope": "Historical pre-optimization live observations, one per question; not a controlled timing baseline.",
+  "cases": [
+    {
+      "case": "definition",
+      "wall_seconds": 9.225,
+      "model_calls": 1,
+      "stages": [
+        {
+          "stage": "initial intent interpretation",
+          "calls": 1,
+          "latency_seconds": 2.722816099994816,
+          "input_tokens": 2813,
+          "output_tokens": 245
+        }
+      ]
+    },
+    {
+      "case": "discovery",
+      "wall_seconds": 14.762,
+      "model_calls": 3,
+      "stages": [
+        {
+          "stage": "initial intent interpretation",
+          "calls": 1,
+          "latency_seconds": 2.1789718999061733,
+          "input_tokens": 3671,
+          "output_tokens": 240
+        },
+        {
+          "stage": "discovery interpretation",
+          "calls": 1,
+          "latency_seconds": 3.645,
+          "input_tokens": 1309,
+          "output_tokens": 333
+        },
+        {
+          "stage": "discovery writing",
+          "calls": 1,
+          "latency_seconds": 8.402,
+          "input_tokens": 78132,
+          "output_tokens": 1106
+        }
+      ]
+    },
+    {
+      "case": "numerical",
+      "wall_seconds": 11.277,
+      "model_calls": 3,
+      "stages": [
+        {
+          "stage": "initial intent interpretation",
+          "calls": 1,
+          "latency_seconds": 2.029770400025882,
+          "input_tokens": 4589,
+          "output_tokens": 247
+        },
+        {
+          "stage": "institution mention extraction",
+          "calls": 1,
+          "latency_seconds": 1.1447686000028625,
+          "input_tokens": 549,
+          "output_tokens": 58
+        },
+        {
+          "calls": 1,
+          "latency_seconds": 3.468,
+          "input_tokens": 3660,
+          "output_tokens": 359
+        }
+      ]
+    },
+    {
+      "case": "followup",
+      "wall_seconds": 9.513,
+      "model_calls": 3,
+      "stages": [
+        {
+          "stage": "initial intent interpretation",
+          "calls": 1,
+          "latency_seconds": 2.8345956000266597,
+          "input_tokens": 6913,
+          "output_tokens": 347
+        },
+        {
+          "stage": "institution mention extraction",
+          "calls": 1,
+          "latency_seconds": 1.0643224000232294,
+          "input_tokens": 550,
+          "output_tokens": 59
+        },
+        {
+          "calls": 1,
+          "latency_seconds": 2.859,
+          "input_tokens": 5605,
+          "output_tokens": 297
+        }
+      ]
+    },
+    {
+      "case": "categorical",
+      "wall_seconds": 14.801,
+      "model_calls": 5,
+      "stages": [
+        {
+          "stage": "initial intent interpretation",
+          "calls": 1,
+          "latency_seconds": 4.416369199985638,
+          "input_tokens": 8287,
+          "output_tokens": 472
+        },
+        {
+          "stage": "institution mention extraction",
+          "calls": 1,
+          "latency_seconds": 1.6073290000203997,
+          "input_tokens": 564,
+          "output_tokens": 58
+        },
+        {
+          "calls": 3,
+          "latency_seconds": 7.75,
+          "input_tokens": 56726,
+          "output_tokens": 782
+        }
+      ]
+    }
+  ]
+}

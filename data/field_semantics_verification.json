@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-10-19T19:18:33.309939+00:00",
+  "descriptor_version": 2,
+  "source_identity_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+  "fields": 23990,
+  "description_status": {
+    "partial_unit_unknown": 9222,
+    "described": 14768
+  },
+  "units": {
+    "unknown": 9222,
+    "monetary amount": 3452,
+    "items": 440,
+    "percent": 3039,
+    "students": 5240,
+    "FTE": 730,
+    "awards": 360,
+    "employees": 1477,
+    "transactions": 30
+  },
+  "build_seconds": 12.90722370002186,
+  "policy": "Source-backed descriptions for every variable definition; unknown units remain explicit. This is not semantic or execution approval. Runtime re-derives meanings from current exact source records and row selectors."
+}

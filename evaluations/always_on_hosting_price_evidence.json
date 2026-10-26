@@ -1,0 +1,123 @@
+{
+  "date_checked": "2026-10-26",
+  "source": "https://render.com/pricing",
+  "web_service_rows": [
+    [
+      "Free (limitations apply)",
+      "$0/month",
+      "512 MB RAM",
+      "free"
+    ],
+    [
+      "Less than 1 CPU",
+      "$7/month",
+      "512 MB RAM",
+      "0.5c-512mb"
+    ],
+    [
+      "1 CPU",
+      "$25/month",
+      "2 GB RAM",
+      "1c-2g"
+    ],
+    [
+      "2 CPU",
+      "$85/month",
+      "4 GB RAM",
+      "2c-4g"
+    ],
+    [
+      "2 CPU",
+      "$135/month",
+      "8 GB RAM",
+      "2c-8g"
+    ],
+    [
+      "2 CPU",
+      "$200/month",
+      "16 GB RAM",
+      "2c-16g"
+    ],
+    [
+      "4 CPU",
+      "$175/month",
+      "8 GB RAM",
+      "4c-8g"
+    ],
+    [
+      "4 CPU",
+      "$225/month",
+      "16 GB RAM",
+      "4c-16g"
+    ],
+    [
+      "4 CPU",
+      "$350/month",
+      "32 GB RAM",
+      "4c-32g"
+    ],
+    [
+      "8 CPU",
+      "$300/month",
+      "16 GB RAM",
+      "8c-16g"
+    ],
+    [
+      "8 CPU",
+      "$450/month",
+      "32 GB RAM",
+      "8c-32g"
+    ],
+    [
+      "8 CPU",
+      "$1,000/month",
+      "64 GB RAM",
+      "8c-64g"
+    ],
+    [
+      "12 CPU",
+      "$450/month",
+      "24 GB RAM",
+      "12c-24g"
+    ],
+    [
+      "12 CPU",
+      "$800/month",
+      "48 GB RAM",
+      "12c-48g"
+    ],
+    [
+      "12 CPU",
+      "$1,500/month",
+      "96 GB RAM",
+      "12c-96g"
+    ]
+  ],
+  "other_tables_are_not_web_service_prices": true,
+  "pricing_excerpts": [
+    {
+      "needle": "for $0.25/GB per month",
+      "excerpt": "und workersNode, Python, Go, Rust, Ruby, and ElixirCustom Docker containersSSDs for $0.25/GB per monthFree (limitations apply)$0/month 512 MB RAM free Less than 1 CPU $7/month 512 MB RAM 0.5c-512mb 1 CPU $25/month 2 GB RAM 1c-2g 2 CPU $85/m"
+    },
+    {
+      "needle": "Persistent disks",
+      "excerpt": "mitedStatic SitesStandard servicesWeb servicesPrivate servicesBackground workersPersistent disks$0.25 per GB per month$0.25 per GB per month$0.25 per GB per month$0.25 per GB per monthPostgres databasesExpandable storage$0.30 per GB$0.30 pe"
+    },
+    {
+      "needle": "5 GB included per month",
+      "excerpt": "al scalingHorizontal autoscaling\u2014NetworkingAutomatic private networkingBandwidth5 GB included per monththen $0.15 per GB25 GB included per monththen $0.15 per GB1 TB included per monththen $0.15 per GBCustomGlobal regionsZero-config CDNEdge"
+    },
+    {
+      "needle": "100 GB",
+      "excerpt": "\\\"row\\\",\\\"columns\\\":[{\\\"_key\\\":\\\"9a8333e19579\\\",\\\"_type\\\":\\\"column\\\",\\\"text\\\":\\\"100 GB / month\\\",\\\"type\\\":\\\"check\\\"},{\\\"_key\\\":\\\"3da3c5b3fa19\\\",\\\"_type\\\":\\\"column\\\",\\\"text\\\":\\\"500 GB / month\\\",\\\"type\\\":\\\"check\\\"},{\\\"_key\\\":\\\"9cbee6c170cf\\\","
+    },
+    {
+      "needle": "Hobby",
+      "excerpt": "2300>a&&2E3<a?2300-a:$RT+300-a)))):b.parentNode.removeChild(b)};$RC(\"B:0\",\"S:0\")HobbyProScaleEnterpriseFor individuals building personal projects and prototypes.$0/mo+ computeFor teams deploying production-grade apps and agents.$25/mo+ comp"
+    },
+    {
+      "needle": "Pro",
+      "excerpt": ":\"Keywords to search for in the Render docs.\"}},\"required\":[\"query\"],\"additionalProperties\":false},\"annotations\":{\"readOnlyHint\":true}},{\"kind\":\"docs-markdown\",\"name\":\"render.docs.get-markdown\",\"description\":\"Fetch a Render docs page as mar"
+    }
+  ]
+}

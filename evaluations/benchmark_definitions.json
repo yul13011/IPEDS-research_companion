@@ -1,0 +1,16 @@
+{
+  "institution": "Yale University",
+  "unitid": 130794,
+  "user_definition_of_urm": "URM are anyone who is not white, asian or international.",
+  "international_operational_category": "IPEDS GRNRALT, U.S. nonresident; exact benchmark agreement is checked rather than assuming it covers all foreign-born students.",
+  "include_unknown_in_non_urm": null,
+  "unknown_status": "User explicitly chose to leave the race/ethnicity-unknown placement unresolved on 2026-10-16. Do not infer a grouping from benchmark agreement.",
+  "source_policy": "User-supplied CSVs are immutable expected results. Dataset differences are retained as failures, not used to change expectations.",
+  "coverage": "IPEDS observation years 2015 through 2024. Six-year graduation cohorts enter six years before observation year.",
+  "sat_definition_verification": {
+    "population": "Enrolled first-time degree/certificate-seeking undergraduates submitting relevant SAT scores, including prior-summer entrants. Broad population aligns with Yale College first-year students.",
+    "score_protocol": "New 2016 SAT scale and old-to-new concordance required by 2017/2018 instructions; scores used in admission decision. Yale CSV footnote/score selection not supplied.",
+    "comparability": "Population aligned; exact scoring/reporting basis unresolved. Five numeric mismatches retained.",
+    "evidence_file": "SAT_DEFINITION_VERIFICATION.md"
+  }
+}

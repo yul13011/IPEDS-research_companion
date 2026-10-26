@@ -1,0 +1,59 @@
+﻿release,sheet,rows,columns
+IPEDS_2015-16_Final,Introduction,13,11
+IPEDS_2015-16_Final,Tables15,48,16
+IPEDS_2015-16_Final,valuesets15,12383,12
+IPEDS_2015-16_Final,vartable15,2186,22
+IPEDS_2015-16_Final,Metadata defintions,45,3
+IPEDS_2016-17_Final,Introduction,18,11
+IPEDS_2016-17_Final,Tables16,51,16
+IPEDS_2016-17_Final,vartable16,2160,22
+IPEDS_2016-17_Final,valueSets16,12713,12
+IPEDS_2016-17_Final,variableChanges1516,355,10
+IPEDS_2016-17_Final,ValueChanges1516,156,7
+IPEDS_2016-17_Final,Metadata defintions,62,3
+IPEDS_2017-18_Final,Introduction,16,11
+IPEDS_2017-18_Final,Tables17,50,16
+IPEDS_2017-18_Final,vartable17,2211,22
+IPEDS_2017-18_Final,valueSets17,12469,12
+IPEDS_2017-18_Final,Metadata defintions,62,3
+IPEDS_2018-19_Final,Introduction,13,11
+IPEDS_2018-19_Final,Tables18,53,16
+IPEDS_2018-19_Final,vartable18,2247,22
+IPEDS_2018-19_Final,valueSets18,12750,12
+IPEDS_2018-19_Final,Metadata defintions,45,3
+IPEDS_2019-20_Final,Introduction,13,11
+IPEDS_2019-20_Final,Tables19,52,16
+IPEDS_2019-20_Final,vartable19,2212,22
+IPEDS_2019-20_Final,valueSets19,12496,12
+IPEDS_2019-20_Final,Metadata defintions,45,3
+IPEDS_2020-21_Final,Introduction,15,11
+IPEDS_2020-21_Final,Tables20,54,16
+IPEDS_2020-21_Final,vartable20,2440,22
+IPEDS_2020-21_Final,valuesets20,11891,12
+IPEDS_2020-21_Final,NewVariables20,184,9
+IPEDS_2020-21_Final,NewValueSets20,54,5
+IPEDS_2020-21_Final,Metadata defintions,59,3
+IPEDS_2021-22_Final,Introduction,13,11
+IPEDS_2021-22_Final,Tables21,55,16
+IPEDS_2021-22_Final,vartable21,2562,22
+IPEDS_2021-22_Final,valuesets21,11594,12
+IPEDS_2021-22_Final,Metadata defintions,59,3
+IPEDS_2022-23_Final,Introduction,15,11
+IPEDS_2022-23_Final,Tables22,56,16
+IPEDS_2022-23_Final,vartable22,2686,22
+IPEDS_2022-23_Final,valuesets22,13039,12
+IPEDS_2022-23_Final,Newvariables22,84,9
+IPEDS_2022-23_Final,Newvalues22,28,6
+IPEDS_2022-23_Final,Metadata defintions,59,3
+IPEDS_2023-24_Final,Introduction,14,11
+IPEDS_2023-24_Final,Tables23,56,16
+IPEDS_2023-24_Final,varTable23,2696,22
+IPEDS_2023-24_Final,valueSets23,13024,12
+IPEDS_2023-24_Final,newVariables23,48,9
+IPEDS_2023-24_Final,Metadata defintions,59,3
+IPEDS_2024-25_Provisional,Introduction,14,11
+IPEDS_2024-25_Provisional,tables24,53,10
+IPEDS_2024-25_Provisional,varTable24,2600,22
+IPEDS_2024-25_Provisional,valueSets24,12144,12
+IPEDS_2024-25_Provisional,newVariables24,64,9
+IPEDS_2024-25_Provisional,metadata_definitions24,59,3

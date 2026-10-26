@@ -1,0 +1,5 @@
+{
+  "measurement": "Streamlit AppTest server rerun including answer, chart serialization and eager export preparation; excludes browser paint and transport",
+  "seconds": 0.6403248000424355,
+  "exceptions": 0
+}

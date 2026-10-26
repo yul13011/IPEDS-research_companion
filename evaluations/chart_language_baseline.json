@@ -1,0 +1,604 @@
+{
+  "cases": [
+    {
+      "prompt": "Make it a bar chart",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "chart_type": "bar"
+      },
+      "actual": {
+        "chart_type": "bar",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      }
+    },
+    {
+      "prompt": "Can you make it a bar chart?",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "chart_type": "bar"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Could you please use a line chart?",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "chart_type": "line"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Switch this to a bar chart",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "chart_type": "bar"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Change the chart to a line chart",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "chart_type": "line"
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      }
+    },
+    {
+      "prompt": "Please hide the legend",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "legend": "none"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Can you move the legend to the bottom?",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "legend": "bottom"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Show the legend at the top",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "legend": "top"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Remove the gridlines",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "gridlines": false
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Show the point markers",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "markers": true
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Hide the point markers",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "markers": false
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Label the latest values",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "value_labels": "latest"
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null,
+        "value_labels": "latest"
+      }
+    },
+    {
+      "prompt": "Show labels for all points",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "value_labels": "all"
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null,
+        "value_labels": "all"
+      }
+    },
+    {
+      "prompt": "Make Smith red",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "series_colors": {
+          "Smith College": "red"
+        }
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null,
+        "series_colors": {
+          "Smith College": "red"
+        }
+      }
+    },
+    {
+      "prompt": "Make Smith's line red",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "series_colors": {
+          "Smith College": "red"
+        }
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Change the color of Smith to red",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "series_colors": {
+          "Smith College": "red"
+        }
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Set the font size to 18",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "font_size": 18
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Please set the font size to 18",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "font_size": 18
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Set the background to white",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "background": "white"
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null,
+        "background": "white"
+      }
+    },
+    {
+      "prompt": "Change x-axis label to Year",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "x_label": "Year"
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": "Year",
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      }
+    },
+    {
+      "prompt": "Can you rename the x-axis to Year?",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "x_label": "Year"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Set y-axis range to 1,000\u20134,000",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "y_min": 1000,
+        "y_max": 4000
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": 1000.0,
+        "y_max": 4000.0,
+        "sort": "auto",
+        "color": null
+      }
+    },
+    {
+      "prompt": "Could you set the y-axis range to 1,000\u20134,000?",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "y_min": 1000,
+        "y_max": 4000
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Reset the y-axis range",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "y_min": null,
+        "y_max": null
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      }
+    },
+    {
+      "prompt": "Change the title to \"Enrollment, 2015\u20132024\"",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "title": "Enrollment, 2015\u20132024"
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": "Enrollment, 2015\u20132024",
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      }
+    },
+    {
+      "prompt": "Change the title to 'Enrollment, 2015\u20132024'",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "title": "Enrollment, 2015\u20132024"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Change the title to \"Enrollment and show table\"",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "title": "Enrollment and show table"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Set subtitle to \"Students and hide legend\"",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "subtitle": "Students and hide legend"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Set footnote to \"Source: IPEDS; show markers\"",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "footnote": "Source: IPEDS; show markers"
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null,
+        "footnote": "Source: IPEDS; show markers"
+      }
+    },
+    {
+      "prompt": "Set footnote to 'Source: IPEDS; show markers'",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "footnote": "Source: IPEDS; show markers"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Make Smith red and move the legend to bottom",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "series_colors": {
+          "Smith College": "red"
+        },
+        "legend": "bottom"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Make Smith red and rename the x-axis to Year",
+      "kind": "supported",
+      "passed": false,
+      "intent": "clarify",
+      "expected": {
+        "series_colors": {
+          "Smith College": "red"
+        },
+        "x_label": "Year"
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Hide the legend and show the table",
+      "kind": "supported",
+      "passed": false,
+      "intent": null,
+      "expected": {
+        "legend": "none",
+        "show_table": true
+      },
+      "actual": {}
+    },
+    {
+      "prompt": "Please show the table",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "show_table": true
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": true,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      }
+    },
+    {
+      "prompt": "Please hide the table",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "show_table": false
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": null
+      }
+    },
+    {
+      "prompt": "Make the lines blue",
+      "kind": "supported",
+      "passed": true,
+      "intent": "analyze",
+      "expected": {
+        "color": "blue"
+      },
+      "actual": {
+        "chart_type": "line",
+        "show_table": false,
+        "table_reason": null,
+        "title": null,
+        "x_label": null,
+        "y_label": null,
+        "y_min": null,
+        "y_max": null,
+        "sort": "auto",
+        "color": "blue",
+        "series_colors": {}
+      }
+    },
+    {
+      "prompt": "Make Smith red and set font size to 999",
+      "kind": "unsupported_or_invalid",
+      "passed": true,
+      "intent": "clarify"
+    },
+    {
+      "prompt": "Can you make the lines dashed?",
+      "kind": "unsupported_or_invalid",
+      "passed": false,
+      "intent": null
+    },
+    {
+      "prompt": "Please rotate the x-axis labels by 45 degrees",
+      "kind": "unsupported_or_invalid",
+      "passed": false,
+      "intent": null
+    },
+    {
+      "prompt": "Could you increase the chart font?",
+      "kind": "unsupported_or_invalid",
+      "passed": false,
+      "intent": null
+    },
+    {
+      "prompt": "Set y-axis range to 4000\u20131000",
+      "kind": "unsupported_or_invalid",
+      "passed": true,
+      "intent": "clarify"
+    },
+    {
+      "prompt": "Make College red",
+      "kind": "unsupported_or_invalid",
+      "passed": true,
+      "intent": "clarify"
+    },
+    {
+      "prompt": "Show Harvard applicants in 2023",
+      "kind": "new_data",
+      "passed": true,
+      "intent": null
+    },
+    {
+      "prompt": "Compare Yale, Harvard, and Smith",
+      "kind": "new_data",
+      "passed": true,
+      "intent": null
+    },
+    {
+      "prompt": "Show a ten-year trend for Harvard enrollment",
+      "kind": "new_data",
+      "passed": true,
+      "intent": null
+    },
+    {
+      "prompt": "Add Princeton to this comparison",
+      "kind": "new_data",
+      "passed": true,
+      "intent": null
+    }
+  ],
+  "passed": 21,
+  "total": 46
+}

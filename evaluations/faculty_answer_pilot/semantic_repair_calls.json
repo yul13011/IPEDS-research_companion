@@ -1,0 +1,27 @@
+[
+  {
+    "case": "instructional_faculty",
+    "stage": "write_explanation",
+    "usage": {
+      "input_tokens": 6915,
+      "output_tokens": 191,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "calls": 1,
+      "latency_seconds": 3.870517000032123,
+      "estimated_api_usd": 0.01574,
+      "model": "claude-sonnet-5-5"
+    },
+    "tool_inputs": [
+      {
+        "lead_scope_id": "instructional_with_faculty_status",
+        "explanation": "This counts instructional staff who also hold faculty status: people primarily teaching, or teaching combined with research or public service. It does not include all staff with faculty status in other occupations, or instructional staff without faculty status.",
+        "evidence_ids": [
+          149288,
+          149318,
+          137802
+        ]
+      }
+    ]
+  }
+]

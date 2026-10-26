@@ -1,0 +1,93 @@
+{
+  "platform": "win32",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "logical_cpus": 12,
+  "scope": "Offline Windows single-process probe; query workers approximate simultaneous backend work, not browser sessions. CPU time includes monitor thread. No model calls.",
+  "stages": [
+    {
+      "stage": "fresh_UI_session_1",
+      "status": "ok",
+      "wall_seconds": 4.7878,
+      "cpu_seconds": 4.4844,
+      "before": {
+        "resident_MiB": 17.68,
+        "private_commit_MiB": 10.05,
+        "process_peak_resident_MiB": 17.68
+      },
+      "after": {
+        "resident_MiB": 144.91,
+        "private_commit_MiB": 467.72,
+        "process_peak_resident_MiB": 151.33
+      },
+      "stage_peak_resident_MiB": 144.91,
+      "stage_peak_private_commit_MiB": 467.72,
+      "summary": {
+        "retained_UI_sessions": 1
+      }
+    },
+    {
+      "stage": "empty_UI_session_2",
+      "status": "ok",
+      "wall_seconds": 0.5483,
+      "cpu_seconds": 0.5625,
+      "before": {
+        "resident_MiB": 144.89,
+        "private_commit_MiB": 467.69,
+        "process_peak_resident_MiB": 151.33
+      },
+      "after": {
+        "resident_MiB": 145.95,
+        "private_commit_MiB": 468.75,
+        "process_peak_resident_MiB": 151.33
+      },
+      "stage_peak_resident_MiB": 145.95,
+      "stage_peak_private_commit_MiB": 468.75,
+      "summary": {
+        "retained_UI_sessions": 2
+      }
+    },
+    {
+      "stage": "backend_imports",
+      "status": "ok",
+      "wall_seconds": 0.0786,
+      "cpu_seconds": 0.0781,
+      "before": {
+        "resident_MiB": 145.94,
+        "private_commit_MiB": 468.71,
+        "process_peak_resident_MiB": 151.33
+      },
+      "after": {
+        "resident_MiB": 147.39,
+        "private_commit_MiB": 470.18,
+        "process_peak_resident_MiB": 151.33
+      },
+      "stage_peak_resident_MiB": 147.39,
+      "stage_peak_private_commit_MiB": 470.18,
+      "summary": {
+        "imports": "Streamlit/pandas/Altair/export/query modules"
+      }
+    },
+    {
+      "stage": "ten_sequential_query_export_cycles",
+      "status": "ok",
+      "wall_seconds": 3.4167,
+      "cpu_seconds": 3.0,
+      "before": {
+        "resident_MiB": 147.38,
+        "private_commit_MiB": 470.15,
+        "process_peak_resident_MiB": 151.33
+      },
+      "after": {
+        "resident_MiB": 169.06,
+        "private_commit_MiB": 496.92,
+        "process_peak_resident_MiB": 173.51
+      },
+      "stage_peak_resident_MiB": 169.65,
+      "stage_peak_private_commit_MiB": 496.93,
+      "summary": {
+        "completed_cycles": 10,
+        "retained_answers": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+test_missing_category_and_long_label_exports (prototype.tests.test_chart_workflow.ChartWorkflowTests.test_missing_category_and_long_label_exports) ... ok
+test_whole_salary_workflow_ui_and_exports (prototype.tests.test_chart_workflow.ChartWorkflowTests.test_whole_salary_workflow_ui_and_exports) ... 2026-10-21 15:09:22.713 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+2026-10-21 15:09:22.713 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 15:09:23.630 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 15:09:23.631 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 15:10:09.854 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 15:10:09.865 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 15:10:09.866 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 87.699s
+
+OK

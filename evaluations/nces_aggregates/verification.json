@@ -1,0 +1,19 @@
+{
+  "checks_passed": 13,
+  "checks": [
+    "All 45 supplied files and 824 observations represented",
+    "Each source cell occurs exactly once",
+    "Original workbooks unchanged",
+    "Summary reconciles with all row outcomes",
+    "No reference execution errors",
+    "Application guard tested for all cases; zero provider calls",
+    "No fabricated values for unresolved cases",
+    "Every numerical comparison has source definitions and SQL",
+    "Pass/fail flags obey recorded precision",
+    "Independent 2024 SQL reproduces q3",
+    "Independent 2024 SQL reproduces q24",
+    "Independent 2024 SQL reproduces q32",
+    "Independent 2024 SQL reproduces q207"
+  ],
+  "benchmark_code_sha256": "bc5e2ce5b03114ba98b01b250d54e9cf5eb30ca7d18399d11ad5b13887c9f892"
+}

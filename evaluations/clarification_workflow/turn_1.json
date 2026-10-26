@@ -1,0 +1,1115 @@
+{
+  "intent": "clarify",
+  "message": "How many ladder faculty does 130493 have, and what are their average salaries by academic rank?\n\n**A. Tenured + tenure-track counts by rank, with salaries for all full-time instructional staff by rank**\n\nLadder faculty = faculty status tenured (20) plus on tenure track (30), shown as separate disjoint counts by academic rank (S2024_SIS, Fall 2024). Separate panel: average equated-9-month salary by academic rank for ALL full-time nonmedical instructional staff (SAL2024_IS, AY 2024-25), since IPEDS does not publish salary by tenure status.\n\nIPEDS has no 'ladder faculty' category; defined here as tenured plus on-tenure-track with faculty status. Salary panel covers all full-time nonmedical instructional staff (including non-ladder, and excluding medical), not only ladder faculty; do not read it as ladder salaries. Count source is Fall 2024 (Nov 1 snapshot, degree-granting institutions); salary source is academic year 2024-25 and a different population; no cross-panel arithmetic. Tenured and tenure-track counts are shown separately; the user can add them.\n\n**B. Comparable all-instructional-staff view (no ladder restriction)**\n\nBoth panels cover all full-time instructional staff by academic rank: counts from S2024_SIS (FACSTAT=0, all staff) and average salaries from SAL2024_IS.\n\nDoes not isolate ladder faculty; use Option A for the ladder count. Count is Fall 2024 including medical staff scope differences; salary is AY 2024-25 nonmedical only.",
+  "analysis_brief": {
+    "version": 1,
+    "status": "pending",
+    "goal": "Count ladder (tenured + tenure-track) faculty at UNITID 130493 and show average salary by academic rank, Fall 2024 / AY 2024-25.",
+    "original_question": "How many ladder faculty does 130493 have, and what are their average salaries by academic rank?",
+    "question": "How many ladder faculty does 130493 have, and what are their average salaries by academic rank?",
+    "options": [
+      {
+        "id": "A",
+        "label": "Tenured + tenure-track counts by rank, with salaries for all full-time instructional staff by rank",
+        "interpretation": "Ladder faculty = faculty status tenured (20) plus on tenure track (30), shown as separate disjoint counts by academic rank (S2024_SIS, Fall 2024). Separate panel: average equated-9-month salary by academic rank for ALL full-time nonmedical instructional staff (SAL2024_IS, AY 2024-25), since IPEDS does not publish salary by tenure status.",
+        "qualifications": [
+          "IPEDS has no 'ladder faculty' category; defined here as tenured plus on-tenure-track with faculty status.",
+          "Salary panel covers all full-time nonmedical instructional staff (including non-ladder, and excluding medical), not only ladder faculty; do not read it as ladder salaries.",
+          "Count source is Fall 2024 (Nov 1 snapshot, degree-granting institutions); salary source is academic year 2024-25 and a different population; no cross-panel arithmetic.",
+          "Tenured and tenure-track counts are shown separately; the user can add them."
+        ],
+        "plan": {
+          "version": 2,
+          "institutions": [
+            "130493"
+          ],
+          "source_years": [
+            2024
+          ],
+          "sources": [
+            {
+              "id": "s",
+              "year": 2024,
+              "table": "S2024_SIS",
+              "field_record_ids": [
+                137801,
+                137803,
+                137804,
+                137805,
+                137806,
+                137807,
+                137808,
+                137802
+              ],
+              "filters": [
+                {
+                  "record_id": 137801,
+                  "operator": "in",
+                  "values": [
+                    "20",
+                    "30"
+                  ],
+                  "code_record_ids": [
+                    148999,
+                    149000
+                  ]
+                }
+              ],
+              "group_by_record_ids": [
+                137801
+              ],
+              "aggregates": []
+            }
+          ],
+          "joins": [],
+          "expressions": [],
+          "outputs": [
+            {
+              "reference": "fs_137803",
+              "label": "Professors (full-time, by tenured/tenure-track status)"
+            },
+            {
+              "reference": "fs_137804",
+              "label": "Associate professors (by tenured/tenure-track status)"
+            },
+            {
+              "reference": "fs_137805",
+              "label": "Assistant professors (by tenured/tenure-track status)"
+            },
+            {
+              "reference": "fs_137806",
+              "label": "Instructors (by tenured/tenure-track status)"
+            },
+            {
+              "reference": "fs_137807",
+              "label": "Lecturers (by tenured/tenure-track status)"
+            },
+            {
+              "reference": "fs_137808",
+              "label": "No academic rank (by tenured/tenure-track status)"
+            },
+            {
+              "reference": "fs_137802",
+              "label": "All ranks (by tenured/tenure-track status)"
+            }
+          ],
+          "missing_policy": "propagate",
+          "time_basis": "source_period",
+          "assumptions": [
+            "Ladder faculty = tenured + on tenure track, with faculty status; reported as separate categories, not summed.",
+            "IPEDS has no 'ladder faculty' category; defined here as tenured plus on-tenure-track with faculty status.",
+            "Salary panel covers all full-time nonmedical instructional staff (including non-ladder, and excluding medical), not only ladder faculty; do not read it as ladder salaries.",
+            "Count source is Fall 2024 (Nov 1 snapshot, degree-granting institutions); salary source is academic year 2024-25 and a different population; no cross-panel arithmetic.",
+            "Tenured and tenure-track counts are shown separately; the user can add them."
+          ],
+          "clarification_questions": []
+        },
+        "additional_analyses": [
+          {
+            "label": "Average salary by rank, all full-time nonmedical instructional staff (AY 2024-25)",
+            "interpretation": "Equated 9-month average salary by academic rank for all full-time nonmedical instructional staff, not restricted to ladder faculty.",
+            "qualifications": [
+              "Population is all full-time nonmedical instructional staff, not ladder faculty only.",
+              "Academic year 2024-25 versus Fall 2024 counts."
+            ],
+            "plan": {
+              "version": 2,
+              "institutions": [
+                "130493"
+              ],
+              "source_years": [
+                2024
+              ],
+              "sources": [
+                {
+                  "id": "sal",
+                  "year": 2024,
+                  "table": "SAL2024_IS",
+                  "field_record_ids": [
+                    137684,
+                    137724,
+                    137688
+                  ],
+                  "filters": [],
+                  "group_by_record_ids": [
+                    137684
+                  ],
+                  "aggregates": []
+                }
+              ],
+              "joins": [],
+              "expressions": [],
+              "outputs": [
+                {
+                  "reference": "fsal_137724",
+                  "label": "Avg equated 9-month salary, all FT nonmedical instructional staff, by rank"
+                },
+                {
+                  "reference": "fsal_137688",
+                  "label": "Number of instructional staff (salary population), by rank"
+                }
+              ],
+              "missing_policy": "propagate",
+              "time_basis": "source_period",
+              "assumptions": [
+                "Salary is not available by tenure status; shown for all instructional staff.",
+                "IPEDS has no 'ladder faculty' category; defined here as tenured plus on-tenure-track with faculty status.",
+                "Salary panel covers all full-time nonmedical instructional staff (including non-ladder, and excluding medical), not only ladder faculty; do not read it as ladder salaries.",
+                "Count source is Fall 2024 (Nov 1 snapshot, degree-granting institutions); salary source is academic year 2024-25 and a different population; no cross-panel arithmetic.",
+                "Tenured and tenure-track counts are shown separately; the user can add them.",
+                "Population is all full-time nonmedical instructional staff, not ladder faculty only.",
+                "Academic year 2024-25 versus Fall 2024 counts."
+              ],
+              "clarification_questions": []
+            },
+            "evidence": {
+              "definitions": [
+                {
+                  "record_id": 137684,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table_name": "SAL2024_IS",
+                  "variable_name": "ARANK",
+                  "physical_status": "documented_location_present",
+                  "physical_locations_json": "[\"SAL2024_IS\"]",
+                  "imputation_variable": "",
+                  "category_count": 7,
+                  "definition_hash": "0946befdaa44fe4b6477036796158f3ee364dde6c9f19ab18eb186be2f519630",
+                  "normalized_hash": "9aa1ce946ce5015b223b2c099acf46029f51536a01fd25db0f937ea2803f6a13",
+                  "category_hash": "d0591dd9a300aa714e6a9dd2d5b0daf6b6c7a19d39bd20e12d43ab4cdf7907aa",
+                  "title": "Academic rank",
+                  "long_description": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+                  "data_type": "N",
+                  "format": "Disc",
+                  "evidence": {
+                    "record_id": 137684,
+                    "release_id": "IPEDS_2024-25_Provisional",
+                    "kind": "variable_definition",
+                    "table_name": "SAL2024_IS",
+                    "variable_name": "ARANK",
+                    "title": "Academic rank",
+                    "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\nvartitle: Academic rank\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                    "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                    "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                    "sheet_name": "varTable24",
+                    "source_row": 1813
+                  }
+                },
+                {
+                  "record_id": 137688,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table_name": "SAL2024_IS",
+                  "variable_name": "SAINSTT",
+                  "physical_status": "documented_location_present",
+                  "physical_locations_json": "[\"SAL2024_IS\"]",
+                  "imputation_variable": "XSAINSTT",
+                  "category_count": 0,
+                  "definition_hash": "e9b2d2906fda070f8922682e2da0526c1478cf68d929f59f00dafb61bdbfda3f",
+                  "normalized_hash": "111497e04d1bc1aa5344a86556f1105ad25ef03b4134e0e1e3a2945364cd75d4",
+                  "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                  "title": "Instructional staff - total",
+                  "long_description": "Number of full-time, non-medical, instructional staff - total as of November 1, on 9, 10, 11 or 12 month contract and less less-than 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+                  "data_type": "N",
+                  "format": "Cont",
+                  "evidence": {
+                    "record_id": 137688,
+                    "release_id": "IPEDS_2024-25_Provisional",
+                    "kind": "variable_definition",
+                    "table_name": "SAL2024_IS",
+                    "variable_name": "SAINSTT",
+                    "title": "Instructional staff - total",
+                    "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40481\nvarorder: 4\nvarname: SAINSTT\nimputationvar: XSAINSTT\nvartitle: Instructional staff - total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Number of full-time, non-medical, instructional staff - total as of November 1, on 9, 10, 11 or 12 month contract and less less-than 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                    "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                    "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                    "sheet_name": "varTable24",
+                    "source_row": 1817
+                  }
+                },
+                {
+                  "record_id": 137724,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table_name": "SAL2024_IS",
+                  "variable_name": "SAEQ9AT",
+                  "physical_status": "documented_location_present",
+                  "physical_locations_json": "[\"SAL2024_IS\"]",
+                  "imputation_variable": "XSAEQ9AT",
+                  "category_count": 0,
+                  "definition_hash": "8a33a7f704fb5ce094ce0b14293d866db3b2df0051b65787783b833d15c5a531",
+                  "normalized_hash": "0dfa3404cbda82f378163b1f31ee2de0abc1bf2e6420bb8d78d84a678026ae14",
+                  "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                  "title": "Average salary for instructional staff equated to a 9-month contract-total",
+                  "long_description": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+                  "data_type": "N",
+                  "format": "Cont",
+                  "evidence": {
+                    "record_id": 137724,
+                    "release_id": "IPEDS_2024-25_Provisional",
+                    "kind": "variable_definition",
+                    "table_name": "SAL2024_IS",
+                    "variable_name": "SAEQ9AT",
+                    "title": "Average salary for instructional staff equated to a 9-month contract-total",
+                    "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40967\nvarorder: 82\nvarname: SAEQ9AT\nimputationvar: XSAEQ9AT\nvartitle: Average salary for instructional staff equated to a 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                    "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                    "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                    "sheet_name": "varTable24",
+                    "source_row": 1853
+                  }
+                }
+              ],
+              "categories": [],
+              "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+            }
+          }
+        ],
+        "evidence": {
+          "definitions": [
+            {
+              "record_id": 137801,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "FACSTAT",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "",
+              "category_count": 11,
+              "definition_hash": "fcc3db8cb1c2d955d9ab238be90f344e42693fe042c5df04166638c8872cf6b7",
+              "normalized_hash": "d538efaf21be49109168d0253f2e0bb8685a2bd9974e73187cc426e6926767c7",
+              "category_hash": "3fe87f3197148729d85f89b34aa83247f858249146812d047d4c895678da1590",
+              "title": "Faculty and tenure status",
+              "long_description": "Faculty and tenure status Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category Tenure-Status of a personnel position with respect to permanence of the position. Tenure track - Personnel positions that lead to consideration for tenure. Not on tenure track - Personnel positions that are considered non-tenure earning positions Multi-year contract - a contract or employment agreement that is in effect for more than one year (e.g., more than 365 days) where subsequent years of the contract may be contingent upon other factors such as the appropriation of funds. The renewal period of a multi-year contract is not on an annual basis (e.g., a 5-year multi-year contract is renewed every 5 years NOT annually). Annual contract - An annually-renewable contract or employment agreement that is in effect for a stated annual period within one year of execution, and may be equal to a period of 365 days, or a standard academic year, or the equivalent. Does not include contracts for partial year periods such as a single semester, quarter, term, block, or course. Less-than-annual-contract - A contract or employment agreement that is in effect for a partial year period of less than 365 days, or less than a standard academic year or the equivalent. Includes contracts for partial year periods such as a single semester, quarter, term, block, or course.",
+              "data_type": "N",
+              "format": "Disc",
+              "evidence": {
+                "record_id": 137801,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "FACSTAT",
+                "title": "Faculty and tenure status",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53051\nvarorder: 2\nvarname: FACSTAT\nvartitle: Faculty and tenure status\ndatatype: N\nfieldwidth: 6\nformat: Disc\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: Faculty and tenure status Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category Tenure-Status of a personnel position with respect to permanence of the position. Tenure track - Personnel positions that lead to consideration for tenure. Not on tenure track - Personnel positions that are considered non-tenure earning positions Multi-year contract - a contract or employment agreement that is in effect for more than one year (e.g., more than 365 days) where subsequent years of the contract may be contingent upon other factors such as the appropriation of funds. The renewal period of a multi-year contract is not on an annual basis (e.g., a 5-year multi-year contract is renewed every 5 years NOT annually). Annual contract - An annually-renewable contract or employment agreement that is in effect for a stated annual period within one year of execution, and may be equal to a period of 365 days, or a standard academic year, or the equivalent. Does not include contracts for partial year periods such as a single semester, quarter, term, block, or course. Less-than-annual-contract - A contract or employment agreement that is in effect for a partial year period of less than 365 days, or less than a standard academic year or the equivalent. Includes contracts for partial year periods such as a single semester, quarter, term, block, or course.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1930
+              }
+            },
+            {
+              "record_id": 137802,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISTOTL",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISTOTL",
+              "category_count": 0,
+              "definition_hash": "897d949f6567ec5a6887453bcd461f25bfd69e86d153e2a12124e3080887b5b8",
+              "normalized_hash": "ab67459c96cd771061f2cb563ff0c2f1576cc31647611e824cbcdcf3ca9f6bd3",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "All ranks",
+              "long_description": "Instructional Staff is an occupational category that is comprised of staff who are either: 1) Primarily Instruction or 2) Instruction combined with research and/or public service. The intent of the Instructional Staff category is to include all individuals whose primary occupation includes instruction at the institution. Instruction (only) - Persons whose specific assignments customarily are made for the purpose of providing instruction or teaching. Regardless of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction or teaching. Instruction combined with research and/or public service (IRPS) - Persons for whom it is not possible to differentiate between instruction or teaching, research, and public service because each of these functions is an integral component of his/her regular assignment. Regardless, of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction, research, and/or public service. Full-time staff (employees) As defined by the institution. The type of appointment at the snapshot date determines whether an employee is full-time or part-time. The employee's term of contract is not considered in making the determination of full- or part-time. A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137802,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISTOTL",
+                "title": "All ranks",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53056\nvarorder: 4\nvarname: SISTOTL\nimputationvar: XSISTOTL\nvartitle: All ranks\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: Instructional Staff is an occupational category that is comprised of staff who are either: 1) Primarily Instruction or 2) Instruction combined with research and/or public service. The intent of the Instructional Staff category is to include all individuals whose primary occupation includes instruction at the institution. Instruction (only) - Persons whose specific assignments customarily are made for the purpose of providing instruction or teaching. Regardless of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction or teaching. Instruction combined with research and/or public service (IRPS) - Persons for whom it is not possible to differentiate between instruction or teaching, research, and public service because each of these functions is an integral component of his/her regular assignment. Regardless, of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction, research, and/or public service. Full-time staff (employees) As defined by the institution. The type of appointment at the snapshot date determines whether an employee is full-time or part-time. The employee's term of contract is not considered in making the determination of full- or part-time. A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1931
+              }
+            },
+            {
+              "record_id": 137803,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISPROF",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISPROF",
+              "category_count": 0,
+              "definition_hash": "6d630027f26f3d30221b532091ea2145d858f6e198a9570575f43215e9bffebe",
+              "normalized_hash": "013360b657920eb65a9f755fdbf33c2e86af63100774a8a2a54d2c0b9d335eb6",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Professors",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137803,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISPROF",
+                "title": "Professors",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53061\nvarorder: 6\nvarname: SISPROF\nimputationvar: XSISPROF\nvartitle: Professors\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1932
+              }
+            },
+            {
+              "record_id": 137804,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISASCP",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISASCP",
+              "category_count": 0,
+              "definition_hash": "6eaa42ceb169e0787cdddd2ef7dc5049a0f8155503aa7cb10c0c091da07d7df8",
+              "normalized_hash": "1dafa7a0aa51b825c4b70a6c52a9f50c65499ea3512bf8df6921cc9736d0705d",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Associate professors",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137804,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISASCP",
+                "title": "Associate professors",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53066\nvarorder: 8\nvarname: SISASCP\nimputationvar: XSISASCP\nvartitle: Associate professors\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1933
+              }
+            },
+            {
+              "record_id": 137805,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISASTP",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISASTP",
+              "category_count": 0,
+              "definition_hash": "f9d1c3ed169e54e8e3d8c4a1a7ae3649dfda63260993d30210ae6bebf7e0913f",
+              "normalized_hash": "6c83e2040eea3fc224fce5ed1b4b6d8e5e3b11bcc677cbff056717df3513a9e7",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Assistant professors",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137805,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISASTP",
+                "title": "Assistant professors",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53071\nvarorder: 10\nvarname: SISASTP\nimputationvar: XSISASTP\nvartitle: Assistant professors\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1934
+              }
+            },
+            {
+              "record_id": 137806,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISINST",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISINST",
+              "category_count": 0,
+              "definition_hash": "d16e7cd968856f083f28d8c3afe467292c83dc18fbd93d91dd56a0ef6160a83f",
+              "normalized_hash": "a90c9cc570aa9706f2416a19ffe6751cc6da58d61b95d397b7cb9f5314be7e3b",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Intructors",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137806,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISINST",
+                "title": "Intructors",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53076\nvarorder: 12\nvarname: SISINST\nimputationvar: XSISINST\nvartitle: Intructors\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1935
+              }
+            },
+            {
+              "record_id": 137807,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISLECT",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISLECT",
+              "category_count": 0,
+              "definition_hash": "4b29c2a6b41cd50141cb9db8ed99152b84b035648638a8592aa0ce269715e10c",
+              "normalized_hash": "717d8540b56e5dfe4e77a7684140800c7900e12b56d2377c2f82bba245646dd7",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Lecturers",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137807,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISLECT",
+                "title": "Lecturers",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53081\nvarorder: 14\nvarname: SISLECT\nimputationvar: XSISLECT\nvartitle: Lecturers\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1936
+              }
+            },
+            {
+              "record_id": 137808,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISNORK",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISNORK",
+              "category_count": 0,
+              "definition_hash": "07ec44c6ff2c3224151050d654f21895084cbbc139321e2984727b49cde83cd7",
+              "normalized_hash": "0d00b8c76aead3e8d5a81d92b1952ee56a72ac6f9d94769a1aa165314c984fb6",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "No academic rank",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137808,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISNORK",
+                "title": "No academic rank",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53086\nvarorder: 16\nvarname: SISNORK\nimputationvar: XSISNORK\nvartitle: No academic rank\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1937
+              }
+            }
+          ],
+          "categories": [
+            {
+              "record_id": 148999,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "S2024_SIS",
+              "variable_name": "FACSTAT",
+              "title": "With faculty status, tenured",
+              "body": "surveyorder: 90\ntablenumber: 94\ntablename: S2024_SIS\nvarnumber: 53051\nvarorder: 2\nvarname: FACSTAT\ncodevalue: 20\nfrequency: 2014\npercent: 9.69\nvalueorder: 20\nvaluelabel: With faculty status, tenured\nvartitle: Faculty and tenure status",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10529
+            },
+            {
+              "record_id": 149000,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "S2024_SIS",
+              "variable_name": "FACSTAT",
+              "title": "With faculty status, on tenure track",
+              "body": "surveyorder: 90\ntablenumber: 94\ntablename: S2024_SIS\nvarnumber: 53051\nvarorder: 2\nvarname: FACSTAT\ncodevalue: 30\nfrequency: 1903\npercent: 9.16\nvalueorder: 30\nvaluelabel: With faculty status, on tenure track\nvartitle: Faculty and tenure status",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10530
+            }
+          ],
+          "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+        }
+      },
+      {
+        "id": "B",
+        "label": "Comparable all-instructional-staff view (no ladder restriction)",
+        "interpretation": "Both panels cover all full-time instructional staff by academic rank: counts from S2024_SIS (FACSTAT=0, all staff) and average salaries from SAL2024_IS.",
+        "qualifications": [
+          "Does not isolate ladder faculty; use Option A for the ladder count.",
+          "Count is Fall 2024 including medical staff scope differences; salary is AY 2024-25 nonmedical only."
+        ],
+        "plan": {
+          "version": 2,
+          "institutions": [
+            "130493"
+          ],
+          "source_years": [
+            2024
+          ],
+          "sources": [
+            {
+              "id": "s",
+              "year": 2024,
+              "table": "S2024_SIS",
+              "field_record_ids": [
+                137801,
+                137803,
+                137804,
+                137805,
+                137806,
+                137807,
+                137808,
+                137802
+              ],
+              "filters": [
+                {
+                  "record_id": 137801,
+                  "operator": "eq",
+                  "values": [
+                    "0"
+                  ],
+                  "code_record_ids": [
+                    148997
+                  ]
+                }
+              ],
+              "group_by_record_ids": [],
+              "aggregates": []
+            }
+          ],
+          "joins": [],
+          "expressions": [],
+          "outputs": [
+            {
+              "reference": "fs_137803",
+              "label": "Professors (all FT instructional staff)"
+            },
+            {
+              "reference": "fs_137804",
+              "label": "Associate professors"
+            },
+            {
+              "reference": "fs_137805",
+              "label": "Assistant professors"
+            },
+            {
+              "reference": "fs_137806",
+              "label": "Instructors"
+            },
+            {
+              "reference": "fs_137807",
+              "label": "Lecturers"
+            },
+            {
+              "reference": "fs_137808",
+              "label": "No academic rank"
+            },
+            {
+              "reference": "fs_137802",
+              "label": "All ranks"
+            }
+          ],
+          "missing_policy": "propagate",
+          "time_basis": "source_period",
+          "assumptions": [
+            "All full-time instructional staff, regardless of tenure status.",
+            "Does not isolate ladder faculty; use Option A for the ladder count.",
+            "Count is Fall 2024 including medical staff scope differences; salary is AY 2024-25 nonmedical only."
+          ],
+          "clarification_questions": []
+        },
+        "additional_analyses": [
+          {
+            "label": "Average salary by rank, all full-time nonmedical instructional staff",
+            "interpretation": "Equated 9-month average salary by academic rank, AY 2024-25.",
+            "qualifications": [
+              "Nonmedical instructional staff only; AY 2024-25."
+            ],
+            "plan": {
+              "version": 2,
+              "institutions": [
+                "130493"
+              ],
+              "source_years": [
+                2024
+              ],
+              "sources": [
+                {
+                  "id": "sal",
+                  "year": 2024,
+                  "table": "SAL2024_IS",
+                  "field_record_ids": [
+                    137684,
+                    137724,
+                    137688
+                  ],
+                  "filters": [],
+                  "group_by_record_ids": [
+                    137684
+                  ],
+                  "aggregates": []
+                }
+              ],
+              "joins": [],
+              "expressions": [],
+              "outputs": [
+                {
+                  "reference": "fsal_137724",
+                  "label": "Avg equated 9-month salary by rank"
+                },
+                {
+                  "reference": "fsal_137688",
+                  "label": "Instructional staff count by rank"
+                }
+              ],
+              "missing_policy": "propagate",
+              "time_basis": "source_period",
+              "assumptions": [
+                "Salary population = all FT nonmedical instructional staff.",
+                "Does not isolate ladder faculty; use Option A for the ladder count.",
+                "Count is Fall 2024 including medical staff scope differences; salary is AY 2024-25 nonmedical only.",
+                "Nonmedical instructional staff only; AY 2024-25."
+              ],
+              "clarification_questions": []
+            },
+            "evidence": {
+              "definitions": [
+                {
+                  "record_id": 137684,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table_name": "SAL2024_IS",
+                  "variable_name": "ARANK",
+                  "physical_status": "documented_location_present",
+                  "physical_locations_json": "[\"SAL2024_IS\"]",
+                  "imputation_variable": "",
+                  "category_count": 7,
+                  "definition_hash": "0946befdaa44fe4b6477036796158f3ee364dde6c9f19ab18eb186be2f519630",
+                  "normalized_hash": "9aa1ce946ce5015b223b2c099acf46029f51536a01fd25db0f937ea2803f6a13",
+                  "category_hash": "d0591dd9a300aa714e6a9dd2d5b0daf6b6c7a19d39bd20e12d43ab4cdf7907aa",
+                  "title": "Academic rank",
+                  "long_description": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+                  "data_type": "N",
+                  "format": "Disc",
+                  "evidence": {
+                    "record_id": 137684,
+                    "release_id": "IPEDS_2024-25_Provisional",
+                    "kind": "variable_definition",
+                    "table_name": "SAL2024_IS",
+                    "variable_name": "ARANK",
+                    "title": "Academic rank",
+                    "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\nvartitle: Academic rank\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                    "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                    "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                    "sheet_name": "varTable24",
+                    "source_row": 1813
+                  }
+                },
+                {
+                  "record_id": 137688,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table_name": "SAL2024_IS",
+                  "variable_name": "SAINSTT",
+                  "physical_status": "documented_location_present",
+                  "physical_locations_json": "[\"SAL2024_IS\"]",
+                  "imputation_variable": "XSAINSTT",
+                  "category_count": 0,
+                  "definition_hash": "e9b2d2906fda070f8922682e2da0526c1478cf68d929f59f00dafb61bdbfda3f",
+                  "normalized_hash": "111497e04d1bc1aa5344a86556f1105ad25ef03b4134e0e1e3a2945364cd75d4",
+                  "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                  "title": "Instructional staff - total",
+                  "long_description": "Number of full-time, non-medical, instructional staff - total as of November 1, on 9, 10, 11 or 12 month contract and less less-than 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+                  "data_type": "N",
+                  "format": "Cont",
+                  "evidence": {
+                    "record_id": 137688,
+                    "release_id": "IPEDS_2024-25_Provisional",
+                    "kind": "variable_definition",
+                    "table_name": "SAL2024_IS",
+                    "variable_name": "SAINSTT",
+                    "title": "Instructional staff - total",
+                    "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40481\nvarorder: 4\nvarname: SAINSTT\nimputationvar: XSAINSTT\nvartitle: Instructional staff - total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Number of full-time, non-medical, instructional staff - total as of November 1, on 9, 10, 11 or 12 month contract and less less-than 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                    "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                    "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                    "sheet_name": "varTable24",
+                    "source_row": 1817
+                  }
+                },
+                {
+                  "record_id": 137724,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table_name": "SAL2024_IS",
+                  "variable_name": "SAEQ9AT",
+                  "physical_status": "documented_location_present",
+                  "physical_locations_json": "[\"SAL2024_IS\"]",
+                  "imputation_variable": "XSAEQ9AT",
+                  "category_count": 0,
+                  "definition_hash": "8a33a7f704fb5ce094ce0b14293d866db3b2df0051b65787783b833d15c5a531",
+                  "normalized_hash": "0dfa3404cbda82f378163b1f31ee2de0abc1bf2e6420bb8d78d84a678026ae14",
+                  "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                  "title": "Average salary for instructional staff equated to a 9-month contract-total",
+                  "long_description": "Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)",
+                  "data_type": "N",
+                  "format": "Cont",
+                  "evidence": {
+                    "record_id": 137724,
+                    "release_id": "IPEDS_2024-25_Provisional",
+                    "kind": "variable_definition",
+                    "table_name": "SAL2024_IS",
+                    "variable_name": "SAEQ9AT",
+                    "title": "Average salary for instructional staff equated to a 9-month contract-total",
+                    "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40967\nvarorder: 82\nvarname: SAEQ9AT\nimputationvar: XSAEQ9AT\nvartitle: Average salary for instructional staff equated to a 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary for instructional staff equated to a 9-month contract-total This is calculated by dividing the total salary outlays of full-time, non-medical, instructional staff - total equated to month contract (SAEQ9OT) by the number of full-time, non-medical, instructional staff (SATOTLT)\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                    "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                    "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                    "sheet_name": "varTable24",
+                    "source_row": 1853
+                  }
+                }
+              ],
+              "categories": [],
+              "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+            }
+          }
+        ],
+        "evidence": {
+          "definitions": [
+            {
+              "record_id": 137801,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "FACSTAT",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "",
+              "category_count": 11,
+              "definition_hash": "fcc3db8cb1c2d955d9ab238be90f344e42693fe042c5df04166638c8872cf6b7",
+              "normalized_hash": "d538efaf21be49109168d0253f2e0bb8685a2bd9974e73187cc426e6926767c7",
+              "category_hash": "3fe87f3197148729d85f89b34aa83247f858249146812d047d4c895678da1590",
+              "title": "Faculty and tenure status",
+              "long_description": "Faculty and tenure status Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category Tenure-Status of a personnel position with respect to permanence of the position. Tenure track - Personnel positions that lead to consideration for tenure. Not on tenure track - Personnel positions that are considered non-tenure earning positions Multi-year contract - a contract or employment agreement that is in effect for more than one year (e.g., more than 365 days) where subsequent years of the contract may be contingent upon other factors such as the appropriation of funds. The renewal period of a multi-year contract is not on an annual basis (e.g., a 5-year multi-year contract is renewed every 5 years NOT annually). Annual contract - An annually-renewable contract or employment agreement that is in effect for a stated annual period within one year of execution, and may be equal to a period of 365 days, or a standard academic year, or the equivalent. Does not include contracts for partial year periods such as a single semester, quarter, term, block, or course. Less-than-annual-contract - A contract or employment agreement that is in effect for a partial year period of less than 365 days, or less than a standard academic year or the equivalent. Includes contracts for partial year periods such as a single semester, quarter, term, block, or course.",
+              "data_type": "N",
+              "format": "Disc",
+              "evidence": {
+                "record_id": 137801,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "FACSTAT",
+                "title": "Faculty and tenure status",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53051\nvarorder: 2\nvarname: FACSTAT\nvartitle: Faculty and tenure status\ndatatype: N\nfieldwidth: 6\nformat: Disc\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: Faculty and tenure status Faculty Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as \"faculty\" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category Tenure-Status of a personnel position with respect to permanence of the position. Tenure track - Personnel positions that lead to consideration for tenure. Not on tenure track - Personnel positions that are considered non-tenure earning positions Multi-year contract - a contract or employment agreement that is in effect for more than one year (e.g., more than 365 days) where subsequent years of the contract may be contingent upon other factors such as the appropriation of funds. The renewal period of a multi-year contract is not on an annual basis (e.g., a 5-year multi-year contract is renewed every 5 years NOT annually). Annual contract - An annually-renewable contract or employment agreement that is in effect for a stated annual period within one year of execution, and may be equal to a period of 365 days, or a standard academic year, or the equivalent. Does not include contracts for partial year periods such as a single semester, quarter, term, block, or course. Less-than-annual-contract - A contract or employment agreement that is in effect for a partial year period of less than 365 days, or less than a standard academic year or the equivalent. Includes contracts for partial year periods such as a single semester, quarter, term, block, or course.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1930
+              }
+            },
+            {
+              "record_id": 137802,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISTOTL",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISTOTL",
+              "category_count": 0,
+              "definition_hash": "897d949f6567ec5a6887453bcd461f25bfd69e86d153e2a12124e3080887b5b8",
+              "normalized_hash": "ab67459c96cd771061f2cb563ff0c2f1576cc31647611e824cbcdcf3ca9f6bd3",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "All ranks",
+              "long_description": "Instructional Staff is an occupational category that is comprised of staff who are either: 1) Primarily Instruction or 2) Instruction combined with research and/or public service. The intent of the Instructional Staff category is to include all individuals whose primary occupation includes instruction at the institution. Instruction (only) - Persons whose specific assignments customarily are made for the purpose of providing instruction or teaching. Regardless of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction or teaching. Instruction combined with research and/or public service (IRPS) - Persons for whom it is not possible to differentiate between instruction or teaching, research, and public service because each of these functions is an integral component of his/her regular assignment. Regardless, of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction, research, and/or public service. Full-time staff (employees) As defined by the institution. The type of appointment at the snapshot date determines whether an employee is full-time or part-time. The employee's term of contract is not considered in making the determination of full- or part-time. A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137802,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISTOTL",
+                "title": "All ranks",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53056\nvarorder: 4\nvarname: SISTOTL\nimputationvar: XSISTOTL\nvartitle: All ranks\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: Instructional Staff is an occupational category that is comprised of staff who are either: 1) Primarily Instruction or 2) Instruction combined with research and/or public service. The intent of the Instructional Staff category is to include all individuals whose primary occupation includes instruction at the institution. Instruction (only) - Persons whose specific assignments customarily are made for the purpose of providing instruction or teaching. Regardless of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction or teaching. Instruction combined with research and/or public service (IRPS) - Persons for whom it is not possible to differentiate between instruction or teaching, research, and public service because each of these functions is an integral component of his/her regular assignment. Regardless, of title, academic rank, or tenure status, these employees formally spend the majority of their time providing instruction, research, and/or public service. Full-time staff (employees) As defined by the institution. The type of appointment at the snapshot date determines whether an employee is full-time or part-time. The employee's term of contract is not considered in making the determination of full- or part-time. A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1931
+              }
+            },
+            {
+              "record_id": 137803,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISPROF",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISPROF",
+              "category_count": 0,
+              "definition_hash": "6d630027f26f3d30221b532091ea2145d858f6e198a9570575f43215e9bffebe",
+              "normalized_hash": "013360b657920eb65a9f755fdbf33c2e86af63100774a8a2a54d2c0b9d335eb6",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Professors",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137803,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISPROF",
+                "title": "Professors",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53061\nvarorder: 6\nvarname: SISPROF\nimputationvar: XSISPROF\nvartitle: Professors\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1932
+              }
+            },
+            {
+              "record_id": 137804,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISASCP",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISASCP",
+              "category_count": 0,
+              "definition_hash": "6eaa42ceb169e0787cdddd2ef7dc5049a0f8155503aa7cb10c0c091da07d7df8",
+              "normalized_hash": "1dafa7a0aa51b825c4b70a6c52a9f50c65499ea3512bf8df6921cc9736d0705d",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Associate professors",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137804,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISASCP",
+                "title": "Associate professors",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53066\nvarorder: 8\nvarname: SISASCP\nimputationvar: XSISASCP\nvartitle: Associate professors\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1933
+              }
+            },
+            {
+              "record_id": 137805,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISASTP",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISASTP",
+              "category_count": 0,
+              "definition_hash": "f9d1c3ed169e54e8e3d8c4a1a7ae3649dfda63260993d30210ae6bebf7e0913f",
+              "normalized_hash": "6c83e2040eea3fc224fce5ed1b4b6d8e5e3b11bcc677cbff056717df3513a9e7",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Assistant professors",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137805,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISASTP",
+                "title": "Assistant professors",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53071\nvarorder: 10\nvarname: SISASTP\nimputationvar: XSISASTP\nvartitle: Assistant professors\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1934
+              }
+            },
+            {
+              "record_id": 137806,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISINST",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISINST",
+              "category_count": 0,
+              "definition_hash": "d16e7cd968856f083f28d8c3afe467292c83dc18fbd93d91dd56a0ef6160a83f",
+              "normalized_hash": "a90c9cc570aa9706f2416a19ffe6751cc6da58d61b95d397b7cb9f5314be7e3b",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Intructors",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137806,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISINST",
+                "title": "Intructors",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53076\nvarorder: 12\nvarname: SISINST\nimputationvar: XSISINST\nvartitle: Intructors\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1935
+              }
+            },
+            {
+              "record_id": 137807,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISLECT",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISLECT",
+              "category_count": 0,
+              "definition_hash": "4b29c2a6b41cd50141cb9db8ed99152b84b035648638a8592aa0ce269715e10c",
+              "normalized_hash": "717d8540b56e5dfe4e77a7684140800c7900e12b56d2377c2f82bba245646dd7",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Lecturers",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137807,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISLECT",
+                "title": "Lecturers",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53081\nvarorder: 14\nvarname: SISLECT\nimputationvar: XSISLECT\nvartitle: Lecturers\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1936
+              }
+            },
+            {
+              "record_id": 137808,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "S2024_SIS",
+              "variable_name": "SISNORK",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"S2024_SIS\"]",
+              "imputation_variable": "XSISNORK",
+              "category_count": 0,
+              "definition_hash": "07ec44c6ff2c3224151050d654f21895084cbbc139321e2984727b49cde83cd7",
+              "normalized_hash": "0d00b8c76aead3e8d5a81d92b1952ee56a72ac6f9d94769a1aa165314c984fb6",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "No academic rank",
+              "long_description": "A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137808,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "S2024_SIS",
+                "variable_name": "SISNORK",
+                "title": "No academic rank",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 94\ntablename: S2024_SIS\ntabletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nvarnumber: 53086\nvarorder: 16\nvarname: SISNORK\nimputationvar: XSISNORK\nvartitle: No academic rank\ndatatype: N\nfieldwidth: 2\nformat: Cont\nmultirecord: 1\nfilenumber: 22\nsectionnumber: 1\nlongdescription: A status designated by the institution according to the institution's policies. The IPEDS HR survey includes the ranks of Professor, Associate Professor, Assistant Professor, Instructor, and Lecturer.\nvarsource: IPEDS, Spring 2025, Human Resource component, Fall staff section\nfiletitle: Full-time instructional staff, by faculty and tenure status, and academic rank: Fall 2024\nsectiontitle: Full-time instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1937
+              }
+            }
+          ],
+          "categories": [
+            {
+              "record_id": 148997,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "S2024_SIS",
+              "variable_name": "FACSTAT",
+              "title": "All full-time instructional staff",
+              "body": "surveyorder: 90\ntablenumber: 94\ntablename: S2024_SIS\nvarnumber: 53051\nvarorder: 2\nvarname: FACSTAT\ncodevalue: 0\nfrequency: 3518\npercent: 16.93\nvalueorder: 1\nvaluelabel: All full-time instructional staff\nvartitle: Faculty and tenure status",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10527
+            }
+          ],
+          "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+        }
+      }
+    ],
+    "selected_option": null,
+    "confirmed_decisions": [],
+    "open_questions": [
+      "How many ladder faculty does 130493 have, and what are their average salaries by academic rank?"
+    ],
+    "id": "e1654c1c22962460"
+  },
+  "mode": "source-backed clarification",
+  "model_usage": {
+    "model": "claude-sonnet-5-5",
+    "calls": 4,
+    "planning_tool_requests": 6,
+    "semantic_repair_attempts": 0,
+    "latency_seconds": 22.728553399987984,
+    "input_tokens": 47808,
+    "output_tokens": 3119,
+    "cache_creation_input_tokens": 15470,
+    "cache_read_input_tokens": 30940,
+    "estimated_api_usd": 0.168575,
+    "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+    "stages": [
+      {
+        "input_tokens": 567,
+        "output_tokens": 64,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "calls": 1,
+        "latency_seconds": 2.2755533999879844,
+        "estimated_api_usd": 0.001774,
+        "model": "claude-sonnet-5-5",
+        "stage": "institution mention extraction"
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "calls": 3,
+        "planning_tool_requests": 6,
+        "semantic_repair_attempts": 0,
+        "latency_seconds": 20.453,
+        "input_tokens": 47241,
+        "output_tokens": 3055,
+        "cache_creation_input_tokens": 15470,
+        "cache_read_input_tokens": 30940,
+        "estimated_api_usd": 0.166801,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+      }
+    ]
+  },
+  "catalog_context": {
+    "kind": "catalog_clarification",
+    "question": "How many ladder faculty does 130493 have, and what are their average salaries by academic rank?",
+    "previous_plan": null
+  },
+  "latency": {
+    "reviewed_or_discovery_pipeline_seconds": 21.01925760001177,
+    "answer_ready_seconds": 28.685087799967732,
+    "live_model_calls": 4,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+    "conversation_resolution_seconds": 0,
+    "institution_resolution_seconds": 7.650365699955728
+  },
+  "institution_identity": {
+    "unitids": [
+      130493
+    ],
+    "original_question": "How many ladder faculty does Southern Connecticut State University have, and what are their average salaries by academic rank?",
+    "original_mentions": [
+      "Southern Connecticut State University"
+    ],
+    "confirmed_choices": {
+      "southern connecticut state university": 130493
+    },
+    "scope_mentions": [],
+    "labels": [
+      "Southern Connecticut State University \u00b7 New Haven, CT \u00b7 UNITID 130493"
+    ]
+  }
+}

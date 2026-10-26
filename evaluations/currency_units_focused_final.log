@@ -1,0 +1,10 @@
+test_actual_table_ui_uses_dollars_for_saved_result (prototype.tests.test_units.UnitTests.test_actual_table_ui_uses_dollars_for_saved_result) ... 2026-10-21 22:08:54.663 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:08:54.663 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_real_salary_outlays_averages_tuition_finance_and_exports (prototype.tests.test_units.UnitTests.test_real_salary_outlays_averages_tuition_finance_and_exports) ... ok
+test_scale_uncertainty_conflicts_and_nonmoney (prototype.tests.test_units.UnitTests.test_scale_uncertainty_conflicts_and_nonmoney) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 7.141s
+
+OK

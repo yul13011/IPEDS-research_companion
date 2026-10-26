@@ -1,0 +1,129 @@
+{
+  "model": "claude-sonnet-5-5",
+  "ttl": "5m",
+  "note": "Cache hit probe, not a controlled before/after experiment.",
+  "outcomes": [
+    {
+      "question": "Show Yale academic library total expenses for fiscal 2024.",
+      "intent": "catalog_plan",
+      "calls": 3,
+      "validation": {
+        "schema_and_catalog_binding": "passed",
+        "execution_approved": false,
+        "semantic_status": "review_required",
+        "blocks": [],
+        "required_next_checks": [
+          "question coverage",
+          "population and row selectors",
+          "units and denominators",
+          "variable-specific time periods",
+          "join and aggregation semantics",
+          "missing-value treatment",
+          "cross-year comparability"
+        ]
+      }
+    },
+    {
+      "question": "Show Harvard academic library total expenses for fiscal 2024.",
+      "intent": "catalog_plan",
+      "calls": 4,
+      "validation": {
+        "schema_and_catalog_binding": "passed",
+        "execution_approved": false,
+        "semantic_status": "review_required",
+        "blocks": [],
+        "required_next_checks": [
+          "question coverage",
+          "population and row selectors",
+          "units and denominators",
+          "variable-specific time periods",
+          "join and aggregation semantics",
+          "missing-value treatment",
+          "cross-year comparability"
+        ]
+      }
+    }
+  ],
+  "calls": [
+    {
+      "question": "Show Yale academic library total expenses for fiscal 2024.",
+      "seconds": 3.87,
+      "catalog_prefix_sha256": "e3b112a46bc6b899dea865e70657ca97b4112a5610873e2d91cbc7707629d5b6",
+      "message_count": 1,
+      "input_tokens": 4,
+      "output_tokens": 297,
+      "cache_creation_input_tokens": 28525,
+      "cache_read_input_tokens": 0,
+      "estimated_api_usd": 0.0742905
+    },
+    {
+      "question": "Show Yale academic library total expenses for fiscal 2024.",
+      "seconds": 1.722,
+      "catalog_prefix_sha256": "e3b112a46bc6b899dea865e70657ca97b4112a5610873e2d91cbc7707629d5b6",
+      "message_count": 3,
+      "input_tokens": 2,
+      "output_tokens": 113,
+      "cache_creation_input_tokens": 2197,
+      "cache_read_input_tokens": 28525,
+      "estimated_api_usd": 0.009479
+    },
+    {
+      "question": "Show Yale academic library total expenses for fiscal 2024.",
+      "seconds": 3.948,
+      "catalog_prefix_sha256": "e3b112a46bc6b899dea865e70657ca97b4112a5610873e2d91cbc7707629d5b6",
+      "message_count": 5,
+      "input_tokens": 2,
+      "output_tokens": 485,
+      "cache_creation_input_tokens": 8871,
+      "cache_read_input_tokens": 30722,
+      "estimated_api_usd": 0.0301037
+    },
+    {
+      "question": "Show Harvard academic library total expenses for fiscal 2024.",
+      "seconds": 3.172,
+      "catalog_prefix_sha256": "e3b112a46bc6b899dea865e70657ca97b4112a5610873e2d91cbc7707629d5b6",
+      "message_count": 1,
+      "input_tokens": 4,
+      "output_tokens": 251,
+      "cache_creation_input_tokens": 50,
+      "cache_read_input_tokens": 28476,
+      "estimated_api_usd": 0.0054906
+    },
+    {
+      "question": "Show Harvard academic library total expenses for fiscal 2024.",
+      "seconds": 3.011,
+      "catalog_prefix_sha256": "e3b112a46bc6b899dea865e70657ca97b4112a5610873e2d91cbc7707629d5b6",
+      "message_count": 3,
+      "input_tokens": 2,
+      "output_tokens": 313,
+      "cache_creation_input_tokens": 7545,
+      "cache_read_input_tokens": 28526,
+      "estimated_api_usd": 0.0248491
+    },
+    {
+      "question": "Show Harvard academic library total expenses for fiscal 2024.",
+      "seconds": 2.696,
+      "catalog_prefix_sha256": "e3b112a46bc6b899dea865e70657ca97b4112a5610873e2d91cbc7707629d5b6",
+      "message_count": 5,
+      "input_tokens": 2,
+      "output_tokens": 215,
+      "cache_creation_input_tokens": 2093,
+      "cache_read_input_tokens": 36071,
+      "estimated_api_usd": 0.010993600000000001
+    },
+    {
+      "question": "Show Harvard academic library total expenses for fiscal 2024.",
+      "seconds": 3.674,
+      "catalog_prefix_sha256": "e3b112a46bc6b899dea865e70657ca97b4112a5610873e2d91cbc7707629d5b6",
+      "message_count": 7,
+      "input_tokens": 2,
+      "output_tokens": 461,
+      "cache_creation_input_tokens": 270,
+      "cache_read_input_tokens": 38164,
+      "estimated_api_usd": 0.0091054
+    }
+  ],
+  "total_input_tokens": 240053,
+  "cache_read_fraction": 0.7935081002945183,
+  "estimated_api_usd": 0.16431189999999998
+}

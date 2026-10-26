@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "coverage_response": true,
+    "no_statistical_result": true,
+    "gap_first": true,
+    "local_inspection_evidence": true,
+    "no_forced_proxy_options": true,
+    "no_external_suggestion": true,
+    "scope_disclosed": true
+  },
+  "passed": true,
+  "inspection_count": 7
+}

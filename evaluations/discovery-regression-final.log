@@ -1,0 +1,53 @@
+test_discovery_skips_analytical_and_identity_planning (prototype.tests.test_discovery.DiscoveryTests.test_discovery_skips_analytical_and_identity_planning) ... ok
+test_readable_answer_with_optional_sources_in_chat (prototype.tests.test_discovery.DiscoveryTests.test_readable_answer_with_optional_sources_in_chat) ... 2026-10-20 18:38:05.423 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_real_topics_and_latency (prototype.tests.test_discovery.DiscoveryTests.test_real_topics_and_latency) ... ok
+test_year_scope_unknown_topic_and_empty_topic (prototype.tests.test_discovery.DiscoveryTests.test_year_scope_unknown_topic_and_empty_topic) ... ok
+test_chat_result_controls_and_table_preserve_result (prototype.tests.test_prototype.PrototypeTests.test_chat_result_controls_and_table_preserve_result) ... 2026-10-20 18:38:09.660 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 18:38:10.432 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 18:38:10.433 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_codebook_search_identifiers_and_full_definitions (prototype.tests.test_prototype.PrototypeTests.test_codebook_search_identifiers_and_full_definitions) ... ok
+test_cohort_class_time_and_outside_coverage (prototype.tests.test_prototype.PrototypeTests.test_cohort_class_time_and_outside_coverage) ... ok
+test_degrees_aid_and_location_override (prototype.tests.test_prototype.PrototypeTests.test_degrees_aid_and_location_override) ... ok
+test_discovery_and_parser_followups (prototype.tests.test_prototype.PrototypeTests.test_discovery_and_parser_followups) ... ok
+test_display_edits_reuse_exact_result_and_preserve_unrequested_fields (prototype.tests.test_prototype.PrototypeTests.test_display_edits_reuse_exact_result_and_preserve_unrequested_fields) ... ok
+test_entire_supported_benchmark (prototype.tests.test_prototype.PrototypeTests.test_entire_supported_benchmark) ... ok
+test_exports_are_complete_and_attributable (prototype.tests.test_prototype.PrototypeTests.test_exports_are_complete_and_attributable) ... ok
+test_institutions_and_ivy (prototype.tests.test_prototype.PrototypeTests.test_institutions_and_ivy) ... ok
+test_learning_examples_and_session_navigation (prototype.tests.test_prototype.PrototypeTests.test_learning_examples_and_session_navigation) ... 2026-10-20 18:38:16.611 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_model_adapter_auto_strict_and_bounded_retry (prototype.tests.test_prototype.PrototypeTests.test_model_adapter_auto_strict_and_bounded_retry) ... ok
+test_read_only_and_plan_limits (prototype.tests.test_prototype.PrototypeTests.test_read_only_and_plan_limits) ... ok
+test_response_rules_summary_missing_context_and_ambiguity (prototype.tests.test_prototype.PrototypeTests.test_response_rules_summary_missing_context_and_ambiguity) ... ok
+test_scrollable_conversation_preserves_followups_and_tools (prototype.tests.test_prototype.PrototypeTests.test_scrollable_conversation_preserves_followups_and_tools) ... 2026-10-20 18:38:23.311 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 18:38:24.123 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 18:38:26.413 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_streamlit_chart_first_and_show_table_without_new_query (prototype.tests.test_prototype.PrototypeTests.test_streamlit_chart_first_and_show_table_without_new_query) ... 2026-10-20 18:38:27.565 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_streamlit_codebook_search_submit_repeat_empty_and_categories (prototype.tests.test_prototype.PrototypeTests.test_streamlit_codebook_search_submit_repeat_empty_and_categories) ... 2026-10-20 18:38:29.536 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_streamlit_guided_chart_and_export (prototype.tests.test_prototype.PrototypeTests.test_streamlit_guided_chart_and_export) ... 2026-10-20 18:38:30.597 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_topic_panel_row_placement_close_and_tab_navigation (prototype.tests.test_prototype.PrototypeTests.test_topic_panel_row_placement_close_and_tab_navigation) ... 2026-10-20 18:38:33.101 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_uncollected_not_zero_and_retained_discrepancies (prototype.tests.test_prototype.PrototypeTests.test_uncollected_not_zero_and_retained_discrepancies) ... ok
+test_yale_2024 (prototype.tests.test_prototype.PrototypeTests.test_yale_2024) ... ok
+test_actual_local_continuation_changes_institution_and_preserves_scope (prototype.tests.test_memory.MemoryTests.test_actual_local_continuation_changes_institution_and_preserves_scope) ... ok
+test_ambiguous_reference_clarifies_without_execution (prototype.tests.test_memory.MemoryTests.test_ambiguous_reference_clarifies_without_execution) ... ok
+test_clear_button_recovers_from_first_question_planner_error (prototype.tests.test_memory.MemoryTests.test_clear_button_recovers_from_first_question_planner_error) ... 2026-10-20 18:38:35.332 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-20 18:38:36.404 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_clear_context_and_exception_do_not_leak (prototype.tests.test_memory.MemoryTests.test_clear_context_and_exception_do_not_leak) ... ok
+test_context_is_bounded_and_never_includes_source_sql (prototype.tests.test_memory.MemoryTests.test_context_is_bounded_and_never_includes_source_sql) ... ok
+test_local_name_and_percentage_continuations (prototype.tests.test_memory.MemoryTests.test_local_name_and_percentage_continuations) ... ok
+test_resolver_transport_and_explicit_period_protection (prototype.tests.test_memory.MemoryTests.test_resolver_transport_and_explicit_period_protection) ... ok
+test_semantic_resolution_is_used_before_routing_and_isolated (prototype.tests.test_memory.MemoryTests.test_semantic_resolution_is_used_before_routing_and_isolated) ... ok
+test_ui_passes_history_and_new_conversation_clears_it (prototype.tests.test_memory.MemoryTests.test_ui_passes_history_and_new_conversation_clears_it) ... 2026-10-20 18:38:36.491 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 33.591s
+
+OK

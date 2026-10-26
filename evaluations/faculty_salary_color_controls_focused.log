@@ -1,0 +1,9 @@
+test_style_colors_match_salary_chart_and_recolor_actual_bars (prototype.tests.test_faculty_examples.FacultyExampleTests.test_style_colors_match_salary_chart_and_recolor_actual_bars) ... 2026-10-21 14:48:38.850 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 14:48:40.044 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 14:48:40.045 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 7.737s
+
+OK

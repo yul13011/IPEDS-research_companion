@@ -1,0 +1,1157 @@
+{
+  "intent": "analyze",
+  "catalog_plan": {
+    "version": 2,
+    "institutions": [
+      "Mount Holyoke College"
+    ],
+    "source_years": [
+      2024
+    ],
+    "sources": [
+      {
+        "id": "s",
+        "year": 2024,
+        "table": "SAL2024_IS",
+        "field_record_ids": [
+          137706,
+          137684
+        ],
+        "filters": [
+          {
+            "record_id": 137684,
+            "operator": "eq",
+            "values": [
+              "7"
+            ],
+            "code_record_ids": [
+              148746
+            ]
+          }
+        ],
+        "group_by_record_ids": [],
+        "aggregates": []
+      }
+    ],
+    "joins": [],
+    "expressions": [],
+    "outputs": [
+      {
+        "reference": "fs_137706",
+        "label": "Salary outlays, full-time instructional staff (all ranks), 2024-25"
+      }
+    ],
+    "missing_policy": "propagate",
+    "time_basis": "source_period",
+    "assumptions": [
+      "All instructional staff total row selected",
+      "Instructional staff only; excludes non-instructional staff",
+      "Base salaries only, as of November 1; no benefits or supplements"
+    ],
+    "clarification_questions": []
+  },
+  "catalog_proposal": {
+    "catalog_plan": {
+      "version": 2,
+      "institutions": [
+        "Mount Holyoke College"
+      ],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "s",
+          "year": 2024,
+          "table": "SAL2024_IS",
+          "field_record_ids": [
+            137706,
+            137684
+          ],
+          "filters": [
+            {
+              "record_id": 137684,
+              "operator": "eq",
+              "values": [
+                "7"
+              ],
+              "code_record_ids": [
+                148746
+              ]
+            }
+          ],
+          "group_by_record_ids": [],
+          "aggregates": []
+        }
+      ],
+      "joins": [],
+      "expressions": [],
+      "outputs": [
+        {
+          "reference": "fs_137706",
+          "label": "Salary outlays, full-time instructional staff (all ranks), 2024-25"
+        }
+      ],
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "All instructional staff total row selected",
+        "Instructional staff only; excludes non-instructional staff",
+        "Base salaries only, as of November 1; no benefits or supplements"
+      ],
+      "clarification_questions": []
+    },
+    "question": "Total base salary outlays for Mount Holyoke College's full-time nonmedical instructional staff (faculty only), academic year 2024-25.",
+    "definition_evidence": [
+      {
+        "record_id": 137684,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "SAL2024_IS",
+        "variable_name": "ARANK",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"SAL2024_IS\"]",
+        "imputation_variable": "",
+        "category_count": 7,
+        "definition_hash": "0946befdaa44fe4b6477036796158f3ee364dde6c9f19ab18eb186be2f519630",
+        "normalized_hash": "9aa1ce946ce5015b223b2c099acf46029f51536a01fd25db0f937ea2803f6a13",
+        "category_hash": "d0591dd9a300aa714e6a9dd2d5b0daf6b6c7a19d39bd20e12d43ab4cdf7907aa",
+        "title": "Academic rank",
+        "long_description": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+        "data_type": "N",
+        "format": "Disc",
+        "evidence": {
+          "record_id": 137684,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Academic rank",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\nvartitle: Academic rank\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 1813
+        }
+      },
+      {
+        "record_id": 137706,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "SAL2024_IS",
+        "variable_name": "SAOUTLT",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"SAL2024_IS\"]",
+        "imputation_variable": "XSAOUTLT",
+        "category_count": 0,
+        "definition_hash": "266557cf6b4a2bab1a2875f6a5882b201e94953439af6ba6fc08e1ae33edc87a",
+        "normalized_hash": "408ad99dba26ae77e6a670867980c2dce1321384f70bf373cbbb581b60ad09f1",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Salary outlays - total",
+        "long_description": "Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 137706,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SAOUTLT",
+          "title": "Salary outlays - total",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40576\nvarorder: 46\nvarname: SAOUTLT\nimputationvar: XSAOUTLT\nvartitle: Salary outlays - total\ndatatype: N\nfieldwidth: 10\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 1835
+        }
+      }
+    ],
+    "category_evidence": [
+      {
+        "record_id": 148746,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "code_value",
+        "table_name": "SAL2024_IS",
+        "variable_name": "ARANK",
+        "title": "All instructional staff total",
+        "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 7\nfrequency: 3782\npercent: 24.86\nvalueorder: 1\nvaluelabel: All instructional staff total\nvartitle: Academic rank",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "valueSets24",
+        "source_row": 10276
+      }
+    ],
+    "validation": {
+      "execution_approved": false,
+      "preflight_eligible": true,
+      "semantic_status": "runtime_cardinality_pending",
+      "blocks": []
+    },
+    "created_at": "2026-10-22T02:00:31.152576+00:00",
+    "proposal_id": "8f0554d9206852679e27"
+  },
+  "message": "Using Full-time instructional staff salary outlays. Instructional staff only; excludes non-instructional staff Base salaries only, as of November 1; no benefits or supplements",
+  "mode": "catalog relational planner",
+  "result": {
+    "plan": {
+      "metrics": [
+        "fs_137706"
+      ],
+      "institutions": [
+        "Mount Holyoke College"
+      ],
+      "years": [
+        2024
+      ],
+      "time_basis": "source_period",
+      "output": "table"
+    },
+    "catalog_plan": {
+      "version": 2,
+      "institutions": [
+        "Mount Holyoke College"
+      ],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "s",
+          "year": 2024,
+          "table": "SAL2024_IS",
+          "field_record_ids": [
+            137706,
+            137684
+          ],
+          "filters": [
+            {
+              "record_id": 137684,
+              "operator": "eq",
+              "values": [
+                "7"
+              ],
+              "code_record_ids": [
+                148746
+              ]
+            }
+          ],
+          "group_by_record_ids": [],
+          "aggregates": []
+        }
+      ],
+      "joins": [],
+      "expressions": [],
+      "outputs": [
+        {
+          "reference": "fs_137706",
+          "label": "Salary outlays, full-time instructional staff (all ranks), 2024-25"
+        }
+      ],
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "All instructional staff total row selected",
+        "Instructional staff only; excludes non-instructional staff",
+        "Base salaries only, as of November 1; no benefits or supplements"
+      ],
+      "clarification_questions": []
+    },
+    "metric_specs": {
+      "fs_137706": {
+        "label": "Salary outlays, full-time instructional staff (all ranks), 2024-25",
+        "family": "query",
+        "unit": "monetary amount"
+      }
+    },
+    "rows": [
+      {
+        "institution": "Mount Holyoke College",
+        "unitid": 166939,
+        "observation_year": 2024,
+        "entry_cohort_year": null,
+        "reporting_period": "2024-25",
+        "metric": "fs_137706",
+        "measure": "Salary outlays, full-time instructional staff (all ranks), 2024-25",
+        "unit": "monetary amount",
+        "value": 27792003.0,
+        "release": "IPEDS_2024-25_Provisional",
+        "provisional": true,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[]",
+        "groups": [],
+        "available_rows": null,
+        "requested_rows": null
+      }
+    ],
+    "observation_years": [
+      2024
+    ],
+    "sources": [
+      {
+        "metric": "fs_137706",
+        "year": 2024,
+        "unitid": 166939,
+        "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+        "database_size": 272990208,
+        "database_mtime_ns": 1792185798524065800,
+        "table": "SAL2024_IS",
+        "columns": [
+          "SAOUTLT"
+        ],
+        "filters": [
+          {
+            "record_id": 137684,
+            "operator": "eq",
+            "values": [
+              "7"
+            ],
+            "code_record_ids": [
+              148746
+            ]
+          }
+        ],
+        "formula": {
+          "aggregates": [],
+          "expressions": []
+        },
+        "sql": "SELECT \"UNITID\" AS \"UNITID\",\"ARANK\" AS \"ARANK\",\"SAOUTLT\" AS \"SAOUTLT\" FROM \"SAL2024_IS\" WHERE \"UNITID\" IN (?) AND \"ARANK\" IN (?) LIMIT 20001",
+        "parameters": [
+          166939,
+          "7"
+        ],
+        "codebook_evidence": [
+          {
+            "record_id": 137706,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "SAL2024_IS",
+            "variable_name": "SAOUTLT",
+            "title": "Salary outlays - total",
+            "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40576\nvarorder: 46\nvarname: SAOUTLT\nimputationvar: XSAOUTLT\nvartitle: Salary outlays - total\ndatatype: N\nfieldwidth: 10\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "varTable24",
+            "source_row": 1835,
+            "long_description": "Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+            "documented_table": "SAL2024_IS",
+            "physical_table": "SAL2024_IS",
+            "location_override": false,
+            "issues": []
+          }
+        ],
+        "code_filters": [
+          {
+            "record_id": 148746,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "code_value",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "title": "All instructional staff total",
+            "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 7\nfrequency: 3782\npercent: 24.86\nvalueorder: 1\nvaluelabel: All instructional staff total\nvartitle: Academic rank",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "valueSets24",
+            "source_row": 10276
+          }
+        ]
+      }
+    ],
+    "definitions": {
+      "fs_137706": "Salary outlays - total: Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school"
+    },
+    "warnings": [
+      "Instructional staff only; excludes non-instructional staff",
+      "Base salaries only, as of November 1; no benefits or supplements"
+    ],
+    "technical_notes": [
+      "All instructional staff total row selected",
+      "Instructional staff only; excludes non-instructional staff",
+      "Base salaries only, as of November 1; no benefits or supplements",
+      "Source row domains, missingness policy, join cardinality and typed calculations are retained in the audit. Missing values are not zeros."
+    ],
+    "created_at": "2026-10-22T02:00:31.272035+00:00",
+    "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+    "review_status": "Source-bound relational plan with observed grain, bounded domains, cardinality and typed-operation validation.",
+    "coverage": {
+      "requested_cells": 1,
+      "available_cells": 1
+    },
+    "query_audit": [
+      {
+        "source_id": "s",
+        "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+        "sql": "SELECT \"UNITID\" AS \"UNITID\",\"ARANK\" AS \"ARANK\",\"SAOUTLT\" AS \"SAOUTLT\" FROM \"SAL2024_IS\" WHERE \"UNITID\" IN (?) AND \"ARANK\" IN (?) LIMIT 20001",
+        "parameters": [
+          166939,
+          "7"
+        ],
+        "selected_rows": 1,
+        "raw_keys": [
+          "UNITID",
+          "ARANK"
+        ],
+        "row_limit": 20000,
+        "requested_unitids": [
+          166939
+        ],
+        "missing_unitids": [],
+        "missing_codes": {
+          "137706": [],
+          "137684": []
+        }
+      }
+    ],
+    "join_validation": [],
+    "semantic_validation": {
+      "execution_approved": true,
+      "version": 2,
+      "missing_policy": "propagate",
+      "time_basis": "source_period"
+    },
+    "catalog_evidence": {
+      "definition_evidence": [
+        {
+          "record_id": 137684,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "physical_status": "documented_location_present",
+          "physical_locations_json": "[\"SAL2024_IS\"]",
+          "imputation_variable": "",
+          "category_count": 7,
+          "definition_hash": "0946befdaa44fe4b6477036796158f3ee364dde6c9f19ab18eb186be2f519630",
+          "normalized_hash": "9aa1ce946ce5015b223b2c099acf46029f51536a01fd25db0f937ea2803f6a13",
+          "category_hash": "d0591dd9a300aa714e6a9dd2d5b0daf6b6c7a19d39bd20e12d43ab4cdf7907aa",
+          "title": "Academic rank",
+          "long_description": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+          "data_type": "N",
+          "format": "Disc",
+          "evidence": {
+            "record_id": 137684,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "SAL2024_IS",
+            "variable_name": "ARANK",
+            "title": "Academic rank",
+            "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\nvartitle: Academic rank\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "varTable24",
+            "source_row": 1813
+          }
+        },
+        {
+          "record_id": 137706,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SAOUTLT",
+          "physical_status": "documented_location_present",
+          "physical_locations_json": "[\"SAL2024_IS\"]",
+          "imputation_variable": "XSAOUTLT",
+          "category_count": 0,
+          "definition_hash": "266557cf6b4a2bab1a2875f6a5882b201e94953439af6ba6fc08e1ae33edc87a",
+          "normalized_hash": "408ad99dba26ae77e6a670867980c2dce1321384f70bf373cbbb581b60ad09f1",
+          "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "title": "Salary outlays - total",
+          "long_description": "Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+          "data_type": "N",
+          "format": "Cont",
+          "evidence": {
+            "record_id": 137706,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "variable_definition",
+            "table_name": "SAL2024_IS",
+            "variable_name": "SAOUTLT",
+            "title": "Salary outlays - total",
+            "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40576\nvarorder: 46\nvarname: SAOUTLT\nimputationvar: XSAOUTLT\nvartitle: Salary outlays - total\ndatatype: N\nfieldwidth: 10\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "varTable24",
+            "source_row": 1835
+          }
+        }
+      ],
+      "category_evidence": [
+        {
+          "record_id": 148746,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "All instructional staff total",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 7\nfrequency: 3782\npercent: 24.86\nvalueorder: 1\nvaluelabel: All instructional staff total\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10276
+        }
+      ],
+      "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+      "table_evidence": [
+        {
+          "release_id": "IPEDS_2024-25_Provisional",
+          "table_name": "SAL2024_IS",
+          "family": "SAL{YEAR}_IS",
+          "profile": {
+            "candidate_key": [
+              "UNITID",
+              "ARANK"
+            ],
+            "distinct_institutions": 3782,
+            "expected_rows_match": true,
+            "key_status": "observed_unique_candidate_review_required",
+            "null_institution_ids": 0,
+            "query_count": 2,
+            "rows": 15216,
+            "status": "profiled"
+          },
+          "period_evidence": [
+            {
+              "record_id": 135860,
+              "release_date": null,
+              "release_status": "Provisional",
+              "year_coverage": "2024-25"
+            }
+          ],
+          "population_evidence": [
+            {
+              "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology.",
+              "record_id": 135860,
+              "title": "Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25"
+            }
+          ],
+          "source_definitions": [
+            {
+              "record_id": 135860,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "table_definition",
+              "table_name": "SAL2024_IS",
+              "variable_name": "",
+              "title": "Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25",
+              "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\nyearcoverage: 2024-25\ntablename: SAL2024_IS\ntablenumber: 91\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\ndescription: This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology.\nrelease: Provisional\nrelease_date: January 2026",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "tables24",
+              "source_row": 41
+            }
+          ]
+        }
+      ]
+    },
+    "population_evidence": {},
+    "field_semantics": {
+      "137684": {
+        "version": 3,
+        "record_id": 137684,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table": "SAL2024_IS",
+        "variable": "ARANK",
+        "source_title": "Academic rank",
+        "measure_base": "academic rank",
+        "dimensions": {},
+        "unit": "unknown",
+        "numeric_kind": "coded_or_other",
+        "additive": false,
+        "total_scope": false,
+        "reporting_periods": [
+          "2024-25"
+        ],
+        "field_time_qualifiers": [],
+        "population_evidence": [
+          {
+            "record_id": 135860,
+            "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution"
+          }
+        ],
+        "required_row_selectors": [
+          "ARANK"
+        ],
+        "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+        "category_overlap_warning": false,
+        "evidence": {
+          "variable_record_id": 137684,
+          "table_record_ids": [
+            135860
+          ],
+          "title_excerpt": "Academic rank",
+          "definition_excerpt": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+          "unit_basis_excerpt": null
+        },
+        "readiness": "partial_unit_unknown",
+        "execution_approved": false
+      },
+      "137706": {
+        "version": 3,
+        "record_id": 137706,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table": "SAL2024_IS",
+        "variable": "SAOUTLT",
+        "source_title": "Salary outlays - total",
+        "measure_base": "salary outlays",
+        "dimensions": {},
+        "unit": "monetary amount",
+        "numeric_kind": "continuous",
+        "additive": true,
+        "total_scope": true,
+        "reporting_periods": [
+          "2024-25"
+        ],
+        "field_time_qualifiers": [],
+        "population_evidence": [
+          {
+            "record_id": 135860,
+            "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution"
+          }
+        ],
+        "required_row_selectors": [
+          "ARANK"
+        ],
+        "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+        "category_overlap_warning": false,
+        "evidence": {
+          "variable_record_id": 137706,
+          "table_record_ids": [
+            135860
+          ],
+          "title_excerpt": "Salary outlays - total",
+          "definition_excerpt": "Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional st",
+          "unit_basis_excerpt": null
+        },
+        "readiness": "described",
+        "execution_approved": false
+      }
+    },
+    "latency": {
+      "validation_seconds": 0.08504820003872737,
+      "query_seconds": 0.030541399959474802,
+      "answer_ready_seconds": 2.093228099984117,
+      "live_model_calls": 0
+    },
+    "result_id": "fc466c4395b2c33a",
+    "planning_validation": {
+      "repair_attempts": []
+    }
+  },
+  "latency": {
+    "validation_seconds": 0.08504820003872737,
+    "query_seconds": 0.030541399959474802,
+    "answer_ready_seconds": 2.093228099984117,
+    "live_model_calls": 0
+  },
+  "presentation": {
+    "chart_type": "none",
+    "show_table": true,
+    "table_reason": null,
+    "title": null,
+    "x_label": null,
+    "y_label": null,
+    "y_min": null,
+    "y_max": null,
+    "sort": "auto",
+    "color": null
+  },
+  "analysis_brief": {
+    "version": 1,
+    "status": "completed",
+    "goal": "Show the cost of staff at Mount Holyoke College (latest release, 2024).",
+    "original_question": "cost of Mount Holyoke College staff",
+    "question": "What do you mean by the cost of Mount Holyoke College staff?",
+    "options": [
+      {
+        "id": "A",
+        "label": "Total salaries and wages expense",
+        "interpretation": "Mount Holyoke College's total salaries and wages expense for all employees, from its fiscal year 2024 finance report.",
+        "qualifications": [
+          "Covers all employees (faculty, staff, student workers), fiscal year 2024",
+          "Excludes fringe benefits"
+        ],
+        "plan": {
+          "version": 2,
+          "institutions": [
+            "Mount Holyoke College"
+          ],
+          "source_years": [
+            2024
+          ],
+          "sources": [
+            {
+              "id": "f",
+              "year": 2024,
+              "table": "F2324_F2",
+              "field_record_ids": [
+                137343
+              ],
+              "filters": [],
+              "group_by_record_ids": [],
+              "aggregates": []
+            }
+          ],
+          "joins": [],
+          "expressions": [],
+          "outputs": [
+            {
+              "reference": "ff_137343",
+              "label": "Total salaries and wages expense, all employees, FY2024"
+            }
+          ],
+          "missing_policy": "propagate",
+          "time_basis": "source_period",
+          "assumptions": [
+            "Fiscal year 2024 finance data; Mount Holyoke is a private not-for-profit institution reporting on this form",
+            "Covers all employees (faculty, staff, student workers), fiscal year 2024",
+            "Excludes fringe benefits"
+          ],
+          "clarification_questions": []
+        },
+        "evidence": {
+          "definitions": [
+            {
+              "record_id": 137343,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "F2324_F2",
+              "variable_name": "F2E132",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"F2324_F2\"]",
+              "imputation_variable": "XF2E132",
+              "category_count": 0,
+              "definition_hash": "6576281fe2b04b27a77060584fba75608e8418456f6aed4c7e846c98db4b0227",
+              "normalized_hash": "b5e7ada0f15ab73f478027a967f48715371a72e5834392d80f8d7d20bb209d2c",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Total expenses-Salaries and wages",
+              "long_description": "Salaries and wages - Amounts paid as compensation for services to all employees - faculty, staff, part-time, full-time, regular employees, and student employees. This includes regular or periodic payment to a person for the regular or periodic performance of work or a service and payment to a person for more sporadic performance of work or a service (overtime, extra compensation, summer compensation, bonuses, sick or annual leave, etc.).",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137343,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "F2324_F2",
+                "variable_name": "F2E132",
+                "title": "Total expenses-Salaries and wages",
+                "body": "surveyorder: 60\nsurveynumber: 6\nsurvey: Finance\ntablenumber: 61\ntablename: F2324_F2\ntabletitle: Private not-for-profit institutions or Public institutions using FASB: Fiscal year 2024\nvarnumber: 61241\nvarorder: 301\nvarname: F2E132\nimputationvar: XF2E132\nvartitle: Total expenses-Salaries and wages\ndatatype: N\nfieldwidth: 12\nformat: Cont\nmultirecord: 0\nfilenumber: 28\nsectionnumber: 5\nlongdescription: Salaries and wages - Amounts paid as compensation for services to all employees - faculty, staff, part-time, full-time, regular employees, and student employees. This includes regular or periodic payment to a person for the regular or periodic performance of work or a service and payment to a person for more sporadic performance of work or a service (overtime, extra compensation, summer compensation, bonuses, sick or annual leave, etc.).\nvarsource: IPEDS, Spring 2025, Finance component\nfiletitle: Private not-for-profit institutions or Public institutions using FASB: Fiscal year 2024\nsectiontitle: Expenses by functional and natural classification",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1472
+              }
+            }
+          ],
+          "categories": [],
+          "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+        },
+        "additional_analyses": []
+      },
+      {
+        "id": "B",
+        "label": "Full-time instructional staff salary outlays",
+        "interpretation": "Total base salary outlays for Mount Holyoke College's full-time nonmedical instructional staff (faculty only), academic year 2024-25.",
+        "qualifications": [
+          "Instructional staff only; excludes non-instructional staff",
+          "Base salaries only, as of November 1; no benefits or supplements"
+        ],
+        "plan": {
+          "version": 2,
+          "institutions": [
+            "Mount Holyoke College"
+          ],
+          "source_years": [
+            2024
+          ],
+          "sources": [
+            {
+              "id": "s",
+              "year": 2024,
+              "table": "SAL2024_IS",
+              "field_record_ids": [
+                137706,
+                137684
+              ],
+              "filters": [
+                {
+                  "record_id": 137684,
+                  "operator": "eq",
+                  "values": [
+                    "7"
+                  ],
+                  "code_record_ids": [
+                    148746
+                  ]
+                }
+              ],
+              "group_by_record_ids": [],
+              "aggregates": []
+            }
+          ],
+          "joins": [],
+          "expressions": [],
+          "outputs": [
+            {
+              "reference": "fs_137706",
+              "label": "Salary outlays, full-time instructional staff (all ranks), 2024-25"
+            }
+          ],
+          "missing_policy": "propagate",
+          "time_basis": "source_period",
+          "assumptions": [
+            "All instructional staff total row selected",
+            "Instructional staff only; excludes non-instructional staff",
+            "Base salaries only, as of November 1; no benefits or supplements"
+          ],
+          "clarification_questions": []
+        },
+        "evidence": {
+          "definitions": [
+            {
+              "record_id": 137684,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"SAL2024_IS\"]",
+              "imputation_variable": "",
+              "category_count": 7,
+              "definition_hash": "0946befdaa44fe4b6477036796158f3ee364dde6c9f19ab18eb186be2f519630",
+              "normalized_hash": "9aa1ce946ce5015b223b2c099acf46029f51536a01fd25db0f937ea2803f6a13",
+              "category_hash": "d0591dd9a300aa714e6a9dd2d5b0daf6b6c7a19d39bd20e12d43ab4cdf7907aa",
+              "title": "Academic rank",
+              "long_description": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+              "data_type": "N",
+              "format": "Disc",
+              "evidence": {
+                "record_id": 137684,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "SAL2024_IS",
+                "variable_name": "ARANK",
+                "title": "Academic rank",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\nvartitle: Academic rank\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1813
+              }
+            },
+            {
+              "record_id": 137706,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "SAL2024_IS",
+              "variable_name": "SAOUTLT",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"SAL2024_IS\"]",
+              "imputation_variable": "XSAOUTLT",
+              "category_count": 0,
+              "definition_hash": "266557cf6b4a2bab1a2875f6a5882b201e94953439af6ba6fc08e1ae33edc87a",
+              "normalized_hash": "408ad99dba26ae77e6a670867980c2dce1321384f70bf373cbbb581b60ad09f1",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Salary outlays - total",
+              "long_description": "Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137706,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "SAL2024_IS",
+                "variable_name": "SAOUTLT",
+                "title": "Salary outlays - total",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40576\nvarorder: 46\nvarname: SAOUTLT\nimputationvar: XSAOUTLT\nvartitle: Salary outlays - total\ndatatype: N\nfieldwidth: 10\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1835
+              }
+            }
+          ],
+          "categories": [
+            {
+              "record_id": 148746,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "All instructional staff total",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 7\nfrequency: 3782\npercent: 24.86\nvalueorder: 1\nvaluelabel: All instructional staff total\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10276
+            }
+          ],
+          "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+        },
+        "additional_analyses": []
+      },
+      {
+        "id": "C",
+        "label": "Instructional and non-instructional salary outlays",
+        "interpretation": "Salary outlays for full-time instructional staff, with a separate panel for full-time non-instructional staff, at Mount Holyoke College, 2024-25.",
+        "qualifications": [
+          "Two separate panels with different staff groups; not added together",
+          "Full-time nonmedical staff only; base salary outlays, no benefits"
+        ],
+        "plan": {
+          "version": 2,
+          "institutions": [
+            "Mount Holyoke College"
+          ],
+          "source_years": [
+            2024
+          ],
+          "sources": [
+            {
+              "id": "s",
+              "year": 2024,
+              "table": "SAL2024_IS",
+              "field_record_ids": [
+                137706,
+                137684
+              ],
+              "filters": [
+                {
+                  "record_id": 137684,
+                  "operator": "eq",
+                  "values": [
+                    "7"
+                  ],
+                  "code_record_ids": [
+                    148746
+                  ]
+                }
+              ],
+              "group_by_record_ids": [],
+              "aggregates": []
+            }
+          ],
+          "joins": [],
+          "expressions": [],
+          "outputs": [
+            {
+              "reference": "fs_137706",
+              "label": "Salary outlays, full-time instructional staff, 2024-25"
+            }
+          ],
+          "missing_policy": "propagate",
+          "time_basis": "source_period",
+          "assumptions": [
+            "All instructional staff total row selected",
+            "Two separate panels with different staff groups; not added together",
+            "Full-time nonmedical staff only; base salary outlays, no benefits"
+          ],
+          "clarification_questions": []
+        },
+        "additional_analyses": [
+          {
+            "label": "Non-instructional staff salary outlays",
+            "interpretation": "Total salary outlays for Mount Holyoke College's full-time nonmedical non-instructional staff, 2024-25.",
+            "qualifications": [
+              "Different staff group from the instructional panel; do not add them without checking overlap",
+              "Base salary outlays only"
+            ],
+            "plan": {
+              "version": 2,
+              "institutions": [
+                "Mount Holyoke College"
+              ],
+              "source_years": [
+                2024
+              ],
+              "sources": [
+                {
+                  "id": "n",
+                  "year": 2024,
+                  "table": "SAL2024_NIS",
+                  "field_record_ids": [
+                    137740
+                  ],
+                  "filters": [],
+                  "group_by_record_ids": [],
+                  "aggregates": []
+                }
+              ],
+              "joins": [],
+              "expressions": [],
+              "outputs": [
+                {
+                  "reference": "fn_137740",
+                  "label": "Salary outlays, full-time non-instructional staff, 2024-25"
+                }
+              ],
+              "missing_policy": "propagate",
+              "time_basis": "source_period",
+              "assumptions": [
+                "Total non-instructional outlays field used",
+                "Two separate panels with different staff groups; not added together",
+                "Full-time nonmedical staff only; base salary outlays, no benefits",
+                "Different staff group from the instructional panel; do not add them without checking overlap",
+                "Base salary outlays only"
+              ],
+              "clarification_questions": []
+            },
+            "evidence": {
+              "definitions": [
+                {
+                  "record_id": 137740,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table_name": "SAL2024_NIS",
+                  "variable_name": "SANIT01",
+                  "physical_status": "documented_location_present",
+                  "physical_locations_json": "[\"SAL2024_NIS\"]",
+                  "imputation_variable": "XSANIT01",
+                  "category_count": 0,
+                  "definition_hash": "20b03b39f0e3ada66a37534c8c300410eadc4be2388b0d3ff6fb0ad789537861",
+                  "normalized_hash": "2399f30ce36244cefd6d1dc0ef7706087b868f6b803ecce73e32af4ec6efce37",
+                  "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                  "title": "Full-time non-instructional staff - outlays",
+                  "long_description": "Salary outlays for full-time, non-medical, non-instructional staff Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+                  "data_type": "N",
+                  "format": "Cont",
+                  "evidence": {
+                    "record_id": 137740,
+                    "release_id": "IPEDS_2024-25_Provisional",
+                    "kind": "variable_definition",
+                    "table_name": "SAL2024_NIS",
+                    "variable_name": "SANIT01",
+                    "title": "Full-time non-instructional staff - outlays",
+                    "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 92\ntablename: SAL2024_NIS\ntabletitle: Number and salary outlays for full-time nonmedical noninstructional staff by occupation: Academic year 2024-25\nvarnumber: 40611\nvarorder: 5\nvarname: SANIT01\nimputationvar: XSANIT01\nvartitle: Full-time non-instructional staff - outlays\ndatatype: N\nfieldwidth: 10\nformat: Cont\nmultirecord: 0\nfilenumber: 17\nsectionnumber: 1\nlongdescription: Salary outlays for full-time, non-medical, non-instructional staff Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical noninstructional staff by occupation: Academic year 2024-25\nsectiontitle: Full-time, nonmedical noninstructional staff",
+                    "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                    "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                    "sheet_name": "varTable24",
+                    "source_row": 1869
+                  }
+                }
+              ],
+              "categories": [],
+              "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+            }
+          }
+        ],
+        "evidence": {
+          "definitions": [
+            {
+              "record_id": 137684,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"SAL2024_IS\"]",
+              "imputation_variable": "",
+              "category_count": 7,
+              "definition_hash": "0946befdaa44fe4b6477036796158f3ee364dde6c9f19ab18eb186be2f519630",
+              "normalized_hash": "9aa1ce946ce5015b223b2c099acf46029f51536a01fd25db0f937ea2803f6a13",
+              "category_hash": "d0591dd9a300aa714e6a9dd2d5b0daf6b6c7a19d39bd20e12d43ab4cdf7907aa",
+              "title": "Academic rank",
+              "long_description": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+              "data_type": "N",
+              "format": "Disc",
+              "evidence": {
+                "record_id": 137684,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "SAL2024_IS",
+                "variable_name": "ARANK",
+                "title": "Academic rank",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\nvartitle: Academic rank\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1813
+              }
+            },
+            {
+              "record_id": 137706,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "table_name": "SAL2024_IS",
+              "variable_name": "SAOUTLT",
+              "physical_status": "documented_location_present",
+              "physical_locations_json": "[\"SAL2024_IS\"]",
+              "imputation_variable": "XSAOUTLT",
+              "category_count": 0,
+              "definition_hash": "266557cf6b4a2bab1a2875f6a5882b201e94953439af6ba6fc08e1ae33edc87a",
+              "normalized_hash": "408ad99dba26ae77e6a670867980c2dce1321384f70bf373cbbb581b60ad09f1",
+              "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "title": "Salary outlays - total",
+              "long_description": "Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+              "data_type": "N",
+              "format": "Cont",
+              "evidence": {
+                "record_id": 137706,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "kind": "variable_definition",
+                "table_name": "SAL2024_IS",
+                "variable_name": "SAOUTLT",
+                "title": "Salary outlays - total",
+                "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40576\nvarorder: 46\nvarname: SAOUTLT\nimputationvar: XSAOUTLT\nvartitle: Salary outlays - total\ndatatype: N\nfieldwidth: 10\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Total salary outlays of full-time, non-medical, instructional staff as of November 1. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+                "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+                "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+                "sheet_name": "varTable24",
+                "source_row": 1835
+              }
+            }
+          ],
+          "categories": [
+            {
+              "record_id": 148746,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "code_value",
+              "table_name": "SAL2024_IS",
+              "variable_name": "ARANK",
+              "title": "All instructional staff total",
+              "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 7\nfrequency: 3782\npercent: 24.86\nvalueorder: 1\nvaluelabel: All instructional staff total\nvartitle: Academic rank",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "valueSets24",
+              "source_row": 10276
+            }
+          ],
+          "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb"
+        }
+      }
+    ],
+    "selected_option": "B",
+    "confirmed_decisions": [
+      {
+        "option": "B",
+        "interpretation": "Total base salary outlays for Mount Holyoke College's full-time nonmedical instructional staff (faculty only), academic year 2024-25.",
+        "qualifications": [
+          "Instructional staff only; excludes non-instructional staff",
+          "Base salaries only, as of November 1; no benefits or supplements"
+        ]
+      }
+    ],
+    "open_questions": [],
+    "id": "20dfbe3080e78d07",
+    "scope": [
+      {
+        "institutions": [
+          "Mount Holyoke College"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          {
+            "reference": "fs_137706",
+            "label": "Salary outlays, full-time instructional staff (all ranks), 2024-25"
+          }
+        ],
+        "breakdowns": [
+          []
+        ],
+        "time_basis": "source_period",
+        "assumptions": [
+          "All instructional staff total row selected",
+          "Instructional staff only; excludes non-instructional staff",
+          "Base salaries only, as of November 1; no benefits or supplements"
+        ]
+      }
+    ]
+  },
+  "resolved_question": "Total base salary outlays for Mount Holyoke College's full-time nonmedical instructional staff (faculty only), academic year 2024-25.",
+  "model_usage": {
+    "calls": 0,
+    "latency_seconds": 0,
+    "estimated_api_usd": 0,
+    "stage": "saved clarification selection"
+  }
+}

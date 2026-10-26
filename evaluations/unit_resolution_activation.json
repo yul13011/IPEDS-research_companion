@@ -1,0 +1,18 @@
+{
+  "active_rule_version": 3,
+  "catalog_sha256": "10dea9c51d32254221d79ca3393f33d23bc7c5fd53eff58077879856b35440a4",
+  "original_unresolved_outcomes": {
+    "verified": 2459,
+    "conditional": 25
+  },
+  "remaining_static_unknowns": 0,
+  "conditional_observation_count": 40322,
+  "missing_basis_count": 0,
+  "source_terminology_records": 5,
+  "affected_tests": 75,
+  "test_seconds": 154.152,
+  "overlapping_final_tests": 16,
+  "overlapping_seconds": 20.889,
+  "app_pid": 196264,
+  "port": 8516
+}

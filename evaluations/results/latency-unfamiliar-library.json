@@ -1,0 +1,297 @@
+{
+  "plan": {
+    "metrics": [
+      "AL{YEAR}::LPBOOKS"
+    ],
+    "institutions": [
+      "Yale"
+    ],
+    "years": [
+      2024
+    ],
+    "time_basis": "source_release",
+    "output": "answer"
+  },
+  "catalog_plan": {
+    "version": 1,
+    "institutions": [
+      "Yale"
+    ],
+    "source_years": [
+      2024
+    ],
+    "requested_time": {
+      "basis": "fiscal",
+      "description": "Fiscal year 2024 (Academic Libraries, AL2024)"
+    },
+    "selections": [
+      {
+        "record_id": 137903,
+        "role": "measure"
+      }
+    ],
+    "filters": [],
+    "group_by_record_ids": [],
+    "calculations": [],
+    "joins": [],
+    "output": "answer",
+    "assumptions": [
+      "Single table AL2024 (one row per UNITID) fully represents the question; no join needed.",
+      "LPBOOKS 'Number of physical books' (volumes held) is the measure for physical books.",
+      "'Yale' is kept as written for deterministic institution resolution; if multiple matches arise, the resolver should confirm the intended institution (e.g., Yale University)."
+    ],
+    "clarification_questions": []
+  },
+  "metric_specs": {
+    "AL{YEAR}::LPBOOKS": {
+      "label": "Number of physical books",
+      "family": "catalog",
+      "unit": "source units"
+    }
+  },
+  "observation_years": [
+    2024
+  ],
+  "rows": [
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "Fiscal year 2024",
+      "metric": "AL{YEAR}::LPBOOKS",
+      "measure": "Number of physical books",
+      "unit": "source units",
+      "value": 9042536,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "source release 2024"
+    }
+  ],
+  "sources": [
+    {
+      "metric": "AL{YEAR}::LPBOOKS",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "AL2024",
+      "columns": [
+        "LPBOOKS"
+      ],
+      "filters": [],
+      "formula": "direct source observation",
+      "sql": "SELECT \"LPBOOKS\" FROM \"AL2024\" WHERE \"UNITID\"=? LIMIT 2",
+      "parameters": [
+        130794
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 137903,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "AL2024",
+          "variable_name": "LPBOOKS",
+          "title": "Number of physical books",
+          "body": "surveyorder: 100\nsurveynumber: 16\nsurvey: Academic Libraries\ntablenumber: 160\ntablename: AL2024\ntabletitle: Academic Libraries: Fiscal year 2024\nvarnumber: 160105\nvarorder: 5\nvarname: LPBOOKS\nimputationvar: XLPBOOKS\nvartitle: Number of physical books\ndatatype: N\nfieldwidth: 8\nformat: Cont\nmultirecord: 0\nfilenumber: 87\nsectionnumber: 2\nlongdescription: The number of volumes held in the library collection. Volume is a single physical unit of any printed, typewritten, handwritten, mimeographed, or processed work, distinguished from other units by a separate binding, encasement, portfolio, or other clear distinction, which has been cataloged, classified, and made ready for use, and which is typically the unit used to charge circulation transactions.\nvarsource: IPEDS, Spring 2025, Academic Libaries component\nfiletitle: Academic Libraries: Fiscal year 2024\nsectiontitle: Collections",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 2032,
+          "long_description": "The number of volumes held in the library collection. Volume is a single physical unit of any printed, typewritten, handwritten, mimeographed, or processed work, distinguished from other units by a separate binding, encasement, portfolio, or other clear distinction, which has been cataloged, classified, and made ready for use, and which is typically the unit used to charge circulation transactions.",
+          "documented_table": "AL2024",
+          "physical_table": "AL2024",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": []
+    }
+  ],
+  "warnings": [
+    "Single table AL2024 (one row per UNITID) fully represents the question; no join needed.",
+    "LPBOOKS 'Number of physical books' (volumes held) is the measure for physical books.",
+    "'Yale' is kept as written for deterministic institution resolution; if multiple matches arise, the resolver should confirm the intended institution (e.g., Yale University).",
+    "Source release labels are shown separately from source reporting periods. Missing, suppressed, nonnumeric and negative sentinel values remain empty; reported versus imputed status is unavailable in these source files."
+  ],
+  "definitions": {
+    "AL{YEAR}::LPBOOKS": "The number of volumes held in the library collection. Volume is a single physical unit of any printed, typewritten, handwritten, mimeographed, or processed work, distinguished from other units by a separate binding, encasement, portfolio, or other clear distinction, which has been cataloged, classified, and made ready for use, and which is typically the unit used to charge circulation transactions."
+  },
+  "created_at": "2026-10-19T17:43:00.200537+00:00",
+  "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+  "review_status": "Catalog-bound direct observations; source row keys, selectors and numeric missingness validated. No implicit aggregation or fact joins.",
+  "semantic_validation": {
+    "schema_and_catalog_binding": "passed",
+    "execution_approved": true,
+    "semantic_status": "passed",
+    "blocks": [],
+    "required_next_checks": [],
+    "execution_scope": "Direct source observations with explicit institution/population selectors; no implicit aggregation, joins or inferred year equivalence.",
+    "completed_checks": [
+      "exact physical fields and source codes",
+      "documented and observed row key",
+      "explicit row selectors",
+      "source reporting period",
+      "bounded read-only compilation",
+      "numeric missingness policy",
+      "calculation relationship where applicable"
+    ]
+  },
+  "catalog_evidence": {
+    "catalog_plan": {
+      "version": 1,
+      "institutions": [
+        "Yale"
+      ],
+      "source_years": [
+        2024
+      ],
+      "requested_time": {
+        "basis": "fiscal",
+        "description": "Fiscal year 2024 (Academic Libraries, AL2024)"
+      },
+      "selections": [
+        {
+          "record_id": 137903,
+          "role": "measure"
+        }
+      ],
+      "filters": [],
+      "group_by_record_ids": [],
+      "calculations": [],
+      "joins": [],
+      "output": "answer",
+      "assumptions": [
+        "Single table AL2024 (one row per UNITID) fully represents the question; no join needed.",
+        "LPBOOKS 'Number of physical books' (volumes held) is the measure for physical books.",
+        "'Yale' is kept as written for deterministic institution resolution; if multiple matches arise, the resolver should confirm the intended institution (e.g., Yale University)."
+      ],
+      "clarification_questions": []
+    },
+    "question": "How many physical books did Yale's library report for fiscal year 2024?",
+    "resolved_institutions": {
+      "2024": [
+        130794
+      ]
+    },
+    "definition_evidence": [
+      {
+        "record_id": 137903,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "AL2024",
+        "variable_name": "LPBOOKS",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"AL2024\"]",
+        "imputation_variable": "XLPBOOKS",
+        "category_count": 0,
+        "definition_hash": "a7ded26384c98495d09d850dd9994ef1d409f8dcd21db39cdc0ab969ffdaba25",
+        "normalized_hash": "081df380759586982a20c965df8bae0c6423f37382abe3464262b8dfa0a28d9e",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Number of physical books",
+        "long_description": "The number of volumes held in the library collection. Volume is a single physical unit of any printed, typewritten, handwritten, mimeographed, or processed work, distinguished from other units by a separate binding, encasement, portfolio, or other clear distinction, which has been cataloged, classified, and made ready for use, and which is typically the unit used to charge circulation transactions.",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 137903,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "AL2024",
+          "variable_name": "LPBOOKS",
+          "title": "Number of physical books",
+          "body": "surveyorder: 100\nsurveynumber: 16\nsurvey: Academic Libraries\ntablenumber: 160\ntablename: AL2024\ntabletitle: Academic Libraries: Fiscal year 2024\nvarnumber: 160105\nvarorder: 5\nvarname: LPBOOKS\nimputationvar: XLPBOOKS\nvartitle: Number of physical books\ndatatype: N\nfieldwidth: 8\nformat: Cont\nmultirecord: 0\nfilenumber: 87\nsectionnumber: 2\nlongdescription: The number of volumes held in the library collection. Volume is a single physical unit of any printed, typewritten, handwritten, mimeographed, or processed work, distinguished from other units by a separate binding, encasement, portfolio, or other clear distinction, which has been cataloged, classified, and made ready for use, and which is typically the unit used to charge circulation transactions.\nvarsource: IPEDS, Spring 2025, Academic Libaries component\nfiletitle: Academic Libraries: Fiscal year 2024\nsectiontitle: Collections",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 2032
+        }
+      }
+    ],
+    "category_evidence": [],
+    "join_key_evidence": [],
+    "table_evidence": [
+      {
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "AL2024",
+        "family": "AL{YEAR}",
+        "profile": {
+          "candidate_key": [
+            "UNITID"
+          ],
+          "distinct_institutions": 3652,
+          "expected_rows_match": true,
+          "key_status": "observed_unique_institution_key",
+          "null_institution_ids": 0,
+          "query_count": 1,
+          "rows": 3652,
+          "status": "profiled"
+        },
+        "period_evidence": [
+          {
+            "record_id": 135867,
+            "release_date": null,
+            "release_status": "Provisional",
+            "year_coverage": "Fiscal year 2024"
+          }
+        ],
+        "population_evidence": [
+          {
+            "description": "The Academic Library survey became part of the Integrated Postsecondary Education Data system in collection year 2014-15. Data include characteristics of the library, collections, expenditures and services. The number of full-time equivalent staff employed by the library were added in fiscal year 2020. Library data are only applicable for degree-granting institutions. Degree-granting institutions with total expenditures over $100,000 dollars will have expenditure data. In 2016-17 the types of collections was expanded to collect information on physical and electronic serials.",
+            "record_id": 135867,
+            "title": "Academic Libraries, Fiscal year 2024"
+          }
+        ],
+        "source_definitions": [
+          {
+            "record_id": 135867,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "table_definition",
+            "table_name": "AL2024",
+            "variable_name": "",
+            "title": "Academic Libraries, Fiscal year 2024",
+            "body": "surveyorder: 100\nsurveynumber: 16\nsurvey: Academic Libraries\nyearcoverage: Fiscal year 2024\ntablename: AL2024\ntablenumber: 160\ntabletitle: Academic Libraries, Fiscal year 2024\ndescription: The Academic Library survey became part of the Integrated Postsecondary Education Data system in collection year 2014-15. Data include characteristics of the library, collections, expenditures and services. The number of full-time equivalent staff employed by the library were added in fiscal year 2020. Library data are only applicable for degree-granting institutions. Degree-granting institutions with total expenditures over $100,000 dollars will have expenditure data. In 2016-17 the types of collections was expanded to collect information on physical and electronic serials.\nrelease: Provisional\nrelease_date: January 2026",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "tables24",
+            "source_row": 48
+          }
+        ]
+      }
+    ],
+    "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+    "validation": {
+      "schema_and_catalog_binding": "passed",
+      "execution_approved": true,
+      "semantic_status": "passed",
+      "blocks": [],
+      "required_next_checks": [],
+      "execution_scope": "Direct source observations with explicit institution/population selectors; no implicit aggregation, joins or inferred year equivalence.",
+      "completed_checks": [
+        "exact physical fields and source codes",
+        "documented and observed row key",
+        "explicit row selectors",
+        "source reporting period",
+        "bounded read-only compilation",
+        "numeric missingness policy",
+        "calculation relationship where applicable"
+      ]
+    },
+    "created_at": "2026-10-19T17:43:00.200537+00:00"
+  },
+  "coverage": {
+    "requested_cells": 1,
+    "available_cells": 1
+  },
+  "result_id": "1a60dd214593e2bd",
+  "latency": {
+    "validation_seconds": 0.039141900022514164,
+    "query_seconds": 0.005723100039176643,
+    "planning_and_binding_seconds": 11.900414400035515,
+    "answer_ready_seconds": 11.945842900022399,
+    "live_model_calls": 2,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+  }
+}

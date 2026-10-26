@@ -1,0 +1,684 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300,
+      "stroke": null
+    },
+    "axis": {
+      "domainColor": "#AAB4B9",
+      "gridColor": "#E7EBED",
+      "labelColor": "#263746",
+      "labelFontSize": 13,
+      "titleColor": "#263746",
+      "titleFontSize": 13
+    },
+    "legend": {
+      "labelFontSize": 13
+    },
+    "font": "Arial",
+    "text": {
+      "font": "Arial"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "size": 18
+      },
+      "encoding": {
+        "color": {
+          "field": "institution",
+          "legend": {
+            "orient": "top",
+            "title": null,
+            "labelLimit": 320
+          },
+          "scale": {
+            "domain": [
+              "Yale University",
+              "Harvard University",
+              "Princeton University"
+            ],
+            "range": [
+              "#24658A",
+              "#C47A28",
+              "#78649B"
+            ]
+          },
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "institution",
+            "title": "Institution",
+            "type": "nominal"
+          },
+          {
+            "field": "reporting_period",
+            "title": "Source period",
+            "type": "nominal"
+          },
+          {
+            "field": "entry_cohort_year",
+            "format": "d",
+            "title": "Entering cohort",
+            "type": "quantitative"
+          },
+          {
+            "field": "measure",
+            "title": "Measure",
+            "type": "nominal"
+          },
+          {
+            "field": "display_value",
+            "title": "Value",
+            "type": "nominal"
+          },
+          {
+            "field": "status",
+            "title": "Data status",
+            "type": "nominal"
+          },
+          {
+            "field": "provisional",
+            "title": "Provisional",
+            "type": "nominal"
+          }
+        ],
+        "x": {
+          "axis": {
+            "format": ",.0f",
+            "tickCount": 5,
+            "grid": true
+          },
+          "field": "plot_value",
+          "scale": {
+            "domain": [
+              0.0,
+              344307.69999999995
+            ],
+            "nice": false,
+            "zero": true
+          },
+          "title": "US dollars",
+          "type": "quantitative"
+        },
+        "y": {
+          "axis": {
+            "labelAngle": 0,
+            "labelExpr": "split(datum.label, '\\n')",
+            "labelLimit": 0,
+            "labelLineHeight": 16
+          },
+          "field": "wrapped_category",
+          "scale": {
+            "paddingInner": 0.18,
+            "paddingOuter": 0.12
+          },
+          "sort": [
+            "Professor",
+            "Associate professor",
+            "Assistant professor"
+          ],
+          "title": null,
+          "type": "nominal"
+        },
+        "yOffset": {
+          "field": "institution",
+          "scale": {
+            "domain": [
+              "Yale University",
+              "Harvard University",
+              "Princeton University"
+            ],
+            "paddingInner": 0.25,
+            "paddingOuter": 0.1
+          },
+          "sort": [
+            "Yale University",
+            "Harvard University",
+            "Princeton University"
+          ],
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "color": "#263746",
+        "dx": 6,
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "display_value",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "institution",
+            "title": "Institution",
+            "type": "nominal"
+          },
+          {
+            "field": "reporting_period",
+            "title": "Source period",
+            "type": "nominal"
+          },
+          {
+            "field": "entry_cohort_year",
+            "format": "d",
+            "title": "Entering cohort",
+            "type": "quantitative"
+          },
+          {
+            "field": "measure",
+            "title": "Measure",
+            "type": "nominal"
+          },
+          {
+            "field": "display_value",
+            "title": "Value",
+            "type": "nominal"
+          },
+          {
+            "field": "status",
+            "title": "Data status",
+            "type": "nominal"
+          },
+          {
+            "field": "provisional",
+            "title": "Provisional",
+            "type": "nominal"
+          }
+        ],
+        "x": {
+          "axis": {
+            "format": ",.0f",
+            "tickCount": 5,
+            "grid": true
+          },
+          "field": "plot_value",
+          "scale": {
+            "domain": [
+              0.0,
+              344307.69999999995
+            ],
+            "nice": false,
+            "zero": true
+          },
+          "title": "US dollars",
+          "type": "quantitative"
+        },
+        "y": {
+          "axis": {
+            "labelAngle": 0,
+            "labelExpr": "split(datum.label, '\\n')",
+            "labelLimit": 0,
+            "labelLineHeight": 16
+          },
+          "field": "wrapped_category",
+          "scale": {
+            "paddingInner": 0.18,
+            "paddingOuter": 0.12
+          },
+          "sort": [
+            "Professor",
+            "Associate professor",
+            "Assistant professor"
+          ],
+          "title": null,
+          "type": "nominal"
+        },
+        "yOffset": {
+          "field": "institution",
+          "scale": {
+            "domain": [
+              "Yale University",
+              "Harvard University",
+              "Princeton University"
+            ],
+            "paddingInner": 0.25,
+            "paddingOuter": 0.1
+          },
+          "sort": [
+            "Yale University",
+            "Harvard University",
+            "Princeton University"
+          ],
+          "type": "nominal"
+        }
+      },
+      "transform": [
+        {
+          "filter": "isValid(datum.plot_value) && datum.plot_value >= 0"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "color": "#263746",
+        "dx": -6,
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "display_value",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "institution",
+            "title": "Institution",
+            "type": "nominal"
+          },
+          {
+            "field": "reporting_period",
+            "title": "Source period",
+            "type": "nominal"
+          },
+          {
+            "field": "entry_cohort_year",
+            "format": "d",
+            "title": "Entering cohort",
+            "type": "quantitative"
+          },
+          {
+            "field": "measure",
+            "title": "Measure",
+            "type": "nominal"
+          },
+          {
+            "field": "display_value",
+            "title": "Value",
+            "type": "nominal"
+          },
+          {
+            "field": "status",
+            "title": "Data status",
+            "type": "nominal"
+          },
+          {
+            "field": "provisional",
+            "title": "Provisional",
+            "type": "nominal"
+          }
+        ],
+        "x": {
+          "axis": {
+            "format": ",.0f",
+            "tickCount": 5,
+            "grid": true
+          },
+          "field": "plot_value",
+          "scale": {
+            "domain": [
+              0.0,
+              344307.69999999995
+            ],
+            "nice": false,
+            "zero": true
+          },
+          "title": "US dollars",
+          "type": "quantitative"
+        },
+        "y": {
+          "axis": {
+            "labelAngle": 0,
+            "labelExpr": "split(datum.label, '\\n')",
+            "labelLimit": 0,
+            "labelLineHeight": 16
+          },
+          "field": "wrapped_category",
+          "scale": {
+            "paddingInner": 0.18,
+            "paddingOuter": 0.12
+          },
+          "sort": [
+            "Professor",
+            "Associate professor",
+            "Assistant professor"
+          ],
+          "title": null,
+          "type": "nominal"
+        },
+        "yOffset": {
+          "field": "institution",
+          "scale": {
+            "domain": [
+              "Yale University",
+              "Harvard University",
+              "Princeton University"
+            ],
+            "paddingInner": 0.25,
+            "paddingOuter": 0.1
+          },
+          "sort": [
+            "Yale University",
+            "Harvard University",
+            "Princeton University"
+          ],
+          "type": "nominal"
+        }
+      },
+      "transform": [
+        {
+          "filter": "isValid(datum.plot_value) && datum.plot_value < 0"
+        }
+      ]
+    },
+    {
+      "data": {
+        "name": "data-210d2de27fb86d54bd4050f897dfc35b"
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#8D989E",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
+      }
+    }
+  ],
+  "data": {
+    "name": "data-dba312065a809e62fdfcebbf7bdb141a"
+  },
+  "height": 312,
+  "padding": {
+    "left": 8,
+    "right": 64,
+    "top": 12,
+    "bottom": 8
+  },
+  "width": 650,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-dba312065a809e62fdfcebbf7bdb141a": [
+      {
+        "institution": "Yale University",
+        "unitid": 130794,
+        "observation_year": 2023,
+        "entry_cohort_year": null,
+        "reporting_period": "2023-24",
+        "metric": "fsalary_122429",
+        "measure": "Nine-month-equivalent average salary \u00b7 Academic rank: Professor",
+        "unit": "monetary amount",
+        "value": 279433.0,
+        "release": "IPEDS_2023-24_Final",
+        "provisional": false,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Academic rank: Professor\"]",
+        "groups": [
+          "Academic rank: Professor"
+        ],
+        "available_rows": null,
+        "requested_rows": null,
+        "display_measure": "Professor",
+        "display_value": "$279,433",
+        "plot_value": 279433.0,
+        "period_label": "2023\u201324",
+        "total_panel": false,
+        "series_label": "Yale University \u00b7 Professor",
+        "category": "Professor",
+        "wrapped_category": "Professor"
+      },
+      {
+        "institution": "Yale University",
+        "unitid": 130794,
+        "observation_year": 2023,
+        "entry_cohort_year": null,
+        "reporting_period": "2023-24",
+        "metric": "fsalary_122429",
+        "measure": "Nine-month-equivalent average salary \u00b7 Academic rank: Associate professor",
+        "unit": "monetary amount",
+        "value": 166983.0,
+        "release": "IPEDS_2023-24_Final",
+        "provisional": false,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Academic rank: Associate professor\"]",
+        "groups": [
+          "Academic rank: Associate professor"
+        ],
+        "available_rows": null,
+        "requested_rows": null,
+        "display_measure": "Associate professor",
+        "display_value": "$166,983",
+        "plot_value": 166983.0,
+        "period_label": "2023\u201324",
+        "total_panel": false,
+        "series_label": "Yale University \u00b7 Associate professor",
+        "category": "Associate professor",
+        "wrapped_category": "Associate professor"
+      },
+      {
+        "institution": "Yale University",
+        "unitid": 130794,
+        "observation_year": 2023,
+        "entry_cohort_year": null,
+        "reporting_period": "2023-24",
+        "metric": "fsalary_122429",
+        "measure": "Nine-month-equivalent average salary \u00b7 Academic rank: Assistant professor",
+        "unit": "monetary amount",
+        "value": 142099.0,
+        "release": "IPEDS_2023-24_Final",
+        "provisional": false,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Academic rank: Assistant professor\"]",
+        "groups": [
+          "Academic rank: Assistant professor"
+        ],
+        "available_rows": null,
+        "requested_rows": null,
+        "display_measure": "Assistant professor",
+        "display_value": "$142,099",
+        "plot_value": 142099.0,
+        "period_label": "2023\u201324",
+        "total_panel": false,
+        "series_label": "Yale University \u00b7 Assistant professor",
+        "category": "Assistant professor",
+        "wrapped_category": "Assistant professor"
+      },
+      {
+        "institution": "Harvard University",
+        "unitid": 166027,
+        "observation_year": 2023,
+        "entry_cohort_year": null,
+        "reporting_period": "2023-24",
+        "metric": "fsalary_122429",
+        "measure": "Nine-month-equivalent average salary \u00b7 Academic rank: Professor",
+        "unit": "monetary amount",
+        "value": 275986.0,
+        "release": "IPEDS_2023-24_Final",
+        "provisional": false,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Academic rank: Professor\"]",
+        "groups": [
+          "Academic rank: Professor"
+        ],
+        "available_rows": null,
+        "requested_rows": null,
+        "display_measure": "Professor",
+        "display_value": "$275,986",
+        "plot_value": 275986.0,
+        "period_label": "2023\u201324",
+        "total_panel": false,
+        "series_label": "Harvard University \u00b7 Professor",
+        "category": "Professor",
+        "wrapped_category": "Professor"
+      },
+      {
+        "institution": "Harvard University",
+        "unitid": 166027,
+        "observation_year": 2023,
+        "entry_cohort_year": null,
+        "reporting_period": "2023-24",
+        "metric": "fsalary_122429",
+        "measure": "Nine-month-equivalent average salary \u00b7 Academic rank: Associate professor",
+        "unit": "monetary amount",
+        "value": 173985.0,
+        "release": "IPEDS_2023-24_Final",
+        "provisional": false,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Academic rank: Associate professor\"]",
+        "groups": [
+          "Academic rank: Associate professor"
+        ],
+        "available_rows": null,
+        "requested_rows": null,
+        "display_measure": "Associate professor",
+        "display_value": "$173,985",
+        "plot_value": 173985.0,
+        "period_label": "2023\u201324",
+        "total_panel": false,
+        "series_label": "Harvard University \u00b7 Associate professor",
+        "category": "Associate professor",
+        "wrapped_category": "Associate professor"
+      },
+      {
+        "institution": "Harvard University",
+        "unitid": 166027,
+        "observation_year": 2023,
+        "entry_cohort_year": null,
+        "reporting_period": "2023-24",
+        "metric": "fsalary_122429",
+        "measure": "Nine-month-equivalent average salary \u00b7 Academic rank: Assistant professor",
+        "unit": "monetary amount",
+        "value": 155862.0,
+        "release": "IPEDS_2023-24_Final",
+        "provisional": false,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Academic rank: Assistant professor\"]",
+        "groups": [
+          "Academic rank: Assistant professor"
+        ],
+        "available_rows": null,
+        "requested_rows": null,
+        "display_measure": "Assistant professor",
+        "display_value": "$155,862",
+        "plot_value": 155862.0,
+        "period_label": "2023\u201324",
+        "total_panel": false,
+        "series_label": "Harvard University \u00b7 Assistant professor",
+        "category": "Assistant professor",
+        "wrapped_category": "Assistant professor"
+      },
+      {
+        "institution": "Princeton University",
+        "unitid": 186131,
+        "observation_year": 2023,
+        "entry_cohort_year": null,
+        "reporting_period": "2023-24",
+        "metric": "fsalary_122429",
+        "measure": "Nine-month-equivalent average salary \u00b7 Academic rank: Professor",
+        "unit": "monetary amount",
+        "value": 299398.0,
+        "release": "IPEDS_2023-24_Final",
+        "provisional": false,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Academic rank: Professor\"]",
+        "groups": [
+          "Academic rank: Professor"
+        ],
+        "available_rows": null,
+        "requested_rows": null,
+        "display_measure": "Professor",
+        "display_value": "$299,398",
+        "plot_value": 299398.0,
+        "period_label": "2023\u201324",
+        "total_panel": false,
+        "series_label": "Princeton University \u00b7 Professor",
+        "category": "Professor",
+        "wrapped_category": "Professor"
+      },
+      {
+        "institution": "Princeton University",
+        "unitid": 186131,
+        "observation_year": 2023,
+        "entry_cohort_year": null,
+        "reporting_period": "2023-24",
+        "metric": "fsalary_122429",
+        "measure": "Nine-month-equivalent average salary \u00b7 Academic rank: Associate professor",
+        "unit": "monetary amount",
+        "value": 178357.0,
+        "release": "IPEDS_2023-24_Final",
+        "provisional": false,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Academic rank: Associate professor\"]",
+        "groups": [
+          "Academic rank: Associate professor"
+        ],
+        "available_rows": null,
+        "requested_rows": null,
+        "display_measure": "Associate professor",
+        "display_value": "$178,357",
+        "plot_value": 178357.0,
+        "period_label": "2023\u201324",
+        "total_panel": false,
+        "series_label": "Princeton University \u00b7 Associate professor",
+        "category": "Associate professor",
+        "wrapped_category": "Associate professor"
+      },
+      {
+        "institution": "Princeton University",
+        "unitid": 186131,
+        "observation_year": 2023,
+        "entry_cohort_year": null,
+        "reporting_period": "2023-24",
+        "metric": "fsalary_122429",
+        "measure": "Nine-month-equivalent average salary \u00b7 Academic rank: Assistant professor",
+        "unit": "monetary amount",
+        "value": 143694.0,
+        "release": "IPEDS_2023-24_Final",
+        "provisional": false,
+        "status": "ok",
+        "numerator": null,
+        "denominator": null,
+        "series_segment": "[\"Academic rank: Assistant professor\"]",
+        "groups": [
+          "Academic rank: Assistant professor"
+        ],
+        "available_rows": null,
+        "requested_rows": null,
+        "display_measure": "Assistant professor",
+        "display_value": "$143,694",
+        "plot_value": 143694.0,
+        "period_label": "2023\u201324",
+        "total_panel": false,
+        "series_label": "Princeton University \u00b7 Assistant professor",
+        "category": "Assistant professor",
+        "wrapped_category": "Assistant professor"
+      }
+    ],
+    "data-210d2de27fb86d54bd4050f897dfc35b": [
+      {
+        "baseline": 0
+      }
+    ]
+  },
+  "background": "#ffffff"
+}

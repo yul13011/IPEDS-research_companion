@@ -1,0 +1,222 @@
+{
+  "source_root": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data",
+  "inventory_date": "2026-10-16",
+  "validation_level": "File presence and sizes only; release labels inferred from folder names; hashes and contents not yet validated.",
+  "releases": [
+    {
+      "folder": "IPEDS_2015-16_Final",
+      "release_label": "Final",
+      "files": [
+        {
+          "name": "IPEDS201516.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2015-16_Final\\IPEDS201516.accdb",
+          "bytes": 544526336
+        },
+        {
+          "name": "IPEDS201516.sqlite",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2015-16_Final\\IPEDS201516.sqlite",
+          "bytes": 243814400
+        },
+        {
+          "name": "IPEDS201516TablesDoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2015-16_Final\\IPEDS201516TablesDoc.xlsx",
+          "bytes": 1352996
+        },
+        {
+          "name": "ReadMe2015-16.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2015-16_Final\\ReadMe2015-16.docx",
+          "bytes": 22018
+        }
+      ]
+    },
+    {
+      "folder": "IPEDS_2016-17_Final",
+      "release_label": "Final",
+      "files": [
+        {
+          "name": "IPEDS201617.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2016-17_Final\\IPEDS201617.accdb",
+          "bytes": 580767744
+        },
+        {
+          "name": "IPEDS201617TablesDoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2016-17_Final\\IPEDS201617TablesDoc.xlsx",
+          "bytes": 1416626
+        },
+        {
+          "name": "ReadMe2016-17.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2016-17_Final\\ReadMe2016-17.docx",
+          "bytes": 21992
+        }
+      ]
+    },
+    {
+      "folder": "IPEDS_2017-18_Final",
+      "release_label": "Final",
+      "files": [
+        {
+          "name": "IPEDS201718.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2017-18_Final\\IPEDS201718.accdb",
+          "bytes": 552955904
+        },
+        {
+          "name": "IPEDS201718TablesDoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2017-18_Final\\IPEDS201718TablesDoc.xlsx",
+          "bytes": 1397120
+        },
+        {
+          "name": "ReadMe2017-18.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2017-18_Final\\ReadMe2017-18.docx",
+          "bytes": 22055
+        }
+      ]
+    },
+    {
+      "folder": "IPEDS_2018-19_Final",
+      "release_label": "Final",
+      "files": [
+        {
+          "name": "IPEDS201819.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819.accdb",
+          "bytes": 549957632
+        },
+        {
+          "name": "IPEDS201819TablesDoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\IPEDS201819TablesDoc.xlsx",
+          "bytes": 1304673
+        },
+        {
+          "name": "ReadMe2018-19.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2018-19_Final\\ReadMe2018-19.docx",
+          "bytes": 18869
+        }
+      ]
+    },
+    {
+      "folder": "IPEDS_2019-20_Final",
+      "release_label": "Final",
+      "files": [
+        {
+          "name": "IPEDS201920.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920.accdb",
+          "bytes": 536383488
+        },
+        {
+          "name": "IPEDS201920TablesDoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\IPEDS201920TablesDoc.xlsx",
+          "bytes": 1254255
+        },
+        {
+          "name": "ReadMe2019-20.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2019-20_Final\\ReadMe2019-20.docx",
+          "bytes": 18889
+        }
+      ]
+    },
+    {
+      "folder": "IPEDS_2020-21_Final",
+      "release_label": "Final",
+      "files": [
+        {
+          "name": "IPEDS202021.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2020-21_Final\\IPEDS202021.accdb",
+          "bytes": 590213120
+        },
+        {
+          "name": "IPEDS202021TablesDoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2020-21_Final\\IPEDS202021TablesDoc.xlsx",
+          "bytes": 1299717
+        },
+        {
+          "name": "ReadMe2020-21.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2020-21_Final\\ReadMe2020-21.docx",
+          "bytes": 20196
+        }
+      ]
+    },
+    {
+      "folder": "IPEDS_2021-22_Final",
+      "release_label": "Final",
+      "files": [
+        {
+          "name": "IPEDS202122.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2021-22_Final\\IPEDS202122.accdb",
+          "bytes": 568852480
+        },
+        {
+          "name": "IPEDS202122TablesDoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2021-22_Final\\IPEDS202122TablesDoc.xlsx",
+          "bytes": 1295698
+        },
+        {
+          "name": "ReadMe2021-22.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2021-22_Final\\ReadMe2021-22.docx",
+          "bytes": 20921
+        }
+      ]
+    },
+    {
+      "folder": "IPEDS_2022-23_Final",
+      "release_label": "Final",
+      "files": [
+        {
+          "name": "IPEDS202223.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223.accdb",
+          "bytes": 606785536
+        },
+        {
+          "name": "IPEDS202223TablesDoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\IPEDS202223TablesDoc.xlsx",
+          "bytes": 1414394
+        },
+        {
+          "name": "ReadMe2022-23.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2022-23_Final\\ReadMe2022-23.docx",
+          "bytes": 21636
+        }
+      ]
+    },
+    {
+      "folder": "IPEDS_2023-24_Final",
+      "release_label": "Final",
+      "files": [
+        {
+          "name": "IPEDS202324.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324.accdb",
+          "bytes": 1002446848
+        },
+        {
+          "name": "IPEDS202324Tablesdoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\IPEDS202324Tablesdoc.xlsx",
+          "bytes": 1380097
+        },
+        {
+          "name": "ReadMe2023-24.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2023-24_Final\\ReadMe2023-24.docx",
+          "bytes": 21462
+        }
+      ]
+    },
+    {
+      "folder": "IPEDS_2024-25_Provisional",
+      "release_label": "Provisional",
+      "files": [
+        {
+          "name": "IPEDS202425.accdb",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425.accdb",
+          "bytes": 618254336
+        },
+        {
+          "name": "IPEDS202425Tablesdoc.xlsx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "bytes": 1290324
+        },
+        {
+          "name": "ReadMe2024-25.docx",
+          "path": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\ReadMe2024-25.docx",
+          "bytes": 26180
+        }
+      ]
+    }
+  ]
+}

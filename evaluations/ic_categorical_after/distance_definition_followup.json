@@ -1,0 +1,199 @@
+{
+  "id": "distance_definition_followup",
+  "question": "What is the difference between those two categories?",
+  "answer": {
+    "intent": "definition",
+    "mode": "source definition",
+    "message": "**Undergraduate level distance education courses offered**: Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education courses Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education.\n\nSource responses: 1 = Yes; 0 = Implied no; -1 = Not reported; -2 = Not applicable\n\n**Undergraduate level distance education programs offered**: Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education progams Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.\n\nSource responses: 1 = Yes; 0 = Implied no; -1 = Not reported; -2 = Not applicable\n\n**Undergraduate level distance education not offered**: Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education not offered Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education. Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.\n\nSource responses: 1 = Yes; 0 = Implied no; -1 = Not reported; -2 = Not applicable\n\nThese are distinct source response categories; an unavailable or unreported response must not be interpreted as No.",
+    "evidence": [
+      {
+        "record_id": 136136,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "variable_definition",
+        "table_name": "IC2024",
+        "variable_name": "DSTNUGC",
+        "title": "Undergraduate level distance education courses offered",
+        "definition": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education courses Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education.",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "sheet_name": "varTable24",
+        "source_row": 265,
+        "codes": [
+          {
+            "code_value": "1",
+            "value_label": "Yes"
+          },
+          {
+            "code_value": "0",
+            "value_label": "Implied no"
+          },
+          {
+            "code_value": "-1",
+            "value_label": "Not reported"
+          },
+          {
+            "code_value": "-2",
+            "value_label": "Not applicable"
+          }
+        ],
+        "excerpt": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education courses Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education.",
+        "issues": [],
+        "physical_column_present": true
+      },
+      {
+        "record_id": 136137,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "variable_definition",
+        "table_name": "IC2024",
+        "variable_name": "DSTNUGP",
+        "title": "Undergraduate level distance education programs offered",
+        "definition": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education progams Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "sheet_name": "varTable24",
+        "source_row": 266,
+        "codes": [
+          {
+            "code_value": "1",
+            "value_label": "Yes"
+          },
+          {
+            "code_value": "0",
+            "value_label": "Implied no"
+          },
+          {
+            "code_value": "-1",
+            "value_label": "Not reported"
+          },
+          {
+            "code_value": "-2",
+            "value_label": "Not applicable"
+          }
+        ],
+        "excerpt": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education progams Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.",
+        "issues": [],
+        "physical_column_present": true
+      },
+      {
+        "record_id": 136138,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "variable_definition",
+        "table_name": "IC2024",
+        "variable_name": "DSTNUGN",
+        "title": "Undergraduate level distance education not offered",
+        "definition": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education not offered Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education. Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "sheet_name": "varTable24",
+        "source_row": 267,
+        "codes": [
+          {
+            "code_value": "1",
+            "value_label": "Yes"
+          },
+          {
+            "code_value": "0",
+            "value_label": "Implied no"
+          },
+          {
+            "code_value": "-1",
+            "value_label": "Not reported"
+          },
+          {
+            "code_value": "-2",
+            "value_label": "Not applicable"
+          }
+        ],
+        "excerpt": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education not offered Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education. Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.",
+        "issues": [],
+        "physical_column_present": true
+      }
+    ],
+    "definition_lookup": {
+      "term": "source category labels",
+      "terms": [
+        "Undergraduate level distance education courses offered",
+        "Undergraduate level distance education programs offered",
+        "Undergraduate level distance education not offered"
+      ],
+      "source_years": [
+        2024
+      ],
+      "comparison": true
+    },
+    "documentation_context": {
+      "kind": "label",
+      "terms": [
+        "Undergraduate level distance education courses offered",
+        "Undergraduate level distance education programs offered",
+        "Undergraduate level distance education not offered"
+      ],
+      "source_years": [
+        2024
+      ]
+    },
+    "model_usage": {
+      "calls": 0,
+      "estimated_api_usd": 0
+    },
+    "latency": {
+      "live_model_calls": 0
+    }
+  },
+  "elapsed_seconds": 0.010668799979612231,
+  "events": [
+    {
+      "elapsed": 0.0002305000089108944,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.112935599987395,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.1678432000335306,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 1.1708231000229716,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 1.1842194999335334,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 3.541425699950196,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 3.9544458999298513,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 6.736253899987787,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 6.77242589998059,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 6.8053865999681875,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 10.163661199971102,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 12.874064599978738,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 12.889500799938105,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "DSTNUGC",
+    "DSTNUGP"
+  ]
+}

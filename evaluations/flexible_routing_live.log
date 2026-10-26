@@ -1,0 +1,5 @@
+{"case": "greeting", "question": "Hi", "wall_seconds": 0.036, "live": true, "intent": "conversation", "model_usage": {"calls": 0, "estimated_api_usd": 0}, "has_result": false, "has_documentation": false, "source_evidence_count": 0, "stages": []}
+{"case": "help", "question": "What can you do?", "wall_seconds": 0.003, "live": true, "intent": "conversation", "model_usage": {"calls": 0, "estimated_api_usd": 0}, "has_result": false, "has_documentation": false, "source_evidence_count": 0, "stages": []}
+{"case": "polite_definition", "question": "Can you explain Pell?", "wall_seconds": 44.554, "live": true, "intent": "definition", "model_usage": {"model": "claude-sonnet-5-5", "calls": 1, "latency_seconds": 42.04351069999393, "estimated_api_usd": null, "usage_complete": false, "stage": "definition passage selection"}, "has_result": false, "has_documentation": false, "source_evidence_count": 5, "stages": ["Looking up the term in the supplied codebooks\u2026"]}
+{"case": "numerical", "error": "Connection error.", "wall_seconds": 5.563, "live": true}
+{"case": "mixed", "error": "Connection error.", "wall_seconds": 0.118, "live": true}

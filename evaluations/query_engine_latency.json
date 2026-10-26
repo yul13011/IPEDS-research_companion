@@ -1,0 +1,244 @@
+{
+  "timestamp": "2026-10-19T19:24:13.935496+00:00",
+  "model": "claude-sonnet-5-5",
+  "cases": [
+    {
+      "label": "grouped_awards",
+      "question": "Show Yale's total awards by award level for July 1, 2023 through June 30, 2024. Use all fields of study and first majors. Return counts, not percentages.",
+      "independent_sql": "SELECT CTOTALT FROM C2024_A WHERE UNITID=130794 AND CIPCODE='99' AND MAJORNUM=1",
+      "expected_values": [
+        1.0,
+        2.0,
+        2.0,
+        8.0,
+        74.0,
+        82.0,
+        318.0,
+        438.0,
+        1665.0,
+        2757.0,
+        5179.0,
+        5263.0
+      ],
+      "intent": "analyze",
+      "message": "For Yale University (July 1, 2023 - June 30, 2024), Total awards (grand total) by award level \u00b7 Award Level code: Certificates of at least 2 but less than 4 years: 2; Total awards (grand total) by award level \u00b7 Award Level code: Bachelor's degree: 1,665; Total awards (grand total) by award level \u00b7 Award Level code: Postbaccalaureate certificate: 74; Total awards (grand total) by award level \u00b7 Award Level code: Master's degree: 2,757. The table or download includes the remaining requested measures.",
+      "latency": {
+        "validation_seconds": 0.10890939994715154,
+        "query_seconds": 0.05039580003358424,
+        "planning_and_binding_seconds": 25.85147189995041,
+        "answer_ready_seconds": 26.01398359995801,
+        "live_model_calls": 4,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 4,
+        "latency_seconds": 17.907,
+        "input_tokens": 33618,
+        "output_tokens": 1651,
+        "cache_creation_input_tokens": 5566,
+        "cache_read_input_tokens": 16013,
+        "estimated_api_usd": 0.0992623,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+        "planning_tool_requests": 5,
+        "semantic_repair_attempts": 0,
+        "stages": [
+          {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 4.532,
+            "input_tokens": 4966,
+            "output_tokens": 477,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4881,
+            "estimated_api_usd": 0.0151901,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          },
+          {
+            "model": "claude-sonnet-5-5",
+            "calls": 3,
+            "planning_tool_requests": 5,
+            "semantic_repair_attempts": 0,
+            "latency_seconds": 13.375,
+            "input_tokens": 28652,
+            "output_tokens": 1174,
+            "cache_creation_input_tokens": 5566,
+            "cache_read_input_tokens": 11132,
+            "estimated_api_usd": 0.0840722,
+            "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+          }
+        ]
+      },
+      "repairs": [],
+      "actual_values": [
+        1.0,
+        2.0,
+        2.0,
+        8.0,
+        74.0,
+        82.0,
+        318.0,
+        438.0,
+        1665.0,
+        2757.0,
+        5179.0,
+        5263.0
+      ],
+      "passed": true,
+      "plan_version": 2,
+      "export_seconds": {
+        "csv": 0.012546800018753856,
+        "excel": 0.5746233999961987,
+        "audit_json": 0.005341599986422807
+      },
+      "test_wall_seconds": 26.617722199996933
+    },
+    {
+      "label": "weighted_salary",
+      "question": "For Yale, calculate the weighted average nine-month salary of full-time nonmedical instructional staff across professor, associate professor and assistant professor ranks in the 2024\u201325 release. Weight each rank's nine-month average salary by its nine-month staff count. Exclude all other ranks and the all-ranks total.",
+      "independent_sql": "SELECT SUM(1.0*SA09MAT*SA09MCT)/SUM(SA09MCT) FROM SAL2024_IS WHERE UNITID=130794 AND ARANK IN (1,2,3)",
+      "expected_values": [
+        239023.5270018622
+      ],
+      "intent": "analyze",
+      "message": "For Yale University (2024-25), Weighted average 9-month salary, professor/associate/assistant (weighted by 9-month staff count): 239,023.53. The reporting period and source definitions are available below.",
+      "latency": {
+        "validation_seconds": 0.07595579995540902,
+        "query_seconds": 0.009172200050670654,
+        "planning_and_binding_seconds": 11.803034199983813,
+        "answer_ready_seconds": 11.888792600017041,
+        "live_model_calls": 4,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 4,
+        "planning_tool_requests": 5,
+        "semantic_repair_attempts": 0,
+        "latency_seconds": 11.641,
+        "input_tokens": 39857,
+        "output_tokens": 1209,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 22264,
+        "estimated_api_usd": 0.0940304,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+      },
+      "repairs": [],
+      "actual_values": [
+        239023.5270018622
+      ],
+      "passed": true,
+      "plan_version": 2,
+      "export_seconds": {
+        "csv": 0.004507599980570376,
+        "excel": 0.05848540004808456,
+        "audit_json": 0.001096300024073571
+      },
+      "test_wall_seconds": 11.96231259999331
+    },
+    {
+      "label": "cross_period_change",
+      "question": "Calculate the percentage change in Yale's total applicants from fall 2023 to fall 2024, using fall 2023 as the baseline.",
+      "independent_sql": "SELECT APPLCN FROM ADM2024 WHERE UNITID=130794",
+      "expected_values": [
+        11.030249213366021
+      ],
+      "intent": "analyze",
+      "message": "For Yale University (Academic year Fall 2024; Academic year Fall 2023), Percent change in Yale total applicants, fall 2023 to fall 2024 (baseline fall 2023): 11.03%. The reporting period and source definitions are available below.",
+      "latency": {
+        "validation_seconds": 0.14797379996161908,
+        "query_seconds": 0.028465000039432198,
+        "planning_and_binding_seconds": 16.383576399995945,
+        "answer_ready_seconds": 16.560918000002857,
+        "live_model_calls": 3,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 3,
+        "planning_tool_requests": 4,
+        "semantic_repair_attempts": 1,
+        "latency_seconds": 16.219,
+        "input_tokens": 44386,
+        "output_tokens": 1795,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 16698,
+        "estimated_api_usd": 0.10839179999999998,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+      },
+      "repairs": [
+        {
+          "attempt": 1,
+          "blocks": [
+            "Unknown or forward expression reference; calculation cycles are forbidden."
+          ]
+        }
+      ],
+      "actual_values": [
+        11.030249213366021
+      ],
+      "passed": true,
+      "plan_version": 2,
+      "export_seconds": {
+        "csv": 0.004661499988287687,
+        "excel": 0.06598149996716529,
+        "audit_json": 0.0025192999746650457
+      },
+      "test_wall_seconds": 16.644721000047866
+    },
+    {
+      "label": "joined_weighted_tuition",
+      "question": "Calculate one combined weighted mean of Yale and Harvard's out-of-state undergraduate tuition for academic year 2024\u201325, weighted by each institution's fall 2024 total undergraduate headcount. Use the tuition amount and enrollment headcount from their respective source tables; explicitly compare these different reporting periods.",
+      "independent_sql": "SELECT SUM(1.0*t.TUITION3*e.EFTOTLT)/SUM(e.EFTOTLT) FROM Cost1_2024 t JOIN EF2024A e USING(UNITID) WHERE t.UNITID IN (130794,166027) AND e.EFALEVEL=2",
+      "expected_values": [
+        61206.392898199
+      ],
+      "intent": "analyze",
+      "message": "For Selected institutions combined (Academic year 2024-25; Fall 2024), Combined weighted mean out-of-state undergraduate tuition (Yale and Harvard), weighted by fall 2024 undergraduate headcount: 61,206.39. The reporting period and source definitions are available below.",
+      "latency": {
+        "validation_seconds": 0.1538977999589406,
+        "query_seconds": 0.054241000034380704,
+        "planning_and_binding_seconds": 29.82852380000986,
+        "answer_ready_seconds": 30.038433899986558,
+        "live_model_calls": 4,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+      },
+      "model_usage": {
+        "model": "claude-sonnet-5-5",
+        "calls": 4,
+        "planning_tool_requests": 6,
+        "semantic_repair_attempts": 1,
+        "latency_seconds": 18.422,
+        "input_tokens": 58031,
+        "output_tokens": 2478,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 22264,
+        "estimated_api_usd": 0.14306839999999998,
+        "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+      },
+      "repairs": [
+        {
+          "attempt": 1,
+          "blocks": [
+            "Unknown or forward expression reference; calculation cycles are forbidden."
+          ]
+        }
+      ],
+      "actual_values": [
+        61206.392898199
+      ],
+      "passed": true,
+      "plan_version": 2,
+      "export_seconds": {
+        "csv": 0.010665499954484403,
+        "excel": 1.0108998999930918,
+        "audit_json": 0.0034883999614976346
+      },
+      "test_wall_seconds": 31.074300099979155
+    }
+  ],
+  "passed": 4,
+  "total": 4,
+  "median_seconds": 21.287450799980434,
+  "scope": "Live unfamiliar questions with no conversation history; independent raw-source SQL; server answer-ready latency excludes browser paint. Exports separately timed. Small serial sample."
+}

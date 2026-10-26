@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-10-19T18:44:01.398200+00:00",
+  "tests_run": 1,
+  "failures": 0,
+  "errors": 0,
+  "test_wall_seconds": 1.057985900028143,
+  "case": "full catalog descriptions, retained unknowns, no blanket execution approval"
+}

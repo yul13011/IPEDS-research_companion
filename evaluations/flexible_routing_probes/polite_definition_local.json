@@ -1,0 +1,145 @@
+{
+  "intent": "definition",
+  "mode": "source definition",
+  "message": "I could not establish a direct definition of **Pell** from this bounded search of the supplied codebooks. This does not prove the term is absent. Try its exact variable name, source table, or a more specific term.",
+  "evidence": [
+    {
+      "record_id": 137528,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "kind": "variable_definition",
+      "table_name": "F2324_F3",
+      "variable_name": "F3C12",
+      "title": "Total discounts and allowances from Pell grants",
+      "definition": "Pell grants includes amounts administered by the institution under the Pell grant program. Total discounts and allowances is the sum of discounts and allowances applied to both tuition & fees and auxiliary enterprises.",
+      "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+      "sheet_name": "varTable24",
+      "source_row": 1657,
+      "excerpt": "Pell grants includes amounts administered by the institution under the Pell grant program. Total discounts and allowances is the sum of discounts and allowances applied to both tuition & fees and auxiliary enterprises.",
+      "glossary_excerpt": null,
+      "direct_match": false,
+      "score": 21.9782,
+      "physical_column_present": true,
+      "issues": []
+    },
+    {
+      "record_id": 137352,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "kind": "variable_definition",
+      "table_name": "F2324_F2",
+      "variable_name": "F2C12",
+      "title": "Total discounts and allowances from Pell grants",
+      "definition": "Pell grants includes the amount administered by the institution under the Pell grant program .Private institutions generally report Pell Grants as agency transactions. Total discounts and allowances is the sum of discounts and allowances applied to both tuition & fees and auxiliary enterprises.",
+      "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+      "sheet_name": "varTable24",
+      "source_row": 1481,
+      "excerpt": "Pell grants includes the amount administered by the institution under the Pell grant program .Private institutions generally report Pell Grants as agency transactions. Total discounts and allowances is the sum of discounts and allowances applied to both tuition & fees and auxiliary enterprises.",
+      "glossary_excerpt": null,
+      "direct_match": false,
+      "score": 21.9705,
+      "physical_column_present": true,
+      "issues": []
+    },
+    {
+      "record_id": 137230,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "kind": "variable_definition",
+      "table_name": "F2324_F1A",
+      "variable_name": "F1E12",
+      "title": "Total discounts and allowances from Pell grants",
+      "definition": "Pell grants represents the gross amount of Pell grants disbursed or otherwise made available to recipients by the institution. Total discounts and allowances is the sum of discounts and allowances that were recorded as an offset (reduction) to the revenues of tuition and fees and auxiliary enterprises",
+      "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+      "sheet_name": "varTable24",
+      "source_row": 1359,
+      "excerpt": "Pell grants represents the gross amount of Pell grants disbursed or otherwise made available to recipients by the institution. Total discounts and allowances is the sum of discounts and allowances that were recorded as an offset (reduction) to the revenues of tuition and fees and auxiliary enterprises",
+      "glossary_excerpt": null,
+      "direct_match": false,
+      "score": 21.9698,
+      "physical_column_present": true,
+      "issues": []
+    },
+    {
+      "record_id": 137461,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "kind": "variable_definition",
+      "table_name": "F2324_F3",
+      "variable_name": "F3C01",
+      "title": "Pell grants",
+      "definition": "Pell grants includes amounts administered by the institution under the Pell grant program.",
+      "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+      "sheet_name": "varTable24",
+      "source_row": 1590,
+      "excerpt": "Pell grants includes amounts administered by the institution under the Pell grant program.",
+      "glossary_excerpt": null,
+      "direct_match": false,
+      "score": 16.991,
+      "physical_column_present": true,
+      "issues": []
+    },
+    {
+      "record_id": 137295,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "kind": "variable_definition",
+      "table_name": "F2324_F2",
+      "variable_name": "F2C01",
+      "title": "Pell grants",
+      "definition": "Pell grants includes the amount administered by the institution under the Pell grant program .Private institutions generally report Pell Grants as agency transactions.",
+      "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+      "sheet_name": "varTable24",
+      "source_row": 1424,
+      "excerpt": "Pell grants includes the amount administered by the institution under the Pell grant program .Private institutions generally report Pell Grants as agency transactions.",
+      "glossary_excerpt": null,
+      "direct_match": false,
+      "score": 16.9833,
+      "physical_column_present": true,
+      "issues": []
+    }
+  ],
+  "definition_lookup": {
+    "term": "Pell",
+    "source_years": [
+      2024
+    ],
+    "default_latest_release": true,
+    "status": "not_established",
+    "selection": "deterministic",
+    "reviewed_measure": null,
+    "candidate_record_ids": [
+      137528,
+      137352,
+      137230,
+      137461,
+      137295,
+      137218,
+      136914,
+      136789,
+      136900,
+      136913,
+      138046,
+      136918,
+      136902,
+      136915,
+      136769,
+      136788,
+      136999,
+      136920,
+      137530,
+      137354
+    ],
+    "passages": [],
+    "source_policy": "Owner-supplied metadata only; no statistical values queried"
+  },
+  "latency": {
+    "answer_ready_seconds": 0.6929096999811009,
+    "live_model_calls": 0
+  },
+  "documentation_context": {
+    "kind": "label",
+    "terms": [
+      "Pell"
+    ],
+    "source_years": [
+      2024
+    ],
+    "context_resolved": false
+  }
+}

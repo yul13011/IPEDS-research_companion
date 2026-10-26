@@ -1,0 +1,670 @@
+{
+  "id": "distance_distinction",
+  "question": "Did Wellesley College offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "168218"
+      ],
+      "population": null,
+      "result_kind": "lookup",
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136136,
+            136137,
+            136138
+          ],
+          "filters": []
+        }
+      ],
+      "source_years": [
+        2024
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "168218"
+        ],
+        "population": null,
+        "result_kind": "lookup",
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136136,
+              136137,
+              136138
+            ],
+            "filters": []
+          }
+        ],
+        "source_years": [
+          2024
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::DSTNUGC",
+          "IC{YEAR}::DSTNUGP",
+          "IC{YEAR}::DSTNUGN"
+        ],
+        "institutions": [
+          "168218"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::DSTNUGC": {
+          "label": "Undergraduate level distance education courses offered",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::DSTNUGP": {
+          "label": "Undergraduate level distance education programs offered",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::DSTNUGN": {
+          "label": "Undergraduate level distance education not offered",
+          "family": "observation",
+          "unit": "coded"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Wellesley College",
+          "unitid": 168218,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::DSTNUGC",
+          "measure": "Undergraduate level distance education courses offered",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136136,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            140143
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "DSTNUGC",
+            "record_id": 136136,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136136,
+                "excerpt": "Undergraduate level distance education courses offered"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Wellesley College",
+          "unitid": 168218,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::DSTNUGP",
+          "measure": "Undergraduate level distance education programs offered",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136137,
+          "raw_code": 0,
+          "response_label": "Implied no",
+          "response_status": "implied_no",
+          "category_record_ids": [
+            140148
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "DSTNUGP",
+            "record_id": 136137,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136137,
+                "excerpt": "Undergraduate level distance education programs offered"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Wellesley College",
+          "unitid": 168218,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::DSTNUGN",
+          "measure": "Undergraduate level distance education not offered",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136138,
+          "raw_code": 0,
+          "response_label": "Implied no",
+          "response_status": "implied_no",
+          "category_record_ids": [
+            140152
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "DSTNUGN",
+            "record_id": 136138,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136138,
+                "excerpt": "Undergraduate level distance education not offered"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::DSTNUGC",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "DSTNUGC"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"DSTNUGC\",\"DSTNUGP\",\"DSTNUGN\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            168218
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136136,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "DSTNUGC",
+              "title": "Undergraduate level distance education courses offered",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 15421\nvarorder: 82\nvarname: DSTNUGC\nvartitle: Undergraduate level distance education courses offered\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 9\nlongdescription: Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education courses Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Distance education",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 265,
+              "long_description": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education courses Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 140145,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 140146,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 140144,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 140143,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::DSTNUGP",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "DSTNUGP"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"DSTNUGC\",\"DSTNUGP\",\"DSTNUGN\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            168218
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136137,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "DSTNUGP",
+              "title": "Undergraduate level distance education programs offered",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 15426\nvarorder: 83\nvarname: DSTNUGP\nvartitle: Undergraduate level distance education programs offered\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 9\nlongdescription: Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education progams Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Distance education",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 266,
+              "long_description": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education progams Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 140149,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 140150,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 140148,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 140147,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::DSTNUGN",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "DSTNUGN"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"DSTNUGC\",\"DSTNUGP\",\"DSTNUGN\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            168218
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136138,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "DSTNUGN",
+              "title": "Undergraduate level distance education not offered",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 15431\nvarorder: 84\nvarname: DSTNUGN\nvartitle: Undergraduate level distance education not offered\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 9\nlongdescription: Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education not offered Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education. Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Distance education",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 267,
+              "long_description": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education not offered Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education. Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 140153,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 140154,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 140152,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 140151,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::DSTNUGC": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education courses Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education.",
+        "IC{YEAR}::DSTNUGP": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education progams Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses.",
+        "IC{YEAR}::DSTNUGN": "Please indicate at what level(s) your institution does or does not offer distance education courses and/or distance education programs. Check all that apply. Undergraduate level distant education not offered Distance education course - A course in which the instructional content is delivered exclusively via distance education. Requirements for coming to campus for orientation, testing, or academic support services do not exclude a course from being classified as distance education. Distance education program - A program for which all the required coursework for program completion is able to be completed via distance education courses."
+      },
+      "warnings": [
+        "Implied no is a source response distinct from Not reported and Not applicable."
+      ],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:36:53.384671+00:00",
+      "registry_sha256": "98ba44fd31bf86a83f281ba6f1c3be846d6daa37b27b99bf5d83820f310c7c80",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 3,
+        "available_cells": 3,
+        "matching_institutions": {
+          "2024": 1
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 1
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            168218,
+            2024,
+            136136
+          ],
+          [
+            168218,
+            2024,
+            136137
+          ],
+          [
+            168218,
+            2024,
+            136138
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          168218
+        ],
+        "rows_sha256": "1d53458b3e9f502b306d98c99fbb45cfd8246c95f70eeb20743b12f2bc7af838"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 12.36680429999251,
+        "answer_ready_seconds": 14.202416700078174,
+        "live_model_calls": 5,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 1.8119572000578046
+      },
+      "result_id": "8e2fd6fb43825926",
+      "institution_identity": {
+        "unitids": [
+          168218
+        ],
+        "original_question": "Did Wellesley College offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+        "original_mentions": [
+          "Wellesley College"
+        ],
+        "confirmed_choices": {
+          "wellesley college": 168218
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Wellesley College \u00b7 Wellesley, MA \u00b7 UNITID 168218"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 5,
+      "planning_tool_requests": 4,
+      "semantic_repair_attempts": 1,
+      "latency_seconds": 13.731834700098261,
+      "input_tokens": 58405,
+      "output_tokens": 802,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 85232,
+      "estimated_api_usd": 0.1333532,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 575,
+          "output_tokens": 60,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.7318347000982612,
+          "estimated_api_usd": 0.00175,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 4,
+          "planning_tool_requests": 4,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 12.0,
+          "input_tokens": 57830,
+          "output_tokens": 742,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 85232,
+          "estimated_api_usd": 0.1316032,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "Wellesley College \u2014 Undergraduate level distance education courses offered: Yes (Academic year 2024-25); Wellesley College \u2014 Undergraduate level distance education programs offered: Implied no (Academic year 2024-25); Wellesley College \u2014 Undergraduate level distance education not offered: Implied no (Academic year 2024-25).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 12.36680429999251,
+      "answer_ready_seconds": 14.202416700078174,
+      "live_model_calls": 5,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 1.8119572000578046
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "4cb4b819d76706e1",
+      "status": "completed",
+      "goal": "Did Wellesley College (UNITID 168218) offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+      "original_question": "Did Wellesley College (UNITID 168218) offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+      "question": "Wellesley College \u2014 Undergraduate level distance education courses offered: Yes (Academic year 2024-25); Wellesley College \u2014 Undergraduate level distance education programs offered: Implied no (Academic year 2024-25); Wellesley College \u2014 Undergraduate level distance education not offered: Implied no (Academic year 2024-25).",
+      "scope": {
+        "institutions": [
+          "168218"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::DSTNUGC",
+          "IC{YEAR}::DSTNUGP",
+          "IC{YEAR}::DSTNUGN"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        168218
+      ],
+      "original_question": "Did Wellesley College offer undergraduate distance education courses, complete undergraduate distance education programs, or both in 2024-25?",
+      "original_mentions": [
+        "Wellesley College"
+      ],
+      "confirmed_choices": {
+        "wellesley college": 168218
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Wellesley College \u00b7 Wellesley, MA \u00b7 UNITID 168218"
+      ]
+    }
+  },
+  "elapsed_seconds": 14.203125100000761,
+  "events": [
+    {
+      "elapsed": 0.00021850003395229578,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.7418164000846446,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.8104871000396088,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 1.8140387000748888,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 1.832834200002253,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 4.345700100064278,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 4.950050799991004,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 7.776593500049785,
+      "stage": "Reading definitions and category codes across years\u2026"
+    },
+    {
+      "elapsed": 7.827619299991056,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 10.563261400093324,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 14.177015500026755,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 14.203052000026219,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "DSTNUGC",
+    "DSTNUGP"
+  ]
+}

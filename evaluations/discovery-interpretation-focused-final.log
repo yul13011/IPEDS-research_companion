@@ -1,0 +1,18 @@
+test_ambiguity_and_year_scope_are_preserved_in_evidence_package (prototype.tests.test_discovery_interpretation.InterpretationTests.test_ambiguity_and_year_scope_are_preserved_in_evidence_package) ... ok
+test_catalog_verification_requires_concept_and_phrase_in_same_physical_record (prototype.tests.test_discovery_interpretation.InterpretationTests.test_catalog_verification_requires_concept_and_phrase_in_same_physical_record) ... ok
+test_everyday_salary_and_overseas_queries_find_relevant_data_areas (prototype.tests.test_discovery_interpretation.InterpretationTests.test_everyday_salary_and_overseas_queries_find_relevant_data_areas) ... ok
+test_failed_interpretation_preserves_baseline_topics (prototype.tests.test_discovery_interpretation.InterpretationTests.test_failed_interpretation_preserves_baseline_topics) ... ok
+test_fallback_retains_original_search_and_records_unknown_cost (prototype.tests.test_discovery_interpretation.InterpretationTests.test_fallback_retains_original_search_and_records_unknown_cost) ... ok
+test_invalid_proposals_cannot_add_dates_operators_or_exceed_budget (prototype.tests.test_discovery_interpretation.InterpretationTests.test_invalid_proposals_cannot_add_dates_operators_or_exceed_budget) ... ok
+test_original_hits_survive_and_new_concept_matches_enter_overview (prototype.tests.test_discovery_interpretation.InterpretationTests.test_original_hits_survive_and_new_concept_matches_enter_overview) ... ok
+test_proposed_concepts_are_checked_and_made_up_concepts_rejected (prototype.tests.test_discovery_interpretation.InterpretationTests.test_proposed_concepts_are_checked_and_made_up_concepts_rejected) ... ok
+test_round_robin_keeps_original_and_expanded_records (prototype.tests.test_discovery_interpretation.InterpretationTests.test_round_robin_keeps_original_and_expanded_records) ... ok
+test_stage_usage_combines_and_unknown_cost_is_never_zero (prototype.tests.test_discovery_interpretation.InterpretationTests.test_stage_usage_combines_and_unknown_cost_is_never_zero) ... ok
+test_two_stage_chat_flow_preserves_audit_and_combines_usage (prototype.tests.test_discovery_interpretation.InterpretationTests.test_two_stage_chat_flow_preserves_audit_and_combines_usage) ... 2026-10-21 00:10:16.719 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 00:10:19.025 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 6.061s
+
+OK

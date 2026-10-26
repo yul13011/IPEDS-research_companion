@@ -1,0 +1,30 @@
+{
+  "8": {
+    "age_category": "25 and above",
+    "confirmed_by": "User",
+    "confirmed_on": "2026-10-21",
+    "source": "For Q8, the age category for the counts in the table is 25 and above.",
+    "source_mapping": "EF annual B: EFBAGE=7 (Age 25 and over total), LSTUDY=1 (All Students total), LINE=999 (Generated record not on survey form), EFAGE09 (Grand total).",
+    "qualification": "Age unknown is excluded. Use the existing age-25-and-over subtotal once, without adding its component age bands. Original NCES workbook and expected counts remain unchanged."
+  },
+  "200": {
+    "confirmed_by": "User and updated workbook",
+    "confirmed_on": "2026-10-21",
+    "population": "All undergraduate degree/certificate-seeking entering students at U.S. Title IV degree-granting institutions; first-time/non-first-time, full-time/part-time combined.",
+    "outcome": "Award from reporting institution within 8 years",
+    "method": "100 * SUM(OMAWDN8) / SUM(OMACHRT), OMCHRT=50 (Total entering, Total), matched complete observations; no averaging institutional percentages.",
+    "latest_cohort": "2016-17",
+    "latest_outcome_year": 2024,
+    "website_percent": 47.3,
+    "website_institutions": 3473,
+    "qualification": "Award completion at the reporting institution; adjusted cohort excludes permitted exclusions. Cohort years and outcome/source years remain distinct."
+  },
+  "42": {
+    "confirmed_by": "User supplied IPEDS question",
+    "confirmed_on": "2026-10-21",
+    "question": "Student Enrollment: What is the percent of students enrolled in distance education courses in postsecondary institutions in the fall?",
+    "population": "All students, U.S. Title IV postsecondary institutions, fall enrollment.",
+    "method": "SUM(EFDEEXC + EFDESOM) / SUM(EFDETOT) on matching usable reporting rows, EFDELEV=1; include both exclusively distance and some distance courses.",
+    "missingness": "Explicit opt-in verified distance partition: a blank component is derived as zero only if reported nonnegative integer components already equal total. Unresolved blanks and suppression stay missing; every derived cell is audited."
+  }
+}

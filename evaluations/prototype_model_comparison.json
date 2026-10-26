@@ -1,0 +1,442 @@
+{
+  "timestamp": "2026-10-17T15:31:59.516619+00:00",
+  "models": [
+    {
+      "model": "claude-sonnet-5-5",
+      "passed": 7,
+      "total": 7,
+      "estimated_api_usd": 0.1068892,
+      "cases": [
+        {
+          "question": "Yale applicants, admits and admission rate for class of 2028 entering fall 2024",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "applicants",
+              "admits",
+              "admission_rate"
+            ],
+            "institutions": [
+              "Yale University"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "table"
+          },
+          "usage": {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 6.985,
+            "input_tokens": 3229,
+            "output_tokens": 378,
+            "cache_creation_input_tokens": 4632,
+            "cache_read_input_tokens": 0,
+            "estimated_api_usd": 0.021818,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "How many matriculated in that year and what was the yield rate?",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "matriculants",
+              "yield_rate"
+            ],
+            "institutions": [
+              "Yale University"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "table"
+          },
+          "usage": {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 3.437,
+            "input_tokens": 5187,
+            "output_tokens": 316,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4632,
+            "estimated_api_usd": 0.013997200000000001,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "What data do we have on faculty?",
+          "passed": true,
+          "expected_intent": "discover",
+          "actual_intent": "discover",
+          "plan": null,
+          "usage": {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 3.813,
+            "input_tokens": 2020,
+            "output_tokens": 378,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4632,
+            "estimated_api_usd": 0.008283200000000001,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "What percentage of Yale College students were on financial aid in 2024?",
+          "passed": true,
+          "expected_intent": "clarify",
+          "actual_intent": "clarify",
+          "plan": null,
+          "usage": {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 3.61,
+            "input_tokens": 6985,
+            "output_tokens": 388,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4632,
+            "estimated_api_usd": 0.0183132,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "Plot Yale six-year graduation rate for entering cohorts 2009 through 2018",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "graduation_rate"
+            ],
+            "institutions": [
+              "Yale University"
+            ],
+            "years": [
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+              2018
+            ],
+            "time_basis": "entry_cohort",
+            "output": "chart"
+          },
+          "usage": {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 3.671,
+            "input_tokens": 4794,
+            "output_tokens": 400,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4632,
+            "estimated_api_usd": 0.014051200000000002,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "Give me applicants and admission rates for Yale, Harvard, and Princeton from 2015 through 2024",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "applicants",
+              "admission_rate"
+            ],
+            "institutions": [
+              "Yale University",
+              "Harvard University",
+              "Princeton University"
+            ],
+            "years": [
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "table"
+          },
+          "usage": {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 3.859,
+            "input_tokens": 3355,
+            "output_tokens": 446,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4632,
+            "estimated_api_usd": 0.011633200000000002,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "What percentage of Yale undergraduates received grants or scholarships in 2023–24?",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "undergraduate_grant_percent"
+            ],
+            "institutions": [
+              "Yale University"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "answer"
+          },
+          "usage": {
+            "model": "claude-sonnet-5-5",
+            "calls": 1,
+            "latency_seconds": 4.422,
+            "input_tokens": 6600,
+            "output_tokens": 513,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4632,
+            "estimated_api_usd": 0.0187932,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        }
+      ]
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "passed": 7,
+      "total": 7,
+      "estimated_api_usd": 0.006590605,
+      "cases": [
+        {
+          "question": "Yale applicants, admits and admission rate for class of 2028 entering fall 2024",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "applicants",
+              "admits",
+              "admission_rate"
+            ],
+            "institutions": [
+              "Yale University"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "table"
+          },
+          "usage": {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 7.75,
+            "input_tokens": 3229,
+            "output_tokens": 612,
+            "cache_creation_input_tokens": 4633,
+            "cache_read_input_tokens": 0,
+            "estimated_api_usd": 0.0012080250000000002,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "How many matriculated in that year and what was the yield rate?",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "matriculants",
+              "yield_rate"
+            ],
+            "institutions": [
+              "Yale University"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "table"
+          },
+          "usage": {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 2.86,
+            "input_tokens": 5187,
+            "output_tokens": 541,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4633,
+            "estimated_api_usd": 0.0008355300000000001,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "What data do we have on faculty?",
+          "passed": true,
+          "expected_intent": "discover",
+          "actual_intent": "discover",
+          "plan": null,
+          "usage": {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 4.094,
+            "input_tokens": 2020,
+            "output_tokens": 724,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4633,
+            "estimated_api_usd": 0.0006103300000000001,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "What percentage of Yale College students were on financial aid in 2024?",
+          "passed": true,
+          "expected_intent": "clarify",
+          "actual_intent": "clarify",
+          "plan": null,
+          "usage": {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 4.61,
+            "input_tokens": 6985,
+            "output_tokens": 926,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4633,
+            "estimated_api_usd": 0.00120783,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "Plot Yale six-year graduation rate for entering cohorts 2009 through 2018",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "graduation_rate"
+            ],
+            "institutions": [
+              "Yale University"
+            ],
+            "years": [
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+              2018
+            ],
+            "time_basis": "entry_cohort",
+            "output": "chart"
+          },
+          "usage": {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 3.953,
+            "input_tokens": 4794,
+            "output_tokens": 781,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4633,
+            "estimated_api_usd": 0.00091623,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "Give me applicants and admission rates for Yale, Harvard, and Princeton from 2015 through 2024",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "applicants",
+              "admission_rate"
+            ],
+            "institutions": [
+              "Yale University",
+              "Harvard University",
+              "Princeton University"
+            ],
+            "years": [
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "table"
+          },
+          "usage": {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 4.078,
+            "input_tokens": 3355,
+            "output_tokens": 788,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4633,
+            "estimated_api_usd": 0.00077583,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        },
+        {
+          "question": "What percentage of Yale undergraduates received grants or scholarships in 2023–24?",
+          "passed": true,
+          "expected_intent": "analyze",
+          "actual_intent": "analyze",
+          "plan": {
+            "metrics": [
+              "undergraduate_grant_percent"
+            ],
+            "institutions": [
+              "Yale University"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "answer"
+          },
+          "usage": {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 3.313,
+            "input_tokens": 6600,
+            "output_tokens": 661,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4633,
+            "estimated_api_usd": 0.0010368299999999999,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "Seven live functional planner cases per model, not a comprehensive accuracy estimate. Token usage includes cache behavior; pricing estimates exclude provider adjustments."
+}

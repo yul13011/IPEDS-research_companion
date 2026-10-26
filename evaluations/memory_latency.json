@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-10-19T19:33:22.808519+00:00",
+  "passed": 5,
+  "total": 5,
+  "cases": [
+    {
+      "question": "Show Yale's undergraduate population by race and ethnicity in fall 2024",
+      "resolved_question": null,
+      "resolution": null,
+      "intent": "analyze",
+      "message": "For Yale University (Fall 2024), American Indian or Alaska Native total: 27; Asian total: 1,483; Black or African American total: 628; Hispanic total: 1,121. The table or download includes the remaining requested measures.",
+      "passed": true,
+      "latency": {
+        "validation_seconds": 0.05471160000888631,
+        "query_seconds": 0.005598600022494793,
+        "planning_and_binding_seconds": 0.38569169997936115,
+        "answer_ready_seconds": 0.45641169999726117,
+        "live_model_calls": 0,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0
+      },
+      "model_calls": 0,
+      "wall_seconds": 0.47120609995909035
+    },
+    {
+      "question": "now Harvard",
+      "resolved_question": "Show Harvard's undergraduate population by race and ethnicity in fall 2024",
+      "resolution": {
+        "kind": "followup",
+        "question": "Show Harvard's undergraduate population by race and ethnicity in fall 2024",
+        "referenced_turns": [
+          1
+        ]
+      },
+      "intent": "analyze",
+      "message": "For Harvard University (Fall 2024), American Indian or Alaska Native total: 30; Asian total: 1,861; Black or African American total: 737; Hispanic total: 1,014. The table or download includes the remaining requested measures.",
+      "passed": true,
+      "latency": {
+        "validation_seconds": 0.118905299983453,
+        "query_seconds": 0.009814899996854365,
+        "planning_and_binding_seconds": 0.287316300033126,
+        "answer_ready_seconds": 11.883601300010923,
+        "live_model_calls": 1,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 4.867778799962252
+      },
+      "model_calls": 1,
+      "wall_seconds": 11.891683899972122
+    },
+    {
+      "question": "show percentages",
+      "resolved_question": "Show Harvard's undergraduate population by race and ethnicity in fall 2024 as percentages of the total undergraduate population, preserving the same race/ethnicity categories (including race/ethnicity unknown and U.S. nonresident).",
+      "resolution": {
+        "kind": "followup",
+        "question": "Show Harvard's undergraduate population by race and ethnicity in fall 2024 as percentages of the total undergraduate population, preserving the same race/ethnicity categories (including race/ethnicity unknown and U.S. nonresident).",
+        "referenced_turns": [
+          2
+        ]
+      },
+      "intent": "analyze",
+      "message": "For Harvard University (Fall 2024), American Indian or Alaska Native % of undergraduates: 0.34%; Asian % of undergraduates: 21.04%; Black or African American % of undergraduates: 8.33%; Hispanic % of undergraduates: 11.47%. The table or download includes the remaining requested measures.",
+      "passed": true,
+      "latency": {
+        "validation_seconds": 0.04557279997970909,
+        "query_seconds": 0.006233799969777465,
+        "planning_and_binding_seconds": 12.977384000027087,
+        "answer_ready_seconds": 15.590761700004805,
+        "live_model_calls": 3,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 2.5552926000091247
+      },
+      "model_calls": 3,
+      "wall_seconds": 15.595738300005905
+    },
+    {
+      "question": "How many applicants did Yale have in fall 2024?",
+      "resolved_question": "How many applicants did Yale have in fall 2024?",
+      "resolution": {
+        "kind": "new",
+        "question": "How many applicants did Yale have in fall 2024?",
+        "referenced_turns": []
+      },
+      "intent": "analyze",
+      "message": "For Yale University (fall 2024), Applicants: 57,517. The reporting period and source definitions are available below.",
+      "passed": true,
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 5.526332599984016,
+        "answer_ready_seconds": 8.172852199990302,
+        "live_model_calls": 2,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 2.6458932000095956
+      },
+      "model_calls": 2,
+      "wall_seconds": 8.183060500014108
+    },
+    {
+      "question": "Back to Harvard's undergraduate race breakdown: show counts again.",
+      "resolved_question": "Show Harvard's undergraduate population by race and ethnicity in fall 2024 as counts (not percentages), preserving the same race/ethnicity categories (including race/ethnicity unknown and U.S. nonresident).",
+      "resolution": {
+        "kind": "followup",
+        "question": "Show Harvard's undergraduate population by race and ethnicity in fall 2024 as counts (not percentages), preserving the same race/ethnicity categories (including race/ethnicity unknown and U.S. nonresident).",
+        "referenced_turns": [
+          2,
+          3
+        ]
+      },
+      "intent": "analyze",
+      "message": "For Harvard University (Fall 2024), American Indian or Alaska Native total: 30; Asian total: 1,861; Black or African American total: 737; Hispanic total: 1,014. The table or download includes the remaining requested measures.",
+      "passed": true,
+      "latency": {
+        "validation_seconds": 0.059642800013534725,
+        "query_seconds": 0.0066092999768443406,
+        "planning_and_binding_seconds": 9.200444800022524,
+        "answer_ready_seconds": 11.896420900011435,
+        "live_model_calls": 3,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 2.622004900011234
+      },
+      "model_calls": 3,
+      "wall_seconds": 11.901592399983201
+    }
+  ],
+  "scope": "Sequential live conversation, with deterministic source-SQL verification. Initial context setup is local; subsequent turns use the actual model resolver/planners. Answer-ready excludes browser paint."
+}

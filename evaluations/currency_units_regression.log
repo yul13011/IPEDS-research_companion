@@ -1,0 +1,66 @@
+test_missing_category_and_long_label_exports (prototype.tests.test_chart_workflow.ChartWorkflowTests.test_missing_category_and_long_label_exports) ... ok
+test_whole_salary_workflow_ui_and_exports (prototype.tests.test_chart_workflow.ChartWorkflowTests.test_whole_salary_workflow_ui_and_exports) ... 2026-10-21 22:07:35.906 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+2026-10-21 22:07:35.909 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:07:39.055 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:07:39.055 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:08:40.229 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:08:40.232 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:08:40.234 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_all_values_match_independent_source_rows (prototype.tests.test_faculty_examples.FacultyExampleTests.test_all_values_match_independent_source_rows) ... ok
+test_annual_named_templates_keep_scope_bounds (prototype.tests.test_faculty_examples.FacultyExampleTests.test_annual_named_templates_keep_scope_bounds) ... ok
+test_click_each_example_from_both_surfaces_without_chat_planning (prototype.tests.test_faculty_examples.FacultyExampleTests.test_click_each_example_from_both_surfaces_without_chat_planning) ... 2026-10-21 22:09:34.273 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:09:59.864 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_salary_bars_have_clear_gaps_and_match_legend_order (prototype.tests.test_faculty_examples.FacultyExampleTests.test_salary_bars_have_clear_gaps_and_match_legend_order) ... ok
+test_style_colors_match_salary_chart_and_recolor_actual_bars (prototype.tests.test_faculty_examples.FacultyExampleTests.test_style_colors_match_salary_chart_and_recolor_actual_bars) ... 2026-10-21 22:10:52.948 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:10:58.066 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:10:58.068 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_categories_are_labels_not_measures (prototype.tests.test_query_engine.QueryEngineTests.test_categories_are_labels_not_measures) ... ok
+test_cohort_rate_and_release_year_substitution_rejection (prototype.tests.test_query_engine.QueryEngineTests.test_cohort_rate_and_release_year_substitution_rejection) ... ok
+test_cross_institution_mean_and_joined_weighted_mean (prototype.tests.test_query_engine.QueryEngineTests.test_cross_institution_mean_and_joined_weighted_mean) ... ok
+test_cross_period_change (prototype.tests.test_query_engine.QueryEngineTests.test_cross_period_change) ... ok
+test_disjoint_row_sum_and_overlap_rejection (prototype.tests.test_query_engine.QueryEngineTests.test_disjoint_row_sum_and_overlap_rejection) ... ok
+test_grouped_awards_match_source_sql (prototype.tests.test_query_engine.QueryEngineTests.test_grouped_awards_match_source_sql) ... ok
+test_grouped_result_in_chat_and_exports (prototype.tests.test_query_engine.QueryEngineTests.test_grouped_result_in_chat_and_exports) ... 2026-10-21 22:11:32.482 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:11:41.864 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 22:11:41.864 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_join_rejects_many_to_many_or_hidden_keys (prototype.tests.test_query_engine.QueryEngineTests.test_join_rejects_many_to_many_or_hidden_keys) ... ok
+test_missing_institution_propagates_to_combined_mean (prototype.tests.test_query_engine.QueryEngineTests.test_missing_institution_propagates_to_combined_mean) ... ok
+test_model_can_submit_relational_plan_and_repair (prototype.tests.test_query_engine.QueryEngineTests.test_model_can_submit_relational_plan_and_repair) ... ok
+test_negative_financial_value_is_not_a_missing_sentinel (prototype.tests.test_query_engine.QueryEngineTests.test_negative_financial_value_is_not_a_missing_sentinel) ... ok
+test_numeric_range_filters_do_not_use_text_comparison (prototype.tests.test_query_engine.QueryEngineTests.test_numeric_range_filters_do_not_use_text_comparison) ... ok
+test_one_to_one_fact_join_and_multi_step_calculation (prototype.tests.test_query_engine.QueryEngineTests.test_one_to_one_fact_join_and_multi_step_calculation) ... ok
+test_reducer_does_not_double_count_joined_scalar (prototype.tests.test_query_engine.QueryEngineTests.test_reducer_does_not_double_count_joined_scalar) ... ok
+test_same_table_aliases_allow_population_comparison (prototype.tests.test_query_engine.QueryEngineTests.test_same_table_aliases_allow_population_comparison) ... ok
+test_weighted_salary_matches_independent_sql (prototype.tests.test_query_engine.QueryEngineTests.test_weighted_salary_matches_independent_sql) ... ok
+test_codebook_and_physical_table_case_differences (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_codebook_and_physical_table_case_differences) ... ok
+test_continuing_subgroup_cannot_answer_all_undergraduates (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_continuing_subgroup_cannot_answer_all_undergraduates) ... ok
+test_percent_exact_denominator_and_missing_values (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_percent_exact_denominator_and_missing_values) ... ok
+test_race_break_down_wording_uses_same_source_plan (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_race_break_down_wording_uses_same_source_plan) ... ok
+test_race_count_matches_independent_source_query (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_race_count_matches_independent_source_query) ... ok
+test_readonly_connection_rejects_write (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_readonly_connection_rejects_write) ... ok
+test_unfamiliar_library_field_without_registry_entry (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_unfamiliar_library_field_without_registry_entry) ... ok
+test_unknown_field_and_sql_text_rejected (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_unknown_field_and_sql_text_rejected) ... ok
+test_unselected_population_never_executes (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_unselected_population_never_executes) ... ok
+test_unverified_arithmetic_and_dimensions_blocked (prototype.tests.test_catalog_execution.CatalogExecutionTests.test_unverified_arithmetic_and_dimensions_blocked) ... ok
+test_admissions_share_not_in_old_field_allowlist (prototype.tests.test_general_calculations.GeneralCalculationTests.test_admissions_share_not_in_old_field_allowlist) ... ok
+test_catalog_descriptions_cover_definitions_without_blanket_approval (prototype.tests.test_general_calculations.GeneralCalculationTests.test_catalog_descriptions_cover_definitions_without_blanket_approval) ... ok
+test_completions_share_with_all_grain_selectors (prototype.tests.test_general_calculations.GeneralCalculationTests.test_completions_share_with_all_grain_selectors) ... ok
+test_failed_repair_is_bounded_and_never_queries (prototype.tests.test_general_calculations.GeneralCalculationTests.test_failed_repair_is_bounded_and_never_queries) ... ok
+test_false_relationships_and_overlapping_totals_rejected (prototype.tests.test_general_calculations.GeneralCalculationTests.test_false_relationships_and_overlapping_totals_rejected) ... ok
+test_general_sum_difference_and_sibling_ratio (prototype.tests.test_general_calculations.GeneralCalculationTests.test_general_sum_difference_and_sibling_ratio) ... ok
+test_library_share_and_explicit_source_component (prototype.tests.test_general_calculations.GeneralCalculationTests.test_library_share_and_explicit_source_component) ... ok
+test_missing_zero_and_bounds_without_writing_source (prototype.tests.test_general_calculations.GeneralCalculationTests.test_missing_zero_and_bounds_without_writing_source) ... ok
+test_multi_category_normalization_and_constant_dimension (prototype.tests.test_general_calculations.GeneralCalculationTests.test_multi_category_normalization_and_constant_dimension) ... ok
+test_planner_retrieves_and_repairs_semantic_error (prototype.tests.test_general_calculations.GeneralCalculationTests.test_planner_retrieves_and_repairs_semantic_error) ... ok
+test_source_period_and_cross_table_evidence_rejected (prototype.tests.test_general_calculations.GeneralCalculationTests.test_source_period_and_cross_table_evidence_rejected) ... ok
+test_unrequested_calculation_rejected_for_replanning (prototype.tests.test_general_calculations.GeneralCalculationTests.test_unrequested_calculation_rejected_for_replanning) ... ok
+test_unseen_institution_and_annual_definition_use_same_rules (prototype.tests.test_general_calculations.GeneralCalculationTests.test_unseen_institution_and_annual_definition_use_same_rules) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 311.544s
+
+OK

@@ -1,0 +1,20 @@
+test_whole_salary_workflow_ui_and_exports (prototype.tests.test_chart_workflow.ChartWorkflowTests.test_whole_salary_workflow_ui_and_exports) ... 2026-10-21 15:04:14.268 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+2026-10-21 15:04:14.271 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 15:04:15.415 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 15:04:15.417 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-21 15:04:58.723 No runtime found, using MemoryCacheStorageManager
+ERROR
+
+======================================================================
+ERROR: test_whole_salary_workflow_ui_and_exports (prototype.tests.test_chart_workflow.ChartWorkflowTests.test_whole_salary_workflow_ui_and_exports)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\liyuj\OneDrive\2026\IPEDS Project\agent-redesign\prototype\tests\test_chart_workflow.py", line 137, in test_whole_salary_workflow_ui_and_exports
+    next(w for w in app.selectbox if w.label=='Slide layout').set_value('Half slide � 4:3').run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+----------------------------------------------------------------------
+Ran 1 test in 48.030s
+
+FAILED (errors=1)

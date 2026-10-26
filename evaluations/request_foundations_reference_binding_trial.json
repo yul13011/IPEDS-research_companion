@@ -1,0 +1,4193 @@
+{
+  "records": [
+    {
+      "case": "ivy_compare",
+      "question": "Compare Ivy League admission rates in fall 2024.",
+      "passed": true,
+      "checks": {
+        "eight_rates": true,
+        "history_unchanged": true
+      },
+      "message": "Yale University \u2014 Admission rate: 3.87%; Harvard University \u2014 Admission rate: 3.65%; Dartmouth College \u2014 Admission rate: 5.40%; Princeton University \u2014 Admission rate: 4.62% (fall 2024). The chart or download includes all 8 requested institutions.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "numerical",
+            "relationship": "new",
+            "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+            "message": "",
+            "institution_mentions": [
+              "Ivy League"
+            ],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Compare Ivy League admission rates in fall 2024.",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "none",
+              "measure_ids": [
+                "admission_rate"
+              ],
+              "field_record_ids": [],
+              "institutions": [
+                "Ivy League"
+              ],
+              "topic": "admissions",
+              "time_basis": "observation",
+              "requested_years": [
+                2024
+              ],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "explicit"
+            }
+          }
+        ]
+      },
+      "task_tracking": {
+        "tasks": [
+          {
+            "id": "t1",
+            "request": "Compare Ivy League admission rates in fall 2024.",
+            "depends_on": [],
+            "status": "answered"
+          }
+        ],
+        "all_parts_accounted_for": true,
+        "complete": true
+      },
+      "task_messages": [],
+      "coverage": null,
+      "working_analysis": {
+        "version": 1,
+        "subject": {
+          "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+          "plan": {
+            "metrics": [
+              "admission_rate"
+            ],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "chart"
+          },
+          "measure_ids": [
+            "admission_rate"
+          ],
+          "field_record_ids": [],
+          "institutions": [
+            "130794",
+            "166027",
+            "182670",
+            "186131",
+            "190150",
+            "190415",
+            "215062",
+            "217156"
+          ],
+          "periods": [
+            2024
+          ],
+          "time_basis": "observation",
+          "population_signature": {
+            "directory_population": null,
+            "selectors": {}
+          }
+        },
+        "artifact": {
+          "result_id": "6d8d924d91f8e7ee",
+          "turn": 1,
+          "subject": {
+            "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+            "plan": {
+              "metrics": [
+                "admission_rate"
+              ],
+              "institutions": [
+                "130794",
+                "166027",
+                "182670",
+                "186131",
+                "190150",
+                "190415",
+                "215062",
+                "217156"
+              ],
+              "years": [
+                2024
+              ],
+              "time_basis": "observation",
+              "output": "chart"
+            },
+            "measure_ids": [
+              "admission_rate"
+            ],
+            "field_record_ids": [],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "periods": [
+              2024
+            ],
+            "time_basis": "observation",
+            "population_signature": {
+              "directory_population": null,
+              "selectors": {}
+            }
+          }
+        },
+        "last_coverage": null,
+        "open_tasks": []
+      },
+      "result_rows": [
+        {
+          "metric": "admission_rate",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 3.871898742980336,
+          "unit": "percent"
+        },
+        {
+          "metric": "admission_rate",
+          "unitid": 166027,
+          "observation_year": 2024,
+          "value": 3.647607761813065,
+          "unit": "percent"
+        },
+        {
+          "metric": "admission_rate",
+          "unitid": 182670,
+          "observation_year": 2024,
+          "value": 5.401819560272934,
+          "unit": "percent"
+        },
+        {
+          "metric": "admission_rate",
+          "unitid": 186131,
+          "observation_year": 2024,
+          "value": 4.615992883265791,
+          "unit": "percent"
+        },
+        {
+          "metric": "admission_rate",
+          "unitid": 190150,
+          "observation_year": 2024,
+          "value": 3.992347999667304,
+          "unit": "percent"
+        },
+        {
+          "metric": "admission_rate",
+          "unitid": 190415,
+          "observation_year": 2024,
+          "value": 8.756528503167019,
+          "unit": "percent"
+        },
+        {
+          "metric": "admission_rate",
+          "unitid": 215062,
+          "observation_year": 2024,
+          "value": 5.401220372244197,
+          "unit": "percent"
+        },
+        {
+          "metric": "admission_rate",
+          "unitid": 217156,
+          "observation_year": 2024,
+          "value": 5.3942417798135125,
+          "unit": "percent"
+        }
+      ],
+      "usage": {
+        "model": "automatic",
+        "stages": [
+          {
+            "input_tokens": 4335,
+            "output_tokens": 1280,
+            "cache_creation_input_tokens": 4707,
+            "cache_read_input_tokens": 0,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 9.941953100031242,
+            "estimated_api_usd": 0.001661875,
+            "stage": "initial intent interpretation",
+            "context_seconds": 1.9567089999327436,
+            "client_setup_seconds": 3.300001844763756e-05,
+            "provider_seconds": 9.941929499967955
+          },
+          {
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 4.094,
+            "input_tokens": 2010,
+            "output_tokens": 761,
+            "cache_creation_input_tokens": 5268,
+            "cache_read_input_tokens": 0,
+            "estimated_api_usd": 0.00124,
+            "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0
+              },
+              {
+                "model": "claude-haiku-5-5",
+                "calls": 1,
+                "latency_seconds": 4.094,
+                "input_tokens": 2010,
+                "output_tokens": 761,
+                "cache_creation_input_tokens": 5268,
+                "cache_read_input_tokens": 0,
+                "estimated_api_usd": 0.00124,
+                "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments.",
+                "stages": [
+                  {
+                    "calls": 0,
+                    "latency_seconds": 0,
+                    "estimated_api_usd": 0,
+                    "stage": "institution mentions reused from initial interpretation"
+                  },
+                  {
+                    "model": "claude-haiku-5-5",
+                    "calls": 1,
+                    "latency_seconds": 4.094,
+                    "input_tokens": 2010,
+                    "output_tokens": 761,
+                    "cache_creation_input_tokens": 5268,
+                    "cache_read_input_tokens": 0,
+                    "estimated_api_usd": 0.00124,
+                    "pricing_basis": "Standard Anthropic API rates checked 2026-10-17; excludes taxes/provider adjustments."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "usage_complete": true,
+        "calls": 2,
+        "latency_seconds": 14.035953100031243,
+        "input_tokens": 6345,
+        "output_tokens": 2041,
+        "cache_creation_input_tokens": 9975,
+        "cache_read_input_tokens": 0,
+        "estimated_api_usd": 0.002901875
+      },
+      "policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "seconds": 21.085505299968645
+    },
+    {
+      "case": "unavailable_followup",
+      "question": "Do we have admission rates for Fall 2025?",
+      "passed": true,
+      "checks": {
+        "coverage": true,
+        "available_periods": true,
+        "retained_eight_institutions": true,
+        "same_artifact": true,
+        "history_unchanged": true
+      },
+      "message": "The requested fall 2025 data are not loaded in this app.\n\nAdmission rate: fall coverage 2015\u20132024. Reported values for every requested institution are verified for 2015\u20132024.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "coverage",
+            "relationship": "new",
+            "question": "Do we have admission rates for Fall 2025 for the current Ivy League institutions?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Do we have admission rates for Fall 2025?",
+            "depends_on": [],
+            "binding": "working",
+            "subject_result_id": "",
+            "changes": [
+              "period"
+            ],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "check",
+              "measure_ids": [
+                "admission_rate"
+              ],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "admission rates",
+              "time_basis": "observation",
+              "requested_years": [
+                2025
+              ],
+              "inherit_working": true,
+              "requested_chart": "",
+              "scope_mode": "context"
+            }
+          }
+        ]
+      },
+      "task_tracking": {
+        "tasks": [
+          {
+            "id": "t1",
+            "request": "Do we have admission rates for Fall 2025?",
+            "depends_on": [],
+            "status": "unavailable"
+          }
+        ],
+        "all_parts_accounted_for": true,
+        "complete": true
+      },
+      "task_messages": [],
+      "coverage": {
+        "operation": "check",
+        "scope": {
+          "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+          "plan": {
+            "metrics": [
+              "admission_rate"
+            ],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "chart"
+          },
+          "measure_ids": [
+            "admission_rate"
+          ],
+          "field_record_ids": [],
+          "institutions": [
+            "130794",
+            "166027",
+            "182670",
+            "186131",
+            "190150",
+            "190415",
+            "215062",
+            "217156"
+          ],
+          "periods": [
+            2024
+          ],
+          "time_basis": "observation",
+          "population_signature": {
+            "directory_population": null,
+            "selectors": {}
+          },
+          "topic": "admission rates"
+        },
+        "time_basis": "observation",
+        "requested_periods": [
+          2025
+        ],
+        "loaded_release_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "status": "answered",
+        "available_periods": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "limits": [
+          "This describes the supplied local files, not whether IPEDS has published other data."
+        ],
+        "entries": [
+          {
+            "measure_id": "admission_rate",
+            "label": "Admission rate",
+            "periods": [
+              {
+                "release_year": 2015,
+                "period": 2015,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2016,
+                "period": 2016,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2017,
+                "period": 2017,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2018,
+                "period": 2018,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2019,
+                "period": 2019,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2020,
+                "period": 2020,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2021,
+                "period": 2021,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2022,
+                "period": 2022,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2023,
+                "period": 2023,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2024,
+                "period": 2024,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "record_id": 12991,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "ADM2015",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 12990,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "ADM2015",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 14953,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "ADM2016",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 14952,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "ADM2016",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 30432,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "ADM2017",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 30431,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "ADM2017",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 45230,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "ADM2018",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 45229,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "ADM2018",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 60367,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "ADM2019",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 60366,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "ADM2019",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 75214,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "ADM2020",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 75213,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "ADM2020",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 89909,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "ADM2021",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 89908,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "ADM2021",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 104711,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "ADM2022",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 104710,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "ADM2022",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 120672,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "ADM2023",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 120667,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "ADM2023",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 136225,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "ADM2024",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 136224,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "ADM2024",
+                "title": "Applicants total"
+              }
+            ],
+            "period_label": "fall"
+          }
+        ],
+        "unavailable_periods": [
+          2025
+        ],
+        "requested_status": "not_loaded"
+      },
+      "working_analysis": {
+        "version": 1,
+        "subject": {
+          "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+          "plan": {
+            "metrics": [
+              "admission_rate"
+            ],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "chart"
+          },
+          "measure_ids": [
+            "admission_rate"
+          ],
+          "field_record_ids": [],
+          "institutions": [
+            "130794",
+            "166027",
+            "182670",
+            "186131",
+            "190150",
+            "190415",
+            "215062",
+            "217156"
+          ],
+          "periods": [
+            2024
+          ],
+          "time_basis": "observation",
+          "population_signature": {
+            "directory_population": null,
+            "selectors": {}
+          },
+          "topic": "admission rates"
+        },
+        "artifact": {
+          "result_id": "6d8d924d91f8e7ee",
+          "turn": 1,
+          "subject": {
+            "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+            "plan": {
+              "metrics": [
+                "admission_rate"
+              ],
+              "institutions": [
+                "130794",
+                "166027",
+                "182670",
+                "186131",
+                "190150",
+                "190415",
+                "215062",
+                "217156"
+              ],
+              "years": [
+                2024
+              ],
+              "time_basis": "observation",
+              "output": "chart"
+            },
+            "measure_ids": [
+              "admission_rate"
+            ],
+            "field_record_ids": [],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "periods": [
+              2024
+            ],
+            "time_basis": "observation",
+            "population_signature": {
+              "directory_population": null,
+              "selectors": {}
+            }
+          }
+        },
+        "last_coverage": {
+          "operation": "check",
+          "scope": {
+            "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+            "plan": {
+              "metrics": [
+                "admission_rate"
+              ],
+              "institutions": [
+                "130794",
+                "166027",
+                "182670",
+                "186131",
+                "190150",
+                "190415",
+                "215062",
+                "217156"
+              ],
+              "years": [
+                2024
+              ],
+              "time_basis": "observation",
+              "output": "chart"
+            },
+            "measure_ids": [
+              "admission_rate"
+            ],
+            "field_record_ids": [],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "periods": [
+              2024
+            ],
+            "time_basis": "observation",
+            "population_signature": {
+              "directory_population": null,
+              "selectors": {}
+            },
+            "topic": "admission rates"
+          },
+          "time_basis": "observation",
+          "requested_periods": [
+            2025
+          ],
+          "loaded_release_years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "status": "answered",
+          "available_periods": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "limits": [
+            "This describes the supplied local files, not whether IPEDS has published other data."
+          ],
+          "entries": [
+            {
+              "measure_id": "admission_rate",
+              "label": "Admission rate",
+              "periods": [
+                {
+                  "release_year": 2015,
+                  "period": 2015,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2016,
+                  "period": 2016,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2017,
+                  "period": 2017,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2018,
+                  "period": 2018,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2019,
+                  "period": 2019,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2020,
+                  "period": 2020,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2021,
+                  "period": 2021,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2022,
+                  "period": 2022,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2023,
+                  "period": 2023,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2024,
+                  "period": 2024,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                }
+              ],
+              "source_refs": [
+                {
+                  "record_id": 12991,
+                  "release_id": "IPEDS_2015-16_Final",
+                  "table": "ADM2015",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 12990,
+                  "release_id": "IPEDS_2015-16_Final",
+                  "table": "ADM2015",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 14953,
+                  "release_id": "IPEDS_2016-17_Final",
+                  "table": "ADM2016",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 14952,
+                  "release_id": "IPEDS_2016-17_Final",
+                  "table": "ADM2016",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 30432,
+                  "release_id": "IPEDS_2017-18_Final",
+                  "table": "ADM2017",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 30431,
+                  "release_id": "IPEDS_2017-18_Final",
+                  "table": "ADM2017",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 45230,
+                  "release_id": "IPEDS_2018-19_Final",
+                  "table": "ADM2018",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 45229,
+                  "release_id": "IPEDS_2018-19_Final",
+                  "table": "ADM2018",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 60367,
+                  "release_id": "IPEDS_2019-20_Final",
+                  "table": "ADM2019",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 60366,
+                  "release_id": "IPEDS_2019-20_Final",
+                  "table": "ADM2019",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 75214,
+                  "release_id": "IPEDS_2020-21_Final",
+                  "table": "ADM2020",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 75213,
+                  "release_id": "IPEDS_2020-21_Final",
+                  "table": "ADM2020",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 89909,
+                  "release_id": "IPEDS_2021-22_Final",
+                  "table": "ADM2021",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 89908,
+                  "release_id": "IPEDS_2021-22_Final",
+                  "table": "ADM2021",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 104711,
+                  "release_id": "IPEDS_2022-23_Final",
+                  "table": "ADM2022",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 104710,
+                  "release_id": "IPEDS_2022-23_Final",
+                  "table": "ADM2022",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 120672,
+                  "release_id": "IPEDS_2023-24_Final",
+                  "table": "ADM2023",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 120667,
+                  "release_id": "IPEDS_2023-24_Final",
+                  "table": "ADM2023",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 136225,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table": "ADM2024",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 136224,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table": "ADM2024",
+                  "title": "Applicants total"
+                }
+              ],
+              "period_label": "fall"
+            }
+          ],
+          "unavailable_periods": [
+            2025
+          ],
+          "requested_status": "not_loaded"
+        },
+        "open_tasks": []
+      },
+      "result_rows": [],
+      "usage": {
+        "model": "automatic",
+        "stages": [
+          {
+            "input_tokens": 8786,
+            "output_tokens": 760,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4707,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 4.070814099977724,
+            "estimated_api_usd": 0.00130567,
+            "stage": "initial intent interpretation",
+            "context_seconds": 0.09811689995694906,
+            "client_setup_seconds": 3.220001235604286e-05,
+            "provider_seconds": 4.0707975999685
+          }
+        ],
+        "usage_complete": true,
+        "calls": 1,
+        "latency_seconds": 4.070814099977724,
+        "input_tokens": 8786,
+        "output_tokens": 760,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4707,
+        "estimated_api_usd": 0.00130567
+      },
+      "policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "seconds": 4.533251499990001
+    },
+    {
+      "case": "available_years",
+      "question": "Which years do we have?",
+      "passed": true,
+      "checks": {
+        "straight_answer": true,
+        "same_measure": true,
+        "history_unchanged": true
+      },
+      "message": "Admission rate: fall coverage 2015\u20132024. Reported values for every requested institution are verified for 2015\u20132024.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "coverage",
+            "relationship": "followup",
+            "question": "Which years do we have for admission rates for the current Ivy League institutions?",
+            "message": "",
+            "institution_mentions": [],
+            "referenced_turns": [
+              2
+            ],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Which years do we have?",
+            "depends_on": [],
+            "binding": "working",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "periods",
+              "measure_ids": [
+                "admission_rate"
+              ],
+              "field_record_ids": [],
+              "institutions": [
+                "130794",
+                "166027",
+                "182670",
+                "186131",
+                "190150",
+                "190415",
+                "215062",
+                "217156"
+              ],
+              "topic": "admission rates",
+              "time_basis": "working",
+              "requested_years": [],
+              "inherit_working": true,
+              "requested_chart": "",
+              "scope_mode": "context"
+            }
+          }
+        ]
+      },
+      "task_tracking": {
+        "tasks": [
+          {
+            "id": "t1",
+            "request": "Which years do we have?",
+            "depends_on": [],
+            "status": "answered"
+          }
+        ],
+        "all_parts_accounted_for": true,
+        "complete": true
+      },
+      "task_messages": [],
+      "coverage": {
+        "operation": "periods",
+        "scope": {
+          "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+          "plan": {
+            "metrics": [
+              "admission_rate"
+            ],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "chart"
+          },
+          "measure_ids": [
+            "admission_rate"
+          ],
+          "field_record_ids": [],
+          "institutions": [
+            "130794",
+            "166027",
+            "182670",
+            "186131",
+            "190150",
+            "190415",
+            "215062",
+            "217156"
+          ],
+          "periods": [
+            2024
+          ],
+          "time_basis": "observation",
+          "population_signature": {
+            "directory_population": null,
+            "selectors": {}
+          },
+          "topic": "admission rates"
+        },
+        "time_basis": "observation",
+        "requested_periods": [],
+        "loaded_release_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "status": "answered",
+        "available_periods": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "limits": [
+          "This describes the supplied local files, not whether IPEDS has published other data."
+        ],
+        "entries": [
+          {
+            "measure_id": "admission_rate",
+            "label": "Admission rate",
+            "periods": [
+              {
+                "release_year": 2015,
+                "period": 2015,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2016,
+                "period": 2016,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2017,
+                "period": 2017,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2018,
+                "period": 2018,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2019,
+                "period": 2019,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2020,
+                "period": 2020,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2021,
+                "period": 2021,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2022,
+                "period": 2022,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2023,
+                "period": 2023,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              },
+              {
+                "release_year": 2024,
+                "period": 2024,
+                "status": "documented_in_loaded_source",
+                "reporting_status": "reported",
+                "institutions": {
+                  "130794": "reported",
+                  "166027": "reported",
+                  "182670": "reported",
+                  "186131": "reported",
+                  "190150": "reported",
+                  "190415": "reported",
+                  "215062": "reported",
+                  "217156": "reported"
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "record_id": 12991,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "ADM2015",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 12990,
+                "release_id": "IPEDS_2015-16_Final",
+                "table": "ADM2015",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 14953,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "ADM2016",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 14952,
+                "release_id": "IPEDS_2016-17_Final",
+                "table": "ADM2016",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 30432,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "ADM2017",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 30431,
+                "release_id": "IPEDS_2017-18_Final",
+                "table": "ADM2017",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 45230,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "ADM2018",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 45229,
+                "release_id": "IPEDS_2018-19_Final",
+                "table": "ADM2018",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 60367,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "ADM2019",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 60366,
+                "release_id": "IPEDS_2019-20_Final",
+                "table": "ADM2019",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 75214,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "ADM2020",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 75213,
+                "release_id": "IPEDS_2020-21_Final",
+                "table": "ADM2020",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 89909,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "ADM2021",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 89908,
+                "release_id": "IPEDS_2021-22_Final",
+                "table": "ADM2021",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 104711,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "ADM2022",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 104710,
+                "release_id": "IPEDS_2022-23_Final",
+                "table": "ADM2022",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 120672,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "ADM2023",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 120667,
+                "release_id": "IPEDS_2023-24_Final",
+                "table": "ADM2023",
+                "title": "Applicants total"
+              },
+              {
+                "record_id": 136225,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "ADM2024",
+                "title": "Admissions total"
+              },
+              {
+                "record_id": 136224,
+                "release_id": "IPEDS_2024-25_Provisional",
+                "table": "ADM2024",
+                "title": "Applicants total"
+              }
+            ],
+            "period_label": "fall"
+          }
+        ]
+      },
+      "working_analysis": {
+        "version": 1,
+        "subject": {
+          "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+          "plan": {
+            "metrics": [
+              "admission_rate"
+            ],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "years": [
+              2024
+            ],
+            "time_basis": "observation",
+            "output": "chart"
+          },
+          "measure_ids": [
+            "admission_rate"
+          ],
+          "field_record_ids": [],
+          "institutions": [
+            "130794",
+            "166027",
+            "182670",
+            "186131",
+            "190150",
+            "190415",
+            "215062",
+            "217156"
+          ],
+          "periods": [
+            2024
+          ],
+          "time_basis": "observation",
+          "population_signature": {
+            "directory_population": null,
+            "selectors": {}
+          },
+          "topic": "admission rates"
+        },
+        "artifact": {
+          "result_id": "6d8d924d91f8e7ee",
+          "turn": 1,
+          "subject": {
+            "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+            "plan": {
+              "metrics": [
+                "admission_rate"
+              ],
+              "institutions": [
+                "130794",
+                "166027",
+                "182670",
+                "186131",
+                "190150",
+                "190415",
+                "215062",
+                "217156"
+              ],
+              "years": [
+                2024
+              ],
+              "time_basis": "observation",
+              "output": "chart"
+            },
+            "measure_ids": [
+              "admission_rate"
+            ],
+            "field_record_ids": [],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "periods": [
+              2024
+            ],
+            "time_basis": "observation",
+            "population_signature": {
+              "directory_population": null,
+              "selectors": {}
+            }
+          }
+        },
+        "last_coverage": {
+          "operation": "periods",
+          "scope": {
+            "question": "Compare admission rates across Ivy League institutions for fall 2024.",
+            "plan": {
+              "metrics": [
+                "admission_rate"
+              ],
+              "institutions": [
+                "130794",
+                "166027",
+                "182670",
+                "186131",
+                "190150",
+                "190415",
+                "215062",
+                "217156"
+              ],
+              "years": [
+                2024
+              ],
+              "time_basis": "observation",
+              "output": "chart"
+            },
+            "measure_ids": [
+              "admission_rate"
+            ],
+            "field_record_ids": [],
+            "institutions": [
+              "130794",
+              "166027",
+              "182670",
+              "186131",
+              "190150",
+              "190415",
+              "215062",
+              "217156"
+            ],
+            "periods": [
+              2024
+            ],
+            "time_basis": "observation",
+            "population_signature": {
+              "directory_population": null,
+              "selectors": {}
+            },
+            "topic": "admission rates"
+          },
+          "time_basis": "observation",
+          "requested_periods": [],
+          "loaded_release_years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "status": "answered",
+          "available_periods": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "limits": [
+            "This describes the supplied local files, not whether IPEDS has published other data."
+          ],
+          "entries": [
+            {
+              "measure_id": "admission_rate",
+              "label": "Admission rate",
+              "periods": [
+                {
+                  "release_year": 2015,
+                  "period": 2015,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2016,
+                  "period": 2016,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2017,
+                  "period": 2017,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2018,
+                  "period": 2018,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2019,
+                  "period": 2019,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2020,
+                  "period": 2020,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2021,
+                  "period": 2021,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2022,
+                  "period": 2022,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2023,
+                  "period": 2023,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                },
+                {
+                  "release_year": 2024,
+                  "period": 2024,
+                  "status": "documented_in_loaded_source",
+                  "reporting_status": "reported",
+                  "institutions": {
+                    "130794": "reported",
+                    "166027": "reported",
+                    "182670": "reported",
+                    "186131": "reported",
+                    "190150": "reported",
+                    "190415": "reported",
+                    "215062": "reported",
+                    "217156": "reported"
+                  }
+                }
+              ],
+              "source_refs": [
+                {
+                  "record_id": 12991,
+                  "release_id": "IPEDS_2015-16_Final",
+                  "table": "ADM2015",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 12990,
+                  "release_id": "IPEDS_2015-16_Final",
+                  "table": "ADM2015",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 14953,
+                  "release_id": "IPEDS_2016-17_Final",
+                  "table": "ADM2016",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 14952,
+                  "release_id": "IPEDS_2016-17_Final",
+                  "table": "ADM2016",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 30432,
+                  "release_id": "IPEDS_2017-18_Final",
+                  "table": "ADM2017",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 30431,
+                  "release_id": "IPEDS_2017-18_Final",
+                  "table": "ADM2017",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 45230,
+                  "release_id": "IPEDS_2018-19_Final",
+                  "table": "ADM2018",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 45229,
+                  "release_id": "IPEDS_2018-19_Final",
+                  "table": "ADM2018",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 60367,
+                  "release_id": "IPEDS_2019-20_Final",
+                  "table": "ADM2019",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 60366,
+                  "release_id": "IPEDS_2019-20_Final",
+                  "table": "ADM2019",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 75214,
+                  "release_id": "IPEDS_2020-21_Final",
+                  "table": "ADM2020",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 75213,
+                  "release_id": "IPEDS_2020-21_Final",
+                  "table": "ADM2020",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 89909,
+                  "release_id": "IPEDS_2021-22_Final",
+                  "table": "ADM2021",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 89908,
+                  "release_id": "IPEDS_2021-22_Final",
+                  "table": "ADM2021",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 104711,
+                  "release_id": "IPEDS_2022-23_Final",
+                  "table": "ADM2022",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 104710,
+                  "release_id": "IPEDS_2022-23_Final",
+                  "table": "ADM2022",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 120672,
+                  "release_id": "IPEDS_2023-24_Final",
+                  "table": "ADM2023",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 120667,
+                  "release_id": "IPEDS_2023-24_Final",
+                  "table": "ADM2023",
+                  "title": "Applicants total"
+                },
+                {
+                  "record_id": 136225,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table": "ADM2024",
+                  "title": "Admissions total"
+                },
+                {
+                  "record_id": 136224,
+                  "release_id": "IPEDS_2024-25_Provisional",
+                  "table": "ADM2024",
+                  "title": "Applicants total"
+                }
+              ],
+              "period_label": "fall"
+            }
+          ]
+        },
+        "open_tasks": []
+      },
+      "result_rows": [],
+      "usage": {
+        "model": "automatic",
+        "stages": [
+          {
+            "input_tokens": 9099,
+            "output_tokens": 691,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4707,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 3.730119200074114,
+            "estimated_api_usd": 0.00130247,
+            "stage": "initial intent interpretation",
+            "context_seconds": 0.020802699960768223,
+            "client_setup_seconds": 2.7900096029043198e-05,
+            "provider_seconds": 3.730096700019203
+          }
+        ],
+        "usage_complete": true,
+        "calls": 1,
+        "latency_seconds": 3.730119200074114,
+        "input_tokens": 9099,
+        "output_tokens": 691,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4707,
+        "estimated_api_usd": 0.00130247
+      },
+      "policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "seconds": 4.210880399914458
+    },
+    {
+      "case": "multiple_questions",
+      "passed": false,
+      "error_type": "InterpretationError",
+      "error": "Please identify which earlier answer you mean.",
+      "seconds": 14.574161100084893
+    },
+    {
+      "case": "graduate_scope",
+      "question": "Yale's graduate enrollment by race and ethnicity in fall 2024.",
+      "passed": true,
+      "checks": {
+        "result": true,
+        "graduate_scope": true,
+        "history_unchanged": true
+      },
+      "message": "For Yale University (Fall 2024), American Indian or Alaska Native total: 22; Asian total: 1,101; Black or African American total: 519; Hispanic total: 727. The table or download includes the remaining requested measures.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "numerical",
+            "relationship": "new",
+            "question": "Yale University graduate enrollment by race and ethnicity in fall 2024.",
+            "message": "",
+            "institution_mentions": [
+              "Yale"
+            ],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Yale's graduate enrollment by race and ethnicity in fall 2024.",
+            "depends_on": [],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [
+              "population"
+            ],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "none",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "observation",
+              "requested_years": [
+                2024
+              ],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "context"
+            }
+          }
+        ]
+      },
+      "task_tracking": {
+        "tasks": [
+          {
+            "id": "t1",
+            "request": "Yale's graduate enrollment by race and ethnicity in fall 2024.",
+            "depends_on": [],
+            "status": "answered"
+          }
+        ],
+        "all_parts_accounted_for": true,
+        "complete": true
+      },
+      "task_messages": [],
+      "coverage": null,
+      "working_analysis": {
+        "version": 1,
+        "subject": {
+          "question": "Yale University graduate enrollment by race and ethnicity in fall 2024.",
+          "plan": {
+            "version": 1,
+            "institutions": [
+              "Yale University"
+            ],
+            "source_years": [
+              2024
+            ],
+            "requested_time": {
+              "basis": "fall",
+              "description": "Fall 2024"
+            },
+            "selections": [
+              {
+                "record_id": 136405,
+                "role": "measure"
+              },
+              {
+                "record_id": 136408,
+                "role": "measure"
+              },
+              {
+                "record_id": 136411,
+                "role": "measure"
+              },
+              {
+                "record_id": 136414,
+                "role": "measure"
+              },
+              {
+                "record_id": 136417,
+                "role": "measure"
+              },
+              {
+                "record_id": 136420,
+                "role": "measure"
+              },
+              {
+                "record_id": 136423,
+                "role": "measure"
+              },
+              {
+                "record_id": 136400,
+                "role": "measure"
+              },
+              {
+                "record_id": 136399,
+                "role": "measure"
+              }
+            ],
+            "filters": [
+              {
+                "record_id": 136392,
+                "operator": "eq",
+                "values": [
+                  "12"
+                ],
+                "code_record_ids": [
+                  144212
+                ]
+              }
+            ],
+            "group_by_record_ids": [],
+            "calculations": [],
+            "joins": [],
+            "output": "table",
+            "assumptions": [
+              "Graduate students = 'All students, Graduate' level (code 12), all attendance statuses.",
+              "Counts by source race/ethnicity categories, including two or more races, unknown, and U.S. nonresident as separate categories."
+            ],
+            "clarification_questions": []
+          },
+          "measure_ids": [],
+          "field_record_ids": [
+            136405,
+            136408,
+            136411,
+            136414,
+            136417,
+            136420,
+            136423,
+            136400,
+            136399
+          ],
+          "institutions": [
+            "130794"
+          ],
+          "periods": [
+            2024
+          ],
+          "time_basis": "observation",
+          "population_signature": {
+            "directory_population": null,
+            "selectors": {
+              "EFALEVEL": [
+                [
+                  "eq",
+                  [
+                    "12"
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "artifact": {
+          "result_id": "fb020b392c00a751",
+          "turn": 2,
+          "subject": {
+            "question": "Yale University graduate enrollment by race and ethnicity in fall 2024.",
+            "plan": {
+              "version": 1,
+              "institutions": [
+                "Yale University"
+              ],
+              "source_years": [
+                2024
+              ],
+              "requested_time": {
+                "basis": "fall",
+                "description": "Fall 2024"
+              },
+              "selections": [
+                {
+                  "record_id": 136405,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136408,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136411,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136414,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136417,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136420,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136423,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136400,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136399,
+                  "role": "measure"
+                }
+              ],
+              "filters": [
+                {
+                  "record_id": 136392,
+                  "operator": "eq",
+                  "values": [
+                    "12"
+                  ],
+                  "code_record_ids": [
+                    144212
+                  ]
+                }
+              ],
+              "group_by_record_ids": [],
+              "calculations": [],
+              "joins": [],
+              "output": "table",
+              "assumptions": [
+                "Graduate students = 'All students, Graduate' level (code 12), all attendance statuses.",
+                "Counts by source race/ethnicity categories, including two or more races, unknown, and U.S. nonresident as separate categories."
+              ],
+              "clarification_questions": []
+            },
+            "measure_ids": [],
+            "field_record_ids": [
+              136405,
+              136408,
+              136411,
+              136414,
+              136417,
+              136420,
+              136423,
+              136400,
+              136399
+            ],
+            "institutions": [
+              "130794"
+            ],
+            "periods": [
+              2024
+            ],
+            "time_basis": "observation",
+            "population_signature": {
+              "directory_population": null,
+              "selectors": {
+                "EFALEVEL": [
+                  [
+                    "eq",
+                    [
+                      "12"
+                    ]
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        "last_coverage": null,
+        "open_tasks": []
+      },
+      "result_rows": [
+        {
+          "metric": "EF{YEAR}A::EFAIANT",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 22,
+          "unit": "students"
+        },
+        {
+          "metric": "EF{YEAR}A::EFASIAT",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 1101,
+          "unit": "students"
+        },
+        {
+          "metric": "EF{YEAR}A::EFBKAAT",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 519,
+          "unit": "students"
+        },
+        {
+          "metric": "EF{YEAR}A::EFHISPT",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 727,
+          "unit": "students"
+        },
+        {
+          "metric": "EF{YEAR}A::EFNHPIT",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 5,
+          "unit": "students"
+        },
+        {
+          "metric": "EF{YEAR}A::EFWHITT",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 2833,
+          "unit": "students"
+        },
+        {
+          "metric": "EF{YEAR}A::EF2MORT",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 340,
+          "unit": "students"
+        },
+        {
+          "metric": "EF{YEAR}A::EFUNKNT",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 183,
+          "unit": "students"
+        },
+        {
+          "metric": "EF{YEAR}A::EFNRALT",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 3020,
+          "unit": "students"
+        }
+      ],
+      "usage": {
+        "model": "automatic",
+        "stages": [
+          {
+            "input_tokens": 13049,
+            "output_tokens": 1293,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4707,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 7.181862500030547,
+            "estimated_api_usd": 0.00199847,
+            "stage": "initial intent interpretation",
+            "context_seconds": 0.028695399989373982,
+            "client_setup_seconds": 1.7900019884109497e-05,
+            "provider_seconds": 7.181851900066249
+          },
+          {
+            "model": "claude-haiku-5-5",
+            "calls": 2,
+            "planning_tool_requests": 3,
+            "semantic_repair_attempts": 0,
+            "latency_seconds": 7.516,
+            "input_tokens": 6,
+            "output_tokens": 879,
+            "cache_creation_input_tokens": 40409,
+            "cache_read_input_tokens": 35453,
+            "estimated_api_usd": 0.11336979999999999,
+            "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "calls": 2,
+                "planning_tool_requests": 3,
+                "semantic_repair_attempts": 0,
+                "latency_seconds": 7.516,
+                "input_tokens": 6,
+                "output_tokens": 879,
+                "cache_creation_input_tokens": 40409,
+                "cache_read_input_tokens": 35453,
+                "estimated_api_usd": 0.11336979999999999,
+                "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+                "stages": [
+                  {
+                    "calls": 0,
+                    "latency_seconds": 0,
+                    "estimated_api_usd": 0,
+                    "stage": "institution mentions reused from initial interpretation"
+                  },
+                  {
+                    "model": "claude-sonnet-5-5",
+                    "calls": 2,
+                    "planning_tool_requests": 3,
+                    "semantic_repair_attempts": 0,
+                    "latency_seconds": 7.516,
+                    "input_tokens": 6,
+                    "output_tokens": 879,
+                    "cache_creation_input_tokens": 40409,
+                    "cache_read_input_tokens": 35453,
+                    "estimated_api_usd": 0.11336979999999999,
+                    "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "usage_complete": true,
+        "calls": 3,
+        "latency_seconds": 14.697862500030547,
+        "input_tokens": 13055,
+        "output_tokens": 2172,
+        "cache_creation_input_tokens": 40409,
+        "cache_read_input_tokens": 40160,
+        "estimated_api_usd": 0.11536827
+      },
+      "policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "seconds": 15.212794800056145
+    },
+    {
+      "case": "percentages_preserve_graduate",
+      "question": "Convert these student enrollment numbers into percentages.",
+      "passed": true,
+      "checks": {
+        "nine_shares": true,
+        "exact_graduate_shares": true,
+        "history_unchanged": true
+      },
+      "message": "For Yale University (Fall 2024), American Indian or Alaska Native % of graduate enrollment: 0.25%; Asian % of graduate enrollment: 12.58%; Black or African American % of graduate enrollment: 5.93%; Hispanic % of graduate enrollment: 8.31%. The table or download includes the remaining requested measures.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "numerical",
+            "relationship": "followup",
+            "question": "Convert Yale University graduate enrollment by race and ethnicity in fall 2024 counts into percentages.",
+            "message": "",
+            "institution_mentions": [
+              "Yale University"
+            ],
+            "referenced_turns": [
+              2
+            ],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Convert these student enrollment numbers into percentages.",
+            "depends_on": [],
+            "binding": "working",
+            "subject_result_id": "",
+            "changes": [
+              "calculation"
+            ],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "none",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "observation",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "context"
+            }
+          }
+        ]
+      },
+      "task_tracking": {
+        "tasks": [
+          {
+            "id": "t1",
+            "request": "Convert these student enrollment numbers into percentages.",
+            "depends_on": [],
+            "status": "answered"
+          }
+        ],
+        "all_parts_accounted_for": true,
+        "complete": true
+      },
+      "task_messages": [],
+      "coverage": null,
+      "working_analysis": {
+        "version": 1,
+        "subject": {
+          "question": "Convert Yale University graduate enrollment by race and ethnicity in fall 2024 counts into percentages.",
+          "plan": {
+            "version": 1,
+            "institutions": [
+              "Yale University"
+            ],
+            "source_years": [
+              2024
+            ],
+            "requested_time": {
+              "basis": "fall",
+              "description": "Fall 2024"
+            },
+            "selections": [
+              {
+                "record_id": 136405,
+                "role": "measure"
+              },
+              {
+                "record_id": 136408,
+                "role": "measure"
+              },
+              {
+                "record_id": 136411,
+                "role": "measure"
+              },
+              {
+                "record_id": 136414,
+                "role": "measure"
+              },
+              {
+                "record_id": 136417,
+                "role": "measure"
+              },
+              {
+                "record_id": 136420,
+                "role": "measure"
+              },
+              {
+                "record_id": 136423,
+                "role": "measure"
+              },
+              {
+                "record_id": 136400,
+                "role": "measure"
+              },
+              {
+                "record_id": 136399,
+                "role": "measure"
+              },
+              {
+                "record_id": 136401,
+                "role": "denominator"
+              }
+            ],
+            "filters": [
+              {
+                "record_id": 136392,
+                "operator": "eq",
+                "values": [
+                  "12"
+                ],
+                "code_record_ids": [
+                  144212
+                ]
+              }
+            ],
+            "group_by_record_ids": [],
+            "calculations": [
+              {
+                "label": "American Indian or Alaska Native % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136405
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "AIAN graduate students / total graduate students x 100"
+              },
+              {
+                "label": "Asian % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136408
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Asian graduate students / total graduate students x 100"
+              },
+              {
+                "label": "Black or African American % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136411
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Black graduate students / total graduate students x 100"
+              },
+              {
+                "label": "Hispanic % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136414
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Hispanic graduate students / total graduate students x 100"
+              },
+              {
+                "label": "Native Hawaiian or Other Pacific Islander % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136417
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "NHPI graduate students / total graduate students x 100"
+              },
+              {
+                "label": "White % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136420
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "White graduate students / total graduate students x 100"
+              },
+              {
+                "label": "Two or more races % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136423
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Two or more races graduate students / total graduate students x 100"
+              },
+              {
+                "label": "Race/ethnicity unknown % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136400
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Unknown race/ethnicity graduate students / total graduate students x 100"
+              },
+              {
+                "label": "U.S. nonresident % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136399
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "U.S. nonresident graduate students / total graduate students x 100"
+              }
+            ],
+            "joins": [],
+            "output": "table",
+            "assumptions": [
+              "Graduate students = 'All students, Graduate' level (code 12), all attendance statuses, same row as the grand total denominator.",
+              "Percentages use the row's grand total (EFTOTLT) as denominator; unknown and U.S. nonresident are separate source categories included in the total.",
+              "Yale University is UNITID 130794; Fall 2024."
+            ],
+            "clarification_questions": []
+          },
+          "measure_ids": [],
+          "field_record_ids": [
+            136405,
+            136408,
+            136411,
+            136414,
+            136417,
+            136420,
+            136423,
+            136400,
+            136399
+          ],
+          "institutions": [
+            "130794"
+          ],
+          "periods": [
+            2024
+          ],
+          "time_basis": "observation",
+          "population_signature": {
+            "directory_population": null,
+            "selectors": {
+              "EFALEVEL": [
+                [
+                  "eq",
+                  [
+                    "12"
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "artifact": {
+          "result_id": "a308f5d61d1b8814",
+          "turn": 3,
+          "subject": {
+            "question": "Convert Yale University graduate enrollment by race and ethnicity in fall 2024 counts into percentages.",
+            "plan": {
+              "version": 1,
+              "institutions": [
+                "Yale University"
+              ],
+              "source_years": [
+                2024
+              ],
+              "requested_time": {
+                "basis": "fall",
+                "description": "Fall 2024"
+              },
+              "selections": [
+                {
+                  "record_id": 136405,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136408,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136411,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136414,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136417,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136420,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136423,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136400,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136399,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136401,
+                  "role": "denominator"
+                }
+              ],
+              "filters": [
+                {
+                  "record_id": 136392,
+                  "operator": "eq",
+                  "values": [
+                    "12"
+                  ],
+                  "code_record_ids": [
+                    144212
+                  ]
+                }
+              ],
+              "group_by_record_ids": [],
+              "calculations": [
+                {
+                  "label": "American Indian or Alaska Native % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136405
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "AIAN graduate students / total graduate students x 100"
+                },
+                {
+                  "label": "Asian % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136408
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Asian graduate students / total graduate students x 100"
+                },
+                {
+                  "label": "Black or African American % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136411
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Black graduate students / total graduate students x 100"
+                },
+                {
+                  "label": "Hispanic % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136414
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Hispanic graduate students / total graduate students x 100"
+                },
+                {
+                  "label": "Native Hawaiian or Other Pacific Islander % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136417
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "NHPI graduate students / total graduate students x 100"
+                },
+                {
+                  "label": "White % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136420
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "White graduate students / total graduate students x 100"
+                },
+                {
+                  "label": "Two or more races % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136423
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Two or more races graduate students / total graduate students x 100"
+                },
+                {
+                  "label": "Race/ethnicity unknown % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136400
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Unknown race/ethnicity graduate students / total graduate students x 100"
+                },
+                {
+                  "label": "U.S. nonresident % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136399
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "U.S. nonresident graduate students / total graduate students x 100"
+                }
+              ],
+              "joins": [],
+              "output": "table",
+              "assumptions": [
+                "Graduate students = 'All students, Graduate' level (code 12), all attendance statuses, same row as the grand total denominator.",
+                "Percentages use the row's grand total (EFTOTLT) as denominator; unknown and U.S. nonresident are separate source categories included in the total.",
+                "Yale University is UNITID 130794; Fall 2024."
+              ],
+              "clarification_questions": []
+            },
+            "measure_ids": [],
+            "field_record_ids": [
+              136405,
+              136408,
+              136411,
+              136414,
+              136417,
+              136420,
+              136423,
+              136400,
+              136399
+            ],
+            "institutions": [
+              "130794"
+            ],
+            "periods": [
+              2024
+            ],
+            "time_basis": "observation",
+            "population_signature": {
+              "directory_population": null,
+              "selectors": {
+                "EFALEVEL": [
+                  [
+                    "eq",
+                    [
+                      "12"
+                    ]
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        "last_coverage": null,
+        "open_tasks": []
+      },
+      "result_rows": [
+        {
+          "metric": "EF{YEAR}A::EFAIANT::percent::0",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 0.25142857142857145,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFASIAT::percent::1",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 12.582857142857144,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFBKAAT::percent::2",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 5.9314285714285715,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFHISPT::percent::3",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 8.308571428571428,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFNHPIT::percent::4",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 0.05714285714285714,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFWHITT::percent::5",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 32.37714285714286,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EF2MORT::percent::6",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 3.8857142857142857,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFUNKNT::percent::7",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 2.0914285714285716,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFNRALT::percent::8",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 34.51428571428571,
+          "unit": "percent"
+        }
+      ],
+      "usage": {
+        "model": "automatic",
+        "stages": [
+          {
+            "input_tokens": 18026,
+            "output_tokens": 949,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4707,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 5.197860300075263,
+            "estimated_api_usd": 0.00232417,
+            "stage": "initial intent interpretation",
+            "context_seconds": 0.04333379992749542,
+            "client_setup_seconds": 2.7000089175999165e-05,
+            "provider_seconds": 5.197838099906221
+          },
+          {
+            "model": "claude-haiku-5-5",
+            "calls": 3,
+            "planning_tool_requests": 4,
+            "semantic_repair_attempts": 0,
+            "latency_seconds": 12.5,
+            "input_tokens": 8,
+            "output_tokens": 1927,
+            "cache_creation_input_tokens": 17436,
+            "cache_read_input_tokens": 112953,
+            "estimated_api_usd": 0.0741713,
+            "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "calls": 3,
+                "planning_tool_requests": 4,
+                "semantic_repair_attempts": 0,
+                "latency_seconds": 12.5,
+                "input_tokens": 8,
+                "output_tokens": 1927,
+                "cache_creation_input_tokens": 17436,
+                "cache_read_input_tokens": 112953,
+                "estimated_api_usd": 0.0741713,
+                "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+                "stages": [
+                  {
+                    "calls": 0,
+                    "latency_seconds": 0,
+                    "estimated_api_usd": 0,
+                    "stage": "institution mentions reused from initial interpretation"
+                  },
+                  {
+                    "model": "claude-sonnet-5-5",
+                    "calls": 3,
+                    "planning_tool_requests": 4,
+                    "semantic_repair_attempts": 0,
+                    "latency_seconds": 12.5,
+                    "input_tokens": 8,
+                    "output_tokens": 1927,
+                    "cache_creation_input_tokens": 17436,
+                    "cache_read_input_tokens": 112953,
+                    "estimated_api_usd": 0.0741713,
+                    "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "usage_complete": true,
+        "calls": 4,
+        "latency_seconds": 17.697860300075263,
+        "input_tokens": 18034,
+        "output_tokens": 2876,
+        "cache_creation_input_tokens": 17436,
+        "cache_read_input_tokens": 117660,
+        "estimated_api_usd": 0.07649547
+      },
+      "policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "seconds": 18.164028299972415
+    },
+    {
+      "case": "unsupported_chart_preserves_scope",
+      "passed": false,
+      "error_type": "InterpretationError",
+      "error": "Please identify which earlier answer you mean.",
+      "seconds": 11.049944100086577
+    },
+    {
+      "case": "supported_work_with_unsupported_chart",
+      "question": "Convert these student enrollment numbers into percentages and show a 100% stacked bar chart.",
+      "passed": true,
+      "checks": {
+        "nine_shares": true,
+        "exact_graduate_shares": true,
+        "both_parts_accounted_for": true,
+        "history_unchanged": true
+      },
+      "message": "Request status: 1 answered, 1 unsupported.",
+      "request_plan": {
+        "tasks": [
+          {
+            "route": "numerical",
+            "relationship": "followup",
+            "question": "Yale University graduate enrollment by race and ethnicity in fall 2024, expressed as percentages of total graduate enrollment across the same race and ethnicity categories.",
+            "message": "",
+            "institution_mentions": [
+              "Yale University"
+            ],
+            "referenced_turns": [
+              2
+            ],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t1",
+            "request": "Convert these student enrollment numbers into percentages",
+            "depends_on": [],
+            "binding": "working",
+            "subject_result_id": "",
+            "changes": [
+              "calculation"
+            ],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "none",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "observation",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "",
+              "scope_mode": "context"
+            }
+          },
+          {
+            "route": "capability",
+            "relationship": "new",
+            "question": "Can the app show a 100% stacked bar chart of the percentage results?",
+            "message": "A 100% stacked bar chart is not a supported chart type here. Supported chart types are horizontal bar charts, line charts, and tables or numerical answers without a chart. The percentage breakdown from the first task can be shown as a table or as a horizontal bar chart.",
+            "institution_mentions": [],
+            "referenced_turns": [],
+            "target_result_id": "",
+            "chart_edits": [],
+            "documentation": {
+              "kind": "none",
+              "terms": [],
+              "years": []
+            },
+            "id": "t2",
+            "request": "show a 100% stacked bar chart",
+            "depends_on": [
+              "t1"
+            ],
+            "binding": "new",
+            "subject_result_id": "",
+            "changes": [],
+            "period_selection": "as_requested",
+            "coverage": {
+              "operation": "capabilities",
+              "measure_ids": [],
+              "field_record_ids": [],
+              "institutions": [],
+              "topic": "",
+              "time_basis": "observation",
+              "requested_years": [],
+              "inherit_working": false,
+              "requested_chart": "100% stacked bar chart",
+              "scope_mode": "context"
+            }
+          }
+        ]
+      },
+      "task_tracking": {
+        "tasks": [
+          {
+            "id": "t1",
+            "request": "Convert these student enrollment numbers into percentages",
+            "depends_on": [],
+            "status": "answered"
+          },
+          {
+            "id": "t2",
+            "request": "show a 100% stacked bar chart",
+            "depends_on": [
+              "t1"
+            ],
+            "status": "unsupported"
+          }
+        ],
+        "all_parts_accounted_for": true,
+        "complete": true
+      },
+      "task_messages": [
+        "For Yale University (Fall 2024), American Indian or Alaska Native % of graduate enrollment: 0.25%; Asian % of graduate enrollment: 12.58%; Black or African American % of graduate enrollment: 5.93%; Hispanic % of graduate enrollment: 8.31%. The table or download includes the remaining requested measures.",
+        "The requested chart type (100% stacked bar chart) is not supported. I can produce line charts and horizontal bar charts, including grouped bars, or show a table."
+      ],
+      "coverage": null,
+      "working_analysis": {
+        "version": 1,
+        "subject": {
+          "question": "Yale University graduate enrollment by race and ethnicity in fall 2024, expressed as percentages of total graduate enrollment across the same race and ethnicity categories.",
+          "plan": {
+            "version": 1,
+            "institutions": [
+              "Yale University"
+            ],
+            "source_years": [
+              2024
+            ],
+            "requested_time": {
+              "basis": "fall",
+              "description": "Fall 2024"
+            },
+            "selections": [
+              {
+                "record_id": 136405,
+                "role": "measure"
+              },
+              {
+                "record_id": 136408,
+                "role": "measure"
+              },
+              {
+                "record_id": 136411,
+                "role": "measure"
+              },
+              {
+                "record_id": 136414,
+                "role": "measure"
+              },
+              {
+                "record_id": 136417,
+                "role": "measure"
+              },
+              {
+                "record_id": 136420,
+                "role": "measure"
+              },
+              {
+                "record_id": 136423,
+                "role": "measure"
+              },
+              {
+                "record_id": 136400,
+                "role": "measure"
+              },
+              {
+                "record_id": 136399,
+                "role": "measure"
+              },
+              {
+                "record_id": 136401,
+                "role": "denominator"
+              }
+            ],
+            "filters": [
+              {
+                "record_id": 136392,
+                "operator": "eq",
+                "values": [
+                  "12"
+                ],
+                "code_record_ids": [
+                  144212
+                ]
+              }
+            ],
+            "group_by_record_ids": [],
+            "calculations": [
+              {
+                "label": "American Indian or Alaska Native % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136405
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Category count / total graduate enrollment x 100"
+              },
+              {
+                "label": "Asian % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136408
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Category count / total graduate enrollment x 100"
+              },
+              {
+                "label": "Black or African American % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136411
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Category count / total graduate enrollment x 100"
+              },
+              {
+                "label": "Hispanic % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136414
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Category count / total graduate enrollment x 100"
+              },
+              {
+                "label": "Native Hawaiian or Other Pacific Islander % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136417
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Category count / total graduate enrollment x 100"
+              },
+              {
+                "label": "White % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136420
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Category count / total graduate enrollment x 100"
+              },
+              {
+                "label": "Two or more races % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136423
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Category count / total graduate enrollment x 100"
+              },
+              {
+                "label": "Race/ethnicity unknown % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136400
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Category count / total graduate enrollment x 100"
+              },
+              {
+                "label": "U.S. nonresident % of graduate enrollment",
+                "operator": "percent",
+                "input_record_ids": [
+                  136399
+                ],
+                "denominator_record_id": 136401,
+                "group_by_record_ids": [],
+                "interpretation": "Category count / total graduate enrollment x 100"
+              }
+            ],
+            "joins": [],
+            "output": "table",
+            "assumptions": [
+              "Graduate = 'All students, Graduate' level (code 12), all attendance statuses.",
+              "Denominator is the source grand total (EFTOTLT) in the same graduate row; the nine race/ethnicity categories (including two or more races, unknown, and U.S. nonresident) are the source's mutually exclusive categories that make up that total.",
+              "Fall 2024 enrollment as of the institution's official fall reporting date."
+            ],
+            "clarification_questions": []
+          },
+          "measure_ids": [],
+          "field_record_ids": [
+            136405,
+            136408,
+            136411,
+            136414,
+            136417,
+            136420,
+            136423,
+            136400,
+            136399
+          ],
+          "institutions": [
+            "130794"
+          ],
+          "periods": [
+            2024
+          ],
+          "time_basis": "observation",
+          "population_signature": {
+            "directory_population": null,
+            "selectors": {
+              "EFALEVEL": [
+                [
+                  "eq",
+                  [
+                    "12"
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "artifact": {
+          "result_id": "43d5b3870abde1b6",
+          "turn": 3,
+          "subject": {
+            "question": "Yale University graduate enrollment by race and ethnicity in fall 2024, expressed as percentages of total graduate enrollment across the same race and ethnicity categories.",
+            "plan": {
+              "version": 1,
+              "institutions": [
+                "Yale University"
+              ],
+              "source_years": [
+                2024
+              ],
+              "requested_time": {
+                "basis": "fall",
+                "description": "Fall 2024"
+              },
+              "selections": [
+                {
+                  "record_id": 136405,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136408,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136411,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136414,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136417,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136420,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136423,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136400,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136399,
+                  "role": "measure"
+                },
+                {
+                  "record_id": 136401,
+                  "role": "denominator"
+                }
+              ],
+              "filters": [
+                {
+                  "record_id": 136392,
+                  "operator": "eq",
+                  "values": [
+                    "12"
+                  ],
+                  "code_record_ids": [
+                    144212
+                  ]
+                }
+              ],
+              "group_by_record_ids": [],
+              "calculations": [
+                {
+                  "label": "American Indian or Alaska Native % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136405
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Category count / total graduate enrollment x 100"
+                },
+                {
+                  "label": "Asian % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136408
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Category count / total graduate enrollment x 100"
+                },
+                {
+                  "label": "Black or African American % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136411
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Category count / total graduate enrollment x 100"
+                },
+                {
+                  "label": "Hispanic % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136414
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Category count / total graduate enrollment x 100"
+                },
+                {
+                  "label": "Native Hawaiian or Other Pacific Islander % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136417
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Category count / total graduate enrollment x 100"
+                },
+                {
+                  "label": "White % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136420
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Category count / total graduate enrollment x 100"
+                },
+                {
+                  "label": "Two or more races % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136423
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Category count / total graduate enrollment x 100"
+                },
+                {
+                  "label": "Race/ethnicity unknown % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136400
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Category count / total graduate enrollment x 100"
+                },
+                {
+                  "label": "U.S. nonresident % of graduate enrollment",
+                  "operator": "percent",
+                  "input_record_ids": [
+                    136399
+                  ],
+                  "denominator_record_id": 136401,
+                  "group_by_record_ids": [],
+                  "interpretation": "Category count / total graduate enrollment x 100"
+                }
+              ],
+              "joins": [],
+              "output": "table",
+              "assumptions": [
+                "Graduate = 'All students, Graduate' level (code 12), all attendance statuses.",
+                "Denominator is the source grand total (EFTOTLT) in the same graduate row; the nine race/ethnicity categories (including two or more races, unknown, and U.S. nonresident) are the source's mutually exclusive categories that make up that total.",
+                "Fall 2024 enrollment as of the institution's official fall reporting date."
+              ],
+              "clarification_questions": []
+            },
+            "measure_ids": [],
+            "field_record_ids": [
+              136405,
+              136408,
+              136411,
+              136414,
+              136417,
+              136420,
+              136423,
+              136400,
+              136399
+            ],
+            "institutions": [
+              "130794"
+            ],
+            "periods": [
+              2024
+            ],
+            "time_basis": "observation",
+            "population_signature": {
+              "directory_population": null,
+              "selectors": {
+                "EFALEVEL": [
+                  [
+                    "eq",
+                    [
+                      "12"
+                    ]
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        "last_coverage": null,
+        "open_tasks": [
+          {
+            "id": "t2",
+            "request": "show a 100% stacked bar chart",
+            "status": "unsupported",
+            "question": "Can the app show a 100% stacked bar chart of the percentage results?",
+            "route": "capability",
+            "depends_on": [
+              "t1"
+            ]
+          }
+        ]
+      },
+      "result_rows": [
+        {
+          "metric": "EF{YEAR}A::EFAIANT::percent::0",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 0.25142857142857145,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFASIAT::percent::1",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 12.582857142857144,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFBKAAT::percent::2",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 5.9314285714285715,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFHISPT::percent::3",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 8.308571428571428,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFNHPIT::percent::4",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 0.05714285714285714,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFWHITT::percent::5",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 32.37714285714286,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EF2MORT::percent::6",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 3.8857142857142857,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFUNKNT::percent::7",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 2.0914285714285716,
+          "unit": "percent"
+        },
+        {
+          "metric": "EF{YEAR}A::EFNRALT::percent::8",
+          "unitid": 130794,
+          "observation_year": 2024,
+          "value": 34.51428571428571,
+          "unit": "percent"
+        }
+      ],
+      "usage": {
+        "model": "automatic",
+        "stages": [
+          {
+            "input_tokens": 18039,
+            "output_tokens": 2353,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4707,
+            "model": "claude-haiku-5-5",
+            "calls": 1,
+            "latency_seconds": 15.176253099925816,
+            "estimated_api_usd": 0.0030274700000000004,
+            "stage": "initial intent interpretation",
+            "context_seconds": 0.15588189999107271,
+            "client_setup_seconds": 6.259989459067583e-05,
+            "provider_seconds": 15.176195200067014
+          },
+          {
+            "model": "claude-haiku-5-5",
+            "calls": 2,
+            "planning_tool_requests": 2,
+            "semantic_repair_attempts": 0,
+            "latency_seconds": 11.11,
+            "input_tokens": 6,
+            "output_tokens": 1712,
+            "cache_creation_input_tokens": 14574,
+            "cache_read_input_tokens": 68807,
+            "estimated_api_usd": 0.0604477,
+            "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+            "stages": [
+              {
+                "calls": 0,
+                "latency_seconds": 0,
+                "estimated_api_usd": 0
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "calls": 2,
+                "planning_tool_requests": 2,
+                "semantic_repair_attempts": 0,
+                "latency_seconds": 11.11,
+                "input_tokens": 6,
+                "output_tokens": 1712,
+                "cache_creation_input_tokens": 14574,
+                "cache_read_input_tokens": 68807,
+                "estimated_api_usd": 0.0604477,
+                "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+                "stages": [
+                  {
+                    "calls": 0,
+                    "latency_seconds": 0,
+                    "estimated_api_usd": 0,
+                    "stage": "institution mentions reused from initial interpretation"
+                  },
+                  {
+                    "model": "claude-sonnet-5-5",
+                    "calls": 2,
+                    "planning_tool_requests": 2,
+                    "semantic_repair_attempts": 0,
+                    "latency_seconds": 11.11,
+                    "input_tokens": 6,
+                    "output_tokens": 1712,
+                    "cache_creation_input_tokens": 14574,
+                    "cache_read_input_tokens": 68807,
+                    "estimated_api_usd": 0.0604477,
+                    "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "usage_complete": true,
+        "calls": 3,
+        "latency_seconds": 26.286253099925815,
+        "input_tokens": 18045,
+        "output_tokens": 4065,
+        "cache_creation_input_tokens": 14574,
+        "cache_read_input_tokens": 73514,
+        "estimated_api_usd": 0.06347517
+      },
+      "policy": {
+        "strategy": "conservative automatic",
+        "router_model": "claude-haiku-5-5",
+        "reviewed_planner_model": "claude-haiku-5-5",
+        "catalog_planner_model": "claude-sonnet-5-5",
+        "discovery_writer_model": "claude-sonnet-5-5",
+        "interpretation_retries": [],
+        "limits": "Model selection is not an accuracy guarantee. Source and chart validators remain mandatory."
+      },
+      "seconds": 26.928508599987254
+    }
+  ],
+  "calls": [
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 4335,
+      "output_tokens": 1280,
+      "cache_creation_input_tokens": 4707,
+      "cache_read_input_tokens": 0,
+      "estimated_api_usd": 0.001661875,
+      "seconds": 9.94148280005902
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 2010,
+      "output_tokens": 761,
+      "cache_creation_input_tokens": 5268,
+      "cache_read_input_tokens": 0,
+      "estimated_api_usd": 0.00124,
+      "seconds": 4.103434799937531
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 8786,
+      "output_tokens": 760,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4707,
+      "estimated_api_usd": 0.00130567,
+      "seconds": 4.069964599912055
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 9099,
+      "output_tokens": 691,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4707,
+      "estimated_api_usd": 0.00130247,
+      "seconds": 3.7295565999811515
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 9437,
+      "output_tokens": 2327,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4707,
+      "estimated_api_usd": 0.00215427,
+      "seconds": 9.779895200044848
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 9437,
+      "output_tokens": 868,
+      "cache_creation_input_tokens": 4707,
+      "cache_read_input_tokens": 0,
+      "estimated_api_usd": 0.0393215,
+      "seconds": 4.584565400029533
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 13049,
+      "output_tokens": 1293,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4707,
+      "estimated_api_usd": 0.00199847,
+      "seconds": 7.181354900007136
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 4,
+      "output_tokens": 257,
+      "cache_creation_input_tokens": 35453,
+      "cache_read_input_tokens": 0,
+      "estimated_api_usd": 0.0912105,
+      "seconds": 2.9670037999749184
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 2,
+      "output_tokens": 622,
+      "cache_creation_input_tokens": 4956,
+      "cache_read_input_tokens": 35453,
+      "estimated_api_usd": 0.0221593,
+      "seconds": 4.404350300086662
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 18026,
+      "output_tokens": 949,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4707,
+      "estimated_api_usd": 0.00232417,
+      "seconds": 5.197004199959338
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 4,
+      "output_tokens": 265,
+      "cache_creation_input_tokens": 10811,
+      "cache_read_input_tokens": 28789,
+      "estimated_api_usd": 0.0325644,
+      "seconds": 2.5754944999935105
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 2,
+      "output_tokens": 138,
+      "cache_creation_input_tokens": 4964,
+      "cache_read_input_tokens": 39600,
+      "estimated_api_usd": 0.017754,
+      "seconds": 2.019270900054835
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 2,
+      "output_tokens": 1524,
+      "cache_creation_input_tokens": 1661,
+      "cache_read_input_tokens": 44564,
+      "estimated_api_usd": 0.0238529,
+      "seconds": 7.844131999998353
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 30399,
+      "output_tokens": 1101,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4707,
+      "estimated_api_usd": 0.0036374700000000003,
+      "seconds": 6.164830400026403
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 30399,
+      "output_tokens": 577,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4707,
+      "estimated_api_usd": 0.06703869999999999,
+      "seconds": 4.477262600092217
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "input_tokens": 18039,
+      "output_tokens": 2353,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4707,
+      "estimated_api_usd": 0.0030274700000000004,
+      "seconds": 15.17195129999891
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 4,
+      "output_tokens": 171,
+      "cache_creation_input_tokens": 11229,
+      "cache_read_input_tokens": 28789,
+      "estimated_api_usd": 0.0326694,
+      "seconds": 3.0401024000020698
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 2,
+      "output_tokens": 1541,
+      "cache_creation_input_tokens": 3345,
+      "cache_read_input_tokens": 40018,
+      "estimated_api_usd": 0.0277783,
+      "seconds": 8.05243210005574
+    }
+  ],
+  "estimated_api_usd": 0.373000865
+}

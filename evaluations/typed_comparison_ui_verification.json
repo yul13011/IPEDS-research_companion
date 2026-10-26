@@ -1,0 +1,42 @@
+{
+  "ui_exception": false,
+  "table_rows": 4,
+  "columns": [
+    "Measure",
+    "Period",
+    "Mount Holyoke College",
+    "Smith College",
+    "Wellesley College"
+  ],
+  "forced_chart_blocked": true,
+  "data": [
+    {
+      "Measure": "Academic/career counseling service",
+      "Period": "Academic year 2024-25",
+      "Mount Holyoke College": "Yes",
+      "Smith College": "Yes",
+      "Wellesley College": "Yes"
+    },
+    {
+      "Measure": "Employment services for students",
+      "Period": "Academic year 2024-25",
+      "Mount Holyoke College": "Yes",
+      "Smith College": "Yes",
+      "Wellesley College": "Yes"
+    },
+    {
+      "Measure": "On-campus day care for students' children",
+      "Period": "Academic year 2024-25",
+      "Mount Holyoke College": "Implied no",
+      "Smith College": "Implied no",
+      "Wellesley College": "Implied no"
+    },
+    {
+      "Measure": "Placement services for completers",
+      "Period": "Academic year 2024-25",
+      "Mount Holyoke College": "Yes",
+      "Smith College": "Yes",
+      "Wellesley College": "Yes"
+    }
+  ]
+}

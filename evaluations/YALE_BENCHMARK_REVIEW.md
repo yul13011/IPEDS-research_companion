@@ -1,0 +1,89 @@
+# Yale benchmark evaluation
+
+Status: useful regression baseline with unresolved source differences. The supplied Yale CSVs remain unchanged. This evaluates deterministic data retrieval from the annual IPEDS copies; it does not claim that an LLM agent has been built or tested.
+
+## Results
+
+Each check is one expected numeric cell, not a separate independently authored natural-language scenario. Generated question prompts are saved with the cases for later agent evaluation.
+
+**229 of 242 supported numeric checks match; 13 differ.** All other cells are classified separately rather than counted as numerical failures.
+
+| Family | Matches | Mismatches | Outside coverage | Unsupported field | Definition pending |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| enrollment | 26 | 4 | 123 | 0 | 0 |
+| sat | 41 | 5 | 400 | 54 | 0 |
+| admissions | 46 | 4 | 200 | 0 | 0 |
+| graduation | 30 | 0 | 69 | 0 | 0 |
+| subgroups | 86 | 0 | 28 | 4 | 36 |
+
+## Supported interpretations
+
+- All supplied data concern Yale, UNITID 130794.
+- Enrollment uses fall headcount, comparing undergraduate, graduate/professional and total benchmark groups to EF undergraduate, graduate and total categories. A remaining institutional/period discrepancy is not normalized away.
+- Admissions uses entering fall year, not nominal class year; class year equals entry year plus four in the supplied files. Counts use APPLCN, ADMSSN and ENRLT.
+- Admit and yield rates use raw counts on a 0â€“1 fraction scale. A tolerance of 0.0005 reflects the supplied 0.001 rate precision, equivalent to 0.05 percentage points; whole-percent IPEDS derived rates are not compared directly to more precise benchmarks.
+- SAT uses the entering year, section, and available percentile. The benchmark label Verbal is compared to the annual SATVR field, while preserving the Critical Reading/EBRW change and any score differences. No scores are converted to force agreement.
+- Graduation uses entry year plus six for the outcome release. Counts use the adjusted bachelor cohort (GRTYPE=8) and bachelor completers within six years (GRTYPE=12). All ten covered overall-cohort rows match in counts and rounded rates.
+- Although the overall graduation CSV labels its denominator as Number of First Year Entering Students, the matching IPEDS measure is the adjusted cohort. For example, the 2018 entering cohort has 1,573 revised entrants, one exclusion, and 1,572 adjusted entrants; the benchmark uses 1,572.
+- Gender graduation counts use GRTOTLM/GRTOTLW in the same adjusted/completer records.
+- Pell/non-Pell uses the bachelor subcohort PSGRTYPE=2. Non-Pell combines subsidized-loan-only and neither-Pell-nor-subsidized-loan categories; it is not the latter category alone.
+- International is operationalized as IPEDS U.S. nonresident (GRNRALT). All covered international subgroup count cells match the benchmark. This crosswalk is recorded, rather than redefining international to mean every foreign-born student.
+
+## Open grouping definition
+
+The user defined URM as anyone who is not White, Asian, or international. Treatment of race/ethnicity unknown is explicitly unresolved by user choice. In the 2009 entering cohort, IPEDS reports 667 White, 205 Asian, 117 U.S. nonresident and 21 race unknown in an adjusted cohort of 1,305. The benchmark has 893 Non-URM and 295 URM: 893 equals White + Asian + unknown (667 + 205 + 21), while 295 equals the residual excluding those groups and U.S. nonresidents.
+
+The data suggest that unknown is grouped with Non-URM, but the user explicitly chose to leave that rule unresolved. Do not infer or approve a mapping from numerical agreement. `benchmark_definitions.json` records the pending choice. The relevant cases remain pending and do not inflate the pass rate.
+
+## Discrepancies retained
+
+| Observation year | Metric | Supplied Yale expected | IPEDS actual |
+| --- | --- | ---: | ---: |
+| 2022 | enrollment: Graduate/Professional | 8161 | 8131 |
+| 2022 | enrollment: Total | 14806 | 14776 |
+| 2015 | enrollment: Graduate/Professional | 6855 | 6853 |
+| 2015 | enrollment: Total | 12387 | 12385 |
+| 2016 | admissions: Total Matrics | 1371 | 1367 |
+| 2016 | admissions: Yield Rate | 69% | 68.7626% |
+| 2018 | admissions: Total Applications | 35307 | 35301 |
+| 2018 | admissions: Total Admits | 2241 | 2240 |
+| 2017 | sat: Verbal_25 | 710 | 730 |
+| 2017 | sat: Verbal_75 | 800 | 780 |
+| 2017 | sat: Math_25 | 710 | 730 |
+| 2018 | sat: Math_25 | 730 | 740 |
+| 2018 | sat: Math_75 | 790 | 800 |
+
+The 13 numeric discrepancies in the initial clear-case run are concentrated in:
+
+- **Enrollment 2015 and 2022:** graduate/professional differs by 2 and 30 respectively, with corresponding total differences. Raw EF, detailed EFA and derived graduate enrollment agree with one another. This is not a discrepancy caused by selecting a different total field. Institutional snapshot/population differences or revisions remain hypotheses, not established explanations.
+- **Admissions 2016 and 2018:** the supplied 2016 matriculant count is 1,371 versus IPEDS 1,367; the resulting yield differs. In 2018, applicants are 35,307 versus 35,301 and admits 2,241 versus 2,240. Counts are exact comparisons and not rounding differences.
+- **SAT 2017 and 2018:** five percentile cells differ by 10â€“20 points. The SATVR label switches from Critical Reading to Evidence-Based Reading and Writing in fall 2017; this provides a comparability warning, not proof explaining every mismatch. We need the original Yale source footnotes/reporting basis to resolve them.
+
+Mismatches are not automatically evidence that either source is wrong. Source dates, definitions, revisions and score reporting methods must be established first. The suite intentionally exits with status 1 while mismatches remain, after writing the complete comparison. Do not loosen tolerances, shift years or alter benchmark values to make it pass.
+
+## Unavailable tests
+
+- Imported admission/enrollment/SAT observation years are 2015â€“2024. Earlier rows and 2025 rows remain in the fixtures but cannot be numerically checked against this corpus.
+- Six-year graduation outcomes in these releases cover entering cohorts 2009â€“2018. The 2019 cohort needs the 2025 outcome release.
+- IPEDS does not supply SAT 10th/90th percentiles, and the supplied annual corpus has SAT medians only beginning with fall 2022.
+- Pell-specific graduation tables begin with the fall-2016 outcome release in this corpus; a 2009 entering Pell cohort would require unavailable 2015 subgroup fields.
+
+Future agent tests should verify a correct explanation of unavailability for these requests, not demand invented numbers. The 2007â€“08 subgroup cohorts are also outside our observation-year coverage.
+
+## Reproduce and use later
+
+Run `evaluations/run_yale_benchmarks.py` with the bundled Python executable from the project root. It reads only the original benchmark CSVs and annual SQLite copies and writes:
+
+- `results/yale_cases.json`: expected values, generated prompts, actual values, SQL/parameters, source-row references and outcomes.
+- `results/yale_results.csv`: reviewable cell-by-cell comparison.
+- `results/yale_summary.json`: family totals, source file hashes, definitions and precision rules.
+
+Original benchmark hashes are checked before/after the run. No production app or database is modified, and no external model/API is called.
+
+This is the data-retrieval baseline for agent development. Later evaluations must additionally test codebook discovery, year/cohort interpretation, ambiguity handling, conversational follow-ups, rendering/exports, and the modelâ€™s selection of tools. A passing SQL check alone does not validate those behaviors.
+
+## Information still needed
+
+1. URM/Non-URM tests remain pending unless the project owner later supplies an explicit race-unknown rule.
+2. If available, provide the original Yale source links or footnotes for the enrollment, admissions and SAT tables to investigate mismatched observations.
+3. Confirm any intentional snapshot or population differences before designating conflicting observations as strict IPEDS golden values.

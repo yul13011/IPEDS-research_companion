@@ -1,0 +1,324 @@
+{
+  "id": "award_levels",
+  "question": "Did Smith College, Mount Holyoke College, and Wellesley College offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+  "answer": {
+    "intent": "catalog_plan",
+    "catalog_plan": {
+      "version": 2,
+      "institutions": [
+        "167835",
+        "166939",
+        "168218"
+      ],
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "id": "ic",
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136075,
+            136077
+          ],
+          "filters": [],
+          "group_by_record_ids": [
+            136075,
+            136077
+          ],
+          "aggregates": []
+        }
+      ],
+      "joins": [],
+      "expressions": [],
+      "outputs": [
+        {
+          "reference": "fic_136075",
+          "label": "Offers bachelor's degree (1=Yes, 0=implied no, -1 not reported, -2 not applicable)"
+        },
+        {
+          "reference": "fic_136077",
+          "label": "Offers master's degree (1=Yes, 0=implied no, -1 not reported, -2 not applicable)"
+        }
+      ],
+      "missing_policy": "propagate",
+      "time_basis": "source_period",
+      "assumptions": [
+        "Award levels offered come from the 2024-25 Institutional Characteristics release; flags are reported per institution (one row per UNITID).",
+        "The three institutions are kept as named (UNITID values) and reported separately."
+      ],
+      "clarification_questions": []
+    },
+    "catalog_proposal": {
+      "catalog_plan": {
+        "version": 2,
+        "institutions": [
+          "167835",
+          "166939",
+          "168218"
+        ],
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "id": "ic",
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136075,
+              136077
+            ],
+            "filters": [],
+            "group_by_record_ids": [
+              136075,
+              136077
+            ],
+            "aggregates": []
+          }
+        ],
+        "joins": [],
+        "expressions": [],
+        "outputs": [
+          {
+            "reference": "fic_136075",
+            "label": "Offers bachelor's degree (1=Yes, 0=implied no, -1 not reported, -2 not applicable)"
+          },
+          {
+            "reference": "fic_136077",
+            "label": "Offers master's degree (1=Yes, 0=implied no, -1 not reported, -2 not applicable)"
+          }
+        ],
+        "missing_policy": "propagate",
+        "time_basis": "source_period",
+        "assumptions": [
+          "Award levels offered come from the 2024-25 Institutional Characteristics release; flags are reported per institution (one row per UNITID).",
+          "The three institutions are kept as named (UNITID values) and reported separately."
+        ],
+        "clarification_questions": []
+      },
+      "question": "Did 167835, 166939, and 168218 offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+      "definition_evidence": [],
+      "category_evidence": [],
+      "validation": {
+        "execution_approved": false,
+        "preflight_eligible": false,
+        "semantic_status": "blocked",
+        "blocks": [
+          "Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs."
+        ]
+      },
+      "created_at": "2026-10-22T18:41:36.489133+00:00",
+      "proposal_id": "69bfd3e23cdb589eaa2f"
+    },
+    "message": "The query could not be validated: Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs.",
+    "mode": "catalog relational planner",
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 6,
+      "planning_tool_requests": 7,
+      "semantic_repair_attempts": 2,
+      "latency_seconds": 24.86389199993573,
+      "input_tokens": 99386,
+      "output_tokens": 2279,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 100145,
+      "estimated_api_usd": 0.23157650000000002,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 578,
+          "output_tokens": 77,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.9888919999357313,
+          "estimated_api_usd": 0.001926,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 5,
+          "planning_tool_requests": 7,
+          "semantic_repair_attempts": 2,
+          "latency_seconds": 22.875,
+          "input_tokens": 98808,
+          "output_tokens": 2202,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 100145,
+          "estimated_api_usd": 0.2296505,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "validation_attempts": [
+      {
+        "attempt": 1,
+        "blocks": [
+          "LEVEL5 is not a documented continuous numerical measure.",
+          "LEVEL7 is not a documented continuous numerical measure."
+        ]
+      },
+      {
+        "attempt": 2,
+        "blocks": [
+          "No numerical measure was selected.",
+          "Grouped extracts need an explicit row-output and subtotal policy; this executor currently returns explicitly selected institution observations."
+        ]
+      }
+    ],
+    "latency": {
+      "validation_seconds": 0.0,
+      "query_seconds": 0.0,
+      "planning_and_binding_seconds": 23.316018299898133,
+      "answer_ready_seconds": 25.687537500052713,
+      "live_model_calls": 6,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 2.275069799972698
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "cdff0f840020278f",
+      "status": "awaiting_information",
+      "goal": "Did 167835, 166939, and 168218 offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+      "original_question": "Did 167835, 166939, and 168218 offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+      "question": "The query could not be validated: Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs.",
+      "scope": {
+        "institutions": [
+          "167835",
+          "166939",
+          "168218"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          {
+            "reference": "fic_136075",
+            "label": "Offers bachelor's degree (1=Yes, 0=implied no, -1 not reported, -2 not applicable)"
+          },
+          {
+            "reference": "fic_136077",
+            "label": "Offers master's degree (1=Yes, 0=implied no, -1 not reported, -2 not applicable)"
+          }
+        ],
+        "breakdowns": [
+          [
+            136075,
+            136077
+          ]
+        ],
+        "time_basis": "source_period",
+        "assumptions": [
+          "Award levels offered come from the 2024-25 Institutional Characteristics release; flags are reported per institution (one row per UNITID).",
+          "The three institutions are kept as named (UNITID values) and reported separately."
+        ]
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [
+        "The query could not be validated: Categorical codes must be group labels, not numerical measure outputs. Include the field in group_by_record_ids and remove it from outputs."
+      ]
+    },
+    "institution_identity": {
+      "unitids": [
+        166939,
+        167835,
+        168218
+      ],
+      "original_question": "Did Smith College, Mount Holyoke College, and Wellesley College offer bachelor\u2019s and master\u2019s degrees in 2024-25?",
+      "original_mentions": [
+        "Smith College",
+        "Mount Holyoke College",
+        "Wellesley College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835,
+        "mount holyoke college": 166939,
+        "wellesley college": 168218
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Mount Holyoke College \u00b7 South Hadley, MA \u00b7 UNITID 166939",
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835",
+        "Wellesley College \u00b7 Wellesley, MA \u00b7 UNITID 168218"
+      ]
+    }
+  },
+  "elapsed_seconds": 25.688232299988158,
+  "events": [
+    {
+      "elapsed": 0.0006476999260485172,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 2.0092143999645486,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 2.2809889999916777,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 2.2827117999549955,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 2.3095741999568418,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 5.187803399981931,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 6.768934199935757,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 7.549098999937996,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 11.085918199969456,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 11.117763699963689,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 11.131307699950412,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 15.526634800015017,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 15.566551700001583,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 20.4330172999762,
+      "stage": "Validating source selections and calculation rules\u2026"
+    },
+    {
+      "elapsed": 20.59561700001359,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 25.289806699962355,
+      "stage": "Validating source selections, relationships and calculations\u2026"
+    }
+  ],
+  "expected_variables": [
+    "LEVEL5",
+    "LEVEL7"
+  ]
+}

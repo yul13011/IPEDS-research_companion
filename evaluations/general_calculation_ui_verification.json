@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-19T18:44:00.336606+00:00",
+  "passed": true,
+  "server_rerun_seconds": 0.5584605000331067,
+  "exceptions": 0,
+  "checks": [
+    "generic calculated result renders in chat",
+    "two existing result popovers",
+    "Excel export generated without error"
+  ],
+  "scope": "Real source calculation and Streamlit AppTest; server render includes export serialization, excludes browser paint."
+}

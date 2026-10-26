@@ -1,0 +1,439 @@
+{
+  "id": "calendar",
+  "question": "What academic calendar system did Smith College use in 2024-25?",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "167835"
+      ],
+      "population": null,
+      "result_kind": "lookup",
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136122
+          ],
+          "filters": []
+        }
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "lookup",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [
+          "167835"
+        ],
+        "population": null,
+        "result_kind": "lookup",
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136122
+            ],
+            "filters": []
+          }
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::CALSYS"
+        ],
+        "institutions": [
+          "167835"
+        ],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::CALSYS": {
+          "label": "Calendar system",
+          "family": "observation",
+          "unit": "coded"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Smith College",
+          "unitid": 167835,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::CALSYS",
+          "measure": "Calendar system",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136122,
+          "raw_code": 1,
+          "response_label": "Semester",
+          "response_status": "reported",
+          "category_record_ids": [
+            139841
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "CALSYS",
+            "record_id": 136122,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136122,
+                "excerpt": "Calendar system"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::CALSYS",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "CALSYS"
+          ],
+          "filters": [],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"CALSYS\" FROM \"IC2024\" WHERE UNITID IN (?) LIMIT 20001",
+          "parameters": [
+            167835
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136122,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "CALSYS",
+              "title": "Calendar system",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Directory information, institution classifications, and response status information\nvarnumber: 10901\nvarorder: 27\nvarname: CALSYS\nvartitle: Calendar system\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 1\nsectionnumber: 11\nlongdescription: What is the predominant calendar system at the institution? [Choose one] Standard academic terms Checking one of these systems determines that your institution will provide graduation rates data based on a FALL COHORT and student charges based on a FULL ACADEMIC YEAR Semester Quarter Trimester 4-1-4 or similar plan Other academic calendar Other calendar systems (for primarily occupational schools) Checking one of the following determines that your institution will provide graduation rates data based on a FULL YEAR COHORT and student charges data will be requested by PROGRAM. Differs by program Continuous basis (every 2 weeks, monthly, or other period) SEMESTER calendar SYSTEM -A calendar system that consists of two semesters during the academic year with about 16 weeks for each semester of instruction. There may be an additional summer session. QUARTER calendar SYSTEM - A calendar system in which the academic year consists of 3 sessions called quarters of about 12 weeks each. The range may be from 10 to 15 weeks. There may be an additional quarter in the summer TRIMESTER calendar SYSTEM - An academic year consisting of 3 terms of about 15 weeks each. FOUR-ONE-FOUR PLAN - The 4-1-4 calendar consists of 4 courses taken for 4 months, 1 course taken for 1 month, and 4 courses taken for 4 months. There may be an additional summer session. OTHER ACADEMIC calendar SYSTEM - Category used to describe \"non-traditional\" calendar systems at 4-year and 2-year degree-granting institutions. These can include schools that offer primarily on-line courses or \"one course at a time\". DIFFERS BY PROGRAM (calendar SYSTEM) - A calendar system classification that is used by institutions that have occupational/vocational programs of varying lengths. These schools may enroll students at specific times depending on the program desired. For example, a school might offer a 2-month program in January, March, May, September, and November; and a 3-month program in January, April, and October. CONTINUOUS BASIS (FOR PROGRAM ENROLLMENT) - A calendar system classification that is used by institutions that enroll students at any time during the academic year. For example, a cosmetology school or a word processing school might allow students to enroll and begin studies at various times, with no requirement that classes begin on a certain date.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Directory information, institution classifications, and response status information\nsectiontitle: Enrollment levels offered",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 251,
+              "long_description": "What is the predominant calendar system at the institution? [Choose one] Standard academic terms Checking one of these systems determines that your institution will provide graduation rates data based on a FALL COHORT and student charges based on a FULL ACADEMIC YEAR Semester Quarter Trimester 4-1-4 or similar plan Other academic calendar Other calendar systems (for primarily occupational schools) Checking one of the following determines that your institution will provide graduation rates data based on a FULL YEAR COHORT and student charges data will be requested by PROGRAM. Differs by program Continuous basis (every 2 weeks, monthly, or other period) SEMESTER calendar SYSTEM -A calendar system that consists of two semesters during the academic year with about 16 weeks for each semester of instruction. There may be an additional summer session. QUARTER calendar SYSTEM - A calendar system in which the academic year consists of 3 sessions called quarters of about 12 weeks each. The range may be from 10 to 15 weeks. There may be an additional quarter in the summer TRIMESTER calendar SYSTEM - An academic year consisting of 3 terms of about 15 weeks each. FOUR-ONE-FOUR PLAN - The 4-1-4 calendar consists of 4 courses taken for 4 months, 1 course taken for 1 month, and 4 courses taken for 4 months. There may be an additional summer session. OTHER ACADEMIC calendar SYSTEM - Category used to describe \"non-traditional\" calendar systems at 4-year and 2-year degree-granting institutions. These can include schools that offer primarily on-line courses or \"one course at a time\". DIFFERS BY PROGRAM (calendar SYSTEM) - A calendar system classification that is used by institutions that have occupational/vocational programs of varying lengths. These schools may enroll students at specific times depending on the program desired. For example, a school might offer a 2-month program in January, March, May, September, and November; and a 3-month program in January, April, and October. CONTINUOUS BASIS (FOR PROGRAM ENROLLMENT) - A calendar system classification that is used by institutions that enroll students at any time during the academic year. For example, a cosmetology school or a word processing school might allow students to enroll and begin studies at various times, with no requirement that classes begin on a certain date.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139848,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139841,
+              "code_value": "1",
+              "value_label": "Semester"
+            },
+            {
+              "record_id": 139842,
+              "code_value": "2",
+              "value_label": "Quarter"
+            },
+            {
+              "record_id": 139843,
+              "code_value": "3",
+              "value_label": "Trimester"
+            },
+            {
+              "record_id": 139844,
+              "code_value": "4",
+              "value_label": "Four-one-four plan"
+            },
+            {
+              "record_id": 139845,
+              "code_value": "5",
+              "value_label": "Other academic year"
+            },
+            {
+              "record_id": 139846,
+              "code_value": "6",
+              "value_label": "Differs by program"
+            },
+            {
+              "record_id": 139847,
+              "code_value": "7",
+              "value_label": "Continuous"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::CALSYS": "What is the predominant calendar system at the institution? [Choose one] Standard academic terms Checking one of these systems determines that your institution will provide graduation rates data based on a FALL COHORT and student charges based on a FULL ACADEMIC YEAR Semester Quarter Trimester 4-1-4 or similar plan Other academic calendar Other calendar systems (for primarily occupational schools) Checking one of the following determines that your institution will provide graduation rates data based on a FULL YEAR COHORT and student charges data will be requested by PROGRAM. Differs by program Continuous basis (every 2 weeks, monthly, or other period) SEMESTER calendar SYSTEM -A calendar system that consists of two semesters during the academic year with about 16 weeks for each semester of instruction. There may be an additional summer session. QUARTER calendar SYSTEM - A calendar system in which the academic year consists of 3 sessions called quarters of about 12 weeks each. The range may be from 10 to 15 weeks. There may be an additional quarter in the summer TRIMESTER calendar SYSTEM - An academic year consisting of 3 terms of about 15 weeks each. FOUR-ONE-FOUR PLAN - The 4-1-4 calendar consists of 4 courses taken for 4 months, 1 course taken for 1 month, and 4 courses taken for 4 months. There may be an additional summer session. OTHER ACADEMIC calendar SYSTEM - Category used to describe \"non-traditional\" calendar systems at 4-year and 2-year degree-granting institutions. These can include schools that offer primarily on-line courses or \"one course at a time\". DIFFERS BY PROGRAM (calendar SYSTEM) - A calendar system classification that is used by institutions that have occupational/vocational programs of varying lengths. These schools may enroll students at specific times depending on the program desired. For example, a school might offer a 2-month program in January, March, May, September, and November; and a 3-month program in January, April, and October. CONTINUOUS BASIS (FOR PROGRAM ENROLLMENT) - A calendar system classification that is used by institutions that enroll students at any time during the academic year. For example, a cosmetology school or a word processing school might allow students to enroll and begin studies at various times, with no requirement that classes begin on a certain date."
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:33:21.917121+00:00",
+      "registry_sha256": "fe7f992f4fdbd7db24180ba1743c6b189f3ff3eaab80f054518fe5cc8ecc8ad6",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 1,
+        "available_cells": 1,
+        "matching_institutions": {
+          "2024": 1
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 1
+          }
+        ]
+      },
+      "population_evidence": {},
+      "observation_validation": {
+        "cells": [
+          [
+            167835,
+            2024,
+            136122
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          167835
+        ],
+        "rows_sha256": "bcaeb523c420262a843a462ae61e52d160d75c6a85488ff4981623b2acedc135"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 8.985897200065665,
+        "answer_ready_seconds": 29.802797800046392,
+        "live_model_calls": 5,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 20.79620950005483
+      },
+      "result_id": "d457a2742613a9bf",
+      "institution_identity": {
+        "unitids": [
+          167835
+        ],
+        "original_question": "What academic calendar system did Smith College use in 2024-25?",
+        "original_mentions": [
+          "Smith College"
+        ],
+        "confirmed_choices": {
+          "smith college": 167835
+        },
+        "scope_mentions": [],
+        "labels": [
+          "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+        ]
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 5,
+      "planning_tool_requests": 5,
+      "semantic_repair_attempts": 1,
+      "latency_seconds": 17.81775640005339,
+      "input_tokens": 52682,
+      "output_tokens": 884,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 85232,
+      "estimated_api_usd": 0.12272720000000001,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 552,
+          "output_tokens": 58,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 9.22375640005339,
+          "estimated_api_usd": 0.001684,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 4,
+          "planning_tool_requests": 5,
+          "semantic_repair_attempts": 1,
+          "latency_seconds": 8.594,
+          "input_tokens": 52130,
+          "output_tokens": 826,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 85232,
+          "estimated_api_usd": 0.1210432,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "Smith College \u2014 Calendar system: Semester (Academic year 2024-25).",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 8.985897200065665,
+      "answer_ready_seconds": 29.802797800046392,
+      "live_model_calls": 5,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 20.79620950005483
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "19d1fac6de08507b",
+      "status": "completed",
+      "goal": "What academic calendar system did Smith College (UNITID 167835) use in 2024-25?",
+      "original_question": "What academic calendar system did Smith College (UNITID 167835) use in 2024-25?",
+      "question": "Smith College \u2014 Calendar system: Semester (Academic year 2024-25).",
+      "scope": {
+        "institutions": [
+          "167835"
+        ],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::CALSYS"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [
+        167835
+      ],
+      "original_question": "What academic calendar system did Smith College use in 2024-25?",
+      "original_mentions": [
+        "Smith College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 30.84313169994857,
+  "events": [
+    {
+      "elapsed": 0.022634999942965806,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 21.762431699899025,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 21.822033699951135,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 21.822115599992685,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 21.839862299966626,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 23.976559299975634,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 24.801958699943498,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 24.822087799897417,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 26.1569875999121,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 26.16810089990031,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 28.30841880000662,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 30.80764499993529,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 30.843081199913286,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "CALSYS"
+  ]
+}

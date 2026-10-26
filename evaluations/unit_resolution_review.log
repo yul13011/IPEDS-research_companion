@@ -1,0 +1,11 @@
+{
+  "previous_unresolved": 2484,
+  "outcomes": {
+    "verified": 2459,
+    "conditional": 25
+  },
+  "remaining_static_unknowns": [],
+  "positive_program_length_cells": 40322,
+  "positive_cells_missing_basis": 0,
+  "limits": "Quantity-unit review of the original batch, not manual verification of all other catalog assignments. Conditional coverage counts positive program-length observations, not distinct schools. Currency quantity verification remains separate from currency/scale display verification."
+}

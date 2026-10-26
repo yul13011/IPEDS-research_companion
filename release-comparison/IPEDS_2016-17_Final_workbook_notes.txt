@@ -1,0 +1,4846 @@
+Table documentation for the IPEDS Access database, 2016-17
+Final release
+Overview
+This spreadsheet contains the documentation for the IPEDS 2016-17 access database. It contains all variables that were collected in the 2016-17 IPEDS data collection. The IPEDS data collection consists of 3 collection modules. Institutional Characteristics 2016-17, 12-month enrollment 2015-16 and completions 2015-16 were collected in the Fall 2016. Admissions Fall 2016, Graduation Rates 2016, Outcome Measures 2016 and Student financial Aid 2015-16 were collected in the winter of 2016-17. Fall enrollment 2016, Finance fiscal year 2016, Human Resources 2016 components and the Academic Library 2015-16 were collected in the Spring 2017. The data in this database are final released data. During the 2017-18 collection, institutions were allowed to submit revisions to their 2016-17 submission through the 2016-17 Prior Year Data Revision system. The 2016-17 provisional data were then updated with these revisions for the final release. There are some data tables and variables that institutions are not allowed to revise. Revised data tables and variables are identified in the spreadsheet in this workbook. Note that the tables below also exist in the database.
+Contents of spreadsheet
+Tables16
+Table List: List all data tables included in the downloadable access database and all tables in SQL data base that contains the data available through the Use the Data function (IPEDS Data Center). http://nces.ed.gov/ipeds/home/usethedata.
+Vartable16
+Variable list: Lists all variables for each data table in the IPEDS data base. Includes the variable name, variable label, description, data type, format and maximum field width of each variable. The data type describes a variable as either a numeric (N) or Alphanumeric (A) and the format of a variable defines a variable as either continuous (Cont) or categorical (Disc). It all also lists the variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. Imputation flag variables are not included in the Access database, because of limitations on maximum number of variables allowed in an Access table.
+ValueSets16
+This worksheet contains the code values and value labels for of all categorical variables in the database. It also lists the frequency and percent distribution for each code value by variable.
+VariableChanges1516
+This worksheet lists new variables that were added in 2016-17; variables from the previous year that were removed in 2016-17; and variables that were renamed, but are essentially the same as the previous year.
+ValueChanges1516
+This worksheet lists new values that have been added and values that have been removed for categorical variables that exist in both the previous and current year. Values for new variables (added) are not listed here. See ValueSets16.
+Metadata definitions
+This worksheet describes each of the metadata variables found in tables16, vartable16 and valuesets16.
+d
+surveyorder
+surveynumber
+survey
+filenumber
+table
+tablename
+varnumber
+varname
+changes
+varTitle
+10
+1
+Institutional Characteristics
+2
+HD
+HD2016
+10060
+DISAURL
+Added
+Disability Services Web Address
+10
+1
+Institutional Characteristics
+2
+HD
+HD2016
+10063
+DUNS
+Added
+Dun and Bradstreet numbers
+10
+1
+Institutional Characteristics
+2
+IC
+IC2016
+15400
+DISTCRS
+Added
+Distance education courses offered
+10
+1
+Institutional Characteristics
+2
+IC
+IC2016
+16151
+LIBRES1
+Added
+Library resources/services: Physical facilities
+10
+1
+Institutional Characteristics
+2
+IC
+IC2016
+16153
+LIBRES2
+Added
+Library resources/services: Organized collection of printed materials
+10
+1
+Institutional Characteristics
+2
+IC
+IC2016
+16155
+LIBRES3
+Added
+Library resources/services: Access to digital/electronic resources
+10
+1
+Institutional Characteristics
+2
+IC
+IC2016
+16157
+LIBRES4
+Added
+Library resources/services: Staff trained to provide and interpret library materials
+10
+1
+Institutional Characteristics
+2
+IC
+IC2016
+16159
+LIBRES5
+Added
+Library resources/services: Established library hours
+10
+1
+Institutional Characteristics
+2
+IC
+IC2016
+16161
+LIBRES6
+Added
+Library resources/services: Access to library collections that are shared with other institutions
+10
+1
+Institutional Characteristics
+2
+IC
+IC2016
+16163
+LIBRES9
+Added
+Library resources/services not provided
+10
+1
+Institutional Characteristics
+2
+IC
+IC2015
+10811
+LIBFAC
+Removed
+Library facilities at institution
+10
+1
+Institutional Characteristics
+26
+FLAGS
+FLAGS2016
+60015
+PRCHTP_F
+Added
+Parent/child system indicator - Finance
+12
+12
+Admissions and Test Scores
+85
+ADM
+ADM2015
+10643
+SATWR25
+Removed
+SAT Writing 25th percentile score
+12
+12
+Admissions and Test Scores
+85
+ADM
+ADM2015
+10644
+SATWR75
+Removed
+SAT Writing 75th percentile score
+12
+12
+Admissions and Test Scores
+85
+ADM
+ADM2015
+10678
+ACTWR25
+Removed
+ACT Writing 25th percentile score
+12
+12
+Admissions and Test Scores
+85
+ADM
+ADM2015
+10679
+ACTWR75
+Removed
+ACT Writing 75th percentile score
+20
+2
+Fall Enrollment
+25
+EFD
+EF2016D
+21033
+RRFTIN
+Added
+Inclusions to the full-time fall 2015 cohort
+20
+2
+Fall Enrollment
+25
+EFD
+EF2016D
+21053
+RRPTIN
+Added
+Inclusions to the part-time fall 2015 cohort
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81626
+PGLIN10
+Added
+Pell Grant recipients - revised cohort
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81631
+PGLIN45
+Added
+Pell Grant recipients - exclusions
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81636
+PGLIN50
+Added
+Pell Grant recipients - adjusted cohort (revised minus exclusions)
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81641
+PGLIN11
+Added
+Pell Grant recipients - total number that completed an award within 150% of normal time to completion
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81646
+SSLIN10
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - revised cohort
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81651
+SSLIN45
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - exclusions
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81656
+SSLIN50
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - adjusted cohort (revised minus exclusions)
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81661
+SSLIN11
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - total number completed an award within 150% of normal time to completion
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81666
+NRLIN10
+Added
+Did not receive Pell grant or subsidized Stafford loan - revised cohort
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81671
+NRLIN45
+Added
+Did not receive Pell grant or subsidized Stafford loan - exclusions
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81676
+NRLIN50
+Added
+Did not receive Pell grant or subsidized Stafford loan - adjusted cohort
+50
+8
+Graduation Rates
+45
+GR_L2
+GR2016_L2
+81681
+NRLIN11
+Added
+Did not receive Pell grant or subsidized Stafford loan - total number completed an award within 150% of normal time to completion
+50
+8
+Graduation Rates
+64
+DRVGR
+DRVGR2016
+81686
+PGGRRTT
+Added
+Pell Grant recipients - Overall graduation rate within 150 percent of normal time
+50
+8
+Graduation Rates
+64
+DRVGR
+DRVGR2016
+81691
+PGBA6RT
+Added
+Pell Grant recipients - Bachelor's degree rate within 6 years
+50
+8
+Graduation Rates
+64
+DRVGR
+DRVGR2016
+81696
+SSGRRTT
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - Overall graduation rate within 150 percent of normal time
+50
+8
+Graduation Rates
+64
+DRVGR
+DRVGR2016
+81701
+SSBA6RT
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - Bachelor's degree rate within 6 years
+50
+8
+Graduation Rates
+64
+DRVGR
+DRVGR2016
+81706
+NRGRRTT
+Added
+Did not receive Pell Grants or Subsidized Stafford Loans - Overall graduation rate within 150 percent of normal time
+50
+8
+Graduation Rates
+64
+DRVGR
+DRVGR2016
+81711
+NRBA6RT
+Added
+Did not receive Pell Grants or Subsidized Stafford Loans - Bachelor's degree rate within 6 years
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81501
+PSGRTYPE
+Added
+Cohort type
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81506
+PGREVCT
+Added
+Pell Grant recipients - revised cohort
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81511
+PGEXCLU
+Added
+Pell Grant recipients - exclusions
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81516
+PGADJCT
+Added
+Pell Grant recipients - adjusted cohort (revised minus exclusions)
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81521
+PGCMBAC
+Added
+Pell Grant recipients - number that completed a bachelor's or equivalent degree within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81526
+PGCMOBA
+Added
+Pell Grant recipients - number that completed an award of less than 4 academic years or equivalent within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81531
+PGCMTOT
+Added
+Pell Grant recipients - total number that completed an award within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81536
+SSREVCT
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - revised cohort
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81541
+SSEXCLU
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - exclusions
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81546
+SSADJCT
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - adjusted cohort (revised minus exclusions)
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81551
+SSCMBAC
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - number completed a bachelor's or equivalent within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81556
+SSCMOBA
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - number completed an award of less than 4 academic years within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81561
+SSCMTOT
+Added
+Subsidized Stafford Loan recipients not receiving Pell Grants - total number completed an award within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81566
+NRREVCT
+Added
+Did not receive Pell grant or subsidized Stafford loan - revised cohort
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81571
+NREXCLU
+Added
+Did not receive Pell grant or subsidized Stafford loan - exclusions
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81576
+NRADJCT
+Added
+Did not receive Pell grant or subsidized Stafford loan - adjusted cohort (revised minus exclusions)
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81581
+NRCMBAC
+Added
+Did not receive Pell grant or subsidized Stafford loan - number that completed a bachelor's or equivalent degree within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81586
+NRCMOBA
+Added
+Did not receive Pell grant or subsidized Stafford loan - number that completed an award of less than 4 academic years within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81591
+NRCMTOT
+Added
+Did not receive Pell grant or subsidized Stafford loan - total number that completed an award within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81596
+TTREVCT
+Added
+Total revised cohort
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81601
+TTEXCLU
+Added
+Total exclusions
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81606
+TTADJCT
+Added
+Total adjusted cohort
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81611
+TTCMBAC
+Added
+Total number that completed a bachelor's or equivalent degree within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81616
+TTCMOBA
+Added
+Total number that completed an award of less than 4 academic years within 150% of normal time
+50
+8
+Graduation Rates
+89
+GR_PELL_SSL
+GR2016_PELL_SSL
+81621
+TTCMTOT
+Added
+Total number that completed an award within 150% of normal time
+55
+18
+Outcome Measures
+48
+OM
+OM2015
+82031
+OMRCHT8
+Removed
+Revised 2007 cohort at 8 years (August 31, 2015)
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82301
+OM_FTFT_AWD6P
+Added
+Percent of full-time, first-time, degree/certificate-seeking undergraduates receiving an award - 6 years
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82302
+OM_FTFT_AWD8P
+Added
+Percent of full-time, first-time, degree/certificate-seeking undergraduates receiving an award - 8 years
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82303
+OM_FTFT_ENRYP
+Added
+Percent of full-time, first-time, degree/certificate-seeking undergraduates still enrolled at same institution
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82304
+OM_FTFT_ENRAP
+Added
+Percent of full-time, first-time, degree/certificate-seeking undergraduates enrolled at another institution
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82305
+OM_FTFT_ENRUP
+Added
+Percent of full-time, first-time, degree/certificate seeking undergraduates enrollment status unknown
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82311
+OM_PTFT_AWD6P
+Added
+Percent of part-time, first-time, degree/certificate-seeking undergraduates receiving an award - 6 years
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82312
+OM_PTFT_AWD8P
+Added
+Percent of part-time, first-time, degree/certificate-seeking undergraduates receiving an award - 8 years
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82313
+OM_PTFT_ENRYP
+Added
+Percent of part-time, first-time, degree/certificate-seeking undergraduates still enrolled at same institution
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82314
+OM_PTFT_ENRAP
+Added
+Percent of part-time, first-time, degree/certificate-seeking undergraduates enrolled at another institution
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82315
+OM_PTFT_ENRUP
+Added
+Percent of part-time, first-time, degree/certificate seeking undergraduates enrollment status unknown
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82321
+OM_FTNFT_AWD6P
+Added
+Percent of full-time, non-first-time, degree/certificate-seeking undergraduates receiving an award - 6 years
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82322
+OM_FTNFT_AWD8P
+Added
+Percent of full-time, non-first-time, degree/certificate-seeking undergraduates receiving an award - 8 years
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82323
+OM_FTNFT_ENRYP
+Added
+Percent of full-time, non-first-time, degree/certificate-seeking undergraduates still enrolled at same institution
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82324
+OM_FTNFT_ENRAP
+Added
+Percent of full-time, non-first-time, degree/certificate-seeking undergraduates enrolled at another institution
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82325
+OM_FTNFT_ENRUP
+Added
+Percent of full-time, non-first-time, degree/certificate seeking undergraduates enrollment status unknown
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82331
+OM_PTNFT_AWD6P
+Added
+Percent of part-time, non-first-time, degree/certificate-seeking undergraduates receiving an award - 6 years
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82332
+OM_PTNFT_AWD8P
+Added
+Percent of part-time, non-first-time, degree/certificate-seeking undergraduates receiving an award - 8 years
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82333
+OM_PTNFT_ENRYP
+Added
+Percent of part-time, non-first-time, degree/certificate-seeking undergraduates still enrolled at same institution
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82334
+OM_PTNFT_ENRAP
+Added
+Percent of part-time, non-first-time, degree/certificate-seeking undergraduates enrolled at another institution
+55
+18
+Outcome Measures
+90
+DRVOM
+DRVOM2016
+82335
+OM_PTNFT_ENRUP
+Added
+Percent of part-time, non-first-time, degree/certificate seeking undergraduates enrollment status unknown
+60
+6
+Finance
+28
+F_F2
+F1516_F2
+60733
+F2C10
+Added
+Total discounts and allowances
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60826
+F2E013
+Removed
+Instruction-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60831
+F2E014
+Removed
+Instruction-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60836
+F2E015
+Removed
+Instruction-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60841
+F2E016
+Removed
+Instruction-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60846
+F2E017
+Removed
+Instruction-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60861
+F2E023
+Removed
+Research-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60866
+F2E024
+Removed
+Research-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60871
+F2E025
+Removed
+Research-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60876
+F2E026
+Removed
+Research-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60881
+F2E027
+Removed
+Research-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60896
+F2E033
+Removed
+Public service-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60901
+F2E034
+Removed
+Public service-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60906
+F2E035
+Removed
+Public service-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60911
+F2E036
+Removed
+Public service-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60916
+F2E037
+Removed
+Public service-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60931
+F2E043
+Removed
+Academic support-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60936
+F2E044
+Removed
+Academic support-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60941
+F2E045
+Removed
+Academic support-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60946
+F2E046
+Removed
+Academic support-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60951
+F2E047
+Removed
+Academic support-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60966
+F2E053
+Removed
+Student service-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60971
+F2E054
+Removed
+Student service-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60976
+F2E055
+Removed
+Student service-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60981
+F2E056
+Removed
+Student service-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+60986
+F2E057
+Removed
+Student service-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61001
+F2E063
+Removed
+Institutional support-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61006
+F2E064
+Removed
+Institutional support-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61011
+F2E065
+Removed
+Institutional support-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61016
+F2E066
+Removed
+Institutional support-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61021
+F2E067
+Removed
+Institutional support-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61036
+F2E073
+Removed
+Auxiliary enterprises-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61041
+F2E074
+Removed
+Auxiliary enterprises-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61046
+F2E075
+Removed
+Auxiliary enterprises-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61051
+F2E076
+Removed
+Auxiliary enterprises-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61056
+F2E077
+Removed
+Auxiliary enterprises-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61091
+F2E087
+Removed
+Net grant aid to students-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61106
+F2E093
+Removed
+Hospital services-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61111
+F2E094
+Removed
+Hospital services-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61116
+F2E095
+Removed
+Hospital services-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61121
+F2E096
+Removed
+Hospital services-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61126
+F2E097
+Removed
+Hospital services-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61141
+F2E103
+Removed
+Independent operations-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61146
+F2E104
+Removed
+Independent operations-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61151
+F2E105
+Removed
+Independent operations-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61156
+F2E106
+Removed
+Independent operations-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61161
+F2E107
+Removed
+Independent operations-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61166
+F2E111
+Removed
+Operation and maintenance of plant-Total amount
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61171
+F2E112
+Removed
+Operation and maintenance of plant-Salaries and wages
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61176
+F2E113
+Removed
+Operation and maintenance of plant-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61181
+F2E114
+Removed
+Operation and maintenance of plant-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61186
+F2E115
+Removed
+Operation and maintenance of plant-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61191
+F2E116
+Removed
+Operation and maintenance of plant-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61196
+F2E117
+Removed
+Operation and maintenance of plant-All other
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61211
+F2E123
+Removed
+Other expenses-Benefits
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61216
+F2E124
+Removed
+Other expenses-Operation and maintenance of plant
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61221
+F2E125
+Removed
+Other expenses-Depreciation
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61226
+F2E126
+Removed
+Other expenses-Interest
+60
+6
+Finance
+28
+F_F2
+F1415_F2
+61231
+F2E127
+Removed
+Other expenses-All other
+60
+6
+Finance
+29
+F_F3
+F1516_F3
+62913
+F3C08
+Added
+Total discounts and allowances
+60
+6
+Finance
+29
+F_F3
+F1516_F3
+66812
+F3E074
+Added
+Total expenses-Operations and maintenance
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66520
+F3E013
+Removed
+Instruction-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66525
+F3E014
+Removed
+Instruction-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66530
+F3E015
+Removed
+Instruction-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66535
+F3E016
+Removed
+Instruction-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66540
+F3E017
+Removed
+Instruction-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66555
+F3E02A3
+Removed
+Research-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66560
+F3E02A4
+Removed
+Research-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66565
+F3E02A5
+Removed
+Research-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66570
+F3E02A6
+Removed
+Research-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66575
+F3E02A7
+Removed
+Research-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66590
+F3E02B3
+Removed
+Public service-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66595
+F3E02B4
+Removed
+Public service-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66600
+F3E02B5
+Removed
+Public service-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66605
+F3E02B6
+Removed
+Public service-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66610
+F3E02B7
+Removed
+Public service-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66625
+F3E03A3
+Removed
+Academic support-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66630
+F3E03A4
+Removed
+Academic support-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66635
+F3E03A5
+Removed
+Academic support-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66640
+F3E03A6
+Removed
+Academic support-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66645
+F3E03A7
+Removed
+Academic support-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66660
+F3E03B3
+Removed
+Student service-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66665
+F3E03B4
+Removed
+Student service-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66670
+F3E03B5
+Removed
+Student service-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66675
+F3E03B6
+Removed
+Student service-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66680
+F3E03B7
+Removed
+Student service-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66695
+F3E03C3
+Removed
+Institutional support-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66700
+F3E03C4
+Removed
+Institutional support-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66705
+F3E03C5
+Removed
+Institutional support-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66710
+F3E03C6
+Removed
+Institutional support-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66715
+F3E03C7
+Removed
+Institutional support-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66730
+F3E043
+Removed
+Auxiliary enterprises-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66735
+F3E044
+Removed
+Auxiliary enterprises-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66740
+F3E045
+Removed
+Auxiliary enterprises-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66745
+F3E046
+Removed
+Auxiliary enterprises-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66750
+F3E047
+Removed
+Auxiliary enterprises-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66760
+F3E057
+Removed
+Net grant aid to students-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66775
+F3E063
+Removed
+Other expenses-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66780
+F3E064
+Removed
+Other expenses-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66785
+F3E065
+Removed
+Other expenses-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66790
+F3E066
+Removed
+Other expenses-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66795
+F3E067
+Removed
+Other expenses-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66840
+F3E103
+Removed
+Hospital services-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66845
+F3E104
+Removed
+Hospital services-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66850
+F3E105
+Removed
+Hospital services-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66855
+F3E106
+Removed
+Hospital services-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66860
+F3E107
+Removed
+Hospital services-All other
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66865
+F3E111
+Removed
+Operation and maintenance of plant-Total amount
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66870
+F3E112
+Removed
+Operation and maintenance of plant-Salaries and wages
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66875
+F3E113
+Removed
+Operation and maintenance of plant-Benefits
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66880
+F3E114
+Removed
+Operation and maintenance of plant-Operation and maintenance of plant
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66885
+F3E115
+Removed
+Operation and maintenance of plant-Depreciation
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66890
+F3E116
+Removed
+Operation and maintenance of plant-Interest
+60
+6
+Finance
+29
+F_F3
+F1415_F3
+66895
+F3E117
+Removed
+Operation and maintenance of plant-All other
+60
+6
+Finance
+35
+F_F1A
+F1516_F1A
+61473
+F1A19
+Added
+Deferred outflows of resources
+60
+6
+Finance
+35
+F_F1A
+F1516_F1A
+61474
+F1A20
+Added
+Deferred inflows of resources
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61871
+F1C013
+Removed
+Instruction - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61876
+F1C014
+Removed
+Instruction - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61881
+F1C015
+Removed
+Instruction - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61896
+F1C023
+Removed
+Research - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61901
+F1C024
+Removed
+Research - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61906
+F1C025
+Removed
+Research - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61921
+F1C033
+Removed
+Public service - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61926
+F1C034
+Removed
+Public service - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61931
+F1C035
+Removed
+Public service - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61946
+F1C053
+Removed
+Academic support - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61951
+F1C054
+Removed
+Academic support - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61956
+F1C055
+Removed
+Academic support - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61971
+F1C063
+Removed
+Student services - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61976
+F1C064
+Removed
+Student services - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61981
+F1C065
+Removed
+Student services - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+61996
+F1C073
+Removed
+Institutional support - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62001
+F1C074
+Removed
+Institutional support - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62006
+F1C075
+Removed
+Institutional support - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62011
+F1C081
+Removed
+Operation maintenance of plant - Current year total
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62016
+F1C082
+Removed
+Operation maintenance of plant - Salaries and wages
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62021
+F1C083
+Removed
+Operation maintenance of plant - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62026
+F1C084
+Removed
+Operation maintenance of plant - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62031
+F1C085
+Removed
+Operation maintenance of plant - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62066
+F1C105
+Removed
+Scholarships and fellowships expenses -- All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62081
+F1C113
+Removed
+Auxiliary enterprises -- Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62086
+F1C114
+Removed
+Auxiliary enterprises -- Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62091
+F1C115
+Removed
+Auxiliary enterprises -- All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62106
+F1C123
+Removed
+Hospital services - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62111
+F1C124
+Removed
+Hospital services - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62116
+F1C125
+Removed
+Hospital services - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62131
+F1C133
+Removed
+Independent operations - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62136
+F1C134
+Removed
+Independent operations - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62141
+F1C135
+Removed
+Independent operations - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62156
+F1C143
+Removed
+Other expenses deductions - Employee fringe benefits
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62161
+F1C144
+Removed
+Other expenses deductions - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62166
+F1C145
+Removed
+Other expenses deductions - All other
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65036
+F1C016
+Removed
+Instruction - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65037
+F1C017
+Removed
+Instruction - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65041
+F1C026
+Removed
+Research - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65042
+F1C027
+Removed
+Research - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65046
+F1C036
+Removed
+Public service - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65047
+F1C037
+Removed
+Public service - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65051
+F1C056
+Removed
+Academic support - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65052
+F1C057
+Removed
+Academic support - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65056
+F1C066
+Removed
+Student services - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65057
+F1C067
+Removed
+Student services - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65061
+F1C076
+Removed
+Institutional support - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65062
+F1C077
+Removed
+Institutional support - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65066
+F1C086
+Removed
+Operation maintenance of plant - Operation and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65067
+F1C087
+Removed
+Operation maintenance of plant - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65071
+F1C116
+Removed
+Auxiliary enterprises - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65072
+F1C117
+Removed
+Auxiliary enterprises - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65076
+F1C126
+Removed
+Hospital services - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65077
+F1C127
+Removed
+Hospital services - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65081
+F1C136
+Removed
+Independent operations - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65082
+F1C137
+Removed
+Independent operations - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65086
+F1C146
+Removed
+Other expenses deductions - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65087
+F1C147
+Removed
+Other expenses deductions - Interest
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62268
+F1C196
+Variable Name change
+Total expenses and deductions - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1516_F1A
+62268
+F1C19OM
+Variable Name change
+Total expenses and deductions - Operations and maintenance of plant
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62271
+F1C194
+Variable Name change
+Total expenses and deductions - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1516_F1A
+62271
+F1C19DP
+Variable Name change
+Total expenses and deductions - Depreciation
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+62276
+F1C195
+Variable Name change
+Total expenses and deductions - Other Natural Expenses and Deductions
+60
+6
+Finance
+35
+F_F1A
+F1516_F1A
+62276
+F1C19OT
+Variable Name change
+Total expenses and deductions - Other Natural Expenses and Deductions
+60
+6
+Finance
+35
+F_F1A
+F1415_F1A
+65088
+F1C197
+Variable Name change
+Total expenses deductions - Interest
+60
+6
+Finance
+35
+F_F1A
+F1516_F1A
+65088
+F1C19IN
+Variable Name change
+Total expenses deductions - Interest
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68000
+F3SWINSP
+Added
+Salaries and wages for instruction as a percent of total expenses for instruction (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68005
+F3SWRSRP
+Added
+Salaries and wages for research as a percent of total expenses for research (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68010
+F3SWPBSP
+Added
+Salaries and wages for public service as a percent of total expenses for public service (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68015
+F3SWACSP
+Added
+Salaries and wages for academic support as a percent of total expenses for academic support (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68020
+F3SWSTSP
+Added
+Salaries and wages for student services as a percent of total expenses for student services (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68025
+F3SWISPP
+Added
+Salaries and wages for institutional support as a percent of total expenses for institutional support (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68030
+F3SWOTEP
+Added
+Salaries and wages for other core expense functions as a percent of total expenses for other core expense functions (for-profit)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68035
+F3SWCREP
+Added
+Salaries and wages for core expenses as a percent of total core expenses (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68170
+F1SWCREP
+Added
+Salaries and wages for core expenses as a percent of total core expenses (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68171
+F1SWINSP
+Added
+Salaries and wages for instruction as a percent of total expenses for instruction (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68172
+F1SWRSRP
+Added
+Salaries and wages for research as a percent of total expenses for research (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68173
+F1SWPBSP
+Added
+Salaries and wages for public service as a percent of total expenses for public service (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68174
+F1SWACSP
+Added
+Salaries and wages for academic support as a percent of total expenses for academic support (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68175
+F1SWSTSP
+Added
+Salaries and wages for student services as a percent of total expenses for student services (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68176
+F1SWISPP
+Added
+Salaries and wages for institutional support as a percent of total expenses for institutional support (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68179
+F1SWOTEP
+Added
+Salaries and wages for other core expense functions as a percent of total expenses for other core expense functions (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68270
+F2SWCREP
+Added
+Salaries and wages for core expenses as a percent of total core expenses (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68271
+F2SWINSP
+Added
+Salaries and wages for instruction as a percent of total expenses for instruction (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68272
+F2SWRSRP
+Added
+Salaries and wages for research as a percent of total expenses for research (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68273
+F2SWPBSP
+Added
+Salaries and wages for public service as a percent of total expenses for public service (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68274
+F2SWACSP
+Added
+Salaries and wages for academic support as a percent of total expenses for academic support (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68275
+F2SWSTSP
+Added
+Salaries and wages for student services as a percent of total expenses for student services (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68276
+F2SWISPP
+Added
+Salaries and wages for institutional support as a percent of total expenses for institutional support (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2016
+68279
+F2SWOTEP
+Added
+Salaries and wages for other core expense functions as a percent of total expenses for other core expense functions (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66170
+F1CREXPS
+Removed
+Salaries, wages, and benefit expenses for core expenses as a percent of total core expenses (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66171
+F1INSTPS
+Removed
+Salaries, wages, and benefit expenses for instruction as a percent of total expenses for instruction (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66172
+F1RSRCPS
+Removed
+Salaries, wages, and benefit expenses for research as a percent of total expenses for research (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66173
+F1PBSVPS
+Removed
+Salaries, wages, and benefit expenses for public service as a percent of total expenses for public service (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66174
+F1ACSPPS
+Removed
+Salaries, wages, and benefit expenses for academic support as a percent of total expenses for academic support (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66175
+F1STSVPS
+Removed
+Salaries, wages, and benefit expenses for student services as a percent of total expenses for student services (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66176
+F1INSUPS
+Removed
+Salaries, wages, and benefit expenses for institutional support as a percent of total expenses for institutional support (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66179
+F1OTEXPS
+Removed
+Salaries, wages, and benefit expenses for other core expense functions as a percent of total expenses for other core expense functions (GASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66270
+F2CREXPS
+Removed
+Salaries, wages, and benefit expenses for core expenses as a percent of total core expenses (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66271
+F2INSTPS
+Removed
+Salaries, wages, and benefit expenses for instruction as a percent of total expenses for instruction (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66272
+F2RSRCPS
+Removed
+Salaries, wages, and benefit expenses for research as a percent of total expenses for research (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66273
+F2PBSVPS
+Removed
+Salaries, wages, and benefit expenses for public service as a percent of total expenses for public service (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66274
+F2ACSPPS
+Removed
+Salaries, wages, and benefit expenses for academic support as a percent of total expenses for academic support (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66275
+F2STSVPS
+Removed
+Salaries, wages, and benefit expenses for student services as a percent of total expenses for student services (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66276
+F2INSUPS
+Removed
+Salaries, wages, and benefit expenses for institutional support as a percent of total expenses for institutional support (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+66279
+F2OTEXPS
+Removed
+Salaries, wages, and benefit expenses for other core expense functions as a percent of total expenses for other core expense functions (FASB)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+67000
+F3INSTPS
+Removed
+Salaries, wages, and benefit expenses for instruction as a percent of total expenses for instruction (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+67005
+F3RSRCPS
+Removed
+Salaries, wages, and benefit expenses for research as a percent of total expenses for research (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+67010
+F3PBSVPS
+Removed
+Salaries, wages, and benefit expenses for public service as a percent of total expenses for public service (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+67015
+F3ACSPPS
+Removed
+Salaries, wages, and benefit expenses for academic support as a percent of total expenses for academic support (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+67020
+F3STSVPS
+Removed
+Salaries, wages, and benefit expenses for student services as a percent of total expenses for student services (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+67025
+F3INSUPS
+Removed
+Salaries, wages, and benefit expenses for institutional support as a percent of total expenses for institutional support (for-profit institutions)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+67030
+F3OTEXPS
+Removed
+Salaries, wages, and benefit expenses for other core expense functions as a percent of total expenses for other core expense functions (for-profit)
+60
+6
+Finance
+65
+DRVF
+DRVF2015
+67035
+F3CREXPS
+Removed
+Salaries, wages, and benefit expenses for core expenses as a percent of total core expenses (for-profit institutions)
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40481
+SAINSTT
+Added
+Instructional staff - total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40482
+SAINSTM
+Added
+Instructional staff - men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40483
+SAINSTW
+Added
+Instructional staff - women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40491
+SA_9MCT
+Added
+Instructional staff on less than 9-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40492
+SA_9MCM
+Added
+Instructional staff on less than 9-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40493
+SA_9MCW
+Added
+Instructional staff on less than 9-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40901
+SA09MOT
+Added
+Salary outlays for instructional staff on 9-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40906
+SA09MOM
+Added
+Salary outlays for instructional staff on 9-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40911
+SA09MOW
+Added
+Salary outlays for instructional staff on 9-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40916
+SA10MOT
+Added
+Salary outlays for instructional staff on 10-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40921
+SA10MOM
+Added
+Salary outlays for instructional staff on 10-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40926
+SA10MOW
+Added
+Salary outlays for instructional staff on 10-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40931
+SA11MOT
+Added
+Salary outlays for instructional staff on 11-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40936
+SA11MOM
+Added
+Salary outlays for instructional staff on 11-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40941
+SA11MOW
+Added
+Salary outlays for instructional staff on 11-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40946
+SA12MOT
+Added
+Salary outlays for instructional staff on 12-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40951
+SA12MOM
+Added
+Salary outlays for instructional staff on 12-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40956
+SA12MOW
+Added
+Salary outlays for instructional staff on 12-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40961
+SAEQ9OT
+Added
+Salary outlays for instructional staff equated to a 9-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40963
+SAEQ9OM
+Added
+Salary outlays for instructional staff equated to a 9-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40965
+SAEQ9OW
+Added
+Salary outlays for instructional staff equated to a 9-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40967
+SAEQ9AT
+Added
+Average salary for instructional staff equated to a 9-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40969
+SAEQ9AM
+Added
+Average salary for instructional staff equated to a 9-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40971
+SAEQ9AW
+Added
+Average salary for instructional staff equated to a 9-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40976
+SA09MAT
+Added
+Average salary for instructional staff on 9-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40981
+SA09MAM
+Added
+Average salary for instructional staff on 9-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40986
+SA09MAW
+Added
+Average salary for instructional staff on 9-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40991
+SA10MAT
+Added
+Average salary for instructional staff on 10-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+40996
+SA10MAM
+Added
+Average salary for instructional staff on 10-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+41001
+SA10MAW
+Added
+Average salary for instructional staff on 10-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+41006
+SA11MAT
+Added
+Average salary for instructional staff on 11-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+41011
+SA11MAM
+Added
+Average salary for instructional staff on 11-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+41016
+SA11MAW
+Added
+Average salary for instructional staff on 11-month contract-women
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+41021
+SA12MAT
+Added
+Average salary for instructional staff on 12-month contract-total
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+41026
+SA12MAM
+Added
+Average salary for instructional staff on 12-month contract-men
+90
+9
+Human Resources
+16
+SAL_IS
+SAL2016_IS
+41031
+SA12MAW
+Added
+Average salary for instructional staff on 12-month contract-women
+100
+16
+Academic Libraries
+87
+AL
+AL2016
+160300
+LPSERIA
+Added
+Number of physical serials
+100
+16
+Academic Libraries
+87
+AL
+AL2016
+160305
+LESERIA
+Added
+Number of electronic serials
+100
+16
+Academic Libraries
+87
+AL
+AL2016
+160310
+LILLDYN
+Added
+Does institution have interlibrary loan services ?
+100
+16
+Academic Libraries
+87
+AL
+AL2015
+160220
+LSUPPVRS
+Removed
+Does your library support virtual reference services
+100
+16
+Academic Libraries
+87
+DRVAL
+DRVAL2016
+160315
+LPSERIAP
+Added
+Physical serials as a percent of the total library collection
+100
+16
+Academic Libraries
+87
+DRVAL
+DRVAL2016
+160320
+LESERIAP
+Added
+Digital/Electronic serials as a percent of the total library collection
+varnumber
+varname
+codevalue
+year
+changes
+valuelabel
+tablename
+10406
+RELAFFIL
+106
+2016
+Added
+Muslim
+IC2016
+10521
+ADMCON1
+4
+2015
+Removed
+Do not know
+ADM2016
+10521
+ADMCON1
+5
+2016
+Added
+Considered but not required
+ADM2016
+10526
+ADMCON2
+4
+2015
+Removed
+Do not know
+ADM2016
+10526
+ADMCON2
+5
+2016
+Added
+Considered but not required
+ADM2016
+10531
+ADMCON3
+4
+2015
+Removed
+Do not know
+ADM2016
+10531
+ADMCON3
+5
+2016
+Added
+Considered but not required
+ADM2016
+10536
+ADMCON4
+4
+2015
+Removed
+Do not know
+ADM2016
+10536
+ADMCON4
+5
+2016
+Added
+Considered but not required
+ADM2016
+10541
+ADMCON5
+4
+2015
+Removed
+Do not know
+ADM2016
+10541
+ADMCON5
+5
+2016
+Added
+Considered but not required
+ADM2016
+10546
+ADMCON6
+4
+2015
+Removed
+Do not know
+ADM2016
+10546
+ADMCON6
+5
+2016
+Added
+Considered but not required
+ADM2016
+10551
+ADMCON7
+4
+2015
+Removed
+Do not know
+ADM2016
+10551
+ADMCON7
+5
+2016
+Added
+Considered but not required
+ADM2016
+10556
+ADMCON8
+4
+2015
+Removed
+Do not know
+ADM2016
+10556
+ADMCON8
+5
+2016
+Added
+Considered but not required
+ADM2016
+10559
+ADMCON9
+4
+2015
+Removed
+Do not know
+ADM2016
+10559
+ADMCON9
+5
+2016
+Added
+Considered but not required
+ADM2016
+10856
+CONFNO1
+371
+2016
+Added
+Great Midwest Athletic Conference
+IC2016
+10856
+CONFNO1
+374
+2016
+Added
+River States
+IC2016
+10866
+CONFNO2
+374
+2016
+Added
+River States
+IC2016
+10876
+CONFNO3
+374
+2016
+Added
+River States
+IC2016
+10886
+CONFNO4
+374
+2016
+Added
+River States
+IC2016
+16070
+F1SYSCOD
+118050
+2015
+Removed
+IN - Metropolitan School District of Washington Township
+HD2016
+16070
+F1SYSCOD
+200470
+2015
+Removed
+Cooper University Hospital
+HD2016
+16070
+F1SYSCOD
+200554
+2016
+Added
+Embry-Riddle Aeronautical University Inc.
+HD2016
+16070
+F1SYSCOD
+200710
+2015
+Removed
+Humphreys College
+HD2016
+16070
+F1SYSCOD
+200840
+2015
+Removed
+Lutheran Bible Institute of Seattle
+HD2016
+16070
+F1SYSCOD
+200920
+2015
+Removed
+Mission Group Kansas Inc.
+HD2016
+16070
+F1SYSCOD
+201000
+2015
+Removed
+Not-for-profit 501C3 Corporation
+HD2016
+16070
+F1SYSCOD
+201240
+2015
+Removed
+Saint Joseph's Medical Center
+HD2016
+16070
+F1SYSCOD
+201450
+2015
+Removed
+Temple University Health System
+HD2016
+16070
+F1SYSCOD
+201520
+2015
+Removed
+Trinity Medical Center - Iowa Health
+HD2016
+16070
+F1SYSCOD
+201580
+2015
+Removed
+Widener University
+HD2016
+16070
+F1SYSCOD
+300150
+2015
+Removed
+Advanced Barber College & Hair Design Inc.
+HD2016
+16070
+F1SYSCOD
+300170
+2015
+Removed
+Alta Colleges Inc.
+HD2016
+16070
+F1SYSCOD
+300200
+2015
+Removed
+American Beauty Academy
+HD2016
+16070
+F1SYSCOD
+300360
+2015
+Removed
+Asia Business Consultants
+HD2016
+16070
+F1SYSCOD
+300410
+2015
+Removed
+B & H Education Inc.
+HD2016
+16070
+F1SYSCOD
+300750
+2015
+Removed
+Cambria-Rowe Business College Inc.
+HD2016
+16070
+F1SYSCOD
+301010
+2015
+Removed
+Coast Career Institute Inc.
+HD2016
+16070
+F1SYSCOD
+301170
+2015
+Removed
+Concept College of Cosmetology
+HD2016
+16070
+F1SYSCOD
+301230
+2015
+Removed
+Corinthian Colleges Inc.
+HD2016
+16070
+F1SYSCOD
+301360
+2015
+Removed
+Dade Medical College
+HD2016
+16070
+F1SYSCOD
+301560
+2015
+Removed
+Du Bois Business College Inc.
+HD2016
+16070
+F1SYSCOD
+301660
+2015
+Removed
+EVCI Career Colleges Holding Corporation
+HD2016
+16070
+F1SYSCOD
+301860
+2015
+Removed
+Edudyne Systems Inc.
+HD2016
+16070
+F1SYSCOD
+302040
+2015
+Removed
+Florida Barber Academy Inc.
+HD2016
+16070
+F1SYSCOD
+302560
+2015
+Removed
+J & J Hair Design School Enterprise Inc.
+HD2016
+16070
+F1SYSCOD
+302720
+2015
+Removed
+Leahcim Inc.
+HD2016
+16070
+F1SYSCOD
+303085
+2016
+Added
+Med-Life Enterprises, Inc.
+HD2016
+16070
+F1SYSCOD
+303570
+2015
+Removed
+PC ProSchools Inc.
+HD2016
+16070
+F1SYSCOD
+303940
+2015
+Removed
+Regency Corporation
+HD2016
+16070
+F1SYSCOD
+304210
+2016
+Added
+Schwarzkopf Professional.
+HD2016
+16070
+F1SYSCOD
+304990
+2015
+Removed
+Westwood College
+HD2016
+16070
+F1SYSCOD
+305030
+2015
+Removed
+Yearwood Corporation
+HD2016
+53001
+SISCAT
+440
+2016
+Added
+Not on tenure track/no tenure system, multi-year contract, total
+S2016_IS
+53001
+SISCAT
+441
+2016
+Added
+Not on tenure track/no tenure system, multi-year contract, professors
+S2016_IS
+53001
+SISCAT
+442
+2016
+Added
+Not on tenure track/no tenure system, multi-year contract, associate professors
+S2016_IS
+53001
+SISCAT
+443
+2016
+Added
+Not on tenure track/no tenure system, multi-year contract, assistant professors
+S2016_IS
+53001
+SISCAT
+444
+2016
+Added
+Not on tenure track/no tenure system, multi-year contract, instructors
+S2016_IS
+53001
+SISCAT
+445
+2016
+Added
+Not on tenure track/no tenure system, multi-year contract, lecturers
+S2016_IS
+53001
+SISCAT
+446
+2016
+Added
+Not on tenure track/no tenure system, multi-year contract, no academic rank
+S2016_IS
+53001
+SISCAT
+450
+2016
+Added
+Not on tenure track/no tenure system, indefinite contract, total
+S2016_IS
+53001
+SISCAT
+451
+2016
+Added
+Not on tenure track/no tenure system, indefinite contract, professors
+S2016_IS
+53001
+SISCAT
+452
+2016
+Added
+Not on tenure track/no tenure system, indefinite contract, associate professors
+S2016_IS
+53001
+SISCAT
+453
+2016
+Added
+Not on tenure track/no tenure system, indefinite contract, assistant professors
+S2016_IS
+53001
+SISCAT
+454
+2016
+Added
+Not on tenure track/no tenure system, indefinite contract, instructors
+S2016_IS
+53001
+SISCAT
+455
+2016
+Added
+Not on tenure track/no tenure system, indefinite contract, lecturers
+S2016_IS
+53001
+SISCAT
+456
+2016
+Added
+Not on tenure track/no tenure system, indefinite contract, no academic rank
+S2016_IS
+53006
+FACSTAT
+44
+2016
+Added
+With faculty status not on tenure track/No tenure system, multi-year contract
+S2016_IS
+53006
+FACSTAT
+45
+2016
+Added
+With faculty status not on tenure track/No tenure system, indefinite contract
+S2016_IS
+53016
+STAFFCAT
+4430
+2015
+Removed
+Grad Asst., Management
+S2016_OC
+53016
+STAFFCAT
+4440
+2015
+Removed
+Grad Asst., Business and Financial Operations
+S2016_OC
+53016
+STAFFCAT
+4450
+2015
+Removed
+Grad Asst., Computer, Engineering, and Science
+S2016_OC
+53016
+STAFFCAT
+4460
+2015
+Removed
+Grad Asst., Community Service, Legal, Arts, and Media
+S2016_OC
+53016
+STAFFCAT
+4470
+2015
+Removed
+Grad Asst., Library and Instructional support
+S2016_OC
+53016
+STAFFCAT
+4480
+2015
+Removed
+Grad Asst., Healthcare Practioners and Technical
+S2016_OC
+53016
+STAFFCAT
+4490
+2016
+Added
+Grduate assistants, Other
+S2016_OC
+53026
+OCCUPCAT
+430
+2015
+Removed
+Graduate Assistants Management Occupations
+S2016_OC
+53026
+OCCUPCAT
+440
+2015
+Removed
+Graduate Assistants Business and Financial Operations Occupations
+S2016_OC
+53026
+OCCUPCAT
+450
+2015
+Removed
+Graduate Assistants Computer, Engineering, and Science Occupations
+S2016_OC
+53026
+OCCUPCAT
+460
+2015
+Removed
+Graduate Assistants Community Service, Legal, Arts, and Media
+S2016_OC
+53026
+OCCUPCAT
+470
+2015
+Removed
+Graduate Assistants Library and Instructional support
+S2016_OC
+53026
+OCCUPCAT
+480
+2015
+Removed
+Graduate Assistants Healthcare Practioners and Technical
+S2016_OC
+53026
+OCCUPCAT
+490
+2016
+Added
+Graduate Assistants Other
+S2016_OC
+53036
+SNHCAT
+21044
+2016
+Added
+Instructional staff with faculty status, not on Tenure/No Tenure sys, multi-year contract
+S2016_NH
+53036
+SNHCAT
+21045
+2016
+Added
+Instructional staff with faculty status, not on Tenure/No Tenure sys, indefinite contract
+S2016_NH
+53046
+FACSTAT
+44
+2016
+Added
+With faculty status not on tenure track/No tenure system, multi-year contract
+S2016_NH
+53046
+FACSTAT
+45
+2016
+Added
+With faculty status not on tenure track/No tenure system, indefinite contract
+S2016_NH
+53051
+FACSTAT
+44
+2016
+Added
+With faculty status not on tenure track/No tenure system, multi-year contract
+S2016_SIS
+53051
+FACSTAT
+45
+2016
+Added
+With faculty status not on tenure track/No tenure system, indefinite contract
+S2016_SIS
+60016
+PRCH_F
+6
+2016
+Added
+Partial parent/child record - reports revenues/expenses that also includes branch campuses. Assets/liabilties reported with parent
+FLAGS2016
+90101
+EAPCAT
+10044
+2016
+Added
+All staff, multi-year contract
+EAP2016
+90101
+EAPCAT
+10045
+2016
+Added
+All staff, indefinite contract
+EAP2016
+90101
+EAPCAT
+20044
+2016
+Added
+Instructional, research and public service, Multi-year contract
+EAP2016
+90101
+EAPCAT
+20045
+2016
+Added
+Instructional, research and public service, Indefinite contract
+EAP2016
+90101
+EAPCAT
+21044
+2016
+Added
+Instructional staff, Multi-year contract
+EAP2016
+90101
+EAPCAT
+21045
+2016
+Added
+Instructional staff, Indefinite contract
+EAP2016
+90101
+EAPCAT
+21144
+2016
+Added
+Instructional staff, primarily instruction, Multi-year contract
+EAP2016
+90101
+EAPCAT
+21145
+2016
+Added
+Instructional staff, primarily instruction, Indefinite contract
+EAP2016
+90101
+EAPCAT
+21244
+2016
+Added
+Instructional staff, primarily instruction, exclusively credit Multi-year contract
+EAP2016
+90101
+EAPCAT
+21245
+2016
+Added
+Instructional staff, primarily instruction, exclusively credit Indefinite contract
+EAP2016
+90101
+EAPCAT
+21344
+2016
+Added
+Instructional staff, primarily instruction, exclusively not-for-credit Multi-year contract
+EAP2016
+90101
+EAPCAT
+21345
+2016
+Added
+Instructional staff, primarily instruction, exclusively not-for-credit Indefinite contract
+EAP2016
+90101
+EAPCAT
+21444
+2016
+Added
+Instructional staff, primarily instruction, combined credit/not-for-credit Multi-year contract
+EAP2016
+90101
+EAPCAT
+21445
+2016
+Added
+Instructional staff, primarily instruction, combined credit/not-for-credit Indefinite contract
+EAP2016
+90101
+EAPCAT
+21544
+2016
+Added
+Instructional staff - Instruction/research/public service Multi-year contract
+EAP2016
+90101
+EAPCAT
+21545
+2016
+Added
+Instructional staff - Instruction/research/public service Indefinite contract
+EAP2016
+90101
+EAPCAT
+22044
+2016
+Added
+Research Multi-year contract
+EAP2016
+90101
+EAPCAT
+22045
+2016
+Added
+Research Indefinite contract
+EAP2016
+90101
+EAPCAT
+23044
+2016
+Added
+Public service Multi-year contract
+EAP2016
+90101
+EAPCAT
+23045
+2016
+Added
+Public service Indefinite contract
+EAP2016
+90101
+EAPCAT
+25044
+2016
+Added
+Library/Archivists,Curators, and Museum/ Sudent and Acacemic Affairs and Other Education Services Multi-year contract
+EAP2016
+90101
+EAPCAT
+25045
+2016
+Added
+Library/Archivists,Curators, and Museum/ Sudent and Acacemic Affairs and Other Education Services Indefinite contract
+EAP2016
+90101
+EAPCAT
+26044
+2016
+Added
+Librarians/Library Technicians/Archivists, Curators, and Museum Technicians Multi-year contract
+EAP2016
+90101
+EAPCAT
+26045
+2016
+Added
+Librarians/Library Technicians/Archivists, Curators, and Museum Technicians Indefinite contract
+EAP2016
+90101
+EAPCAT
+26144
+2016
+Added
+Archivists, Curators, and Museum Technicians Multi-year contract
+EAP2016
+90101
+EAPCAT
+26145
+2016
+Added
+Archivists, Curators, and Museum Technicians Indefinite contract
+EAP2016
+90101
+EAPCAT
+26244
+2016
+Added
+Librarians Multi-year contract
+EAP2016
+90101
+EAPCAT
+26245
+2016
+Added
+Librarians Indefinite contract
+EAP2016
+90101
+EAPCAT
+26344
+2016
+Added
+Library Technicians Multi-year contract
+EAP2016
+90101
+EAPCAT
+26345
+2016
+Added
+Library Technicians Indefinite contract
+EAP2016
+90101
+EAPCAT
+26444
+2016
+Added
+Detailed library occupations not available for non-degree-granting institutions Multi-year contract
+EAP2016
+90101
+EAPCAT
+26445
+2016
+Added
+Detailed library occupations not available for non-degree-granting institutions Indefinite contract
+EAP2016
+90101
+EAPCAT
+27044
+2016
+Added
+Student and Academic Affairs and Other Education Services Multi-year contract
+EAP2016
+90101
+EAPCAT
+27045
+2016
+Added
+Student and Academic Affairs and Other Education Services Indefinite contract
+EAP2016
+90101
+EAPCAT
+30044
+2016
+Added
+Management Multi-year contract
+EAP2016
+90101
+EAPCAT
+30045
+2016
+Added
+Management Indefinite contract
+EAP2016
+90101
+EAPCAT
+31044
+2016
+Added
+Business and Financial Operations Multi-year contract
+EAP2016
+90101
+EAPCAT
+31045
+2016
+Added
+Business and Financial Operations Indefinite contract
+EAP2016
+90101
+EAPCAT
+32044
+2016
+Added
+Computer, Engineering, and Science Multi-year contract
+EAP2016
+90101
+EAPCAT
+32045
+2016
+Added
+Computer, Engineering, and Science Indefinite contract
+EAP2016
+90101
+EAPCAT
+33044
+2016
+Added
+Community, Social Service, Legal, Arts, Design, Entertainment, Sports and Media Multi-year contract
+EAP2016
+90101
+EAPCAT
+33045
+2016
+Added
+Community, Social Service, Legal, Arts, Design, Entertainment, Sports and Media Indefinite contract
+EAP2016
+90101
+EAPCAT
+34044
+2016
+Added
+Healthcare Practioners and Technical Multi-year contract
+EAP2016
+90101
+EAPCAT
+34045
+2016
+Added
+Healthcare Practioners and Technical Indefinite contract
+EAP2016
+90101
+EAPCAT
+43000
+2015
+Removed
+Graduate Assistants Management Occupations
+EAP2016
+90101
+EAPCAT
+44000
+2015
+Removed
+Graduate Assistants Business and Financial Operations Occupations
+EAP2016
+90101
+EAPCAT
+45000
+2015
+Removed
+Graduate Assistants Computer, Engineering, and Science Occupations
+EAP2016
+90101
+EAPCAT
+46000
+2015
+Removed
+Graduate Assistants Community, Social Service, Legal, Arts, Design, Entertainment, Sports and Media
+EAP2016
+90101
+EAPCAT
+47000
+2015
+Removed
+Graduate Assistants Library and Student and Academic Affairs and Other Education Services
+EAP2016
+90101
+EAPCAT
+48000
+2015
+Removed
+Graduate Assistants Healthcare Practioners and Technical
+EAP2016
+90101
+EAPCAT
+49000
+2016
+Added
+Graduate Assistants other
+EAP2016
+90106
+OCCUPCAT
+430
+2015
+Removed
+Graduate Assistants Management Occupations
+EAP2016
+90106
+OCCUPCAT
+440
+2015
+Removed
+Graduate Assistants Business and Financial Operations Occupations
+EAP2016
+90106
+OCCUPCAT
+450
+2015
+Removed
+Graduate Assistants Computer, Engineering, and Science Occupations
+EAP2016
+90106
+OCCUPCAT
+460
+2015
+Removed
+Graduate Assistants Community Social Service, Legal, Arts, Design, Entertainment, Sports and Media
+EAP2016
+90106
+OCCUPCAT
+470
+2015
+Removed
+Library and Student and Academic Affairs and Other Education Services
+EAP2016
+90106
+OCCUPCAT
+480
+2015
+Removed
+Graduate Assistants Healthcare Practioners and Technical
+EAP2016
+90106
+OCCUPCAT
+490
+2016
+Added
+Graduate Assistants other
+EAP2016
+90111
+FACSTAT
+44
+2016
+Added
+With faculty status not on tenure track/No tenure system, multi-year contract
+EAP2016
+90111
+FACSTAT
+45
+2016
+Added
+With faculty status not on tenure track/No tenure system, indefinite contract
+EAP2016
+160026
+HASAL
+0
+2016
+Added
+No, no access to library collections and no library expenses
+FLAGS2016
+Table
+Metadata variable
+Description
+Table16
+SurveyOrder
+Code used to sort surveys in a particular order
+Table16
+SurveyNumber
+Code assigned to each IPEDS survey component
+Table16
+Survey
+Name of Survey
+Table16
+YearCoverage
+Defines the year the data covers for each survey component. IPEDS data base for 2016-17 will have some survey components that will cover Academic year 2016-17 or Fall 2016, such as Institutional Characteristics and Fall enrollment. However surveys that cover data over a 12-month period such as completions, 12-month enrollment and finance refer to the preceding 12-month period (2015-16).
+Table16
+TableName
+Name of data table within a survey component
+Table16
+Tablenumber
+Unique code assigned to each table
+Table16
+TableTitle
+Table title
+Table16
+Description
+Gives summary of data presented in table. Also identifies the variables (primary keys), that uniquely identifies a record for tables that have multiple records per institutions (IPEDS ID/UNITID)
+Table16
+Release
+This meta data variable identifies which tables are released as provisional or as final/revised data tables. Some survey components or data tables within a survey are available for revisions through our revision system, such as directory information on the Institutional characteristics component.
+Table16
+Release date
+The date the table was released as provisional or final/revised.
+VarTable16
+Surveyorder
+Code used to sort surveys in a particular order
+VarTable16
+Surveynumber
+Code assigned to each IPEDS survey component
+VarTable16
+Survey
+Name of survey
+VarTable16
+Tablenumber
+Unique code assigned to each table
+VarTable16
+Tablename
+Name of data table within a survey component
+VarTable16
+Tabletitle
+Table title
+VarTable16
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+VarTable16
+Varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+VarTable16
+Varname
+Variable name
+VarTable16
+Imputationvar
+Identifies variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. The item imputation variables are not available in the access data base to reduce and meet the variable limitations of the access data base. To access these variables please use the "Use the Data Function" on the IPEDS home page. However please be aware that institutional response variables are available in the database.
+VarTable16
+Vartitle
+Variable title
+VarTable16
+Datatype
+The data type describes a variable as either a numeric (N) or Alphanumeric (A)
+VarTable16
+Fieldwidth
+Field width defines maximum number of characters of digits for the variable.
+VarTable16
+Format
+Format of a variable defines a variable as either continuous (Cont) or categorical (Disc).
+VarTable16
+Multirecord
+Identifies variables that are on tables that have multiple records per institution (Unitid). 1=Yes multirecord, 2=Single record per institution
+VarTable16
+Hasrv
+Identifies variables that are eligible for institutions to revise
+VarTable16
+Filenumber
+File number used to group variables by subject in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables by subject within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable16
+Sectionnumber
+Section number used to group variables within a file group in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables within a subject (file group) within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable16
+LongDescription
+Long detailed description of each variable
+VarTable16
+VarSource
+Source of variable - identifies survey component and IPEDS collection cycle . Becomes part of the description in the online Use the data function (data center)
+VarTable16
+Filetitle
+Name given to file group
+VarTable16
+SectionTitle
+Name given to section within file group
+ValueSets16
+Surveyorder
+Code used to sort surveys in a particular order
+ValueSets16
+Tablenumber
+Code assigned to each table
+ValueSets16
+Tablename
+Name of data table within a survey component
+ValueSets16
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+ValueSets16
+varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+ValueSets16
+varname
+Variable name
+ValueSets16
+codevalue
+Code values for a categorical variable
+ValueSets16
+frequency
+Number of occurrences for a code value for a variable in a table
+ValueSets16
+percent
+Percent of occurrences for a code value for a variable in a table
+ValueSets16
+valueOrder
+Code used to sort code values for a variable.
+ValueSets16
+valueLabel
+Description of code values
+ValueSets16
+vartitle
+Variable title
+VariableChanges1516
+surveyorder
+Code used to sort surveys in a particular order
+VariableChanges1516
+surveynumber
+Code assigned to each IPEDS survey component
+VariableChanges1516
+survey
+Name of Survey
+VariableChanges1516
+filenumber
+Used in the data center to group variables in a logical order
+VariableChanges1516
+table
+Abbreviated tablename that excludes the year from the tablename. Used to facilitate changes to a table across multiple years. For example tablename F1516_F1A and F1415_F1A, table=F_F1A
+VariableChanges1516
+tablename
+Name of data table within a survey component
+VariableChanges1516
+varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+VariableChanges1516
+varname
+Variable name
+VariableChanges1516
+changes
+Indicates type of change. (Added, Removed, Name Change
+VariableChanges1516
+varTitle
+Variable title
+ValueChanges1516
+varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+ValueChanges1516
+varname
+Variable name
+ValueChanges1516
+codevalue
+Values of a variable
+ValueChanges1516
+year
+Collection year 2015 (2015-16) , 2016 (2016-17)
+ValueChanges1516
+changes
+Indicates, if a codevalue for a variable is new (added) or an old value was. (removed)
+ValueChanges1516
+valuelabel
+Description of code values
+ValueChanges1516
+tablename
+Name of data table within a survey component

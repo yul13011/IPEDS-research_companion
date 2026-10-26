@@ -1,0 +1,584 @@
+[
+  {
+    "tools": [
+      {
+        "name": "inspect_table",
+        "input": {
+          "year": 2024,
+          "table": "EAP2024",
+          "offset": 0,
+          "limit": 60,
+          "keyword": ""
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "tools": [
+      {
+        "name": "category_values",
+        "input": {
+          "record_id": 137672,
+          "offset": 0,
+          "limit": 80
+        }
+      },
+      {
+        "name": "category_values",
+        "input": {
+          "record_id": 137674,
+          "offset": 0,
+          "limit": 40
+        }
+      },
+      {
+        "name": "category_values",
+        "input": {
+          "record_id": 137673,
+          "offset": 0,
+          "limit": 40
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "tools": [
+      {
+        "name": "read_source_series",
+        "input": {
+          "years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "fields": [
+            {
+              "record_id": 137672,
+              "code_values": [
+                "21010"
+              ]
+            },
+            {
+              "record_id": 137678,
+              "code_values": []
+            },
+            {
+              "record_id": 137681,
+              "code_values": []
+            }
+          ]
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "tools": [
+      {
+        "name": "submit_catalog_plan",
+        "input": {
+          "version": 1,
+          "institutions": [
+            "Yale University"
+          ],
+          "source_years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "requested_time": {
+            "basis": "fall",
+            "description": "Each fall from 2015 through 2024 (Fall 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024)"
+          },
+          "selections": [
+            {
+              "record_id": 137678,
+              "role": "measure"
+            },
+            {
+              "record_id": 137681,
+              "role": "measure"
+            }
+          ],
+          "filters": [
+            {
+              "record_id": 137672,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                149033
+              ]
+            }
+          ],
+          "group_by_record_ids": [],
+          "calculations": [
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time",
+              "operator": "sum",
+              "input_record_ids": [
+                137678,
+                137681
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "Per release year (Fall 2015-2024), for Yale University, sum EAPFT and EAPPT on the EAPCAT=21010 row (Instructional staff, With faculty status). Full-time and part-time are disjoint headcounts on the same row. Annual EAPCAT 21010 IDs: 2015=11912, 2016=29281, 2017=41429, 2018=56517, 2019=74309, 2020=88757, 2021=103524, 2022=119137, 2023=135288, 2024=149033. Annual EAPFT IDs: 14389, 16823, 32394, 47228, 62312, 77362, 92180, 106395, 122383, 137678. Annual EAPPT IDs: 14392, 16826, 32397, 47231, 62315, 77365, 92183, 106398, 122386, 137681 (in year order 2015-2024). Reported per year, not aggregated across years."
+            }
+          ],
+          "joins": [],
+          "output": "[\"table\"][0]",
+          "assumptions": [
+            "EAP rows are selected with EAPCAT=21010 (Instructional staff, With faculty status), which is the same code label in all ten annual releases.",
+            "The measure is a headcount from EAPFT plus EAPPT; medical-school-specific columns are not separately selected, so these totals follow the source EAPFT/EAPPT definitions.",
+            "Release labels 2015-2024 are treated as the Fall 2015-2024 collections; the EAP2019 table title text says Fall 2017 but its file title says Fall 2019, and this is kept visible, not harmonized.",
+            "Yale University is resolved by name to its UNITID at execution."
+          ],
+          "clarification_questions": []
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "tools": [
+      {
+        "name": "submit_catalog_plan",
+        "input": {
+          "version": 1,
+          "institutions": [
+            "Yale University"
+          ],
+          "source_years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "requested_time": {
+            "basis": "fall",
+            "description": "Each fall from 2015 through 2024 (Fall 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024)"
+          },
+          "selections": [
+            {
+              "record_id": 137678,
+              "role": "measure"
+            },
+            {
+              "record_id": 137681,
+              "role": "measure"
+            }
+          ],
+          "filters": [
+            {
+              "record_id": 137672,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                149033
+              ]
+            }
+          ],
+          "group_by_record_ids": [],
+          "calculations": [
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time",
+              "operator": "sum",
+              "input_record_ids": [
+                137678,
+                137681
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "Per release year (Fall 2015-2024), for Yale University, sum EAPFT and EAPPT on the EAPCAT=21010 row (Instructional staff, With faculty status). Full-time and part-time are disjoint headcounts on the same row. Annual EAPCAT 21010 IDs: 2015=11912, 2016=29281, 2017=41429, 2018=56517, 2019=74309, 2020=88757, 2021=103524, 2022=119137, 2023=135288, 2024=149033. Annual EAPFT IDs (2015-2024): 14389, 16823, 32394, 47228, 62312, 77362, 92180, 106395, 122383, 137678. Annual EAPPT IDs (2015-2024): 14392, 16826, 32397, 47231, 62315, 77365, 92183, 106398, 122386, 137681. Reported per year, not aggregated across years."
+            }
+          ],
+          "joins": [],
+          "output": "table",
+          "assumptions": [
+            "EAP rows are selected with EAPCAT=21010 (Instructional staff, With faculty status), which has the same code label in all ten annual releases.",
+            "The measure is a headcount from EAPFT plus EAPPT; medical-school-specific columns are not separately selected, so totals follow the source EAPFT/EAPPT definitions.",
+            "Release labels 2015-2024 are treated as the Fall 2015-2024 collections; the EAP2019 table title text says Fall 2017 but its file title says Fall 2019, and this is kept visible, not harmonized.",
+            "Yale University is resolved by name to its UNITID at execution."
+          ],
+          "clarification_questions": []
+        }
+      }
+    ],
+    "errors": [
+      {
+        "type": "tool_result",
+        "tool_use_id": "toolu_019d2SC2D1La4fbywSSRBrue",
+        "content": "'[\"table\"][0]' is not one of ['table', 'chart', 'export', 'answer']\n\nFailed validating 'enum' in schema['properties']['output']:\n    {'type': 'string', 'enum': ['table', 'chart', 'export', 'answer']}\n\nOn instance['output']:\n    '[\"table\"][0]'",
+        "is_error": true
+      }
+    ]
+  },
+  {
+    "tools": [
+      {
+        "name": "submit_catalog_plan",
+        "input": {
+          "version": 1,
+          "institutions": [
+            "Yale University"
+          ],
+          "source_years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "requested_time": {
+            "basis": "fall",
+            "description": "Each fall from 2015 through 2024 (Fall 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024)"
+          },
+          "selections": [
+            {
+              "record_id": 14389,
+              "role": "measure"
+            },
+            {
+              "record_id": 14392,
+              "role": "measure"
+            },
+            {
+              "record_id": 16823,
+              "role": "measure"
+            },
+            {
+              "record_id": 16826,
+              "role": "measure"
+            },
+            {
+              "record_id": 32394,
+              "role": "measure"
+            },
+            {
+              "record_id": 32397,
+              "role": "measure"
+            },
+            {
+              "record_id": 47228,
+              "role": "measure"
+            },
+            {
+              "record_id": 47231,
+              "role": "measure"
+            },
+            {
+              "record_id": 62312,
+              "role": "measure"
+            },
+            {
+              "record_id": 62315,
+              "role": "measure"
+            },
+            {
+              "record_id": 77362,
+              "role": "measure"
+            },
+            {
+              "record_id": 77365,
+              "role": "measure"
+            },
+            {
+              "record_id": 92180,
+              "role": "measure"
+            },
+            {
+              "record_id": 92183,
+              "role": "measure"
+            },
+            {
+              "record_id": 106395,
+              "role": "measure"
+            },
+            {
+              "record_id": 106398,
+              "role": "measure"
+            },
+            {
+              "record_id": 122383,
+              "role": "measure"
+            },
+            {
+              "record_id": 122386,
+              "role": "measure"
+            },
+            {
+              "record_id": 137678,
+              "role": "measure"
+            },
+            {
+              "record_id": 137681,
+              "role": "measure"
+            }
+          ],
+          "filters": [
+            {
+              "record_id": 14383,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                11912
+              ]
+            },
+            {
+              "record_id": 16111,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                29281
+              ]
+            },
+            {
+              "record_id": 32388,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                41429
+              ]
+            },
+            {
+              "record_id": 47222,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                56517
+              ]
+            },
+            {
+              "record_id": 62306,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                74309
+              ]
+            },
+            {
+              "record_id": 77356,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                88757
+              ]
+            },
+            {
+              "record_id": 92174,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                103524
+              ]
+            },
+            {
+              "record_id": 106391,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                119137
+              ]
+            },
+            {
+              "record_id": 122377,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                135288
+              ]
+            },
+            {
+              "record_id": 137672,
+              "operator": "eq",
+              "values": [
+                "21010"
+              ],
+              "code_record_ids": [
+                149033
+              ]
+            }
+          ],
+          "group_by_record_ids": [],
+          "calculations": [
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2015)",
+              "operator": "sum",
+              "input_record_ids": [
+                14389,
+                14392
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2015 EAPFT + EAPPT on EAPCAT=21010 for Yale University; disjoint headcounts on the same row."
+            },
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2016)",
+              "operator": "sum",
+              "input_record_ids": [
+                16823,
+                16826
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2016 EAPFT + EAPPT on EAPCAT=21010 for Yale University."
+            },
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2017)",
+              "operator": "sum",
+              "input_record_ids": [
+                32394,
+                32397
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2017 EAPFT + EAPPT on EAPCAT=21010 for Yale University."
+            },
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2018)",
+              "operator": "sum",
+              "input_record_ids": [
+                47228,
+                47231
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2018 EAPFT + EAPPT on EAPCAT=21010 for Yale University."
+            },
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2019)",
+              "operator": "sum",
+              "input_record_ids": [
+                62312,
+                62315
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2019 EAPFT + EAPPT on EAPCAT=21010 for Yale University."
+            },
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2020)",
+              "operator": "sum",
+              "input_record_ids": [
+                77362,
+                77365
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2020 EAPFT + EAPPT on EAPCAT=21010 for Yale University."
+            },
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2021)",
+              "operator": "sum",
+              "input_record_ids": [
+                92180,
+                92183
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2021 EAPFT + EAPPT on EAPCAT=21010 for Yale University."
+            },
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2022)",
+              "operator": "sum",
+              "input_record_ids": [
+                106395,
+                106398
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2022 EAPFT + EAPPT on EAPCAT=21010 for Yale University."
+            },
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2023)",
+              "operator": "sum",
+              "input_record_ids": [
+                122383,
+                122386
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2023 EAPFT + EAPPT on EAPCAT=21010 for Yale University."
+            },
+            {
+              "label": "Instructional staff with faculty status, full-time plus part-time (Fall 2024)",
+              "operator": "sum",
+              "input_record_ids": [
+                137678,
+                137681
+              ],
+              "denominator_record_id": null,
+              "group_by_record_ids": [],
+              "interpretation": "EAP2024 EAPFT + EAPPT on EAPCAT=21010 for Yale University."
+            }
+          ],
+          "joins": [],
+          "output": "table",
+          "assumptions": [
+            "EAP rows are selected with EAPCAT=21010 (Instructional staff, With faculty status), which has the same code label in all ten annual releases.",
+            "The measure is a headcount from EAPFT plus EAPPT; medical-school-specific columns are not separately selected, so totals follow the source EAPFT/EAPPT definitions.",
+            "Release labels 2015-2024 are treated as the Fall 2015-2024 collections; the EAP2019 table title text says Fall 2017 but its file title says Fall 2019, and this is kept visible, not harmonized.",
+            "Yale University is resolved by name to its UNITID at execution. Each year is reported separately, not aggregated across years."
+          ],
+          "clarification_questions": []
+        }
+      }
+    ],
+    "errors": [
+      {
+        "type": "tool_result",
+        "tool_use_id": "toolu_01EQhhzWWfe9fvyJLs3WaKuA",
+        "content": "Each proposed source year needs its own selected field evidence; no year may be silently omitted.",
+        "is_error": true
+      }
+    ]
+  }
+]

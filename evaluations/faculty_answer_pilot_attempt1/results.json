@@ -1,0 +1,26 @@
+[
+  {
+    "id": "yale",
+    "question": "How many faculty does Yale have?",
+    "error": "Missing or invalid source references for a proposed scope",
+    "seconds": 13.20820430002641
+  },
+  {
+    "id": "yale_paraphrase",
+    "question": "How big is Yale's faculty?",
+    "error": "Missing or invalid source references for a proposed scope",
+    "seconds": 7.984988000011072
+  },
+  {
+    "id": "harvard",
+    "question": "How many faculty does Harvard have?",
+    "error": "Missing or invalid source references for a proposed scope",
+    "seconds": 7.8713027000194415
+  },
+  {
+    "id": "smith",
+    "question": "How many faculty does Smith College have?",
+    "error": "Missing or invalid source references for a proposed scope",
+    "seconds": 8.595325700007379
+  }
+]

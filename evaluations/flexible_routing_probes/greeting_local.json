@@ -1,0 +1,16 @@
+{
+  "intent": "conversation",
+  "mode": "conversation",
+  "message": "Hello! What would you like to explore in the supplied IPEDS data?",
+  "purpose": {
+    "kind": "greeting",
+    "method": "local complete-message match"
+  },
+  "model_usage": {
+    "calls": 0,
+    "estimated_api_usd": 0
+  },
+  "latency": {
+    "live_model_calls": 0
+  }
+}

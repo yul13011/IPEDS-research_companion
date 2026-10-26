@@ -1,0 +1,768 @@
+Table documentation for the IPEDS Access database, 2024-25
+Provisional release
+Overview
+This spreadsheet contains the documentation for the IPEDS 2024-25 access database. It contains all variables that were collected in the 2024-25 IPEDS data collection. The IPEDS data collection consists of 3 collection modules. Institutional Characteristics 2024-25, Cost of attendance (COST1), 2021-22 - 2024-25, 12-month enrollment 2023-24 and completions 2023-24 were collected in the Fall 2024. Admissions Fall 2024, Graduation Rates 2024, Outcome Measures 2024, Student Financial Aid 2023-24 and Average net price (COST2), 2021-22 - 2023-24 were collected in the winter of 2024-25. Institutions were allowed to submit updates to Cost of Attendance data during the winter collection. Fall Enrollment 2024, Finance fiscal year 2024, Human Resources 2024 components and the Academic Libraries fiscal year 2024 were collected in the Spring 2025. The data in this database are provisional released data. The cost of attendance and tuition variables that were previously collected via the Institutional Characteristics (IC) component have been moved to the new Cost (COST1) survey component. The average net price of attendance and financial aid information needed to calculate average net price that were previously collected via the SFA component have been moved to the new Cost (COST2) survey component. There were additional new items added to the new cost component in 2024-25 compared to the previous year. Refer to the Newvariables24 worksheet in this workbook for a complete list of new variables added in 2024-25.
+Contents of spreadsheet
+Tables24
+Table List: List all data tables included in the downloadable access database and all tables in SQL data base that contains the data available through the Use the Data function (IPEDS Data Center). http://nces.ed.gov/ipeds/home/usethedata.
+Vartable24
+Variable list: Lists all variables for each data table in the IPEDS data base. Includes the variable name, variable label, description, data type, format and maximum field width of each variable. The data type describes a variable as either a numeric (N) or Alphanumeric (A) and the format of a variable defines a variable as either continuous (Cont) or categorical (Disc). It all also lists the variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. Imputation flag variables are not included in the Access database, because of limitations on maximum number of variables allowed in an Access table.
+ValueSets24
+This worksheet contains the code values and value labels for of all categorical variables in the database. It also lists the frequency and percent distribution for each code value by variable.
+Newvariables24
+This worksheet lists all new variables that were added to the 2024-25 IPEDS data base
+Metadata definitions
+This worksheet describes each of the metadata variables found in tables24, vartable24, Newvariables24, and valuesets24.
+SurveyOrder
+SurveyNumber
+Survey
+TableName
+VarNumber
+VarName
+VarTitle
+FileNumber
+SectionNumber
+10
+1
+Institutional Characteristics
+HD2024
+10300
+C00CARNEGIE
+2000 Carnegie Classification (historical - not updated)
+1
+1
+10
+1
+Institutional Characteristics
+HD2024
+10305
+CARNEGIEIC
+Carnegie Classification 2025: Institutional Classification
+1
+1
+10
+1
+Institutional Characteristics
+HD2024
+10310
+CARNEGIESAEC
+Carnegie Classification 2025: Student Access and Earnings
+1
+1
+10
+1
+Institutional Characteristics
+HD2024
+10315
+CARNEGIESIZE
+Carnegie Classification 2025: Institutional Size
+1
+1
+10
+1
+Institutional Characteristics
+HD2024
+10320
+CARNEGIEALF
+Carnegie Classification 2025: Award Level Focus
+1
+1
+10
+1
+Institutional Characteristics
+HD2024
+10325
+CARNEGIEAPM
+Carnegie Classification 2025: Undergraduate Academic Program Mix
+1
+1
+10
+1
+Institutional Characteristics
+HD2024
+10330
+CARNEGIEGPM
+Carnegie Classification 2025: Graduate Academic Program Mix
+1
+1
+10
+1
+Institutional Characteristics
+HD2024
+10331
+CARNEGIERSCH
+Carnegie Classification 2025: Research Activity Designation
+1
+1
+10
+1
+Institutional Characteristics
+FLAGS2024
+16276
+STAT_COS
+Response status - Cost component
+96
+18
+10
+1
+Institutional Characteristics
+FLAGS2024
+16277
+STAT_COS2
+Response status - Cost component (Winter)
+96
+18
+10
+1
+Institutional Characteristics
+FLAGS2024
+16280
+STAT_COS1
+Response status - Cost component (fall)
+99
+18
+10
+1
+Institutional Characteristics
+FLAGS2024
+16281
+LOCK_COS1
+Status of cost component (fall) when institution was migrated
+96
+18
+10
+1
+Institutional Characteristics
+FLAGS2024
+16285
+LOCK_COS2
+Status of cost component (winter) when institution was migrated
+96
+18
+10
+1
+Institutional Characteristics
+FLAGS2024
+16286
+PRCH_COS
+Parent/child indicator - Cost component
+96
+18
+10
+1
+Institutional Characteristics
+FLAGS2024
+16291
+IDX_COS
+ID number of parent institution - Cost component
+96
+18
+10
+1
+Institutional Characteristics
+FLAGS2024
+16296
+PCCOS_F
+Parent/child allocation factor - Cost component
+96
+18
+10
+1
+Institutional Characteristics
+FLAGS2024
+16301
+IMP_COS1
+Type of imputation method - Cost component (fall)
+96
+18
+10
+1
+Institutional Characteristics
+FLAGS2024
+16305
+IMP_COS2
+Type of imputation method - Cost component (winter)
+96
+18
+40
+7
+Student Financial Aid
+SFAV2324
+72091
+PARTVT
+Participates in the U.S. Department of Veterans Affairs Post-9/11 GI Bill or U.S. Department of Defense Military Tuition Assistance benefit programs
+86
+1
+40
+7
+Student Financial Aid
+SFAV2324
+72092
+PO9
+Participates in U.S. Department of Veterans Affairs Post-9/11 GI Bill
+86
+1
+40
+7
+Student Financial Aid
+SFAV2324
+72093
+DOD
+Participates in U.S. Department of Defense Military Tuition Assistance
+86
+1
+110
+19
+Cost
+COST1_2024
+16171
+APPFEEUW
+Undergraduate program application fee waiver
+5
+1
+110
+19
+Cost
+COST1_2024
+16176
+APPFEEGW
+Graduate program application fee waiver
+5
+1
+110
+19
+Cost
+COST1_2024
+16181
+APPLFEED
+Doctor's-Professional Practice program application fee
+5
+1
+110
+19
+Cost
+COST1_2024
+16186
+APPFEEDW
+Doctor's-Professional Practice program application fee waiver
+5
+1
+110
+19
+Cost
+COST1_2024
+16191
+FAFSAQ1
+Requires asset information from students who qualify for the exemption from asset reporting on the FAFSA form
+5
+1
+110
+19
+Cost
+COST1_2024
+16196
+FAFSAQ2
+Requires additional financial information separate from the FAFSA form
+5
+1
+110
+19
+Cost
+COST1_2024
+16201
+FAFQ2URL
+Website link which explains what additional financial information is required separate from the FAFSA form
+5
+1
+110
+19
+Cost
+COST1_2024
+16206
+HRCHF1
+In-district required fees for part-time undergraduates
+5
+3
+110
+19
+Cost
+COST1_2024
+16211
+HRCHF2
+In-state required fees for part-time undergraduates
+5
+3
+110
+19
+Cost
+COST1_2024
+16216
+HRCHF3
+Out-of-state required fees for part-time undergraduates
+5
+3
+110
+19
+Cost
+COST1_2024
+16221
+HRCHF5
+In-district required fees for part-time graduates
+5
+3
+110
+19
+Cost
+COST1_2024
+16226
+HRCHF6
+In-state required fees for part-time graduates
+5
+3
+110
+19
+Cost
+COST1_2024
+16231
+HRCHF7
+Out-of-state required fees for part-time graduates
+5
+3
+110
+19
+Cost
+COST1_2024
+16236
+CHG10AY0
+Off campus (with family), food and housing 2021-22
+95
+7
+110
+19
+Cost
+COST1_2024
+16241
+CHG10AY1
+Off campus (with family), food and housing 2022-23
+95
+7
+110
+19
+Cost
+COST1_2024
+16246
+CHG10AY2
+Off campus (with family), food and housing 2023-24
+95
+7
+110
+19
+Cost
+COST1_2024
+16251
+CHG10AY3
+Off campus (with family), food and housing 2024-25
+95
+7
+110
+19
+Cost
+COST1_2024
+16256
+CHG10PY0
+Off campus (with family), food and housing 2021-22
+95
+13
+110
+19
+Cost
+COST1_2024
+16261
+CHG10PY1
+Off campus (with family), food and housing 2022-23
+95
+13
+110
+19
+Cost
+COST1_2024
+16266
+CHG10PY2
+Off campus (with family), food and housing 2023-24
+95
+13
+110
+19
+Cost
+COST1_2024
+16271
+CHG10PY3
+Off campus (with family), food and housing 2024-25
+95
+13
+110
+19
+Cost
+COST2_2024_netprice
+73101
+COAISGS2
+Total cost of attendance -students awarded grant and scholarsip aid, 2023-24
+77
+1
+110
+19
+Cost
+COST2_2024_netprice
+73106
+COAISGS1
+Total cost of attendance -students awarded grant and scholarsip aid, 2022-23
+77
+1
+110
+19
+Cost
+COST2_2024_netprice
+73111
+COAISGS0
+Total cost of attendance -students awarded grant and scholarsip aid, 2021-22
+77
+1
+110
+19
+Cost
+COST2_2024_netprice
+73116
+COAIST42
+Total cost of attendance -students awarded Title IV federal financial aid, 2023-24
+77
+1
+110
+19
+Cost
+COST2_2024_netprice
+73121
+COAIST41
+Total cost of attendance -students awarded Title IV federal financial aid, 2022-23
+77
+1
+110
+19
+Cost
+COST2_2024_netprice
+73126
+COAIST40
+Total cost of attendance -students awarded Title IV federal financial aid, 2021-22
+77
+1
+110
+19
+Cost
+COST2_2024_netprice
+73131
+NPIS42
+Average net price - all students awarded Title IV federal financial aid, 2023-24
+77
+1
+110
+19
+Cost
+COST2_2024_netprice
+73136
+NPIS41
+Average net price - all students awarded Title IV federal financial aid, 2022-23
+77
+1
+110
+19
+Cost
+COST2_2024_netprice
+73141
+NPIS40
+Average net price - all students awarded Title IV federal financial aid, 2021-22
+77
+1
+110
+19
+Cost
+COST2_2024_netprice
+73146
+COAGS2
+Total cost of attendance-students awarded grant or scholarship aid, 2023-24
+77
+2
+110
+19
+Cost
+COST2_2024_netprice
+73151
+COAGS1
+Total cost of attendance-students awarded grant or scholarship aid, 2022-23
+77
+2
+110
+19
+Cost
+COST2_2024_netprice
+73156
+COAGS0
+Total cost of attendance-students awarded grant or scholarship aid, 2021-22
+77
+2
+110
+19
+Cost
+COST2_2024_netprice
+73161
+COAT42
+Total cost of attendance-students awarded Title IV federal financial aid, 2023-24
+77
+2
+110
+19
+Cost
+COST2_2024_netprice
+73166
+COAT41
+Total cost of attendance-students awarded Title IV federal financial aid, 2022-23
+77
+2
+110
+19
+Cost
+COST2_2024_netprice
+73171
+COAT40
+Total cost of attendance-students awarded Title IV federal financial aid, 2021-22
+77
+2
+110
+19
+Cost
+COST2_2024_netprice
+73176
+NPT42
+Average net price -all students awarded Title IV federal financial aid, 2023-24
+77
+2
+110
+19
+Cost
+COST2_2024_netprice
+73181
+NPT41
+Average net price -all students awarded Title IV federal financial aid, 2022-23
+77
+2
+110
+19
+Cost
+COST2_2024_netprice
+73186
+NPT40
+Average net price -all students awarded Title IV federal financial aid, 2021-22
+77
+2
+110
+19
+Cost
+COST2_2024_FinancialAid
+73191
+CSCUGFFN
+Number of students in the financial aid/cost cohort
+95
+1
+110
+19
+Cost
+COST2_2024_FinancialAid
+73192
+CSCFA1N
+Number of students in fall cohort
+95
+1
+110
+19
+Cost
+COST2_2024_FinancialAid
+73193
+CSCFY1N
+Number of students in full year cohort
+95
+1
+Table
+Metadata_variable
+Description
+Table24
+SurveyOrder
+Code used to sort surveys in a particular order
+Table24
+SurveyNumber
+Code assigned to each IPEDS survey component
+Table24
+Survey
+Name of Survey
+Table24
+YearCoverage
+Defines the year the data covers for each survey component. IPEDS data base for 2024-25 will have some survey components that will cover Academic year 2024-25 or Fall 2024, such as Institutional Characteristics and Fall enrollment. However surveys that cover data over a 12-month period such as completions, 12-month enrollment and finance refer to the preceding 12-month period (2023-24)
+Table24
+TableName
+Name of data table within a survey component
+Table24
+Tablenumber
+Unique code assigned to each table
+Table24
+TableTitle
+Table title
+Table24
+Description
+Gives summary of data presented in table. Also identifies the variables (primary keys), that uniquely identifies a record for tables that have multiple records per institutions (IPEDS ID/UNITID)
+Table24
+Release
+This meta data variable identifies which tables are released as provisional or as final/revised data tables. Some survey components or data tables within a survey are available for revisions through our revision system, such as directory information on the Institutional characteristics component.
+Table24
+Release date
+The date (month/year) the table was released as provisional or final/revised through the various data tools at http://nces.ed.gov/ipeds/use-the data.
+VarTable24
+Surveyorder
+Code used to sort surveys in a particular order
+VarTable24
+Surveynumber
+Code assigned to each IPEDS survey component
+VarTable24
+Survey
+Name of survey
+VarTable24
+Tablenumber
+Unique code assigned to each table
+VarTable24
+Tablename
+Name of data table within a survey component
+VarTable24
+Tabletitle
+Table title
+VarTable24
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+VarTable24
+Varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+VarTable24
+Varname
+Variable name
+VarTable24
+Imputationvar
+Identifies variable name of all imputation flag variables for each continuous variable. Imputation flag variable describes whether a value for the corresponding variable was reported, imputed or not applicable. The item imputation variables are not available in the access data base to reduce and meet the variable limitations of the access data base. To access these variables please use the "Use the Data Function" on the IPEDS home page. However please be aware that institutional response variables are available in the database.
+VarTable24
+Vartitle
+Variable title
+VarTable24
+Datatype
+The data type describes a variable as either a numeric (N) or Alphanumeric (A)
+VarTable24
+Fieldwidth
+Field width defines maximum number of characters of digits for the variable.
+VarTable24
+Format
+Format of a variable defines a variable as either continuous (Cont) or categorical (Disc).
+VarTable24
+Multirecord
+Identifies variables that are on tables that have multiple records per institution (Unitid). 1=Yes multirecord, 2=Single record per institution
+VarTable24
+Hasrv
+Identifies variables that are eligible for institutions to revise
+VarTable24
+Filenumber
+File number used to group variables by subject in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables by subject within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable24
+Sectionnumber
+Section number used to group variables within a file group in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables within a subject (file group) within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+VarTable24
+LongDescription
+Long detailed description of each variable
+VarTable24
+VarSource
+Source of variable - identifies survey component and IPEDS collection cycle . Becomes part of the description in the online Use the data function (data center)
+VarTable24
+Filetitle
+Name given to file group
+VarTable24
+SectionTitle
+Name given to section within file group
+ValueSets24
+Surveyorder
+Code used to sort surveys in a particular order
+ValueSets24
+Tablenumber
+Code assigned to each table
+ValueSets24
+Tablename
+Name of data table within a survey component
+ValueSets24
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+ValueSets24
+varorder
+Code used to sort variables within a table or within a logical group of variables for the custom download function
+ValueSets24
+varname
+Variable name
+ValueSets24
+codevalue
+Code values for a categorical variable
+ValueSets24
+frequency
+Number of occurrences for a code value for a variable in a table
+ValueSets24
+percent
+Percent of occurrences for a code value for a variable in a table
+ValueSets24
+valueOrder
+Code used to sort code values for a variable.
+ValueSets24
+valueLabel
+Description of code values
+ValueSets24
+vartitle
+Variable title
+NewVariables24
+surveyOrder
+Code used to sort surveys in a particular order
+NewVariables24
+surveynumber
+Code assigned to each IPEDS survey component
+NewVariables24
+survey
+Name of survey
+NewVariables24
+tablename
+Name of data table within a survey component
+NewVariables24
+varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+NewVariables24
+varname
+Variable name
+NewVariables24
+vartitle
+Variable title
+NewVariables24
+FileNumber
+File number used to group variables by subject in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables by subject within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+NewVariables24
+sectionnumber
+Section number used to group variables within a file group in the "Use the Data" function of the IPEDS home page. Used in the access database to group variables within a subject (file group) within a table. This variable is usually used in single record data files with tables that have many variables by subject areas. Data tables with multiple records such as race/ethnicity files usually have just 1 subject.
+NewValues24
+Varnumber
+Unique variable number assigned to each variable in the data base, sometimes variable names are repeated in tables with multiple records such race/ethnicity variables in Human Resources.
+NewValues24
+Varname
+Variable name
+NewValues24
+valueOrder
+Code used to sort code values for a variable.
+NewValues24
+Codevalue
+Code values for a categorical variable
+NewValues24
+valueLabel
+Description of code values

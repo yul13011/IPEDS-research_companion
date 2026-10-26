@@ -1,0 +1,49 @@
+{
+  "message": "For Mount Holyoke College (2024-25), Salary outlays, full-time instructional staff (all ranks), 2024-25: $27,792,003. The reporting period and source definitions are available below.",
+  "rows": [
+    {
+      "institution": "Mount Holyoke College",
+      "unitid": 166939,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "2024-25",
+      "metric": "fs_137706",
+      "measure": "Salary outlays, full-time instructional staff (all ranks), 2024-25",
+      "unit": "USD",
+      "value": 27792003.0,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[]",
+      "groups": [],
+      "available_rows": null,
+      "requested_rows": null,
+      "source_unit": "monetary amount",
+      "currency": "USD",
+      "currency_scale": 1
+    }
+  ],
+  "display_units": [
+    {
+      "metric": "fs_137706",
+      "year": 2024,
+      "unit": "USD",
+      "currency": "USD",
+      "scale": 1,
+      "evidence": [
+        {
+          "currency": "USD",
+          "scale": 1,
+          "record_id": 137706,
+          "table": "SAL2024_IS",
+          "variable": "SAOUTLT",
+          "basis": "Reviewed IPEDS reporting convention",
+          "reference": "https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2024/human%20resources/package_1_44.pdf",
+          "source_title": "Salary outlays - total"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+test_credit_and_clock_hours_resolve_from_actual_rows (prototype.tests.test_unit_resolution.ResolutionTests.test_credit_and_clock_hours_resolve_from_actual_rows) ... ok
+test_definition_and_section_resolutions (prototype.tests.test_unit_resolution.ResolutionTests.test_definition_and_section_resolutions) ... ok
+test_first_program_length_is_not_a_student_count (prototype.tests.test_unit_resolution.ResolutionTests.test_first_program_length_is_not_a_student_count) ... ok
+test_new_financial_fields_display_currency_and_preserve_values (prototype.tests.test_unit_resolution.ResolutionTests.test_new_financial_fields_display_currency_and_preserve_values) ... ok
+test_previous_unresolved_batch_has_no_unexamined_unknowns (prototype.tests.test_unit_resolution.ResolutionTests.test_previous_unresolved_batch_has_no_unexamined_unknowns) ... ok
+test_relational_direct_result_resolves_program_basis (prototype.tests.test_unit_resolution.ResolutionTests.test_relational_direct_result_resolves_program_basis) ... ok
+test_saved_old_verified_program_count_is_revalidated (prototype.tests.test_unit_resolution.ResolutionTests.test_saved_old_verified_program_count_is_revalidated) ... ok
+test_shorthand_finance_sections_are_exact_source_evidence (prototype.tests.test_unit_resolution.ResolutionTests.test_shorthand_finance_sections_are_exact_source_evidence) ... ok
+test_all_releases_staff_rank_unit_and_scores (prototype.tests.test_shared_units.SharedUnitTests.test_all_releases_staff_rank_unit_and_scores) ... ok
+test_currency_scales_and_prepared_catalog_freshness (prototype.tests.test_shared_units.SharedUnitTests.test_currency_scales_and_prepared_catalog_freshness) ... ok
+test_old_derived_results_need_revalidation_without_changing_values (prototype.tests.test_shared_units.SharedUnitTests.test_old_derived_results_need_revalidation_without_changing_values) ... ok
+test_quantities_are_not_population_or_percentile (prototype.tests.test_shared_units.SharedUnitTests.test_quantities_are_not_population_or_percentile) ... ok
+test_real_smith_reexecution_uses_same_verified_units (prototype.tests.test_shared_units.SharedUnitTests.test_real_smith_reexecution_uses_same_verified_units) ... ok
+test_saved_smith_units_chart_and_audit_preserve_originals (prototype.tests.test_shared_units.SharedUnitTests.test_saved_smith_units_chart_and_audit_preserve_originals) ... ok
+test_ui_cannot_force_an_unresolved_measurement_axis (prototype.tests.test_shared_units.SharedUnitTests.test_ui_cannot_force_an_unresolved_measurement_axis) ... 2026-10-22 13:49:46.813 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-22 13:49:46.814 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_unknown_and_codes_cannot_authorize_arithmetic (prototype.tests.test_shared_units.SharedUnitTests.test_unknown_and_codes_cannot_authorize_arithmetic) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 20.889s
+
+OK

@@ -1,0 +1,73 @@
+{
+  "scope": "Same-process controlled local comparison. Eager mode materializes the exact new download producers during redraw to emulate prior eager-export work; other code is held constant. No API calls, no browser paint/network measurements.",
+  "series_old": {
+    "median_seconds": 0.14673419995233417,
+    "samples": [
+      0.14673419995233417,
+      0.14747880003415048,
+      0.11944660008884966,
+      0.13076809991616756,
+      0.14980220003053546
+    ]
+  },
+  "series_new": {
+    "median_seconds": 0.013015999924391508,
+    "samples": [
+      0.019088100059889257,
+      0.018101199995726347,
+      0.013015999924391508,
+      0.011939799995161593,
+      0.012488999986089766
+    ]
+  },
+  "discovery": {
+    "full_chars": 207778,
+    "compact_chars": 78897,
+    "passages_before": 916,
+    "distinct_passages_after": 294
+  },
+  "redraws": [
+    {
+      "history_answers": 1,
+      "deferred": {
+        "median_seconds": 0.3379229001002386,
+        "samples": [
+          0.2972669000737369,
+          0.3379229001002386,
+          0.3703487999737263
+        ],
+        "exports_generated_per_redraw": 0
+      },
+      "eager_emulation": {
+        "median_seconds": 0.5827637000475079,
+        "samples": [
+          1.384324899991043,
+          0.5827637000475079,
+          0.5816393999848515
+        ],
+        "exports_generated_per_redraw": 3
+      }
+    },
+    {
+      "history_answers": 5,
+      "deferred": {
+        "median_seconds": 1.504911399912089,
+        "samples": [
+          1.504911399912089,
+          1.4991177000338212,
+          1.5065376000711694
+        ],
+        "exports_generated_per_redraw": 0
+      },
+      "eager_emulation": {
+        "median_seconds": 2.886153499945067,
+        "samples": [
+          3.0964813000755385,
+          2.886153499945067,
+          2.6375385000137612
+        ],
+        "exports_generated_per_redraw": 15
+      }
+    }
+  ]
+}

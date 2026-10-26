@@ -1,0 +1,607 @@
+{
+  "plan": {
+    "metrics": [
+      "as1_wm"
+    ],
+    "institutions": [
+      "Yale"
+    ],
+    "years": [
+      2024
+    ],
+    "time_basis": "source_period",
+    "output": "table"
+  },
+  "catalog_plan": {
+    "version": 2,
+    "institutions": [
+      "Yale"
+    ],
+    "source_years": [
+      2024
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "year": 2024,
+        "table": "SAL2024_IS",
+        "field_record_ids": [
+          137727,
+          137694,
+          137684
+        ],
+        "filters": [
+          {
+            "record_id": 137684,
+            "operator": "in",
+            "values": [
+              "1",
+              "2",
+              "3"
+            ],
+            "code_record_ids": [
+              148747,
+              148748,
+              148749
+            ]
+          }
+        ],
+        "group_by_record_ids": [],
+        "aggregates": [
+          {
+            "id": "wm",
+            "operator": "weighted_mean",
+            "record_id": 137727,
+            "weight_record_id": 137694
+          }
+        ]
+      }
+    ],
+    "joins": [],
+    "expressions": [],
+    "outputs": [
+      {
+        "reference": "as1_wm",
+        "label": "Weighted average 9-month salary, professor/associate/assistant (weighted by 9-month staff count)"
+      }
+    ],
+    "missing_policy": "propagate",
+    "time_basis": "source_period",
+    "assumptions": [
+      "Requested time is academic year 2024-25 (SAL2024_IS, release 2024).",
+      "Rows restricted to ARANK codes 1 (Professor), 2 (Associate professor), 3 (Assistant professor); all-ranks total (7) and other ranks excluded.",
+      "Values: SA09MAT (9-month average salary, total) weighted by SA09MCT (9-month staff count, total) per rank, pooled across the three ranks for Yale.",
+      "Yale resolved by name to a single UNITID at execution."
+    ],
+    "clarification_questions": []
+  },
+  "metric_specs": {
+    "as1_wm": {
+      "label": "Weighted average 9-month salary, professor/associate/assistant (weighted by 9-month staff count)",
+      "family": "query",
+      "unit": "monetary amount"
+    }
+  },
+  "rows": [
+    {
+      "institution": "Yale University",
+      "unitid": 130794,
+      "observation_year": 2024,
+      "entry_cohort_year": null,
+      "reporting_period": "2024-25",
+      "metric": "as1_wm",
+      "measure": "Weighted average 9-month salary, professor/associate/assistant (weighted by 9-month staff count)",
+      "unit": "monetary amount",
+      "value": 239023.5270018622,
+      "release": "IPEDS_2024-25_Provisional",
+      "provisional": true,
+      "status": "ok",
+      "numerator": null,
+      "denominator": null,
+      "series_segment": "[]",
+      "groups": [],
+      "available_rows": 3,
+      "requested_rows": 3
+    }
+  ],
+  "observation_years": [
+    2024
+  ],
+  "sources": [
+    {
+      "metric": "as1_wm",
+      "year": 2024,
+      "unitid": 130794,
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "database_size": 272990208,
+      "database_mtime_ns": 1792185798524065800,
+      "table": "SAL2024_IS",
+      "columns": [
+        "SA09MAT",
+        "SA09MCT"
+      ],
+      "filters": [
+        {
+          "record_id": 137684,
+          "operator": "in",
+          "values": [
+            "1",
+            "2",
+            "3"
+          ],
+          "code_record_ids": [
+            148747,
+            148748,
+            148749
+          ]
+        }
+      ],
+      "formula": {
+        "aggregates": [
+          {
+            "id": "wm",
+            "operator": "weighted_mean",
+            "record_id": 137727,
+            "weight_record_id": 137694
+          }
+        ],
+        "expressions": []
+      },
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"ARANK\" AS \"ARANK\",\"SA09MCT\" AS \"SA09MCT\",\"SA09MAT\" AS \"SA09MAT\" FROM \"SAL2024_IS\" WHERE \"UNITID\" IN (?) AND \"ARANK\" IN (?,?,?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "1",
+        "2",
+        "3"
+      ],
+      "codebook_evidence": [
+        {
+          "record_id": 137727,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SA09MAT",
+          "title": "Average salary for instructional staff on 9-month contract-total",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40976\nvarorder: 88\nvarname: SA09MAT\nimputationvar: XSA09MAT\nvartitle: Average salary for instructional staff on 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary of full-time, non-medical, instructional staff - total as of November 1 on 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 1856,
+          "long_description": "Average salary of full-time, non-medical, instructional staff - total as of November 1 on 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+          "documented_table": "SAL2024_IS",
+          "physical_table": "SAL2024_IS",
+          "location_override": false,
+          "issues": []
+        },
+        {
+          "record_id": 137694,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SA09MCT",
+          "title": "Instructional staff on 9-month contract-total",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40501\nvarorder: 22\nvarname: SA09MCT\nimputationvar: XSA09MCT\nvartitle: Instructional staff on 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Number of full-time, non-medical, instructional staff - total as of November 1, on 9 month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 1823,
+          "long_description": "Number of full-time, non-medical, instructional staff - total as of November 1, on 9 month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+          "documented_table": "SAL2024_IS",
+          "physical_table": "SAL2024_IS",
+          "location_override": false,
+          "issues": []
+        }
+      ],
+      "code_filters": [
+        {
+          "record_id": 148747,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Professor",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 1\nfrequency: 2450\npercent: 16.1\nvalueorder: 2\nvaluelabel: Professor\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10277
+        },
+        {
+          "record_id": 148748,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Associate professor",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 2\nfrequency: 2310\npercent: 15.18\nvalueorder: 3\nvaluelabel: Associate professor\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10278
+        },
+        {
+          "record_id": 148749,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "code_value",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Assistant professor",
+          "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 3\nfrequency: 2301\npercent: 15.12\nvalueorder: 4\nvaluelabel: Assistant professor\nvartitle: Academic rank",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "valueSets24",
+          "source_row": 10279
+        }
+      ]
+    }
+  ],
+  "definitions": {
+    "as1_wm": "Average salary for instructional staff on 9-month contract-total: Average salary of full-time, non-medical, instructional staff - total as of November 1 on 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\n\nInstructional staff on 9-month contract-total: Number of full-time, non-medical, instructional staff - total as of November 1, on 9 month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school"
+  },
+  "warnings": [
+    "Requested time is academic year 2024-25 (SAL2024_IS, release 2024).",
+    "Rows restricted to ARANK codes 1 (Professor), 2 (Associate professor), 3 (Assistant professor); all-ranks total (7) and other ranks excluded.",
+    "Values: SA09MAT (9-month average salary, total) weighted by SA09MCT (9-month staff count, total) per rank, pooled across the three ranks for Yale.",
+    "Yale resolved by name to a single UNITID at execution.",
+    "Source row domains, missingness policy, join cardinality and typed calculations are retained in the audit. Missing values are not zeros."
+  ],
+  "created_at": "2026-10-19T19:22:25.448755+00:00",
+  "registry_sha256": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+  "review_status": "Source-bound relational plan with observed grain, bounded domains, cardinality and typed-operation validation.",
+  "coverage": {
+    "requested_cells": 1,
+    "available_cells": 1
+  },
+  "query_audit": [
+    {
+      "source_id": "s1",
+      "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+      "sql": "SELECT \"UNITID\" AS \"UNITID\",\"ARANK\" AS \"ARANK\",\"SA09MCT\" AS \"SA09MCT\",\"SA09MAT\" AS \"SA09MAT\" FROM \"SAL2024_IS\" WHERE \"UNITID\" IN (?) AND \"ARANK\" IN (?,?,?) LIMIT 20001",
+      "parameters": [
+        130794,
+        "1",
+        "2",
+        "3"
+      ],
+      "selected_rows": 3,
+      "raw_keys": [
+        "UNITID",
+        "ARANK"
+      ],
+      "row_limit": 20000,
+      "requested_unitids": [
+        130794
+      ],
+      "missing_unitids": [],
+      "missing_codes": {
+        "137684": [],
+        "137694": [],
+        "137727": []
+      }
+    }
+  ],
+  "join_validation": [],
+  "semantic_validation": {
+    "execution_approved": true,
+    "version": 2,
+    "missing_policy": "propagate",
+    "time_basis": "source_period"
+  },
+  "catalog_evidence": {
+    "definition_evidence": [
+      {
+        "record_id": 137684,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "SAL2024_IS",
+        "variable_name": "ARANK",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"SAL2024_IS\"]",
+        "imputation_variable": "",
+        "category_count": 7,
+        "definition_hash": "0946befdaa44fe4b6477036796158f3ee364dde6c9f19ab18eb186be2f519630",
+        "normalized_hash": "9aa1ce946ce5015b223b2c099acf46029f51536a01fd25db0f937ea2803f6a13",
+        "category_hash": "d0591dd9a300aa714e6a9dd2d5b0daf6b6c7a19d39bd20e12d43ab4cdf7907aa",
+        "title": "Academic rank",
+        "long_description": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.",
+        "data_type": "N",
+        "format": "Disc",
+        "evidence": {
+          "record_id": 137684,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "ARANK",
+          "title": "Academic rank",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\nvartitle: Academic rank\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank.\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 1813
+        }
+      },
+      {
+        "record_id": 137694,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "SAL2024_IS",
+        "variable_name": "SA09MCT",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"SAL2024_IS\"]",
+        "imputation_variable": "XSA09MCT",
+        "category_count": 0,
+        "definition_hash": "534599506edd7ad7012dbedf6fff30dbbcc03f060aa20e7f67d3b42ab85b86ce",
+        "normalized_hash": "48b7d3cc05c4303f03bc79e63001f8aa9680044618476b6b6ad490f9dc140f1f",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Instructional staff on 9-month contract-total",
+        "long_description": "Number of full-time, non-medical, instructional staff - total as of November 1, on 9 month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 137694,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SA09MCT",
+          "title": "Instructional staff on 9-month contract-total",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40501\nvarorder: 22\nvarname: SA09MCT\nimputationvar: XSA09MCT\nvartitle: Instructional staff on 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Number of full-time, non-medical, instructional staff - total as of November 1, on 9 month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 1823
+        }
+      },
+      {
+        "record_id": 137727,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "SAL2024_IS",
+        "variable_name": "SA09MAT",
+        "physical_status": "documented_location_present",
+        "physical_locations_json": "[\"SAL2024_IS\"]",
+        "imputation_variable": "XSA09MAT",
+        "category_count": 0,
+        "definition_hash": "141e46176c66296c6bcd9937ba0bb5d74f0786c08eb62ddf398ae682b1011ba6",
+        "normalized_hash": "0019b3e627f505ee27d0a6051aee17fe0387cb07ad057e1ffbcba560b75746a2",
+        "category_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "title": "Average salary for instructional staff on 9-month contract-total",
+        "long_description": "Average salary of full-time, non-medical, instructional staff - total as of November 1 on 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school",
+        "data_type": "N",
+        "format": "Cont",
+        "evidence": {
+          "record_id": 137727,
+          "release_id": "IPEDS_2024-25_Provisional",
+          "kind": "variable_definition",
+          "table_name": "SAL2024_IS",
+          "variable_name": "SA09MAT",
+          "title": "Average salary for instructional staff on 9-month contract-total",
+          "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\ntablenumber: 91\ntablename: SAL2024_IS\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nvarnumber: 40976\nvarorder: 88\nvarname: SA09MAT\nimputationvar: XSA09MAT\nvartitle: Average salary for instructional staff on 9-month contract-total\ndatatype: N\nfieldwidth: 6\nformat: Cont\nmultirecord: 1\nfilenumber: 16\nsectionnumber: 1\nlongdescription: Average salary of full-time, non-medical, instructional staff - total as of November 1 on 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or bonuses. Additional stipends for administrative, managerial or other responsibilities are NOT included in the salary outlays data for instructional staff. Contract length - The contracted teaching period. The number of months should correspond with the number of months worked (which may differ from the number of months over which staff are paid). Excludes medical staff - Staff employed by or staff working in the medical school (Doctor of Medicine [M.D.] and/or Doctor of Osteopathic Medicine [D.O.]) component of a postsecondary institution or in a free standing medical school. Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene unless the health or allied health schools or departments are affiliated with (housed in or under the authority of) the medical school\nvarsource: IPEDS, Spring 2025, Human Resource component, Salaries section\nfiletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\nsectiontitle: Full-time, nonmedical instructional staff",
+          "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+          "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+          "sheet_name": "varTable24",
+          "source_row": 1856
+        }
+      }
+    ],
+    "category_evidence": [
+      {
+        "record_id": 148747,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "code_value",
+        "table_name": "SAL2024_IS",
+        "variable_name": "ARANK",
+        "title": "Professor",
+        "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 1\nfrequency: 2450\npercent: 16.1\nvalueorder: 2\nvaluelabel: Professor\nvartitle: Academic rank",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "valueSets24",
+        "source_row": 10277
+      },
+      {
+        "record_id": 148748,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "code_value",
+        "table_name": "SAL2024_IS",
+        "variable_name": "ARANK",
+        "title": "Associate professor",
+        "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 2\nfrequency: 2310\npercent: 15.18\nvalueorder: 3\nvaluelabel: Associate professor\nvartitle: Academic rank",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "valueSets24",
+        "source_row": 10278
+      },
+      {
+        "record_id": 148749,
+        "release_id": "IPEDS_2024-25_Provisional",
+        "kind": "code_value",
+        "table_name": "SAL2024_IS",
+        "variable_name": "ARANK",
+        "title": "Assistant professor",
+        "body": "surveyorder: 90\ntablenumber: 91\ntablename: SAL2024_IS\nvarnumber: 40106\nvarorder: 2\nvarname: ARANK\ncodevalue: 3\nfrequency: 2301\npercent: 15.12\nvalueorder: 4\nvaluelabel: Assistant professor\nvartitle: Academic rank",
+        "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+        "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+        "sheet_name": "valueSets24",
+        "source_row": 10279
+      }
+    ],
+    "catalog_identity": "717df59e0c98ee67cf59dd79a276b5d64272ae57abcef3efbae5299dc62d1ecb",
+    "table_evidence": [
+      {
+        "release_id": "IPEDS_2024-25_Provisional",
+        "table_name": "SAL2024_IS",
+        "family": "SAL{YEAR}_IS",
+        "profile": {
+          "candidate_key": [
+            "UNITID",
+            "ARANK"
+          ],
+          "distinct_institutions": 3782,
+          "expected_rows_match": true,
+          "key_status": "observed_unique_candidate_review_required",
+          "null_institution_ids": 0,
+          "query_count": 2,
+          "rows": 15216,
+          "status": "profiled"
+        },
+        "period_evidence": [
+          {
+            "record_id": 135860,
+            "release_date": null,
+            "release_status": "Provisional",
+            "year_coverage": "2024-25"
+          }
+        ],
+        "population_evidence": [
+          {
+            "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology.",
+            "record_id": 135860,
+            "title": "Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25"
+          }
+        ],
+        "source_definitions": [
+          {
+            "record_id": 135860,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "kind": "table_definition",
+            "table_name": "SAL2024_IS",
+            "variable_name": "",
+            "title": "Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25",
+            "body": "surveyorder: 90\nsurveynumber: 9\nsurvey: Human Resources\nyearcoverage: 2024-25\ntablename: SAL2024_IS\ntablenumber: 91\ntabletitle: Number and salary outlays for full-time nonmedical instructional staff, by gender, and academic rank: Academic year 2024-25\ndescription: This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution. Each record is uniquely defined by the variables IPEDS ID (UNITID), and the variable academic rank (ARANK) of full-time instructional staff. Between 2012 and 2015 salary information were not available by number of months worked. Equated 9-month average salaries were available, but because of the lack of detailed salary data by the number of months worked, it is not consistent with equated 9-month salary data generated from 2016 through the current year. Prior to 2012, number of staff and salary information were available for 9/10 months worked and 11/12 months worked. Equated 9-month average salaries and equated 9-month salary outlays were available and is more consistent with the equated salaries from 2016 through the current year. Prior to 2016 the number of months worked were referred to as contract lengths. In 2016, the salary survey collection screens used the \"number of months worked\" terminology.\nrelease: Provisional\nrelease_date: January 2026",
+            "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+            "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+            "sheet_name": "tables24",
+            "source_row": 41
+          }
+        ]
+      }
+    ]
+  },
+  "field_semantics": {
+    "137684": {
+      "version": 2,
+      "record_id": 137684,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "SAL2024_IS",
+      "variable": "ARANK",
+      "source_title": "Academic rank",
+      "measure_base": "academic rank",
+      "dimensions": {},
+      "unit": "unknown",
+      "numeric_kind": "coded_or_other",
+      "additive": false,
+      "total_scope": false,
+      "reporting_periods": [
+        "2024-25"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135860,
+          "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution"
+        }
+      ],
+      "required_row_selectors": [
+        "ARANK"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 137684,
+        "table_record_ids": [
+          135860
+        ],
+        "title_excerpt": "Academic rank",
+        "definition_excerpt": "Academic rank is usually assigned by institution and includes Professors, Associate professors, Assistant professors, Instructors, Lecturers, and No academic rank."
+      },
+      "readiness": "partial_unit_unknown",
+      "execution_approved": false
+    },
+    "137694": {
+      "version": 2,
+      "record_id": 137694,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "SAL2024_IS",
+      "variable": "SA09MCT",
+      "source_title": "Instructional staff on 9-month contract-total",
+      "measure_base": "instructional staff on 9 month contract",
+      "dimensions": {},
+      "unit": "employees",
+      "numeric_kind": "continuous",
+      "additive": true,
+      "total_scope": true,
+      "reporting_periods": [
+        "2024-25"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135860,
+          "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution"
+        }
+      ],
+      "required_row_selectors": [
+        "ARANK"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 137694,
+        "table_record_ids": [
+          135860
+        ],
+        "title_excerpt": "Instructional staff on 9-month contract-total",
+        "definition_excerpt": "Number of full-time, non-medical, instructional staff - total as of November 1, on 9 month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Contract length - The contracted teaching period. The number of months should correspond with the number of months worke"
+      },
+      "readiness": "described",
+      "execution_approved": false
+    },
+    "137727": {
+      "version": 2,
+      "record_id": 137727,
+      "release_id": "IPEDS_2024-25_Provisional",
+      "table": "SAL2024_IS",
+      "variable": "SA09MAT",
+      "source_title": "Average salary for instructional staff on 9-month contract-total",
+      "measure_base": "average salary for instructional staff on 9 month contract",
+      "dimensions": {},
+      "unit": "monetary amount",
+      "numeric_kind": "continuous",
+      "additive": false,
+      "total_scope": true,
+      "reporting_periods": [
+        "2024-25"
+      ],
+      "field_time_qualifiers": [],
+      "population_evidence": [
+        {
+          "record_id": 135860,
+          "description": "This table contains the number of staff, total salary outlays and average salaries of full-time, nonmedical, instructional staff by academic rank, number of months worked, and gender. The categories for number of months worked are 9-, 10-, 11- and 12-months. Number of staff working less than 9 months are also available, but salary data are not available for this group. Equated 9-month salary outlays and equated 9-month average salaries are also available by academic rank and gender. For details see the variables listed in the vartable24. This data file has multiple records for each institution"
+        }
+      ],
+      "required_row_selectors": [
+        "ARANK"
+      ],
+      "missing_policy": "Propagate missing/zero denominators; no zero substitution or inferred imputation status.",
+      "category_overlap_warning": false,
+      "evidence": {
+        "variable_record_id": 137727,
+        "table_record_ids": [
+          135860
+        ],
+        "title_excerpt": "Average salary for instructional staff on 9-month contract-total",
+        "definition_excerpt": "Average salary of full-time, non-medical, instructional staff - total as of November 1 on 9-month contract. Instructional Staff- An occupational category that consists of the following two functions: 1) \"Instruction\" only and 2) \"Instruction combined with research and/or public service Annual salary outlays (combined salaries of all staff) include base salaries only \u2013 no supplements, overloads or "
+      },
+      "readiness": "described",
+      "execution_approved": false
+    }
+  },
+  "latency": {
+    "validation_seconds": 0.07595579995540902,
+    "query_seconds": 0.009172200050670654,
+    "planning_and_binding_seconds": 11.803034199983813,
+    "answer_ready_seconds": 11.888792600017041,
+    "live_model_calls": 4,
+    "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness."
+  },
+  "result_id": "22b1f08c006bfe41",
+  "planning_validation": {
+    "repair_attempts": []
+  }
+}

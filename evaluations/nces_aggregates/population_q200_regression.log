@@ -1,0 +1,22 @@
+test_alias_reference_normalization_retains_exact_field (prototype.tests.test_populations.PopulationTests.test_alias_reference_normalization_retains_exact_field) ... ok
+test_annual_trend_source_binding_and_intent (prototype.tests.test_populations.PopulationTests.test_annual_trend_source_binding_and_intent) ... ok
+test_cannot_sum_institutional_rates (prototype.tests.test_populations.PopulationTests.test_cannot_sum_institutional_rates) ... ok
+test_entering_cohort_is_bound_from_source_evidence (prototype.tests.test_populations.PopulationTests.test_entering_cohort_is_bound_from_source_evidence) ... ok
+test_known_discrepancy_blocks_method_not_named_queries (prototype.tests.test_populations.PopulationTests.test_known_discrepancy_blocks_method_not_named_queries) ... ok
+test_named_scope_is_not_silently_dropped (prototype.tests.test_populations.PopulationTests.test_named_scope_is_not_silently_dropped) ... ok
+test_national_count_and_pooled_rates_match_nces (prototype.tests.test_populations.PopulationTests.test_national_count_and_pooled_rates_match_nces) ... ok
+test_outcome_measures_eight_year_pooled_completion (prototype.tests.test_populations.PopulationTests.test_outcome_measures_eight_year_pooled_completion) ... ok
+test_pooled_missing_pair_excluded_from_both_counts (prototype.tests.test_populations.PopulationTests.test_pooled_missing_pair_excluded_from_both_counts) ... ok
+test_provider_route_and_exports (prototype.tests.test_populations.PopulationTests.test_provider_route_and_exports) ... ok
+test_scope_and_raw_output_substitution_rejected (prototype.tests.test_populations.PopulationTests.test_scope_and_raw_output_substitution_rejected) ... ok
+test_sector_sums_match_independent_sql_and_reconcile_national (prototype.tests.test_populations.PopulationTests.test_sector_sums_match_independent_sql_and_reconcile_national) ... C:\Users\liyuj\OneDrive\2026\IPEDS Project\agent-redesign\prototype\query_engine.py:555: Pandas4Warning: In a future version, the keys of `groups` will be a tuple with a single element, e.g. (fh_135893,) , instead of a scalar, e.g. fh_135893, when grouping by a list with a single element. Use ``df.groupby(by='a').groups`` instead of ``df.groupby(by=['a']).groups`` to avoid this warning
+  parts=current.groupby(grouping,dropna=False,sort=False).groups.values() if grouping else [current.index]
+ok
+test_unweighted_tuition_and_revenues (prototype.tests.test_populations.PopulationTests.test_unweighted_tuition_and_revenues) ... ok
+test_categories_are_labels_not_measures (prototype.tests.test_query_engine.QueryEngineTests.test_categories_are_labels_not_measures) ... ok
+test_cohort_rate_and_release_year_substitution_rejection (prototype.tests.test_query_engine.QueryEngineTests.test_cohort_rate_and_release_year_substitution_rejection) ... ok
+test_cross_institution_mean_and_joined_weighted_mean (prototype.tests.test_query_engine.QueryEngineTests.test_cross_institution_mean_and_joined_weighted_mean) ... ok
+test_cross_period_change (prototype.tests.test_query_engine.QueryEngineTests.test_cross_period_change) ... ok
+test_disjoint_row_sum_and_overlap_rejection (prototype.tests.test_query_engine.QueryEngineTests.test_disjoint_row_sum_and_overlap_rejection) ... ok
+test_grouped_awards_match_source_sql (prototype.tests.test_query_engine.QueryEngineTests.test_grouped_awards_match_source_sql) ... ok
+test_grouped_result_in_chat_and_exports (prototype.tests.test_query_engine.QueryEngineTests.test_grouped_result_in_chat_and_exports) ... 2026-10-21 11:53:13.558 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.

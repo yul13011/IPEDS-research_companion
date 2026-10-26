@@ -1,0 +1,1504 @@
+{
+  "timestamp": "2026-10-23T02:12:17.155257+00:00",
+  "tests_run": 299,
+  "failures": 0,
+  "errors": 0,
+  "cases": [
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_affiliation_summary_is_per_institution",
+      "test_wall_seconds": 0.15063889999873936,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_category_definition_and_blocked_followup",
+      "test_wall_seconds": 1.170158899971284,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_companion_bound_exact_percentage_and_observation_date",
+      "test_wall_seconds": 0.3733970000175759,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_cross_release_cells_and_missing_year_block",
+      "test_wall_seconds": 0.3809403999475762,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_decode_negative_unknown_missing_and_conflicting_codes",
+      "test_wall_seconds": 0.00025679997634142637,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_explicit_no_and_award_levels",
+      "test_wall_seconds": 0.3753782999701798,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_institution_lists_match_independent_sql",
+      "test_wall_seconds": 2.7213757999707013,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_lossless_legacy_projection_and_arithmetic_stays_numeric",
+      "test_wall_seconds": 0.48090680001769215,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_mixed_values_exports_and_render",
+      "test_wall_seconds": 23.02562279999256,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_requested_identity_and_source_concepts_cannot_drop",
+      "test_wall_seconds": 0.32206359994597733,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_three_school_services_and_source_codes",
+      "test_wall_seconds": 0.2179462999338284,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_tool_batch_limit_recovers_with_usage",
+      "test_wall_seconds": 14.029704499989748,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_observations.ObservationTests.test_types_roll_back_and_integrity",
+      "test_wall_seconds": 0.3145338000031188,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_comparison_and_followup_use_metadata_without_mutating_history",
+      "test_wall_seconds": 1.2865386001067236,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_complete_glossary_entry_cannot_be_shortened_to_drop_qualifications",
+      "test_wall_seconds": 0.351302900002338,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_definitions_are_exact_supplied_source_excerpts",
+      "test_wall_seconds": 1.1022553000366315,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_explicit_definition_routes_before_identity_and_statistical_planning",
+      "test_wall_seconds": 1.720505499979481,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_generic_graduation_rate_does_not_claim_universal_six_year_definition",
+      "test_wall_seconds": 0.1595954999793321,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_instructional_staff_retains_combined_functions_and_faculty_separation",
+      "test_wall_seconds": 0.5612401000689715,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_model_can_select_only_verbatim_inspected_passages",
+      "test_wall_seconds": 0.4786718999966979,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_noncompact_usage_handles_unknown_tokens_and_cost",
+      "test_wall_seconds": 16.290747600025497,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_reviewed_rate_uses_its_actual_formula_and_supporting_definitions",
+      "test_wall_seconds": 0.01747870002873242,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_transport_failure_preserves_unknown_cost_and_safe_fallback",
+      "test_wall_seconds": 0.11745049990713596,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_ui_keeps_full_source_evidence_under_popover",
+      "test_wall_seconds": 11.606524399947375,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_unknown_term_and_mixed_questions_do_not_invent_or_drop_scope",
+      "test_wall_seconds": 0.021254000021144748,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_definitions.DefinitionTests.test_variable_table_year_scope_and_unavailable_year",
+      "test_wall_seconds": 0.007067200029268861,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_documentation.DocumentationTests.test_ambiguous_followup_then_named_selection",
+      "test_wall_seconds": 0.3333419000264257,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_documentation.DocumentationTests.test_analysis_followup_preserves_label_and_release",
+      "test_wall_seconds": 0.013081899960525334,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_documentation.DocumentationTests.test_definition_to_calculation_and_discovery",
+      "test_wall_seconds": 0.02574109996203333,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_documentation.DocumentationTests.test_explicit_topic_overrides_history_and_mixed_request_not_captured",
+      "test_wall_seconds": 0.0968147999374196,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_documentation.DocumentationTests.test_initial_types_route_without_institution_or_statistics",
+      "test_wall_seconds": 0.10911049996502697,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_documentation.DocumentationTests.test_missing_context_and_unknown_formula_do_not_invent",
+      "test_wall_seconds": 0.009751099976710975,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_documentation.DocumentationTests.test_multiyear_followup_asks_release_and_accepts_year",
+      "test_wall_seconds": 0.016586199984885752,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_coverage_gap.CoverageGapTests.test_actual_ui_labels_proxy_as_optional_and_keeps_gap_first",
+      "test_wall_seconds": 13.262610499979928,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_coverage_gap.CoverageGapTests.test_gap_is_a_complete_response_without_forced_choices",
+      "test_wall_seconds": 0.07661900005768985,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_coverage_gap.CoverageGapTests.test_invalid_optional_plan_is_never_offered",
+      "test_wall_seconds": 0.20853470009751618,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_coverage_gap.CoverageGapTests.test_one_optional_proxy_preserves_gap_and_runs_only_after_selection",
+      "test_wall_seconds": 0.3845484000630677,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_coverage_gap.CoverageGapTests.test_production_planner_dispatch_preserves_local_source_evidence",
+      "test_wall_seconds": 0.6987517999950796,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_coverage_gap.CoverageGapTests.test_proxy_cannot_masquerade_as_ordinary_definition_choice",
+      "test_wall_seconds": 0.07007309992332011,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_coverage_gap.CoverageGapTests.test_source_inspection_required_and_incomplete_search_not_absence",
+      "test_wall_seconds": 0.21038900001440197,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_coverage_gap.CoverageGapTests.test_unrequested_proxy_submission_gets_repair_feedback_not_execution",
+      "test_wall_seconds": 0.3787637000204995,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_units.UnitTests.test_actual_table_ui_uses_dollars_for_saved_result",
+      "test_wall_seconds": 11.173650999902748,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_units.UnitTests.test_real_salary_outlays_averages_tuition_finance_and_exports",
+      "test_wall_seconds": 3.8785951000172645,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_units.UnitTests.test_scale_uncertainty_conflicts_and_nonmoney",
+      "test_wall_seconds": 0.002459099981933832,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_shared_units.SharedUnitTests.test_all_releases_staff_rank_unit_and_scores",
+      "test_wall_seconds": 82.04836509993766,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_shared_units.SharedUnitTests.test_currency_scales_and_prepared_catalog_freshness",
+      "test_wall_seconds": 0.03561540006194264,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_shared_units.SharedUnitTests.test_old_derived_results_need_revalidation_without_changing_values",
+      "test_wall_seconds": 0.0006877999985590577,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_shared_units.SharedUnitTests.test_quantities_are_not_population_or_percentile",
+      "test_wall_seconds": 0.9218743999954313,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_shared_units.SharedUnitTests.test_real_smith_reexecution_uses_same_verified_units",
+      "test_wall_seconds": 0.264193799928762,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_shared_units.SharedUnitTests.test_saved_smith_units_chart_and_audit_preserve_originals",
+      "test_wall_seconds": 4.977945899940096,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_shared_units.SharedUnitTests.test_smith_all_ranks_total_renders_without_stopiteration",
+      "test_wall_seconds": 33.88404279993847,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_shared_units.SharedUnitTests.test_ui_cannot_force_an_unresolved_measurement_axis",
+      "test_wall_seconds": 27.129607600043528,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_shared_units.SharedUnitTests.test_unknown_and_codes_cannot_authorize_arithmetic",
+      "test_wall_seconds": 0.03522510000038892,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_unit_resolution.ResolutionTests.test_credit_and_clock_hours_resolve_from_actual_rows",
+      "test_wall_seconds": 0.2444446999579668,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_unit_resolution.ResolutionTests.test_definition_and_section_resolutions",
+      "test_wall_seconds": 0.3653542000101879,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_unit_resolution.ResolutionTests.test_first_program_length_is_not_a_student_count",
+      "test_wall_seconds": 0.055898299906402826,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_unit_resolution.ResolutionTests.test_new_financial_fields_display_currency_and_preserve_values",
+      "test_wall_seconds": 0.384413699968718,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_unit_resolution.ResolutionTests.test_previous_unresolved_batch_has_no_unexamined_unknowns",
+      "test_wall_seconds": 3.7480796000454575,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_unit_resolution.ResolutionTests.test_relational_direct_result_resolves_program_basis",
+      "test_wall_seconds": 0.18922820000443608,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_unit_resolution.ResolutionTests.test_saved_old_verified_program_count_is_revalidated",
+      "test_wall_seconds": 0.055227800039574504,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_unit_resolution.ResolutionTests.test_shorthand_finance_sections_are_exact_source_evidence",
+      "test_wall_seconds": 0.025527600082568824,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_bare_coverage_period_uses_matching_source_title_only",
+      "test_wall_seconds": 0.00031599996145814657,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_choices_cannot_change_institution_scope",
+      "test_wall_seconds": 0.5099377000005916,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_confirmed_bundle_finishes_without_reasking_or_double_query",
+      "test_wall_seconds": 1.4538538999622688,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_exact_letters_ordinals_and_labels",
+      "test_wall_seconds": 0.7823533000191674,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_failed_execution_keeps_choice_for_retry",
+      "test_wall_seconds": 1.4043327999534085,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_invalid_choice_preserves_pending",
+      "test_wall_seconds": 0.5830694000469521,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_invalid_option_is_not_offered",
+      "test_wall_seconds": 0.5766562999924645,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_model_tool_options_are_preflighted",
+      "test_wall_seconds": 0.7709311000071466,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_modified_reply_uses_brief_and_invalidates_old_plan",
+      "test_wall_seconds": 0.5312059000134468,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_new_topic_discards_pending",
+      "test_wall_seconds": 0.515773699968122,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_no_partial_publication_if_one_panel_fails",
+      "test_wall_seconds": 1.846874300041236,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_offering_options_never_queries_statistical_values",
+      "test_wall_seconds": 0.7682020000647753,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_outer_identity_guard_skips_model_for_selection",
+      "test_wall_seconds": 3.1580006999429315,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_selected_plan_runs_without_llm_or_replanning",
+      "test_wall_seconds": 1.9150368000846356,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_separate_populations_are_executed_as_separate_panels",
+      "test_wall_seconds": 2.5490864000748843,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_ui_buttons_submit_saved_choice_and_clear_removes_brief",
+      "test_wall_seconds": 24.90483289991971,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_analysis_clarification.ClarificationTests.test_wide_staff_rank_count_units_and_disjoint_sum",
+      "test_wall_seconds": 0.24845750001259148,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_transcript_scroll.TranscriptScrollTests.test_submission_completion_and_controls_keep_one_container_and_request",
+      "test_wall_seconds": 25.226644299924374,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_density.ChartDensityTests.test_cutoff_table_and_explicit_chart_preserve_all_categories",
+      "test_wall_seconds": 1.5840771000366658,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_density.ChartDensityTests.test_missing_categories_are_retained_and_units_are_separate",
+      "test_wall_seconds": 0.005752200027927756,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_density.ChartDensityTests.test_years_and_cluster_cells_are_not_extra_categories",
+      "test_wall_seconds": 0.002521799993701279,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_workflow.ChartWorkflowTests.test_missing_category_and_long_label_exports",
+      "test_wall_seconds": 33.77921389997937,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_workflow.ChartWorkflowTests.test_whole_salary_workflow_ui_and_exports",
+      "test_wall_seconds": 174.23756569996476,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_faculty_examples.FacultyExampleTests.test_all_values_match_independent_source_rows",
+      "test_wall_seconds": 14.128199799917638,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_faculty_examples.FacultyExampleTests.test_annual_named_templates_keep_scope_bounds",
+      "test_wall_seconds": 10.245183999999426,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_faculty_examples.FacultyExampleTests.test_click_each_example_from_both_surfaces_without_chat_planning",
+      "test_wall_seconds": 68.98032859992236,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_faculty_examples.FacultyExampleTests.test_salary_bars_have_clear_gaps_and_match_legend_order",
+      "test_wall_seconds": 7.736675699939951,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_faculty_examples.FacultyExampleTests.test_style_colors_match_salary_chart_and_recolor_actual_bars",
+      "test_wall_seconds": 22.660967499949038,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_alias_reference_normalization_retains_exact_field",
+      "test_wall_seconds": 1.7555207000114024,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_annual_trend_source_binding_and_intent",
+      "test_wall_seconds": 4.587986700003967,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_cannot_sum_institutional_rates",
+      "test_wall_seconds": 1.4090068999212235,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_distance_participation_matches_nces_and_discloses_derivation",
+      "test_wall_seconds": 1.898261799942702,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_distance_partition_zeros_require_count_identity",
+      "test_wall_seconds": 0.00018809991888701916,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_entering_cohort_is_bound_from_source_evidence",
+      "test_wall_seconds": 1.74573219998274,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_known_discrepancy_blocks_method_not_named_queries",
+      "test_wall_seconds": 0.5538802999071777,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_named_scope_is_not_silently_dropped",
+      "test_wall_seconds": 0.07203519996255636,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_national_count_and_pooled_rates_match_nces",
+      "test_wall_seconds": 11.070301999920048,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_outcome_measures_eight_year_pooled_completion",
+      "test_wall_seconds": 0.7326538999332115,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_pooled_missing_pair_excluded_from_both_counts",
+      "test_wall_seconds": 0.7597266000229865,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_provider_route_and_exports",
+      "test_wall_seconds": 1.6704856998985633,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_scope_and_raw_output_substitution_rejected",
+      "test_wall_seconds": 1.1198680999223143,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_sector_sums_match_independent_sql_and_reconcile_national",
+      "test_wall_seconds": 1.202430700068362,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_populations.PopulationTests.test_unweighted_tuition_and_revenues",
+      "test_wall_seconds": 2.671307499986142,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery.DiscoveryTests.test_discovery_skips_analytical_and_identity_planning",
+      "test_wall_seconds": 3.2546815000241622,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery.DiscoveryTests.test_exact_survey_groups_and_different_periods",
+      "test_wall_seconds": 5.009276099968702,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery.DiscoveryTests.test_examples_retrieved_for_each_selected_feature",
+      "test_wall_seconds": 2.145855600014329,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery.DiscoveryTests.test_generic_college_word_does_not_dilute_specific_topic",
+      "test_wall_seconds": 0.3938362000044435,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery.DiscoveryTests.test_graduation_annual_versions_and_cohort_coverage",
+      "test_wall_seconds": 0.6538865999318659,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery.DiscoveryTests.test_metadata_and_schema_grouping_is_conservative",
+      "test_wall_seconds": 0.0007564000552520156,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery.DiscoveryTests.test_readable_answer_with_optional_sources_in_chat",
+      "test_wall_seconds": 14.620112200034782,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery.DiscoveryTests.test_real_topics_and_latency",
+      "test_wall_seconds": 2.296945199952461,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery.DiscoveryTests.test_year_scope_unknown_topic_and_empty_topic",
+      "test_wall_seconds": 0.9179469000082463,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_all_routes_forward_writer_settings_and_skip_analytical_planning",
+      "test_wall_seconds": 0.6075164000503719,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_chat_displays_rewrite_with_detailed_coverage_and_audit",
+      "test_wall_seconds": 13.385571599937975,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_invalid_or_unavailable_writer_falls_back_and_preserves_billed_usage",
+      "test_wall_seconds": 0.090616500005126,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_material_scope_and_different_concepts_cannot_be_dropped_or_merged",
+      "test_wall_seconds": 1.8264400999760255,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_offline_no_match_and_missing_key_make_no_api_calls",
+      "test_wall_seconds": 1.1047400999814272,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_package_has_full_source_definitions_and_required_qualifications",
+      "test_wall_seconds": 0.000601499923504889,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_reject_bad_references_quotes_numbers_scope_and_unreadable_drafts",
+      "test_wall_seconds": 0.2109047999838367,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_release_year_qualification_is_preserved",
+      "test_wall_seconds": 2.0802813000045717,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_small_editorial_overrun_does_not_discard_verified_answer",
+      "test_wall_seconds": 0.0950775999808684,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_validated_rewrite_preserves_qualifications_evidence_and_cost",
+      "test_wall_seconds": 0.09174349997192621,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_narrative.NarrativeTests.test_verified_title_dates_move_to_details_but_unknown_years_are_rejected",
+      "test_wall_seconds": 0.06344519997946918,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_ambiguity_and_year_scope_are_preserved_in_evidence_package",
+      "test_wall_seconds": 0.7203425000188872,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_catalog_verification_requires_concept_and_phrase_in_same_physical_record",
+      "test_wall_seconds": 0.26187369995750487,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_everyday_salary_and_overseas_queries_find_relevant_data_areas",
+      "test_wall_seconds": 0.8032691000262275,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_failed_interpretation_preserves_baseline_topics",
+      "test_wall_seconds": 1.5979609000496566,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_fallback_retains_original_search_and_records_unknown_cost",
+      "test_wall_seconds": 0.0012596000451594591,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_invalid_proposals_cannot_add_dates_operators_or_exceed_budget",
+      "test_wall_seconds": 0.03897790005430579,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_original_hits_survive_and_new_concept_matches_enter_overview",
+      "test_wall_seconds": 0.7561764999991283,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_proposed_concepts_are_checked_and_made_up_concepts_rejected",
+      "test_wall_seconds": 0.22021389997098595,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_round_robin_keeps_original_and_expanded_records",
+      "test_wall_seconds": 0.00014080002438277006,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_stage_usage_combines_and_unknown_cost_is_never_zero",
+      "test_wall_seconds": 0.00017360004130750895,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_discovery_interpretation.InterpretationTests.test_two_stage_chat_flow_preserves_audit_and_combines_usage",
+      "test_wall_seconds": 19.342028200044297,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_catalog_breakdown_uses_real_source_titles_not_labels",
+      "test_wall_seconds": 1.0255778999999166,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_conversation_counts_trend_percentages_and_new_topic",
+      "test_wall_seconds": 5.023757699993439,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_no_guard_context_leak_after_failed_execution",
+      "test_wall_seconds": 0.11423599999397993,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_original_interval_survives_bad_context_rewrite",
+      "test_wall_seconds": 0.13354970002546906,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_period_and_cohort_semantics_and_percentile_are_preserved",
+      "test_wall_seconds": 0.8378972000209615,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_pre_execution_rejects_missing_institutions_measures_and_percentages",
+      "test_wall_seconds": 0.25609819998499006,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_relational_comparison_and_combined_institutions_remain_valid",
+      "test_wall_seconds": 0.9295634999871254,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_result_checks_real_periods_and_retains_missing_observations",
+      "test_wall_seconds": 0.22541449998971075,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_result_incomplete_summary_is_hidden_before_text",
+      "test_wall_seconds": 20.267451799940318,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_saved_result_guard_stops_chart_table_and_downloads",
+      "test_wall_seconds": 18.716335300006904,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_intent_checks.IntentCheckTests.test_semantic_failure_clarifies_and_context_does_not_leak",
+      "test_wall_seconds": 0.07289100007619709,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_trend_followup.TrendFollowupTests.test_canonical_binding_overrides_one_year_model_plan",
+      "test_wall_seconds": 0.05605969997122884,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_trend_followup.TrendFollowupTests.test_catalog_window_precedes_inherited_single_year",
+      "test_wall_seconds": 0.000574299949221313,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_trend_followup.TrendFollowupTests.test_endpoint_duration_variants_and_defaults",
+      "test_wall_seconds": 0.0027981000021100044,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_trend_followup.TrendFollowupTests.test_followup_with_actual_bad_resolution_executes_ten_years",
+      "test_wall_seconds": 1.676850299932994,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_trend_followup.TrendFollowupTests.test_real_chat_followups_render_line_and_all_years",
+      "test_wall_seconds": 21.52404759998899,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_format.ChartFormatTests.test_actual_png_svg_include_data_sources_and_exact_canvas",
+      "test_wall_seconds": 5.028932000044733,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_format.ChartFormatTests.test_bar_formatting_colors_and_hidden_labels",
+      "test_wall_seconds": 0.7476116999750957,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_format.ChartFormatTests.test_compound_prompt_is_atomic_and_preserves_values",
+      "test_wall_seconds": 1.7275840999791399,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_format.ChartFormatTests.test_panel_chat_undo_reset_and_preview_through_real_ui",
+      "test_wall_seconds": 45.483611900010146,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_format.ChartFormatTests.test_rendered_style_and_reference_preserve_gaps",
+      "test_wall_seconds": 0.7993299000663683,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_edits.ChartEditTests.test_all_advertised_edits_reach_the_rendered_chart",
+      "test_wall_seconds": 81.17017649998888,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_edits.ChartEditTests.test_axis_wording_quotes_and_range_intent",
+      "test_wall_seconds": 1.1677902999799699,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chart_edits.ChartEditTests.test_valid_edit_after_rejected_edit_still_uses_the_last_chart",
+      "test_wall_seconds": 16.666002199985087,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_source_series.SourceSeriesTests.test_each_annual_definition_and_category_comes_from_its_own_release",
+      "test_wall_seconds": 0.27128190000075847,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_source_series.SourceSeriesTests.test_letter_choice_preserves_scope_without_second_model_interpretation",
+      "test_wall_seconds": 0.003557699965313077,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_source_series.SourceSeriesTests.test_ten_year_faculty_template_executes_and_matches_independent_sources",
+      "test_wall_seconds": 6.609102499904111,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_result_text.ResultTextTests.test_assumptions_are_audit_notes_and_real_caveats_survive",
+      "test_wall_seconds": 0.12906649999786168,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_result_text.ResultTextTests.test_chat_shows_scope_warning_and_short_evidence",
+      "test_wall_seconds": 16.86406489997171,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_result_text.ResultTextTests.test_concise_definitions_formula_and_source_scope",
+      "test_wall_seconds": 0.21605769998859614,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_result_text.ResultTextTests.test_full_originals_and_notes_remain_in_downloads",
+      "test_wall_seconds": 0.3370401000138372,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_result_text.ResultTextTests.test_missing_and_conflicting_metadata_are_explicit",
+      "test_wall_seconds": 0.22957899991888553,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_result_text.ResultTextTests.test_reviewed_and_joined_results_keep_distinct_executed_tables",
+      "test_wall_seconds": 0.5459074999671429,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_result_text.ResultTextTests.test_ten_year_sources_show_exact_table_metadata_once_per_release",
+      "test_wall_seconds": 1.2995141999563202,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_result_text.ResultTextTests.test_version_two_explanations_stay_out_of_warnings",
+      "test_wall_seconds": 0.2563934999052435,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_charts.ChartTests.test_bar_followup_keeps_time_periods_distinct_and_ordered",
+      "test_wall_seconds": 0.5844288000371307,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_charts.ChartTests.test_catalog_gender_trend_connects_years_and_keeps_explicit_breaks",
+      "test_wall_seconds": 2.974796700058505,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_charts.ChartTests.test_category_labels_percent_scale_and_immutability",
+      "test_wall_seconds": 2.6503650000086054,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_charts.ChartTests.test_cohort_axis_and_currency_and_signed_values",
+      "test_wall_seconds": 0.11564029997680336,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_charts.ChartTests.test_comparison_keeps_eight_institutions_together",
+      "test_wall_seconds": 0.5139399999752641,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_charts.ChartTests.test_many_institution_trends_share_scale_and_keep_every_row",
+      "test_wall_seconds": 0.6792676000623032,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_charts.ChartTests.test_multiple_category_trends_have_at_most_four_series",
+      "test_wall_seconds": 1.19534360000398,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_charts.ChartTests.test_result_in_chat_with_new_renderer",
+      "test_wall_seconds": 23.613435900071636,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_charts.ChartTests.test_totals_are_separate_from_categories",
+      "test_wall_seconds": 1.5675894999876618,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_candidates_require_distinctive_name_evidence",
+      "test_wall_seconds": 1.3927190999966115,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_college_in_official_name_is_not_a_separate_reporting_unit",
+      "test_wall_seconds": 7.379936599987559,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_complete_official_names_and_formatting_do_not_need_confirmation",
+      "test_wall_seconds": 1.4890647999709472,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_confirmed_convention_is_reused_across_topics",
+      "test_wall_seconds": 3.8315924999769777,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_confirmed_id_is_used_and_other_campuses_are_blocked",
+      "test_wall_seconds": 0.3322909999405965,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_exact_alias_and_nonexact_single_candidate",
+      "test_wall_seconds": 1.412334299995564,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_exact_institution_actual_query",
+      "test_wall_seconds": 3.5987969000125304,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_literal_directory_name_recovers_partial_model_extraction",
+      "test_wall_seconds": 0.1143995999591425,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_pending_never_runs_analysis",
+      "test_wall_seconds": 0.7578310000244528,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_ui_requires_choice_and_cancel_executes_nothing",
+      "test_wall_seconds": 22.59057920007035,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_unknown_can_be_refined_and_no_match_is_not_guessed",
+      "test_wall_seconds": 2.3862598999403417,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_institution_confirmation.InstitutionConfirmationTests.test_yale_college_preserves_full_original_name",
+      "test_wall_seconds": 3.9685007999651134,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_memory.MemoryTests.test_actual_local_continuation_changes_institution_and_preserves_scope",
+      "test_wall_seconds": 0.5375434999587014,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_memory.MemoryTests.test_ambiguous_reference_clarifies_without_execution",
+      "test_wall_seconds": 0.0015436999965459108,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_memory.MemoryTests.test_clear_button_recovers_from_first_question_planner_error",
+      "test_wall_seconds": 32.5490483000176,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_memory.MemoryTests.test_clear_context_and_exception_do_not_leak",
+      "test_wall_seconds": 0.004408800043165684,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_memory.MemoryTests.test_context_is_bounded_and_never_includes_source_sql",
+      "test_wall_seconds": 0.0021465999307110906,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_memory.MemoryTests.test_local_name_and_percentage_continuations",
+      "test_wall_seconds": 0.0016549000283703208,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_memory.MemoryTests.test_resolver_transport_and_explicit_period_protection",
+      "test_wall_seconds": 0.05224859993904829,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_memory.MemoryTests.test_semantic_resolution_is_used_before_routing_and_isolated",
+      "test_wall_seconds": 0.19736270001158118,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_memory.MemoryTests.test_ui_passes_history_and_new_conversation_clears_it",
+      "test_wall_seconds": 16.340106699964963,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_categories_are_labels_not_measures",
+      "test_wall_seconds": 0.13489539991132915,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_cohort_rate_and_release_year_substitution_rejection",
+      "test_wall_seconds": 0.36892299994360656,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_cross_institution_mean_and_joined_weighted_mean",
+      "test_wall_seconds": 0.3781179999932647,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_cross_period_change",
+      "test_wall_seconds": 0.5600948999635875,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_disjoint_row_sum_and_overlap_rejection",
+      "test_wall_seconds": 0.2255028000799939,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_grouped_awards_match_source_sql",
+      "test_wall_seconds": 0.1624615000328049,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_grouped_result_in_chat_and_exports",
+      "test_wall_seconds": 14.393409000011161,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_join_rejects_many_to_many_or_hidden_keys",
+      "test_wall_seconds": 0.31673029996454716,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_missing_institution_propagates_to_combined_mean",
+      "test_wall_seconds": 0.31281879998277873,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_model_can_submit_relational_plan_and_repair",
+      "test_wall_seconds": 0.5009977000299841,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_negative_financial_value_is_not_a_missing_sentinel",
+      "test_wall_seconds": 0.0011210000375285745,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_numeric_range_filters_do_not_use_text_comparison",
+      "test_wall_seconds": 0.19558330008294433,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_one_to_one_fact_join_and_multi_step_calculation",
+      "test_wall_seconds": 0.39248409995343536,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_reducer_does_not_double_count_joined_scalar",
+      "test_wall_seconds": 0.2705088999355212,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_same_table_aliases_allow_population_comparison",
+      "test_wall_seconds": 0.2814258999424055,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_query_engine.QueryEngineTests.test_weighted_salary_matches_independent_sql",
+      "test_wall_seconds": 0.40713559999130666,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_admissions_share_not_in_old_field_allowlist",
+      "test_wall_seconds": 0.2806818999815732,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_catalog_descriptions_cover_definitions_without_blanket_approval",
+      "test_wall_seconds": 2.1382370000937954,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_completions_share_with_all_grain_selectors",
+      "test_wall_seconds": 0.3286535000661388,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_failed_repair_is_bounded_and_never_queries",
+      "test_wall_seconds": 0.6052124999696389,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_false_relationships_and_overlapping_totals_rejected",
+      "test_wall_seconds": 1.6160688999807462,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_general_sum_difference_and_sibling_ratio",
+      "test_wall_seconds": 0.6691303999396041,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_library_share_and_explicit_source_component",
+      "test_wall_seconds": 0.3912010999629274,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_missing_zero_and_bounds_without_writing_source",
+      "test_wall_seconds": 0.5984446000074968,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_multi_category_normalization_and_constant_dimension",
+      "test_wall_seconds": 0.5699775000102818,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_planner_retrieves_and_repairs_semantic_error",
+      "test_wall_seconds": 0.4261632999405265,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_source_period_and_cross_table_evidence_rejected",
+      "test_wall_seconds": 0.3140552000841126,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_unrequested_calculation_rejected_for_replanning",
+      "test_wall_seconds": 0.16952180000953376,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_general_calculations.GeneralCalculationTests.test_unseen_institution_and_annual_definition_use_same_rules",
+      "test_wall_seconds": 0.18529459997080266,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_enrollment_gender.EnrollmentGenderTests.test_all_undergraduate_gender_cannot_silently_use_first_time_population",
+      "test_wall_seconds": 0.22215219994541258,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_enrollment_gender.EnrollmentGenderTests.test_attendance_years_and_unrecognized_scope",
+      "test_wall_seconds": 0.87068279995583,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_enrollment_gender.EnrollmentGenderTests.test_exact_ten_year_prompt_and_shares_match_all_annual_sources",
+      "test_wall_seconds": 6.760233300039545,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_enrollment_gender.EnrollmentGenderTests.test_exact_user_question_returns_counts_without_model",
+      "test_wall_seconds": 0.21515589999035,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_enrollment_gender.EnrollmentGenderTests.test_percentage_followup_preserves_population_without_general_search",
+      "test_wall_seconds": 4.602312700008042,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_enrollment_gender.EnrollmentGenderTests.test_percentages_have_one_numerator_each_and_same_population_total",
+      "test_wall_seconds": 0.23723869991954416,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_enrollment_gender.EnrollmentGenderTests.test_wrong_population_and_multi_numerator_formula_rejected",
+      "test_wall_seconds": 0.5861198999918997,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chat_loading.ChatLoadingTests.test_loading_context_and_workspace_order",
+      "test_wall_seconds": 25.497013499960303,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chat_loading.ChatLoadingTests.test_panel_reruns_retain_interrupted_request",
+      "test_wall_seconds": 54.62230179994367,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chat_loading.ChatLoadingTests.test_real_offline_request_reports_its_actual_stages",
+      "test_wall_seconds": 11.91064560005907,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_chat_loading.ChatLoadingTests.test_stage_reporters_are_scoped_and_reset_on_failure",
+      "test_wall_seconds": 0.000458099995739758,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_codebook_and_physical_table_case_differences",
+      "test_wall_seconds": 0.9333714001113549,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_continuing_subgroup_cannot_answer_all_undergraduates",
+      "test_wall_seconds": 0.8778113001026213,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_percent_exact_denominator_and_missing_values",
+      "test_wall_seconds": 1.049989499966614,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_race_break_down_wording_uses_same_source_plan",
+      "test_wall_seconds": 2.5758171000052243,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_race_count_matches_independent_source_query",
+      "test_wall_seconds": 0.9187202000757679,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_readonly_connection_rejects_write",
+      "test_wall_seconds": 0.03933790000155568,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_unfamiliar_library_field_without_registry_entry",
+      "test_wall_seconds": 0.9348928000545129,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_unknown_field_and_sql_text_rejected",
+      "test_wall_seconds": 0.5951998000964522,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_unselected_population_never_executes",
+      "test_wall_seconds": 0.5323438999475911,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_execution.CatalogExecutionTests.test_unverified_arithmetic_and_dimensions_blocked",
+      "test_wall_seconds": 1.0228661000728607,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_all_requested_years_require_source_evidence",
+      "test_wall_seconds": 0.5575914999935776,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_arbitrary_sql_and_unknown_ids_are_rejected",
+      "test_wall_seconds": 0.24767190008424222,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_bounded_model_tools_can_propose_nonregistry_library_field",
+      "test_wall_seconds": 0.6733143000165001,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_catalog_followup_and_new_question_context_are_separate",
+      "test_wall_seconds": 0.4458718999521807,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_conflicting_source_locations_remain_blocked",
+      "test_wall_seconds": 0.2367964000441134,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_fact_join_is_only_a_review_proposal",
+      "test_wall_seconds": 0.1789890999207273,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_filter_codes_must_belong_to_exact_definition",
+      "test_wall_seconds": 0.35166279994882643,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_join_columns_bind_to_physical_inventory_not_guessed_definitions",
+      "test_wall_seconds": 0.3533277999376878,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_known_new_dimensions_route_before_legacy_model",
+      "test_wall_seconds": 0.29368100001011044,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_missing_methodology_still_requests_clarification",
+      "test_wall_seconds": 0.41318200004752725,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_model_invalid_plan_is_returned_for_repair_not_executed",
+      "test_wall_seconds": 0.6002027000067756,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_original_question_uses_catalog_executor",
+      "test_wall_seconds": 0.6532324000727385,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_pending_catalog_clarification_accepts_short_reply",
+      "test_wall_seconds": 1.8988866999279708,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_percentage_has_explicit_denominators_and_no_regrouping",
+      "test_wall_seconds": 0.4107866999693215,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_reviewed_questions_keep_numerical_route",
+      "test_wall_seconds": 0.4123086000327021,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_starter_does_not_silently_drop_extra_scope",
+      "test_wall_seconds": 0.0026015000184997916,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_streamlit_proposal_does_not_reuse_old_result_or_break_builder",
+      "test_wall_seconds": 66.29963480005972,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_catalog_planner.CatalogPlannerTests.test_unknown_new_question_can_leave_registry_router",
+      "test_wall_seconds": 0.005277599906548858,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_chat_result_controls_and_table_preserve_result",
+      "test_wall_seconds": 25.454598999931477,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_codebook_search_identifiers_and_full_definitions",
+      "test_wall_seconds": 0.275165900005959,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_cohort_class_time_and_outside_coverage",
+      "test_wall_seconds": 0.17600090010091662,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_degrees_aid_and_location_override",
+      "test_wall_seconds": 0.4126364999683574,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_discovery_and_parser_followups",
+      "test_wall_seconds": 0.9675701999804005,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_display_edits_reuse_exact_result_and_preserve_unrequested_fields",
+      "test_wall_seconds": 3.3633241000352427,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_entire_supported_benchmark",
+      "test_wall_seconds": 7.038256200030446,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_exports_are_complete_and_attributable",
+      "test_wall_seconds": 0.10958759998902678,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_institutions_and_ivy",
+      "test_wall_seconds": 0.11194179998710752,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_learning_examples_and_session_navigation",
+      "test_wall_seconds": 23.166251500020735,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_model_adapter_auto_strict_and_bounded_retry",
+      "test_wall_seconds": 0.7824908999027684,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_read_only_and_plan_limits",
+      "test_wall_seconds": 0.502939699916169,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_response_rules_summary_missing_context_and_ambiguity",
+      "test_wall_seconds": 0.8229111999971792,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_scrollable_conversation_preserves_followups_and_tools",
+      "test_wall_seconds": 20.585836700047366,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_streamlit_chart_first_and_show_table_without_new_query",
+      "test_wall_seconds": 16.005352600011975,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_streamlit_codebook_search_submit_repeat_empty_and_categories",
+      "test_wall_seconds": 13.332428899942897,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_streamlit_guided_chart_and_export",
+      "test_wall_seconds": 16.228005600045435,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_topic_panel_row_placement_close_and_tab_navigation",
+      "test_wall_seconds": 14.653907500091009,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_uncollected_not_zero_and_retained_discrepancies",
+      "test_wall_seconds": 0.29278889996930957,
+      "passed": true
+    },
+    {
+      "case": "prototype.tests.test_prototype.PrototypeTests.test_yale_2024",
+      "test_wall_seconds": 0.0016882999334484339,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_categories_paginate_and_preserve_unknown",
+      "test_wall_seconds": 0.09657399996649474,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_change_evidence_and_availability_not_harmonization",
+      "test_wall_seconds": 0.669468899955973,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_comparison_group_identifiers_and_unmatched_ids_visible",
+      "test_wall_seconds": 0.04591039998922497,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_definition_source_and_missing_flags",
+      "test_wall_seconds": 0.0436520999064669,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_documentation_conflicts_never_relocated",
+      "test_wall_seconds": 0.07754530000966042,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_duplicate_selectors_do_not_become_a_valid_key",
+      "test_wall_seconds": 0.0017143998993560672,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_enriched_search_and_planner_entry_point",
+      "test_wall_seconds": 0.3952529999660328,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_grain_separates_counts_from_dimensions",
+      "test_wall_seconds": 0.03925969998817891,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_key_is_empirical_not_measure_approval",
+      "test_wall_seconds": 0.008462800062261522,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_only_directory_decoration_joins",
+      "test_wall_seconds": 0.01246490003541112,
+      "passed": true
+    },
+    {
+      "case": "analysis_catalog.test_catalog.AnalyticalCatalogTests.test_query_inputs_cannot_become_sql",
+      "test_wall_seconds": 0.01296099997125566,
+      "passed": true
+    }
+  ],
+  "scope": "Real local data and UI checks with mocked provider transport where needed. Per-test wall time can include several requests or UI reruns; it is not live unfamiliar-question response latency. Live timings are in catalog_latency.json."
+}

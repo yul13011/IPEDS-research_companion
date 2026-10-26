@@ -1,0 +1,2413 @@
+{
+  "id": "combined_services",
+  "question": "Which Massachusetts degree-granting institutions offered both study abroad and on-campus childcare for students\u2019 children in 2024-25? List their names.",
+  "answer": {
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [],
+      "population": {
+        "fips": [
+          25
+        ],
+        "controls": [],
+        "levels": [],
+        "degree_granting": true,
+        "title_iv": false,
+        "administrative_offices": false
+      },
+      "result_kind": "institution_list",
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136092,
+            136105
+          ],
+          "filters": [
+            {
+              "record_id": 136092,
+              "operator": "eq",
+              "values": [
+                "1"
+              ],
+              "code_record_ids": [
+                139053
+              ]
+            },
+            {
+              "record_id": 136105,
+              "operator": "eq",
+              "values": [
+                "1"
+              ],
+              "code_record_ids": [
+                139111
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "result": {
+      "result_schema_version": 2,
+      "result_kind": "institution_list",
+      "observation_plan": {
+        "version": 1,
+        "institutions": [],
+        "population": {
+          "fips": [
+            25
+          ],
+          "controls": [],
+          "levels": [],
+          "degree_granting": true,
+          "title_iv": false,
+          "administrative_offices": false
+        },
+        "result_kind": "institution_list",
+        "source_years": [
+          2024
+        ],
+        "sources": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "field_record_ids": [
+              136092,
+              136105
+            ],
+            "filters": [
+              {
+                "record_id": 136092,
+                "operator": "eq",
+                "values": [
+                  "1"
+                ],
+                "code_record_ids": [
+                  139053
+                ]
+              },
+              {
+                "record_id": 136105,
+                "operator": "eq",
+                "values": [
+                  "1"
+                ],
+                "code_record_ids": [
+                  139111
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "plan": {
+        "metrics": [
+          "IC{YEAR}::SLO6",
+          "IC{YEAR}::STUSRV8"
+        ],
+        "institutions": [],
+        "years": [
+          2024
+        ],
+        "time_basis": "source_release",
+        "output": "table"
+      },
+      "metric_specs": {
+        "IC{YEAR}::SLO6": {
+          "label": "Study abroad",
+          "family": "observation",
+          "unit": "coded"
+        },
+        "IC{YEAR}::STUSRV8": {
+          "label": "On-campus day care for students' children",
+          "family": "observation",
+          "unit": "coded"
+        }
+      },
+      "rows": [
+        {
+          "institution": "Boston College",
+          "unitid": 164924,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Boston University",
+          "unitid": 164988,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Bridgewater State University",
+          "unitid": 165024,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Framingham State University",
+          "unitid": 165866,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Hampshire College",
+          "unitid": 166018,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "University of Massachusetts-Amherst",
+          "unitid": 166629,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "unitid": 166683,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "University of Massachusetts Chan Medical School",
+          "unitid": 166708,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Mount Wachusett Community College",
+          "unitid": 166957,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Northeastern University",
+          "unitid": 167358,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Northern Essex Community College",
+          "unitid": 167376,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Regis College",
+          "unitid": 167598,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Williams College",
+          "unitid": 168342,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Northeastern University Professional Programs",
+          "unitid": 482705,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::SLO6",
+          "measure": "Study abroad",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136092,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139053
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "SLO6",
+            "record_id": 136092,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136092,
+                "excerpt": "Study abroad"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Boston College",
+          "unitid": 164924,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Boston University",
+          "unitid": 164988,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Bridgewater State University",
+          "unitid": 165024,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Framingham State University",
+          "unitid": 165866,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Hampshire College",
+          "unitid": 166018,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "University of Massachusetts-Amherst",
+          "unitid": 166629,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "unitid": 166683,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "University of Massachusetts Chan Medical School",
+          "unitid": 166708,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Mount Wachusett Community College",
+          "unitid": 166957,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Northeastern University",
+          "unitid": 167358,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Northern Essex Community College",
+          "unitid": 167376,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Regis College",
+          "unitid": 167598,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Williams College",
+          "unitid": 168342,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        },
+        {
+          "institution": "Northeastern University Professional Programs",
+          "unitid": 482705,
+          "observation_year": 2024,
+          "entry_cohort_year": null,
+          "reporting_period": "Academic year 2024-25",
+          "source_reporting_period": "Academic year 2024-25",
+          "metric": "IC{YEAR}::STUSRV8",
+          "measure": "On-campus day care for students' children",
+          "unit": "coded",
+          "value": null,
+          "release": "IPEDS_2024-25_Provisional",
+          "provisional": true,
+          "status": "ok",
+          "numerator": null,
+          "denominator": null,
+          "series_segment": "",
+          "groups": [],
+          "result_type": "categorical",
+          "record_id": 136105,
+          "raw_code": 1,
+          "response_label": "Yes",
+          "response_status": "yes",
+          "category_record_ids": [
+            139111
+          ],
+          "unit_metadata": {
+            "version": 3,
+            "release_id": "IPEDS_2024-25_Provisional",
+            "table": "IC2024",
+            "variable": "STUSRV8",
+            "record_id": 136105,
+            "unit": "coded",
+            "quantity_type": "category",
+            "status": "verified",
+            "basis": "Source coded/non-continuous field",
+            "evidence": [
+              {
+                "record_id": 136105,
+                "excerpt": "On-campus day care for students' children"
+              },
+              {
+                "record_id": 135823,
+                "excerpt": "This table contains data on program and award level offerings, control and affiliation and special learning opportunities. Several variables including open admissions policy, distance education offerings and library services are updated based on admissions data collected in the winter. Beginning in 2020-21, the less-than-1-year certificate award level is divided into the following two award levels: certificates of less-than-12-weeks and certificates of at least 12 weeks but less than 1 year"
+              }
+            ],
+            "scale": 1,
+            "currency": null,
+            "population": null,
+            "rule_version": 3
+          }
+        }
+      ],
+      "observation_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "metric": "IC{YEAR}::SLO6",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "SLO6"
+          ],
+          "filters": [
+            {
+              "record_id": 136092,
+              "operator": "eq",
+              "values": [
+                "1"
+              ],
+              "code_record_ids": [
+                139053
+              ]
+            },
+            {
+              "record_id": 136105,
+              "operator": "eq",
+              "values": [
+                "1"
+              ],
+              "code_record_ids": [
+                139111
+              ]
+            }
+          ],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"SLO6\",\"STUSRV8\" FROM \"IC2024\" WHERE UNITID IN (SELECT UNITID FROM \"HD2024\" WHERE \"FIPS\" IN (?) AND \"PSET4FLG\" IN (?,?,?,?,?,?) AND \"DEGGRANT\" IN (?) AND \"SECTOR\" IN (?,?,?,?,?,?,?,?,?)) AND \"SLO6\" IN (?) AND \"STUSRV8\" IN (?) LIMIT 20001",
+          "parameters": [
+            25,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            "1",
+            "1"
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136092,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "SLO6",
+              "title": "Study abroad",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10741\nvarorder: 60\nvarname: SLO6\nvartitle: Study abroad\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: What types of special learning opportunities are offered by your institution? [Check all that apply] Special learning opportunities - Indicate which of the listed special learning opportunities are offered by your institution. Teacher certification refers to pre-K through 12; if your institution provides certification for some levels (e.g., elementary only and not secondary) be sure to indicate that only certain levels are offered. Study abroad STUDY ABROAD - Arrangement by which a student completes part of the college program studying in another country. Can be at a campus abroad or through a cooperative agreement with some other U.S. college or an institution of another country.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 221,
+              "long_description": "What types of special learning opportunities are offered by your institution? [Check all that apply] Special learning opportunities - Indicate which of the listed special learning opportunities are offered by your institution. Teacher certification refers to pre-K through 12; if your institution provides certification for some levels (e.g., elementary only and not secondary) be sure to indicate that only certain levels are offered. Study abroad STUDY ABROAD - Arrangement by which a student completes part of the college program studying in another country. Can be at a campus abroad or through a cooperative agreement with some other U.S. college or an institution of another country.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139055,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 139056,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139054,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 139053,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        },
+        {
+          "metric": "IC{YEAR}::STUSRV8",
+          "year": 2024,
+          "unitid": null,
+          "database": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\data\\annual\\IPEDS_2024-25_Provisional\\IPEDS202425.sqlite",
+          "database_size": 272990208,
+          "database_mtime_ns": 1792185798524065800,
+          "table": "IC2024",
+          "columns": [
+            "STUSRV8"
+          ],
+          "filters": [
+            {
+              "record_id": 136092,
+              "operator": "eq",
+              "values": [
+                "1"
+              ],
+              "code_record_ids": [
+                139053
+              ]
+            },
+            {
+              "record_id": 136105,
+              "operator": "eq",
+              "values": [
+                "1"
+              ],
+              "code_record_ids": [
+                139111
+              ]
+            }
+          ],
+          "formula": "direct source observation",
+          "sql": "SELECT \"UNITID\",\"SLO6\",\"STUSRV8\" FROM \"IC2024\" WHERE UNITID IN (SELECT UNITID FROM \"HD2024\" WHERE \"FIPS\" IN (?) AND \"PSET4FLG\" IN (?,?,?,?,?,?) AND \"DEGGRANT\" IN (?) AND \"SECTOR\" IN (?,?,?,?,?,?,?,?,?)) AND \"SLO6\" IN (?) AND \"STUSRV8\" IN (?) LIMIT 20001",
+          "parameters": [
+            25,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            "1",
+            "1"
+          ],
+          "codebook_evidence": [
+            {
+              "record_id": 136105,
+              "release_id": "IPEDS_2024-25_Provisional",
+              "kind": "variable_definition",
+              "table_name": "IC2024",
+              "variable_name": "STUSRV8",
+              "title": "On-campus day care for students' children",
+              "body": "surveyorder: 10\nsurveynumber: 1\nsurvey: Institutional Characteristics\ntablenumber: 12\ntablename: IC2024\ntabletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nvarnumber: 10801\nvarorder: 73\nvarname: STUSRV8\nvartitle: On-campus day care for students' children\ndatatype: N\nfieldwidth: 2\nformat: Disc\nmultirecord: 0\nfilenumber: 2\nsectionnumber: 8\nlongdescription: Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.\nvarsource: IPEDS, Fall 2024, Institutional Characteristics component\nfiletitle: Veteran and student services, special learning opportunities, distance education, and disability services\nsectiontitle: Non-traditional credits, special learning opportunities and selected student services",
+              "source_file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\IPEDS Data\\IPEDS_2024-25_Provisional\\IPEDS202425Tablesdoc.xlsx",
+              "source_sha256": "e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e",
+              "sheet_name": "varTable24",
+              "source_row": 234,
+              "long_description": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs.",
+              "documented_table": "IC2024",
+              "physical_table": "IC2024",
+              "issues": []
+            }
+          ],
+          "code_filters": [
+            {
+              "record_id": 139113,
+              "code_value": "-1",
+              "value_label": "Not reported"
+            },
+            {
+              "record_id": 139114,
+              "code_value": "-2",
+              "value_label": "Not applicable"
+            },
+            {
+              "record_id": 139112,
+              "code_value": "0",
+              "value_label": "Implied no"
+            },
+            {
+              "record_id": 139111,
+              "code_value": "1",
+              "value_label": "Yes"
+            }
+          ]
+        }
+      ],
+      "definitions": {
+        "IC{YEAR}::SLO6": "What types of special learning opportunities are offered by your institution? [Check all that apply] Special learning opportunities - Indicate which of the listed special learning opportunities are offered by your institution. Teacher certification refers to pre-K through 12; if your institution provides certification for some levels (e.g., elementary only and not secondary) be sure to indicate that only certain levels are offered. Study abroad STUDY ABROAD - Arrangement by which a student completes part of the college program studying in another country. Can be at a campus abroad or through a cooperative agreement with some other U.S. college or an institution of another country.",
+        "IC{YEAR}::STUSRV8": "Which of the following selected students services are offered by your institution? [Check all that apply] Student Services - Indicate which of the listed services are offered by your institution On-campus day care for children of students DAY CARE SERVICE - A student service designed to provide appropriate care and protection of infants, preschool, and school-age children so their parents can participate in postsecondary education programs."
+      },
+      "warnings": [],
+      "technical_notes": [
+        "Codes are categorical responses, never numerical quantities. Lists include only reporting units satisfying every selected source predicate."
+      ],
+      "created_at": "2026-10-23T01:33:31.959281+00:00",
+      "registry_sha256": "bf4a98daa3113ccca190e699a2ac605f059c73ecde345d7050330fb25af87711",
+      "review_status": "Source-bound typed direct observations; no arithmetic on categorical codes.",
+      "coverage": {
+        "requested_cells": 28,
+        "available_cells": 28,
+        "matching_institutions": {
+          "2024": 14
+        },
+        "source_rows": [
+          {
+            "year": 2024,
+            "table": "IC2024",
+            "selected_rows": 14
+          }
+        ]
+      },
+      "population_evidence": {
+        "2024": {
+          "unitids": [
+            164368,
+            164447,
+            164465,
+            164492,
+            164562,
+            164580,
+            164614,
+            164632,
+            164739,
+            164748,
+            164775,
+            164872,
+            164915,
+            164924,
+            164988,
+            165015,
+            165024,
+            165033,
+            165112,
+            165167,
+            165194,
+            165264,
+            165334,
+            165495,
+            165529,
+            165574,
+            165644,
+            165662,
+            165671,
+            165699,
+            165802,
+            165820,
+            165866,
+            165884,
+            165936,
+            165945,
+            165981,
+            166018,
+            166027,
+            166045,
+            166054,
+            166124,
+            166133,
+            166391,
+            166407,
+            166452,
+            166489,
+            166513,
+            166629,
+            166638,
+            166647,
+            166656,
+            166674,
+            166683,
+            166692,
+            166708,
+            166717,
+            166823,
+            166850,
+            166869,
+            166887,
+            166911,
+            166939,
+            166957,
+            167057,
+            167093,
+            167215,
+            167260,
+            167288,
+            167312,
+            167358,
+            167376,
+            167394,
+            167464,
+            167525,
+            167534,
+            167598,
+            167631,
+            167677,
+            167729,
+            167783,
+            167792,
+            167835,
+            167899,
+            167905,
+            167987,
+            167996,
+            168005,
+            168148,
+            168218,
+            168227,
+            168254,
+            168263,
+            168281,
+            168342,
+            168421,
+            168430,
+            217606,
+            369002,
+            429128,
+            436599,
+            441982,
+            475273,
+            482705,
+            494542
+          ],
+          "label": "Selected states/areas",
+          "directory_sql": "SELECT UNITID,INSTNM FROM \"HD2024\" WHERE \"FIPS\" IN (?) AND \"PSET4FLG\" IN (?,?,?,?,?,?) AND \"DEGGRANT\" IN (?) AND \"SECTOR\" IN (?,?,?,?,?,?,?,?,?)",
+          "parameters": [
+            25,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "directory_count": 105,
+          "code_evidence": [
+            {
+              "field": "FIPS",
+              "codes": [
+                {
+                  "record_id": 138552,
+                  "code_value": "25",
+                  "value_label": "Massachusetts"
+                }
+              ]
+            },
+            {
+              "field": "PSET4FLG",
+              "codes": [
+                {
+                  "record_id": 138709,
+                  "code_value": "1",
+                  "value_label": "Title IV postsecondary institution"
+                },
+                {
+                  "record_id": 138710,
+                  "code_value": "2",
+                  "value_label": "Non-Title IV postsecondary institution"
+                },
+                {
+                  "record_id": 138711,
+                  "code_value": "3",
+                  "value_label": "Title IV NOT primarily postsecondary institution"
+                },
+                {
+                  "record_id": 138712,
+                  "code_value": "4",
+                  "value_label": "Non-Title IV NOT primarily postsecondary institution"
+                },
+                {
+                  "record_id": 138713,
+                  "code_value": "5",
+                  "value_label": "Title IV postsecondary institution that is NOT open to the public"
+                },
+                {
+                  "record_id": 138714,
+                  "code_value": "6",
+                  "value_label": "Non-Title IV postsecondary institution that is NOT open to the public"
+                }
+              ]
+            },
+            {
+              "field": "DEGGRANT",
+              "codes": [
+                {
+                  "record_id": 138653,
+                  "code_value": "1",
+                  "value_label": "Degree-granting"
+                }
+              ]
+            },
+            {
+              "field": "SECTOR",
+              "codes": [
+                {
+                  "record_id": 138609,
+                  "code_value": "1",
+                  "value_label": "Public, 4-year or above"
+                },
+                {
+                  "record_id": 138610,
+                  "code_value": "2",
+                  "value_label": "Private not-for-profit, 4-year or above"
+                },
+                {
+                  "record_id": 138611,
+                  "code_value": "3",
+                  "value_label": "Private for-profit, 4-year or above"
+                },
+                {
+                  "record_id": 138612,
+                  "code_value": "4",
+                  "value_label": "Public, 2-year"
+                },
+                {
+                  "record_id": 138613,
+                  "code_value": "5",
+                  "value_label": "Private not-for-profit, 2-year"
+                },
+                {
+                  "record_id": 138614,
+                  "code_value": "6",
+                  "value_label": "Private for-profit, 2-year"
+                },
+                {
+                  "record_id": 138615,
+                  "code_value": "7",
+                  "value_label": "Public, less-than 2-year"
+                },
+                {
+                  "record_id": 138616,
+                  "code_value": "8",
+                  "value_label": "Private not-for-profit, less-than 2-year"
+                },
+                {
+                  "record_id": 138617,
+                  "code_value": "9",
+                  "value_label": "Private for-profit, less-than 2-year"
+                }
+              ]
+            }
+          ],
+          "year": 2024,
+          "filters": {
+            "fips": [
+              25
+            ],
+            "controls": [],
+            "levels": [],
+            "degree_granting": true,
+            "title_iv": false,
+            "administrative_offices": false
+          }
+        }
+      },
+      "observation_validation": {
+        "cells": [
+          [
+            164924,
+            2024,
+            136092
+          ],
+          [
+            164988,
+            2024,
+            136092
+          ],
+          [
+            165024,
+            2024,
+            136092
+          ],
+          [
+            165866,
+            2024,
+            136092
+          ],
+          [
+            166018,
+            2024,
+            136092
+          ],
+          [
+            166629,
+            2024,
+            136092
+          ],
+          [
+            166683,
+            2024,
+            136092
+          ],
+          [
+            166708,
+            2024,
+            136092
+          ],
+          [
+            166957,
+            2024,
+            136092
+          ],
+          [
+            167358,
+            2024,
+            136092
+          ],
+          [
+            167376,
+            2024,
+            136092
+          ],
+          [
+            167598,
+            2024,
+            136092
+          ],
+          [
+            168342,
+            2024,
+            136092
+          ],
+          [
+            482705,
+            2024,
+            136092
+          ],
+          [
+            164924,
+            2024,
+            136105
+          ],
+          [
+            164988,
+            2024,
+            136105
+          ],
+          [
+            165024,
+            2024,
+            136105
+          ],
+          [
+            165866,
+            2024,
+            136105
+          ],
+          [
+            166018,
+            2024,
+            136105
+          ],
+          [
+            166629,
+            2024,
+            136105
+          ],
+          [
+            166683,
+            2024,
+            136105
+          ],
+          [
+            166708,
+            2024,
+            136105
+          ],
+          [
+            166957,
+            2024,
+            136105
+          ],
+          [
+            167358,
+            2024,
+            136105
+          ],
+          [
+            167376,
+            2024,
+            136105
+          ],
+          [
+            167598,
+            2024,
+            136105
+          ],
+          [
+            168342,
+            2024,
+            136105
+          ],
+          [
+            482705,
+            2024,
+            136105
+          ]
+        ],
+        "source_years": [
+          2024
+        ],
+        "institutions": [
+          164924,
+          164988,
+          165024,
+          165866,
+          166018,
+          166629,
+          166683,
+          166708,
+          166957,
+          167358,
+          167376,
+          167598,
+          168342,
+          482705
+        ],
+        "rows_sha256": "5660a938a5a96f256125e198edcda308ef6f2cb608d97eff8d3f50b2ce596edc"
+      },
+      "latency": {
+        "reviewed_or_discovery_pipeline_seconds": 13.749284100020304,
+        "answer_ready_seconds": 14.827818399993703,
+        "live_model_calls": 4,
+        "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+        "conversation_resolution_seconds": 0,
+        "institution_resolution_seconds": 1.0781500999582931
+      },
+      "result_id": "e1b98fdf7cd7fdad",
+      "institution_identity": {
+        "unitids": [],
+        "original_question": "Which Massachusetts degree-granting institutions offered both study abroad and on-campus childcare for students\u2019 children in 2024-25? List their names.",
+        "original_mentions": [],
+        "confirmed_choices": {},
+        "scope_mentions": [],
+        "labels": []
+      }
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 4,
+      "planning_tool_requests": 7,
+      "semantic_repair_attempts": 0,
+      "latency_seconds": 13.7897706999965,
+      "input_tokens": 49614,
+      "output_tokens": 1150,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 63924,
+      "estimated_api_usd": 0.11712040000000001,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 579,
+          "output_tokens": 53,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.0707706999965012,
+          "estimated_api_usd": 0.001688,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 3,
+          "planning_tool_requests": 7,
+          "semantic_repair_attempts": 0,
+          "latency_seconds": 12.719,
+          "input_tokens": 49035,
+          "output_tokens": 1097,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 63924,
+          "estimated_api_usd": 0.11543240000000002,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "message": "14 reporting institution(s) match the selected source responses: Boston College; Boston University; Bridgewater State University; Framingham State University; Hampshire College; University of Massachusetts-Amherst; Massachusetts Institute of Technology; University of Massachusetts Chan Medical School. The table and download contain the complete list.",
+    "presentation": {
+      "chart_type": "none",
+      "show_table": true,
+      "table_reason": "Source responses are shown in a table; category codes are not quantities.",
+      "title": null,
+      "x_label": null,
+      "y_label": null,
+      "y_min": null,
+      "y_max": null,
+      "sort": "auto",
+      "color": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 13.749284100020304,
+      "answer_ready_seconds": 14.827818399993703,
+      "live_model_calls": 4,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 1.0781500999582931
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "40814b54c94c43f9",
+      "status": "completed",
+      "goal": "Which Massachusetts degree-granting institutions offered both study abroad and on-campus childcare for students\u2019 children in 2024-25? List their names.",
+      "original_question": "Which Massachusetts degree-granting institutions offered both study abroad and on-campus childcare for students\u2019 children in 2024-25? List their names.",
+      "question": "14 reporting institution(s) match the selected source responses: Boston College; Boston University; Bridgewater State University; Framingham State University; Hampshire College; University of Massachusetts-Amherst; Massachusetts Institute of Technology; University of Massachusetts Chan Medical School. The table and download contain the complete list.",
+      "scope": {
+        "institutions": [],
+        "population": null,
+        "years": [
+          2024
+        ],
+        "measures": [
+          "IC{YEAR}::SLO6",
+          "IC{YEAR}::STUSRV8"
+        ],
+        "breakdowns": [],
+        "time_basis": "source_release",
+        "assumptions": []
+      },
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": []
+    },
+    "institution_identity": {
+      "unitids": [],
+      "original_question": "Which Massachusetts degree-granting institutions offered both study abroad and on-campus childcare for students\u2019 children in 2024-25? List their names.",
+      "original_mentions": [],
+      "confirmed_choices": {},
+      "scope_mentions": [],
+      "labels": []
+    }
+  },
+  "elapsed_seconds": 14.828883000067435,
+  "events": [
+    {
+      "elapsed": 0.0002741999924182892,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.078249100013636,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.0787751000607386,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 1.0788952000439167,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 1.0881471000611782,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 4.2290624000597745,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 4.5678022999782115,
+      "stage": "Finding relevant source fields\u2026"
+    },
+    {
+      "elapsed": 6.063048699987121,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 6.086805499973707,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 9.556441100081429,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 9.572769000078551,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 9.591310500050895,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 9.603770700050518,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 14.827894999994896,
+      "stage": "Preparing your answer and display\u2026"
+    },
+    {
+      "elapsed": 14.828839899972081,
+      "stage": "Preparing your answer and display\u2026"
+    }
+  ],
+  "expected_variables": [
+    "SLO6",
+    "STUSRV8"
+  ]
+}

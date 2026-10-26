@@ -1,0 +1,206 @@
+{
+  "id": "mixed",
+  "question": "For Smith College in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+  "answer": {
+    "intent": "clarify",
+    "message": "I could not validate the requested source observations. No partial answer was published. Use the existing numerical query path for calculations and institution counts.",
+    "observation_plan": {
+      "version": 1,
+      "institutions": [
+        "Smith College"
+      ],
+      "population": null,
+      "result_kind": "lookup",
+      "source_years": [
+        2024
+      ],
+      "sources": [
+        {
+          "year": 2024,
+          "table": "IC2024",
+          "field_record_ids": [
+            136122,
+            136166,
+            136165
+          ],
+          "filters": []
+        }
+      ]
+    },
+    "model_usage": {
+      "model": "claude-sonnet-5-5",
+      "calls": 7,
+      "planning_tool_requests": 9,
+      "semantic_repair_attempts": 2,
+      "latency_seconds": 20.68650779995695,
+      "input_tokens": 65832,
+      "output_tokens": 1615,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 127848,
+      "estimated_api_usd": 0.1605988,
+      "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls.",
+      "stages": [
+        {
+          "input_tokens": 591,
+          "output_tokens": 58,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "calls": 1,
+          "latency_seconds": 1.7025077999569476,
+          "estimated_api_usd": 0.001762,
+          "model": "claude-sonnet-5-5",
+          "stage": "institution mention extraction"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "calls": 6,
+          "planning_tool_requests": 9,
+          "semantic_repair_attempts": 2,
+          "latency_seconds": 18.984,
+          "input_tokens": 65241,
+          "output_tokens": 1557,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 127848,
+          "estimated_api_usd": 0.1588368,
+          "pricing_basis": "Existing configured standard token-cost estimate; catalog planning may require multiple calls."
+        }
+      ]
+    },
+    "validation_attempts": [
+      {
+        "attempt": 1,
+        "blocks": [
+          "Use the existing numerical query path for calculations and institution counts."
+        ]
+      },
+      {
+        "attempt": 2,
+        "blocks": [
+          "Use the existing numerical query path for calculations and institution counts."
+        ]
+      },
+      {
+        "attempt": 3,
+        "blocks": [
+          "Use the existing numerical query path for calculations and institution counts."
+        ]
+      }
+    ],
+    "catalog_context": {
+      "kind": "catalog_clarification",
+      "question": "For Smith College (UNITID 167835) in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+      "previous_plan": null
+    },
+    "latency": {
+      "reviewed_or_discovery_pipeline_seconds": 19.055350900045596,
+      "answer_ready_seconds": 20.84062679996714,
+      "live_model_calls": 7,
+      "scope": "Server answer ready; browser rendering and download serialization measured separately in the test harness.",
+      "conversation_resolution_seconds": 0,
+      "institution_resolution_seconds": 1.7641923000337556
+    },
+    "analysis_brief": {
+      "version": 1,
+      "id": "e9dd005cd80bda4f",
+      "status": "awaiting_information",
+      "goal": "For Smith College (UNITID 167835) in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+      "original_question": "For Smith College (UNITID 167835) in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+      "question": "I could not validate the requested source observations. No partial answer was published. Use the existing numerical query path for calculations and institution counts.",
+      "scope": {},
+      "options": [],
+      "selected_option": null,
+      "confirmed_decisions": [],
+      "open_questions": [
+        "I could not validate the requested source observations. No partial answer was published. Use the existing numerical query path for calculations and institution counts."
+      ]
+    },
+    "institution_identity": {
+      "unitids": [
+        167835
+      ],
+      "original_question": "For Smith College in the 2024-25 Institutional Characteristics release, show its academic calendar system and the percentage of undergraduates formally registered with disability services. State the student observation year.",
+      "original_mentions": [
+        "Smith College"
+      ],
+      "confirmed_choices": {
+        "smith college": 167835
+      },
+      "scope_mentions": [],
+      "labels": [
+        "Smith College \u00b7 Northampton, MA \u00b7 UNITID 167835"
+      ]
+    }
+  },
+  "elapsed_seconds": 20.840915699955076,
+  "events": [
+    {
+      "elapsed": 0.0002660999307408929,
+      "stage": "Identifying the institution in your question\u2026"
+    },
+    {
+      "elapsed": 1.712726300000213,
+      "stage": "Matching institutions to the IPEDS directory\u2026"
+    },
+    {
+      "elapsed": 1.7709673999343067,
+      "stage": "Choosing an analysis approach\u2026"
+    },
+    {
+      "elapsed": 1.7711412999778986,
+      "stage": "Finding source fields for your question\u2026"
+    },
+    {
+      "elapsed": 1.8029869999736547,
+      "stage": "Preparing the analysis plan \u00b7 step 1\u2026"
+    },
+    {
+      "elapsed": 5.033580599934794,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 5.075215399963781,
+      "stage": "Inspecting the source table and population\u2026"
+    },
+    {
+      "elapsed": 5.099680799990892,
+      "stage": "Preparing the analysis plan \u00b7 step 2\u2026"
+    },
+    {
+      "elapsed": 7.49482529994566,
+      "stage": "Reading a source definition\u2026"
+    },
+    {
+      "elapsed": 7.51357489998918,
+      "stage": "Reading a source definition\u2026"
+    },
+    {
+      "elapsed": 7.527305499999784,
+      "stage": "Preparing the analysis plan \u00b7 step 3\u2026"
+    },
+    {
+      "elapsed": 10.348722099908628,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 13.324815399944782,
+      "stage": "Revising the plan after validation feedback\u2026"
+    },
+    {
+      "elapsed": 16.035502500017174,
+      "stage": "Checking source population categories\u2026"
+    },
+    {
+      "elapsed": 16.103068999946117,
+      "stage": "Reading a source definition\u2026"
+    },
+    {
+      "elapsed": 16.14932460000273,
+      "stage": "Revising the plan after validation feedback\u2026"
+    }
+  ],
+  "expected_variables": [
+    "CALSYS",
+    "DISAB",
+    "DISABPCT"
+  ]
+}

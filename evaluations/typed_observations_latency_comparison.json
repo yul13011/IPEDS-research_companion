@@ -1,0 +1,151 @@
+{
+  "caveat": "Descriptive only: concurrent/cold/cache conditions differ, app pricing estimates not verified billing. No causal latency or cost benchmark claimed.",
+  "matched_turns": 16,
+  "median_after_seconds": 17.360547750024125,
+  "rows": [
+    {
+      "id": "affiliation",
+      "before_seconds": 93.00402899994515,
+      "after_seconds": 27.059548199991696,
+      "before_calls": 6,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.11384119999999999
+    },
+    {
+      "id": "award_levels",
+      "before_seconds": 25.688232299988158,
+      "after_seconds": 20.604503700044006,
+      "before_calls": 6,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.16059320000000002
+    },
+    {
+      "id": "calendar",
+      "before_seconds": 92.94103579991497,
+      "after_seconds": 33.65763210004661,
+      "before_calls": 7,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.1721904
+    },
+    {
+      "id": "calendar_followup",
+      "before_seconds": 19.075828000088222,
+      "after_seconds": 10.139657099964097,
+      "before_calls": 6,
+      "after_calls": 4,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.0560116
+    },
+    {
+      "id": "code_definition",
+      "before_seconds": 23.657476200023666,
+      "after_seconds": 12.056454499950632,
+      "before_calls": 5,
+      "after_calls": 0,
+      "after_intent": "definition",
+      "after_estimated_usd": 0
+    },
+    {
+      "id": "combined_services",
+      "before_seconds": 19.11576280009467,
+      "after_seconds": 20.626603799988516,
+      "before_calls": null,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.1928732
+    },
+    {
+      "id": "conditional_numeric",
+      "before_seconds": 16.708273299969733,
+      "after_seconds": 18.070523499976844,
+      "before_calls": 4,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.1133092
+    },
+    {
+      "id": "definition_rephrase",
+      "before_seconds": 0.09804850001819432,
+      "after_seconds": 14.473124700016342,
+      "before_calls": null,
+      "after_calls": 0,
+      "after_intent": "definition",
+      "after_estimated_usd": 0
+    },
+    {
+      "id": "distance_definition_followup",
+      "before_seconds": 25.084294499945827,
+      "after_seconds": 0.02217809995636344,
+      "before_calls": 6,
+      "after_calls": 0,
+      "after_intent": "definition",
+      "after_estimated_usd": 0
+    },
+    {
+      "id": "distance_distinction",
+      "before_seconds": 21.40307869995013,
+      "after_seconds": 14.203125100000761,
+      "before_calls": 6,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.1333532
+    },
+    {
+      "id": "mixed",
+      "before_seconds": 37.39463839994278,
+      "after_seconds": 14.057152800029144,
+      "before_calls": 7,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.0993952
+    },
+    {
+      "id": "open_admission",
+      "before_seconds": 93.93091070000082,
+      "after_seconds": 30.519656900083646,
+      "before_calls": 7,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.12709120000000002
+    },
+    {
+      "id": "quality_gap",
+      "before_seconds": 39.06700590008404,
+      "after_seconds": 20.64701959991362,
+      "before_calls": 7,
+      "after_calls": 6,
+      "after_intent": "clarify",
+      "after_estimated_usd": 0.15366800000000003
+    },
+    {
+      "id": "service_count",
+      "before_seconds": 28.83068779995665,
+      "after_seconds": 26.247072299942374,
+      "before_calls": 5,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.1627592
+    },
+    {
+      "id": "temporal",
+      "before_seconds": 37.54426840005908,
+      "after_seconds": 16.650572000071406,
+      "before_calls": 8,
+      "after_calls": 6,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.220064
+    },
+    {
+      "id": "threshold",
+      "before_seconds": 62.45833379996475,
+      "after_seconds": 13.020233699935488,
+      "before_calls": 7,
+      "after_calls": 5,
+      "after_intent": "analyze",
+      "after_estimated_usd": 0.1199132
+    }
+  ]
+}
