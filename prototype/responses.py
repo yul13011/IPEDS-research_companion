@@ -1,7 +1,7 @@
 """Source-bound summaries and presentation rules; never retrieves or changes data."""
 import re
 from copy import deepcopy
-from .units import display_result,is_currency,currency_text,UNVERIFIED
+from .semantics import display_result,is_currency,currency_text,UNVERIFIED
 
 MAX_DEFAULT_CHART_CATEGORIES=12
 

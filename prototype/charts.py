@@ -2,7 +2,7 @@
 import re,textwrap
 import altair as alt
 import pandas as pd
-from .units import display_result,is_currency,currency_text,unit_title as currency_unit_title,UNVERIFIED
+from .semantics import display_result,is_currency,currency_text,unit_title as currency_unit_title,UNVERIFIED
 
 PALETTE=['#24658A','#C47A28','#78649B','#398278']
 
@@ -348,7 +348,7 @@ def number_pattern(unit,p):
 
 def styled(panel,p):
     """Style a copied Vega-Lite specification; source rows remain untouched."""
-    from .units import is_currency
+    from .semantics import is_currency
     spec=deepcopy(panel['chart'].to_dict());temporal=p['chart_type']=='line'
     legend=p.get('legend','top');labels=p.get('value_labels','auto');unit=panel['unit']
     def walk(node):

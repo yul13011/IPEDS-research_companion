@@ -16,7 +16,7 @@ from .catalog import annual_path, readonly
 from .catalog_planner import validate_proposal
 from .responses import finalize_answer
 from .progress import report
-from .field_semantics import describe_field, validate_calculation, normalize_plan, formula_text
+from .semantics import describe_field, validate_calculation, normalize_plan, formula_text
 
 
 def quoted(name):
@@ -33,7 +33,7 @@ def numeric(value):
 
 
 def source_unit(d):
-    from .unit_metadata import resolve
+    from .semantics import resolve
     return resolve(d)['unit']
 
 

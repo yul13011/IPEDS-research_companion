@@ -5,8 +5,8 @@ import sys,json,unittest
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from analysis_catalog.catalog import connection,table_context
-from prototype.unit_metadata import resolve
-from prototype.field_semantics import describe_field,compatible
+from prototype.semantics import resolve
+from prototype.semantics import describe_field,compatible
 
 
 def definition(table,variable,year=2024):
@@ -66,7 +66,7 @@ class SharedUnitTests(unittest.TestCase):
         self.assertEqual(resolve(changed,{})['unit'],'unknown')
 
     def test_saved_smith_units_chart_and_audit_preserve_originals(self):
-        from prototype.units import display_result
+        from prototype.semantics import display_result
         from prototype.responses import presentation_for
         from prototype.charts import prepare,panels
         from prototype.exports import csv_bytes,audit_bytes
@@ -95,7 +95,7 @@ class SharedUnitTests(unittest.TestCase):
         (ROOT/'evaluations/smith_rank_units_fixed.json').write_text(json.dumps(fresh,indent=2,default=str),encoding='utf-8')
 
     def test_old_derived_results_need_revalidation_without_changing_values(self):
-        from prototype.units import display_result
+        from prototype.semantics import display_result
         from prototype.exports import audit_bytes
         r={'rows':[{'metric':'xold','observation_year':2024,'unit':'percent','value':42}],
            'sources':[{'metric':'xold','year':2024,'formula':{'expressions':[{'operator':'percent'}]}}]}
@@ -109,7 +109,7 @@ class SharedUnitTests(unittest.TestCase):
         from streamlit.testing.v1 import AppTest
         from unittest.mock import patch
         a=json.loads((ROOT/'evaluations/smith_rank_units_fixed.json').read_text(encoding='utf-8'))
-        from prototype.unit_metadata import VERSION
+        from prototype.semantics import VERSION
         r=deepcopy(a['result']);r['rows'][0].update(unit='unknown',unit_metadata={'version':VERSION,'unit':'unknown','status':'unresolved'})
         def app():
             import streamlit as st

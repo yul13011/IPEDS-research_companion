@@ -8,7 +8,7 @@ from .catalog import definition_detail
 from .analytics import measures
 from .exports import dataframe, csv_bytes, excel_bytes, audit_bytes
 from .responses import presentation_for,value_text
-from .units import display_result,is_currency,UNVERIFIED
+from .semantics import display_result,is_currency,UNVERIFIED
 
 specs=measures()
 

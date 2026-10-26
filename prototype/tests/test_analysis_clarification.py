@@ -123,7 +123,7 @@ class ClarificationTests(unittest.TestCase):
         result=execute(p,'Southern Connecticut State University tenured plus tenure-track professors Fall 2024')
         self.assertEqual(result['rows'][0]['unit'],'employees')
         self.assertEqual(result['rows'][0]['value'],192)
-        from prototype.field_semantics import describe_field
+        from prototype.semantics import describe_field
         fake={'record_id':1,'release_id':'x','table_name':'x','variable_name':'x','title':'Professors','long_description':'Academic rank','format':'Cont','data_type':'N'}
         self.assertEqual(describe_field(fake,{'population_evidence':[{'record_id':2,'description':'Salaries of instructional staff by rank'}]})['unit'],'unknown')
 

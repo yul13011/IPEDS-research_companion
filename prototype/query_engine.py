@@ -18,7 +18,7 @@ from analysis_catalog.catalog import connection,table_context
 from .catalog import annual_path,readonly,institutions
 from .catalog_planner import validate_proposal
 from .query_schema import QUERY_SCHEMA
-from .field_semantics import describe_field,subset,words
+from .semantics import describe_field,subset,words
 from .responses import finalize_answer
 from .progress import report
 

@@ -6,8 +6,8 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.tests.test_shared_units import definition
-from prototype.unit_metadata import resolve
-from prototype.units import display_result
+from prototype.semantics import resolve
+from prototype.semantics import display_result
 from prototype.catalog import readonly,annual_path
 
 
@@ -57,7 +57,7 @@ class ResolutionTests(unittest.TestCase):
             evidence=view['rows'][0]['unit_metadata']['unit_selector_evidence']
             self.assertEqual(evidence['code_value'],str(code));self.assertTrue(evidence['code_record_id'])
             self.assertEqual(display_result(view),view)
-        with patch('prototype.unit_observations._program_unit',return_value=None):
+        with patch('prototype.semantics._program_unit',return_value=None):
             self.assertEqual(display_result(result)['rows'][0]['unit'],'unknown')
         d,t=definition('COST1_2024','CIPLGTH6');assignment=resolve(d,t)
         with readonly(annual_path(2024)) as db:

@@ -444,7 +444,7 @@ def read_definition(record_id, offset=0, limit=6000):
         evidence['imputation_variable']=row['imputation_variable']
         evidence['category_count']=row['category_count']
         d=db.execute('SELECT d.*,v.title,v.long_description,v.data_type,v.format FROM definitions d JOIN source.variable_docs v USING(record_id) WHERE d.record_id=?',(record_id,)).fetchone()
-    from .field_semantics import describe_field
+    from .semantics import describe_field
     try:t=table_context(row['release_id'],row['table_name'])
     except ValueError:t={}
     evidence['analytical_description']=describe_field(dict(d),t)

@@ -75,7 +75,7 @@ def bind(plan, question):
     import jsonschema
     from analysis_catalog.catalog import connection, table_context
     from .catalog_planner import validate_proposal
-    from .field_semantics import describe_field
+    from .semantics import describe_field
     from .institution_confirmation import AUTHORIZED
     jsonschema.validate(plan, SCHEMA)
     if not enabled():

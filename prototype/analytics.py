@@ -133,7 +133,7 @@ def execute(plan):
                      'status':'not_collected','numerator':None,'denominator':None,
                      'series_segment':'pre-2017 SAT protocol' if spec['family']=='sat' and year<2017 else '2017+ SAT protocol' if spec['family']=='sat' else 'comparable scope'}
                 if mapping:
-                    from .unit_metadata import resolve
+                    from .semantics import resolve
                     row['unit_metadata']=resolve({'title':spec['label'],'long_description':spec['definition'],'release_id':mapping['release'],
                         'table_name':mapping['table'],'variable_name':metric},reviewed_unit=spec['unit'])
                     row['unit_metadata']['definition_record_ids']=mapping['definition_record_ids']

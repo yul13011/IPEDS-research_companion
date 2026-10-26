@@ -2,7 +2,7 @@
 from io import BytesIO
 import json
 import pandas as pd
-from .units import display_result
+from .semantics import display_result
 
 
 def dataframe(result):

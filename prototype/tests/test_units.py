@@ -8,7 +8,7 @@ sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.tests.test_query_engine import source,plan,field_ref
 from prototype.query_engine import execute
 from prototype.catalog import readonly,annual_path
-from prototype.units import display_result,monetary_evidence,UNVERIFIED
+from prototype.semantics import display_result,monetary_evidence,UNVERIFIED
 from prototype.responses import summarize,value_text,presentation_for
 from prototype.charts import panels,prepare
 from prototype.exports import csv_bytes,excel_bytes,audit_bytes
