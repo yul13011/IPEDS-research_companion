@@ -76,7 +76,7 @@ class ChartWorkflowTests(unittest.TestCase):
 
     def test_whole_salary_workflow_ui_and_exports(self):
         from streamlit.testing.v1 import AppTest
-        from prototype import chart_controls
+        from prototype import components as chart_controls
         start=time.perf_counter();answer=deepcopy(self.answer);result=answer['result'];rid=result['result_id'];events=[];exports=[]
         app=AppTest.from_file(str(ROOT/'prototype/app.py'),default_timeout=60).run()
         app.session_state['use_ai']=False  # Explicit offline path; AI routing has separate tests.
@@ -153,9 +153,9 @@ class ChartWorkflowTests(unittest.TestCase):
                 preview_exports.append({'kind':kind,'canvas':[w,h],'scale':scale})
                 return data
             chart_controls.image_bytes.clear()
-            dialog=AppTest.from_string("from prototype.chart_controls import preview\nimport streamlit as st\npreview(st.session_state['workflow_result'],st.session_state['workflow_settings'],'workflow_dialog')",default_timeout=60)
+            dialog=AppTest.from_string("from prototype.components import preview\nimport streamlit as st\npreview(st.session_state['workflow_result'],st.session_state['workflow_settings'],'workflow_dialog')",default_timeout=60)
             dialog.session_state['workflow_result']=deepcopy(result);dialog.session_state['workflow_settings']=preview_state
-            with patch('prototype.chart_controls.export_figure',side_effect=capture_export):
+            with patch('prototype.components.export_figure',side_effect=capture_export):
                 dialog.run()
                 next(w for w in dialog.selectbox if w.label=='File type').set_value('SVG').run()
                 next(w for w in dialog.selectbox if w.label=='Slide layout').set_value('Half slide · 4:3').run()

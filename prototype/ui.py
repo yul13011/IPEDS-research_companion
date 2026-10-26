@@ -347,7 +347,7 @@ def render_chat():
     with panels[1],st.container(key='chat_workspace',height='stretch'):
         if s.get('request_error'):st.error(s.request_error)
         editing=any(s.get(k) for k in s if k.endswith('_format_open'))
-        from .transcript_scroll import render as scroll_transcript
+        from .components import render as scroll_transcript
         scroll_transcript(s.get('scroll_request_serial',0),editing)
         with st.container(height=500,border=False,key='conversation_messages',autoscroll=False):
             for i,item in enumerate(s.history):
