@@ -105,7 +105,7 @@ class ChartLanguageTests(unittest.TestCase):
         self.assertEqual(self.base,original)
 
     def test_parsed_font_legend_and_quoted_title_reach_export(self):
-        from prototype.chart_format import DEFAULTS,styled,figure_spec,export_figure
+        from prototype.charts import DEFAULTS,styled,figure_spec,export_figure
         from prototype.charts import panels
         import xml.etree.ElementTree as ET
         answer=adjust_presentation('Please set the font size to 18',self.base)

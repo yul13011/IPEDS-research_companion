@@ -116,7 +116,7 @@ over incomplete work. Return chart_edits=[] for all non-chart work unless mixed.
 conversation/clarify, message is the reply; for other routes message may be empty.'''
 
 def charts_context(history,overrides=None):
-    from .chart_format import DEFAULTS
+    from .charts import DEFAULTS
     from .charts import series_names_for_context
     from .responses import presentation_for
     seen=set();charts=[];answers={}
@@ -262,7 +262,7 @@ def validate_decision(d,original,history,answers):
 
 def apply_chart_edits(answer,edits,validate_only=False):
     """Validate a whole typed patch before returning an immutable-result display."""
-    from .chart_format import DEFAULTS,series_names
+    from .charts import DEFAULTS,series_names
     from .responses import presentation_for
     import jsonschema
     result=answer['result'] if answer else None
@@ -321,7 +321,7 @@ def apply_chart_edits(answer,edits,validate_only=False):
         p['series_colors']={**p.get('series_colors',{}),**series_changes};p['color']=None
     if p['chart_type']=='none' and not p['show_table']:raise ValueError('Keep a chart or table visible.')
     from .charts import panels
-    from .chart_format import styled
+    from .charts import styled
     if p['chart_type']!='none':
         for panel in panels(result,p):styled(panel,p)
     return {'intent':'analyze','mode':'presentation adjustment','result':result,'plan':result['plan'],

@@ -55,7 +55,7 @@ class LatencyTests(unittest.TestCase):
         from prototype.analytics import Plan,execute
         from prototype.responses import finalize_answer
         from prototype.charts import series_names_for_context
-        from prototype.chart_format import series_names
+        from prototype.charts import series_names
         from prototype.workflows import execute_example
         results=[execute(Plan(['admission_rate'],['Ivy League'],[2024])),
                  execute(Plan(['total_enrollment'],['Yale','Harvard'],list(range(2015,2025)))),

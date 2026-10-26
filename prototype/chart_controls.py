@@ -1,7 +1,7 @@
 """Discoverable chart editor and export preview, sharing settings with chat."""
 from copy import deepcopy
 import streamlit as st
-from .chart_format import DEFAULTS,effective,commit,color_series,figure_spec,export_figure
+from .charts import DEFAULTS,effective,commit,color_series,figure_spec,export_figure
 
 @st.cache_data(show_spinner=False,max_entries=32)
 def image_bytes(spec,kind,scale):return export_figure(spec,kind,scale)

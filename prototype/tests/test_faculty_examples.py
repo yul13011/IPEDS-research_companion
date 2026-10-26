@@ -14,7 +14,7 @@ class FacultyExampleTests(unittest.TestCase):
     def test_style_colors_match_salary_chart_and_recolor_actual_bars(self):
         from copy import deepcopy
         from streamlit.testing.v1 import AppTest
-        from prototype.chart_format import color_series,DEFAULTS
+        from prototype.charts import color_series,DEFAULTS
         a=finalize_answer(execute_example('faculty-salaries'),example_by_id('faculty-salaries')['question'])
         expected={'Yale University':'#24658A','Harvard University':'#C47A28','Princeton University':'#78649B'}
         self.assertEqual(color_series(a['result'],a['presentation']),expected)
@@ -47,7 +47,7 @@ class FacultyExampleTests(unittest.TestCase):
         import re,xml.etree.ElementTree as ET
         from copy import deepcopy
         import vl_convert as vlc
-        from prototype.chart_format import DEFAULTS,styled,figure_spec
+        from prototype.charts import DEFAULTS,styled,figure_spec
         a=finalize_answer(execute_example('faculty-salaries'),example_by_id('faculty-salaries')['question'])
         original=deepcopy(a['result']['rows']);ns={'s':'http://www.w3.org/2000/svg'}
         for size in [18,40]:

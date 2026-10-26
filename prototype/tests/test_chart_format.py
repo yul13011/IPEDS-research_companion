@@ -8,7 +8,7 @@ sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.analytics import execute,Plan
 from prototype.responses import finalize_answer,adjust_presentation,presentation_for
 from prototype.charts import panels
-from prototype.chart_format import DEFAULTS,styled,figure_spec,export_figure
+from prototype.charts import DEFAULTS,styled,figure_spec,export_figure
 
 class ChartFormatTests(unittest.TestCase):
     @classmethod

@@ -129,11 +129,11 @@ def finalize_answer(answer,question=''):
 
 def adjust_presentation(question,previous_answer):
     """Recognize display-only requests locally; reuse the exact result and provenance."""
-    from .chart_format import normalize_edit_question
+    from .charts import normalize_edit_question
     q=normalize_edit_question(question);low=q.lower();change={}
     if re.fullmatch(r'(?:please )?(?:set|change|rotate|make)(?: the)? (?:(?:[xy][- ]axis|axis|year|reporting[- ]period) )?(?:tick(?:mark)? )?labels?(?: angle)?(?: to)? (?:horizontal|vertical|flat|[−-]?\d+)(?:\s*(?:°|degrees?))?',low):
         return {'intent':'clarify','message':'Axis tick-label rotation is currently unavailable. Label angles are set automatically; the data has not changed.'}
-    from .chart_format import extra_edits,edit_clauses
+    from .charts import extra_edits,edit_clauses
     clauses=edit_clauses(q)
     if len(clauses)>1:
         first=adjust_presentation(clauses[0],previous_answer)

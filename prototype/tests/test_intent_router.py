@@ -50,7 +50,7 @@ class IntentRouterTests(unittest.TestCase):
         self.assertIsNone(self.base['presentation']['title'])
 
     def test_axis_orientation_reset_and_rendered_ticks(self):
-        from prototype.chart_format import styled
+        from prototype.charts import styled
         from prototype.charts import panels
         d=decision(rid=self.rid,refs=[1],edits=[edit('x_min',0),edit('x_max',10)])
         a=self.run_request(d);p=a['presentation'];spec=styled(panels(a['result'],p)[0],p)

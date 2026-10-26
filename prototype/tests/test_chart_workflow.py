@@ -8,7 +8,7 @@ sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from prototype.workflows import execute_example,example_by_id
 from prototype.responses import finalize_answer
 from prototype.charts import panels
-from prototype.chart_format import DEFAULTS,color_series,styled,figure_spec,export_figure
+from prototype.charts import DEFAULTS,color_series,styled,figure_spec,export_figure
 from prototype.catalog import readonly,annual_path
 
 OUT=ROOT/'evaluations/chart_workflow'

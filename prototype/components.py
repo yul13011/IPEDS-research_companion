@@ -72,7 +72,7 @@ def render_evidence(records,key,select_one=False):
 
 def render_result(result,key,show_chart=None,presentation=None,compact=False):
     if result.get('result_schema_version')==2:
-        from .observation_ui import render
+        from .observations import render
         return render(result,key)
     from .intent_checks import check_result,IntentMismatch
     try:check_result(result)
@@ -84,7 +84,7 @@ def render_result(result,key,show_chart=None,presentation=None,compact=False):
     good=frame[frame.status=='ok']
     coverage=result['coverage']
     presentation={**presentation_for(result),**(presentation or {})}
-    from .chart_format import effective,styled
+    from .charts import effective,styled
     presentation=effective(result,presentation)
     chart_type=presentation['chart_type']
     if show_chart is False:chart_type='none'

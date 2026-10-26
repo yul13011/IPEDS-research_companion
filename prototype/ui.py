@@ -95,7 +95,7 @@ def run_pending():
                 from .working_analysis import recent_result
                 previous=recent_result(s.history)
                 if previous:
-                    from .chart_format import effective
+                    from .charts import effective
                     previous={**previous,'presentation':effective(previous['result'],previous.get('presentation') or presentation_for(previous['result']))}
                 choices={**s.get('confirmed_institutions',{}),**pending.get('institution_choices',{})}
                 if s.use_ai:
@@ -111,7 +111,7 @@ def run_pending():
                 from .working_analysis import results
                 for edited in results(answer or {}):
                   if edited.get('mode')=='presentation adjustment':
-                    from .chart_format import commit
+                    from .charts import commit
                     commit(edited['result'],edited['presentation'])
                     s.chart_overrides.pop(edited['result']['result_id'],None)
                 if answer is None:
