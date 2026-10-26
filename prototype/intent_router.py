@@ -370,7 +370,7 @@ def dispatch(question,previous,model,history,executor,decision,usage,answers,ins
                 canonical=('Define '+terms[0] if doc['kind']=='meaning' else 'Explain the difference between '+ ' and '.join(terms))+suffix
                 answer=define(canonical,True,model,history)
             else:
-                from .documentation import handle as documentation
+                from .definitions import handle as documentation
                 canonical=('How is '+terms[0]+' calculated' if doc['kind']=='calculation' else effective)+suffix
                 answer=documentation(canonical,True,model,history,previous)
             if answer is None:raise ValueError('Please specify the source term or label you want explained.')

@@ -3,7 +3,7 @@ from copy import deepcopy
 import unittest
 from unittest.mock import patch
 from prototype.institution_confirmation import ask
-from prototype.documentation import classify
+from prototype.definitions import classify
 
 
 class DocumentationTests(unittest.TestCase):

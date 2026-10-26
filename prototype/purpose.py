@@ -53,7 +53,7 @@ def mixed(question):
     """
     match=re.fullmatch(r'(.+?)[,;]?\s+(?:and|then|and then|also)\s+((?:show|plot|count|calculate|compare|give|how many|how much)\b.+)',question,re.I)
     if not match:return None
-    from .documentation import classify
+    from .definitions import classify
     if classify(match[1]):return match[1].rstrip(',; '),match[2]
     return None
 

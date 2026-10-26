@@ -8,7 +8,7 @@ class PurposeTests(unittest.TestCase):
     def test_conversation_bypasses_provider_identity_and_progress(self):
         for entry in [institution_confirmation.ask,agent.ask]:
             for question in ['Hi','Hi there!','Hello!','Thanks for clarifying.','What can you do?','Hi, what can you do?']:
-                with self.subTest(entry=entry.__module__,question=question),patch('prototype.institution_confirmation.mentions',side_effect=AssertionError('identity ran')),patch('prototype.documentation.handle',side_effect=AssertionError('documentation ran')):
+                with self.subTest(entry=entry.__module__,question=question),patch('prototype.institution_confirmation.mentions',side_effect=AssertionError('identity ran')),patch('prototype.definitions.handle',side_effect=AssertionError('documentation ran')):
                     stages=[]
                     with reporting(stages.append):answer=entry(question,use_model=True,conversation=[{'question':'old','answer':{}}])
                     self.assertEqual(answer['model_usage']['calls'],0)
@@ -26,7 +26,7 @@ class PurposeTests(unittest.TestCase):
     def test_mixed_retains_both_outputs_and_usage(self):
         docs={'intent':'definition','message':'Source definition','evidence':[{'record_id':42}],'model_usage':{'calls':1,'estimated_api_usd':.01}}
         analysis={'intent':'analyze','message':'Validated result','result':{'result_id':'r'},'model_usage':{'calls':2,'estimated_api_usd':.02}}
-        with patch('prototype.documentation.handle',return_value=docs),patch('prototype.institution_confirmation._ask',return_value=analysis) as route:
+        with patch('prototype.definitions.handle',return_value=docs),patch('prototype.institution_confirmation._ask',return_value=analysis) as route:
             answer=institution_confirmation.ask('Define Pell and show Pell enrollment at Smith College',use_model=True)
         self.assertEqual(route.call_args.args[0],'show Pell enrollment at Smith College')
         self.assertEqual(answer['documentation_sections'][0]['evidence'][0]['record_id'],42)
@@ -35,7 +35,7 @@ class PurposeTests(unittest.TestCase):
         self.assertEqual(answer['result']['result_id'],'r')
 
     def test_ambiguous_documentation_does_not_compute(self):
-        with patch('prototype.documentation.handle',return_value={'intent':'clarify','message':'Which measure?'}),patch('prototype.institution_confirmation._ask') as analysis:
+        with patch('prototype.definitions.handle',return_value={'intent':'clarify','message':'Which measure?'}),patch('prototype.institution_confirmation._ask') as analysis:
             answer=institution_confirmation.ask('Define this and compare Smith and Wellesley')
         analysis.assert_not_called()
         self.assertIn('analysis_question',answer['pending_mixed_request'])
@@ -66,7 +66,7 @@ class PurposeTests(unittest.TestCase):
 
     def test_mixed_pronoun_uses_current_definition(self):
         docs={'intent':'definition','message':'Definition','documentation_context':{'terms':['admission rate']}}
-        with patch('prototype.documentation.handle',return_value=docs),patch('prototype.institution_confirmation._ask',return_value={'intent':'analyze'}) as analysis:
+        with patch('prototype.definitions.handle',return_value=docs),patch('prototype.institution_confirmation._ask',return_value={'intent':'analyze'}) as analysis:
             institution_confirmation.ask('Define admission rate and show it at Smith College')
         self.assertEqual(analysis.call_args.args[0],'show admission rate at Smith College')
 

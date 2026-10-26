@@ -303,3 +303,194 @@ def answer(question,use_model=False,model=None,conversation=None):
             'latency':{'answer_ready_seconds':time.perf_counter()-started,'live_model_calls':1 if usage else 0}}
     if usage:result['model_usage']=usage
     return result
+
+
+# ===== merged from category_documentation.py (consolidation) =====
+"""Bounded source-code label explanations, including blocked-query follow-ups."""
+import re
+from .catalog import readonly, DATA, definition_detail
+
+
+def category_answer(question, conversation=None):
+    if not isinstance(question,str) or not 1<=len(question)<=4000:return None
+    low=question.casefold()
+    if not re.search(r'what does|\bdefine\b|\bmeaning\b|difference between|\bexplain\b', low):return None
+    if re.search(r'\b(?:and|also|then)\s+(?:show|count|calculate|how many|how much)\b',low):return None
+    last=(conversation or [{}])[-1].get('answer',{})
+    contextual=bool(re.search(r'those two|these two|those categories|these categories',low))
+    labels=[s for s in ['Implied no','Not reported','Not applicable'] if s.casefold() in low]
+    quoted=re.findall(r'["“]([^"”]{1,100})["”]',question)
+    if quoted:
+        with readonly(DATA/'metadata_catalog.sqlite') as db:
+            labels+= [r[0] for text in quoted[:4] for r in db.execute('SELECT DISTINCT value_label FROM code_values WHERE value_label=? COLLATE NOCASE LIMIT 2',(text,))]
+        labels=list(dict.fromkeys(labels))
+    if not labels:
+        match=re.search(r'(?:define|explain) (?:the )?label (.+?) (?:for|in)\b',question,re.I)
+        if match:
+            with readonly(DATA/'metadata_catalog.sqlite') as db:
+                labels=[r[0] for r in db.execute('SELECT DISTINCT value_label FROM code_values WHERE value_label=? COLLATE NOCASE LIMIT 2',(match[1].strip(),))]
+    if not labels and not contextual:return None
+    prior_years=(last.get('observation_plan') or last.get('definition_lookup') or {}).get('source_years')
+    years=list(dict.fromkeys(map(int,re.findall(r'\b((?:19|20)\d{2})(?:[-–/]\d{2})?\b',question)))) or prior_years or [2024]
+    if len(years)!=1 or years[0] not in range(2015,2025):
+        return {'intent':'clarify','mode':'source definition','message':'Which supplied source release should I use to explain these category labels?'}
+    year=years[0];ids=[]
+    if contextual:
+        ids=[r['record_id'] for r in last.get('result',{}).get('rows',[]) if r.get('record_id')]
+        p=last.get('observation_plan') or last.get('catalog_plan') or {}
+        ids+= [rid for s in p.get('sources',[]) for rid in s.get('field_record_ids',[])]
+        ids=list(dict.fromkeys(ids))
+        if not 1<=len(ids)<=8:
+            return {'intent':'clarify','mode':'source definition','message':'Which source categories do you mean? Please name the labels or variables so I can explain their documented difference.'}
+    with readonly(DATA/'metadata_catalog.sqlite') as db:
+        if not contextual:
+            # Anchor category lookup to the source variable's actual wording.
+            terms=re.findall(r'[a-z]{3,}',low)
+            stop={'what','does','mean','define','the','label','for','and','how','different','from','institutional','characteristics','codebook','implied','not','reported','applicable','explain','meaning','no'}
+            terms=[t for t in terms if t not in stop]
+            terms=[('care' if t=='childcare' else t) for t in terms]
+            if not terms:return None
+            pairs={tuple(r) for r in db.execute('SELECT DISTINCT table_name,variable_name FROM code_values WHERE release_id LIKE ? AND value_label IN ('+','.join('?' for _ in labels)+')',('%'+str(year)+'-%',*labels))}
+            candidates=db.execute("SELECT record_id,table_name,variable_name,title,body FROM records WHERE kind='variable_definition' AND release_id LIKE ? LIMIT 20001",('%'+str(year)+'-%',)).fetchall()
+            if len(candidates)>20000:return {'intent':'clarify','mode':'source definition','message':'Which source table or variable should I use for these category labels?'}
+            rows=[r for r in candidates if (r['table_name'],r['variable_name']) in pairs]
+            scored=[(sum(4*(t in r['title'].casefold())+(t in r['body'].casefold()) for t in set(terms)),r['record_id']) for r in rows]
+            top=max((s for s,_ in scored),default=0)
+            ids=[rid for s,rid in scored if s==top and s>0]
+            if not 1<=len(ids)<=4:return {'intent':'clarify','mode':'source definition','message':'Which source variable or service do you mean? These category labels occur in multiple fields.'}
+    try:details=[definition_detail(rid) for rid in ids]
+    except ValueError:
+        return {'intent':'clarify','mode':'source definition','message':'The earlier field references could not be verified. Which source variables or labels should I explain?'}
+    if contextual and len(details)<2:return None
+    evidence=[];parts=[]
+    for d in details:
+        mappings=[c for c in d['codes'] if not labels or c['value_label'] in labels]
+        if not contextual and not mappings:continue
+        parts.append('**'+d['title']+'**: '+d['definition']+('\n\nSource responses: '+'; '.join(str(c['code_value'])+' = '+c['value_label'] for c in mappings) if mappings else ''))
+        with readonly(DATA/'metadata_catalog.sqlite') as db:
+            present=bool(db.execute('SELECT 1 FROM physical_columns WHERE release_id=? AND table_name=? COLLATE NOCASE AND column_name=? COLLATE NOCASE',(d['release_id'],d['table_name'],d['variable_name'])).fetchone())
+        evidence.append({**d,'excerpt':d['definition'],'issues':[],'physical_column_present':present})
+    if not parts:return None
+    return {'intent':'definition','mode':'source definition','message':'\n\n'.join(parts)+'\n\nThese are distinct source response categories; an unavailable or unreported response must not be interpreted as No.',
+        'evidence':evidence,'definition_lookup':{'term':'source category labels','terms':[d['title'] for d in details],'source_years':[year],'comparison':len(details)>1},
+        'documentation_context':{'kind':'label','terms':[d['title'] for d in details],'source_years':[year]},
+        'model_usage':{'calls':0,'estimated_api_usd':0},'latency':{'live_model_calls':0}}
+
+
+# ===== merged from documentation.py (consolidation) =====
+"""Route documentation questions before identity/statistical planning.
+
+Conversation supplies references, never new source evidence. No model call is
+needed to classify these common intents or resolve an unambiguous reference.
+"""
+import re
+
+
+def classify(question):
+    if not isinstance(question,str) or not 1<=len(question)<=4000:return None
+    q=question.strip().rstrip('?.!').strip()
+    # A mixed request must reach the general planner intact.
+    if re.search(r'\b(?:and|also|then)\s+(?:show|plot|count|calculate|compare|give|how many|how much)\b',q,re.I):return None
+    patterns=[
+        ('calculation',r'how (?:is|are|was|were)\s+(.+?)\s+(?:calculated|computed|derived)'),
+        ('calculation',r'how do you\s+(?:calculate|compute)\s+(.+)'),
+        ('calculation',r'(?:what is|explain|show me)\s+(?:the )?(?:formula|calculation|method)\s+(?:for|behind|of)\s+(.+)'),
+        ('label',r'what does\s+(?:the\s+)?label\s+(.+?)\s+mean'),
+        ('label',r'(?:explain|define)\s+(?:the\s+)?label\s+(.+)'),
+        ('discovery',r'what (?:data|information|variables|tables)\s+(?:do you have|are available)\s+(?:on|about|for)\s+(.+)'),
+        ('discovery',r'what (?:else|other data|other information)\s+do you have\s+(?:on|about|for)\s+(.+)'),
+    ]
+    for kind,pattern in patterns:
+        m=re.fullmatch(pattern,q,re.I)
+        if m:return {'kind':kind,'term':m[1].strip(' \"“”\'')}
+    parsed=request(question)
+    if parsed and can_answer(question):
+        kind='label' if re.fullmatch(r'(?:this|that|the) label',parsed['term'],re.I) else 'definition'
+        return {'kind':kind,'term':parsed['term']}
+    if not parsed:
+        for pattern in [r'(?:explain|help me understand)\s+(.+)',r'how (?:should|do) I interpret\s+(.+)',r'tell me what\s+(.+?)\s+means']:
+            m=re.fullmatch(pattern,q,re.I)
+            if m and not re.match(r'(?:why|how|whether)\b',m[1],re.I):
+                return {'kind':'label','term':m[1].strip(' \"“”\'')}
+    return None
+
+
+def references(answer):
+    """Only structured answer fields are eligible antecedents, not model prose."""
+    lookup=answer.get('definition_lookup',{})
+    if lookup.get('comparison'):return lookup.get('terms',[]),lookup.get('source_years',[])
+    if lookup.get('term'):return [lookup['term']],lookup.get('source_years',[])
+    if answer.get('documentation_context'):
+        ctx=answer['documentation_context'];return ctx.get('terms',[]),ctx.get('source_years',[])
+    if answer.get('mode')=='data discovery' and answer.get('query'):
+        return [answer['query']],answer.get('discovery',{}).get('requested_release_years',[])
+    result=answer.get('result',{})
+    rows=result.get('rows',[])
+    terms=list(dict.fromkeys(r['measure'] for r in rows if r.get('measure')))
+    plan=result.get('plan') or answer.get('plan') or {}
+    from .analytics import measures
+    specs=measures()
+    if not terms:terms=[specs[m]['label'] for m in plan.get('metrics',[]) if m in specs]
+    years=plan.get('source_years') or plan.get('years') or []
+    return terms,years
+
+
+def handle(question,use_model=False,model=None,conversation=None,previous=None):
+    categorical=category_answer(question,conversation)
+    if categorical is not None:return categorical
+    parsed=classify(question)
+    if not parsed and conversation:
+        last=conversation[-1].get('answer',{})
+        pending=last.get('documentation_context',{})
+        if last.get('intent')=='clarify' and pending.get('kind'):
+            match=next((t for t in pending.get('terms',[]) if normalized(t)==normalized(question)),None)
+            if match:parsed={'kind':pending['kind'],'term':match}
+            year=re.fullmatch(r'\s*((?:19|20)\d{2})[.!?\s]*',question)
+            if year and int(year[1]) in pending.get('source_years',[]) and len(pending.get('terms',[]))==1:
+                parsed={'kind':pending['kind'],'term':pending['terms'][0]+' in '+year[1]}
+    if not parsed:return None
+    kind=parsed['kind'];term=parsed['term'];years=[]
+    pending=(conversation or [{}])[-1].get('answer',{}).get('documentation_context',{})
+    if pending.get('kind')==kind and term in pending.get('terms',[]):years=pending.get('source_years',[])
+    contextual=bool(re.fullmatch(r'(?:this|that|it|this label|that label|this measure|that measure|the measure|the label|these|those)',term,re.I))
+    if contextual:
+        last=(conversation or [{}])[-1].get('answer',{})
+        terms,years=references(last)
+        if kind in {'label','calculation'} and last.get('mode')=='data discovery':
+            terms=list(dict.fromkeys(r['title'] for r in last.get('evidence',[]) if r.get('variable_name') and r.get('title')))
+        if not terms and previous:
+            terms,years=references({'plan':previous})
+        if len(terms)!=1:
+            choices=' Available labels: '+ '; '.join(terms[:8])+'.' if terms else ''
+            return {'intent':'clarify','mode':'source definition',
+                    'message':'Which label, measure, or topic do you mean?'+choices,
+                    'documentation_context':{'kind':kind,'terms':terms,'source_years':years}}
+        term=terms[0]
+        if kind!='discovery' and len(years)>1:
+            return {'intent':'clarify','mode':'source definition',
+                    'message':'The earlier answer covers multiple source releases ('+', '.join(map(str,years))+'). Which release should I use to explain **'+term+'**? I will not assume definitions or calculations are unchanged across years.',
+                    'documentation_context':{'kind':kind,'terms':[term],'source_years':years}}
+    # Resolve a bare answer to an immediately pending documentation clarification.
+    if kind=='discovery':
+        from .discovery import overview
+        effective='What data do you have on '+term
+        if contextual and years:effective+=' in '+ ' and '.join(map(str,years))
+        result=overview(effective,use_model=use_model,model=model)
+    else:
+        effective='Define '+term if kind in {'label','calculation'} else question
+        if contextual:effective='Define '+term
+        if len(years)==1 and not re.search(r'(?:19|20)\d{2}',term):effective+=' in '+str(years[0])
+        result=answer(effective,use_model,model,conversation)
+        if kind=='calculation' and result.get('intent')!='clarify':
+            mapping=result.get('definition_lookup',{}).get('reviewed_measure')
+            if not mapping:
+                result['message']='I have not established an app calculation formula for **'+term+'**. The source documentation below may describe how the reported field is constructed; I will not infer a formula from its label.\n\n'+result['message']
+            else:
+                from .analytics import measures
+                expression=measures()[mapping].get('expression')
+                if expression and 'Calculation:' not in result['message']:
+                    result['message']='App calculation expression: `'+expression+'`. This is the reviewed app computation, not a new calculation of institutional values.\n\n'+result['message']
+    result['documentation_context']={'kind':kind,'terms':[term],
+        'source_years':result.get('definition_lookup',{}).get('source_years',years),
+        'context_resolved':contextual}
+    return result

@@ -571,7 +571,7 @@ def run_catalog_tool(name,payload):
     if name=='lookup_documentation':
         _bound_text(payload['question'],'documentation question',500)
         report('Investigating source documentation…')
-        from .documentation import handle,classify
+        from .definitions import handle,classify
         parsed=classify(payload['question'])
         if not parsed or parsed['kind']=='discovery':
             return {'intent':'clarify','message':'Ask an explicit definition, label meaning, or documented calculation question. Use search_catalog for source discovery.'}

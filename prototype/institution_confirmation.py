@@ -171,12 +171,12 @@ def ask(question,previous=None,use_model=False,model=None,conversation=None,inst
         allowed=any(normalized(question)==normalized(term) for term in ctx.get('terms',[]))
         allowed=allowed or question.strip().rstrip('.!?') in {str(y) for y in ctx.get('source_years',[])}
         if allowed:
-            from .documentation import handle
+            from .definitions import handle
             documentation=handle(question,use_model,model,conversation,previous)
             if documentation is not None:
                 question=pending['original_question'];parts=mixed(question)
     if parts:
-        from .documentation import handle
+        from .definitions import handle
         report('Checking the requested definition and source documentation…')
         documentation=documentation or handle(parts[0],use_model,model,conversation,previous)
         # Unresolved documentation can affect the analysis interpretation. Do
@@ -209,7 +209,7 @@ def ask(question,previous=None,use_model=False,model=None,conversation=None,inst
 
 
 def _ask(question,previous=None,use_model=False,model=None,conversation=None,institution_choices=None):
-    from .documentation import handle as documentation_answer
+    from .definitions import handle as documentation_answer
     documented=documentation_answer(question,use_model,model,conversation,previous)
     if documented is not None:return documented
     from .catalog_planner import discovery_question

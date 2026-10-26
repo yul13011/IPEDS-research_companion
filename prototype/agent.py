@@ -307,7 +307,7 @@ def ask(question,previous=None,use_model=False,model=DEFAULT_MODEL,conversation=
     immediate=direct(question)
     if immediate is not None:return immediate
     conversation=source_context(conversation)
-    from .documentation import handle as documentation_answer
+    from .definitions import handle as documentation_answer
     documented=documentation_answer(question,use_model,model,conversation,previous)
     if documented is not None:return documented
     from .analysis_clarification import select,execute_selection,latest
