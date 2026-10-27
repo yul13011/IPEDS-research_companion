@@ -352,7 +352,8 @@ import hashlib,json,sqlite3
 from pathlib import Path
 from functools import lru_cache
 
-CATALOG=Path(__file__).resolve().parents[1]/'data/unit_catalog.sqlite'
+from .catalog import DATA
+CATALOG=DATA/'unit_catalog.sqlite'
 
 
 @lru_cache(maxsize=8192)
@@ -427,7 +428,7 @@ def restore_direct(row,result):
             return {'version':VERSION,'unit':'unknown','status':'requires_revalidation','historical_unit':row.get('unit'),
                     'basis':'Saved calculation predates verified unit metadata; rerun to revalidate. Values have not been recalculated.'}
         return None
-    source=Path(__file__).resolve().parents[1]/'data/metadata_catalog.sqlite'
+    source=DATA/'metadata_catalog.sqlite'
     assignment=record_assignment(next(iter(ids)),source.stat().st_mtime_ns)
     if assignment and all(d.get('variable_name')==assignment['variable'] for d in docs):return assignment
     return None

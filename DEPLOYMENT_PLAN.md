@@ -1,86 +1,182 @@
-# Redesign deployment plan
+# Deployment runbook — IPEDS Research Companion on Render
 
-Startup latency follow-up, October 26: [Always running hosting comparison](ALWAYS_ON_HOSTING_COMPARISON_2026-10-26.md) recommends a paid Render application instance plus persistent disk at a $27.50/month base price if predictable first visits take priority. It also compares lower-cost DigitalOcean and usage-based Railway. This is a researched alternative to the free-host pilot, not an approved purchase.
+Created: October 27, 2026. **Decision:** host the Streamlit app on **Render** (Starter, always-on),
+keep the 3.1 GB of data in the **Hugging Face Dataset repo** `yul13011/ipeds-data` (already
+uploaded, free), and give the Render service a small **persistent disk** so the data loads once
+and survives restarts. Render Starter is always-on, so **no keep-warm ping is needed** and a
+LinkedIn visitor never hits a cold boot.
 
-Current resumption document: [IPEDS App Deployment Plan](<IPEDS App Deployment Plan.docx>), prepared October 26, 2026. It includes implementation phases, launch checks, areas of concern, open decisions and supporting-file references. The [October 26 feasibility review](DEPLOYMENT_FEASIBILITY_2026-10-26.md) and `evaluations/deployment_feasibility_inventory.json` provide the current investigation and exact candidate runtime inventory. The October 23 notes below are historical context.
+Why Render over the alternatives: it's the **Git-push flow you already know** (no Docker, no CLI),
+it's **always-on** (unlike Streamlit Community Cloud, which sleeps), and at **~$8/mo** it's cheaper
+than Hugging Face hosting (which now needs $9 PRO + $5 disk = ~$14/mo just to run a Docker Space).
 
-Prepared October 23, 2026. Planning only; no deployment or account changes performed.
+Steps are marked:
+- 👉 **YOU (browser)** — click around the Render/GitHub websites
+- 💻 **YOU (terminal)** — a git push, like before
+- 🤖 **CODE (I make these)** — small code edits in one commit
 
-## Recommended approach
+---
 
-Use the original graduation-rate prototype's GitHub → Streamlit hosting pattern as the starting point. Deploy the redesign as a separate staging app and preserve the original app, repository deployment settings, credentials, and URL. Test Streamlit Community Cloud first; retain it only if measured startup, resource use, and concurrent-user behavior are acceptable. Otherwise deploy the same Streamlit application to a container host with persistent local storage. No database-service migration is required for this pilot.
+## Architecture at a glance
 
-The original deployment is documented in `../Gradrates/PROJECT_HANDOFF_College_Graduation_Rate_Explorer.md` and `../Gradrates/README.md`. Its historical public URL is https://college-graduation-rate-explorer.streamlit.app/ ; its current live status was not checked for this plan.
-
-## What carries over and what changes
-
-| Area | Original prototype | Redesign deployment |
+| Piece | Where | Cost |
 | --- | --- | --- |
-| Interface | Streamlit and Altair | Retain Streamlit and Altair |
-| AI | Claude API | Retain configured Claude models; separate deployment key and usage tracking |
-| Database | One approximately 6 MiB SQLite file | Ten annual SQLite files plus metadata, analytical, field-semantics, and unit catalogs; approximately 3 GiB total runtime data |
-| Source control | GitHub-connected deployment | Separate deployment repository recommended, with a reproducible release manifest |
-| Secrets | Streamlit hosted secrets | Same pattern; no local secrets or service-account files in deployment bundle |
-| Feedback | Google Sheets question/feedback tabs | Explicitly implement and validate equivalent feedback if wanted; do not assume the redesign already includes it |
-| Conversation | Session state | Verify isolation between users; explain that refreshing/restarting can lose session context |
+| App | **Render** Web Service (Starter, 512 MB, always-on) | $7/mo |
+| Working copy of data | Render **persistent disk** (4 GB, mounted at `/var/data`) | ~$1/mo |
+| Data (master) | **HF Dataset repo** `yul13011/ipeds-data` (public, free) | $0 |
+| Code | **GitHub** (`IPEDS-research_companion`) | $0 |
+| Model calls | **Anthropic API** (~$0.04/answer) | metered |
 
-## 1. Prepare a portable deployment package
+Flow: on first deploy the Render service pulls the 3.1 GB from the HF Dataset repo **once** onto
+its persistent disk → every visitor talks to that one always-on server, which reads the data
+locally. **No per-user download; no cold-start sleep.** Memory measured at ~260 MB peak, so 512 MB
+is enough.
 
-- Package `agent-redesign` as the deployment repository root. Keep `prototype`, `analysis_catalog`, `measure-registry`, required data files, and root `.streamlit/config.toml` in their current relative layout.
-- Use `prototype/app.py` as the hosted entry point. It adds the project root to the Python import path. The Windows `run.ps1` and bundled Codex Python path are local launch conveniences, not hosted startup requirements.
-- Install dependencies from a verified requirements file; select and pin a supported Python version after a clean Linux install. Check all imports against that environment, including Excel export and chart rendering.
-- Exclude `.packages`, caches, original Access databases, local credentials, conversion tooling, historical evaluation outputs, and development mockups from the runtime bundle. Preserve those in the local project/archive.
-- Enumerate all runtime file dependencies, including JSON, JavaScript, and other UI assets. Verify no live feature still depends on a deleted cleanup artifact.
-- Runtime dependency review on October 23 identified ten annual databases (2,410.77 MiB) and three runtime catalogs: `metadata_catalog.sqlite` (439.11 MiB), `analysis_catalog.sqlite` (21.34 MiB), and `unit_catalog.sqlite` (44.29 MiB). Together these are 3,057,135,616 bytes, or 2.8472 GiB. `field_semantics.sqlite` (67.17 MiB) is referenced by preparation/test code, not the inspected runtime; exclude it from the hosted runtime bundle while preserving it locally. Build an explicit size/SHA-256 manifest and verify this selection in a clean deployment before launch.
-- Preserve `evaluations/results/yale_cases.json` in the runtime package: `prototype/analytics.py` uses it to attach known discrepancy warnings. Other historical evaluation outputs need not be bundled wholesale. Keep `prototype/population_benchmark_guards.json` and the registry/example/learning JSON files used by runtime modules.
-- Audit stored paths as well as Python paths. Catalogs and exports contain original Windows source-file references. Preserve original provenance internally, but display portable release/file identifiers in public results. Avoid changing catalog identity-bearing records without rebuilding dependent catalogs and verification.
+---
 
-## 2. Decide and test data delivery
+## 1. Prerequisites (👉 YOU, browser — ~3 min)
 
-Do not commit these large databases as ordinary Git blobs. For the first staging trial, evaluate Git LFS, which Streamlit Community Cloud supports, against the account's current storage and bandwidth allowances. Measure fresh-clone/deployment behavior before committing to it.
+1. Create a free **Render account** at render.com — sign up **with GitHub** so Render can see your
+   repo.
+2. Have your **Anthropic API key** handy (the one in `.streamlit/secrets.toml`).
+3. ✅ Already done: HF account, and the 3.1 GB uploaded to `yul13011/ipeds-data` (verified: 70
+   files, all 10 annual DBs + 4 catalog DBs).
 
-If LFS is unsuitable, keep immutable, versioned database artifacts in object storage and download them to local disk at startup. Verify hashes before exposing the app, publish a complete matching data release atomically, and reuse downloaded files when available. SQLite must query local files, not an object-storage URL. Account for cold-start downloads and host disk limits.
+> Note — Render bills **two separate layers**, don't confuse them:
+> - **Workspace plan:** stay on **Hobby = $0/mo** ("plus compute costs"). The **Pro $25** workspace
+>   is about team seats/features and is **not needed**.
+> - **Compute instance type** (picked per web service in §4, *not* on the workspace-plan page):
+>   choose **Starter ($7/mo, 512 MB, always-on)**. The Free instance spins down after 15 min of
+>   inactivity (slow first click), so we use Starter.
 
-Do not select a paid storage/hosting plan until current allowances, costs, and the pilot's measured requirements are reviewed.
+---
 
-## 3. Resolve runtime writes and secrets
+## 2. Code changes (🤖 CODE — I make all of these in one commit)
 
-- Load `ANTHROPIC_API_KEY` from hosted secrets; use a separate deployment credential so staging usage can be identified and revoked independently.
-- Review API configuration, available models, timeouts, bounded retries, per-request limits, and error messages in the deployed environment.
-- `prototype/catalog_planner.py` currently writes proposals to `data/proposed_plans`. Decide whether these are temporary session artifacts or durable records. Use a writable location, unique identifiers, and a retention policy; do not assume host-local writes survive redeployment.
-- Preserve database read-only access. Keep session results and downloads isolated across users. Ensure shared caches do not expose another user's question or answer.
-- For a public pilot, add request/concurrency limits and an operator-controlled AI spending cutoff. Record latency, token usage, errors, and application/data release IDs without logging credentials.
-- If restoring Google Sheets feedback, use separate sheets/tabs for the redesign and keep logging failures from blocking answers. Define question-logging disclosure and retention before collecting questions.
+Your app logic, UI, and query engine are **unchanged**. Four small edits so the app finds its data
+on Render (and still works locally). Say "make the Render changes" and I'll do them:
 
-## 4. Deploy a separate staging app
+1. **`prototype/catalog.py`** — read the data folder from an env var, defaulting to today's local
+   `data/`:  `DATA = Path(os.environ.get("IPEDS_DATA_DIR", BASE / "data"))` (+ `import os`).
+2. **New `prototype/data_bootstrap.py`** — an `ensure_data()` that, when `IPEDS_DATA_DIR` is set and
+   the data isn't there yet, downloads the HF Dataset repo into it once
+   (`huggingface_hub.snapshot_download`), and is a fast no-op once the data is present.
+3. **`prototype/app.py`** — call `ensure_data()` **before** importing the UI.
+4. **`prototype/requirements.txt`** — add `huggingface_hub`.
 
-1. Create the deployment repository/package and record the exact application revision and data manifest.
-2. Run a clean Linux installation with only packaged dependencies and data. Do not rely on `.packages`, Codex tooling, OneDrive, or Windows paths.
-3. Run the registered regression suite, plus focused export, source-citation, unit/categorical, and session-isolation checks. Keep known benchmark discrepancies visible and retain existing unsupported-query safeguards.
-4. Configure a new Community Cloud app using the repository, staging branch, and `prototype/app.py`. Add secrets through the hosting settings.
-5. Measure cold-start time, warm latency, disk use, peak memory, and behavior during simultaneous sessions. Database file size alone does not establish memory requirements.
-6. Test admissions, graduation trends, faculty, categorical comparisons, follow-ups, clarification, missing data, charts, CSV/Excel/audit downloads, API failures, and browser refresh.
-7. Begin concurrency checks with 1, 3, and 5 active sessions. Use representative requests, bound live API spending, and agree a pilot capacity/latency target before treating these checks as launch acceptance.
+No Dockerfile and no HF `README.md` header are needed on Render (that was the HF path).
 
-## 5. Launch gate and rollback
+> How the one-time pull behaves on Render: `streamlit run` opens the web port immediately (so
+> Render sees the service as healthy), and `ensure_data()` runs when the **first page view**
+> happens — that first visit downloads the 3.1 GB (a few minutes) to the persistent disk, and
+> every visit after that skips it. So **you** open the app once after deploying and wait for it,
+> then share the link (see §6).
 
-Launch a limited pilot only when the clean deployment reproduces expected behavior, all data hashes match, session isolation passes, resource tests support the intended audience, and operators can inspect failures and disable AI requests. Existing known discrepancies must remain disclosed or blocked as appropriate; passing tests do not certify all IPEDS answers.
+---
 
-If Community Cloud cannot reliably fit the data/resource profile, move the same application to a container host with persistent local disk and sufficient measured memory headroom. Add TLS, health checks, restart policy, and backups for durable writes. SQLite can remain the read-only analytical backend.
+## 3. Data is already in place ✅
 
-Keep the previous working application revision and matching data release. Roll back code and data together. Pilot the redesign at a new URL; do not redirect or replace the original graduation-rate app during this phase.
+The 3.1 GB lives in `yul13011/ipeds-data` (public HF Dataset repo). Nothing to do here — Render
+will pull from it. Keep that repo id; it goes in the `IPEDS_DATASET_REPO` variable in §5.
 
-## Deliverables before deployment approval
+---
 
-- Reviewed runtime bundle, dependency lock, and data manifest.
-- Clean Linux verification and bounded concurrency/resource report.
-- Staging URL, startup/operating instructions, usage controls, and rollback procedure.
-- Hosting/data-delivery choice with current cost estimate based on measured needs.
-- Owner review of the staging app before public launch.
+## 4. Create the Render web service (👉 YOU, browser — ~5 min)
 
-## Official hosting references
+1. Render dashboard → **New → Web Service**.
+2. **Connect** your GitHub repo `IPEDS-research_companion` (authorize Render if asked). Pick the
+   branch to deploy (e.g. `main`, or your current branch).
+3. Render asks for build/run settings — set:
+   - **Language/Runtime:** Python 3
+   - **Build Command:** `pip install -r prototype/requirements.txt`
+   - **Start Command:**
+     `streamlit run prototype/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --browser.gatherUsageStats false`
+   - **Instance Type:** **Starter ($7/mo)** — this is the per-service compute size; your workspace
+     stays on **Hobby ($0)**
+4. Create the service (it'll start a first build — that's fine; we finish config next).
 
-- File organization and Git LFS: https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/file-organization
-- Deployment configuration: https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy
-- Secrets: https://docs.streamlit.io/deploy/concepts/secrets
-- Resource troubleshooting: https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app
+---
+
+## 5. Add the persistent disk + environment variables (👉 YOU, browser — ~3 min)
+
+In the service's settings:
+1. **Disks → Add Disk:** Name `ipeds-data`, **Mount Path** `/var/data`, **Size** `4` GB (~$1/mo).
+2. **Environment → add variables:**
+   - **Secret** `ANTHROPIC_API_KEY` = your Anthropic key
+   - `IPEDS_DATA_DIR` = `/var/data/ipeds`
+   - `IPEDS_DATASET_REPO` = `yul13011/ipeds-data`
+   - `PYTHON_VERSION` = `3.11.9`  *(pins a Python the deps support)*
+3. **Save** — Render redeploys with the disk and variables attached.
+
+---
+
+## 6. First deploy & the one-time data load (👉 YOU)
+
+1. Watch the **Logs** tab until the build finishes and the service is **Live**.
+2. Open the service's URL **yourself**. The first page view triggers the one-time 3.1 GB pull to
+   `/var/data/ipeds` — the page will show a loading state for a few minutes. Watch the logs for the
+   download to finish.
+3. Once it loads, **ask it a test question** and confirm the answer is correct.
+4. From now on the data is on the persistent disk, so restarts and redeploys **don't** re-download
+   it, and visitors never wait for it.
+
+---
+
+## 7. Before you share the link — guardrails (strongly recommended)
+
+A public link means **you** pay for every visitor's questions (~$0.04/answer, ~$0.12/visitor →
+~$24/mo at 50 visitors/week; ~$120 if a post hits 1,000 visitors).
+
+🤖 **CODE (I can add these):**
+1. **Daily spend cap** — the app already computes `estimated_api_usd` per answer; sum it per day and
+   show "demo budget reached, back tomorrow" past a threshold you set.
+2. **Per-session rate limit** — e.g. N questions / 10 min.
+3. **Example-question landing** — 3–5 clickable questions, at least one on the reviewed fast path
+   (instant, $0) so the first click feels immediate.
+
+👉 **YOU (browser):** also set a **usage limit on the Anthropic key** in the Anthropic console as a
+hard backstop.
+
+---
+
+## 8. Launch checklist
+
+1. ✅ Data in the HF Dataset repo (`yul13011/ipeds-data`).
+2. Code changes (§2) committed and pushed to GitHub.
+3. Render service created; Starter instance; build/start commands set (§4).
+4. Persistent disk mounted at `/var/data`; secret + variables set (§5).
+5. First deploy opened by you; one-time 3.1 GB pull finished; test question correct (§6).
+6. Guardrails in place; Anthropic key budget set (§7).
+7. **Only now** post the LinkedIn link. Visitors hit a warm, data-loaded, always-on app and wait
+   only ~15–35 s model time per question.
+
+---
+
+## 9. Latency & cost summary
+
+| | Estimate |
+| --- | --- |
+| First-visitor wait | ~**15–35 s** model time per question (no cold wake, no data wait) |
+| Reviewed fast-path questions | **< 2 s** (no AI call) |
+| One-time data load | a few minutes, on **your** first visit after deploy, once |
+| Infra cost | **~$8/mo** ($7 Starter + ~$1 disk) |
+| API cost | ~$0.04/answer, ~$0.12/visitor — cap it (§7) |
+
+---
+
+## 10. Updating the app and the data
+
+- **App code:** `git push` to GitHub → Render auto-deploys. The persistent disk keeps the data, so
+  deploys don't re-download it.
+- **Data (≈ once a year):** run the `ingestion/` pipeline to add the new release and **rebuild the
+  catalog DBs** (`metadata_catalog`, `field_semantics`, `unit_catalog`, `analysis_catalog` are
+  cross-release, so they regenerate — not just one new file). Re-upload with
+  `huggingface-cli upload yul13011/ipeds-data ./data . --repo-type=dataset`, then in Render either
+  point `IPEDS_DATA_DIR` at a new subfolder (e.g. `/var/data/ipeds_2025`) or clear `/var/data/ipeds`
+  and restart, so it pulls the new version. Do the same when 2024-25 Provisional becomes Final.
+
+---
+
+*Latency figures: model time from this project's diagnostic/coverage runs; memory from a direct
+measurement (~260 MB peak). Infra pricing from current Render figures (Oct 2026) — confirm on
+render.com/pricing. Anthropic rates are those recorded in `prototype/agent.py` (checked 2026-10-17).*

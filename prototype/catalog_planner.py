@@ -13,11 +13,11 @@ import time
 
 from analysis_catalog.catalog import (connection, categories, documented_field,
                                      table_context, search as catalog_search, source_record)
-from .catalog import ALIASES, BASE, institutions
+from .catalog import ALIASES, BASE, DATA, institutions
 from .responses import uses_context
 from .progress import report
 
-PLAN_DIR = BASE / 'data/proposed_plans'
+PLAN_DIR = DATA / 'proposed_plans'
 SCHEMA_VERSION = 1
 
 

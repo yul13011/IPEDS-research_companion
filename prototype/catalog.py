@@ -5,10 +5,13 @@ import re
 import sqlite3
 import time
 import json
+import os
 from hashlib import sha256
 
 BASE = Path(__file__).resolve().parents[1]
-DATA = BASE / "data"
+# Data dir is the local repo's data/ by default; on a server set IPEDS_DATA_DIR to a path
+# (e.g. a persistent disk) that data_bootstrap.ensure_data() has populated from the HF dataset.
+DATA = Path(os.environ.get("IPEDS_DATA_DIR", BASE / "data"))
 
 
 def evidence_hash(items):

@@ -5,3 +5,4 @@ altair>=5,<7
 vl-convert-python>=1.9,<2
 openpyxl>=3.1.5,<4
 jsonschema>=4.20,<5
+huggingface_hub>=0.25,<3
