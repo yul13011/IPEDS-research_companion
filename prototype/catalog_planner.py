@@ -319,7 +319,55 @@ def _align_finance_years(plan, question):
     return out
 
 
+_DRVCOST_CACHE={}
+def _drvcost_ids(variables):
+    """record_ids for DRVCOST2024 fields, cached. Returns None if any is missing."""
+    import sqlite3
+    from .catalog import DATA
+    ids=[]
+    with sqlite3.connect(DATA/'metadata_catalog.sqlite') as db:
+        for v in variables:
+            if v not in _DRVCOST_CACHE:
+                row=db.execute("SELECT record_id FROM records WHERE release_id LIKE 'IPEDS_2024%' AND table_name='DRVCOST2024' AND variable_name=? AND kind='variable_definition'",(v,)).fetchone()
+                _DRVCOST_CACHE[v]=row[0] if row else None
+            if _DRVCOST_CACHE[v] is None:return None
+            ids.append(_DRVCOST_CACHE[v])
+    return ids
+
+
+def _complete_cost_selection(plan, question):
+    """Deterministic, complete cost columns. For a current-year cost/tuition/price question, replace
+    the planner's cost selections with the canonical DRVCOST2024 set — published tuition & fees plus
+    total price (cost of attendance) living on campus, for in-state AND out-of-state students — so
+    residency is always complete and a populated field is always used (fixes the stochastic subset,
+    the 'only in-state' omission for public schools, and the null-column 'not reported')."""
+    import re
+    if not isinstance(plan,dict) or not plan.get('selections'):return plan
+    q=(question or '').lower()
+    if not re.search(r'\b(cost|costs|price|tuition|attendance)\b|how much',q):return plan
+    # Leave related-but-different questions to the normal planner.
+    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return plan
+    if re.search(r'\b(room|board|housing|meals?|dorm|books?|supplies)\b',q) and not re.search(r'\b(tuition|cost|price|attendance|total)\b',q):return plan
+    if re.search(r'\btrend\b|each year|over time|from \d{4}|through|\bto\s+\d{4}\b',q):return plan
+    years=plan.get('source_years') or []
+    if years and set(years)!={2024}:return plan   # the derived DRVCOST cost table is 2024-25 only
+    # Residency-specific tuition can't be split from the single DRVCOST tuition figure; leave it.
+    tuition_only=bool(re.search(r'\btuition\b',q)) and not re.search(r'\b(cost of attendance|total (?:cost|price)|how much)\b',q)
+    if tuition_only and re.search(r'out[- ]of[- ]state|in[- ]state|in[- ]district|nonresident|resident',q):return plan
+    wanted=['TUFEYR3'] if tuition_only else ['TUFEYR3','CINSON','COTSON']
+    ids=_drvcost_ids(wanted)
+    if not ids:return plan
+    sels=[{'record_id':rid,'role':'measure'} for rid in ids]
+    note=('Published tuition and fees for 2024-25 (in-state/in-district rate).' if tuition_only else
+          'Total price is the full cost of attendance (tuition, fees, housing, food, books, other) for '
+          'students living on campus, 2024-25, shown for both in-state and out-of-state residency; '
+          'published tuition and fees is the in-state/in-district rate.')
+    return {**plan,'source_years':[2024],'selections':sels,'filters':[],'calculations':[],
+            'group_by_record_ids':[],'joins':[],'assumptions':[note]}
+
+
 def proposal_answer(plan, question, mode='catalog planner', usage=None):
+    plan=_complete_cost_selection(plan,question)
     plan=_align_field_years(plan,question)
     plan=_align_finance_years(plan,question)
     try:proposal=_save(validate_proposal(plan,question))
