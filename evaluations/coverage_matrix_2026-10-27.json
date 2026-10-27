@@ -1,0 +1,929 @@
+[
+  {
+    "id": "c_mast_yale",
+    "family": "C (completions)",
+    "tier": 1,
+    "q": "How many master's degrees did Yale award in 2023?",
+    "verify": {
+      "rel": "2023",
+      "table": "C2023_A",
+      "col": "CTOTALT",
+      "where": {
+        "UNITID": 130794,
+        "AWLEVEL": "7",
+        "CIPCODE": "99",
+        "MAJORNUM": "1"
+      }
+    },
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "DRVC{YEAR}::MASDEG",
+        "value": 2846,
+        "unitid": 130794,
+        "label": "Yale University"
+      }
+    ],
+    "message": "For Yale University (July 1, 2022 - June 30, 2023), Master's degree: 2,846. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 50.226540999952704,
+    "estimated_api_usd": 0.11889910000000001,
+    "ok": true,
+    "wall_seconds": 50.2,
+    "cum_cost_usd": 0.1189,
+    "_expected": 2846,
+    "verdict": "CORRECT",
+    "detail": "app=2846 expected=2846"
+  },
+  {
+    "id": "c_doc_harv",
+    "family": "C (completions)",
+    "tier": 1,
+    "q": "How many research doctoral degrees did Harvard award in 2023?",
+    "verify": {
+      "rel": "2023",
+      "table": "C2023_A",
+      "col": "CTOTALT",
+      "where": {
+        "UNITID": 166027,
+        "AWLEVEL": "17",
+        "CIPCODE": "99",
+        "MAJORNUM": "1"
+      }
+    },
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "DRVC{YEAR}::DOCDEGRS",
+        "value": 758,
+        "unitid": 166027,
+        "label": "Harvard University"
+      }
+    ],
+    "message": "For Harvard University (July 1, 2022 - June 30, 2023), Doctor's degree - research/scholarship: 758. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 16.162434000056237,
+    "estimated_api_usd": 0.05273043999999999,
+    "ok": true,
+    "wall_seconds": 16.2,
+    "cum_cost_usd": 0.1716,
+    "_expected": 758,
+    "verdict": "CORRECT",
+    "detail": "app=758 expected=758"
+  },
+  {
+    "id": "c_cmp_bach",
+    "family": "C (completions)",
+    "tier": 2,
+    "q": "Compare the number of bachelor's degrees Yale and Princeton awarded in 2023.",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "language model planner",
+    "published": true,
+    "n_rows": 2,
+    "top_rows": [
+      {
+        "metric": "bachelors_degrees",
+        "value": 1449.0,
+        "unitid": 130794,
+        "label": "Yale University"
+      },
+      {
+        "metric": "bachelors_degrees",
+        "value": 1284.0,
+        "unitid": 186131,
+        "label": "Princeton University"
+      }
+    ],
+    "message": "Yale University \u2014 Bachelor's degrees awarded: 1,449; Princeton University \u2014 Bachelor's degrees awarded: 1,284 (2022\u201323). The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 11.420944900019094,
+    "estimated_api_usd": 0.00273134,
+    "ok": true,
+    "wall_seconds": 11.4,
+    "cum_cost_usd": 0.1744,
+    "verdict": "ANSWERED",
+    "detail": "value=1449.0"
+  },
+  {
+    "id": "al_books_harv",
+    "family": "AL (libraries)",
+    "tier": 1,
+    "q": "How many physical books were in Harvard's library collection in 2023?",
+    "verify": {
+      "rel": "2023",
+      "table": "AL2023",
+      "col": "LPBOOKS",
+      "where": {
+        "UNITID": 166027
+      }
+    },
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "AL{YEAR}::LPBOOKS",
+        "value": 14790270,
+        "unitid": 166027,
+        "label": "Harvard University"
+      }
+    ],
+    "message": "For Harvard University (Fiscal year 2023), Number of physical books: 14,790,270. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 13.225592599948868,
+    "estimated_api_usd": 0.042420240000000005,
+    "ok": true,
+    "wall_seconds": 13.2,
+    "cum_cost_usd": 0.2168,
+    "_expected": 14790270.0,
+    "verdict": "CORRECT",
+    "detail": "app=14790270 expected=14790270.0"
+  },
+  {
+    "id": "al_ebooks_yale",
+    "family": "AL (libraries)",
+    "tier": 1,
+    "q": "How many digital/electronic books does Yale's library have in 2023?",
+    "verify": {
+      "rel": "2023",
+      "table": "AL2023",
+      "col": "LEBOOKS",
+      "where": {
+        "UNITID": 130794
+      }
+    },
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "AL{YEAR}::LEBOOKS",
+        "value": 2525935,
+        "unitid": 130794,
+        "label": "Yale University"
+      }
+    ],
+    "message": "For Yale University (Fiscal year 2023), Number of digital/electronic books: 2,525,935. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 16.944169899914414,
+    "estimated_api_usd": 0.03422494,
+    "ok": true,
+    "wall_seconds": 16.9,
+    "cum_cost_usd": 0.251,
+    "_expected": 2525935.0,
+    "verdict": "CORRECT",
+    "detail": "app=2525935 expected=2525935.0"
+  },
+  {
+    "id": "sal_prof_smith",
+    "family": "SAL (salaries)",
+    "tier": 1,
+    "q": "What was the average salary of full professors at Smith College in 2023-24?",
+    "verify": {
+      "rel": "2023",
+      "table": "SAL2023_IS",
+      "col": "SAEQ9AT",
+      "where": {
+        "UNITID": 167835,
+        "ARANK": 1
+      }
+    },
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "SAL{YEAR}_IS::SAEQ9AT",
+        "value": 152890,
+        "unitid": 167835,
+        "label": "Smith College"
+      }
+    ],
+    "message": "For Smith College (2023-24), Average salary for instructional staff equated to a 9-month contract-total: $152,890. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 19.901194499921985,
+    "estimated_api_usd": 0.03773874,
+    "ok": true,
+    "wall_seconds": 19.9,
+    "cum_cost_usd": 0.2887,
+    "_expected": 152890,
+    "verdict": "CORRECT",
+    "detail": "app=152890 expected=152890"
+  },
+  {
+    "id": "sal_cmp",
+    "family": "SAL (salaries)",
+    "tier": 2,
+    "q": "Compare the average instructional faculty salary at Smith, Mount Holyoke, and Wellesley in 2023-24.",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 3,
+    "top_rows": [
+      {
+        "metric": "SAL{YEAR}_IS::SAEQ9AT",
+        "value": 115221,
+        "unitid": 167835,
+        "label": "Smith College"
+      },
+      {
+        "metric": "SAL{YEAR}_IS::SAEQ9AT",
+        "value": 101151,
+        "unitid": 166939,
+        "label": "Mount Holyoke College"
+      },
+      {
+        "metric": "SAL{YEAR}_IS::SAEQ9AT",
+        "value": 120638,
+        "unitid": 168218,
+        "label": "Wellesley College"
+      }
+    ],
+    "message": "Smith College \u2014 Average salary for instructional staff equated to a 9-month contract-total: $115,221; Mount Holyoke College \u2014 Average salary for instructional staff equated to a 9-month contract-total: $101,151; Wellesley College \u2014 Average salary for instructional staff equated to a 9-month contract",
+    "answer_ready_seconds": 26.30624330008868,
+    "estimated_api_usd": 0.08032234,
+    "ok": true,
+    "wall_seconds": 26.3,
+    "cum_cost_usd": 0.3691,
+    "verdict": "ANSWERED",
+    "detail": "value=115221"
+  },
+  {
+    "id": "f_tuitrev_yale",
+    "family": "F (finance)",
+    "tier": 1,
+    "q": "What was Yale's revenue from tuition and fees in 2022-23?",
+    "verify": {
+      "rel": "2023",
+      "table": "F2223_F2",
+      "col": "F2D01",
+      "where": {
+        "UNITID": 130794
+      }
+    },
+    "intent": "clarify",
+    "mode": "catalog language-model planner",
+    "published": false,
+    "n_rows": 0,
+    "top_rows": [],
+    "message": "The finance data are labeled by fiscal year, and none is labeled \"2022-23\" exactly. Do you want Yale's tuition and fees revenue for fiscal year 2023 (the year ending mid-2023) or fiscal year 2022 (the year ending mid-2022)?",
+    "answer_ready_seconds": 31.2151968999533,
+    "estimated_api_usd": 0.12294603999999999,
+    "ok": true,
+    "wall_seconds": 31.2,
+    "cum_cost_usd": 0.492,
+    "_expected": 343599498.0,
+    "verdict": "BLOCKED",
+    "detail": "expected 343599498.0, app gave no number"
+  },
+  {
+    "id": "f_expenses_yale",
+    "family": "F (finance)",
+    "tier": 2,
+    "q": "What were Yale's total expenses in 2022-23?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "F{YEAR}_F2::F2B02",
+        "value": 4563329798,
+        "unitid": 130794,
+        "label": "Yale University"
+      }
+    ],
+    "message": "For Yale University (Fiscal year 2022), Total expenses: $4,563,329,798. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 18.81940759997815,
+    "estimated_api_usd": 0.04508832,
+    "ok": true,
+    "wall_seconds": 18.8,
+    "cum_cost_usd": 0.5371,
+    "verdict": "ANSWERED",
+    "detail": "value=4563329798"
+  },
+  {
+    "id": "f_endow_harv",
+    "family": "F (finance)",
+    "tier": 2,
+    "q": "What was the value of Harvard's endowment at year end 2022-23?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "F{YEAR}_F2::F2H02",
+        "value": 50877680000,
+        "unitid": 166027,
+        "label": "Harvard University"
+      }
+    ],
+    "message": "For Harvard University (Fiscal year 2022), Value of endowment assets at the end of the fiscal year: $50,877,680,000. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 30.54945349995978,
+    "estimated_api_usd": 0.08950322000000001,
+    "ok": true,
+    "wall_seconds": 30.5,
+    "cum_cost_usd": 0.6266,
+    "verdict": "ANSWERED",
+    "detail": "value=50877680000"
+  },
+  {
+    "id": "eap_fac_yale",
+    "family": "EAP/S (staff)",
+    "tier": 2,
+    "q": "How many full-time instructional faculty with faculty status does Yale have in fall 2023?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "S{YEAR}_IS::HRTOTLT",
+        "value": 2881,
+        "unitid": 130794,
+        "label": "Yale University"
+      }
+    ],
+    "message": "For Yale University (Fall 2023), Grand total: 2,881. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 16.87661100004334,
+    "estimated_api_usd": 0.06851514,
+    "ok": true,
+    "wall_seconds": 16.9,
+    "cum_cost_usd": 0.6951,
+    "verdict": "ANSWERED",
+    "detail": "value=2881"
+  },
+  {
+    "id": "s_total_smith",
+    "family": "EAP/S (staff)",
+    "tier": 2,
+    "q": "How many total staff does Smith College employ in 2023?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "S{YEAR}_OC::HRTOTLT",
+        "value": 1483,
+        "unitid": 167835,
+        "label": "Smith College"
+      }
+    ],
+    "message": "For Smith College (Fall 2023), Grand total: 1,483. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 21.3442689999938,
+    "estimated_api_usd": 0.07988714000000001,
+    "ok": true,
+    "wall_seconds": 21.3,
+    "cum_cost_usd": 0.775,
+    "verdict": "ANSWERED",
+    "detail": "value=1483"
+  },
+  {
+    "id": "om_rate_yale",
+    "family": "OM (outcomes)",
+    "tier": 1,
+    "q": "What share of Yale's entering degree-seeking cohort earned an award within 8 years (2023)?",
+    "verify": {
+      "rel": "2023",
+      "table": "DRVOM2023",
+      "col": "OM1TOTLAWDP8",
+      "where": {
+        "UNITID": 130794
+      }
+    },
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 3,
+    "top_rows": [
+      {
+        "metric": "OM{YEAR}::OMAWDP8",
+        "value": 97,
+        "unitid": 130794,
+        "label": "Yale University"
+      },
+      {
+        "metric": "OM{YEAR}::OMAWDN8",
+        "value": 1353,
+        "unitid": 130794,
+        "label": "Yale University"
+      },
+      {
+        "metric": "OM{YEAR}::OMACHRT",
+        "value": 1389,
+        "unitid": 130794,
+        "label": "Yale University"
+      }
+    ],
+    "message": "For Yale University (Status of student as of August 31, 2023), Percent of adjusted cohort receiving an award at 8 years (August 31, 2023): 97.00%; Number of adjusted cohort receiving an award at 8 years (August 31, 2023): 1,353; Adjusted 2015-16 cohort: 1,389. The reporting period and source definit",
+    "answer_ready_seconds": 30.14945639995858,
+    "estimated_api_usd": 0.08832802000000001,
+    "ok": true,
+    "wall_seconds": 30.1,
+    "cum_cost_usd": 0.8633,
+    "_expected": 97,
+    "verdict": "CORRECT",
+    "detail": "app=97 expected=97"
+  },
+  {
+    "id": "om_behav",
+    "family": "OM (outcomes)",
+    "tier": 2,
+    "q": "What is the 8-year completion rate for Pell recipients at Arizona State University?",
+    "verify": null,
+    "intent": "clarify",
+    "mode": "intent clarification",
+    "published": false,
+    "n_rows": 0,
+    "top_rows": [],
+    "message": "The loaded graduation data has a six-year bachelor graduation rate for Pell recipients, not an 8-year completion rate. Do you want the six-year Pell graduation rate for Arizona State University? The loaded data also has an outcomes topic that covers eight-year follow-up points for entering cohorts, ",
+    "answer_ready_seconds": 5.503858399926685,
+    "estimated_api_usd": 0.00117664,
+    "ok": true,
+    "wall_seconds": 5.5,
+    "cum_cost_usd": 0.8645,
+    "verdict": "CLARIFY",
+    "detail": "The loaded graduation data has a six-year bachelor graduatio"
+  },
+  {
+    "id": "effy_yale",
+    "family": "EFFY (12-mo enroll)",
+    "tier": 1,
+    "q": "What was Yale's 12-month unduplicated headcount for 2022-23?",
+    "verify": {
+      "rel": "2023",
+      "table": "EFFY2023",
+      "col": "EFYTOTLT",
+      "where": {
+        "UNITID": 130794,
+        "EFFYLEV": 1
+      }
+    },
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "DRVEF{YEAR}23::UNDUP",
+        "value": 16416,
+        "unitid": 130794,
+        "label": "Yale University"
+      }
+    ],
+    "message": "For Yale University (July 1, 2022 - June 30, 2023), Total 12-month unduplicated headcount: 16,416. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 18.864988300018013,
+    "estimated_api_usd": 0.045258820000000005,
+    "ok": true,
+    "wall_seconds": 18.9,
+    "cum_cost_usd": 0.9098,
+    "_expected": 16416,
+    "verdict": "CORRECT",
+    "detail": "app=16416 expected=16416"
+  },
+  {
+    "id": "ef_dist_yale",
+    "family": "EF (distance ed)",
+    "tier": 2,
+    "q": "How many Yale students were enrolled exclusively in distance education in fall 2023?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "EF{YEAR}A_DIST::EFDEEXC",
+        "value": 56,
+        "unitid": 130794,
+        "label": "Yale University"
+      }
+    ],
+    "message": "For Yale University (Fall 2023), Students enrolled exclusively in distance education courses: 56. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 13.326526500051841,
+    "estimated_api_usd": 0.023130140000000004,
+    "ok": true,
+    "wall_seconds": 13.3,
+    "cum_cost_usd": 0.9329,
+    "verdict": "ANSWERED",
+    "detail": "value=56"
+  },
+  {
+    "id": "ef_race_yale",
+    "family": "EF (enrollment)",
+    "tier": 2,
+    "q": "Show Yale's undergraduate enrollment by race and ethnicity for fall 2023.",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "source-bound catalog starter",
+    "published": true,
+    "n_rows": 10,
+    "top_rows": [
+      {
+        "metric": "EF{YEAR}A::EFAIANT",
+        "value": 28,
+        "unitid": 130794,
+        "label": "Yale University"
+      },
+      {
+        "metric": "EF{YEAR}A::EFASIAT",
+        "value": 1557,
+        "unitid": 130794,
+        "label": "Yale University"
+      },
+      {
+        "metric": "EF{YEAR}A::EFBKAAT",
+        "value": 602,
+        "unitid": 130794,
+        "label": "Yale University"
+      },
+      {
+        "metric": "EF{YEAR}A::EFHISPT",
+        "value": 1072,
+        "unitid": 130794,
+        "label": "Yale University"
+      }
+    ],
+    "message": "For Yale University (Fall 2023), American Indian or Alaska Native total: 28; Asian total: 1,557; Black or African American total: 602; Hispanic total: 1,072. The table or download includes the remaining requested measures.",
+    "answer_ready_seconds": 4.606056899996474,
+    "estimated_api_usd": 0.00107704,
+    "ok": true,
+    "wall_seconds": 4.6,
+    "cum_cost_usd": 0.934,
+    "verdict": "ANSWERED",
+    "detail": "value=28"
+  },
+  {
+    "id": "cost_tuit_smith",
+    "family": "COST/IC (price)",
+    "tier": 1,
+    "q": "What was the published tuition and fees at Smith College for 2023-24?",
+    "verify": {
+      "rel": "2024",
+      "table": "COST1_2024",
+      "col": "chg3ay2",
+      "where": {
+        "UNITID": 167835
+      }
+    },
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 2,
+    "top_rows": [
+      {
+        "metric": "IC{YEAR}_AY::chg2ay3",
+        "value": null,
+        "unitid": 167835,
+        "label": "Smith College"
+      },
+      {
+        "metric": "IC{YEAR}_AY::chg3ay3",
+        "value": null,
+        "unitid": 167835,
+        "label": "Smith College"
+      }
+    ],
+    "message": "The requested values are not reported in the available source records. Missing values have not been treated as zero.",
+    "answer_ready_seconds": 23.97861250001006,
+    "estimated_api_usd": 0.09886764,
+    "ok": true,
+    "wall_seconds": 24.0,
+    "cum_cost_usd": 1.0328,
+    "_expected": 61568,
+    "verdict": "BLOCKED",
+    "detail": "expected 61568, app gave no number"
+  },
+  {
+    "id": "cost_roomboard_mh",
+    "family": "COST/IC (price)",
+    "tier": 1,
+    "q": "What was the on-campus room and board charge at Mount Holyoke College for 2023-24?",
+    "verify": {
+      "rel": "2023",
+      "table": "IC2023_PCCAMPUSES",
+      "col": "PCCHG5AY3",
+      "where": {
+        "UNITID": 166939
+      }
+    },
+    "intent": "analyze",
+    "mode": "catalog language-model planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "IC{YEAR}_AY::chg5ay3",
+        "value": null,
+        "unitid": 166939,
+        "label": "Mount Holyoke College"
+      }
+    ],
+    "message": "The requested values are not reported in the available source records. Missing values have not been treated as zero.",
+    "answer_ready_seconds": 26.97042899997905,
+    "estimated_api_usd": 0.07181872,
+    "ok": true,
+    "wall_seconds": 27.0,
+    "cum_cost_usd": 1.1047,
+    "verdict": "ANSWERED?",
+    "detail": "no ground-truth (app=None)"
+  },
+  {
+    "id": "cost_netprice_we",
+    "family": "COST/IC (price)",
+    "tier": 1,
+    "q": "What was the average net price for grant-aided students at Wellesley in 2022-23?",
+    "verify": {
+      "rel": "2023",
+      "table": "SFA2223_P2",
+      "col": "NPIST2",
+      "where": {
+        "unitid": 168218
+      }
+    },
+    "intent": "clarify",
+    "mode": "intent validation",
+    "published": false,
+    "n_rows": 0,
+    "top_rows": [],
+    "message": "The returned periods do not cover the requested interval. No incomplete answer has been published; please confirm the start and end years.",
+    "answer_ready_seconds": 16.56424750003498,
+    "estimated_api_usd": 0.0012816400000000001,
+    "ok": true,
+    "wall_seconds": 16.6,
+    "cum_cost_usd": 1.1059,
+    "verdict": "BLOCKED",
+    "detail": "no ground-truth (app=None)"
+  },
+  {
+    "id": "adm_act_yale",
+    "family": "ADM (admissions)",
+    "tier": 1,
+    "q": "How many of Yale's admitted students submitted ACT scores for fall 2024?",
+    "verify": {
+      "rel": "2024",
+      "table": "ADM2024",
+      "col": "ACTNUM",
+      "where": {
+        "UNITID": 130794
+      }
+    },
+    "intent": "task_response",
+    "mode": "tracked request",
+    "published": false,
+    "n_rows": 0,
+    "top_rows": [],
+    "message": "Request status: 1 needs clarification, 1 blocked.",
+    "answer_ready_seconds": 6.990174999926239,
+    "estimated_api_usd": 0.00135814,
+    "ok": true,
+    "wall_seconds": 7.0,
+    "cum_cost_usd": 1.1073,
+    "_expected": 384,
+    "verdict": "BLOCKED",
+    "detail": "expected 384, app gave no number"
+  },
+  {
+    "id": "adm_req_yale",
+    "family": "ADM (admissions)",
+    "tier": 2,
+    "q": "What are Yale's admissions test score requirements?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "language model planner",
+    "published": true,
+    "n_rows": 4,
+    "top_rows": [
+      {
+        "metric": "satvr25",
+        "value": 730.0,
+        "unitid": 130794,
+        "label": "Yale University"
+      },
+      {
+        "metric": "satvr75",
+        "value": 780.0,
+        "unitid": 130794,
+        "label": "Yale University"
+      },
+      {
+        "metric": "satmt25",
+        "value": 740.0,
+        "unitid": 130794,
+        "label": "Yale University"
+      },
+      {
+        "metric": "satmt75",
+        "value": 790.0,
+        "unitid": 130794,
+        "label": "Yale University"
+      }
+    ],
+    "message": "For Yale University (fall 2024), SAT reading/verbal, 25th percentile: 730 points; SAT reading/verbal, 75th percentile: 780 points; SAT math, 25th percentile: 740 points; SAT math, 75th percentile: 790 points. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 9.223213100107387,
+    "estimated_api_usd": 0.00206612,
+    "ok": true,
+    "wall_seconds": 9.2,
+    "cum_cost_usd": 1.1094,
+    "verdict": "ANSWERED",
+    "detail": "value=730.0"
+  },
+  {
+    "id": "agg_gradrate",
+    "family": "Aggregate",
+    "tier": 2,
+    "q": "What was the overall six-year graduation rate for four-year institutions in the United States for the 2016 entering cohort?",
+    "verify": null,
+    "intent": "catalog_plan",
+    "mode": "catalog relational planner",
+    "published": false,
+    "n_rows": 0,
+    "top_rows": [],
+    "message": "This part did not produce a validated analytical result. The query could not be validated: Cohort timing needs source-coded cohort evidence; release year is not a cohort year.",
+    "answer_ready_seconds": 34.467297499999404,
+    "estimated_api_usd": 0.13908884,
+    "ok": true,
+    "wall_seconds": 34.5,
+    "cum_cost_usd": 1.2485,
+    "verdict": "OTHER",
+    "detail": "intent=catalog_plan"
+  },
+  {
+    "id": "agg_instcount",
+    "family": "Aggregate",
+    "tier": 2,
+    "q": "How many public four-year institutions are there in 2023?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "institution count",
+    "published": false,
+    "n_rows": 0,
+    "top_rows": [],
+    "message": "796 institutions reported to IPEDS in the 2023\u201324 collection within this scope: United States \u00b7 public \u00b7 four-year \u00b7 Title IV. This counts distinct reporting institutions (directory file HD2023) after the population filters; by default Title IV participation is required and administrative/central of",
+    "answer_ready_seconds": 4.924529399955645,
+    "estimated_api_usd": 0.0011106400000000002,
+    "ok": true,
+    "wall_seconds": 4.9,
+    "cum_cost_usd": 1.2496,
+    "verdict": "OTHER",
+    "detail": "intent=analyze"
+  },
+  {
+    "id": "agg_totalenr",
+    "family": "Aggregate",
+    "tier": 2,
+    "q": "What was the total fall enrollment across all U.S. degree-granting institutions in 2023?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "catalog relational planner",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "xtotal",
+        "value": 19038434.0,
+        "unitid": null,
+        "label": "United States \u00b7 Title IV"
+      }
+    ],
+    "message": "For United States \u00b7 Title IV (Fall 2023), Total fall 2023 enrollment, U.S. degree-granting Title IV institutions: 19,038,434. The reporting period and source definitions are available below.",
+    "answer_ready_seconds": 16.474766099941917,
+    "estimated_api_usd": 0.03916524,
+    "ok": true,
+    "wall_seconds": 16.5,
+    "cum_cost_usd": 1.2887,
+    "verdict": "ANSWERED",
+    "detail": "value=19038434.0"
+  },
+  {
+    "id": "def_retention",
+    "family": "Definition",
+    "tier": 2,
+    "q": "What is the definition of the first-year retention rate?",
+    "verify": null,
+    "intent": "definition",
+    "mode": "source definition",
+    "published": false,
+    "n_rows": 0,
+    "top_rows": [],
+    "message": "For **first-year retention rate**, the supplied codebook gives these source passages:\n\n**Total entering class, retention rates, and student-to-faculty ratio: Fall 2024** (2024-25 \u00b7 Provisional \u00b7 EF2024D \u00b7 table documentation)\n\n> The first-year retention rate data measures the percentage of first-yea",
+    "answer_ready_seconds": 5.593447000021115,
+    "estimated_api_usd": 0.00137659,
+    "ok": true,
+    "wall_seconds": 5.6,
+    "cum_cost_usd": 1.2901,
+    "verdict": "DEFINED",
+    "detail": ""
+  },
+  {
+    "id": "disc_finance",
+    "family": "Discovery",
+    "tier": 2,
+    "q": "What data do you have on institutional finances?",
+    "verify": null,
+    "intent": "guide",
+    "mode": "data guide",
+    "published": false,
+    "n_rows": 0,
+    "top_rows": [],
+    "message": "These documented data areas may help with your question:\n\n- **Institution finances** \u2014 Institutional financial reporting uses different forms for public, private nonprofit and private for-profit institutions. Revenue, expenses and balance-sheet concepts must be interpreted within their source accoun",
+    "answer_ready_seconds": 4.038576700026169,
+    "estimated_api_usd": 0.00098624,
+    "ok": true,
+    "wall_seconds": 4.0,
+    "cum_cost_usd": 1.2911,
+    "verdict": "DISCOVERY-OK",
+    "detail": ""
+  },
+  {
+    "id": "trend_effy_yale",
+    "family": "Trend",
+    "tier": 2,
+    "q": "Plot Yale's 12-month enrollment from 2015 to 2024.",
+    "verify": null,
+    "intent": "task_response",
+    "mode": "tracked request",
+    "published": false,
+    "n_rows": 0,
+    "top_rows": [],
+    "message": "Request status: 1 needs clarification, 1 blocked.",
+    "answer_ready_seconds": 9.497301700059325,
+    "estimated_api_usd": 0.00174054,
+    "ok": true,
+    "wall_seconds": 9.5,
+    "cum_cost_usd": 1.2928,
+    "verdict": "OTHER",
+    "detail": "intent=task_response"
+  },
+  {
+    "id": "cat_housing_smith",
+    "family": "IC (categorical)",
+    "tier": 2,
+    "q": "Does Smith College provide on-campus housing?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "published": true,
+    "n_rows": 2,
+    "top_rows": [
+      {
+        "metric": "COST1_{YEAR}::ROOM",
+        "value": null,
+        "unitid": 167835,
+        "label": "Smith College"
+      },
+      {
+        "metric": "COST1_{YEAR}::ROOMCAP",
+        "value": 2487,
+        "unitid": 167835,
+        "label": "Smith College"
+      }
+    ],
+    "message": "Smith College \u2014 Institution provide Institutionally-controlled housing (on-campus and/or off-campus): Yes (Academic year 2024-25); Smith College \u2014 Housing capacity: 2,487 (Academic year 2024-25).",
+    "answer_ready_seconds": 11.699374299962074,
+    "estimated_api_usd": 0.054760340000000005,
+    "ok": true,
+    "wall_seconds": 11.7,
+    "cum_cost_usd": 1.3476,
+    "verdict": "ANSWERED",
+    "detail": "value=None"
+  },
+  {
+    "id": "cat_city_smith",
+    "family": "HD (directory)",
+    "tier": 2,
+    "q": "What city is Smith College located in?",
+    "verify": null,
+    "intent": "analyze",
+    "mode": "typed source observations",
+    "published": true,
+    "n_rows": 1,
+    "top_rows": [
+      {
+        "metric": "HD{YEAR}::CITY",
+        "value": null,
+        "unitid": 167835,
+        "label": "Smith College"
+      }
+    ],
+    "message": "Smith College \u2014 City location of institution: Northampton (Academic year 2024-25).",
+    "answer_ready_seconds": 14.399140800000168,
+    "estimated_api_usd": 0.01385082,
+    "ok": true,
+    "wall_seconds": 14.4,
+    "cum_cost_usd": 1.3614,
+    "verdict": "ANSWERED",
+    "detail": "value=None"
+  }
+]
