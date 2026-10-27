@@ -205,7 +205,10 @@ def execute_catalog(answer, question):
                     name=db.execute(f'SELECT INSTNM FROM "HD{year}" WHERE UNITID=?',(unitid,)).fetchone()[0]
                     values=db.execute(sql,[unitid]+tail).fetchmany(2)
                     if len(values)>1:raise ValueError('Population selectors returned multiple records; no catalog result was published.')
-                    record=dict(values[0]) if values else {}
+                    # Index the row by UPPER-cased physical column name: codebook
+                    # variable_name casing (e.g. IC/COST 'chg2ay3') can differ from the
+                    # physical column ('CHG2AY3'), which otherwise reads values as missing.
+                    record={str(k).upper():v for k,v in dict(values[0]).items()} if values else {}
                     partition=['EFAIANT','EFASIAT','EFBKAAT','EFHISPT','EFNHPIT','EFWHITT','EF2MORT','EFUNKNT','EFNRALT']
                     if re.fullmatch(r'EF\d{4}A',table,re.I) and set(partition+['EFTOTLT'])<=set(columns):
                         counts=[numeric(record.get(c)) for c in partition];total=numeric(record.get('EFTOTLT'))
@@ -217,7 +220,7 @@ def execute_catalog(answer, question):
                         if gender_total is not None and all(v is not None for v in gender_counts) and sum(gender_counts)!=gender_total:
                             if p['calculations']:raise ValueError('Source men/women counts do not reconcile to the selected population total; no percentages were published.')
                             warnings.append('Source men/women counts do not reconcile to the supplied total. Values are shown as recorded; no residual gender category was inferred.')
-                    if any(record.get(c) is not None and numeric(record[c]) is None and str(record[c]).strip().startswith('-') for c in columns):
+                    if any(record.get(c.upper()) is not None and numeric(record[c.upper()]) is None and str(record[c.upper()]).strip().startswith('-') for c in columns):
                         warnings.append('Negative source values were withheld pending a field-specific sentinel/sign interpretation; they were not treated as zero. Raw values are retained in the audit rows.')
                     calculations=[c for c in p['calculations'] if defs[c['input_record_ids'][0]] in fields]
                     consumed={rid for c in calculations for rid in c['input_record_ids']}
@@ -232,12 +235,12 @@ def execute_catalog(answer, question):
                             if population_labels:label=max(population_labels,key=len)+' ('+label.lower()+')'
                         descriptor=proposal['field_semantics'][str(d['record_id'])]
                         unit=proof_by_calc[json.dumps(calc,sort_keys=True)]['unit'] if calc else descriptor['unit']
-                        val=numeric(record.get(d['variable_name']));num=den=None;input_values=None
+                        val=numeric(record.get(d['variable_name'].upper()));num=den=None;input_values=None
                         if calc:
-                            input_values=[numeric(record.get(defs[rid]['variable_name'])) for rid in calc['input_record_ids']]
+                            input_values=[numeric(record.get(defs[rid]['variable_name'].upper())) for rid in calc['input_record_ids']]
                             op=calc['operator'];val=None
                             if op in {'percent','ratio'}:
-                                num=input_values[0];den=numeric(record.get(defs[calc['denominator_record_id']]['variable_name']))
+                                num=input_values[0];den=numeric(record.get(defs[calc['denominator_record_id']]['variable_name'].upper()))
                                 proof=proof_by_calc[json.dumps(calc,sort_keys=True)]
                                 if den==0:warnings.append('A source denominator is zero; its calculated percentage/ratio remains missing.')
                                 if proof['bounded_share'] and num is not None and den is not None and den>0 and num>den:raise ValueError('Category count exceeds its denominator; no catalog result was published.')
@@ -255,7 +258,7 @@ def execute_catalog(answer, question):
                         rows.append(dict(institution=name,unitid=unitid,observation_year=year,entry_cohort_year=None,reporting_period=period,
                             metric=metric,measure=label,unit=unit,value=val,release=d['release_id'],provisional='Provisional' in d['release_id'],
                             status='ok' if val is not None else 'missing',numerator=num,denominator=den,series_segment='source observations'))
-                        rows[-1]['source_value']=record.get(d['variable_name'])
+                        rows[-1]['source_value']=record.get(d['variable_name'].upper())
                         rows[-1]['unit_metadata']=({'version':1,'status':'verified','basis':'Validated typed calculation','unit':unit,
                             'inputs':[proposal['field_semantics'][str(rid)]['unit_metadata'] for rid in calc['input_record_ids']]} if calc else descriptor['unit_metadata'])
                         if calc:
