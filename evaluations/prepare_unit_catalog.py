@@ -5,8 +5,8 @@ from collections import Counter
 ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT/'.packages'),str(ROOT)]
 from analysis_catalog.catalog import connection
-from prototype.field_semantics import _describe_field_legacy as describe_field
-from prototype.unit_metadata import resolve,fingerprint,VERSION
+from prototype.semantics import _describe_field_legacy as describe_field
+from prototype.semantics import resolve,fingerprint,VERSION
 
 
 def main():

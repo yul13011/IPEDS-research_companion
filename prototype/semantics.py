@@ -244,6 +244,7 @@ RULES=[
     (r'SAL\d{4}_(?:IS|NIS)', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2024/human%20resources/package_1_44.pdf'),
     (r'F\d{4}_F[123]A?', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2023/finance/package_5_12.pdf'),
     (r'COST[12]_\d{4}', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2024/cost%20i/package_11_73.pdf'),
+    (r'DRVCOST\d{4}', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2024/cost%20i/package_11_73.pdf'),
     (r'IC\d{4}_AY', 'https://ceds.ed.gov/connectReport.aspx?uid=31034'),
     (r'SFA\d{4}(?:_P[12])?', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2024/student%20financial%20aid/package_7_20.pdf'),
 ]
@@ -281,7 +282,7 @@ def monetary_evidence(row,result):
     proven_ids=currency_ids(row.get('unit_metadata',{}))
     for source,doc in docs:
         title=doc.get('title','');text=title+' '+doc.get('long_description','')
-        if doc.get('record_id') not in proven_ids and not re.search(r'\b(salary|salaries|wages|tuition|fees?|expenses?|expenditures?|revenues?|assets?|liabilities|amount|dollars?)\b',title,re.I):continue
+        if doc.get('record_id') not in proven_ids and not re.search(r'\b(salary|salaries|wages|tuition|fees?|price|cost|charges?|expenses?|expenditures?|revenues?|assets?|liabilities|amount|dollars?)\b',title,re.I):continue
         # Percentages and ratios in a financial table are not currency evidence.
         if re.search(r'percent|percentage|ratio',title,re.I):continue
         million=bool(re.search(r'\bin millions?\b|\bmillions?(?: of)? (?:U\.?S\.? )?dollars\b|\bUSD\s*\(millions?\)',text,re.I))
@@ -489,7 +490,7 @@ def resolve(d,table=None,reviewed_unit=None,_prepared=True):
         if found(r'\b(?:percent|percentage)\b',description+' '+' '.join(p.get('description','') for p in population)):
             return result('percent','percentage','Source rate documentation establishes percentage basis',text)
         return result('unknown','unresolved','Rate scale not established',text[:1800],status='unresolved')
-    monetary=found(r'\b(?:dollars?|expenditures?|expenses?|revenues?|assets?|liabilities|salaries|salary|wages?|tuition|fees|discounts|allowances|cost|fringe benefits)\b',title) or (found(r'\bamount\b',title) and found(r'\b(?:grants?|loans?|aid|scholarships?)\b',title))
+    monetary=found(r'\b(?:dollars?|expenditures?|expenses?|revenues?|assets?|liabilities|salaries|salary|wages?|tuition|fees|discounts|allowances|cost|price|charges?|fringe benefits)\b',title) or (found(r'\bamount\b',title) and found(r'\b(?:grants?|loans?|aid|scholarships?)\b',title))
     if monetary:return result('monetary amount','currency','Monetary source quantity; currency/scale checked separately',title)
     # Population words in a title do not determine the measured quantity.
     if found(r'\b(?:credit|clock|contact) hours?\b',title) and not found(r'\b(?:number|count) of (?:students|staff|employees)\b',title):
