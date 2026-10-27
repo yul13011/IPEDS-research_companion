@@ -118,7 +118,11 @@ def semantic_check(proposal):
         if basis=='academic' and not re.search(r'academic|\d{4}.\d{2,4}|july 1.*june 30',period):blocks.append(f"{t['table_name']}: academic-year alignment needs review.")
         if basis in {'fiscal','academic'} and len(p['source_years'])==1:
             explicit=re.findall(r'\b(?:19|20)\d{2}\b',question)
-            if explicit and explicit[0] not in period:
+            # Price/cost tables encode the data year in the column, not the table period
+            # (e.g. IC 'published tuition and fees 2022-23'; net price NPIST2 '...2022-23').
+            # Accept the requested year when a selected field's own title covers it.
+            field_text=' '.join(str(d.get('title','')) for d in selected if d['table_name'].lower()==t['table_name'].lower()).lower()
+            if explicit and explicit[0] not in period and explicit[0] not in field_text:
                 blocks.append(f"{t['table_name']}: the source reporting period does not cover the requested year.")
     descriptors={}
     for d in defs.values():
@@ -255,7 +259,14 @@ def execute_catalog(answer, question):
                             involved=list(dict.fromkeys(calc['input_record_ids']+([calc['denominator_record_id']] if calc['denominator_record_id'] else [])))
                             definitions[metric]='\n\n'.join(defs[rid]['title']+': '+defs[rid]['long_description'] for rid in involved)+'\n\nCalculation: '+formula_text(calc,defs)
                         else:definitions[metric]=d['long_description']
-                        rows.append(dict(institution=name,unitid=unitid,observation_year=year,entry_cohort_year=None,reporting_period=period,
+                        # Column-encoded-year tables (net price NPIST2, prior-year tuition)
+                        # are table-labeled by collection year; use the field's own academic
+                        # year from its title so the period reflects the actual data year.
+                        field_period=period
+                        if not calc:
+                            _ym=re.search(r'\b(?:19|20)\d{2}[-–/]\d{2,4}\b',str(d.get('title','')))
+                            if _ym:field_period=_ym.group(0)
+                        rows.append(dict(institution=name,unitid=unitid,observation_year=year,entry_cohort_year=None,reporting_period=field_period,
                             metric=metric,measure=label,unit=unit,value=val,release=d['release_id'],provisional='Provisional' in d['release_id'],
                             status='ok' if val is not None else 'missing',numerator=num,denominator=den,series_segment='source observations'))
                         rows[-1]['source_value']=record.get(d['variable_name'].upper())

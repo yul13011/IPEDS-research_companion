@@ -69,6 +69,25 @@ Adjacent, lower‑severity:
    the right table.
 5. **Field‑location gaps** (e.g. room/board) and the **national aggregate** remain.
 
+## Update (2026-10-27): fixes landed
+
+- **Class #1 — false "not reported" (COST/price): FIXED.** Root cause was a column-casing
+  bug in `catalog_execution` (IC/COST codebook names are lowercase, physical columns
+  uppercase). Verified: Smith tuition 2023-24 $61,568; Mt. Holyoke room & board $18,838.
+  Broad win across all IC/COST lowercase fields. Regression: `test_catalog_column_casing.py`.
+- **Class #2 — period over-rejection: FIXED for column-encoded-year fields.** The
+  academic/fiscal single-year check now accepts the requested year when a selected field's
+  own title carries it (e.g. "Published tuition and fees 2022-23" = `chg2ay2`), and each
+  row's reporting period is stamped from the field's data year. Verified: Smith prior-year
+  tuition 2022-23 $58,768 (was blocked). Regression: `test_catalog_period_binding.py`.
+- **Net price — reclassified (new finding, not period).** The planner selected `NPIST2`
+  ("net price 2023-24") for a 2022-23 request; net-price columns (`NPIST0/1/2`) are a rolling
+  3-year window that shifts by release, so "2022-23" should resolve to `NPIST1` (2024-25
+  release) or `NPIST2` (2023-24 release). The period check correctly rejected the wrong-year
+  field. This is a **planner field/release-selection** issue (net-price year↔column mapping),
+  tracked separately from class #2. (Also: some institutions, e.g. Wellesley, report no net
+  price at all — a genuine data gap, correctly surfaced.)
+
 ## Caveats
 - 30 probes is a sample, not full coverage; Tier‑2 verdicts are behavioral. The auto‑matrix
   under‑counted (e.g. the institution‑count answer rendered as a message, not rows, and was
