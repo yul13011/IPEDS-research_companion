@@ -94,6 +94,19 @@ Adjacent, lower‑severity:
 - **Task-split (class #3) — NOT a bug.** The Yale/ACT-submitters lookup now answers 384
   reliably (3/3 runs). The earlier "1 blocked, 1 needs clarification" was stochastic planner
   non-determinism, not a consistent routing defect — no code change made.
+- **Finance "YYYY-YY" → fiscal-year auto-resolution — FIXED (2026-10-26).** The catalog-planner
+  path (unlike the `query_engine` F-A guard) read "2022-23" as the *collection release* and
+  silently answered the wrong fiscal year (Yale tuition revenue $354,023,874 / FY2022 / table
+  `F2122_F2`). A finance table `F{aa}{bb}` holds the fiscal year ending 20bb and is published
+  in the *next* release, so "2022-23" is FY2023 = `F2223_F2` (2023-24 release) = $343,599,498.
+  Fix, two parts: (1) `_align_finance_years(plan, question)` in `catalog_planner.py`, called in
+  `proposal_answer`, rebinds a single-span finance selection to the table whose fiscal year
+  ends in the requested year, repoints `source_years`, and rewrites the disclosure (dropping
+  the model's stale wrong-year notes); (2) `semantic_check` now accepts a `YYYY-YY` span's end
+  year as the requested fiscal/academic year, so the aligned plan executes instead of being
+  rejected. It now **answers with disclosure** rather than asking to clarify. Verified live:
+  Yale tuition-and-fees revenue 2022-23 = $343,599,498 (FY2023). Regression:
+  `test_finance_year_alignment.py`.
 
 ## Caveats
 - 30 probes is a sample, not full coverage; Tier‑2 verdicts are behavioral. The auto‑matrix

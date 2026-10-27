@@ -276,8 +276,52 @@ def _align_field_years(plan, question):
     return {**plan,'selections':sels} if changed else plan
 
 
+def _align_finance_years(plan, question):
+    """IPEDS finance off-by-one: a 'YYYY-YY' span names a fiscal year by its END year, and a
+    finance table F{aa}{bb} (fiscal year 20aa-20bb) is published in the NEXT collection
+    release. For a single-year request, rebind any selected finance field to the table whose
+    fiscal year ends in the requested year (e.g. '2022-23' -> F2223_F2 in the 2023-24 release,
+    not F2122_F2 in the 2022-23 release) and point source_years at that release. Resolves the
+    'YYYY-YY' finance question to a fiscal year automatically instead of asking to clarify."""
+    import re,sqlite3
+    if not isinstance(plan,dict) or not plan.get('selections'):return plan
+    spans=re.findall(r'\b((?:19|20)\d{2})[-–/](\d{2})\b',question or '')
+    if len(spans)!=1:return plan
+    start,two=spans[0];end_year=int(start[:2]+two)
+    from .catalog import DATA,definition_detail
+    sels=[];changed=False;old_tables=set()
+    with sqlite3.connect(DATA/'metadata_catalog.sqlite') as db:
+        for s in plan['selections']:
+            try:d=definition_detail(s['record_id'])
+            except Exception:sels.append(s);continue
+            m=re.match(r'(F)(\d{2})(\d{2})(.*)$',str(d.get('table_name','')),re.I)
+            if m and m[3]!=two:
+                target=m[1]+start[2:]+two+m[4]
+                row=db.execute('SELECT record_id FROM records WHERE table_name=? COLLATE NOCASE AND variable_name=? COLLATE NOCASE',(target,d['variable_name'])).fetchone()
+                if row:sels.append({**s,'record_id':row[0]});changed=True;old_tables.add(m[0].upper());continue
+            sels.append(s)
+    if not changed:return plan
+    out={**plan,'selections':sels,'source_years':[end_year]}
+    rt=dict(out.get('requested_time') or {})
+    rt['basis']=rt.get('basis') or 'fiscal'
+    rt['description']=(f"Fiscal year {end_year} (the {start}-{two} fiscal-year span, named by its end year); "
+                       f"finance table F{start[2:]}{two}, reported in the {end_year}-{(end_year+1)%100:02d} release.")
+    out['requested_time']=rt
+    # Drop the model's pre-alignment notes that name the wrong year/table, then disclose the mapping.
+    disclosure=(f"'{start}-{two}' is read as the fiscal year ending {end_year}; IPEDS reports that fiscal "
+                f"year in the {end_year}-{(end_year+1)%100:02d} release (finance table F{start[2:]}{two}), "
+                f"not the {start}-{two} collection release.")
+    kept=[a for a in (plan.get('assumptions') or [])
+          if not re.search(r'fiscal year\s*(?:'+re.escape(start)+r'|'+re.escape(str(end_year-1))+r')\b',a,re.I)
+          and not any(tbl.split('_')[0] in a.upper() for tbl in old_tables)
+          and f"{start}-{two} release" not in a.lower()]
+    out['assumptions']=[disclosure]+kept
+    return out
+
+
 def proposal_answer(plan, question, mode='catalog planner', usage=None):
     plan=_align_field_years(plan,question)
+    plan=_align_finance_years(plan,question)
     try:proposal=_save(validate_proposal(plan,question))
     except ValueError as exc:
         if 'needs clarification' in str(exc):return {'intent':'clarify','message':str(exc),'mode':mode}

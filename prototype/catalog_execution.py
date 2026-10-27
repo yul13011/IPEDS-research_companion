@@ -118,11 +118,15 @@ def semantic_check(proposal):
         if basis=='academic' and not re.search(r'academic|\d{4}.\d{2,4}|july 1.*june 30',period):blocks.append(f"{t['table_name']}: academic-year alignment needs review.")
         if basis in {'fiscal','academic'} and len(p['source_years'])==1:
             explicit=re.findall(r'\b(?:19|20)\d{2}\b',question)
+            # A hyphenated 'YYYY-YY' span names a fiscal/academic year by its END year
+            # (e.g. '2022-23' = fiscal year 2023), so accept that end year as well.
+            span=re.search(r'\b((?:19|20)\d{2})[-–/](\d{2})\b',question)
+            accept=list(explicit)+([span[1][:2]+span[2]] if span else [])
             # Price/cost tables encode the data year in the column, not the table period
             # (e.g. IC 'published tuition and fees 2022-23'; net price NPIST2 '...2022-23').
             # Accept the requested year when a selected field's own title covers it.
             field_text=' '.join(str(d.get('title','')) for d in selected if d['table_name'].lower()==t['table_name'].lower()).lower()
-            if explicit and explicit[0] not in period and explicit[0] not in field_text:
+            if explicit and not any(y in period or y in field_text for y in accept):
                 blocks.append(f"{t['table_name']}: the source reporting period does not cover the requested year.")
     descriptors={}
     for d in defs.values():
