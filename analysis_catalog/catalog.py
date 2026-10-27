@@ -5,12 +5,15 @@ from hashlib import sha256
 from functools import lru_cache
 import argparse
 import json
+import os
 import re
 import sqlite3
 
 BASE = Path(__file__).resolve().parents[1]
-TARGET = BASE / 'data/analysis_catalog.sqlite'
-SOURCE = BASE / 'data/metadata_catalog.sqlite'
+# Mirror prototype.catalog: data dir is the repo's data/ by default, or IPEDS_DATA_DIR on a server.
+DATA = Path(os.environ.get('IPEDS_DATA_DIR', BASE / 'data'))
+TARGET = DATA / 'analysis_catalog.sqlite'
+SOURCE = DATA / 'metadata_catalog.sqlite'
 
 
 @lru_cache(maxsize=4)
