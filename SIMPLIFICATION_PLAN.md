@@ -216,7 +216,7 @@ is already much simpler), or (b) authorize the Option C pilot on one domain.
 | ID | Decision | Status |
 | --- | --- | --- |
 | D1 | Feature inventory keep/simplify/drop | Done — keep all; ⚠ simplify-candidates #3/#13/#19/#21 pending owner yes/no |
-| D2 | Architecture fork (typed-plan everywhere vs. curated views + guarded SQL) | Analysis done; recommend **Option C pilot on one domain**. Owner to choose A (stop) vs C (pilot) |
+| D2 | Architecture fork (typed-plan everywhere vs. curated views + guarded SQL) | **DECIDED 2026-10-26: Option A** (keep the typed-plan engine). Rationale: answering arbitrary questions correctly across all ~509 tables is the priority; under that requirement Option C is *additive* (a perf fast-lane, not a simplification) and C′ (LLM SQL over the full catalog) would trade away the deterministic validation that prevents silent wrong answers. Next priority shifts from shrinking the core to **coverage/correctness** (own effort; see below). |
 | D3 | Target module map approval | Satisfied for the ✅ consolidation groups (done); full ~15–18 map not finalized |
 
 ## Change log
