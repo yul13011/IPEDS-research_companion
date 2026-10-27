@@ -250,7 +250,34 @@ def _save(proposal):
     return proposal
 
 
+def _align_field_years(plan, question):
+    """Deterministic year-column alignment for single-year requests: if a selected field's
+    title encodes a different academic/fiscal year-span than the one requested, swap to the
+    sibling field (same release+table) whose title matches the requested span. Fixes
+    column-encoded-year selection, e.g. net price NPIST0/1/2 and prior-year tuition IC chg*."""
+    import re,sqlite3
+    if not isinstance(plan,dict) or not plan.get('selections'):return plan
+    spans=re.findall(r'\b(?:19|20)\d{2}[-/]\d{2,4}\b',question or '')
+    if len(spans)!=1:return plan
+    req_span=spans[0]
+    from .catalog import DATA,definition_detail
+    span_re=re.compile(r'\b(?:19|20)\d{2}[-/]\d{2,4}\b')
+    sels=[];changed=False
+    with sqlite3.connect(DATA/'metadata_catalog.sqlite') as db:
+        for s in plan['selections']:
+            try:d=definition_detail(s['record_id'])
+            except Exception:sels.append(s);continue
+            title=d.get('title') or '';fm=span_re.search(title)
+            if fm and fm.group()!=req_span:
+                target=title[:fm.start()]+req_span+title[fm.end():]
+                row=db.execute('SELECT record_id FROM records WHERE release_id=? AND table_name=? COLLATE NOCASE AND title=?',(d['release_id'],d['table_name'],target)).fetchone()
+                if row:sels.append({**s,'record_id':row[0]});changed=True;continue
+            sels.append(s)
+    return {**plan,'selections':sels} if changed else plan
+
+
 def proposal_answer(plan, question, mode='catalog planner', usage=None):
+    plan=_align_field_years(plan,question)
     try:proposal=_save(validate_proposal(plan,question))
     except ValueError as exc:
         if 'needs clarification' in str(exc):return {'intent':'clarify','message':str(exc),'mode':mode}

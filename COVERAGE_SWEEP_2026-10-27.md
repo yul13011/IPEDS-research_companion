@@ -80,13 +80,20 @@ Adjacent, lower‑severity:
   own title carries it (e.g. "Published tuition and fees 2022-23" = `chg2ay2`), and each
   row's reporting period is stamped from the field's data year. Verified: Smith prior-year
   tuition 2022-23 $58,768 (was blocked). Regression: `test_catalog_period_binding.py`.
-- **Net price — reclassified (new finding, not period).** The planner selected `NPIST2`
-  ("net price 2023-24") for a 2022-23 request; net-price columns (`NPIST0/1/2`) are a rolling
-  3-year window that shifts by release, so "2022-23" should resolve to `NPIST1` (2024-25
-  release) or `NPIST2` (2023-24 release). The period check correctly rejected the wrong-year
-  field. This is a **planner field/release-selection** issue (net-price year↔column mapping),
-  tracked separately from class #2. (Also: some institutions, e.g. Wellesley, report no net
-  price at all — a genuine data gap, correctly surfaced.)
+- **Net price — FIXED (2026-10-27).** The planner selected `NPIST2` ("net price 2023-24")
+  for a 2022-23 request; net-price columns (`NPIST0/1/2`) are a rolling 3-year window that
+  shifts by release, so "2022-23" is `NPIST1` (2024-25 release) or `NPIST2` (2023-24 release).
+  Fix: a deterministic `_align_field_years(plan, question)` in `catalog_planner.py`, called at
+  the top of `proposal_answer`. For a single-year request (exactly one `YYYY-YY` span in the
+  question) it swaps any selected field whose title encodes a *different* span to the sibling
+  field (same release+table) whose title matches the requested span. Verified live: Alabama
+  A & M net price 2022-23 now returns $14,064 (`NPIST1`), was $17,152 (`NPIST2`). General —
+  also covers prior-year IC tuition columns. Idempotent; multi-year requests untouched.
+  Regression: `test_netprice_year_alignment.py`. (Some institutions, e.g. Wellesley, report
+  no net price at all — a genuine data gap, correctly surfaced.)
+- **Task-split (class #3) — NOT a bug.** The Yale/ACT-submitters lookup now answers 384
+  reliably (3/3 runs). The earlier "1 blocked, 1 needs clarification" was stochastic planner
+  non-determinism, not a consistent routing defect — no code change made.
 
 ## Caveats
 - 30 probes is a sample, not full coverage; Tier‑2 verdicts are behavioral. The auto‑matrix
