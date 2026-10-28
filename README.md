@@ -144,3 +144,7 @@ This is a **demonstration**, not a validated reporting tool. Figures should be c
 official IPEDS sources (College Navigator / the IPEDS Data Center) before any decision or
 publication; 2024–25 is provisional. The application code is provided as-is, and the underlying data
 is public U.S. federal data from the National Center for Education Statistics.
+
+## License
+
+Released under the [MIT License](LICENSE).
