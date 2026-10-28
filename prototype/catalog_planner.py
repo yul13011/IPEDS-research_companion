@@ -925,6 +925,62 @@ def model_catalog_plan(question,previous=None,model=None):
     return {'intent':'clarify','message':'I could not complete the source-backed plan within the planning search limit. This is a planning limitation, not evidence that the requested data are unavailable. Your selected scope has been retained; no statistical values were retrieved.','model_usage':metrics,'mode':'catalog language-model planner','validation_attempts':repair_history,'planning_trace':trace}
 
 
+def _cost_institution_names(question, previous=None):
+    """Deterministic institution resolution for the cost route: reviewed aliases/UNITIDs first,
+    then an exact IPEDS directory (HD) name match. Returns names ready for execution, or [] when
+    nothing resolves confidently (the caller then falls through to the model)."""
+    names=_names(question, previous)
+    if names:return names
+    from .catalog import annual_path, readonly
+    phrase=re.sub(r'\(UNITID\s*\d{6}\)','',question)
+    phrase=re.sub(r'(?i)\bexcluding\b.*$','',phrase)
+    phrase=re.sub(r'(?i)\b(how much|how many|what|is|are|was|were|does|do|did|the|a|an|to attend|to|for|of attendance|cost of attendance|total cost|total price|net price|cost|costs|price|prices|tuition|and|fees|published|required|charges?|charge|attend|per year|a year|each year|living (?:on|off) campus|on campus|off campus|with family|in[- ]state|out[- ]of[- ]state|out of state|in[- ]district|resident|nonresident|students?|student|pay)\b',' ',phrase)
+    phrase=re.sub(r"\b\w+'s\b",lambda m:m.group()[:-2],phrase)
+    phrase=re.sub(r'20\d{2}(?:[-/]\d{2,4})?','',phrase)
+    phrase=re.sub(r'[?.,]',' ',phrase);phrase=re.sub(r'\s+',' ',phrase).strip()
+    if len(phrase)<3:return []
+    with readonly(annual_path(2024)) as db:
+        rows=db.execute('SELECT UNITID,INSTNM FROM HD2024 WHERE INSTNM=? COLLATE NOCASE',(phrase,)).fetchall()
+    if len(rows)==1:return [f"{rows[0]['INSTNM']} (UNITID {rows[0]['UNITID']})"]
+    return []
+
+
+def cost_plan(question, previous=None):
+    """Deterministic cost/tuition/price answer for the current year: resolve the institution from
+    the directory and return the canonical DRVCOST2024 set (published tuition & fees plus total
+    price on campus, in-state and out-of-state), so cost questions always answer with the complete,
+    correct columns instead of randomly clarifying. Falls through (returns None) for related-but-
+    different questions, historical years, or when the institution cannot be resolved confidently."""
+    from .institution_confirmation import plain_ids
+    question=plain_ids(question)
+    q=question.lower()
+    if not re.search(r'\b(cost|costs|price|tuition|attendance)\b|how much',q):return None
+    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return None
+    if re.search(r'\b(room|board|housing|meals?|dorm|books?|supplies)\b',q) and not re.search(r'\b(tuition|cost|price|attendance|total)\b',q):return None
+    if re.search(r'\btrend\b|each year|over time|from \d{4}|through|\bto\s+\d{4}\b|compare',q):return None
+    years=_source_years(question,previous)
+    year=max([y for y in years if 2015<=y<=2024] or [2024])
+    if year!=2024:return None   # the derived DRVCOST cost table is 2024-25 only
+    names=_cost_institution_names(question,previous)
+    if not names:return None
+    tuition_only=bool(re.search(r'\btuition\b',q)) and not re.search(r'\b(cost of attendance|total (?:cost|price)|how much)\b',q)
+    if tuition_only and re.search(r'out[- ]of[- ]state|in[- ]state|in[- ]district|nonresident|resident',q):return None
+    wanted=['TUFEYR3'] if tuition_only else ['TUFEYR3','CINSON','COTSON']
+    ids=_drvcost_ids(wanted)
+    if not ids:return None
+    note=('Published tuition and fees for 2024-25 (in-state/in-district rate).' if tuition_only else
+          'Total price is the full cost of attendance (tuition, fees, housing, food, books, other) for '
+          'students living on campus, 2024-25, shown for both in-state and out-of-state residency; '
+          'published tuition and fees is the in-state/in-district rate.')
+    plan={'version':1,'institutions':names,'source_years':[2024],
+          'requested_time':{'basis':'academic','description':'Academic year 2024-25 published tuition & fees and total price (cost of attendance), from the derived cost table DRVCOST2024.'},
+          'selections':[{'record_id':rid,'role':'measure'} for rid in ids],'filters':[],
+          'group_by_record_ids':[],'calculations':[],'joins':[],
+          'output':'chart' if re.search(r'plot|chart|graph',q) else 'table',
+          'assumptions':[note],'clarification_questions':[]}
+    return proposal_answer(plan,question,mode='source-bound catalog starter')
+
+
 def plan_catalog_question(question,previous=None,use_model=False,model=None):
     report('Finding source fields for your question…')
     previous=previous if previous and previous.get('version') in {1,2} else None
@@ -932,7 +988,7 @@ def plan_catalog_question(question,previous=None,use_model=False,model=None):
         if answer['intent']=='clarify' or (answer.get('catalog_plan') and answer['catalog_plan']['clarification_questions']):
             answer['catalog_context']={'kind':'catalog_clarification','question':question,'previous_plan':previous}
         return answer
-    starter=enrollment_race_plan(question,previous) or enrollment_gender_plan(question,previous)
+    starter=enrollment_race_plan(question,previous) or enrollment_gender_plan(question,previous) or cost_plan(question,previous)
     if starter:return finish(starter)
     if use_model:return finish(model_catalog_plan(question,previous,model))
     # Offline mode can discover the full catalog but cannot claim general language understanding.
