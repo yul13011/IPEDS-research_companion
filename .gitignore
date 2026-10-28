@@ -53,3 +53,10 @@ evaluations/**/*.xlsx
 design-mockups/**/*.png
 design-mockups/**/*.svg
 design-mockups/**/*.jpg
+
+# Build artifacts & local logs (never commit)
+*.class
+*.pyc
+__pycache__/
+local_logs/
+*.log
