@@ -932,17 +932,18 @@ def _cost_institution_names(question, previous=None):
     names=_names(question, previous)
     if names:return names
     from .catalog import annual_path, readonly
-    phrase=re.sub(r'\(UNITID\s*\d{6}\)','',question)
-    phrase=re.sub(r'(?i)\bexcluding\b.*$','',phrase)
-    phrase=re.sub(r'(?i)\b(how much|how many|what|is|are|was|were|does|do|did|the|a|an|to attend|to|for|of attendance|cost of attendance|total cost|total price|net price|cost|costs|price|prices|tuition|and|fees|published|required|charges?|charge|attend|per year|a year|each year|living (?:on|off) campus|on campus|off campus|with family|in[- ]state|out[- ]of[- ]state|out of state|in[- ]district|resident|nonresident|students?|student|pay)\b',' ',phrase)
-    phrase=re.sub(r"\b\w+'s\b",lambda m:m.group()[:-2],phrase)
-    phrase=re.sub(r'20\d{2}(?:[-/]\d{2,4})?','',phrase)
-    phrase=re.sub(r'[?.,]',' ',phrase);phrase=re.sub(r'\s+',' ',phrase).strip()
-    if len(phrase)<3:return []
+    # Match the longest directory (HD) institution name that appears literally in the question.
+    # Robust to phrasing ('how much does X cost', 'what is the cost of attending X') because it
+    # looks for the name inside the question rather than stripping the question down to a name.
+    q=question.lower()
     with readonly(annual_path(2024)) as db:
-        rows=db.execute('SELECT UNITID,INSTNM FROM HD2024 WHERE INSTNM=? COLLATE NOCASE',(phrase,)).fetchall()
-    if len(rows)==1:return [f"{rows[0]['INSTNM']} (UNITID {rows[0]['UNITID']})"]
-    return []
+        rows=[dict(r) for r in db.execute(
+            "SELECT UNITID,INSTNM FROM HD2024 WHERE length(INSTNM)>=7 AND ? LIKE '%'||lower(INSTNM)||'%'",(q,))]
+    if not rows:return []
+    longest=max(len(r['INSTNM']) for r in rows)
+    top=[r for r in rows if len(r['INSTNM'])==longest]
+    if len(top)!=1:return []   # ambiguous at the longest match; let the model decide
+    return [f"{top[0]['INSTNM']} (UNITID {top[0]['UNITID']})"]
 
 
 def cost_plan(question, previous=None):
