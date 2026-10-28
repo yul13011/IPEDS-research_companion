@@ -39,7 +39,21 @@ years ≥ 2022.
 
 ## Fall Enrollment (EF)
 
-_(to be added)_
+Source: `EF{year}` — fall headcount by student level. `EFLEVEL` 10 = all students (total),
+20 = undergraduate, 50 = graduate/professional; `EFTOTAL` = headcount. Ground truth recomputed from
+`EF{year}` (Yale reference CSV in `Test cases/Yale/`: `w005-...enr-historical-by-level...`).
+*Yale-only for now.*
+
+**Source variables:** `EFTOTAL` from `EF{year}` where `EFLEVEL` ∈ {10 = total, 20 = undergraduate,
+50 = graduate/professional}.
+
+1. **How many students were enrolled at Yale in fall 2023?** → `EFTOTAL` (`EFLEVEL=10`).
+2. **How many undergraduates were enrolled at Yale in fall 2023?** → `EFLEVEL=20`.
+3. **How many graduate and professional students were enrolled at Yale in fall 2023?** → `EFLEVEL=50`.
+4. **Plot Yale's total fall enrollment from 2015 to 2024.** → `EFTOTAL` (`EFLEVEL=10`) per year (trend).
+
+> Note: a few historical Yale-CSV cells (2015, 2022 graduate/total) differ slightly from IPEDS —
+> retained as source differences, not app errors; examples use the IPEDS values.
 
 ## 12-month Enrollment (EFFY)
 
@@ -62,11 +76,18 @@ is observed in `GR2024`). Ground truth recomputed from `GR{year}` (Yale referenc
 1. **What was Yale's six-year graduation rate for the 2018 entering cohort?** → `GRTOTLT`(12)/`GRTOTLT`(8), percent.
 2. **How many students were in Yale's 2018 entering cohort, and how many graduated within six years?**
    → `GRTOTLT`(8) and `GRTOTLT`(12).
-3. **What was Yale's six-year graduation rate by gender for the 2018 cohort?** → men `GRTOTLM`, women `GRTOTLW` (drill-down).
+3. **What was Yale's six-year graduation rate by gender for the 2018 cohort?** → men `GRTOTLM`, women `GRTOTLW`.
+4. **What was Yale's six-year graduation rate for Pell recipients vs non-Pell students (2018 cohort)?**
+   → `GR{year}_PELL_SSL`, `PSGRTYPE=2`: Pell = `PGCMBAC`/`PGADJCT`; non-Pell = (`SSCMBAC`+`NRCMBAC`)/(`SSADJCT`+`NRADJCT`).
+5. **What was Yale's six-year graduation rate for nonresident students in the 2018 cohort?**
+   → U.S. nonresident `GRNRALT` (`GRTYPE=12` / `GRTYPE=8`). *(Asking for "international students" instead correctly
+   triggers a clarification — IPEDS reports only "U.S. nonresident," not all international students.)*
 
 > Notes: the denominator is the adjusted cohort (after allowable exclusions), not original entrants;
-> rates use raw counts, fraction scale with 0.0005 tolerance. URM is a custom user grouping with an
-> unresolved race-unknown rule (see `benchmark_definitions.json`) — held for a later pass.
+> rates use raw counts, fraction scale with 0.0005 tolerance. Non-Pell combines subsidized-loan-only
+> and neither-Pell-nor-subsidized-loan categories (not the latter alone). International is
+> operationalized as U.S. nonresident (`GRNRALT`). URM is a custom user grouping with an unresolved
+> race-unknown rule (see `benchmark_definitions.json`) — held for a later pass.
 
 ## Outcome Measures (OM)
 

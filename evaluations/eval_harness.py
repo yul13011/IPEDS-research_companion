@@ -116,10 +116,41 @@ def adm_grad_cases():
     ]
 
 
+def fall_enrollment_cases():
+    """Yale fall enrollment by level, recomputed from EF2023. Mirrors EXAMPLE_QUESTIONS.md -> Fall Enrollment."""
+    Y = 130794
+    with readonly(annual_path(2023)) as db:
+        tot = db.execute("SELECT EFTOTAL FROM EF2023 WHERE UNITID=? AND EFLEVEL=10", (Y,)).fetchone()[0]
+        ug = db.execute("SELECT EFTOTAL FROM EF2023 WHERE UNITID=? AND EFLEVEL=20", (Y,)).fetchone()[0]
+        gr = db.execute("SELECT EFTOTAL FROM EF2023 WHERE UNITID=? AND EFLEVEL=50", (Y,)).fetchone()[0]
+    return [
+        {"id": "enr_total",     "q": "How many students were enrolled at Yale in fall 2023?", "expect": [tot], "tol": 0.5},
+        {"id": "enr_undergrad", "q": "How many undergraduates were enrolled at Yale in fall 2023?", "expect": [ug], "tol": 0.5},
+        {"id": "enr_grad",      "q": "How many graduate and professional students were enrolled at Yale in fall 2023?", "expect": [gr], "tol": 0.5},
+    ]
+
+
+def grad_subgroup_cases():
+    """Yale six-year graduation-rate subgroups (2018 cohort -> GR2024), recomputed per the benchmark."""
+    Y = 130794
+    with readonly(annual_path(2024)) as db:
+        m8, w8, nr8 = db.execute("SELECT GRTOTLM,GRTOTLW,GRNRALT FROM GR2024 WHERE UNITID=? AND GRTYPE=8", (Y,)).fetchone()
+        m12, w12, nr12 = db.execute("SELECT GRTOTLM,GRTOTLW,GRNRALT FROM GR2024 WHERE UNITID=? AND GRTYPE=12", (Y,)).fetchone()
+        pga, pgc = db.execute("SELECT PGADJCT,PGCMBAC FROM GR2024_PELL_SSL WHERE UNITID=? AND PSGRTYPE=2", (Y,)).fetchone()
+    return [
+        {"id": "grad_gender", "q": "What was Yale's six-year graduation rate by gender for the 2018 entering cohort?", "expect": [100*m12/m8, 100*w12/w8], "tol": 0.6},
+        {"id": "grad_pell",   "q": "What was Yale's six-year graduation rate for Pell recipients in the 2018 entering cohort?", "expect": [100*pgc/pga], "tol": 0.6},
+        {"id": "grad_intl",   "q": "What was Yale's six-year graduation rate for nonresident students in the 2018 entering cohort?", "expect": [100*nr12/nr8], "tol": 0.6},
+    ]
+
+
 def main():
     p1, t1 = run(COST_CASES, cost_ground_truth, cost_checks, "Cost")
     p2, t2 = run_value_cases(adm_grad_cases, "Admissions & Graduation (Yale)")
-    print(f"\n==================== TOTAL: {p1+p2}/{t1+t2} ====================")
+    p3, t3 = run_value_cases(fall_enrollment_cases, "Fall Enrollment (Yale)")
+    p4, t4 = run_value_cases(grad_subgroup_cases, "Graduation subgroups (Yale)")
+    P, T = p1+p2+p3+p4, t1+t2+t3+t4
+    print(f"\n==================== TOTAL: {P}/{T} ====================")
 
 
 if __name__ == "__main__":
