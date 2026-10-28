@@ -144,12 +144,31 @@ def grad_subgroup_cases():
     ]
 
 
+def aggregate_cases():
+    """National aggregates, recomputed with the Title IV degree-granting universe (FIPS 1-56,
+    PSET4FLG 1/3). Degree counts match exactly; the grad rate carries a small universe tolerance.
+    (National enrollment is universe-sensitive, so it is documented but not strictly eval-checked.)"""
+    U = "h.FIPS BETWEEN 1 AND 56 AND h.PSET4FLG IN (1,3)"
+    with readonly(annual_path(2023)) as db:
+        bach = db.execute(f"SELECT SUM(c.CTOTALT) FROM C2023_A c JOIN HD2023 h ON c.UNITID=h.UNITID WHERE c.CIPCODE='99' AND c.MAJORNUM=1 AND c.AWLEVEL=5 AND {U}").fetchone()[0]
+        mast = db.execute(f"SELECT SUM(c.CTOTALT) FROM C2023_A c JOIN HD2023 h ON c.UNITID=h.UNITID WHERE c.CIPCODE='99' AND c.MAJORNUM=1 AND c.AWLEVEL=7 AND {U}").fetchone()[0]
+    with readonly(annual_path(2022)) as db:
+        g12 = db.execute(f"SELECT SUM(g.GRTOTLT) FROM GR2022 g JOIN HD2022 h ON g.UNITID=h.UNITID WHERE g.GRTYPE=12 AND {U}").fetchone()[0]
+        g8 = db.execute(f"SELECT SUM(g.GRTOTLT) FROM GR2022 g JOIN HD2022 h ON g.UNITID=h.UNITID WHERE g.GRTYPE=8 AND {U}").fetchone()[0]
+    return [
+        {"id": "agg_bachelors", "q": "How many bachelor's degrees were awarded nationally in 2023?", "expect": [bach], "tol": 0.5},
+        {"id": "agg_masters",   "q": "How many master's degrees were awarded nationally in 2023?",   "expect": [mast], "tol": 0.5},
+        {"id": "agg_gradrate",  "q": "What was the national six-year graduation rate for the 2016 entering cohort?", "expect": [100*g12/g8], "tol": 0.6},
+    ]
+
+
 def main():
     p1, t1 = run(COST_CASES, cost_ground_truth, cost_checks, "Cost")
     p2, t2 = run_value_cases(adm_grad_cases, "Admissions & Graduation (Yale)")
     p3, t3 = run_value_cases(fall_enrollment_cases, "Fall Enrollment (Yale)")
     p4, t4 = run_value_cases(grad_subgroup_cases, "Graduation subgroups (Yale)")
-    P, T = p1+p2+p3+p4, t1+t2+t3+t4
+    p5, t5 = run_value_cases(aggregate_cases, "Aggregate / National")
+    P, T = p1+p2+p3+p4+p5, t1+t2+t3+t4+t5
     print(f"\n==================== TOTAL: {P}/{T} ====================")
 
 

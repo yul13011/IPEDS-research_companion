@@ -156,3 +156,29 @@ _(to be added)_
 ## Academic Libraries (AL)
 
 _(to be added)_
+
+## Aggregate / National (cross-survey)
+
+National totals and rates across all U.S. institutions, from the NCES Trend Generator reference set
+(`Test cases/NCES/`). These test the **aggregate path** (national sums, not institution lookup).
+Ground truth recomputed from IPEDS with the universe **U.S. degree-granting, Title IV**
+(`HD{year}`: `FIPS` 1–56, `PSET4FLG` ∈ {1,3}).
+
+> **Universe caveat:** national aggregates depend on the exact universe (Title IV degree-granting vs
+> all Title IV vs all reporting). The app uses a consistent Title IV degree-granting scope; small
+> differences from a given NCES published figure are universe/definition differences, not errors.
+> (Counts of **degrees** match exactly; **enrollment** totals are universe-sensitive.)
+
+**Source variables:** fall enrollment `EFTOTAL` (`EFLEVEL=10` total) from `EF{year}`; degrees
+`CTOTALT` from `C{year}_A` (`CIPCODE='99'`, `MAJORNUM=1`, `AWLEVEL` 5 = bachelor's / 7 = master's);
+six-year grad rate = Σ`GRTOTLT`(`GRTYPE=12`) / Σ`GRTOTLT`(`GRTYPE=8`) from `GR{year}`; institution
+count from distinct `HD{year}` reporting units.
+
+1. **What was the total fall enrollment across all U.S. degree-granting institutions in 2023?** → Σ `EFTOTAL` (`EFLEVEL=10`). *(universe-sensitive)*
+2. **How many degree-granting institutions reported to IPEDS in 2023?** → distinct `HD2023` reporting units.
+3. **How many bachelor's degrees were awarded nationally in 2023?** → Σ `CTOTALT` (`AWLEVEL=5`).
+4. **How many master's degrees were awarded nationally in 2023?** → Σ `CTOTALT` (`AWLEVEL=7`).
+5. **What was the national six-year graduation rate for the 2016 entering cohort?** → Σ completers / Σ cohort.
+
+> Note: "average" aggregates (e.g. average tuition) correctly trigger a clarification (unweighted
+> mean vs enrollment-weighted; in-state vs out-of-state) rather than guessing a single figure.
