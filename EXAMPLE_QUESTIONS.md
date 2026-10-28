@@ -1,7 +1,13 @@
 # IPEDS Research Companion — Example Questions
 
-A running catalog of example / test questions the app should answer well, organized by IPEDS
-survey component. Each section can grow as we develop and verify coverage.
+A running catalog of example / test questions the app should answer well, organized by **IPEDS
+survey component**, using the official survey names from the 2024-25 codebook
+(`IPEDS202425Tablesdoc.xlsx`, sheet `tables24`, column C). Each section can grow as we develop
+and verify coverage.
+
+The 12 surveys: Institutional Characteristics · Admissions and Test Scores · Fall Enrollment ·
+12-month Enrollment · Completions · Graduation Rates · Outcome Measures · Student Financial Aid ·
+**Cost** · Human Resources · Finance · Academic Libraries.
 
 ---
 
@@ -9,7 +15,39 @@ survey component. Each section can grow as we develop and verify coverage.
 
 _(to be added)_
 
-Spans the IC Student Charges component (published price) and the SFA net-price component.
+## Admissions and Test Scores (ADM)
+
+_(to be added)_
+
+## Fall Enrollment (EF)
+
+_(to be added)_
+
+## 12-month Enrollment (EFFY)
+
+_(to be added)_
+
+## Completions (C)
+
+_(to be added)_
+
+## Graduation Rates (GR, GR200)
+
+_(to be added)_
+
+## Outcome Measures (OM)
+
+_(to be added)_
+
+## Student Financial Aid (SFA)
+
+_(to be added)_
+
+## Cost
+
+Its own IPEDS survey (survey #19 in the 2024-25 codebook). Tables: `COST1_2024` (published
+charges), `COST2_2024_NetPrice` (net price), `COST2_2024_FinancialAid`, and the derived
+`DRVCOST2024` (total price / cost of attendance).
 
 **Shared answer template** (one adaptive template, verified across the three institution types below):
 - **Published total price** (sticker, living on campus) — show only the *distinct* residency figures:
@@ -27,7 +65,7 @@ should recompute from whatever is current rather than rely on fixed numbers):
   `CINDON` (in-district); off-campus `CINSOFF` / `COTSOFF` / `…FAM`.
 - Component breakdown: `COST1_2024` — `chg2ay3` (in-state tuition & fees), `chg3ay3` (out-of-state t&f),
   `chg4ay3` (books & supplies), `chg5ay3` (food & housing, on campus), `chg6ay3` (other, on campus).
-- Net price: `COST2_2024_netprice` — average = first populated of `NPIST2` ∨ `NPGRN2` ∨ `NPT42`
+- Net price: `COST2_2024_NetPrice` — average = first populated of `NPIST2` ∨ `NPGRN2` ∨ `NPT42`
   (latest year, 2023-24); by income (Title IV) = `NPT412/422/432/442/452`, when reported.
 
 > Eval note: don't hardcode dollar amounts (they change each IPEDS cycle). The eval recomputes ground
@@ -53,27 +91,7 @@ should recompute from whatever is current rather than rely on fixed numbers):
 - **Eval checks:** in-state COA = `CINSON` (= `CINDON`); out-of-state = `COTSON`; net price from
   `NPIST2` (populated; `NPGRN2`/`NPT42` null here); by-income all null → answer must omit it gracefully.
 
-## Admissions (ADM)
-
-_(to be added)_
-
-## Enrollment — Fall (EF) & 12-month (EFFY)
-
-_(to be added)_
-
-## Completions (C) — Degrees & Certificates Awarded
-
-_(to be added)_
-
-## Graduation Rates & Outcomes (GR, GR200, OM)
-
-_(to be added)_
-
-## Student Financial Aid (SFA)
-
-_(to be added)_
-
-## Human Resources (HR) — Staff & Salaries
+## Human Resources (HR)
 
 _(to be added)_
 
