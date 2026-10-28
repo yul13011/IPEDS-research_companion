@@ -37,8 +37,8 @@ COST_CASES = [
 
 
 # ---- checks ----------------------------------------------------------------------------------
-def near(a, b):
-    return a is not None and b is not None and abs(float(a) - float(b)) < 1
+def near(a, b, tol=0.5):
+    return a is not None and b is not None and abs(float(a) - float(b)) <= tol
 
 
 def cost_checks(answer, gt):
@@ -75,9 +75,51 @@ def run(cases, gt_fn, check_fn, label):
     return passed, total
 
 
+# ---- value cases: a question with one or more expected numbers present in the answer ----------
+def run_value_cases(build, label):
+    print(f"\n########## {label} ##########")
+    total = passed = 0
+    for c in build():
+        ans = handle(c["q"], None, "automatic", [], ask)
+        rows = display_result(ans["result"])["rows"] if (ans.get("result") or {}).get("rows") else []
+        vals = [r.get("value") for r in rows]
+        checks = [("answered (not a clarify/error)", ans.get("intent") == "analyze" and bool(vals))]
+        for e in c["expect"]:
+            checks.append((f"contains {e:g}", any(near(v, e, c.get("tol", 0.5)) for v in vals)))
+        print(f"\n=== {c['id']}: {c['q']}")
+        print(f"    expected {['%g' % e for e in c['expect']]}  |  got {['%g' % v for v in vals if v is not None][:8]}")
+        for name, ok in checks:
+            total += 1; passed += bool(ok); print(f"    [{'PASS' if ok else 'FAIL'}] {name}")
+    print(f"\n{label}: {passed}/{total} checks passed")
+    return passed, total
+
+
+def adm_grad_cases():
+    """Yale admissions + graduation, ground truth recomputed from ADM/GR per the verified benchmark
+    (evaluations/run_yale_benchmarks.py). Mirrors EXAMPLE_QUESTIONS.md -> Admissions / Graduation."""
+    Y = 130794
+    with readonly(annual_path(2024)) as db:
+        appl, adm, enr = db.execute("SELECT APPLCN,ADMSSN,ENRLT FROM ADM2024 WHERE UNITID=?", (Y,)).fetchone()
+        g8 = db.execute("SELECT GRTOTLT FROM GR2024 WHERE UNITID=? AND GRTYPE=8", (Y,)).fetchone()[0]
+        g12 = db.execute("SELECT GRTOTLT FROM GR2024 WHERE UNITID=? AND GRTYPE=12", (Y,)).fetchone()[0]
+    with readonly(annual_path(2023)) as db:
+        adm23, enr23 = db.execute("SELECT ADMSSN,ENRLT FROM ADM2023 WHERE UNITID=?", (Y,)).fetchone()
+        v25, v75, m25, m75 = db.execute("SELECT SATVR25,SATVR75,SATMT25,SATMT75 FROM ADM2023 WHERE UNITID=?", (Y,)).fetchone()
+    return [
+        {"id": "adm_rate",  "q": "What was Yale's admission rate in fall 2024?",          "expect": [100*adm/appl], "tol": 0.1},
+        {"id": "adm_apps",  "q": "How many applications did Yale receive for fall 2024?", "expect": [appl],          "tol": 0.5},
+        {"id": "adm_admit_enroll", "q": "How many students did Yale admit and enroll in fall 2024?", "expect": [adm, enr], "tol": 0.5},
+        {"id": "adm_yield", "q": "What was Yale's yield rate for fall 2023?",             "expect": [100*enr23/adm23], "tol": 0.2},
+        {"id": "sat",       "q": "What were Yale's 25th and 75th percentile SAT scores for the entering class of fall 2023?", "expect": [v25, v75, m25, m75], "tol": 0.5},
+        {"id": "grad_rate", "q": "What was Yale's six-year graduation rate for the 2018 entering cohort?", "expect": [100*g12/g8], "tol": 0.6},
+        {"id": "grad_counts", "q": "How many students were in Yale's 2018 entering cohort, and how many graduated within six years?", "expect": [g8, g12], "tol": 0.5},
+    ]
+
+
 def main():
-    p, t = run(COST_CASES, cost_ground_truth, cost_checks, "Cost")
-    print(f"\n==================== TOTAL: {p}/{t} ====================")
+    p1, t1 = run(COST_CASES, cost_ground_truth, cost_checks, "Cost")
+    p2, t2 = run_value_cases(adm_grad_cases, "Admissions & Graduation (Yale)")
+    print(f"\n==================== TOTAL: {p1+p2}/{t1+t2} ====================")
 
 
 if __name__ == "__main__":

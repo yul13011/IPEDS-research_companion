@@ -17,7 +17,25 @@ _(to be added)_
 
 ## Admissions and Test Scores (ADM)
 
-_(to be added)_
+Source: `ADM{year}` — fall, first-time degree/certificate-seeking undergraduate admissions; year =
+fall entry year. Ground truth recomputed from `ADM{year}` (Yale reference CSVs in
+`Test cases/Yale/`: `w033-...admissions...`, `w032-...sat...`). *School-specific examples are Yale
+for now.*
+
+**Source variables:** `APPLCN` (applications received), `ADMSSN` (admitted), `ENRLT` (enrolled /
+matriculated); **admit rate** = `ADMSSN`/`APPLCN`; **yield** = `ENRLT`/`ADMSSN`; **SAT** percentiles
+`SATVR25`/`SATVR75` (EBRW / "reading"), `SATMT25`/`SATMT75` (math), plus `SATVR50`/`SATMT50` for
+years ≥ 2022.
+
+1. **What was Yale's admission rate in fall 2024?** → `ADMSSN`/`APPLCN` (reviewed measure), shown as a percent.
+2. **How many applications did Yale receive for fall 2024?** → `APPLCN`.
+3. **How many students did Yale admit and enroll in fall 2024?** → `ADMSSN` and `ENRLT`.
+4. **What was Yale's yield rate for fall 2023?** → `ENRLT`/`ADMSSN`, percent.
+5. **What were Yale's 25th and 75th percentile SAT scores (reading/writing and math) for the entering class of fall 2023?**
+   → `SATVR25`/`SATVR75`, `SATMT25`/`SATMT75`.
+
+> Notes: rates use raw counts (not the whole-percent derived fields), fraction scale with 0.0005
+> tolerance; SAT is for enrolled score-submitters; the 10th/90th percentiles are not collected by IPEDS.
 
 ## Fall Enrollment (EF)
 
@@ -33,7 +51,22 @@ _(to be added)_
 
 ## Graduation Rates (GR, GR200)
 
-_(to be added)_
+Source: `GR{year}` — six-year outcomes; observation year = entry cohort + 6 (the 2018 entering cohort
+is observed in `GR2024`). Ground truth recomputed from `GR{year}` (Yale reference CSVs in
+`Test cases/Yale/`: `w041-...graduation...`, `...grad-rates-subgroups...`). *Yale-only for now.*
+
+**Source variables:** adjusted cohort = `GRTOTLT` where `GRTYPE=8`; six-year bachelor completers =
+`GRTOTLT` where `GRTYPE=12`; **6-year rate** = completers / cohort. By gender: `GRTOTLM` / `GRTOTLW`.
+(Pell: `GR{year}_PELL_SSL`, `PSGRTYPE=2`; international = U.S. nonresident `GRNRALT` — later pass.)
+
+1. **What was Yale's six-year graduation rate for the 2018 entering cohort?** → `GRTOTLT`(12)/`GRTOTLT`(8), percent.
+2. **How many students were in Yale's 2018 entering cohort, and how many graduated within six years?**
+   → `GRTOTLT`(8) and `GRTOTLT`(12).
+3. **What was Yale's six-year graduation rate by gender for the 2018 cohort?** → men `GRTOTLM`, women `GRTOTLW` (drill-down).
+
+> Notes: the denominator is the adjusted cohort (after allowable exclusions), not original entrants;
+> rates use raw counts, fraction scale with 0.0005 tolerance. URM is a custom user grouping with an
+> unresolved race-unknown rule (see `benchmark_definitions.json`) — held for a later pass.
 
 ## Outcome Measures (OM)
 
