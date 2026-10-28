@@ -54,6 +54,25 @@ class CostCompletenessTests(unittest.TestCase):
         out = _complete_cost_selection(p, "how much did it cost in 2020?")
         self.assertEqual(self._ids(out), [999999])
 
+    def _named(self, name):
+        p = plan(); p["institutions"] = [name]; return p
+
+    def test_private_collapses_residency_and_adds_net_price(self):
+        out = _complete_cost_selection(self._named("Yale University (UNITID 130794)"),
+                                       "what is the cost of attending Yale?")
+        ids = self._ids(out)
+        self.assertEqual(ids[:2], _drvcost_ids(["TUFEYR3", "CINSON"]))       # tuition + ONE total
+        self.assertNotIn(_drvcost_ids(["COTSON"])[0], ids)                   # out-of-state collapsed away
+        self.assertEqual(len(ids), 3)                                        # + net price
+        self.assertNotIn(ids[2], _drvcost_ids(["TUFEYR3", "CINSON", "COTSON"]))  # the extra is net price
+
+    def test_public_keeps_both_residencies_and_adds_net_price(self):
+        out = _complete_cost_selection(self._named("University of Connecticut (UNITID 129020)"),
+                                       "what is the cost of attending UConn?")
+        ids = self._ids(out)
+        self.assertEqual(ids[:3], _drvcost_ids(["TUFEYR3", "CINSON", "COTSON"]))  # tuition + both totals
+        self.assertEqual(len(ids), 4)                                        # + net price
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

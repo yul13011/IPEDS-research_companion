@@ -335,12 +335,25 @@ def _drvcost_ids(variables):
     return ids
 
 
+_NETPRICE_CACHE={}
+def _netprice_id(variable):
+    """record_id for a COST2_2024_netprice field (e.g. NPIST2), cached. None if missing."""
+    import sqlite3
+    from .catalog import DATA
+    if variable not in _NETPRICE_CACHE:
+        with sqlite3.connect(DATA/'metadata_catalog.sqlite') as db:
+            row=db.execute("SELECT record_id FROM records WHERE release_id LIKE 'IPEDS_2024%' AND table_name='COST2_2024_netprice' AND variable_name=? AND kind='variable_definition'",(variable,)).fetchone()
+        _NETPRICE_CACHE[variable]=row[0] if row else None
+    return _NETPRICE_CACHE[variable]
+
+
 def _complete_cost_selection(plan, question):
     """Deterministic, complete cost columns. For a current-year cost/tuition/price question, replace
-    the planner's cost selections with the canonical DRVCOST2024 set — published tuition & fees plus
-    total price (cost of attendance) living on campus, for in-state AND out-of-state students — so
-    residency is always complete and a populated field is always used (fixes the stochastic subset,
-    the 'only in-state' omission for public schools, and the null-column 'not reported')."""
+    the planner's cost selections with the canonical set: published tuition & fees, total price
+    (cost of attendance) on campus by residency — collapsed to one total where residency does not
+    differ (private schools) — plus the average net price (first populated of NPIST/NPGRN/NPT4).
+    Fixes the stochastic subset, the 'only in-state' omission, the null-column 'not reported', and
+    the missing net price. Runs for both the deterministic cost route and the model planner."""
     import re
     if not isinstance(plan,dict) or not plan.get('selections'):return plan
     q=(question or '').lower()
@@ -354,14 +367,32 @@ def _complete_cost_selection(plan, question):
     # Residency-specific tuition can't be split from the single DRVCOST tuition figure; leave it.
     tuition_only=bool(re.search(r'\btuition\b',q)) and not re.search(r'\b(cost of attendance|total (?:cost|price)|how much)\b',q)
     if tuition_only and re.search(r'out[- ]of[- ]state|in[- ]state|in[- ]district|nonresident|resident',q):return plan
-    wanted=['TUFEYR3'] if tuition_only else ['TUFEYR3','CINSON','COTSON']
+    # Tailor columns to a single resolved institution: collapse residency where it doesn't differ
+    # (private schools), and attach the populated net-price field.
+    total_vars=['CINSON','COTSON'];npvar=None
+    if not tuition_only:
+        from .catalog import annual_path, readonly, institutions as _resolve_inst
+        try:uids=_resolve_inst(plan.get('institutions') or [],2024)
+        except Exception:uids=[]
+        if len(uids)==1:
+            with readonly(annual_path(2024)) as db:
+                dc=db.execute('SELECT CINSON,COTSON FROM DRVCOST2024 WHERE UNITID=?',(uids[0],)).fetchone()
+                npr=db.execute('SELECT NPIST2,NPGRN2,NPT42 FROM COST2_2024_netprice WHERE UNITID=?',(uids[0],)).fetchone()
+            if dc and dc[0] is not None and dc[0]==dc[1]:total_vars=['CINSON']   # residency does not differ (private)
+            if npr:npvar=next((c for c,v in zip(('NPIST2','NPGRN2','NPT42'),npr) if v is not None),None)
+    wanted=['TUFEYR3'] if tuition_only else ['TUFEYR3']+total_vars
     ids=_drvcost_ids(wanted)
     if not ids:return plan
     sels=[{'record_id':rid,'role':'measure'} for rid in ids]
-    note=('Published tuition and fees for 2024-25 (in-state/in-district rate).' if tuition_only else
-          'Total price is the full cost of attendance (tuition, fees, housing, food, books, other) for '
-          'students living on campus, 2024-25, shown for both in-state and out-of-state residency; '
-          'published tuition and fees is the in-state/in-district rate.')
+    if npvar:
+        npid=_netprice_id(npvar)
+        if npid:sels.append({'record_id':npid,'role':'measure'})
+    if tuition_only:note='Published tuition and fees for 2024-25 (in-state/in-district rate).'
+    else:note=('Total price is the full cost of attendance (tuition, fees, housing, food, books, other) for '
+               'students living on campus, 2024-25'
+               +(' (residency does not vary at this institution)' if total_vars==['CINSON'] else ', for in-state and out-of-state residency')
+               +'. Average net price is what students with grant/scholarship or Title IV aid actually paid '
+               '(latest available year); published tuition & fees is the in-state/in-district rate.')
     return {**plan,'source_years':[2024],'selections':sels,'filters':[],'calculations':[],
             'group_by_record_ids':[],'joins':[],'assumptions':[note]}
 
