@@ -54,13 +54,27 @@ class AnalyticalCatalogTests(unittest.TestCase):
         self.assertIn('unknown', unknown['definitions'][0]['title'].lower())
         self.assertNotIn('suppressed', unknown['definitions'][0]['title'].lower())
 
-    def test_documentation_conflicts_never_relocated(self):
+    def test_documentation_conflict_relocated_to_single_physical_candidate(self):
+        # Fix A: a column absent from its documented table but physically present in exactly
+        # one table of the same survey + year-pair is re-pointed to that physical table (the
+        # 2022-23 SFA P1/P2 reorganization), rather than left blocked. The dictionary's
+        # original placement is preserved as review_queue provenance; the data is untouched.
         with connection() as db:
-            row = db.execute("SELECT * FROM definitions WHERE physical_status='candidate_other_location' LIMIT 1").fetchone()
-        docs = documented_field(row['release_id'], row['table_name'], row['variable_name'])
-        self.assertEqual(docs[0]['physical_status'], 'candidate_other_location')
-        self.assertTrue(docs[0]['physical_locations'])
-        self.assertEqual(docs[0]['evidence']['table_name'], row['table_name'])
+            self.assertEqual(db.execute(
+                "SELECT COUNT(*) FROM definitions WHERE physical_status='candidate_other_location'").fetchone()[0], 0)
+            d = db.execute("SELECT * FROM definitions WHERE record_id=121463").fetchone()  # UAGRNTP, documented SFA2223_P2
+            self.assertEqual(d['table_name'], 'sfa2223_p1')
+            self.assertEqual(d['physical_status'], 'documented_location_present')
+            prov = db.execute("SELECT * FROM review_queue WHERE column_name='UAGRNTP' "
+                              "AND category='relocated_to_single_physical_candidate' "
+                              "AND release_id='IPEDS_2023-24_Final'").fetchone()
+            self.assertIsNotNone(prov)
+            self.assertEqual(prov['table_name'], 'SFA2223_P2')  # the dictionary's original (wrong) placement
+            details = json.loads(prov['details_json'])
+            self.assertEqual(details['physical_table'], 'sfa2223_p1')
+            self.assertTrue(details['automatic_relocation_allowed'])
+        docs = documented_field('IPEDS_2023-24_Final', 'sfa2223_p1', 'UAGRNTP')
+        self.assertEqual(docs[0]['physical_status'], 'documented_location_present')
 
     def test_change_evidence_and_availability_not_harmonization(self):
         history = field_history(RELEASE, 'C2024_A', 'CIPCODE')

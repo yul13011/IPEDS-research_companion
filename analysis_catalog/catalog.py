@@ -140,20 +140,26 @@ def field_history(release, table, variable):
         row = db.execute('SELECT family FROM tables WHERE release_id=? AND table_name=? COLLATE NOCASE', (release, table)).fetchone()
         if not row:
             raise ValueError('Unknown physical table.')
+        # Continuity family drops the _P1/_P2 part and consolidation suffix, so a variable
+        # chains as one series across the 2022-23 SFA P1/P2 reorganization and the SFA2324
+        # consolidation instead of fragmenting by the table label it happened to carry.
+        base = re.sub(r'_P\d+$', '', row['family'])
         changes = [decoded(r) for r in db.execute('''SELECT * FROM field_history
-          WHERE family=? AND variable_name=? COLLATE NOCASE ORDER BY from_release,to_release''', (row['family'], variable))]
+          WHERE family=? AND variable_name=? COLLATE NOCASE ORDER BY from_release,to_release''', (base, variable))]
         availability = []
         for r in db.execute('SELECT release_id,collection_cycle FROM source.releases ORDER BY collection_cycle'):
-            matches = [decoded(x) for x in db.execute('''SELECT d.record_id,d.table_name,
-              d.physical_status,d.physical_locations_json FROM definitions d
+            rows_ = db.execute('''SELECT d.record_id,d.table_name,d.physical_status,
+              d.physical_locations_json,t.family AS tfam FROM definitions d
               JOIN tables t ON t.release_id=d.release_id AND t.table_name=d.table_name COLLATE NOCASE
-              WHERE t.family=? AND d.release_id=? AND d.variable_name=? COLLATE NOCASE''',
-                (row['family'], r['release_id'], variable))]
+              WHERE d.release_id=? AND d.variable_name=? COLLATE NOCASE''',
+                (r['release_id'], variable)).fetchall()
+            matches = [{k: v for k, v in decoded(x).items() if k != 'tfam'}
+                       for x in rows_ if re.sub(r'_P\d+$', '', x['tfam']) == base]
             availability.append({'release': r['release_id'], 'collection_cycle': r['collection_cycle'],
                                  'status': 'documented' if matches else 'not_documented_in_matched_physical_family',
                                  'matches': matches})
-        return {'family': row['family'], 'variable': variable, 'availability': availability,
-                'changes': changes,
+        return {'family': row['family'], 'continuity_family': base, 'variable': variable,
+                'availability': availability, 'changes': changes,
                 'policy': 'Family/name matching proposes cross-year candidates only. No detected change is not proof of comparability; renamed fields require a reviewed crosswalk.'}
 
 

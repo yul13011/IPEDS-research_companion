@@ -47,6 +47,13 @@ def family(name, year):
     return name
 
 
+def survey_base(name, year):
+    # Survey + year-pair identity, ignoring the _P1/_P2 part suffix, so a column can be
+    # matched to a sibling part of the same survey when the documentation and the physical
+    # data disagree on which part holds it.
+    return re.sub(r'_P\d+$', '', family(name, year))
+
+
 def normalize_text(text, year):
     text = ' '.join((text or '').lower().split())
     # Preserve substantive changes, including CIP editions, rather than masking every date.
@@ -212,17 +219,42 @@ def build(target=TARGET):
         release, tab, var = d['release_id'], d['table_name'].upper(), d['variable_name'].upper()
         exact = [p for p in locations[(release, var)] if p.upper() == tab]
         candidates = locations[(release, var)]
-        status = 'documented_location_present' if exact else 'candidate_other_location' if candidates else 'not_in_supplied_schema'
+        stored_table, relocated = d['table_name'], None
+        if exact:
+            status = 'documented_location_present'
+        elif candidates:
+            status = 'candidate_other_location'
+            # Documentation/data label disagreement: when the column is absent from its
+            # documented table but physically present in exactly one table of the same
+            # survey + year-pair (differing only by part number), the IPEDS dictionary
+            # label is wrong, not the data. Correct the stored table to the verified
+            # physical location rather than blocking. Origin: the 2022-23 SFA P1/P2
+            # reorganization, where varTable labels were transposed vs the Access file.
+            unique = sorted({p for p in candidates}, key=str.upper)
+            if len(unique) == 1 and survey_base(unique[0], years[release]) == survey_base(tab, years[release]):
+                stored_table, status, relocated = unique[0], 'documented_location_present', unique[0]
+        else:
+            status = 'not_in_supplied_schema'
         codes = category_codes[(release, tab, var)]
         # Frequencies are not definition changes; preserve code/label pairs only.
         cat_hash = digest(sorted(set((c['code_value'], c['value_label']) for c in codes)))
         raw_def = [d['title'], d['long_description'], d['data_type'], d['format'], d['imputation_variable']]
         norm = [normalize_text(x, years[release]) for x in raw_def]
         out.execute('INSERT INTO definitions VALUES(?,?,?,?,?,?,?,?,?,?,?)',
-                    (d['record_id'], release, d['table_name'], d['variable_name'], status,
+                    (d['record_id'], release, stored_table, d['variable_name'], status,
                      js(exact or candidates), d['imputation_variable'], len(codes), digest(raw_def), digest(norm), cat_hash))
-        histories[(family(tab, years[release]), var)].append((years[release], d, norm, cat_hash, status))
-        if status != 'documented_location_present':
+        # Key the cross-year chain on the continuity family (part/consolidation suffix
+        # dropped) so a variable links as one series when IPEDS moves it between parts or
+        # merges them — e.g. the 2022-23 SFA P1/P2 reorganization and the SFA2324 consolidation.
+        histories[(survey_base(tab, years[release]), var)].append((years[release], d, norm, cat_hash, status))
+        if relocated:
+            out.execute('INSERT INTO review_queue VALUES(NULL,?,?,?,?,?)',
+                        (release, d['table_name'], var, 'relocated_to_single_physical_candidate',
+                         js({'record_id': d['record_id'], 'documented_table': d['table_name'],
+                             'physical_table': relocated, 'candidate_locations': candidates,
+                             'automatic_relocation_allowed': True,
+                             'basis': 'single same-survey physical candidate; IPEDS dictionary table label corrected to the verified physical location'})))
+        elif status != 'documented_location_present':
             out.execute('INSERT INTO review_queue VALUES(NULL,?,?,?,?,?)',
                         (release, d['table_name'], var, status,
                          js({'record_id': d['record_id'], 'candidate_locations': candidates,
