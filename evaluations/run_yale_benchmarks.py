@@ -7,7 +7,7 @@ from pathlib import Path
 from decimal import Decimal
 import csv,hashlib,json,sqlite3,collections,sys
 
-BASE=Path(__file__).resolve().parents[1];SOURCES=BASE/'Test cases';OUT=BASE/'evaluations'/'results';ANNUAL=BASE/'data'/'annual'
+BASE=Path(__file__).resolve().parents[1];SOURCES=BASE/'Test cases'/'Yale';OUT=BASE/'evaluations'/'results';ANNUAL=BASE/'data'/'annual'
 YALE=130794
 FILES={'enrollment':'w005-enr-historical-by-level(in).csv','sat':'w032-first-year-sat-scores(in).csv','admissions':'w033-yale-college-admissions-summary(in).csv','graduation':'w041-yale-college-graduation-rates(in).csv','subgroups':'yale-college-grad-rates-subgroups(in).csv'}
 connections={};cases=[];source_manifest=[]

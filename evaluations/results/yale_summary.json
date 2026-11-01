@@ -37,31 +37,31 @@
   "source_files": [
     {
       "family": "enrollment",
-      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\w005-enr-historical-by-level(in).csv",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\Yale\\w005-enr-historical-by-level(in).csv",
       "sha256": "50cb95ed3964b0084f0854be77d3560fca6190f0b9520710f2a848eb954b0600",
       "rows": 51
     },
     {
       "family": "admissions",
-      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\w033-yale-college-admissions-summary(in).csv",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\Yale\\w033-yale-college-admissions-summary(in).csv",
       "sha256": "bb18affa3eda9a7fc5e6de80699a7a77500e182ffc3099e55da1991324cf8ad1",
       "rows": 50
     },
     {
       "family": "sat",
-      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\w032-first-year-sat-scores(in).csv",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\Yale\\w032-first-year-sat-scores(in).csv",
       "sha256": "d222f772ede95b154ee5ff393b5a5a6eeb5b8fcb092936c45f808be5929fe792",
       "rows": 100
     },
     {
       "family": "graduation",
-      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\w041-yale-college-graduation-rates(in).csv",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\Yale\\w041-yale-college-graduation-rates(in).csv",
       "sha256": "a0e7df2b8bdf7d50ace3c1c5abae7aceabd012775f92f5fb8e8f38e4c1a2850e",
       "rows": 33
     },
     {
       "family": "subgroups",
-      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\yale-college-grad-rates-subgroups(in).csv",
+      "file": "C:\\Users\\liyuj\\OneDrive\\2026\\IPEDS Project\\agent-redesign\\Test cases\\Yale\\yale-college-grad-rates-subgroups(in).csv",
       "sha256": "76f0361e6473847177b9edb6aa0e1bcecb27546d277f1c23ca199fd1ad34e567",
       "rows": 77
     }
