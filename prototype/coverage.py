@@ -40,7 +40,7 @@ def _unitids(names):
     from .institution_confirmation import resolve
     ids=[]
     for name in names:
-        if str(name).casefold() in {'ivy','ivy league','ivies'}:ids.extend(IVY);continue
+        if str(name).casefold() in {'ivy','ivies'} or 'ivy league' in str(name).casefold():ids.extend(IVY);continue
         uid=resolve(str(name),{})
         if uid is None:raise CoverageQuestion('Please confirm the institution name or UNITID before checking its reported values: '+str(name))
         ids.append(uid)

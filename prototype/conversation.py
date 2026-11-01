@@ -220,7 +220,7 @@ def subject_for(answer,question=''):
         from .institution_confirmation import resolve
         from .catalog import IVY
         for name in plan['institutions']:
-            if str(name).casefold() in {'ivy','ivy league','ivies'}:ids.extend(IVY)
+            if str(name).casefold() in {'ivy','ivies'} or 'ivy league' in str(name).casefold():ids.extend(IVY)
             else:
                 uid=resolve(str(name),{})
                 if uid is not None:ids.append(uid)

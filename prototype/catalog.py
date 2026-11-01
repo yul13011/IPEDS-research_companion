@@ -172,7 +172,7 @@ def institutions(names, year):
                 from .institution_confirmation import resolve
                 confirmed=resolve(str(name),{})
                 if confirmed is not None:text=str(confirmed)
-            if text in {'ivy', 'ivy league', 'ivies'}:
+            if text in {'ivy', 'ivies'} or re.search(r'\bivy\s+league\b', text):
                 ids.extend(IVY)
                 continue
             if text in ALIASES:

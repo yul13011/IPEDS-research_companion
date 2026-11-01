@@ -235,7 +235,10 @@ def _ask(question,previous=None,use_model=False,model=None,conversation=None,ins
     authorized=set();pending=[]
     report('Matching institutions to the IPEDS directory…')
     for text in found:
-        if normalized(text) in {'ivy','ivy league','ivies'}:
+        if normalized(text) in {'ivy','ivies'} or re.search(r'\bivy\s+league\b',normalized(text)):
+            # "Ivy League", and phrasings like "ivy league universities/schools", expand to
+            # the eight member IDs. "ivy league" need not be the whole mention, but a mere
+            # "ivy" substring must not (e.g. Ivy Tech is not the Ivy League).
             from .catalog import IVY
             authorized.update(IVY);continue
         uid=resolve(text,choices)
