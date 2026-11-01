@@ -73,7 +73,7 @@ def build(q,y):
     return p,scale
 
 def main():
-    from prototype.population_review import EVALUATING
+    from prototype.populations import EVALUATING
     EVALUATING.set(True)
     manifest=json.loads((OUT/'source_manifest.json').read_text(encoding='utf-8'))
     prior={(r['q'],r['period']):r for r in json.loads((OUT/'reference_results.json').read_text(encoding='utf-8'))}
@@ -114,7 +114,7 @@ def main():
     if previous_summary:summary['previous_full_run']=previous_summary
     if target is not None:summary['targeted_rerun_q']=target
     (OUT/'population_engine_summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
-    from prototype.population_review import fingerprint,POLICY
+    from prototype.populations import fingerprint,POLICY
     blocked={fingerprint(r['plan']):{'q':r['q'],'source_year':r['source_year'],'reason':'Unresolved NCES comparator discrepancy; expected statistical values are not stored in production.'} for r in cases if r['status']=='mismatch'}
     POLICY.write_text(json.dumps({'policy':'Known method/scope discrepancies only; general source-backed aggregate queries remain supported. No benchmark answer values are used by execution.','generated_at':summary['timestamp'],'blocked':blocked},indent=2),encoding='utf-8')
     with (OUT/'population_engine_results.csv').open('w',encoding='utf-8-sig',newline='') as f:

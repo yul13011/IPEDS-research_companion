@@ -1,6 +1,6 @@
 {
   "policy": "Known method/scope discrepancies only; general source-backed aggregate queries remain supported. No benchmark answer values are used by execution.",
-  "generated_at": "2026-10-21T16:01:12.565281+00:00",
+  "generated_at": "2026-11-01T14:37:54.483653+00:00",
   "blocked": {
     "9a147b049b624e3bbbb9e70c9063beb73394bf6ce38d5d068baab9e47b4e4151": {
       "q": 2,
