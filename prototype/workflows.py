@@ -24,6 +24,12 @@ def execute_example(example_id):
     from .catalog import search
     example=example_by_id(example_id)
     if example['kind']=='analyze':
+        if example.get('cost_route'):
+            # Cost questions run the deterministic cost route (no model call), same as typing them.
+            from .model_policy import _deterministic_cost_answer
+            answer=_deterministic_cost_answer(example['question'],None,[]) or {'intent':'clarify','message':'This cost example could not be resolved from the loaded data.'}
+            answer['mode']='reviewed example'
+            return answer
         if example.get('observation_plan_key'):
             from .observations import answer
             plans=json.loads((Path(__file__).parent/'institution_example_plans.json').read_text(encoding='utf-8'))

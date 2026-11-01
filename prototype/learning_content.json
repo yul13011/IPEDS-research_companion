@@ -179,25 +179,14 @@
           "id": "aid-point",
           "kind": "analyze",
           "purpose": "One data point",
-          "question": "What percentage of Yale undergraduates received grants or scholarships in 2023–24?",
-          "plan": {
-            "metrics": [
-              "undergraduate_grant_percent"
-            ],
-            "institutions": [
-              "Yale"
-            ],
-            "years": [
-              2024
-            ],
-            "output": "table"
-          }
+          "question": "How much does it cost to attend Harvard College in 2024-25?",
+          "cost_route": true
         },
         {
           "id": "aid-compare",
           "kind": "analyze",
           "purpose": "Compare institutions",
-          "question": "Compare Ivy League undergraduate grant and scholarship percentages for 2023–24.",
+          "question": "What percentage of undergraduates received grants or scholarships in 2023-24? Compare eight Ivy League institutions.",
           "plan": {
             "metrics": [
               "undergraduate_grant_percent"
