@@ -591,13 +591,10 @@ def execute_source(b,s,question):
     return frame,metadata,audit,names
 
 
-def execute(plan,question):
-    if plan.get('annual_years'):
-        from .populations import execute_annual
-        return execute_annual(plan,question)
-    started=time.perf_counter();b=inspect(plan,question);plan=b['plan'];validated=time.perf_counter()
-    from .intent_checks import check_plan,stamp
-    intent_check=check_plan(plan,question,{**b['evidence'],'field_semantics':{str(k):v for k,v in b['descriptors'].items()},'output_units':[b['available'][o['reference']]['unit'] for o in plan['outputs']]})
+def _relational_reduce(b,plan,question):
+    """The general row path: materialize each source's institution rows, apply joins, then
+    evaluate the typed expression DAG. Factored out of execute() so a narrow national-sum
+    fast path can be tried first without disturbing this logic."""
     frames={};metadata={};audits=[];names={};join_audits=[]
     for s in plan['sources']:
         frame,meta,audit,source_names=execute_source(b,s,question)
@@ -680,6 +677,77 @@ def execute(plan,question):
         current[ref]=values.where(valid,None)
         if any(not math.isfinite(float(v)) for v in current[ref].dropna()):raise ValueError('Derived output is nonfinite.')
         metadata[ref]={'record_ids':list(dict.fromkeys(r for inp in e['inputs'] for r in metadata[inp]['record_ids'])),'unit':b['available'][ref]['unit'],'sources':set().union(*(metadata[inp]['sources'] for inp in e['inputs'])),'grain':list(dict.fromkeys(g for inp in e['inputs'] for g in metadata[inp]['grain'])),'periods':[p for inp in e['inputs'] for p in metadata[inp]['periods']]}
+    return current,metadata,audits,names,join_audits
+
+
+def _combined_pushdown(b,plan,question):
+    """Fast path for a national/sector total: a population query whose outputs are all
+    combined (ungrouped) sums of continuous numeric source fields is computed directly in
+    SQLite — SUM/COUNT over the SAME sentinel-aware number_<rid>() converter the row path
+    uses — instead of materializing every institution row. Returns (current,metadata,audits)
+    with a one-row frame the normal output assembly consumes, or None to use the row path.
+    Eligibility is deliberately narrow; anything else (ratios, weighted means, joins, grouped
+    or per-source aggregates, counts, non-numeric sums) falls back and is unchanged."""
+    if not b['populations'] or len(plan['sources'])!=1 or plan['joins']:return None
+    if plan['missing_policy'] not in {'complete_cases','propagate'}:return None
+    s=plan['sources'][0]
+    if s['aggregates'] or s['group_by_record_ids'] or s.get('reconcile_distance_partition'):return None
+    exprs={}
+    for e in plan['expressions']:
+        if e['operator']!='sum' or e['group_by_references'] or len(e['inputs'])!=1:return None
+        m=re.fullmatch(r'f'+re.escape(s['id'])+r'_(\d+)',e['inputs'][0])
+        if not m:return None
+        rid=int(m.group(1));d=b['definitions'].get(rid);ref='x'+e['id']
+        if not d or d['format']!='Cont' or d['data_type']!='N' or ref not in b['available']:return None
+        exprs[ref]=(e,rid)
+    if not plan['outputs'] or any(o['reference'] not in exprs for o in plan['outputs']):return None
+    reg=set(s['field_record_ids'])|{f['record_id'] for f in s['filters'] if f['operator'] not in {'eq','in'}}
+    defs={rid:b['definitions'][rid] for rid in reg}
+    mc={rid:{r['code_value'] for r in b['codes'][rid] if re.search(r'not applicable|not reported|missing|suppressed|not available',r['value_label'],re.I)} for rid in reg}
+    pop=b['populations'][s['year']]
+    params=list(pop['parameters']);where=['"UNITID" IN ('+pop['directory_sql'].replace('SELECT UNITID,INSTNM','SELECT UNITID')+')']
+    for f in s['filters']:
+        col=quote(b['definitions'][f['record_id']]['variable_name']);op=f['operator']
+        if op in {'eq','in'}:
+            where.append(col+' IN ('+','.join('?' for _ in f['values'])+')');params.extend(f['values'])
+        else:
+            col='number_'+str(f['record_id'])+'('+col+')'
+            where.append(col+(' BETWEEN ? AND ?' if op=='between' else ' '+{'gt':'>','gte':'>=','lt':'<','lte':'<='}[op]+' ?'))
+            params.extend(float(v) for v in f['values'])
+    table=quote(s['table']);wc=' AND '.join(where);path=annual_path(s['year'])
+    report('Summing the national total in the source database…')
+    row={'__unitid':0};metadata={}
+    with readonly(path,deadline_seconds=60) as db:
+        for rid in reg:db.create_function('number_'+str(rid),1,lambda v,rid=rid:number(v,defs[rid],mc[rid]),deterministic=True)
+        requested=db.execute('SELECT COUNT(*) FROM '+table+' WHERE '+wc,params).fetchone()[0]
+        for ref,(e,rid) in exprs.items():
+            nc='number_'+str(rid)+'('+quote(b['definitions'][rid]['variable_name'])+')'
+            total,available=db.execute('SELECT SUM('+nc+'),COUNT('+nc+') FROM '+table+' WHERE '+wc,params).fetchone()
+            available=int(available or 0)
+            if available==0:value=None
+            elif plan['missing_policy']=='propagate' and available<requested:value=None
+            else:value=float(total) if total is not None else None
+            row[ref]=value;row[ref+'__available']=available;row[ref+'__requested']=int(requested)
+            metadata[ref]={'record_ids':[rid],'unit':b['available'][ref]['unit'],'sources':{s['id']},'grain':[],'periods':period_set(source_context(b,s))}
+    current=pd.DataFrame([row])
+    audit={'source_id':s['id'],'database':str(path),'sql':'SELECT SUM(number(field)),COUNT(number(field)),COUNT(*) FROM '+s['table']+' WHERE '+wc,
+        'parameters':params,'selected_rows':int(requested),'raw_keys':['UNITID'],'row_limit':ROW_LIMIT,
+        'requested_unitids':[],'missing_unitids':[],'missing_codes':{str(rid):sorted(mc[rid]) for rid in reg},'pushdown':True}
+    return current,metadata,[audit]
+
+
+def execute(plan,question):
+    if plan.get('annual_years'):
+        from .populations import execute_annual
+        return execute_annual(plan,question)
+    started=time.perf_counter();b=inspect(plan,question);plan=b['plan'];validated=time.perf_counter()
+    from .intent_checks import check_plan,stamp
+    intent_check=check_plan(plan,question,{**b['evidence'],'field_semantics':{str(k):v for k,v in b['descriptors'].items()},'output_units':[b['available'][o['reference']]['unit'] for o in plan['outputs']]})
+    pushdown=_combined_pushdown(b,plan,question)
+    if pushdown is not None:
+        current,metadata,audits=pushdown;names={};join_audits=[]
+    else:
+        current,metadata,audits,names,join_audits=_relational_reduce(b,plan,question)
     rows=[];specs={};definitions={};sources=[];warnings=[]
     technical_notes=list(plan['assumptions'])+['Source row domains, missingness policy, join cardinality and typed calculations are retained in the audit. Missing values are not zeros.']
     if any(a.get('partition_reconciliation',{}).get('derived_zero_cells',0)>0 for a in audits):
