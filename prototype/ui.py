@@ -1,7 +1,6 @@
 """Explore IPEDS, conversation and optional researcher tools."""
 import json
 from contextlib import contextmanager
-import pandas as pd
 import streamlit as st
 from .catalog import BASE, DATA, search, IVY, institutions
 from .analytics import Plan, execute, measures
@@ -520,15 +519,22 @@ def render_about():
     with st.expander('Developer settings'):
         st.toggle('Enable development mode',value=s.development_mode,key='settings_development_mode',on_change=copy_widget,args=('settings_development_mode','development_mode'),help='Show unfinished Analysis Tools controls for development and testing.')
         st.caption('Applies to this browser session. Turn it off to hide the unfinished Analysis Tools controls.')
-    st.subheader('Evaluation and coverage');st.write('229 Yale matches and 13 retained numeric discrepancies across 242 supported comparisons; 36 cells await the race-unknown rule. Retrieval agreement does not certify arbitrary conversation accuracy.')
-    path=BASE/'evaluations/results/yale_cases.json'
-    if path.exists():
-        differences=[r for r in json.loads(path.read_text(encoding='utf-8')) if r['status']=='mismatch']
-        st.dataframe(pd.DataFrame(differences)[['family','metric','observation_year','expected','actual','difference']],hide_index=True,width='stretch')
-    for file in ['prototype_verification.json','prototype_live_smoke.json','prototype_model_comparison.json']:
-        path=BASE/'evaluations'/file
-        if path.exists():
-            with st.expander(file.replace('_',' ').replace('.json','')):st.json(json.loads(path.read_text(encoding='utf-8')))
+    st.subheader('Evaluation and coverage')
+    st.write('We benchmark the app against two independent published sources — Yale University’s official figures and NCES national and sector aggregates — comparing retrieved values cell by cell.')
+    suites=[]
+    for label,desc,rel,keys in [('Yale','Yale University figures','evaluations/results/yale_summary.json',('status_counts','pass','mismatch')),
+                                ('NCES','NCES national & sector aggregates','evaluations/nces_aggregates/population_engine_summary.json',('status','match','mismatch'))]:
+        p=BASE/rel
+        if p.exists():
+            sc=json.loads(p.read_text(encoding='utf-8')).get(keys[0],{})
+            suites.append((label,desc,int(sc.get(keys[1],0)),int(sc.get(keys[2],0))))
+    if suites:
+        cols=st.columns(len(suites))
+        for col,(label,desc,m,x) in zip(cols,suites):
+            total=m+x
+            col.metric(f'{label} match rate',f'{round(100*m/total)}%' if total else '—')
+            col.caption(f'{m:,} of {total:,} {desc} matched')
+        st.caption('NCES excludes aggregates whose method is still under review. Remaining differences are documented source, universe or definition differences, not arbitrary errors; benchmarks test data retrieval, not open-ended conversation accuracy.')
 
 
 def main():
