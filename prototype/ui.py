@@ -511,14 +511,14 @@ def render_about():
     st.button('← Back to conversation',key='about_back',on_click=navigate)
     st.title('About this prototype');st.write('Local IPEDS codebook discovery and source-reviewed analytical extracts across ten annual releases.')
     st.info('Local source releases: 2015–16 through 2024–25; latest release provisional. Observation periods and entering cohorts vary by survey. Verified national and sector aggregates are available; unresolved methods remain under review.')
-    with st.expander('Model settings',expanded=True):
-        st.selectbox('Model strategy',list(MODEL_OPTIONS),index=list(MODEL_OPTIONS).index(s.model_choice),format_func=lambda x:MODEL_OPTIONS[x],key='settings_model',on_change=copy_widget,args=('settings_model','model_choice'))
-        st.caption('Automatic uses Haiku for interpretation and reviewed numerical planning, Sonnet for catalog planning and discovery writing. A rejected interpretation gets one Sonnet retry. All source and chart checks remain active.')
-        st.toggle('Use conversational AI',value=s.use_ai,disabled=not bool(api_key()),key='settings_ai',on_change=copy_widget,args=('settings_ai','use_ai'))
-        st.caption('AI sends your question, up to 12 recent conversation turns with analytical plans and bounded definitions, and relevant codebook excerpts to Anthropic. Memory lasts for this session; New conversation clears it. Queries and calculations stay local. Access depends on your API account.')
-    with st.expander('Developer settings'):
-        st.toggle('Enable development mode',value=s.development_mode,key='settings_development_mode',on_change=copy_widget,args=('settings_development_mode','development_mode'),help='Show unfinished Analysis Tools controls for development and testing.')
-        st.caption('Applies to this browser session. Turn it off to hide the unfinished Analysis Tools controls.')
+    st.subheader('Model settings')
+    st.selectbox('Model strategy',list(MODEL_OPTIONS),index=list(MODEL_OPTIONS).index(s.model_choice),format_func=lambda x:MODEL_OPTIONS[x],key='settings_model',on_change=copy_widget,args=('settings_model','model_choice'))
+    st.caption('Automatic uses Haiku for interpretation and reviewed numerical planning, Sonnet for catalog planning and discovery writing. A rejected interpretation gets one Sonnet retry. All source and chart checks remain active.')
+    st.toggle('Use conversational AI',value=s.use_ai,disabled=not bool(api_key()),key='settings_ai',on_change=copy_widget,args=('settings_ai','use_ai'))
+    st.caption('AI sends your question, up to 12 recent conversation turns with analytical plans and bounded definitions, and relevant codebook excerpts to Anthropic. Memory lasts for this session; New conversation clears it. Queries and calculations stay local. Access depends on your API account.')
+    st.subheader('Developer settings')
+    st.toggle('Enable development mode',value=s.development_mode,key='settings_development_mode',on_change=copy_widget,args=('settings_development_mode','development_mode'),help='Show unfinished Analysis Tools controls for development and testing.')
+    st.caption('Applies to this browser session. Turn it off to hide the unfinished Analysis Tools controls.')
     st.subheader('Evaluation and coverage')
     st.write('We benchmark the app against two independent published sources — Yale University’s official figures and NCES national and sector aggregates — comparing retrieved values cell by cell.')
     suites=[]
