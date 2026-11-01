@@ -56,9 +56,9 @@ def contract(question,resolved=None,bundle=None,resolution=None):
     authorized=AUTHORIZED.get()
     ids=[int(x) for x in re.findall(r'\b\d{6}\b',question) if authorized is None or int(x) in authorized]
     ids=_ids(list(map(str,ids)))
-    if re.search(r'\bivy\s+league\b|\bivies\b',question,re.I):
-        from .catalog import IVY
-        ids+=list(IVY)
+    from .catalog import GROUPS
+    for g in GROUPS.values():
+        if re.search(g['match'],question,re.I):ids+=list(g['ids'])
     if not ids:ids=replacement
     if not ids and continuation:ids=_ids(plan.get('institutions',[])) or list((active.get('institution_identity') or {}).get('unitids',[]))
     if re.match(r'\s*(?:add|also include|include also)\b',question,re.I):ids+=_ids(plan.get('institutions',[]))
@@ -74,10 +74,11 @@ def contract(question,resolved=None,bundle=None,resolution=None):
 
 def _ids(names):
     from .institution_confirmation import resolve
-    from .catalog import IVY
+    from .catalog import group_ids
     found=[]
     for name in names:
-        if re.search(r'\bivy\s+league\b',str(name),re.I) or str(name).casefold() in {'ivy','ivies'}:found.extend(IVY);continue
+        group=group_ids(name)
+        if group is not None:found.extend(group);continue
         uid=resolve(str(name),{})
         # Reviewed executor aliases are also valid when the identity layer has
         # already confirmed that exact ID. Do not silently discard "Brown" or

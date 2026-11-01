@@ -161,6 +161,37 @@ ALIASES = {'yale':130794,'harvard':166027,'princeton':186131,'brown':217156,
            'columbia':190150,'penn':215062,'upenn':215062,'university of pennsylvania':215062,
            'dartmouth':182670,'cornell':190415}
 IVY = [130794,166027,186131,217156,190150,215062,182670,190415]
+# Barnard, Bryn Mawr, Mount Holyoke, Smith, Vassar, Wellesley (Radcliffe merged into Harvard).
+SEVEN_SISTERS = [189097,211273,166939,167835,197133,168218]
+# The eight Ivies plus MIT, Stanford, Johns Hopkins, University of Chicago.
+IVY_PLUS = IVY + [166683,243744,162928,144050]
+
+# Named institution groups — the single place common higher-ed terms live. Add an entry
+# here (a canonical label, the member UNITIDs, and a word-boundary match pattern) and every
+# resolver that calls group_ids/group_label expands it; no other file needs editing.
+GROUPS = {
+    'Ivy League':    {'ids': IVY,           'match': r'\bivy\s+league\b|\bivies\b'},
+    'Ivy Plus':      {'ids': IVY_PLUS,      'match': r'\bivy\s*\+|\bivy[\s-]+plus\b'},
+    'Seven Sisters': {'ids': SEVEN_SISTERS, 'match': r'\bseven\s+sisters?\b'},
+}
+
+
+def group_label(text):
+    """Canonical group name if the text names a known institution group, else None.
+    A bare 'ivy' maps to the Ivy League, but a mere 'ivy' substring (e.g. Ivy Tech) does not."""
+    t = str(text).casefold().strip()
+    if t == 'ivy':
+        return 'Ivy League'
+    for name, g in GROUPS.items():
+        if re.search(g['match'], t):
+            return name
+    return None
+
+
+def group_ids(text):
+    """Member UNITIDs if the text names a known institution group, else None."""
+    name = group_label(text)
+    return list(GROUPS[name]['ids']) if name else None
 
 
 def institutions(names, year):
@@ -172,8 +203,9 @@ def institutions(names, year):
                 from .institution_confirmation import resolve
                 confirmed=resolve(str(name),{})
                 if confirmed is not None:text=str(confirmed)
-            if text in {'ivy', 'ivies'} or re.search(r'\bivy\s+league\b', text):
-                ids.extend(IVY)
+            group = group_ids(text)
+            if group is not None:
+                ids.extend(group)
                 continue
             if text in ALIASES:
                 ids.append(ALIASES[text])

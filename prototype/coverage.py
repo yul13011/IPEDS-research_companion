@@ -2,7 +2,7 @@
 from copy import deepcopy
 from functools import lru_cache
 import math,re
-from .catalog import DATA,annual_path,readonly,IVY
+from .catalog import DATA,annual_path,readonly,group_ids
 
 class CoverageQuestion(ValueError):pass
 
@@ -40,7 +40,8 @@ def _unitids(names):
     from .institution_confirmation import resolve
     ids=[]
     for name in names:
-        if str(name).casefold() in {'ivy','ivies'} or 'ivy league' in str(name).casefold():ids.extend(IVY);continue
+        group=group_ids(name)
+        if group is not None:ids.extend(group);continue
         uid=resolve(str(name),{})
         if uid is None:raise CoverageQuestion('Please confirm the institution name or UNITID before checking its reported values: '+str(name))
         ids.append(uid)

@@ -87,7 +87,8 @@ def mentions(question,use_model,model):
     if re.fullmatch(r'(?:show|as|use)\s+percentages?[?.!]?',question.strip(),re.I):return [],None
     # Offline names are literal matches, with common possessive/at/now forms as a
     # fallback for misspellings. General extraction requires the AI setting.
-    possible=set(ALIASES)|set(SAFE_ALIASES)|{'ivy league'}
+    from .catalog import GROUPS
+    possible=set(ALIASES)|set(SAFE_ALIASES)|{name.casefold() for name in GROUPS}
     possible.update(n for v in institution_index().values() for n in v['names'])
     found=sorted([n for n in possible if re.search(r'(?<!\w)'+re.escape(n)+r'(?!\w)',question,re.I)],key=len,reverse=True)
     found=[n for n in found if not any(n.lower()!=m.lower() and n.lower() in m.lower() for m in found)]
@@ -235,12 +236,11 @@ def _ask(question,previous=None,use_model=False,model=None,conversation=None,ins
     authorized=set();pending=[]
     report('Matching institutions to the IPEDS directory…')
     for text in found:
-        if normalized(text) in {'ivy','ivies'} or re.search(r'\bivy\s+league\b',normalized(text)):
-            # "Ivy League", and phrasings like "ivy league universities/schools", expand to
-            # the eight member IDs. "ivy league" need not be the whole mention, but a mere
-            # "ivy" substring must not (e.g. Ivy Tech is not the Ivy League).
-            from .catalog import IVY
-            authorized.update(IVY);continue
+        from .catalog import group_ids
+        group=group_ids(text)
+        if group is not None:
+            # Named institution groups (Ivy League, Seven Sisters, …) expand to member IDs.
+            authorized.update(group);continue
         uid=resolve(text,choices)
         if uid is None:pending.append({'text':text,'key':normalized(text),'candidates':candidates(text)})
         else:authorized.add(uid);choices[normalized(text)]=uid

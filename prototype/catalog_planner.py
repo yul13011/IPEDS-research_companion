@@ -108,7 +108,9 @@ def _names(question, previous=None):
     if '\nClarification from user:' in question:
         reply=question.rsplit('\nClarification from user:',1)[1]
         if any(re.search(r'\b'+re.escape(name)+r'\b',reply,re.I) for name in ALIASES) and not re.match(r'\s*(add|and|also)\b',reply,re.I):question=reply
-    if re.search(r'\bivy|\bivies',question,re.I):return ['Ivy League']
+    from .catalog import group_label
+    _group=group_label(question)
+    if _group:return [_group]
     ids=re.findall(r'\b\d{6}\b',question)
     if ids:return list(dict.fromkeys(ids))
     names=[name for name in ALIASES if re.search(r'\b'+re.escape(name)+r'\b',question,re.I)]

@@ -131,7 +131,9 @@ def local_plan(question,previous=None):
     metrics=list(dict.fromkeys(metrics))
     names=[]
     explicit_ids=re.findall(r'\b\d{6}\b',question)
-    if re.search(r'\b(ivy|ivies)\b',q):names=['Ivy League']
+    from .catalog import group_label
+    _group=group_label(q)
+    if _group:names=[_group]
     else:
         names=[name for name in ALIASES if re.search(r'\b'+re.escape(name)+r'\b',q)]
         if names and q.strip().startswith('add ') and previous:names=previous.get('institutions',[])+names

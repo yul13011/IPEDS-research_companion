@@ -218,9 +218,10 @@ def subject_for(answer,question=''):
     ids=list(dict.fromkeys(r['unitid'] for r in result.get('rows',[]) if r.get('unitid') is not None))
     if not ids and plan.get('institutions'):
         from .institution_confirmation import resolve
-        from .catalog import IVY
+        from .catalog import group_ids
         for name in plan['institutions']:
-            if str(name).casefold() in {'ivy','ivies'} or 'ivy league' in str(name).casefold():ids.extend(IVY)
+            group=group_ids(name)
+            if group is not None:ids.extend(group)
             else:
                 uid=resolve(str(name),{})
                 if uid is not None:ids.append(uid)
