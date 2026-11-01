@@ -134,8 +134,14 @@ def query_deadline(db, seconds=20):
     db.set_progress_handler(lambda: int(time.monotonic() > deadline), 20000)
 
 
-def profile(db, table, columns, dimensions, expected_rows, candidate_seconds=20):
-    """Observed key evidence is never promoted to a semantic key automatically."""
+def profile(db, table, columns, dimensions, expected_rows, candidate_seconds=60):
+    """Observed key evidence is never promoted to a semantic key automatically.
+
+    candidate_seconds bounds each composite-key uniqueness probe. The largest
+    completions tables (~1.5M rows) read cold during a full rebuild can exceed a
+    tight limit and leave an otherwise-valid UNITID key unconfirmed; 60s gives
+    them room so their grain resolves deterministically regardless of cache state.
+    """
     if 'UNITID' not in columns:
         return {'status': 'no_institution_identifier', 'key_status': 'not_profiled',
                 'candidate_key': [], 'query_count': 0}
