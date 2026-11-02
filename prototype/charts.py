@@ -64,7 +64,7 @@ def comparison_title(data,total):
         population={'students':'Enrollment','awards':'Awards','employees':'Employees'}.get(data['unit'].iloc[0],'Population')
         return population+' by race and ethnicity'
     if re.search(r'\b(men|male)\b',names) and re.search(r'\b(women|female)\b',names):return 'Population by gender'
-    if re.search(r"bachelor|master|certificate|doctor",names):return 'Awards by degree level'
+    if data['unit'].iloc[0] in {'awards','degrees'} and re.search(r"bachelor|master|certificate|doctor",names):return 'Awards by degree level'
     return data['display_measure'].iloc[0] if data['display_measure'].nunique()==1 else 'Category comparison'
 
 def population_scope(result):
