@@ -1137,6 +1137,104 @@ def aid_plan(question, previous=None):
     return proposal_answer(plan,question,mode='source-bound aid starter')
 
 
+_AID_NP_BANDS=[('12','\\$0\u201330k'),('22','\\$30\u201348k'),('32','\\$48\u201375k'),('42','\\$75\u2013110k'),('52','\\$110k+')]
+
+
+def aid_narrative(rows):
+    """Compose a grouped, plain-language summary (Grants / Net price / Borrowing) from the executed
+    aid-route rows, so the answer leads with a readable panel instead of a flat per-variable table.
+    Loans are led by the borrowing rate, not the dollar amount. Returns '' if the rows are not an
+    aid panel (caller then keeps the default message)."""
+    vals={};inst=period=None
+    for r in rows:
+        vals[r['metric'].split('::')[-1].upper()]=r.get('value')
+        inst=inst or r.get('institution');period=period or r.get('reporting_period')
+    if not vals:return ''
+    g=vals.get
+    money=lambda v:f"\\${v:,.0f}" if v is not None else 'n/a'   # escape $ so Streamlit markdown does not read $…$ as LaTeX
+    pct=lambda v:f"{v:g}%" if v is not None else 'n/a'
+    loanvars={'LOAN_A','LOAN_P','FLOAN_A','FLOAN_P','OLOAN_A','OLOAN_P','UFLOANA','UFLOANP'}
+    allug=any(k in vals for k in ('UAGRNTA','UAGRNTP','UPGRNTA','UPGRNTP','UFLOANA','UFLOANP'))
+    loan_only=set(vals)<=loanvars
+    pop='all undergraduates' if allug else 'full-time, first-year undergraduates'
+    out=[]
+
+    def borrowing():
+        if allug:
+            if 'UFLOANA' not in vals and 'UFLOANP' not in vals:return
+            out.append('')
+            out.append('**Borrowing** (federal loans taken out this year)')
+            p=g('UFLOANP')
+            if p is not None:
+                out.append(f"- {pct(p)} take federal loans; among them **{money(g('UFLOANA'))}**"
+                           + (f". The other {100-p:g}% borrow nothing." if p else '.'))
+            else:
+                out.append(f"- Federal loans: **{money(g('UFLOANA'))}** per borrower")
+            out.append('- Private and other loans are not reported for all undergraduates.')
+            return
+        if not any(k in vals for k in ('LOAN_A','LOAN_P','FLOAN_A','OLOAN_A')):return
+        out.append('')
+        out.append('**Borrowing** (loans taken out this year, per borrower)')
+        p=g('LOAN_P')
+        if p is not None:
+            out.append(f"- {pct(p)} take any loan; among them **{money(g('LOAN_A'))}**"
+                       + (f". The other {100-p:g}% borrow nothing." if p else '.'))
+        elif g('LOAN_A') is not None:
+            out.append(f"- Any loan: **{money(g('LOAN_A'))}** per borrower")
+        if 'FLOAN_A' in vals:out.append(f"- Federal: {money(g('FLOAN_A'))} ({pct(g('FLOAN_P'))})")
+        if g('OLOAN_A') is not None:out.append(f"- Private / other: {money(g('OLOAN_A'))} ({pct(g('OLOAN_P'))})")
+
+    if loan_only:
+        out.append(f"**Student borrowing at {inst} — {pop} ({period})**")
+        borrowing()
+        out.append('')
+        out.append('*Loans are amounts awarded this year, averaged over students who borrowed — not total '
+                   'debt, debt at graduation, or default (IPEDS does not track those). Figures are 2024-25 '
+                   'provisional.*')
+        return '\n'.join(out)
+
+    out.append(f"**Financial aid at {inst} — {pop} ({period})**")
+    # Grants
+    if allug:
+        if 'UAGRNTA' in vals or 'UPGRNTA' in vals:
+            out.append('')
+            out.append('**Grants & scholarships** (per recipient)')
+            if 'UAGRNTA' in vals:out.append(f"- {pct(g('UAGRNTP'))} receive grant aid, averaging **{money(g('UAGRNTA'))}**")
+            if 'UPGRNTA' in vals:out.append(f"- Federal Pell grants: {money(g('UPGRNTA'))} ({pct(g('UPGRNTP'))})")
+    else:
+        if 'AGRNT_A' in vals:
+            out.append('')
+            out.append('**Grants & scholarships** (per recipient)')
+            out.append(f"- {pct(g('AGRNT_P'))} receive grant aid, averaging **{money(g('AGRNT_A'))}**")
+            if 'IGRNT_A' in vals:out.append(f"- Institutional (school-funded): {money(g('IGRNT_A'))} ({pct(g('IGRNT_P'))})")
+            extra=[]
+            if 'FGRNT_A' in vals:extra.append(f"federal grants {money(g('FGRNT_A'))}")
+            if 'SGRNT_A' in vals:extra.append(f"state/local {money(g('SGRNT_A'))}")
+            if 'PGRNT_A' in vals:extra.append(f"Pell {money(g('PGRNT_A'))}")
+            if extra:out.append('- Of which: '+'; '.join(extra))
+    # Net price (first-year only)
+    overall=next((g(v) for v in ('NPGRN2','NPIST2','NPT42') if v in vals),None)
+    if overall is not None:
+        out.append('')
+        out.append('**Net price** (what aid recipients pay after grants; 2023–24)')
+        out.append(f"- Overall: **{money(overall)}**")
+        for pre in ('NPT4','NPIS4'):
+            bands=[f"{lbl} {money(g(pre+code))}" for code,lbl in _AID_NP_BANDS if pre+code in vals]
+            if bands:
+                out.append('- By family income: '+' · '.join(bands));break
+    # Borrowing
+    borrowing()
+    out.append('')
+    tail=('*Averages are per recipient of each aid type, so they do not sum. ' +
+          ('IPEDS reports only total grants, Pell and federal loans for all undergraduates; the grant '
+           'breakdown and net price exist only for first-years. ' if allug else
+           'Net price is for aid recipients and lags one year; by-income figures come from small groups and '
+           'can fluctuate. ') +
+          'Loans are amounts awarded this year, not total debt. Figures are 2024-25 provisional.*')
+    out.append(tail)
+    return '\n'.join(out)
+
+
 def plan_catalog_question(question,previous=None,use_model=False,model=None):
     report('Finding source fields for your question…')
     previous=previous if previous and previous.get('version') in {1,2} else None

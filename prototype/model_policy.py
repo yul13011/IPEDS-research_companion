@@ -39,7 +39,7 @@ def _deterministic_aid_answer(question,previous,history):
     """Answer current-year financial-aid / student-loan questions deterministically (full-time first-year
     default), above stochastic routing, so they return the complete grant/net-price/loan columns instead
     of clarifying. Returns None to fall through for anything aid_plan does not confidently handle."""
-    from .catalog_planner import aid_plan
+    from .catalog_planner import aid_plan,aid_narrative
     det=aid_plan(question,previous)
     if not det or not det.get('catalog_proposal'):return None
     from .catalog_execution import execute_catalog
@@ -49,6 +49,8 @@ def _deterministic_aid_answer(question,previous,history):
     answer=execute_catalog(det,question)
     if 'result' not in answer:return None
     answer=finalize_answer(answer,question)
+    narrative=aid_narrative(answer.get('result',{}).get('rows',[]))
+    if narrative:answer['custom_message']=answer['message']=narrative   # grouped panel; custom_message survives re-finalize
     answer['working_analysis']=update(from_history(history),answer,question,len(history or [])+1)
     answer['task_tracking']={'tasks':[{'id':'t1','request':question,'depends_on':[],'status':status(answer)}],
                              'complete':status(answer) in {'answered','unavailable','unsupported'}}
