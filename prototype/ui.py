@@ -525,6 +525,8 @@ def render_about():
     st.caption('Automatic uses Haiku for interpretation and reviewed numerical planning, Sonnet for catalog planning and discovery writing. A rejected interpretation gets one Sonnet retry. All source and chart checks remain active.')
     st.toggle('Use conversational AI',value=s.use_ai,disabled=not bool(api_key()),key='settings_ai',on_change=copy_widget,args=('settings_ai','use_ai'))
     st.caption('AI sends your question, up to 12 recent conversation turns with analytical plans and bounded definitions, and relevant codebook excerpts to Anthropic. Memory lasts for this session; New conversation clears it. Queries and calculations stay local. Access depends on your API account.')
+    st.subheader('Privacy')
+    st.caption('To help improve the prototype, each question and whether it could be answered is saved to a private analytics log. A random session id groups the questions from one visit but identifies no one. Please don’t enter personal information.')
     st.subheader('Developer settings')
     st.toggle('Enable development mode',value=s.development_mode,key='settings_development_mode',on_change=copy_widget,args=('settings_development_mode','development_mode'),help='Show unfinished Analysis Tools controls for development and testing.')
     st.caption('Applies to this browser session. Turn it off to hide the unfinished Analysis Tools controls.')
