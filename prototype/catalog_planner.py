@@ -361,7 +361,7 @@ def _complete_cost_selection(plan, question):
     q=(question or '').lower()
     if not re.search(r'\b(cost|costs|price|tuition|attendance)\b|how much',q):return plan
     # Leave related-but-different questions to the normal planner.
-    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return plan
+    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\bborrow|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return plan
     if re.search(r'\b(room|board|housing|meals?|dorm|books?|supplies)\b',q) and not re.search(r'\b(tuition|cost|price|attendance|total)\b',q):return plan
     if re.search(r'\btrend\b|each year|over time|from \d{4}|through|\bto\s+\d{4}\b',q):return plan
     years=plan.get('source_years') or []
@@ -989,7 +989,7 @@ def cost_plan(question, previous=None):
     question=plain_ids(question)
     q=question.lower()
     if not re.search(r'\b(cost|costs|price|tuition|attendance)\b|how much',q):return None
-    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return None
+    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\bborrow|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return None
     if re.search(r'\b(room|board|housing|meals?|dorm|books?|supplies)\b',q) and not re.search(r'\b(tuition|cost|price|attendance|total)\b',q):return None
     if re.search(r'\btrend\b|each year|over time|from \d{4}|through|\bto\s+\d{4}\b|compare',q):return None
     years=_source_years(question,previous)
@@ -1013,6 +1013,98 @@ def cost_plan(question, previous=None):
           'output':'chart' if re.search(r'plot|chart|graph',q) else 'table',
           'assumptions':[note],'clarification_questions':[]}
     return proposal_answer(plan,question,mode='source-bound catalog starter')
+
+
+# ---- Deterministic financial-aid / student-loan route (full-time first-year default) ----
+_AID_RECORD_CACHE={}
+def _aid_record_id(table,variable):
+    """record_id for a 2024-25 variable in `table`, cached and case-insensitive. None if absent."""
+    import sqlite3
+    from .catalog import DATA
+    key=(table.lower(),variable.upper())
+    if key not in _AID_RECORD_CACHE:
+        with sqlite3.connect(DATA/'metadata_catalog.sqlite') as db:
+            row=db.execute("SELECT record_id FROM records WHERE release_id LIKE 'IPEDS_2024%' "
+                           "AND table_name=? COLLATE NOCASE AND variable_name=? COLLATE NOCASE "
+                           "AND kind='variable_definition'",(table,variable)).fetchone()
+        _AID_RECORD_CACHE[key]=row[0] if row else None
+    return _AID_RECORD_CACHE[key]
+
+# Full-time first-year: full grant breakdown + loans. All-undergraduate: thin (total grant/Pell/federal loan).
+_AID_FTFT_GRANTS=['AGRNT_A','AGRNT_P','IGRNT_A','IGRNT_P','FGRNT_A','SGRNT_A','PGRNT_A']
+_AID_FTFT_LOANS=['LOAN_A','LOAN_P','FLOAN_A','FLOAN_P','OLOAN_A','OLOAN_P']
+_AID_ALLUG_GRANTS=['UAGRNTA','UAGRNTP','UPGRNTA','UPGRNTP']
+_AID_ALLUG_LOANS=['UFLOANA','UFLOANP']
+_AID_NP_OVERALL=['NPGRN2','NPIST2','NPT42']
+_AID_NP_INCOME=[['NPT412','NPT422','NPT432','NPT442','NPT452'],
+                ['NPIS412','NPIS422','NPIS432','NPIS442','NPIS452']]
+
+def aid_plan(question, previous=None):
+    """Deterministic current-year financial-aid / student-loan answer for one institution, pinned to
+    the 2024-25 SFA and net-price tables. Default population is full-time first-year undergraduates
+    (the only cohort with the full grant breakdown and net price); 'all undergraduates' switches to
+    the thin total-grant/Pell/federal-loan set with no net price. Falls through (None) for cost or
+    percentage-only questions, trends, comparisons, historical years, or unresolved institutions."""
+    from .institution_confirmation import plain_ids
+    from .catalog import annual_path, readonly, institutions as _resolve_inst
+    question=plain_ids(question); q=question.lower()
+    if not re.search(r'financial aid|\baid\b|\bgrants?\b|scholarship|\bloans?\b|\bborrow',q):return None
+    if re.search(r'\btuition\b|cost of attendance|total price',q) and not re.search(r'aid|grant|scholarship|loan|net price|borrow',q):return None
+    if re.search(r'\bpercent|\bshare\b|what fraction',q) and not re.search(r'how much|average|\bdollar|amount|\$',q):return None
+    if re.search(r'\btrend\b|each year|over time|from \d{4}|through|\bto\s+\d{4}\b|compare|salary|salaries|faculty|staff|revenue|expenditure|\benroll',q):return None
+    years=_source_years(question,previous);year=max([y for y in years if 2015<=y<=2024] or [2024])
+    if year!=2024:return None
+    names=_cost_institution_names(question,previous)
+    if not names:return None
+    try:uids=_resolve_inst(names,2024)
+    except Exception:uids=[]
+    if len(uids)!=1:return None
+    uid=uids[0]
+    allug=bool(re.search(r'all (?:undergraduates|undergrads|students)|\ball undergraduate',q)) and not re.search(r'first[- ]?year|first[- ]?time|freshm|incoming',q)
+    loan_only=bool(re.search(r'\bloans?\b|\bborrow',q)) and not re.search(r'financial aid|\baid\b|\bgrants?\b|scholarship|net price',q)
+    with readonly(annual_path(2024)) as db:
+        def dictrow(tbl):
+            cols=[c[1] for c in db.execute('PRAGMA table_info("%s")'%tbl)]
+            r=db.execute('SELECT * FROM "%s" WHERE UNITID=?'%tbl,(uid,)).fetchone()
+            return {cols[i].upper():r[i] for i in range(len(cols))} if r else {}
+        sfa=dictrow('SFA2324');npt=dictrow('COST2_2024_NetPrice')
+    def val(v):return sfa.get(v.upper(),npt.get(v.upper()))
+    if allug:
+        order=[('SFA2324',v) for v in (_AID_ALLUG_LOANS if loan_only else _AID_ALLUG_GRANTS+_AID_ALLUG_LOANS)]
+    elif loan_only:
+        order=[('SFA2324',v) for v in _AID_FTFT_LOANS]
+    else:
+        order=[('SFA2324',v) for v in _AID_FTFT_GRANTS]
+        npov=next((v for v in _AID_NP_OVERALL if val(v) is not None),None)
+        if npov:order.append(('COST2_2024_NetPrice',npov))
+        inc=next((s for s in _AID_NP_INCOME if val(s[0]) is not None),None)
+        if inc:order+=[('COST2_2024_NetPrice',v) for v in inc]
+        order+=[('SFA2324',v) for v in _AID_FTFT_LOANS]
+    sels=[]
+    for table,var in order:
+        if val(var) is None:continue
+        rid=_aid_record_id(table,var)
+        if rid:sels.append({'record_id':rid,'role':'measure'})
+    if not sels:return None
+    if allug:
+        note=('All undergraduates, 2024-25 (provisional). IPEDS reports only total grant aid, Pell, and federal '
+              'loans for all undergraduates — the grant breakdown and net price exist only for full-time '
+              'first-year students. Averages are per recipient; loans are amounts awarded this year, not total debt.')
+    elif loan_only:
+        note=('Full-time, first-year undergraduates, 2024-25 (provisional). Loans are amounts awarded this year, '
+              'averaged over students who borrowed — not total debt or debt at graduation (IPEDS does not track '
+              'those). A student may hold more than one loan type, so types do not sum.')
+    else:
+        note=('Full-time, first-year undergraduates, 2024-25 (provisional). Grant and loan averages are per '
+              'recipient of each type (a student may receive several, so they do not sum). Net price is for aid '
+              'recipients and lags one year (2023-24); by-income figures come from small aid-recipient groups and '
+              'can fluctuate year to year. Loans are amounts awarded this year, not total debt.')
+    plan={'version':1,'institutions':names,'source_years':[2024],
+          'requested_time':{'basis':'academic','description':'Financial aid and student loans for 2024-25 (net price 2023-24); full-time first-year undergraduates unless all undergraduates is specified.'},
+          'selections':sels,'filters':[],'group_by_record_ids':[],'calculations':[],'joins':[],
+          'output':'chart' if re.search(r'plot|chart|graph',q) else 'table',
+          'assumptions':[note],'clarification_questions':[]}
+    return proposal_answer(plan,question,mode='source-bound aid starter')
 
 
 def plan_catalog_question(question,previous=None,use_model=False,model=None):

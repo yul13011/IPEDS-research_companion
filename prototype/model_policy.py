@@ -35,6 +35,27 @@ def _deterministic_cost_answer(question,previous,history):
     return answer
 
 
+def _deterministic_aid_answer(question,previous,history):
+    """Answer current-year financial-aid / student-loan questions deterministically (full-time first-year
+    default), above stochastic routing, so they return the complete grant/net-price/loan columns instead
+    of clarifying. Returns None to fall through for anything aid_plan does not confidently handle."""
+    from .catalog_planner import aid_plan
+    det=aid_plan(question,previous)
+    if not det or not det.get('catalog_proposal'):return None
+    from .catalog_execution import execute_catalog
+    from .responses import finalize_answer
+    from .conversation import from_history,update
+    from .request_tasks import status
+    answer=execute_catalog(det,question)
+    if 'result' not in answer:return None
+    answer=finalize_answer(answer,question)
+    answer['working_analysis']=update(from_history(history),answer,question,len(history or [])+1)
+    answer['task_tracking']={'tasks':[{'id':'t1','request':question,'depends_on':[],'status':status(answer)}],
+                             'complete':status(answer) in {'answered','unavailable','unsupported'}}
+    answer.setdefault('model_usage',{'calls':0,'latency_seconds':0,'estimated_api_usd':0})
+    return answer
+
+
 def handle(question,previous,history,executor,*,overrides=None,institution_choices=None):
     from .agent import DEFAULT_MODEL
     from .intent_router import handle as dispatch,InterpretationError
@@ -44,6 +65,8 @@ def handle(question,previous,history,executor,*,overrides=None,institution_choic
         answer=_deterministic_cost_answer(question,previous,history)
         if answer is not None:
             router='deterministic cost route'
+        elif (aid:=_deterministic_aid_answer(question,previous,history)) is not None:
+            answer=aid;router='deterministic aid route'
         else:
             try:
                 answer=dispatch(question,previous,HAIKU,history,executor,overrides,institution_choices)
