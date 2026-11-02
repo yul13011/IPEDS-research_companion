@@ -625,7 +625,7 @@ def main():
     with st.container(key='app_header'):
         if is_chat or s.app_banner_open or s.main_page=='Explore IPEDS':
             brand,nav,about,collapse=st.columns([4,4,2,.5],vertical_alignment='top')
-            with brand:st.markdown('<div class="brand">IPEDS Research Companion<span class="eyebrow">Local prototype</span></div>',unsafe_allow_html=True)
+            with brand:st.markdown('<div class="brand">IPEDS Research Companion<span class="eyebrow">Beta</span></div>',unsafe_allow_html=True)
             with nav:
                 with st.container(key='main_navigation'):
                     for col,page,key in zip(st.columns(2),['Explore IPEDS','Ask & Analyze'],['nav_explore','nav_ask']):
