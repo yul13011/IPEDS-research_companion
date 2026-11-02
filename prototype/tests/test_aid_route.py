@@ -9,12 +9,15 @@ from pathlib import Path
 import sys, unittest
 ROOT = Path(__file__).resolve().parents[2]
 sys.path[:0] = [str(ROOT / ".packages"), str(ROOT)]
-from prototype.catalog_planner import aid_plan, cost_plan
-from prototype.model_policy import _deterministic_aid_answer, _deterministic_cost_answer
+from prototype.catalog_planner import aid_plan, cost_plan, scorecard_deflection
+from prototype.model_policy import (_deterministic_aid_answer, _deterministic_cost_answer,
+                                     _deterministic_debt_deflection)
 
 
 def route(q):
-    """Which deterministic route (if any) claims the question, cost taking precedence."""
+    """Which deterministic route (if any) claims the question, in handle() precedence order:
+    the debt/default scope note first, then cost, then aid."""
+    if scorecard_deflection(q):return "deflect"
     if cost_plan(q):return "cost"
     if aid_plan(q):return "aid"
     return None
@@ -82,6 +85,31 @@ class AidRouteTests(unittest.TestCase):
         c = _deterministic_cost_answer("what is the cost of attending Harvard College?", None, [])
         self.assertIsNotNone(c)
         self.assertEqual(c["model_usage"]["calls"], 0)
+
+    def test_debt_and_default_deflect_to_scorecard(self):
+        # Cumulative debt, debt at graduation and loan default are not IPEDS; they must get the
+        # honest scope note, never tuition (cost route) or awarded-loan figures (aid route).
+        for q in ["how much debt do students graduate with at Harvard College?",
+                  "what is the student loan default rate at Harvard College?",
+                  "how much total debt do Harvard College graduates have?",
+                  "how much do Harvard College students owe in student loans?"]:
+            self.assertEqual(route(q), "deflect", q)
+            d = _deterministic_debt_deflection(q, None, [])
+            self.assertIsNotNone(d)
+            self.assertEqual(d["model_usage"]["calls"], 0)
+            self.assertIs(d["capability"]["supported"], False)
+            self.assertIn("College Scorecard", d["message"])
+
+    def test_awarded_loans_not_deflected(self):
+        # A borrowing question about aid awarded this year is answerable; it must not deflect.
+        for q in ["how much do students borrow per year at Harvard College?",
+                  "how much do first-year students borrow at Harvard College?"]:
+            self.assertIsNone(scorecard_deflection(q), q)
+            self.assertEqual(route(q), "aid", q)
+
+    def test_institutional_debt_not_deflected(self):
+        # Institutional long-term debt (a finance question) has no student context; leave it to the planner.
+        self.assertIsNone(scorecard_deflection("how much long-term debt does Harvard University carry?"))
 
 
 if __name__ == "__main__":

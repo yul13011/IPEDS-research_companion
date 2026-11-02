@@ -361,7 +361,7 @@ def _complete_cost_selection(plan, question):
     q=(question or '').lower()
     if not re.search(r'\b(cost|costs|price|tuition|attendance)\b|how much',q):return plan
     # Leave related-but-different questions to the normal planner.
-    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\bborrow|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return plan
+    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\bborrow|\bdebt\b|\bdefault|\bowe|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return plan
     if re.search(r'\b(room|board|housing|meals?|dorm|books?|supplies)\b',q) and not re.search(r'\b(tuition|cost|price|attendance|total)\b',q):return plan
     if re.search(r'\btrend\b|each year|over time|from \d{4}|through|\bto\s+\d{4}\b',q):return plan
     years=plan.get('source_years') or []
@@ -989,7 +989,7 @@ def cost_plan(question, previous=None):
     question=plain_ids(question)
     q=question.lower()
     if not re.search(r'\b(cost|costs|price|tuition|attendance)\b|how much',q):return None
-    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\bborrow|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return None
+    if re.search(r'net price|financial aid|\bgrants?\b|scholarship|\bloans?\b|\bborrow|\bdebt\b|\bdefault|\bowe|\baid\b|salary|salaries|faculty|staff|revenue|expenditure|enroll|by (race|gender|program|income|level)|per[- ]credit|credit hours?',q):return None
     if re.search(r'\b(room|board|housing|meals?|dorm|books?|supplies)\b',q) and not re.search(r'\b(tuition|cost|price|attendance|total)\b',q):return None
     if re.search(r'\btrend\b|each year|over time|from \d{4}|through|\bto\s+\d{4}\b|compare',q):return None
     years=_source_years(question,previous)
@@ -1039,6 +1039,35 @@ _AID_NP_OVERALL=['NPGRN2','NPIST2','NPT42']
 _AID_NP_INCOME=[['NPT412','NPT422','NPT432','NPT442','NPT452'],
                 ['NPIS412','NPIS422','NPIS432','NPIS442','NPIS452']]
 
+def _is_student_debt_question(q):
+    """True for questions about cumulative student debt, debt at graduation, amounts owed, or loan
+    default — none of which IPEDS tracks (that is College Scorecard). Scoped to the student context so
+    institutional long-term-debt finance questions are left to the normal planner."""
+    if re.search(r'\bdebt\b',q) and re.search(r'student|graduat|borrow|undergrad|\bloan|\bowe',q):return True
+    if re.search(r'\bdefault(s|ed|ing)?\b',q) and re.search(r'loan|student|borrow|aid',q):return True
+    if re.search(r'\bowe[sd]?\b',q) and re.search(r'student|loan|borrow|undergrad|college|tuition',q):return True
+    return False
+
+
+def scorecard_deflection(question, previous=None):
+    """Honest scope note for student-debt / debt-at-graduation / loan-default questions: IPEDS reports
+    only aid awarded each year, not what students owe or repay. Returns an unsupported-capability answer
+    (zero model calls, above all routing) or None when the question is not about debt/default."""
+    from .institution_confirmation import plain_ids
+    q=plain_ids(question).lower()
+    if not _is_student_debt_question(q):return None
+    from .purpose import describe
+    msg=('IPEDS does not track student debt. The data loaded here cover financial aid awarded each year — '
+         'grants, scholarships, and the loans students take out in a given year — not cumulative debt, '
+         'debt at graduation, or loan default rates. For debt burden and default, see the U.S. Department of '
+         'Education’s College Scorecard, which is not loaded in this app. I can tell you how much first-year '
+         'students borrow per year and what share take out loans — just ask about student loans awarded.')
+    cap={**describe(),'supported':False,
+         'scope':'Financial aid awarded per year (IPEDS). Cumulative student debt, debt at graduation and loan '
+                 'default are not loaded; see College Scorecard.'}
+    return {'intent':'capability','mode':'scope limit','message':msg,'capability':cap}
+
+
 def aid_plan(question, previous=None):
     """Deterministic current-year financial-aid / student-loan answer for one institution, pinned to
     the 2024-25 SFA and net-price tables. Default population is full-time first-year undergraduates
@@ -1049,6 +1078,7 @@ def aid_plan(question, previous=None):
     from .catalog import annual_path, readonly, institutions as _resolve_inst
     question=plain_ids(question); q=question.lower()
     if not re.search(r'financial aid|\baid\b|\bgrants?\b|scholarship|\bloans?\b|\bborrow',q):return None
+    if _is_student_debt_question(q):return None   # debt/default is College Scorecard, not awarded aid
     if re.search(r'\btuition\b|cost of attendance|total price',q) and not re.search(r'aid|grant|scholarship|loan|net price|borrow',q):return None
     if re.search(r'\bpercent|\bshare\b|what fraction',q) and not re.search(r'how much|average|\bdollar|amount|\$',q):return None
     if re.search(r'\btrend\b|each year|over time|from \d{4}|through|\bto\s+\d{4}\b|compare|salary|salaries|faculty|staff|revenue|expenditure|\benroll',q):return None

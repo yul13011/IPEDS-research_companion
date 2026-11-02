@@ -56,15 +56,32 @@ def _deterministic_aid_answer(question,previous,history):
     return answer
 
 
+def _deterministic_debt_deflection(question,previous,history):
+    """Intercept student-debt / debt-at-graduation / loan-default questions with an honest scope note
+    (IPEDS reports aid awarded per year, not debt owed or default — that is College Scorecard), above
+    all routing so they never get tuition or awarded-loan figures. Returns None when not applicable."""
+    from .catalog_planner import scorecard_deflection
+    ans=scorecard_deflection(question,previous)
+    if ans is None:return None
+    from .conversation import from_history,update
+    from .request_tasks import status
+    ans['working_analysis']=update(from_history(history),ans,question,len(history or [])+1)
+    ans['task_tracking']={'tasks':[{'id':'t1','request':question,'depends_on':[],'status':status(ans)}],'complete':True}
+    ans.setdefault('model_usage',{'calls':0,'latency_seconds':0,'estimated_api_usd':0})
+    return ans
+
+
 def handle(question,previous,history,executor,*,overrides=None,institution_choices=None):
     from .agent import DEFAULT_MODEL
     from .intent_router import handle as dispatch,InterpretationError
     started=time.perf_counter();failed=[];router=HAIKU
     token=ACTIVE.set(True)
     try:
-        answer=_deterministic_cost_answer(question,previous,history)
+        answer=_deterministic_debt_deflection(question,previous,history)
         if answer is not None:
-            router='deterministic cost route'
+            router='deterministic scope note (debt/default)'
+        elif (cost:=_deterministic_cost_answer(question,previous,history)) is not None:
+            answer=cost;router='deterministic cost route'
         elif (aid:=_deterministic_aid_answer(question,previous,history)) is not None:
             answer=aid;router='deterministic aid route'
         else:
