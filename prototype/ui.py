@@ -1,7 +1,10 @@
 """Explore IPEDS, conversation and optional researcher tools."""
 import json
+import uuid
 from contextlib import contextmanager
 import streamlit as st
+from .question_log import log_question
+from .request_tasks import status as question_status
 from .catalog import BASE, DATA, search, IVY, institutions
 from .analytics import Plan, execute, measures
 from .agent import api_key, DEFAULT_MODEL, MODEL_LABELS
@@ -81,6 +84,7 @@ def run_pending():
     s=st.session_state;pending=s.get('pending_action')
     if not pending:return
     s.pop('request_error',None)
+    question=None
     try:
         with working_status():
             if pending['type']=='example':
@@ -120,6 +124,9 @@ def run_pending():
                 if answer.get('institution_identity'):s.confirmed_institutions={**s.get('confirmed_institutions',{}),**answer['institution_identity']['confirmed_choices']}
                 if answer.get('institution_confirmation'):s.institution_pending=answer['institution_confirmation']
             if answer.get('mode')!='presentation adjustment':answer=finalize_answer(answer,question)
+        if answer.get('mode')!='presentation adjustment':
+            # Analytics: record the question and whether it was answered. Never blocks or raises.
+            log_question(question,question_status(answer),s.get('session_id',''))
         s.history=(s.history+[{'question':question,'answer':answer}])[-30:]
         # Revision identifies completed exchanges/clarification controls;
         # it must never become the transcript container's identity.
@@ -136,7 +143,9 @@ def run_pending():
         s.pending_action=None
     except ValueError as exc:
         s.request_error=str(exc);s.pending_action=None
+        if question:log_question(question,'error',s.get('session_id',''))
     except Exception as exc:
+        if question:log_question(question,'error',s.get('session_id',''))
         if 'specified API usage limits' in str(exc):
             s.request_error='The Anthropic account has reached its configured API usage limit. AI requests require restored account access; offline examples and the extract builder remain available.'
         elif type(exc).__name__ in {'NotFoundError','PermissionDeniedError','AuthenticationError'}:
@@ -602,7 +611,7 @@ def main():
     @media(max-width:750px){.block-container{padding-left:1rem;padding-right:1rem}.brand{font-size:19px}}''' + page_styles + '</style>',unsafe_allow_html=True)
     if not (DATA/'metadata_catalog.sqlite').exists():st.error('Local metadata catalog missing. See ingestion/README.md.');st.stop()
     s=st.session_state
-    defaults={'main_page':'Explore IPEDS','app_banner_open':True,'transcript_revision':0,'history':[],'last_plan':None,'topic_id':'admissions','topic_open':False,'active_tool':None,'pending_action':None,'ideas_epoch':0,'extract_step':0,'extract_ids':[],'extract_metrics':[],'extract_years':[2024],'extract_time_basis':'observation','extract_year_mode':'One year','extract_result':None,'model_choice':DEFAULT_STRATEGY,'use_ai':bool(api_key()),'chart_results':[],'definition_seed':''}
+    defaults={'main_page':'Explore IPEDS','app_banner_open':True,'transcript_revision':0,'history':[],'last_plan':None,'topic_id':'admissions','topic_open':False,'active_tool':None,'pending_action':None,'ideas_epoch':0,'extract_step':0,'extract_ids':[],'extract_metrics':[],'extract_years':[2024],'extract_time_basis':'observation','extract_year_mode':'One year','extract_result':None,'model_choice':DEFAULT_STRATEGY,'use_ai':bool(api_key()),'chart_results':[],'definition_seed':'','session_id':str(uuid.uuid4())}
     for k,v in defaults.items():
         if k not in s:s[k]=v
     if 'development_mode' not in s:s.development_mode=False
