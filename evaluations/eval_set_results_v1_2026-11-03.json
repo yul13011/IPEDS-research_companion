@@ -1,0 +1,1311 @@
+{
+  "engine": "v1",
+  "spent_usd": 2.3836,
+  "results": [
+    {
+      "id": "fu_netprice_narrow",
+      "category": "followup",
+      "family": "COST/IC (price)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What is Yale's net price compared to other Ivy League schools?",
+          "kind": "numeric",
+          "verdict": "WRONG-NUMBER",
+          "detail": "[('BAD', 22408)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 16,
+          "wall_s": 92.7,
+          "usd": 0.1215,
+          "message": "The requested values are not reported in the available source records. Missing values have not been treated as zero."
+        },
+        {
+          "q": "I only need the average net price for students awarded grant or scholarship aid, 2023-24.",
+          "kind": "numeric",
+          "verdict": "WRONG-NUMBER",
+          "detail": "inst=0 want 8 measures=0 want 1",
+          "false_refusal": false,
+          "intent": "catalog_plan",
+          "mode": "catalog relational planner",
+          "n_rows": 0,
+          "wall_s": 58.1,
+          "usd": 0.0818,
+          "message": "This part did not produce a validated analytical result. This query did not pass validation; no numerical result was published. The returned periods do not cove"
+        }
+      ]
+    },
+    {
+      "id": "fu_swap_institution",
+      "category": "followup",
+      "family": "ADM (admissions)",
+      "passed": false,
+      "false_refusal": true,
+      "turns": [
+        {
+          "q": "Show Yale's admission rate for fall 2024.",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 3.871898742980336)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "language model planner",
+          "n_rows": 1,
+          "wall_s": 37.9,
+          "usd": 0.0024,
+          "message": "For Yale University (fall 2024), Admission rate: 3.87%. The reporting period and source definitions are available below."
+        },
+        {
+          "q": "What about Harvard?",
+          "kind": "numeric",
+          "verdict": "FALSE-REFUSAL",
+          "detail": "This part could not finish because its source or model service was unavailable. Other inde",
+          "false_refusal": true,
+          "intent": "clarify",
+          "mode": null,
+          "n_rows": 0,
+          "wall_s": 23.7,
+          "usd": 0.0,
+          "message": "This part could not finish because its source or model service was unavailable. Other independent parts are retained."
+        }
+      ]
+    },
+    {
+      "id": "fu_add_year",
+      "category": "followup",
+      "family": "EFFY (12-mo enroll)",
+      "passed": false,
+      "false_refusal": true,
+      "turns": [
+        {
+          "q": "What was Yale's 12-month unduplicated headcount for 2022-23?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=1",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 53.4,
+          "usd": 0.0491,
+          "message": "For Yale University (July 1, 2021 - June 30, 2022), Grand total: 15,828. The reporting period and source definitions are available below."
+        },
+        {
+          "q": "Now plot it from 2015 through 2024 as a trend.",
+          "kind": "behavioral",
+          "verdict": "FALSE-REFUSAL",
+          "detail": "The returned periods do not cover the requested interval. No incomplete answer has been pu",
+          "false_refusal": true,
+          "intent": "clarify",
+          "mode": "intent validation",
+          "n_rows": 0,
+          "wall_s": 42.2,
+          "usd": 0.0019,
+          "message": "The returned periods do not cover the requested interval. No incomplete answer has been published; please confirm the start and end years."
+        }
+      ]
+    },
+    {
+      "id": "fu_resort",
+      "category": "followup",
+      "family": "COST/IC (price)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "Compare net price for grant-aided students across the Ivy League in 2023-24.",
+          "kind": "numeric",
+          "verdict": "BLOCKED",
+          "detail": "The returned periods do not cover the requested interval. No",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "intent validation",
+          "n_rows": 0,
+          "wall_s": 27.3,
+          "usd": 0.0015,
+          "message": "The returned periods do not cover the requested interval. No incomplete answer has been published; please confirm the start and end years."
+        },
+        {
+          "q": "Sort them from lowest to highest.",
+          "kind": "display_edit",
+          "verdict": "REVIEW-EDIT",
+          "detail": "mode=catalog language-model planner",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 8,
+          "wall_s": 41.5,
+          "usd": 0.1556,
+          "message": "Brown University \u2014 Average net price-students awarded grant or scholarship aid, 2023-24: $26,256; Columbia University in the City of New York \u2014 Average net pric"
+        }
+      ]
+    },
+    {
+      "id": "fu_rechart",
+      "category": "followup",
+      "family": "COST/IC (price)",
+      "passed": false,
+      "false_refusal": true,
+      "turns": [
+        {
+          "q": "Compare net price for grant-aided students across the Ivy League in 2023-24.",
+          "kind": "numeric",
+          "verdict": "BLOCKED",
+          "detail": "The returned periods do not cover the requested interval. No",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "intent validation",
+          "n_rows": 0,
+          "wall_s": 27.9,
+          "usd": 0.0012,
+          "message": "The returned periods do not cover the requested interval. No incomplete answer has been published; please confirm the start and end years."
+        },
+        {
+          "q": "Make it a bar chart.",
+          "kind": "display_edit",
+          "verdict": "FALSE-REFUSAL",
+          "detail": "There is no chart yet. The Ivy League net-price comparison for grant-aided students (2023-",
+          "false_refusal": true,
+          "intent": "clarify",
+          "mode": "intent clarification",
+          "n_rows": 0,
+          "wall_s": 5.5,
+          "usd": 0.0012,
+          "message": "There is no chart yet. The Ivy League net-price comparison for grant-aided students (2023-24) has not produced a result, because the returned periods do not cov"
+        }
+      ]
+    },
+    {
+      "id": "fu_go_back",
+      "category": "followup",
+      "family": "COST/IC (price)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "Compare net price for grant-aided students across the Ivy League in 2023-24.",
+          "kind": "numeric",
+          "verdict": "BLOCKED",
+          "detail": "inst=0 want 8",
+          "false_refusal": false,
+          "intent": "task_response",
+          "mode": "tracked request",
+          "n_rows": 0,
+          "wall_s": 10.6,
+          "usd": 0.0017,
+          "message": "Request status: 1 needs clarification, 1 blocked."
+        },
+        {
+          "q": "Just Yale and Harvard.",
+          "kind": "behavioral",
+          "verdict": "NO-RESULT",
+          "detail": "Request status: 1 needs clarification, 1 blocked.",
+          "false_refusal": false,
+          "intent": "task_response",
+          "mode": "tracked request",
+          "n_rows": 0,
+          "wall_s": 11.4,
+          "usd": 0.0019,
+          "message": "Request status: 1 needs clarification, 1 blocked."
+        },
+        {
+          "q": "Actually, go back to all eight.",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=8",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 8,
+          "wall_s": 41.0,
+          "usd": 0.1275,
+          "message": "Brown University \u2014 Average net price-students awarded grant or scholarship aid, 2023-24: $26,256; Columbia University in the City of New York \u2014 Average net pric"
+        }
+      ]
+    },
+    {
+      "id": "fu_change_measure",
+      "category": "followup",
+      "family": "GR / C",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was Yale's six-year bachelor's graduation rate for the 2016 entering cohort?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=1",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "language model planner",
+          "n_rows": 1,
+          "wall_s": 10.7,
+          "usd": 0.0022,
+          "message": "For Yale University (six-year outcome 2022), All: six-year bachelor graduation rate: 97.81%. Outcome/reporting years and entering cohort years are identified se"
+        },
+        {
+          "q": "Show the number of bachelor's degrees it awarded instead.",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=1",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "language model planner",
+          "n_rows": 1,
+          "wall_s": 11.7,
+          "usd": 0.0029,
+          "message": "For Yale University (2015\u201316), Bachelor's degrees awarded: 1,395. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "fu_add_institution",
+      "category": "followup",
+      "family": "ADM (admissions)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "Compare Yale and Harvard admission rates in fall 2024.",
+          "kind": "numeric",
+          "verdict": "ANSWERED",
+          "detail": "[]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "language model planner",
+          "n_rows": 2,
+          "wall_s": 7.6,
+          "usd": 0.0019,
+          "message": "Yale University \u2014 Admission rate: 3.87%; Harvard University \u2014 Admission rate: 3.65% (fall 2024). The reporting period and source definitions are available below"
+        },
+        {
+          "q": "Add Princeton.",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 4.615992883265791)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "language model planner",
+          "n_rows": 3,
+          "wall_s": 6.2,
+          "usd": 0.0019,
+          "message": "Yale University \u2014 Admission rate: 3.87%; Harvard University \u2014 Admission rate: 3.65%; Princeton University \u2014 Admission rate: 4.62% (fall 2024). The reporting per"
+        }
+      ]
+    },
+    {
+      "id": "faq_admrate_yale",
+      "category": "faq",
+      "family": "ADM (admissions)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was Yale's admission rate in fall 2024?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 3.871898742980336)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "language model planner",
+          "n_rows": 1,
+          "wall_s": 10.1,
+          "usd": 0.0021,
+          "message": "For Yale University (fall 2024), Admission rate: 3.87%. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "faq_cost_harvard",
+      "category": "faq",
+      "family": "COST/IC (price)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How much does it cost to attend Harvard College in 2024-25?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=3",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "source-bound catalog starter",
+          "n_rows": 3,
+          "wall_s": 1.3,
+          "usd": 0.0,
+          "message": "For Harvard University (2024-25), Tuition and fees, 2024-25: $61,676; Total price for in-state students living on campus 2024-25: $89,315; Average net price-stu"
+        }
+      ]
+    },
+    {
+      "id": "faq_grant_pct_ivies",
+      "category": "faq",
+      "family": "SFA (aid)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What percentage of undergraduates received grants or scholarships in 2023-24? Compare eight Ivy League institutions.",
+          "kind": "behavioral",
+          "verdict": "CLARIFY",
+          "detail": "The plan does not include every requested institution. Pleas",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "intent validation",
+          "n_rows": 0,
+          "wall_s": 13.3,
+          "usd": 0.0025,
+          "message": "The plan does not include every requested institution. Please restate which institutions to include."
+        }
+      ]
+    },
+    {
+      "id": "faq_bach_yale_1415",
+      "category": "faq",
+      "family": "C (completions)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many bachelor's degrees did Yale award in 2014-15?",
+          "kind": "numeric",
+          "verdict": "WRONG-NUMBER",
+          "detail": "[('BAD', 5308)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "language model planner",
+          "n_rows": 1,
+          "wall_s": 10.2,
+          "usd": 0.0022,
+          "message": "For Yale University (2014\u201315), Bachelor's degrees awarded: 1,327. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "faq_instr_staff_yale",
+      "category": "faq",
+      "family": "EAP/S (staff)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many full-time and part-time instructional staff did Yale have in fall 2024?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=2",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 2,
+          "wall_s": 19.5,
+          "usd": 0.0758,
+          "message": "For Yale University (Fall 2024), Instructional staff, total (full-time employees): 2,995; Instructional staff, total (part-time employees): 805. The reporting p"
+        }
+      ]
+    },
+    {
+      "id": "faq_services_smith",
+      "category": "faq",
+      "family": "IC (categorical)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What student services did Smith College report in the 2024-25 IPEDS release: academic counseling, career placement, and on-campus childcare?",
+          "kind": "behavioral",
+          "verdict": "NO-RESULT",
+          "detail": "Smith College \u2014 Academic/career counseling service: Yes (Aca",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "typed source observations",
+          "n_rows": 3,
+          "wall_s": 11.8,
+          "usd": 0.0206,
+          "message": "Smith College \u2014 Academic/career counseling service: Yes (Academic year 2024-25); Smith College \u2014 Placement services for completers: Yes (Academic year 2024-25);"
+        }
+      ]
+    },
+    {
+      "id": "faq_ma_distance",
+      "category": "faq",
+      "family": "IC (distance ed)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "Which Massachusetts degree-granting institutions reported undergraduate distance education in the 2024-25 IPEDS release?",
+          "kind": "behavioral",
+          "verdict": "NO-RESULT",
+          "detail": "This part did not produce a validated analytical result. The",
+          "false_refusal": false,
+          "intent": "catalog_plan",
+          "mode": "catalog relational planner",
+          "n_rows": 0,
+          "wall_s": 22.9,
+          "usd": 0.0478,
+          "message": "This part did not produce a validated analytical result. The query could not be validated: Population outputs must be aggregates; individual institution rows ca"
+        }
+      ]
+    },
+    {
+      "id": "refuse_faculty_sat",
+      "category": "refuse",
+      "family": "(none)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What is the average SAT score of Yale's faculty?",
+          "kind": "refuse",
+          "verdict": "PASS-REFUSE",
+          "detail": "",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "intent clarification",
+          "n_rows": 0,
+          "wall_s": 5.8,
+          "usd": 0.0012,
+          "message": "The loaded data does not include SAT scores for faculty. The SAT fields describe entering students, such as the 25th, 50th, and 75th percentile SAT reading/verb"
+        }
+      ]
+    },
+    {
+      "id": "refuse_nonbinary_faculty",
+      "category": "refuse",
+      "family": "EAP/S (staff)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many nonbinary faculty does Smith College employ?",
+          "kind": "refuse",
+          "verdict": "PASS-REFUSE",
+          "detail": "",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "source coverage limitation",
+          "n_rows": 0,
+          "wall_s": 11.3,
+          "usd": 0.054,
+          "message": "I can\u2019t answer the original question reliably from the supplied sources inspected. In the supplied 2024-25 release, the faculty and staff tables I inspected (fu"
+        }
+      ]
+    },
+    {
+      "id": "refuse_salary_by_field",
+      "category": "refuse",
+      "family": "SAL (salaries)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What is Yale's faculty salary by academic field?",
+          "kind": "refuse",
+          "verdict": "SOFT-DECLINE",
+          "detail": "Here are the main data areas found in the local IPEDS files:\n\n**Survey: Human Re",
+          "false_refusal": false,
+          "intent": "discover",
+          "mode": "data discovery",
+          "n_rows": 0,
+          "wall_s": 22.0,
+          "usd": 0.077,
+          "message": "Here are the main data areas found in the local IPEDS files:\n\n**Survey: Human Resources**\n\nReporting periods vary by data area; exact coverage is in Definitions"
+        }
+      ]
+    },
+    {
+      "id": "refuse_gradrate_2030",
+      "category": "refuse",
+      "family": "GR",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was Harvard's graduation rate in 2030?",
+          "kind": "refuse",
+          "verdict": "SOFT-DECLINE",
+          "detail": "Request status: 1 unavailable, 1 blocked.",
+          "false_refusal": false,
+          "intent": "task_response",
+          "mode": "tracked request",
+          "n_rows": 0,
+          "wall_s": 10.5,
+          "usd": 0.0023,
+          "message": "Request status: 1 unavailable, 1 blocked."
+        }
+      ]
+    },
+    {
+      "id": "refuse_student_debt",
+      "category": "refuse",
+      "family": "(none)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What is the average student loan debt of Yale graduates?",
+          "kind": "refuse",
+          "verdict": "SOFT-DECLINE",
+          "detail": "IPEDS does not track student debt. The data loaded here cover financial aid awar",
+          "false_refusal": false,
+          "intent": "capability",
+          "mode": "scope limit",
+          "n_rows": 0,
+          "wall_s": 0.0,
+          "usd": 0.0,
+          "message": "IPEDS does not track student debt. The data loaded here cover financial aid awarded each year \u2014 grants, scholarships, and the loans students take out in a given"
+        }
+      ]
+    },
+    {
+      "id": "refuse_student_names",
+      "category": "refuse",
+      "family": "(none)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "List every Yale student's name and GPA.",
+          "kind": "refuse",
+          "verdict": "PASS-REFUSE",
+          "detail": "",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "intent clarification",
+          "n_rows": 0,
+          "wall_s": 5.9,
+          "usd": 0.0012,
+          "message": "I can't provide that. This app works with institution-level IPEDS data for loaded releases, which report aggregate counts and rates. It has no student-level rec"
+        }
+      ]
+    },
+    {
+      "id": "trap_faculty_ambiguity",
+      "category": "trap",
+      "family": "EAP/S (staff)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many faculty does Yale have?",
+          "kind": "trap",
+          "verdict": "PASS-CLARIFY",
+          "detail": "",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "source-backed clarification",
+          "n_rows": 0,
+          "wall_s": 23.6,
+          "usd": 0.0786,
+          "message": "How should \"faculty\" at Yale be counted?\n\n**A. All instructional staff (full + part-time)**\n\nYale's total instructional staff (full-time plus part-time, excludi"
+        }
+      ]
+    },
+    {
+      "id": "trap_netprice_lag",
+      "category": "trap",
+      "family": "COST/IC (price)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What is Yale's average net price for 2024-25?",
+          "kind": "trap",
+          "verdict": "PASS-CLARIFY",
+          "detail": "",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "source-backed clarification",
+          "n_rows": 0,
+          "wall_s": 21.9,
+          "usd": 0.0544,
+          "message": "Which definition of Yale's average net price do you want?\n\n**A. Net price, Title IV aid recipients**\n\nYale's average net price for full-time, first-time degree/"
+        }
+      ]
+    },
+    {
+      "id": "trap_medical_scope",
+      "category": "trap",
+      "family": "SAL (salaries)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What is the average faculty salary at Yale?",
+          "kind": "trap",
+          "verdict": "REVIEW-ANSWERED",
+          "detail": "verify caveat by hand",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 13.9,
+          "usd": 0.0389,
+          "message": "For Yale University (Fall 2024), Average salary equated to 9 months of full-time instructional staff - all ranks: 204,323 (currency/scale unverified). The repor"
+        }
+      ]
+    },
+    {
+      "id": "probe_c_mast_yale",
+      "category": "numeric",
+      "family": "C (completions)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many master's degrees did Yale award in 2023?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 2846)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 15.2,
+          "usd": 0.0492,
+          "message": "For Yale University (July 1, 2022 - June 30, 2023), Master's degree: 2,846. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "probe_c_doc_harv",
+      "category": "numeric",
+      "family": "C (completions)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many research doctoral degrees did Harvard award in 2023?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 758)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 14.5,
+          "usd": 0.0529,
+          "message": "For Harvard University (July 1, 2022 - June 30, 2023), Doctor's degree - research/scholarship: 758. The reporting period and source definitions are available be"
+        }
+      ]
+    },
+    {
+      "id": "probe_c_cmp_bach",
+      "category": "behavioral",
+      "family": "C (completions)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "Compare the number of bachelor's degrees Yale and Princeton awarded in 2023.",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=2",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "language model planner",
+          "n_rows": 2,
+          "wall_s": 9.2,
+          "usd": 0.002,
+          "message": "Yale University \u2014 Bachelor's degrees awarded: 1,449; Princeton University \u2014 Bachelor's degrees awarded: 1,284 (2022\u201323). The reporting period and source definit"
+        }
+      ]
+    },
+    {
+      "id": "probe_al_books_harv",
+      "category": "numeric",
+      "family": "AL (libraries)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many physical books were in Harvard's library collection in 2023?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 14790270.0)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 11.9,
+          "usd": 0.0349,
+          "message": "For Harvard University (Fiscal year 2023), Number of physical books: 14,790,270. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "probe_al_ebooks_yale",
+      "category": "numeric",
+      "family": "AL (libraries)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many digital/electronic books does Yale's library have in 2023?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 2525935.0)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 13.0,
+          "usd": 0.0366,
+          "message": "For Yale University (Fiscal year 2023), Number of digital/electronic books: 2,525,935. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "probe_sal_prof_smith",
+      "category": "numeric",
+      "family": "SAL (salaries)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was the average salary of full professors at Smith College in 2023-24?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 152890)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 14.8,
+          "usd": 0.0375,
+          "message": "For Smith College (2023-24), Average salary for instructional staff equated to a 9-month contract-total: $152,890. The reporting period and source definitions a"
+        }
+      ]
+    },
+    {
+      "id": "probe_sal_cmp",
+      "category": "behavioral",
+      "family": "SAL (salaries)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "Compare the average instructional faculty salary at Smith, Mount Holyoke, and Wellesley in 2023-24.",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=6",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 6,
+          "wall_s": 30.5,
+          "usd": 0.0613,
+          "message": "The results cover 3 institution(s), 2 measure(s), and 1 observation year(s). For example, Smith College\u2019s average salary for instructional staff equated to a 9-"
+        }
+      ]
+    },
+    {
+      "id": "probe_f_tuitrev_yale",
+      "category": "numeric",
+      "family": "F (finance)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was Yale's revenue from tuition and fees in 2022-23?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 343599498.0)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 18.8,
+          "usd": 0.0892,
+          "message": "For Yale University (Fiscal year 2023), Tuition and fees - Total: $343,599,498. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "probe_f_expenses_yale",
+      "category": "behavioral",
+      "family": "F (finance)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What were Yale's total expenses in 2022-23?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=1",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 60.0,
+          "usd": 0.0459,
+          "message": "For Yale University (Fiscal year 2023), Total expenses: $4,873,675,887. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "probe_f_endow_harv",
+      "category": "behavioral",
+      "family": "F (finance)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was the value of Harvard's endowment at year end 2022-23?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=1",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 24.6,
+          "usd": 0.0608,
+          "message": "For Harvard University (Fiscal year 2023), Value of endowment assets at the end of the fiscal year: $50,748,594,000. The reporting period and source definitions"
+        }
+      ]
+    },
+    {
+      "id": "probe_eap_fac_yale",
+      "category": "behavioral",
+      "family": "EAP/S (staff)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many full-time instructional faculty with faculty status does Yale have in fall 2023?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=1",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 21.3,
+          "usd": 0.0598,
+          "message": "For Yale University (Fall 2023), Grand total: 2,881. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "probe_s_total_smith",
+      "category": "behavioral",
+      "family": "EAP/S (staff)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many total staff does Smith College employ in 2023?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=1",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 22.2,
+          "usd": 0.0836,
+          "message": "For Smith College (Fall 2023), Grand total: 1,483. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "probe_om_rate_yale",
+      "category": "numeric",
+      "family": "OM (outcomes)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What share of Yale's entering degree-seeking cohort earned an award within 8 years (2023)?",
+          "kind": "numeric",
+          "verdict": "BLOCKED",
+          "detail": "This part could not finish because its source or model servi",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": null,
+          "n_rows": 0,
+          "wall_s": 25.7,
+          "usd": 0.0,
+          "message": "This part could not finish because its source or model service was unavailable. Other independent parts are retained."
+        }
+      ]
+    },
+    {
+      "id": "probe_om_behav",
+      "category": "behavioral",
+      "family": "OM (outcomes)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What is the 8-year completion rate for Pell recipients at Arizona State University?",
+          "kind": "behavioral",
+          "verdict": "CLARIFY",
+          "detail": "The loaded graduation data includes a Pell recipients six-ye",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "intent clarification",
+          "n_rows": 0,
+          "wall_s": 26.9,
+          "usd": 0.0011,
+          "message": "The loaded graduation data includes a Pell recipients six-year bachelor graduation rate, but no 8-year Pell completion rate. Would you like the six-year Pell gr"
+        }
+      ]
+    },
+    {
+      "id": "probe_effy_yale",
+      "category": "numeric",
+      "family": "EFFY (12-mo enroll)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was Yale's 12-month unduplicated headcount for 2022-23?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 16416)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 23.8,
+          "usd": 0.0586,
+          "message": "For Yale University (July 1, 2022 - June 30, 2023), Total 12-month unduplicated headcount: 16,416. The reporting period and source definitions are available bel"
+        }
+      ]
+    },
+    {
+      "id": "probe_ef_dist_yale",
+      "category": "behavioral",
+      "family": "EF (distance ed)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many Yale students were enrolled exclusively in distance education in fall 2023?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=1",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 12.9,
+          "usd": 0.0221,
+          "message": "For Yale University (Fall 2023), Students enrolled exclusively in distance education courses: 56. The reporting period and source definitions are available belo"
+        }
+      ]
+    },
+    {
+      "id": "probe_ef_race_yale",
+      "category": "behavioral",
+      "family": "EF (enrollment)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "Show Yale's undergraduate enrollment by race and ethnicity for fall 2023.",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=10",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "source-bound catalog starter",
+          "n_rows": 10,
+          "wall_s": 4.2,
+          "usd": 0.0011,
+          "message": "For Yale University (Fall 2023), American Indian or Alaska Native total: 28; Asian total: 1,557; Black or African American total: 602; Hispanic total: 1,072. Th"
+        }
+      ]
+    },
+    {
+      "id": "probe_cost_tuit_smith",
+      "category": "numeric",
+      "family": "COST/IC (price)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was the published tuition and fees at Smith College for 2023-24?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 61568)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 22.2,
+          "usd": 0.0879,
+          "message": "For Smith College (2023-24), Published in-state tuition and fees 2023-24: $61,568. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "probe_cost_roomboard_mh",
+      "category": "numeric",
+      "family": "COST/IC (price)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was the on-campus room and board charge at Mount Holyoke College for 2023-24?",
+          "kind": "numeric",
+          "verdict": "NO-GROUND-TRUTH",
+          "detail": "[('NOGT', None)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 30.6,
+          "usd": 0.0827,
+          "message": "For Mount Holyoke College (2023-24), On campus, food and housing 2023-24: $18,838. The reporting period and source definitions are available below."
+        }
+      ]
+    },
+    {
+      "id": "probe_cost_netprice_we",
+      "category": "numeric",
+      "family": "COST/IC (price)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was the average net price for grant-aided students at Wellesley in 2022-23?",
+          "kind": "numeric",
+          "verdict": "BLOCKED",
+          "detail": "I could not complete the source-backed plan within the plann",
+          "false_refusal": false,
+          "intent": "clarify",
+          "mode": "catalog language-model planner",
+          "n_rows": 0,
+          "wall_s": 29.5,
+          "usd": 0.0938,
+          "message": "I could not complete the source-backed plan within the planning search limit. This is a planning limitation, not evidence that the requested data are unavailabl"
+        }
+      ]
+    },
+    {
+      "id": "probe_adm_act_yale",
+      "category": "numeric",
+      "family": "ADM (admissions)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many of Yale's admitted students submitted ACT scores for fall 2024?",
+          "kind": "numeric",
+          "verdict": "CORRECT",
+          "detail": "[('OK', 384)]",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog language-model planner",
+          "n_rows": 1,
+          "wall_s": 25.9,
+          "usd": 0.0647,
+          "message": "For Yale University (Academic year Fall 2024), Number of first-time degree/certificate-seeking students submitting ACT scores: 384. The reporting period and sou"
+        }
+      ]
+    },
+    {
+      "id": "probe_adm_req_yale",
+      "category": "behavioral",
+      "family": "ADM (admissions)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What are Yale's admissions test score requirements?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=6",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "language model planner",
+          "n_rows": 6,
+          "wall_s": 10.6,
+          "usd": 0.0023,
+          "message": "For Yale University (fall 2024), SAT reading/verbal, 25th percentile: 730 points; SAT reading/verbal, 50th percentile: 760 points; SAT reading/verbal, 75th perc"
+        }
+      ]
+    },
+    {
+      "id": "probe_agg_gradrate",
+      "category": "behavioral",
+      "family": "Aggregate",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was the overall six-year graduation rate for four-year institutions in the United States for the 2016 entering cohort?",
+          "kind": "behavioral",
+          "verdict": "NO-RESULT",
+          "detail": "This part did not produce a validated analytical result. The",
+          "false_refusal": false,
+          "intent": "catalog_plan",
+          "mode": "catalog relational planner",
+          "n_rows": 0,
+          "wall_s": 42.8,
+          "usd": 0.1395,
+          "message": "This part did not produce a validated analytical result. The query could not be validated: Cohort timing needs source-coded cohort evidence; release year is not"
+        }
+      ]
+    },
+    {
+      "id": "probe_agg_instcount",
+      "category": "behavioral",
+      "family": "Aggregate",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "How many public four-year institutions are there in 2023?",
+          "kind": "behavioral",
+          "verdict": "NO-RESULT",
+          "detail": "796 institutions reported to IPEDS in the 2023\u201324 collection",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "institution count",
+          "n_rows": 0,
+          "wall_s": 4.7,
+          "usd": 0.0011,
+          "message": "796 institutions reported to IPEDS in the 2023\u201324 collection within this scope: United States \u00b7 public \u00b7 four-year \u00b7 Title IV. This counts distinct reporting in"
+        }
+      ]
+    },
+    {
+      "id": "probe_agg_totalenr",
+      "category": "behavioral",
+      "family": "Aggregate",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What was the total fall enrollment across all U.S. degree-granting institutions in 2023?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=1",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "catalog relational planner",
+          "n_rows": 1,
+          "wall_s": 17.7,
+          "usd": 0.0265,
+          "message": "For United States \u00b7 Title IV (Fall 2023), Total fall 2023 enrollment, U.S. degree-granting Title IV institutions: 19,038,434. The reporting period and source de"
+        }
+      ]
+    },
+    {
+      "id": "probe_def_retention",
+      "category": "behavioral",
+      "family": "Definition",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What is the definition of the first-year retention rate?",
+          "kind": "behavioral",
+          "verdict": "NO-RESULT",
+          "detail": "For **first-year retention rate**, the supplied codebook giv",
+          "false_refusal": false,
+          "intent": "definition",
+          "mode": "source definition",
+          "n_rows": 0,
+          "wall_s": 5.1,
+          "usd": 0.0012,
+          "message": "For **first-year retention rate**, the supplied codebook gives these source passages:\n\n**Total entering class, retention rates, and student-to-faculty ratio: Fa"
+        }
+      ]
+    },
+    {
+      "id": "probe_disc_finance",
+      "category": "behavioral",
+      "family": "Discovery",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What data do you have on institutional finances?",
+          "kind": "behavioral",
+          "verdict": "NO-RESULT",
+          "detail": "These documented data areas may help with your question:\n\n- ",
+          "false_refusal": false,
+          "intent": "guide",
+          "mode": "data guide",
+          "n_rows": 0,
+          "wall_s": 4.4,
+          "usd": 0.001,
+          "message": "These documented data areas may help with your question:\n\n- **Institution finances** \u2014 Institutional financial reporting uses different forms for public, privat"
+        }
+      ]
+    },
+    {
+      "id": "probe_trend_effy_yale",
+      "category": "behavioral",
+      "family": "Trend",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "Plot Yale's 12-month enrollment from 2015 to 2024.",
+          "kind": "behavioral",
+          "verdict": "NO-RESULT",
+          "detail": "This part did not produce a validated analytical result. Thi",
+          "false_refusal": false,
+          "intent": "catalog_plan",
+          "mode": "catalog relational planner",
+          "n_rows": 0,
+          "wall_s": 48.3,
+          "usd": 0.1194,
+          "message": "This part did not produce a validated analytical result. This query did not pass validation; no numerical result was published. The returned periods do not cove"
+        }
+      ]
+    },
+    {
+      "id": "probe_cat_housing_smith",
+      "category": "behavioral",
+      "family": "IC (categorical)",
+      "passed": true,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "Does Smith College provide on-campus housing?",
+          "kind": "behavioral",
+          "verdict": "ANSWERED",
+          "detail": "rows=2",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "typed source observations",
+          "n_rows": 2,
+          "wall_s": 13.6,
+          "usd": 0.0388,
+          "message": "Smith College \u2014 Institution provide Institutionally-controlled housing (on-campus and/or off-campus): Yes (Academic year 2024-25); Smith College \u2014 Housing capac"
+        }
+      ]
+    },
+    {
+      "id": "probe_cat_city_smith",
+      "category": "behavioral",
+      "family": "HD (directory)",
+      "passed": false,
+      "false_refusal": false,
+      "turns": [
+        {
+          "q": "What city is Smith College located in?",
+          "kind": "behavioral",
+          "verdict": "NO-RESULT",
+          "detail": "Smith College \u2014 City location of institution: Northampton (A",
+          "false_refusal": false,
+          "intent": "analyze",
+          "mode": "typed source observations",
+          "n_rows": 1,
+          "wall_s": 14.7,
+          "usd": 0.0134,
+          "message": "Smith College \u2014 City location of institution: Northampton (Academic year 2024-25)."
+        }
+      ]
+    }
+  ]
+}

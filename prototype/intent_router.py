@@ -330,6 +330,10 @@ def apply_chart_edits(answer,edits,validate_only=False):
 
 def handle(question,previous,model,history,executor,overrides=None,institution_choices=None):
     """Interpret first, validate, then call only the selected executor."""
+    from .engine_select import active_engine
+    if active_engine()=='v2':
+        from .resolver_v2 import handle as resolve_v2
+        return resolve_v2(question,previous,model,history,executor,overrides,institution_choices)
     from .model_policy import AUTOMATIC,handle as automatic_handle
     if model==AUTOMATIC:
         return automatic_handle(question,previous,history,executor,overrides=overrides,institution_choices=institution_choices)
