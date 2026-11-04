@@ -212,6 +212,13 @@ def render_institution_confirmation():
         s.transcript_revision+=1;st.rerun()
 
 
+def _md(text):
+    # Streamlit renders markdown, where an unescaped $...$ pair becomes LaTeX math
+    # in a different (serif/italic) font. Escape literal dollar signs so currency
+    # amounts render as plain text (same reason catalog_planner.aid_narrative does).
+    return (text or '').replace('$','\\$')
+
+
 def _word_stream(text):
     import time
     words=text.split(' ')
@@ -232,18 +239,18 @@ def render_narrative(answer):
         with st.spinner('Writing a plain-language summary…'):
             answer['narrative']=narrative_text(answer.get('narrative_question',''),answer)
         if answer['narrative']:
-            st.write_stream(_word_stream(answer['narrative']))
+            st.write_stream(_word_stream(_md(answer['narrative'])))
             _narrative_sources(answer);return True
         return False
     if answer['narrative']:
-        st.markdown(answer['narrative']);_narrative_sources(answer);return True
+        st.markdown(_md(answer['narrative']));_narrative_sources(answer);return True
     return False
 
 
 def _narrative_sources(answer):
     with st.popover('Verified summary'):
         st.caption('This is the exact, source-grounded summary the answer is built from.')
-        st.write(answer.get('message') or '')
+        st.write(_md(answer.get('message') or ''))
 
 
 def render_answer(answer,key,compact=True):
@@ -256,7 +263,7 @@ def render_answer(answer,key,compact=True):
     if answer.get('interpreted_as'):st.caption('Interpreted as: '+answer['interpreted_as'])
     if render_narrative(answer):
         pass
-    elif answer.get('message'):st.write(answer['message'])
+    elif answer.get('message'):st.write(_md(answer['message']))
     for index,task in enumerate(answer.get('task_results',[]),1):
         st.markdown('**'+str(index)+'. '+task['request']+'**')
         st.caption(task['status'].replace('_',' ').capitalize())
