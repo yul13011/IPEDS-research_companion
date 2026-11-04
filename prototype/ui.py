@@ -212,6 +212,40 @@ def render_institution_confirmation():
         s.transcript_revision+=1;st.rerun()
 
 
+def _word_stream(text):
+    import time
+    words=text.split(' ')
+    for i,word in enumerate(words):
+        yield word+(' ' if i<len(words)-1 else '')
+        time.sleep(.012)
+
+
+def render_narrative(answer):
+    """Show a fluent, grounded plain-language answer above the result when the v2
+    engine is active. Returns True if one was displayed (the caller then skips the
+    terse deterministic message). The validated text is cached on the answer dict,
+    so reruns neither regenerate nor re-animate it; '' is cached on failure so a
+    fallback is not retried."""
+    from .result_narrative import want_narrative,narrative_text
+    if not want_narrative(answer):return False
+    if 'narrative' not in answer:
+        with st.spinner('Writing a plain-language summary…'):
+            answer['narrative']=narrative_text(answer.get('narrative_question',''),answer)
+        if answer['narrative']:
+            st.write_stream(_word_stream(answer['narrative']))
+            _narrative_sources(answer);return True
+        return False
+    if answer['narrative']:
+        st.markdown(answer['narrative']);_narrative_sources(answer);return True
+    return False
+
+
+def _narrative_sources(answer):
+    with st.popover('Verified summary'):
+        st.caption('This is the exact, source-grounded summary the answer is built from.')
+        st.write(answer.get('message') or '')
+
+
 def render_answer(answer,key,compact=True):
     s=st.session_state
     if answer.get('result'):
@@ -220,7 +254,9 @@ def render_answer(answer,key,compact=True):
         except IntentMismatch as exc:
             st.warning(str(exc));return
     if answer.get('interpreted_as'):st.caption('Interpreted as: '+answer['interpreted_as'])
-    if answer.get('message'):st.write(answer['message'])
+    if render_narrative(answer):
+        pass
+    elif answer.get('message'):st.write(answer['message'])
     for index,task in enumerate(answer.get('task_results',[]),1):
         st.markdown('**'+str(index)+'. '+task['request']+'**')
         st.caption(task['status'].replace('_',' ').capitalize())

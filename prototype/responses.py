@@ -126,7 +126,7 @@ def finalize_answer(answer,question=''):
     report('Preparing your answer and display…')
     # A route may pre-compose a grouped, plain-language summary (e.g. the aid panel); keep it instead
     # of the generic per-measure list. It survives re-finalization because custom_message rides in answer.
-    return {**answer,'message':answer.get('custom_message') or summarize(result),'presentation':answer.get('presentation') or presentation_for(result,question)}
+    return {**answer,'message':answer.get('custom_message') or summarize(result),'presentation':answer.get('presentation') or presentation_for(result,question),'narrative_question':question or answer.get('narrative_question','')}
 
 
 def adjust_presentation(question,previous_answer):
