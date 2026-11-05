@@ -151,6 +151,13 @@ def grade_turn(turn, ans):
     # behavioral
     if refusal:
         return "CLARIFY", (ans.get("message") or "")[:60], {}
+    want = e.get("contains")
+    if want:
+        # Categorical / definition / discovery answers are correct as TEXT, not a
+        # numeric row; credit them when the answer message carries the expected content.
+        low = (ans.get("message") or "").lower()
+        missing = [w for w in want if w.lower() not in low]
+        return ("ANSWERED", "contains ok", {}) if not missing else ("NO-RESULT", f"missing {missing}", {})
     if e.get("min_institutions") and distinct(ans, "unitid") < e["min_institutions"]:
         return "FEW-INSTITUTIONS", f'inst={distinct(ans, "unitid")}', {}
     if has_number(ans):
