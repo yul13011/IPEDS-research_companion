@@ -31,8 +31,14 @@ direct, readable answer. Follow every rule:
 - Use ONLY numbers that appear in the provided facts. Never compute a new figure — no difference,
   average, percentage, ratio, or rank of your own. Describe any change in words ("higher", "rose",
   "about the same"), not as a number you calculated.
+- Some answers report CATEGORICAL facts, not numbers: whether a school offers a degree level or
+  reports a service (a Yes/No), a reported category, or a list of institutions that match a
+  criterion. State these plainly — for a Yes/No offering, lead with "Yes" or "No" and the school,
+  and say which of the named items each school offers or reports. Never turn a category into a number.
+- When the answer is a LIST of institutions that match a criterion, say how many matched (use the
+  count that appears in the facts) and name a few examples; do not try to list them all.
 - A value shown as "not reported" or "not collected" means IPEDS did not report it. Say "not
-  reported"; never treat it as zero.
+  reported"; never treat it as zero. A reported count of zero is a real zero, not "not reported".
 - Reporting periods are IPEDS collection years. A national or aggregate figure is a pooled count,
   not an average of institutions — never call it an average.
 - Write small counts in words (e.g. "all three schools"). No markdown headings, no variable codes,
@@ -56,10 +62,13 @@ def want_narrative(answer):
     if answer.get('mode') in {'presentation adjustment', 'extract builder'}:
         return False
     result = answer.get('result') or {}
-    # Schema-v2 categorical/list lookups are not numeric answers; the structured
-    # panel already reads clearly and there is nothing to narrate.
+    # Schema-v2 categorical/list lookups (institutional characteristics: degree
+    # offerings, student services, which schools match a criterion) are not numeric,
+    # but a short fluent lead-in still helps readers, so narrate them too. The
+    # numeric-grounding guard still blocks any invented figure, and the structured
+    # panel remains below. Narrate whenever the lookup returned at least one row.
     if result.get('result_schema_version') == 2:
-        return False
+        return len(result.get('rows') or []) >= 1
     good = [r for r in result.get('rows', []) if r.get('status') == 'ok']
     return len(good) >= 1
 
@@ -115,10 +124,14 @@ def narrative_text(question, answer):
         return ''
     facts = answer.get('message') or summarize(result)
     ev = evidence_summary(result)
+    institutions = ev.get('institutions', [])
+    # A matching-institutions list can be long; keep the prompt bounded. The count is
+    # already in `facts`, which the narrative is told to use.
+    scope = ', '.join(institutions[:12]) + (f' and {len(institutions) - 12} more' if len(institutions) > 12 else '')
     user = (
         'Question: ' + (question or '(not provided)') + '\n\n'
         'Verified summary: ' + facts + '\n\n'
-        'Scope: ' + (', '.join(ev.get('institutions', [])) or 'n/a') + '\n'
+        'Scope: ' + (scope or 'n/a') + '\n'
         'Population / selection: ' + ('; '.join(ev.get('population', [])) or 'n/a') + '\n'
         'Reporting period(s): ' + (', '.join(ev.get('periods', [])) or 'n/a') + '\n\n'
         'Result rows:\n' + _rows_table(result))

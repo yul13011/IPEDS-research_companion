@@ -103,10 +103,10 @@ CASES = [
    {"q":"How many full-time and part-time instructional staff did Yale have in fall 2024?","expect":{"kind":"behavioral"}}]},
 
  {"id":"faq_services_smith","category":"faq","family":"IC (categorical)","turns":[
-   {"q":"What student services did Smith College report in the 2024-25 IPEDS release: academic counseling, career placement, and on-campus childcare?","expect":{"kind":"behavioral","contains":["counseling","placement"]}}]},
+   {"q":"Does Smith College offer academic counseling, career placement, and on-campus childcare?","expect":{"kind":"behavioral","contains":["counseling","placement"]}}]},
 
  {"id":"faq_ma_distance","category":"faq","family":"IC (distance ed)","turns":[
-   {"q":"Which Massachusetts degree-granting institutions reported undergraduate distance education in the 2024-25 IPEDS release?","expect":{"kind":"behavioral","contains":["degree-granting","institution"]}}]},
+   {"q":"Which Massachusetts colleges offer distance education to undergraduates?","expect":{"kind":"behavioral","contains":["degree-granting","institution"]}}]},
 
  # --- Should-refuse / graceful decline ------------------------------------
  {"id":"refuse_faculty_sat","category":"refuse","family":"(none)","turns":[

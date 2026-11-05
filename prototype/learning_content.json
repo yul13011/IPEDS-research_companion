@@ -359,21 +359,21 @@
           "id": "institution-services",
           "kind": "analyze",
           "purpose": "Look up a school",
-          "question": "What student services did Smith College report in the 2024–25 IPEDS release: academic counseling, career placement, and on-campus childcare?",
+          "question": "Does Smith College offer academic counseling, career placement, and on-campus childcare?",
           "observation_plan_key": "institution-services"
         },
         {
           "id": "institution-distance",
           "kind": "analyze",
           "purpose": "Find matching institutions",
-          "question": "Which Massachusetts degree-granting institutions reported undergraduate distance education in the 2024–25 IPEDS release?",
+          "question": "Which Massachusetts colleges offer distance education to undergraduates?",
           "observation_plan_key": "institution-distance"
         },
         {
           "id": "institution-awards",
           "kind": "analyze",
           "purpose": "Compare institutions",
-          "question": "Compare whether Smith College, Mount Holyoke College, and Wellesley College offered bachelor’s and master’s degrees in the 2024–25 IPEDS release.",
+          "question": "Do Smith, Mount Holyoke, and Wellesley offer bachelor’s and master’s degrees?",
           "observation_plan_key": "institution-awards"
         }
       ]
