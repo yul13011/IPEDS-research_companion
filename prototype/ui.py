@@ -4,7 +4,7 @@ import uuid
 from contextlib import contextmanager
 import streamlit as st
 from .question_log import log_question
-from .request_tasks import status as question_status
+from .request_tasks import log_outcome as question_status
 from .catalog import BASE, DATA, search, IVY, institutions
 from .analytics import Plan, execute, measures
 from .agent import api_key, DEFAULT_MODEL, MODEL_LABELS
@@ -126,7 +126,7 @@ def run_pending():
             if answer.get('mode')!='presentation adjustment':answer=finalize_answer(answer,question)
         if answer.get('mode')!='presentation adjustment':
             # Analytics: record the question and whether it was answered. Never blocks or raises.
-            log_question(question,question_status(answer),s.get('session_id',''))
+            log_question(question,question_status(answer),s.get('session_id',''),answer)
         s.history=(s.history+[{'question':question,'answer':answer}])[-30:]
         # Revision identifies completed exchanges/clarification controls;
         # it must never become the transcript container's identity.
@@ -143,14 +143,20 @@ def run_pending():
         s.pending_action=None
     except ValueError as exc:
         s.request_error=str(exc);s.pending_action=None
-        if question:log_question(question,'error',s.get('session_id',''))
+        if question:log_question(question,'error_app',s.get('session_id',''))
     except Exception as exc:
-        if question:log_question(question,'error',s.get('session_id',''))
+        # Separate account/model/network failures (error_api) from app faults (error_app)
+        # so the log distinguishes "restore API access" from "fix a bug".
         if 'specified API usage limits' in str(exc):
+            kind='error_api'
             s.request_error='The Anthropic account has reached its configured API usage limit. AI requests require restored account access; offline examples and the extract builder remain available.'
         elif type(exc).__name__ in {'NotFoundError','PermissionDeniedError','AuthenticationError'}:
+            kind='error_api'
             s.request_error='The selected model is not available to this API credential. Check account/model access under About this prototype, or use offline examples and the extract builder.'
-        else:s.request_error='The request could not finish. No partial result was published. Check model/network access or use the extract builder.'
+        else:
+            kind='error_app'
+            s.request_error='The request could not finish. No partial result was published. Check model/network access or use the extract builder.'
+        if question:log_question(question,kind,s.get('session_id',''))
         s.pending_action=None
 
 

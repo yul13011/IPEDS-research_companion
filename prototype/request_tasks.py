@@ -169,6 +169,17 @@ def validate(plan,original,history,answers,core):
     return {'tasks':normalized}
 
 
+def usable(result):
+    """True when an analytic result carries at least one real value — a reported
+    number (a reported 0 counts), a categorical response label, or, for a matching
+    list, at least one institution. 'not reported'/'not collected' does not count.
+    Lets `status` tell a genuine answer from one that ran but returned nothing."""
+    rows=(result or {}).get('rows') or []
+    if not rows:return False
+    if result.get('result_kind')=='institution_list':return True
+    return any(r.get('status')=='ok' and (r.get('value') is not None or r.get('response_label')) for r in rows)
+
+
 def status(answer):
     if answer.get('capability',{}).get('supported') is False:return 'unsupported'
     c=answer.get('coverage') or {}
@@ -179,6 +190,18 @@ def status(answer):
     if answer.get('intent') in {'clarify','institution_confirmation'}:
         return 'blocked' if answer.get('intent_validation') or answer.get('mode')=='intent validation' else 'needs_clarification'
     return 'answered'
+
+
+def log_outcome(answer):
+    """Analytics-only refinement of `status` for the question log. Separates a deliberate
+    source-scope decline (`refused`) and a pipeline that ran but returned no usable value
+    (`answered_no_data`) from a plain `answered`. Kept apart from `status` so task
+    orchestration (complete/dependency logic) is unaffected."""
+    if (answer.get('intent_interpretation') or {}).get('operation')=='refuse':return 'refused'
+    base=status(answer)
+    if base=='answered' and answer.get('result') is not None and not usable(answer['result']):
+        return 'answered_no_data'
+    return base
 
 
 def combine_usage(stages,model):
