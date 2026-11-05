@@ -39,13 +39,29 @@ CALCULATION = obj({'label':STRING,'operator':{'type':'string','enum':['sum','dif
                    'group_by_record_ids':array(INTEGER),'interpretation':STRING})
 JOIN = obj({'year':INTEGER,'left_table':STRING,'right_table':STRING,
             'left_columns':array(STRING),'right_columns':array(STRING),'purpose':STRING})
+# Ranking selects the extreme institutions of a many-institution result (a
+# population or a named set) — "which is the most/least X", "top/bottom N". It
+# orders the per-institution observations by one selected measure or calculation
+# and keeps the first `limit`; direction 'none' (limit 0) means no ranking. It is
+# an output-layer reduction, not a new SQL primitive or a row aggregation.
+RANKING = obj({'by':STRING,'direction':{'type':'string','enum':['none','ascending','descending']},'limit':INTEGER})
+NEUTRAL_RANKING = {'by':'','direction':'none','limit':0}
+# A directory population lets a ranking (or a per-institution calculation) span
+# every institution in a state/sector instead of a named list. Same shape as the
+# query engine's population; null means a named-institution request.
+POPULATION = {'anyOf':[obj({'fips':array(INTEGER),'controls':array(INTEGER),'levels':array(INTEGER),
+    'degree_granting':{'type':['boolean','null']},'title_iv':{'type':'boolean'},'administrative_offices':{'type':'boolean'}}),{'type':'null'}]}
 PLAN_SCHEMA = obj({'version':INTEGER,'institutions':array(STRING),'source_years':array(INTEGER),
                    'requested_time':obj({'basis':{'type':'string','enum':['fall','academic','fiscal','cohort','reporting_period','unspecified']},
                                          'description':STRING}),
                    'selections':array(SELECTION),'filters':array(FILTER),'group_by_record_ids':array(INTEGER),
-                   'calculations':array(CALCULATION),'joins':array(JOIN),
+                   'calculations':array(CALCULATION),'joins':array(JOIN),'ranking':RANKING,'population':POPULATION,
                    'output':{'type':'string','enum':['table','chart','export','answer']},
                    'assumptions':array(STRING),'clarification_questions':array(STRING)})
+# ranking and population are optional: a plan without them is a plain named-
+# institution analysis. Keeping them out of `required` lets existing/plain plans
+# validate while still schema-checking either one when the model supplies it.
+PLAN_SCHEMA['required']=[k for k in PLAN_SCHEMA['required'] if k not in {'ranking','population'}]
 
 
 def discovery_question(question):
@@ -122,8 +138,16 @@ def _names(question, previous=None):
 
 def _validate_shape(plan,population=None):
     import jsonschema
+    # Hand-built deterministic plans predate the ranking field; default it so they
+    # validate unchanged. A model plan already carries it (required in the schema).
+    plan.setdefault('ranking',dict(NEUTRAL_RANKING))
     jsonschema.validate(plan,PLAN_SCHEMA)
     if plan['version']!=SCHEMA_VERSION:raise ValueError('Unsupported catalog plan version.')
+    rank=plan['ranking']
+    if rank['direction'] not in {'none','ascending','descending'}:raise ValueError('Ranking direction must be none, ascending or descending.')
+    if type(rank['limit'])is not int or not 0<=rank['limit']<=100:raise ValueError('Ranking limit must be an integer 0–100.')
+    if rank['by']:_bound_text(rank['by'],'ranking field',200)
+    if rank['direction']!='none' and rank['limit']<1:raise ValueError('A ranking needs a positive limit.')
     bounds={'institutions':(0 if population else 1,30),'source_years':(1,10),'selections':(1,40),'filters':(0,40),
             'group_by_record_ids':(0,12),'calculations':(0,40),'joins':(0,8),
             'assumptions':(0,12),'clarification_questions':(0,8)}
@@ -158,6 +182,10 @@ def _validate_shape(plan,population=None):
 
 def validate_proposal(plan, question, population=None):
     """Structural/catalog binding only; this never grants numerical execution approval."""
+    # A catalog plan may carry its own directory population (for a ranking or a
+    # per-institution calculation across a state/sector); the observation path
+    # still passes one in explicitly. An explicit argument wins.
+    if population is None:population=plan.get('population')
     _validate_shape(plan,population)
     referenced={s['record_id'] for s in plan['selections']}|set(plan['group_by_record_ids'])
     referenced|={f['record_id'] for f in plan['filters']}
@@ -762,6 +790,9 @@ SYSTEM+='''\nUse submit_query_plan (version 2) for grouped extracts, row aggrega
 
 
 SYSTEM+='''\nFor a trend consisting of independent annual lookups or same-row arithmetic, prefer submit_annual_plan with a fully inspected one-year template and all requested years. Include every required population-key filter in the template. Keep the full requested_time description. The server resolves annual IDs and validates each release separately, so you do not need to emit ten copies of the plan. Do not use a multi-source version-2 plan for independent annual observations: those sources would require joins that are inappropriate for separate years. Use version 2 only when the requested operation needs its relational primitives.'''
+
+
+SYSTEM+='''\nSuperlative / ranking questions name the extreme one or few institutions of a larger set: "which is the most/least/highest/lowest/hardest/easiest/cheapest/largest/smallest", "top/bottom N", "rank ... by ...". Answer them with submit_catalog_plan version 1 and the ranking field — do not just list every matching institution. Set population to the directory scope the question implies, with institutions empty: for "in <state>" use that state's FIPS code (Connecticut 9, Massachusetts 25, California 6, New York 36, ...); for "colleges"/"universities"/selectivity default to four-year degree-granting institutions (levels [1], degree_granting true) unless the user clearly means every sector. Instead keep the named institutions for "which of these". Select the comparison measure as one per-institution same-row value or ratio: selectivity / "hardest to get into" / "most selective" is the admission rate — a percent of ADM admissions (ADMSSN) over applicants (APPLCN) on the same row; "cheapest"/"most expensive" is a cost or net-price field; "largest" is an enrollment or count field. Set ranking.direction to ascending for least / lowest / cheapest / most-selective / hardest-to-get-into, and descending for most / highest / largest, ranking.by to the measure's calculation label (or leave it empty when there is a single measure), and ranking.limit to the number asked for (1 for "which ...", N for "top/bottom N", default 1). Keep one row per institution; do not set group_by. This is a same-row ranking, so use version 1, not a grouped version-2 aggregate. Only when the year or sector is genuinely ambiguous and would change the answer, ask one concise clarification; otherwise default to the latest available year and four-year degree-granting institutions and state that assumption.'''
 
 
 SYSTEM+='''\nFor a vague or institution-specific term, interpret it against inspected source definitions. If different plausible definitions materially change the answer, use offer_analysis_options, with 2-3 complete source-bound version-2 plans and standalone interpretations preserving institution, measures, breakdown and years. Do not offer lettered analytical choices in ask_clarification prose. Preflight may reject an option: repair it before offering it, or ask a focused open question if no executable alternatives exist. No statistical values are retrieved until selection.\nDistinguish direct measures from proxies and contextual comparisons. If count and salary populations differ, state that difference in each output label and in qualifications; never label broader salaries as salaries of a restricted group. A separate salary-by-tenure measure must not be invented. Different source periods must also be disclosed. Use separately aggregated rows and validated one-to-one joins when combining different populations; never multiply detailed staff rows. For modified choices preserve confirmed decisions from analysis_brief, changing only the requested part; do not ask the same question again. Technical search/validation failures are not missing user intent or evidence that data do not exist. Default to the latest compatible source year if none is requested, and disclose observation versus academic periods.'''

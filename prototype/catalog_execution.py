@@ -175,6 +175,39 @@ def prepare_catalog_proposal(plan,question):
     return proposal
 
 
+def ranking_metric(by, rows, specs):
+    """The metric a ranking orders by: the named measure/calculation, or the sole one."""
+    metrics=list(dict.fromkeys(r['metric'] for r in rows))
+    if by:
+        low=by.strip().casefold()
+        for m in metrics:
+            if low in (specs.get(m,{}).get('label','') or '').casefold() or low in m.casefold():return m
+    measures=[m for m in metrics if m]
+    return measures[0] if measures else None
+
+
+def apply_ranking(rows, rank, specs, technical_notes):
+    """Output-layer reduction: order the per-institution rows by one measure and keep
+    the first `limit`. No new SQL, row aggregation or inferred relationship."""
+    if not rows or (rank or {}).get('direction') not in {'ascending','descending'} or (rank or {}).get('limit',0)<1:
+        return rows
+    target=ranking_metric(rank.get('by',''),rows,specs)
+    if not target:return rows
+    scored=[r for r in rows if r['metric']==target and r['status']=='ok' and isinstance(r.get('value'),(int,float))]
+    if not scored:return rows
+    reverse=rank['direction']=='descending'
+    # One score per institution (first observed year) so a trend does not double-rank.
+    by_unit={}
+    for r in scored:by_unit.setdefault(r['unitid'],r['value'])
+    order=sorted(by_unit,key=lambda u:by_unit[u],reverse=reverse)[:rank['limit']]
+    position={u:i for i,u in enumerate(order)}
+    kept=[r for r in rows if r['unitid'] in position]
+    kept.sort(key=lambda r:(position[r['unitid']],r.get('observation_year') or 0))
+    label=specs.get(target,{}).get('label',target)
+    technical_notes.append(f"Ranked by {label} ({'highest first' if reverse else 'lowest first'}); kept the top {len(order)} of {len(by_unit)} reporting institution(s). Institutions with a missing value were excluded from the ranking.")
+    return kept
+
+
 def execute_catalog(answer, question):
     """Revalidate an untrusted proposal, then either execute or retain its blockers."""
     start=time.perf_counter()
@@ -295,6 +328,7 @@ def execute_catalog(answer, question):
                         sources.append(dict(metric=metric,year=year,unitid=unitid,database=str(path),database_size=stat.st_size,database_mtime_ns=stat.st_mtime_ns,
                             table=table,columns=columns,filters=filters,formula={'typed_calculation':calc,'canonical_expression':formula_text(calc,defs)} if calc else 'direct source observation',sql=sql,parameters=[unitid]+tail,
                             codebook_evidence=docs,code_filters=proposal['category_evidence']))
+    rows=apply_ranking(rows,p.get('ranking'),specs,technical_notes)
     query_seconds=time.perf_counter()-query_start
     result=dict(plan=dict(metrics=list(specs),institutions=p['institutions'],years=p['source_years'],time_basis='source_release',output=p['output']),
                 catalog_plan=p,metric_specs=specs,observation_years=p['source_years'],rows=rows,sources=sources,warnings=warnings,technical_notes=technical_notes,definitions=definitions,
