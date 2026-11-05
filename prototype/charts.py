@@ -172,7 +172,7 @@ def panels(result,presentation):
                     if unit=='percent':
                         numeric_axis=(alt.Axis(format='.0f',tickCount=5,labelOverlap=False) if presentation.get('y_min') is not None
                                       else alt.Axis(format='.0f',values=[v for v in [0,25,50,75,100] if limits[0]<=v<=limits[1]],labelOverlap=False))
-                    category_line_height=presentation.get('font_size',13)+3
+                    category_line_height=presentation.get('font_size',13)+5
                     encoding={'x':alt.X('plot_value:Q',title=presentation.get('x_label') or unit_title(unit),scale=scale,axis=numeric_axis),
                         'y':alt.Y('wrapped_category:N',sort=order,title=presentation.get('y_label'),axis=alt.Axis(labelAngle=0,labelLimit=0,labelLineHeight=category_line_height,labelExpr="split(datum.label, '\\n')"))}
                     grouped=(multi or many_periods) and len(shown_names)>1
@@ -191,10 +191,14 @@ def panels(result,presentation):
                     negative=base.mark_text(align='right',dx=-6,fontSize=12,color='#263746').encode(**encoding,text='display_value:N').transform_filter('isValid(datum.plot_value) && datum.plot_value < 0')
                     if grouped:negative=negative.encode(yOffset=offset)
                     zero=alt.Chart(pd.DataFrame({'baseline':[0]})).mark_rule(color='#8D989E',strokeWidth=1).encode(x=alt.datum(0))
-                    line_height=max((c.count('\n')+1)*category_line_height+12 for c in categories)
+                    line_height=max((c.count('\n')+1)*category_line_height+14 for c in categories)
                     slot=max(bar_size,label_size)+10
                     group_height=len(shown_names)*slot+20 if grouped else slot
-                    height=max(180,len(categories)*max(36,line_height,group_height))
+                    # Reserve fixed room for the title, numeric axis and padding BEFORE dividing the
+                    # rest into per-category bands; otherwise that overhead is absorbed inside the
+                    # plot area and compresses each band, so tall (multi-line) labels overlap.
+                    axis_overhead=72
+                    height=max(180,axis_overhead+len(categories)*max(40,line_height,group_height))
                     chart=(bars+positive+negative+zero).properties(height=height)
                     note='Values are labeled; missing observations are not zero.'
                 if presentation.get('y_min') is not None:note+=' User-selected numeric axis range: '+str(limits[0])+' to '+str(limits[1])+'.'
