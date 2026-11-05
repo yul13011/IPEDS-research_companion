@@ -112,7 +112,17 @@ def semantic_check(proposal):
         if not any(periods):blocks.append(f"{t['table_name']}: source reporting-period evidence is missing.")
         basis=p['requested_time']['basis']
         period=' '.join(periods).lower()
-        if basis=='cohort':blocks.append('Cohort-to-release alignment needs a source-specific mapping; no release-year substitution was made.')
+        if basis=='cohort':
+            # Outcome-measures (and other cohort) releases report a fixed entering
+            # cohort under a release/reporting year (e.g. DRVOM2023 reports the
+            # 2015-16 cohort's status as of 2023). Reading the release whose own
+            # reporting period carries the year the user named is a direct lookup,
+            # not a release-year substitution. Block only when no named year is
+            # covered by the selected source period — a true cohort-entry year
+            # that still needs a source-specific mapping.
+            explicit=re.findall(r'\b(?:19|20)\d{2}\b',question)
+            if not explicit or not any(y in period for y in explicit):
+                blocks.append('Cohort-to-release alignment needs a source-specific mapping; no release-year substitution was made.')
         if basis=='fall' and 'fall' not in period:blocks.append(f"{t['table_name']}: requested fall period does not match the source period.")
         if basis=='fiscal' and not re.search(r'fiscal|fy\b',period):blocks.append(f"{t['table_name']}: fiscal-year alignment needs review.")
         if basis=='academic' and not re.search(r'academic|\d{4}.\d{2,4}|july 1.*june 30',period):blocks.append(f"{t['table_name']}: academic-year alignment needs review.")
