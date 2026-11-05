@@ -245,6 +245,7 @@ RULES=[
     (r'F\d{4}_F[123]A?', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2023/finance/package_5_12.pdf'),
     (r'COST[12]_\d{4}\w*', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2024/cost%20i/package_11_73.pdf'),
     (r'DRVCOST\d{4}', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2024/cost%20i/package_11_73.pdf'),
+    (r'DRVIC\d{4}', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2024/cost%20i/package_11_73.pdf'),
     (r'IC\d{4}_AY', 'https://ceds.ed.gov/connectReport.aspx?uid=31034'),
     (r'SFA\d{4}(?:_P[12])?', 'https://nces.ed.gov/ipeds/use-the-data/download-survey-material/2024/student%20financial%20aid/package_7_20.pdf'),
 ]
