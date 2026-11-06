@@ -43,6 +43,9 @@ for thousands of institutions — spanning every survey component. Examples:
 
 ## How it works
 
+In one line: a **Streamlit app over read-only SQLite copies of IPEDS, where Claude *plans* but
+deterministic Python *executes*** — which is what keeps every answer reproducible and auditable.
+
 The planner uses a **typed-plan engine**: the language model proposes a *typed, source-bound plan*
 (which institutions, which release years, which exact IPEDS variables, what calculation) — it does
 **not** emit raw SQL. Deterministic code then validates that plan against the metadata catalog and
@@ -54,15 +57,25 @@ Two answer routes:
    salaries, …) that run deterministically, fast, with no model call.
 2. **Catalog planner** — for everything else, the model works in two steps. A **resolver**
    (**Haiku 5.5**) first classifies the request — answer it, ask a clarifying question, decline an
-   out-of-scope ask, or treat it as a follow-up to the previous answer — and then a planner
+   out-of-scope ask, treat it as a follow-up to the previous answer, or just hold a conversation —
+   and then a planner
    (**Haiku 5.5 / Sonnet 5.5**) builds the typed plan against the >500-table catalog. Both go
    through the same deterministic validator and executor.
 
 Once results are validated, a separate pass (**Sonnet 5.5**) writes the plain-language summary shown
 above each answer, grounded in the retrieved numbers; it is UI-only and never on the evaluation path.
 
-**Stack:** Python · Streamlit · SQLite · Anthropic API (Claude). Deployed on Render; the data is
-served from a Hugging Face dataset. See [DEPLOYMENT_PLAN.md](DEPLOYMENT_PLAN.md).
+**Stack:**
+- **Python 3.11+ · Streamlit** — the web app and UI.
+- **SQLite** — read-only, per-release IPEDS databases plus a metadata catalog; no external database
+  server.
+- **Anthropic Claude API** — **Haiku 5.5** for intent resolution and most planning, **Sonnet 5.5**
+  for harder plans and the plain-language summary.
+- **Hugging Face dataset** — ships the ~3.1 GB of databases, pulled to the host's disk on first boot.
+- **Render** — always-on web hosting.
+- **Google Sheets** (via gspread) — optional, anonymous question logging.
+
+See [DEPLOYMENT_PLAN.md](DEPLOYMENT_PLAN.md) for the deployment runbook.
 
 ## Data scope
 
