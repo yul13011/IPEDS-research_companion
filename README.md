@@ -23,11 +23,16 @@ for thousands of institutions — spanning every survey component. Examples:
 - **Graduation** — *"What was the six-year graduation rate for the 2018 cohort?"*, with subgroups
   (gender, Pell, nonresident).
 - **Completions** — degrees awarded, by level and program.
+- **Rankings & superlatives** — *"Which Massachusetts college enrolls the most undergraduates?"*,
+  highest/lowest on a measure across a group of institutions.
 - **National aggregates** — *"How many bachelor's degrees were awarded nationally in 2023?"*,
   total U.S. enrollment, institution counts.
 - Plus financial aid, faculty & staff salaries, institutional finance, and academic libraries.
 
 **How it behaves, by design:**
+- **Explains in plain language** — every answer opens with a short, plain-English summary of the
+  finding (a yes/no, a figure, who's on a list), written from the retrieved numbers and shown above
+  the table and sources.
 - **Asks before guessing** — clarifies ambiguous institutions ("did you mean U.S. nonresident, not
   all international students?") and ambiguous measures, rather than inventing an answer.
 - **Never fabricates** — suppressed or missing values are reported as *"not reported,"* never zero.
@@ -47,9 +52,14 @@ validates the results before anything is shown.
 Two answer routes:
 1. **Reviewed measures** — a curated set of source-bound measures (admission rate, graduation rate,
    salaries, …) that run deterministically, fast, with no model call.
-2. **Catalog planner** — for everything else, a two-stage model pass (**Haiku 5.5** interprets the
-   question, **Sonnet 5.5** plans against the >500-table catalog), always validated by the same
-   deterministic executor.
+2. **Catalog planner** — for everything else, the model works in two steps. A **resolver**
+   (**Haiku 5.5**) first classifies the request — answer it, ask a clarifying question, decline an
+   out-of-scope ask, or treat it as a follow-up to the previous answer — and then a planner
+   (**Haiku 5.5 / Sonnet 5.5**) builds the typed plan against the >500-table catalog. Both go
+   through the same deterministic validator and executor.
+
+Once results are validated, a separate pass (**Sonnet 5.5**) writes the plain-language summary shown
+above each answer, grounded in the retrieved numbers; it is UI-only and never on the evaluation path.
 
 **Stack:** Python · Streamlit · SQLite · Anthropic API (Claude). Deployed on Render; the data is
 served from a Hugging Face dataset. See [DEPLOYMENT_PLAN.md](DEPLOYMENT_PLAN.md).
@@ -76,6 +86,13 @@ served from a Hugging Face dataset. See [DEPLOYMENT_PLAN.md](DEPLOYMENT_PLAN.md)
 - **[evaluations/eval_harness.py](evaluations/eval_harness.py)** — runs those questions through the
   real pipeline, recomputes ground truth from the live data (never hardcoded), and reports pass/fail
   as a regression suite. The `prototype/tests/` unit tests guard the code logic alongside it.
+- **[evaluations/run_eval_set.py](evaluations/run_eval_set.py)** — a curated end-to-end regression
+  set (`eval_set.py`) run through the chosen engine, with dated scorecards checked into
+  `evaluations/` (`eval_set_scorecard_v2_*.md`).
+- **Deterministic benchmarks** — `run_yale_benchmarks.py` (a Yale regression) and
+  `run_nces_aggregate_benchmarks.py` (national NCES aggregates) test data retrieval directly,
+  bypassing the AI layer; the app's About page reports the latest pass rates (about 95% each as of
+  1 November 2026).
 
 ## Running locally
 
@@ -97,6 +114,10 @@ Live on **Render** (always-on web service). The ~3.1 GB of data is not in the re
 Hugging Face **dataset** and is pulled once to the service's persistent disk on first boot
 (`prototype/data_bootstrap.py`), after which SQLite is read locally. Full runbook:
 [DEPLOYMENT_PLAN.md](DEPLOYMENT_PLAN.md).
+
+Typed questions and their outcomes are optionally logged to a Google Sheet for analytics
+(`prototype/question_log.py`): just the question text, a session id, and derived metadata — no
+personal data. Logging is fire-and-forget and a silent no-op when unconfigured.
 
 ## More documentation
 
@@ -142,7 +163,9 @@ full rebuild.
 
 This is a **demonstration**, not a validated reporting tool. Figures should be checked against the
 official IPEDS sources (College Navigator / the IPEDS Data Center) before any decision or
-publication; 2024–25 is provisional. The application code is provided as-is, and the underlying data
+publication; 2024–25 is provisional. Some topics are intentionally out of scope and point you
+elsewhere — e.g. student-debt and loan-default questions deflect to the U.S. Department of
+Education's College Scorecard. The application code is provided as-is, and the underlying data
 is public U.S. federal data from the National Center for Education Statistics.
 
 ## License
