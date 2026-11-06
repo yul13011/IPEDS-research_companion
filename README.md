@@ -8,6 +8,18 @@ retrieves it, and returns an answer with the exact source definitions, a table, 
 a chart. An Anthropic-backed planner interprets each question, but it **never writes or runs SQL
 directly**: it proposes a typed, source-bound plan that deterministic code validates and executes.
 
+Why split it this way? The model does what it is good at — interpreting an ambiguous, plain-English
+question — while deterministic code does what must be trusted: producing the numbers. Because every
+figure is bound to an exact IPEDS variable and returned by a validated, read-only query, answers are:
+
+- **Reproducible** — the same question yields the same result; there is no stochastic SQL.
+- **Auditable** — each value traces to a named source table, variable, and reporting period.
+- **Safe** — the model cannot invent a table, fabricate a value, or run arbitrary SQL; the validator
+  rejects anything the catalog does not back, and missing data is reported as *"not reported,"* never
+  guessed.
+- **Testable** — a deterministic data path can be regression-tested, which is what the benchmarks
+  below certify.
+
 ---
 
 ## What it does
