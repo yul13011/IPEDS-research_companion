@@ -65,6 +65,10 @@ Two answer routes:
 Once results are validated, a separate pass (**Sonnet 5.5**) writes the plain-language summary shown
 above each answer, grounded in the retrieved numbers; it is UI-only and never on the evaluation path.
 
+The full request flow — purple steps use an LLM, teal steps are deterministic:
+
+![Request flow: a question is resolved for intent, planned by a deterministic reviewed-measures route or an LLM catalog-planner loop, validated by two gates, run as a bounded read-only query, and summarized in natural language before the answer](assets/request-flow.svg)
+
 **Stack:**
 - **Python 3.11+ · Streamlit** — the web app and UI.
 - **SQLite** — read-only, per-release IPEDS databases plus a metadata catalog; no external database
