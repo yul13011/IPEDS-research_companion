@@ -343,6 +343,16 @@ def render_answer(answer,key,compact=True):
             if answer.get('model_policy'):st.json(answer['model_policy'],expanded=False)
 
 
+def render_topic_detail(topic,prefix):
+    with st.container(border=True,key='topic_details_'+prefix):
+        heading,close=st.columns([20,1],vertical_alignment='center')
+        heading.subheader(topic['title'] if topic['title'].casefold()==topic['subtitle'].casefold() else topic['title']+' · '+topic['subtitle'])
+        close.button('×',key='close_topic_'+prefix,on_click=close_topic,help='Close topic')
+        st.write(topic['description']);st.info(topic['scope'])
+        example_buttons(topic,'home_'+prefix)
+        st.button('Ask your own question about '+topic['subtitle'].lower(),key='home_own_'+prefix,on_click=navigate)
+
+
 def render_home():
     s=st.session_state
     st.title('Discover what college data can tell you')
@@ -351,21 +361,20 @@ def render_home():
     st.caption('10 annual releases · 2015–16 Final through 2024–25 Provisional')
     st.subheader('Start with a topic');st.write('Choose a topic to learn what is available and find questions to try.')
     content=topics()
+    # The detail panel renders in two positions: inside the open card's column
+    # (shown on mobile, so it sits directly under the tapped card in its normal
+    # place) and full-width after the row (shown on laptop, unchanged). CSS shows
+    # only the copy that fits the screen width.
+    st.html('<style>@media(max-width:750px){.st-key-topic_details_d{display:none!important}}@media(min-width:751px){.st-key-topic_details_m{display:none!important}}</style>')
     for start in [0,3]:
         for col,topic in zip(st.columns(3),content[start:start+3]):
             with col:
                 with st.container(border=True,key='home_card_'+topic['id'],height='stretch' if start==0 else 'content'):
                     st.subheader(topic['icon']+' '+topic['title']);st.caption(topic['subtitle']);st.write(topic['summary'])
                     st.button('Explore topic →',key='topic_'+topic['id'],on_click=open_topic,args=(topic['id'],))
+                if s.topic_open and s.topic_id==topic['id']:render_topic_detail(topic,'m')
         if s.topic_open and s.topic_id in [t['id'] for t in content[start:start+3]]:
-            topic=next(t for t in content if t['id']==s.topic_id)
-            with st.container(border=True,key='topic_details'):
-                heading,close=st.columns([20,1],vertical_alignment='center')
-                heading.subheader(topic['title'] if topic['title'].casefold()==topic['subtitle'].casefold() else topic['title']+' · '+topic['subtitle'])
-                close.button('×',key='close_topic',on_click=close_topic,help='Close topic')
-                st.write(topic['description']);st.info(topic['scope'])
-                example_buttons(topic,'home')
-                st.button('Ask your own question about '+topic['subtitle'].lower(),key='home_own',on_click=navigate)
+            render_topic_detail(next(t for t in content if t['id']==s.topic_id),'d')
     st.caption('IPEDS is collected by the National Center for Education Statistics. Explore all supplied topics; Ask & Analyze can answer additional questions when their source definitions and calculations can be verified.')
 
 
@@ -659,7 +668,22 @@ def main():
       .st-key-chat_workspace{height:100%;min-height:0}
       [data-testid="stColumn"]:has(.st-key-ideas_panel),[data-testid="stColumn"]:has(.st-key-tools_panel){height:100%;min-height:0;overflow-y:auto}
     }
-    @media(max-width:750px){.block-container{padding-left:1rem;padding-right:1rem}.brand{font-size:19px}}''' + page_styles + '</style>',unsafe_allow_html=True)
+    @media(max-width:750px){.block-container{padding-left:1rem;padding-right:1rem}.brand{font-size:19px}}
+    /* Mobile: the three panels stack in source order (ideas, chat, tools), which
+       buries the conversation below the tall "Need ideas?" panel. Reorder so the
+       chat column comes first, and let the chat area size to its content instead
+       of reserving desktop viewport-height, so the composer and answers are not
+       pushed below a tall empty box. Desktop (>=751px) layout is unaffected. */
+    @media(max-width:750px){
+      [data-testid="stColumn"]:has(.st-key-chat_workspace){order:-1}
+      [data-testid="stColumn"]:has(.st-key-tools_panel){order:1}
+      .st-key-chat_workspace{height:auto!important;min-height:0!important}
+      .st-key-chat_workspace>[data-testid="stLayoutWrapper"]:has(>.st-key-conversation_messages){flex:0 1 auto!important;height:auto!important}
+      /* The transcript is a size-contained inner scrollbox on desktop; on mobile
+         let it flow in the page (content height, page scroll) so answers aren't
+         clipped to a zero-height box. */
+      .st-key-chat_workspace .st-key-conversation_messages{height:auto!important;container-type:normal;overflow:visible!important}
+    }''' + page_styles + '</style>',unsafe_allow_html=True)
     if not (DATA/'metadata_catalog.sqlite').exists():st.error('Local metadata catalog missing. See ingestion/README.md.');st.stop()
     s=st.session_state
     defaults={'main_page':'Explore IPEDS','app_banner_open':True,'transcript_revision':0,'history':[],'last_plan':None,'topic_id':'admissions','topic_open':False,'active_tool':None,'pending_action':None,'ideas_epoch':0,'extract_step':0,'extract_ids':[],'extract_metrics':[],'extract_years':[2024],'extract_time_basis':'observation','extract_year_mode':'One year','extract_result':None,'model_choice':DEFAULT_STRATEGY,'use_ai':bool(api_key()),'chart_results':[],'definition_seed':'','session_id':str(uuid.uuid4())}
