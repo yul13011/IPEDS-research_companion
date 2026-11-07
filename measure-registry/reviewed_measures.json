@@ -5596,7 +5596,7 @@
       "version": 1,
       "review_status": "implementation_reviewed",
       "owner_approval": "not_requested",
-      "definition": "Awards July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), bachelor level (5), first major (1); second majors are not extra degrees. Program-level CIP trends are outside this mapping.",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
       "annual": {
         "2015": {
           "release": "IPEDS_2015-16_Final",
@@ -5874,6 +5874,3774 @@
               "record_id": 148596,
               "code_value": "5",
               "value_label": "Bachelor's degree"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "masters_degrees",
+      "label": "Master's degrees awarded",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 7,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10300,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27161,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 33480,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 48340,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72670,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86840,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102867,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117211,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133186,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148597,
+              "code_value": "7",
+              "value_label": "Master's degree"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "associates_degrees",
+      "label": "Associate's degrees awarded",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 3,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10298,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27159,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 33138,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 47989,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72668,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86838,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102865,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117209,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133184,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148595,
+              "code_value": "3",
+              "value_label": "Associate's degree"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "doctoral_research_degrees",
+      "label": "Doctoral degrees awarded (research/scholarship)",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 17,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10301,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27162,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 33704,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 48573,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72671,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86841,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102868,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117212,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133187,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148598,
+              "code_value": "17",
+              "value_label": "Doctor's degree - research/scholarship"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "doctoral_professional_degrees",
+      "label": "Doctoral degrees awarded (professional practice)",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 18,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10302,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27163,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 33760,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 48625,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72672,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86842,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102869,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117213,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133188,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148599,
+              "code_value": "18",
+              "value_label": "Doctor's degree - professional practice"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "total_degrees",
+      "label": "Degrees awarded, all levels (associate through doctoral)",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 12,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10297,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27158,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 32920,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 47765,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72667,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86837,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102864,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117208,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133183,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148594,
+              "code_value": "12",
+              "value_label": "Degrees total"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "total_awards",
+      "label": "Awards conferred, degrees and certificates (all levels)",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 15,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10296,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27157,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 32671,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 47510,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72666,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86836,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102863,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117207,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133182,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148593,
+              "code_value": "15",
+              "value_label": "Degrees/certificates total"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "doctoral_other_degrees",
+      "label": "Doctoral degrees awarded (other)",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 19,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10303,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27164,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 33846,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 48713,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72673,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86843,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102870,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117214,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133189,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148600,
+              "code_value": "19",
+              "value_label": "Doctor's degree - other"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "certificate_undergraduate_lt1yr",
+      "label": "Certificates awarded (undergraduate, under 1 year)",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 1,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10305,
+              "code_value": "1",
+              "value_label": "Award of less than 1 academic year"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27166,
+              "code_value": "1",
+              "value_label": "Award of less than 1 academic year"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 34044,
+              "code_value": "1",
+              "value_label": "Award of less than 1 academic year"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 48929,
+              "code_value": "1",
+              "value_label": "Award of less than 1 academic year"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72675,
+              "code_value": "1",
+              "value_label": "Award of less than 1 academic year"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86845,
+              "code_value": "1",
+              "value_label": "Certificates of less than 1 year"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102872,
+              "code_value": "1",
+              "value_label": "Certificates of less than 1 year"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117216,
+              "code_value": "1",
+              "value_label": "Certificates of less than 1 year"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133191,
+              "code_value": "1",
+              "value_label": "Certificates of less than 1 year"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148602,
+              "code_value": "1",
+              "value_label": "Certificates of less than 1 year"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "certificate_undergraduate_1to2yr",
+      "label": "Certificates awarded (undergraduate, 1 to 2 years)",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 2,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10306,
+              "code_value": "2",
+              "value_label": "Award of at least 1 but less than 2 academic years"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27167,
+              "code_value": "2",
+              "value_label": "Award of at least 1 but less than 2 academic years"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 34069,
+              "code_value": "2",
+              "value_label": "Award of at least 1 but less than 2 academic years"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 48957,
+              "code_value": "2",
+              "value_label": "Award of at least 1 but less than 2 academic years"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72676,
+              "code_value": "2",
+              "value_label": "Award of at least 1 but less than 2 academic years"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86848,
+              "code_value": "2",
+              "value_label": "Certificates of at least 1 but less than 2 years"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102875,
+              "code_value": "2",
+              "value_label": "Certificates of at least 1 but less than 2 years"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117219,
+              "code_value": "2",
+              "value_label": "Certificates of at least 1 but less than 2 years"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133194,
+              "code_value": "2",
+              "value_label": "Certificates of at least 1 but less than 2 years"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148605,
+              "code_value": "2",
+              "value_label": "Certificates of at least 1 but less than 2 years"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "certificate_undergraduate_2to4yr",
+      "label": "Certificates awarded (undergraduate, 2 to 4 years)",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 4,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10307,
+              "code_value": "4",
+              "value_label": "Award of at least 2 but less than 4 academic years"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27168,
+              "code_value": "4",
+              "value_label": "Award of at least 2 but less than 4 academic years"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 34090,
+              "code_value": "4",
+              "value_label": "Award of at least 2 but less than 4 academic years"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 48981,
+              "code_value": "4",
+              "value_label": "Award of at least 2 but less than 4 academic years"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72677,
+              "code_value": "4",
+              "value_label": "Award of at least 2 but less than 4 academic years"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86849,
+              "code_value": "4",
+              "value_label": "Certificates of at least 2 but less than 4 years"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102876,
+              "code_value": "4",
+              "value_label": "Certificates of at least 2 but less than 4 years"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117220,
+              "code_value": "4",
+              "value_label": "Certificates of at least 2 but less than 4 years"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133195,
+              "code_value": "4",
+              "value_label": "Certificates of at least 2 but less than 4 years"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148606,
+              "code_value": "4",
+              "value_label": "Certificates of at least 2 but less than 4 years"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "certificate_postbaccalaureate",
+      "label": "Postbaccalaureate certificates awarded",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 6,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10309,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27170,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 34125,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 49026,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72679,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86851,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102878,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117222,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133197,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148608,
+              "code_value": "6",
+              "value_label": "Postbaccalaureate certificate"
+            },
+            {
+              "record_id": 146439,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 144680,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        }
+      }
+    },
+    {
+      "id": "certificate_postmasters",
+      "label": "Post-master's certificates awarded",
+      "family": "completions",
+      "unit": "degrees",
+      "columns": [
+        "CTOTALT",
+        "AWLEVEL",
+        "CIPCODE",
+        "MAJORNUM"
+      ],
+      "expression": "CTOTALT",
+      "filters": {
+        "AWLEVEL": 8,
+        "CIPCODE": "99",
+        "MAJORNUM": 1
+      },
+      "version": 1,
+      "review_status": "implementation_reviewed",
+      "owner_approval": "not_requested",
+      "definition": "Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); \"degrees total\" (12) is the sum of all degree levels, and \"degrees and certificates total\" (15) adds certificates. Program-level (CIP) trends are outside this mapping.",
+      "annual": {
+        "2015": {
+          "release": "IPEDS_2015-16_Final",
+          "table": "C2015_A",
+          "definition_record_ids": [
+            13214,
+            13237,
+            13236,
+            12935
+          ],
+          "evidence_sha256": "96849d41cde2e60efc0159c4f60c081eb468440626cb0452a7cce95ebbefc624",
+          "code_evidence": [
+            {
+              "record_id": 10310,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
+            },
+            {
+              "record_id": 8404,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 8402,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2016": {
+          "release": "IPEDS_2016-17_Final",
+          "table": "C2016_A",
+          "definition_record_ids": [
+            15478,
+            15512,
+            15511,
+            15469
+          ],
+          "evidence_sha256": "93e58237db4f048df5aa47d8e2cd962808dce43d81f803e2c2b8ca40ca95bba8",
+          "code_evidence": [
+            {
+              "record_id": 27171,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
+            },
+            {
+              "record_id": 25265,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 25263,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2017": {
+          "release": "IPEDS_2017-18_Final",
+          "table": "C2017_A",
+          "definition_record_ids": [
+            30973,
+            31007,
+            31006,
+            30964
+          ],
+          "evidence_sha256": "fcaba1795bd37ba6c3ab4540657b7663f007c8672183f6d7cc68227b875132db",
+          "code_evidence": [
+            {
+              "record_id": 34138,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
+            },
+            {
+              "record_id": 33808,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 32670,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2018": {
+          "release": "IPEDS_2018-19_Final",
+          "table": "C2018_A",
+          "definition_record_ids": [
+            45788,
+            45848,
+            45847,
+            45779
+          ],
+          "evidence_sha256": "0564dc91d6497dcb1821072e676518fccf276760ea405488ec55aefb46da8c44",
+          "code_evidence": [
+            {
+              "record_id": 49041,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
+            },
+            {
+              "record_id": 48670,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 47509,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2019": {
+          "release": "IPEDS_2019-20_Final",
+          "table": "C2019_A",
+          "definition_record_ids": [
+            60893,
+            60283,
+            60282,
+            60884
+          ],
+          "evidence_sha256": "5bcd0048d2e5440cb0208d02b7a63b68defe7f2e1c5fce7efc2e31bbe3e66322",
+          "code_evidence": [
+            {
+              "record_id": 72680,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
+            },
+            {
+              "record_id": 70774,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 70772,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2020": {
+          "release": "IPEDS_2020-21_Final",
+          "table": "C2020_A",
+          "definition_record_ids": [
+            75827,
+            75959,
+            75958,
+            75818
+          ],
+          "evidence_sha256": "fa1281dbd8445b39865b1bd3c6959c7994ace4e3d9b06de55638e0a56cc58ed1",
+          "code_evidence": [
+            {
+              "record_id": 86852,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
+            },
+            {
+              "record_id": 84683,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 84681,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2021": {
+          "release": "IPEDS_2021-22_Final",
+          "table": "C2021_A",
+          "definition_record_ids": [
+            90658,
+            90778,
+            90777,
+            90649
+          ],
+          "evidence_sha256": "e61776e05ba4c0d96e6ecd0739cf57a362380ee6832cc68ab4b81894940eac7b",
+          "code_evidence": [
+            {
+              "record_id": 102879,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
+            },
+            {
+              "record_id": 100709,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 98950,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2022": {
+          "release": "IPEDS_2022-23_Final",
+          "table": "C2022_A",
+          "definition_record_ids": [
+            105077,
+            105100,
+            105099,
+            105068
+          ],
+          "evidence_sha256": "4f48b23ca38819f1cb94774d255ef64fa74eb0074a3b5a07bb9708df264be4d4",
+          "code_evidence": [
+            {
+              "record_id": 117223,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
+            },
+            {
+              "record_id": 115053,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 115051,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2023": {
+          "release": "IPEDS_2023-24_Final",
+          "table": "C2023_A",
+          "definition_record_ids": [
+            121044,
+            121043,
+            121041,
+            121042
+          ],
+          "evidence_sha256": "d1ca9d257805b93126414a86b4ccc21e4deeef5b46644e89271228aace9f11c2",
+          "code_evidence": [
+            {
+              "record_id": 133198,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
+            },
+            {
+              "record_id": 132104,
+              "code_value": "99",
+              "value_label": "Grand total"
+            },
+            {
+              "record_id": 131026,
+              "code_value": "1",
+              "value_label": "First major"
+            }
+          ],
+          "location_overrides": []
+        },
+        "2024": {
+          "release": "IPEDS_2024-25_Provisional",
+          "table": "C2024_A",
+          "definition_record_ids": [
+            136602,
+            136625,
+            136624,
+            136593
+          ],
+          "evidence_sha256": "5f6b6d4a5c0a4dd495492e9a914fa8b07724006839c9b2484dcdc5d06bf06bd3",
+          "code_evidence": [
+            {
+              "record_id": 148609,
+              "code_value": "8",
+              "value_label": "Post-master's certificate"
             },
             {
               "record_id": 146439,

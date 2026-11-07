@@ -16,16 +16,50 @@ def plain_ids(question):
     """Exact inverse for legacy deterministic vocabularies; models keep names."""
     from .workflows import institution_index
     index=institution_index()
-    for uid in re.findall(r'\(UNITID (\d{6})\)',question):
+    for uid in set(re.findall(r'(?<!\d)(\d{6})(?!\d)',question)):
         item=index.get(int(uid))
-        if item:
-            question=question.replace(item['name']+' (UNITID '+uid+')',uid)
+        if not item:continue
+        # Collapse '<official name> (… UNITID NNNNNN …)' to the bare id, tolerating
+        # a city/state or other note sharing the parenthetical. Anchoring on the
+        # official name keeps the rest of the question text intact.
+        for name in sorted(item['names'],key=len,reverse=True):
+            question=re.sub(re.escape(name)+r'\s*\([^()]*?'+uid+r'[^()]*?\)',uid,question,flags=re.I)
     return question
-SAFE_ALIASES={'yale':130794,'harvard':166027,'princeton':186131,'dartmouth':182670,
-              'upenn':215062,'mit':166683,'ucla':110662}
+# Single-institution nicknames (Yale, UMich, Georgia Tech, …) now live in ONE
+# place: INSTITUTION_SHORTCUTS in catalog.py. It is exposed there as two derived
+# views this module imports where needed: ALIASES (int UNITID → auto-resolving
+# shortcut) and NICKNAME_SEARCH (str phrase → dropdown-only colloquial form).
+# Named multi-school groups (Ivy League, Seven Sisters) live in catalog.GROUPS.
+# Generic words carry no identity: dropped before the all-tokens match so an
+# extra qualifier ("main campus") or filler does not exclude the right school.
+GENERIC={'university','college','institute','school','of','the','at','main','campus','a','and'}
+# Common short forms of a name token, expanded before matching.
+TOKEN_SYNONYMS={'tech':'technology','poly':'polytechnic','st':'saint','mt':'mount'}
 
 def normalized(text):
     return re.sub(r'[^a-z0-9]+',' ',unicodedata.normalize('NFKD',text).encode('ascii','ignore').decode().lower()).strip()
+
+_ANNOTATED=re.compile(r'(.+?)\s*\(([^()]*)\)\s*',re.S)
+def annotated_id(text):
+    """Return (name_part, unitid) when the text carries one explicit 6-digit
+    UNITID inside a trailing parenthetical, else None. Tolerates a location or
+    other descriptive text sharing those parentheses (e.g. a conversational
+    rewrite like 'Marian University (Indianapolis, Indiana; UNITID 151786)')."""
+    m=_ANNOTATED.fullmatch(text.strip())
+    if not m:return None
+    ids=set(re.findall(r'(?<!\d)(\d{6})(?!\d)',m[2]))
+    if len(ids)!=1:return None
+    return m[1].strip(),int(next(iter(ids)))
+
+def _name_consistent(name_part,item):
+    """An explicit UNITID is authoritative; accept it when the stated name is an
+    official name or extends one with trailing location/campus qualifiers.
+    A different institution's name paired with this ID stays unresolved."""
+    provided=normalized(name_part).split()
+    for n in item['names']:
+        official=normalized(n).split()
+        if official and provided[:len(official)]==official:return True
+    return False
 
 def complete_mentions(question,found):
     """A short alias must not swallow an explicitly typed school/campus suffix."""
@@ -34,7 +68,7 @@ def complete_mentions(question,found):
     found=list(found)
     # These reviewed aliases resolve uniquely. Recover literal omissions just
     # as we already recover complete directory names; never add fuzzy schools.
-    for alias in SAFE_ALIASES:
+    for alias in ALIASES:
         for match in re.finditer(r'(?<!\w)'+re.escape(alias)+r'(?!\w)',question,re.I):
             found.append(match.group())
     # Original, complete directory names outrank incomplete model extraction.
@@ -45,7 +79,7 @@ def complete_mentions(question,found):
             if name.casefold() not in folded:continue
             match=re.search(r'(?<!\w)'+re.escape(name)+r'(?!\w)',question,re.I)
             if match:found.append(match.group())
-    for alias in set(ALIASES)|set(SAFE_ALIASES):
+    for alias in set(ALIASES):
         for m in re.finditer(r'(?<!\w)'+re.escape(alias)+r'\s+(?:college|university|institute|school|campus)\b',question,re.I):
             found.append(m.group())
     expanded=[]
@@ -87,18 +121,26 @@ def mentions(question,use_model,model):
     if re.fullmatch(r'(?:show|as|use)\s+percentages?[?.!]?',question.strip(),re.I):return [],None
     # Offline names are literal matches, with common possessive/at/now forms as a
     # fallback for misspellings. General extraction requires the AI setting.
-    from .catalog import GROUPS
-    possible=set(ALIASES)|set(SAFE_ALIASES)|{name.casefold() for name in GROUPS}
+    from .catalog import GROUPS,NICKNAME_SEARCH
+    possible=set(ALIASES)|set(NICKNAME_SEARCH)|{name.casefold() for name in GROUPS}
     possible.update(n for v in institution_index().values() for n in v['names'])
     found=sorted([n for n in possible if re.search(r'(?<!\w)'+re.escape(n)+r'(?!\w)',question,re.I)],key=len,reverse=True)
     found=[n for n in found if not any(n.lower()!=m.lower() and n.lower() in m.lower() for m in found)]
     unknown=re.findall(r"(?:show\s+|at\s+|now\s+|for\s+)([^?;]+?)(?:['’]s\b|\s+(?:undergrad|graduation|enrollment|applicants|tuition)\b|$)",question,re.I)
     return complete_mentions(question,found+[n.strip() for n in unknown if not any(f.lower() in n.lower() for f in found)]),None
 
+def _acronym(name):
+    """First letters of the significant words — lets NYU, MIT, UCLA, USC… match."""
+    return ''.join(w[0] for w in normalized(name).split() if w not in {'of','the','and','at'})
+
 def candidates(text):
     from .workflows import institution_index
-    q=normalized(text);ranked=[]
-    def distinctive(s):return ' '.join(w for w in s.split() if w not in {'university','college','institute','school','of','the','at'})
+    raw=normalized(text)
+    from .catalog import NICKNAME_SEARCH
+    # Expand a known colloquial name only to seed this dropdown; the user still
+    # picks an exact UNITID, so a broad or imperfect expansion cannot mislead.
+    q=normalized(NICKNAME_SEARCH.get(raw,text));ranked=[]
+    def distinctive(s):return ' '.join(TOKEN_SYNONYMS.get(w,w) for w in s.split() if w not in GENERIC)
     def related(a,b):
         if a==b:return True
         if min(len(a),len(b))<4 or abs(len(a)-len(b))>1:return False
@@ -111,29 +153,33 @@ def candidates(text):
         short,long=sorted((a,b),key=len)
         return any(short==long[:i]+long[i+1:] for i in range(len(long)))
     required=distinctive(q).split()
+    acq=raw.replace(' ','');acq_shaped=acq.isalpha() and 2<=len(acq)<=6
     for uid,item in institution_index().items():
         scores=[]
         for name in item['names']:
             n=normalized(name);full=normalized(name+' '+item['city']+' '+item['state'])
-            if not required or not all(any(related(token,target) for target in distinctive(full).split()) for token in required):continue
-            score=1 if q==n else .96 if q and q in n else .90 if all(t in full.split() for t in q.split()) else SequenceMatcher(None,q,n).ratio()
+            acro=acq_shaped and acq==_acronym(name)
+            name_match=bool(required) and all(any(related(token,target) for target in distinctive(full).split()) for token in required)
+            if not name_match and not acro:continue
+            score=1 if q==n else .96 if q and q in n else .95 if acro else .90 if all(t in full.split() for t in q.split()) else SequenceMatcher(None,q,n).ratio()
             if distinctive(q) and distinctive(q)==distinctive(n):score=max(score,.93)
             scores.append(score)
         score=max(scores,default=0)
-        if q==str(uid):score=1
+        if raw==str(uid):score=1
         if score>=.70:ranked.append((score,uid))
     return [uid for _,uid in sorted(ranked,key=lambda x:(-x[0],x[1]))[:12]]
 
 def resolve(text,choices):
     from .workflows import institution_index
+    from .catalog import SAFE_ALIASES
     index=institution_index();key=normalized(text)
-    annotation=re.fullmatch(r'(.+?)\s+\((?:UNITID\s+)?(\d{6})\)',text.strip(),re.I)
+    annotation=annotated_id(text)
     if annotation:
-        uid=int(annotation[2]);item=index.get(uid)
+        name_part,uid=annotation;item=index.get(uid)
         # Normalize harmless annotation spelling only after independently
         # checking the complete official name against the stated directory ID.
         # A conflicting name/ID or unverified college/campus remains unresolved.
-        return uid if item and any(normalized(annotation[1])==normalized(n) for n in item['names']) else None
+        return uid if item and _name_consistent(name_part,item) else None
     exact=[uid for uid,item in index.items() if text.strip()==str(uid) or any(text.strip().casefold()==n.casefold() for n in item['names'])]
     if len(exact)==1:return exact[0]
     # Ignore harmless spelling presentation, while retaining every name token

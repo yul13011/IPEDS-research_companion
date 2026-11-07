@@ -24,8 +24,8 @@ class Plan:
 
     def validate(self):
         specs=measures()
-        if not isinstance(self.metrics,list) or not 1<=len(self.metrics)<=12 or any(m not in specs for m in self.metrics):
-            raise ValueError('Choose 1–12 reviewed measures for this executor. Other source fields use catalog-driven proposed plans; this route cannot execute them.')
+        if not isinstance(self.metrics,list) or not 1<=len(self.metrics)<=16 or any(m not in specs for m in self.metrics):
+            raise ValueError('Choose 1–16 reviewed measures for this executor. Other source fields use catalog-driven proposed plans; this route cannot execute them.')
         if not isinstance(self.institutions,list) or not self.institutions or any(not isinstance(x,str) or not x.strip() for x in self.institutions):
             raise ValueError('Specify an institution or Ivy League; no institution is assumed.')
         if not isinstance(self.years,list) or not 1<=len(self.years)<=10 or any(type(y) is not int for y in self.years):

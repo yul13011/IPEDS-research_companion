@@ -157,9 +157,39 @@ def analytical_context(release, table, variable=None):
     return result
 
 
-ALIASES = {'yale':130794,'harvard':166027,'princeton':186131,'brown':217156,
-           'columbia':190150,'penn':215062,'upenn':215062,'university of pennsylvania':215062,
-           'dartmouth':182670,'cornell':190415}
+# ── Single-institution shortcuts ──────────────────────────────────────────────
+# THE one place to add a school nickname. Map a lowercase nickname to a
+# (value, kind) pair, where kind is one of:
+#   • 'confirm' — value is an int UNITID for ONE unambiguous institution. It
+#     resolves automatically (no dropdown) and is honored on the direct, execution
+#     and offline paths. Use only when the bare nickname can mean nothing else.
+#   • 'alias'   — value is an int UNITID, but the bare word is ambiguous or common
+#     (e.g. "Columbia", "Penn"). It is honored on the execution and offline paths,
+#     where the surrounding question disambiguates, but a bare mention still asks
+#     the user to confirm an exact UNITID (it does NOT auto-resolve).
+#   • 'search'  — value is a str phrase for a colloquial form that only seeds the
+#     disambiguation dropdown; the user always confirms an exact UNITID.
+# For multi-school groups (Ivy League, Seven Sisters, …) use GROUPS below instead.
+INSTITUTION_SHORTCUTS = {
+    'yale':(130794,'confirm'),'harvard':(166027,'confirm'),'princeton':(186131,'confirm'),
+    'dartmouth':(182670,'confirm'),'upenn':(215062,'confirm'),
+    'mit':(166683,'confirm'),'ucla':(110662,'confirm'),
+    'brown':(217156,'alias'),'columbia':(190150,'alias'),'penn':(215062,'alias'),
+    'university of pennsylvania':(215062,'alias'),'cornell':(190415,'alias'),
+    'umich':('university of michigan','search'),'uw madison':('university of wisconsin madison','search'),
+    'uconn':('university of connecticut','search'),'umass':('university of massachusetts','search'),
+    'cal':('university of california berkeley','search'),'berkeley':('university of california berkeley','search'),
+    'ut austin':('university of texas austin','search'),'georgia tech':('georgia institute of technology','search'),
+    'virginia tech':('virginia polytechnic institute','search'),'ole miss':('university of mississippi','search'),
+    'penn state':('pennsylvania state university','search'),
+}
+# Derived views — do not edit directly; add entries to INSTITUTION_SHORTCUTS above.
+# SAFE_ALIASES: nicknames that auto-resolve on the direct path (resolve()).
+# ALIASES:      nicknames honored on the execution/offline paths (auto-resolve + alias).
+# NICKNAME_SEARCH: colloquial forms that only expand the disambiguation dropdown.
+SAFE_ALIASES = {k:v for k,(v,kind) in INSTITUTION_SHORTCUTS.items() if kind=='confirm'}
+ALIASES = {k:v for k,(v,kind) in INSTITUTION_SHORTCUTS.items() if kind in ('confirm','alias')}
+NICKNAME_SEARCH = {k:v for k,(v,kind) in INSTITUTION_SHORTCUTS.items() if kind=='search'}
 IVY = [130794,166027,186131,217156,190150,215062,182670,190415]
 # Barnard, Bryn Mawr, Mount Holyoke, Smith, Vassar, Wellesley (Radcliffe merged into Harvard).
 SEVEN_SISTERS = [189097,211273,166939,167835,197133,168218]
@@ -199,8 +229,8 @@ def institutions(names, year):
     with readonly(annual_path(year)) as db:
         for name in names:
             text = str(name).strip().lower()
-            if re.fullmatch(r'.+\s+\((?:UNITID\s+)?\d{6}\)',str(name).strip(),re.I):
-                from .institution_confirmation import resolve
+            from .institution_confirmation import resolve,annotated_id
+            if annotated_id(str(name)) is not None:
                 confirmed=resolve(str(name),{})
                 if confirmed is not None:text=str(confirmed)
             group = group_ids(text)

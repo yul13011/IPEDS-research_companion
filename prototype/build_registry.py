@@ -36,6 +36,23 @@ def definitions():
             cols=[c for c in dict.fromkeys(re.findall(r'\b[A-Z][A-Z0-9]+\b',expr)) if c != 'NULLIF']+['PSGRTYPE']
             add(prefix+'_graduation_'+suffix,f'{label}: {title}','pell','percent' if suffix=='rate' else unit,cols,expr,{'PSGRTYPE':2},start=2016)
     add('bachelors_degrees',"Bachelor's degrees awarded",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':5,'CIPCODE':'99','MAJORNUM':1})
+    # Sibling award-level measures from the same Completions grand-total (CIPCODE=99, first major) row,
+    # so by-level and total degree questions resolve as reviewed measures instead of the open-ended planner.
+    # AWLEVEL 12 ("Degrees total") equals the sum of degree levels; 15 ("Degrees/certificates total") adds certificates.
+    add('masters_degrees',"Master's degrees awarded",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':7,'CIPCODE':'99','MAJORNUM':1})
+    add('associates_degrees',"Associate's degrees awarded",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':3,'CIPCODE':'99','MAJORNUM':1})
+    add('doctoral_research_degrees',"Doctoral degrees awarded (research/scholarship)",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':17,'CIPCODE':'99','MAJORNUM':1})
+    add('doctoral_professional_degrees',"Doctoral degrees awarded (professional practice)",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':18,'CIPCODE':'99','MAJORNUM':1})
+    add('total_degrees',"Degrees awarded, all levels (associate through doctoral)",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':12,'CIPCODE':'99','MAJORNUM':1})
+    add('total_awards',"Awards conferred, degrees and certificates (all levels)",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':15,'CIPCODE':'99','MAJORNUM':1})
+    add('doctoral_other_degrees',"Doctoral degrees awarded (other)",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':19,'CIPCODE':'99','MAJORNUM':1})
+    # Certificate award levels from the same Completions grand-total row, so the single-school
+    # degrees breakdown can show certificates by level. Their sum = total_awards (15) − total_degrees (12).
+    add('certificate_undergraduate_lt1yr',"Certificates awarded (undergraduate, under 1 year)",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':1,'CIPCODE':'99','MAJORNUM':1})
+    add('certificate_undergraduate_1to2yr',"Certificates awarded (undergraduate, 1 to 2 years)",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':2,'CIPCODE':'99','MAJORNUM':1})
+    add('certificate_undergraduate_2to4yr',"Certificates awarded (undergraduate, 2 to 4 years)",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':4,'CIPCODE':'99','MAJORNUM':1})
+    add('certificate_postbaccalaureate',"Postbaccalaureate certificates awarded",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':6,'CIPCODE':'99','MAJORNUM':1})
+    add('certificate_postmasters',"Post-master's certificates awarded",'completions','degrees',['CTOTALT','AWLEVEL','CIPCODE','MAJORNUM'],'CTOTALT',{'AWLEVEL':8,'CIPCODE':'99','MAJORNUM':1})
     add('undergraduate_grant_percent','Undergraduates awarded grants/scholarships','aid','percent',['UAGRNTN','SCUGRAD','UAGRNTP'],'100.0*UAGRNTN/NULLIF(SCUGRAD,0)',numerator='UAGRNTN',denominator='SCUGRAD')
     return out
 
@@ -46,7 +63,7 @@ NOTES = {
  'enrollment': 'Fall credit headcount as of the official fall reporting date/October 15. Graduate is the IPEDS graduate category, which may differ from a local graduate/professional snapshot.',
  'graduation': 'First-time full-time bachelor-seeking adjusted cohort; bachelor completers within six years / adjusted cohort after exclusions. Observation year is entering cohort + 6. U.S. nonresident is not a general foreign-born category. No custom URM grouping is approved.',
  'pell': 'Bachelor subcohort, PSGRTYPE=2. Non-Pell combines subsidized-loan-only and neither-Pell-nor-subsidized-loan categories. Not available for 2015 outcomes. Observation year = entry + 6.',
- 'completions': 'Awards July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), bachelor level (5), first major (1); second majors are not extra degrees. Program-level CIP trends are outside this mapping.',
+ 'completions': 'Awards conferred July 1 of the preceding year through June 30 of the observation year. All-program total (CIPCODE=99), first major (1); second majors are not counted as extra degrees. Award level: associate (3), bachelor (5), master (7), research/scholarship doctorate (17), professional-practice doctorate (18); "degrees total" (12) is the sum of all degree levels, and "degrees and certificates total" (15) adds certificates. Program-level (CIP) trends are outside this mapping.',
  'aid': 'Grant/scholarship aid from all known sources for the SFA all-undergraduate cohort, not any aid including loans and not only entering first-time students. Aid reporting period ends in the collection start year (SFA2324 in the 2024–25 release refers to 2023–24). Term reporters use a fall cohort; program reporters use a full-year cohort, so populations differ across calendar systems. 2023 documentation has an SFA table-location correction; source definitions are preserved. This mapping has not been compared with a user-supplied longitudinal aid benchmark.'
 }
 

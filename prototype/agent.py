@@ -221,8 +221,11 @@ For analyze, message states interpretation and defaults. For clarify, use concis
     jsonschema.validate(payload,schema)
     if payload['intent']=='analyze':
         plan={k:payload[k] for k in ['metrics','institutions','years','time_basis','output']}
-        from .institution_confirmation import resolve
-        plan['institutions']=[str(resolve(name,{})) if re.fullmatch(r'.+\s+\((?:UNITID\s+)?\d{6}\)',name,re.I) and resolve(name,{}) is not None else name for name in plan['institutions']]
+        from .institution_confirmation import resolve,annotated_id
+        def _bind(name):
+            if annotated_id(name) is None:return name
+            uid=resolve(name,{});return str(uid) if uid is not None else name
+        plan['institutions']=[_bind(name) for name in plan['institutions']]
         plan=canonical_time(question,plan)
         try:Plan(**plan).validate()
         except ValueError as exc:
@@ -230,6 +233,99 @@ For analyze, message states interpretation and defaults. For clarify, use concis
             raise
         return {'intent':'analyze','plan':plan,'message':payload['message'],'model_usage':model_usage}
     return {'intent':payload['intent'],'message':payload['message'],'query':payload['query'],'model_usage':model_usage}
+
+
+# ── Single-school degrees breakdown ───────────────────────────────────────────
+# When the planner resolves a plain "how many degrees/awards did X award" to the
+# grand-total measure for one school in one year, expand it to the full award-level
+# composition (degrees by academic level, then certificates by award level) rather
+# than a single number. A level-specific question (bachelors_degrees, …) picks a
+# different measure and is left untouched; multiple schools or years are left to the
+# normal path. See DEGREES_BREAKDOWN_PLAN.md.
+_BREAKDOWN_ORDER=['associates_degrees','bachelors_degrees','masters_degrees',
+    'doctoral_research_degrees','doctoral_professional_degrees','doctoral_other_degrees','total_degrees',
+    'certificate_undergraduate_lt1yr','certificate_undergraduate_1to2yr','certificate_undergraduate_2to4yr',
+    'certificate_postbaccalaureate','certificate_postmasters','total_awards']
+_DEGREE_LEVELS={'associates_degrees','bachelors_degrees','masters_degrees',
+    'doctoral_research_degrees','doctoral_professional_degrees','doctoral_other_degrees'}
+_CERT_LEVELS={'certificate_undergraduate_lt1yr','certificate_undergraduate_1to2yr',
+    'certificate_undergraduate_2to4yr','certificate_postbaccalaureate','certificate_postmasters'}
+_BREAKDOWN_PHRASE={'associates_degrees':"associate's",'bachelors_degrees':"bachelor's",
+    'masters_degrees':"master's",'doctoral_research_degrees':'research doctorate',
+    'doctoral_professional_degrees':'professional doctorate','doctoral_other_degrees':'other doctorate'}
+
+def _breakdown_metrics(plan):
+    """Expanded ordered metric list when this plan is a plain degrees/awards total for one
+    school in one year, else None (leave the plan as the planner built it)."""
+    if set(plan['metrics'])<={'total_degrees','total_awards'} and len(plan['institutions'])==1 and len(plan['years'])==1:
+        return list(_BREAKDOWN_ORDER)
+    return None
+
+def _role(metric):
+    return ('degree_total' if metric=='total_degrees' else 'award_total' if metric=='total_awards'
+            else 'degree_level' if metric in _DEGREE_LEVELS else 'certificate_level')
+
+def _shape_breakdown(result):
+    """Keep the two totals and only the award levels actually conferred (drop absent levels),
+    tag each row with its breakdown role, and verify the levels reconcile to the totals. Returns
+    the reshaped result, or None when there is no degrees total to anchor it."""
+    rows=result['rows']
+    totals={r['metric']:r.get('value') for r in rows if r['metric'] in ('total_degrees','total_awards')}
+    if totals.get('total_degrees') is None:return None
+    kept=[r for r in rows if r['metric'] in ('total_degrees','total_awards') or r.get('value') is not None]
+    for r in kept:r['breakdown_role']=_role(r['metric'])
+    deg_sum=sum(r['value'] for r in kept if r['breakdown_role']=='degree_level')
+    cert_sum=sum(r['value'] for r in kept if r['breakdown_role']=='certificate_level')
+    reconciled=(deg_sum==totals['total_degrees'] and
+                (totals.get('total_awards') is None or cert_sum==totals['total_awards']-totals['total_degrees']))
+    if not reconciled:return None   # fall back rather than show rows that do not add up
+    result['rows']=kept
+    return result
+
+def _breakdown_narrative(result):
+    rows=result['rows']
+    by={r['metric']:r for r in rows}
+    if 'total_degrees' not in by:return None
+    inst=by['total_degrees']['institution'];period=by['total_degrees']['reporting_period']
+    deg=by['total_degrees']['value'];awd=(by.get('total_awards') or {}).get('value')
+    parts=[f"{int(r['value']):,} {_BREAKDOWN_PHRASE[m]}" for m in _BREAKDOWN_ORDER
+           if m in _DEGREE_LEVELS and (r:=by.get(m)) and r.get('value')]
+    text=f"{inst} awarded {int(deg):,} degrees in {period}"+(': '+', '.join(parts) if parts else '')+'.'
+    cert=(awd-deg) if (awd is not None and deg is not None) else 0
+    if cert:text+=f" It also awarded {int(cert):,} certificate{'s' if cert!=1 else ''}, for {int(awd):,} awards in all."
+    return text
+
+def _degrees_breakdown_route(question,previous=None):
+    """Deterministic single-school award-level breakdown, above the stochastic planner: a plain
+    'how many degrees/awards did <one school> award [in <one year>]' always returns the full
+    composition instead of a sometimes-escalated single number. Returns None (fall through) for a
+    level-specific question, a trend/comparison/sub-breakdown, an unresolved school, or multiple
+    years. See DEGREES_BREAKDOWN_PLAN.md."""
+    low=question.lower()
+    if not re.search(r'\b(how many|number of|count of|total number of)\b',low):return None
+    if not re.search(r'\b(degrees?|awards?|conferred|confer|credentials?)\b',low):return None
+    if re.search(r'\b(bachelor|baccalaureate|master|associate|doctor|doctoral|doctorate|ph\.?d)\b',low):return None
+    if re.search(r'\btrend\b|each year|over time|from \d{4}|through|\bto\s+\d{4}\b|\bvs\.?\b|compare|comparison|\bby (program|major|field|cip|race|ethnic|gender|sex|level|state|degree)\b|\bivy\b|seven sisters',low):return None
+    m=re.search(r'\b(?:did|does|do|has|have|had)\s+(.+?)\s+(?:award|awarded|confer|conferred|grant|granted)\b',question,re.I)
+    if not m:return None
+    name=m.group(1).strip().strip(' ?.,')
+    if not name:return None
+    from .institution_confirmation import resolve as resolve_inst
+    uid=resolve_inst(name,{})
+    if uid is None:return None
+    plan={'metrics':list(_BREAKDOWN_ORDER),'institutions':[str(uid)],'years':[2024],'time_basis':'observation','output':'table'}
+    plan=canonical_time(question,plan)
+    if len(plan.get('years',[]))!=1:return None   # single-school single-year only; trends deferred
+    try:result=execute(Plan(**plan))
+    except ValueError:return None
+    shaped=_shape_breakdown(result)
+    if shaped is None:return None
+    from .responses import finalize_answer
+    answer={'intent':'analyze','plan':plan,'result':shaped,'mode':'degrees breakdown',
+            'model_usage':{'calls':0,'latency_seconds':0,'estimated_api_usd':0}}
+    narr=_breakdown_narrative(shaped)
+    if narr:answer['custom_message']=answer['message']=narr
+    return finalize_answer(answer,question)
 
 
 def _ask(question,previous=None,use_model=False,model=DEFAULT_MODEL):
@@ -243,6 +339,8 @@ def _ask(question,previous=None,use_model=False,model=DEFAULT_MODEL):
     question,previous=clarify_catalog_request(question,previous)
     block=scope_guard(question)
     if block:return {'intent':'clarify','message':block}
+    breakdown=_degrees_breakdown_route(question,previous)
+    if breakdown is not None:return breakdown
     catalog_previous=previous if previous and previous.get('version') in {1,2} else None
     if not discovery_question(question) and (catalogue_scope(question) or (catalog_previous and uses_context(question))):
         return plan_catalog_question(question,catalog_previous,use_model,model)
@@ -260,15 +358,27 @@ def _ask(question,previous=None,use_model=False,model=DEFAULT_MODEL):
         return answer
     if action['intent']=='analyze':
         action['plan']=canonical_time(question,action['plan'])
+        breakdown=_breakdown_metrics(action['plan']);original_metrics=list(action['plan']['metrics'])
+        if breakdown:action['plan']['metrics']=breakdown
         try:result=execute(Plan(**action['plan']))
         except ValueError as exc:
             exc.model_usage=action.get('model_usage',{})
             if 'needs clarification' in str(exc):return {'intent':'clarify','message':str(exc)+' Choose an exact institution or UNITID in the extract builder; no result has been published.','model_usage':action.get('model_usage',{})}
             raise
+        if breakdown:
+            shaped=_shape_breakdown(result)
+            if shaped is None:   # no usable total or levels did not reconcile: show the plain total
+                action['plan']['metrics']=original_metrics;breakdown=None
+                result=execute(Plan(**action['plan']))
+            else:result=shaped
         if previous and uses_context(question):
             p=action['plan'];specs=measures()
-            action['interpreted_as']='; '.join([', '.join(specs[m]['label'] for m in p['metrics']),', '.join(p['institutions']),', '.join(map(str,p['years']))+' ('+p['time_basis'].replace('_',' ')+')'])
-        return finalize_answer({**action,'result':result,'mode':'language model planner' if use_model else 'starter parser'},question)
+            action['interpreted_as']='; '.join([', '.join(specs[m]['label'] for m in original_metrics),', '.join(p['institutions']),', '.join(map(str,p['years']))+' ('+p['time_basis'].replace('_',' ')+')'])
+        extra={'mode':'degrees breakdown'} if breakdown else {'mode':'language model planner' if use_model else 'starter parser'}
+        if breakdown:
+            narr=_breakdown_narrative(result)
+            if narr:extra['custom_message']=extra['message']=narr
+        return finalize_answer({**action,'result':result,**extra},question)
     if action['intent']=='discover':
         from .discovery import overview
         return overview(question,use_model=use_model,model=model)
