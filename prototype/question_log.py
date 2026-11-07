@@ -29,6 +29,11 @@ the Anthropic key (see agent.api_key). Configure either way:
       IPEDS_QUESTIONS_WORKSHEET      optional tab name (default "questions")
       IPEDS_GSHEETS_CREDENTIALS      the service-account JSON, as a single string
       GOOGLE_APPLICATION_CREDENTIALS path to the service-account JSON file (fallback)
+      IPEDS_INTERNAL_LOG             set to 1 on a local/dev instance so our own test
+                                     questions log to a separate tab (default "internal")
+                                     instead of the real-user tab; never set on the
+                                     deployed app. Equivalently, `internal = true` under
+                                     [question_log] in secrets.toml.
 
 Share the sheet with the service account's client_email (Editor). The tab's header row is
 written automatically on first use (see `_ensure_header`): timestamp, session_id, question,
@@ -46,6 +51,14 @@ from pathlib import Path
 from .catalog import BASE
 
 WORKSHEET_DEFAULT='questions'
+INTERNAL_WORKSHEET_DEFAULT='internal'
+# Stamp rows in US Eastern (EST/EDT, DST-aware) so the sheet reads in local time.
+# Falls back to UTC if the IANA tz database is unavailable, so logging never breaks.
+try:
+    from zoneinfo import ZoneInfo
+    _TZ=ZoneInfo('America/New_York')
+except Exception:
+    _TZ=timezone.utc
 # Structured analytics columns derived from the finished answer (all already computed
 # by the pipeline — see `fields`). Appended after the original four so an existing
 # sheet keeps its first columns and only gains new ones on the right.
@@ -82,11 +95,26 @@ def _credentials():
     return dict(sa) if sa else None
 
 
+def _internal():
+    """True when this instance should log to the internal (dev/test) tab instead of the
+    real-user tab. Set it on local/dev instances only -- env IPEDS_INTERNAL_LOG, or
+    `[question_log] internal = true` in secrets.toml. The deployed app sets neither, so the
+    real-user tab stays the fail-safe default and real questions are never diverted."""
+    flag=os.environ.get('IPEDS_INTERNAL_LOG')
+    if flag is None:flag=_secrets().get('question_log',{}).get('internal')
+    return str(flag).strip().lower() in ('1','true','yes','on') if flag is not None else False
+
+
 def _target():
-    """(spreadsheet ref, worksheet name) from env or secrets.toml; ref is None when unset."""
+    """(spreadsheet ref, worksheet name) from env or secrets.toml; ref is None when unset.
+    On an internal instance the worksheet is a separate dev/test tab, so our own test
+    questions never mix with real users' questions in the main tab."""
     cfg=_secrets().get('question_log',{})
     ref=os.environ.get('IPEDS_QUESTIONS_SHEET') or cfg.get('spreadsheet')
-    ws=os.environ.get('IPEDS_QUESTIONS_WORKSHEET') or cfg.get('worksheet') or WORKSHEET_DEFAULT
+    if _internal():
+        ws=os.environ.get('IPEDS_INTERNAL_WORKSHEET') or cfg.get('internal_worksheet') or INTERNAL_WORKSHEET_DEFAULT
+    else:
+        ws=os.environ.get('IPEDS_QUESTIONS_WORKSHEET') or cfg.get('worksheet') or WORKSHEET_DEFAULT
     return ref,ws
 
 
@@ -105,7 +133,12 @@ def _open():
         ref,ws=_target()
         client=gspread.service_account_from_dict(_credentials())
         book=client.open_by_url(ref) if '://' in ref else client.open_by_key(ref)
-        _worksheet=book.worksheet(ws)
+        try:
+            _worksheet=book.worksheet(ws)
+        except gspread.WorksheetNotFound:
+            # First use of the internal tab (or a renamed tab): create it so logging does
+            # not silently drop rows. _ensure_header writes the column labels below.
+            _worksheet=book.add_worksheet(title=ws,rows=1000,cols=max(20,len(COLUMNS)))
         _ensure_header(_worksheet)
     except Exception:
         _log.exception('question log: could not open the sheet')
@@ -241,7 +274,7 @@ def log_question(question,outcome,session_id='',answer=None):
     Fire-and-forget and quiet-fail: never raises, never blocks the answer; a no-op when
     unconfigured."""
     if not question or not configured():return
-    record={'timestamp':datetime.now(timezone.utc).isoformat(),'session_id':session_id or '',
+    record={'timestamp':datetime.now(_TZ).isoformat(),'session_id':session_id or '',
             'question':str(question),'outcome':str(outcome),
             **(fields(answer) if answer is not None else {k:'' for k in EXTRA_COLUMNS}),
             'app_version':_app_version()}
