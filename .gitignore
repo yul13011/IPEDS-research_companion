@@ -60,3 +60,7 @@ design-mockups/**/*.jpg
 __pycache__/
 local_logs/
 *.log
+
+# === Stray local artifacts (briefs, screenshots — not project source) ===
+*.docx
+Screenshot*.png
