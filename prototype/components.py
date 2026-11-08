@@ -92,6 +92,13 @@ def render_result(result,key,show_chart=None,presentation=None,compact=False):
     if any(r['unit'] in {'unknown','source units','identifier','coded'} for r in result['rows']):
         chart_type='none'
         st.caption('A measurement unit is unresolved or the field is an identifier/category. A chart cannot use these values as a verified measurement axis; saved calculations may need to be rerun.')
+    chart_panels=None
+    if chart_type!='none' and not good.empty:
+        from .charts import panels
+        chart_panels=panels(result,{**presentation,'chart_type':chart_type})
+        if not chart_panels:
+            chart_type='none'
+            st.caption('This result has more than 10 series to compare. Showing the full table instead; narrow the institutions, measures or years to chart it.')
     if chart_type=='none' and presentation.get('table_reason'):st.caption(presentation['table_reason'])
     from .responses import visible_warnings
     for warning in visible_warnings(result):st.warning(warning)
@@ -112,13 +119,12 @@ def render_result(result,key,show_chart=None,presentation=None,compact=False):
             if st.checkbox('Show underlying counts and data status',key=key+'_counts'):
                 st.dataframe(frame[['institution','observation_year','entry_cohort_year','measure','value','numerator','denominator','status','provisional']],hide_index=True,width='stretch')
     if chart_type!='none' and not good.empty:
-        from .charts import panels
         opened=st.session_state.get(key+'_format_open',False)
         plot_area,edit_area=st.columns([2.2,1]) if opened else (st.container(),None)
         if edit_area:
             with edit_area,st.container(height=480,border=True,key=key+'_format_panel'):editor(result,presentation,key)
         with plot_area:
-          for panel in panels(result,{**presentation,'chart_type':chart_type}):
+          for panel in chart_panels:
             if panel['total'] and panel['rows']==1 and panel.get('single_row') is not None:
                 from .charts import formatted
                 row=panel['single_row']

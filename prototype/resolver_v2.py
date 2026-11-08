@@ -24,6 +24,7 @@ faq_v2. Domain knowledge (groups, reviewed measures, source scope) stays in the
 core and catalog; the resolver only decides meaning.
 """
 import json
+import re
 import time
 
 RESOLVER_MODEL = 'claude-haiku-5-5'
@@ -175,21 +176,114 @@ def _deterministic_fetch(question, history):
     return None
 
 
-def _fetch(decision, previous, history, model=RESOLVER_MODEL, try_deterministic=True):
+def _institution_mentions(question, model):
+    """Original institution wording in the question, via the identity layer's
+    literal extractor. Returns [] when it cannot run rather than failing the fetch."""
+    from .institution_confirmation import mentions
+    try:
+        found, _usage = mentions(question, True, model)
+        return found or []
+    except Exception:
+        return []
+
+
+def _strip_location(text):
+    """Drop a trailing geographic qualifier the extractor sometimes keeps on a name
+    ('Marian University in Indiana', 'Marian University (Indiana)', 'Marian University,
+    Indiana'). Used ONLY as a fallback when the full mention yields no candidates, so a
+    real parenthetical/comma name (e.g. 'University of California, Berkeley') is untouched."""
+    t = re.sub(r'\s*\([^)]*\)\s*$', '', str(text)).strip()
+    t = re.sub(r'\s+(?:the\s+(?:institution|campus|school)\s+)?\bin\s+[A-Za-z][A-Za-z .]*$', '', t, flags=re.I).strip()
+    t = re.sub(r'\s*,\s*[A-Za-z][A-Za-z .]*$', '', t).strip()
+    return t
+
+
+def _candidates_for(text):
+    """Dropdown candidates for a mention, retried without a trailing location qualifier
+    when the literal text matches nothing (e.g. 'Marian University in Indiana')."""
+    from .institution_confirmation import candidates
+    cands = candidates(text)
+    if cands:
+        return cands
+    stripped = _strip_location(text)
+    if stripped and stripped != text:
+        return candidates(stripped)
+    return []
+
+
+def _resolve_identity(question, model, institution_choices):
+    """Pin institution identity from the user's ORIGINAL question before planning.
+    Returns (authorized_ids, dropdown, resolved): when dropdown is not None it is the
+    structured institution_confirmation payload (authorized is None, resolved is []);
+    otherwise authorized holds the confirmed/group UNITIDs to bind via confirmed_scope (an
+    empty set means no institution was named) and resolved is the list of (mention_text,
+    unitid) pairs the caller rewrites into the planned question. An ambiguous name always
+    opens the dropdown rather than letting the planner silently choose a campus. Mirrors
+    institution_confirmation._ask's identity gate without re-entering agent.ask's legacy
+    resolution stack."""
+    from .institution_confirmation import resolve as resolve_inst, normalized
+    from .catalog import group_ids
+    choices = dict(institution_choices or {})
+    found = _institution_mentions(question, model)
+    authorized = set(); pending = []; resolved = []
+    for text in found:
+        group = group_ids(text)
+        if group is not None:
+            authorized.update(group); continue
+        uid = resolve_inst(text, choices)
+        if uid is not None:
+            authorized.add(uid); choices[normalized(text)] = uid; resolved.append((text, uid)); continue
+        cands = _candidates_for(text)
+        if cands:
+            pending.append({'text': text, 'key': normalized(text), 'candidates': cands})
+    if pending:
+        dropdown = {'intent': 'institution_confirmation',
+                    'message': 'Which institution did you mean? Please confirm before I run the analysis.',
+                    'institution_confirmation': {'question': question, 'unresolved': pending, 'choices': choices},
+                    'model_usage': {}}
+        return None, dropdown, []
+    return authorized, None, resolved
+
+
+def _fetch(decision, previous, history, model=RESOLVER_MODEL, try_deterministic=True, institution_choices=None, question=None):
     from .agent import _answer
+    from .institution_confirmation import AUTHORIZED
     sq = (decision.get('standalone_question') or '').strip()
     if not sq:
         sq = decision.get('message') or ''
     prior = _prior_answer(previous, history, decision) if decision['relationship'] == 'followup' else None
+
+    # Identity-first: resolve the institution from the ORIGINAL user question before any
+    # planning. An ambiguous school always opens the selection dropdown (never a silent
+    # model-chosen campus); a resolved name or prior pick is pinned below.
+    authorized, dropdown, resolved = _resolve_identity(question or sq, model, institution_choices)
+    if dropdown is not None:
+        return dropdown
+    # Rewrite each confirmed name in the planned question to 'Name (UNITID n)'. The core
+    # then resolves the exact campus deterministically; confirmed_scope alone is only
+    # advisory to the planner, which can otherwise re-emit the ambiguous plain name.
+    if resolved:
+        from .workflows import institution_index
+        idx = institution_index()
+        for text, uid in sorted(resolved, key=lambda tu: len(tu[0]), reverse=True):
+            replacement = idx[uid]['name'] + ' (UNITID ' + str(uid) + ')'
+            if re.search(re.escape(text), sq, re.I):
+                sq = re.sub(re.escape(text), lambda _: replacement, sq, flags=re.I)
+
     if try_deterministic and decision['relationship'] == 'new':
         det = _deterministic_fetch(sq, history)
         if det is not None:
             return det
+
+    token = AUTHORIZED.set(authorized) if authorized else None
     try:
         return _answer(sq, _prior_plan(prior), use_model=True, model=model)
     except ValueError as exc:
         return {'intent': 'clarify', 'mode': 'intent validation',
                 'message': str(exc), 'model_usage': getattr(exc, 'model_usage', {})}
+    finally:
+        if token is not None:
+            AUTHORIZED.reset(token)
 
 
 def _has_number(answer):
@@ -267,7 +361,11 @@ def handle(question, previous, model, history, executor, overrides=None, institu
         return _finish(answer, decision, question, usages, started)
 
     # 3. Fetch through the untouched execution core (cheap planner first).
-    answer = _fetch(decision, previous, history)
+    answer = _fetch(decision, previous, history, institution_choices=institution_choices, question=question)
+
+    # An ambiguous institution returns the selection dropdown; surface it, never loop on it.
+    if answer.get('institution_confirmation'):
+        return _finish(answer, decision, question, usages, started)
 
     # 4. Query-in-a-loop: if the first fetch came back without a number (the core
     #    asked a clarifying question, hit its planning-search limit, or found
@@ -281,7 +379,7 @@ def handle(question, previous, model, history, executor, overrides=None, institu
             decision2, usage2 = resolve(question, history, previous, note=note)
             usages.append(usage2)
             if decision2['operation'] == 'fetch' and decision2.get('standalone_question', '').strip():
-                retried = _fetch(decision2, previous, history, model=DEFAULT_MODEL, try_deterministic=False)
+                retried = _fetch(decision2, previous, history, model=DEFAULT_MODEL, try_deterministic=False, institution_choices=institution_choices, question=question)
                 if _has_number(retried):
                     answer, decision = retried, decision2
             elif decision2['operation'] in {'refuse', 'clarify'}:

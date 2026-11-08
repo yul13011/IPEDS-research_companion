@@ -70,20 +70,25 @@ class ChartTests(unittest.TestCase):
         self.assertEqual(sum(c['rows'] for c in charts),len(r['rows']))
         self.assertEqual(sum(c['total'] for c in charts),1)
 
-    def test_many_institution_trends_share_scale_and_keep_every_row(self):
+    def test_many_institution_trends_keep_every_row_in_one_panel(self):
+        # Up to len(PALETTE) series share a single panel; the eight Ivies no longer split.
         r=execute(Plan(['admission_rate'],['Ivy League'],list(range(2015,2025))));p=presentation_for(r)
-        charts=panels(r,p);self.assertEqual(len(charts),2)
-        self.assertEqual(sum(c['rows'] for c in charts),len(r['rows']))
-        specs=[c['chart'].to_dict() for c in charts]
-        self.assertEqual(specs[0]['encoding']['y']['scale']['domain'],specs[1]['encoding']['y']['scale']['domain'])
-        self.assertTrue(all(s['height']==320 for s in specs))
-        self.assertTrue(all(len(s['encoding']['color']['scale']['domain'])<=4 for s in specs))
-        for spec in specs:
-            ordered=spec['encoding']['x']['sort'];ticks=spec['encoding']['x']['axis']['values']
-            self.assertEqual(ticks,ordered)
-            self.assertEqual(ticks,[str(year) for year in range(2015,2025)])
-            self.assertFalse(spec['encoding']['x']['axis']['labelOverlap'])
-        self.assertTrue(all(s['mark']['invalid']=='break-paths-show-domains' for s in specs))
+        charts=panels(r,p);self.assertEqual(len(charts),1)
+        self.assertEqual(charts[0]['rows'],len(r['rows']))
+        spec=charts[0]['chart'].to_dict()
+        self.assertEqual(len(spec['encoding']['color']['scale']['domain']),8)
+        self.assertEqual(spec['height'],320)
+        ordered=spec['encoding']['x']['sort'];ticks=spec['encoding']['x']['axis']['values']
+        self.assertEqual(ticks,ordered)
+        self.assertEqual(ticks,[str(year) for year in range(2015,2025)])
+        self.assertFalse(spec['encoding']['x']['axis']['labelOverlap'])
+        self.assertEqual(spec['mark']['invalid'],'break-paths-show-domains')
+
+    def test_more_than_ten_series_fall_back_to_table(self):
+        # Ivy Plus is twelve institutions; beyond ten series panels() yields nothing so
+        # the caller (render_result) shows the full table instead of fragmenting the chart.
+        r=execute(Plan(['admission_rate'],['Ivy Plus'],list(range(2015,2025))))
+        self.assertEqual(panels(r,presentation_for(r)),[])
 
     def test_comparison_keeps_eight_institutions_together(self):
         r=execute(Plan(['applicants'],['Ivy League'],[2024]));charts=panels(r,presentation_for(r))
@@ -94,14 +99,14 @@ class ChartTests(unittest.TestCase):
         spec=panels(r,p)[0]['chart'].to_dict()
         self.assertEqual(spec['layer'][0]['encoding']['y']['sort'],['Fall 2022','Fall 2023','Fall 2024'])
 
-    def test_multiple_category_trends_have_at_most_four_series(self):
+    def test_multiple_category_trends_fit_one_panel_up_to_ten_series(self):
         r=ask('Show Yale undergrad population by race and ethnicity from 2022 to 2024')['result']
         p=presentation_for(r);p['chart_type']='line';charts=panels(r,p)
         self.assertEqual(sum(c['rows'] for c in charts),len(r['rows']))
         for panel in charts:
             spec=panel['chart'].to_dict()
             rows=next(v for v in spec['datasets'].values() if 'series_label' in v[0])
-            self.assertLessEqual(len({row['series_label'] for row in rows}),4)
+            self.assertLessEqual(len({row['series_label'] for row in rows}),10)
 
     def test_cohort_axis_and_currency_and_signed_values(self):
         r=execute(Plan(['graduation_rate'],['Yale'],[2017,2018],time_basis='entry_cohort'))

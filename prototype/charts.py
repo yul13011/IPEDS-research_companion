@@ -4,7 +4,7 @@ import altair as alt
 import pandas as pd
 from .semantics import display_result,is_currency,currency_text,unit_title as currency_unit_title,UNVERIFIED
 
-PALETTE=['#24658A','#C47A28','#78649B','#398278']
+PALETTE=['#24658A','#C47A28','#78649B','#398278','#A24B4B','#5E8C3A','#C96E9C','#4E9DB5','#9C7A3C','#6B6FA8']
 
 def label(text):
     text=re.sub(r'\s+',' ',str(text)).strip()
@@ -107,7 +107,15 @@ def panels(result,presentation):
     """Return all chart panels, titles and notes; no truncation or aggregation."""
     frame,cohort=prepare(result);temporal=presentation['chart_type']=='line'
     if frame['unit'].isin(['unknown','source units','identifier','coded']).any():return []
-    names=list(dict.fromkeys(frame['institution']));palette=alt.Scale(domain=names,range=[PALETTE[i%4] for i in range(len(names))])
+    # A chart stays legible up to len(PALETTE) distinct series (lines or colored bar
+    # groups). Beyond that the caller shows the full table instead of fragmenting the
+    # figure into unreadable panels. Count series per unit panel the way the labels below do.
+    def _series(uf):
+        m=uf['display_measure'].nunique()>1
+        s=uf['institution']+' · '+uf['display_measure'] if m and uf['institution'].nunique()>1 else uf['display_measure'] if m else uf['institution']
+        return s.nunique()
+    if any(_series(g)>len(PALETTE) for _,g in frame.groupby(['unit','total_panel'],sort=False)):return []
+    names=list(dict.fromkeys(frame['institution']));palette=alt.Scale(domain=names,range=[PALETTE[i%len(PALETTE)] for i in range(len(names))])
     output=[]
     for (unit,total),unit_frame in frame.groupby(['unit','total_panel'],sort=False):
         # Comparisons sharing units receive the same numerical scale, including
@@ -117,13 +125,13 @@ def panels(result,presentation):
         multiple_measures=unit_frame['display_measure'].nunique()>1
         unit_frame['series_label']=unit_frame['institution']+' · '+unit_frame['display_measure'] if multiple_measures and unit_frame['institution'].nunique()>1 else unit_frame['display_measure'] if multiple_measures else unit_frame['institution']
         all_series=list(dict.fromkeys(unit_frame['series_label']))
-        series_palette=alt.Scale(domain=all_series,range=[PALETTE[i%4] for i in range(len(all_series))])
+        series_palette=alt.Scale(domain=all_series,range=[PALETTE[i%len(PALETTE)] for i in range(len(all_series))])
         groups=[(None,unit_frame)]
         for measure,data in groups:
             # Multiple unrelated measures at a single time are separate when
             # units differ; same-unit category bars share one comparison panel.
             institutions=list(dict.fromkeys(data['series_label' if temporal else 'institution']))
-            batch_size=1 if presentation.get('separate_panels') else 4
+            batch_size=1 if presentation.get('separate_panels') else len(PALETTE)
             batches=[institutions[i:i+batch_size] for i in range(0,len(institutions),batch_size)] if temporal or data['display_measure'].nunique()>1 else [institutions]
             for batch in batches:
                 part=data[data['series_label' if temporal else 'institution'].isin(batch)].copy()
@@ -138,10 +146,10 @@ def panels(result,presentation):
                 tooltip=[alt.Tooltip('institution:N',title='Institution'),alt.Tooltip('reporting_period:N',title='Source period'),alt.Tooltip('entry_cohort_year:Q',title='Entering cohort',format='d'),alt.Tooltip('measure:N',title='Measure'),alt.Tooltip('display_value:N',title='Value'),alt.Tooltip('status:N',title='Data status'),alt.Tooltip('provisional:N',title='Provisional')]
                 scale=alt.Scale(domain=limits,zero=not temporal and presentation.get('y_min') is None,nice=False)
                 base=alt.Chart(part).encode(tooltip=tooltip)
-                panel_palette=alt.Scale(domain=shown_names,range=[PALETTE[names.index(name)%4] for name in shown_names])
+                panel_palette=alt.Scale(domain=shown_names,range=[PALETTE[names.index(name)%len(PALETTE)] for name in shown_names])
                 color=alt.value(presentation['color']) if presentation.get('color') else alt.Color('institution:N',scale=panel_palette,legend=alt.Legend(orient='top',title=None,labelLimit=220,columns=1,direction='vertical') if len(batch)>1 else None)
                 if temporal:
-                    series_palette=alt.Scale(domain=batch,range=[PALETTE[(names.index(s) if s in names else all_series.index(s))%4] for s in batch])
+                    series_palette=alt.Scale(domain=batch,range=[PALETTE[(names.index(s) if s in names else all_series.index(s))%len(PALETTE)] for s in batch])
                     color=alt.value(presentation['color']) if presentation.get('color') else alt.Color('series_label:N',scale=series_palette,legend=alt.Legend(orient='top',title=None,labelLimit=220,columns=1,direction='vertical') if len(batch)>1 else None)
                     part['axis_period']=part['period_label'].str.replace(r'^Fall ','',regex=True)
                     base=alt.Chart(part).encode(tooltip=tooltip)
@@ -182,7 +190,7 @@ def panels(result,presentation):
                     if grouped:encoding['y']=encoding['y'].scale(paddingInner=.18,paddingOuter=.12)
                     bar_color=color if (multi or many_periods) and len(batch)>1 else alt.value(presentation.get('color') or PALETTE[0])
                     if presentation.get('series_colors'):
-                        bar_color=alt.Color('institution:N',scale=alt.Scale(domain=shown_names,range=[presentation['series_colors'].get(n,PALETTE[names.index(n)%4]) for n in shown_names]),legend=None)
+                        bar_color=alt.Color('institution:N',scale=alt.Scale(domain=shown_names,range=[presentation['series_colors'].get(n,PALETTE[names.index(n)%len(PALETTE)]) for n in shown_names]),legend=None)
                     bars=base.mark_bar(size=bar_size).encode(**encoding,color=bar_color)
                     if grouped:bars=bars.encode(yOffset=offset)
                     labels=base.mark_text(align='left',dx=6,fontSize=12,color='#263746').encode(**encoding,text='display_value:N')
