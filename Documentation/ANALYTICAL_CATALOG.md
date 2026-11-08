@@ -24,16 +24,16 @@ Units/scale and population/period interpretation are sourced from the definition
 
 ## Verification and review
 
-Current results: [analysis_catalog_verification.json](data/analysis_catalog_verification.json).
+Current results: [analysis_catalog_verification.json](../data/analysis_catalog_verification.json).
 
-- [Table coverage and grain inventory](data/analysis_table_coverage.csv)
-- [Definition/location/grain review queue](data/analysis_catalog_review_queue.csv)
-- [Directory relationship coverage and unmatched IDs](data/analysis_relationship_coverage.csv)
-- [Example field evidence packet](data/analysis_field_example.json)
+- [Table coverage and grain inventory](../data/analysis_table_coverage.csv)
+- [Definition/location/grain review queue](../data/analysis_catalog_review_queue.csv)
+- [Directory relationship coverage and unmatched IDs](../data/analysis_relationship_coverage.csv)
+- [Example field evidence packet](../data/analysis_field_example.json)
 
 Eleven new integration tests passed, covering definitions, code pagination, unknown-race semantics, key evidence, source conflicts, cross-year change detection, join boundaries, read-only access and planner integration. Existing codebook-definition checks and the entire supported numerical benchmark regression also passed. The benchmark retains its existing 229 matches / 13 mismatches; those discrepancies are not resolved by metadata preparation.
 
-See [analysis_catalog/README.md](analysis_catalog/README.md) for rebuild commands, API functions, methods and limits.
+See [analysis_catalog/README.md](../analysis_catalog/README.md) for rebuild commands, API functions, methods and limits.
 
 ## What this enables next
 

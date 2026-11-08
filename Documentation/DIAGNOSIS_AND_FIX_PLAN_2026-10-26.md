@@ -25,9 +25,9 @@ periods — not from the queries or the data.
 
 Method and raw evidence:
 - Harness (drives the real pipeline via `intent_router.handle(..., 'automatic', ..., ask)`,
-  the same entry the UI uses): [evaluations/diagnostic_batch_2026-10-26.py](evaluations/diagnostic_batch_2026-10-26.py).
+  the same entry the UI uses): [evaluations/diagnostic_batch_2026-10-26.py](../evaluations/diagnostic_batch_2026-10-26.py).
 - Per-case results (intent, published/blocked, values, latency, model calls, API cost):
-  [evaluations/diagnostic_batch_2026-10-26.json](evaluations/diagnostic_batch_2026-10-26.json).
+  [evaluations/diagnostic_batch_2026-10-26.json](../evaluations/diagnostic_batch_2026-10-26.json).
 - Ground truth was recomputed from `data/annual/*/IPEDS*.sqlite` for each numeric case.
 
 ## 2. What works (14 / 19)
@@ -161,7 +161,7 @@ Remaining: the latency / cost track (section 4, cross-cutting).
 
 ## 6. Evidence index
 
-- Live harness: [evaluations/diagnostic_batch_2026-10-26.py](evaluations/diagnostic_batch_2026-10-26.py)
-- Per-case results: [evaluations/diagnostic_batch_2026-10-26.json](evaluations/diagnostic_batch_2026-10-26.json)
-- Related existing trackers: [APP_FINDINGS_AND_IDEAS.md](APP_FINDINGS_AND_IDEAS.md),
-  [IMPLEMENTATION_CHECKLIST.md](IMPLEMENTATION_CHECKLIST.md)
+- Live harness: [evaluations/diagnostic_batch_2026-10-26.py](../evaluations/diagnostic_batch_2026-10-26.py)
+- Per-case results: [evaluations/diagnostic_batch_2026-10-26.json](../evaluations/diagnostic_batch_2026-10-26.json)
+- Related existing trackers: [APP_FINDINGS_AND_IDEAS.md](<Ideas for Improvement/APP_FINDINGS_AND_IDEAS.md>),
+  [IMPLEMENTATION_CHECKLIST.md](<Ideas for Improvement/IMPLEMENTATION_CHECKLIST.md>)

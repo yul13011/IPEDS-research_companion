@@ -91,7 +91,7 @@ The full request flow — purple steps use an LLM, teal steps are deterministic:
 - **Render** — always-on web hosting.
 - **Google Sheets** (via gspread) — optional, anonymous question logging.
 
-See [DEPLOYMENT_PLAN.md](DEPLOYMENT_PLAN.md) for the deployment runbook.
+See [DEPLOYMENT_PLAN.md](Documentation/DEPLOYMENT_PLAN.md) for the deployment runbook.
 
 ## Data scope
 
@@ -110,7 +110,7 @@ See [DEPLOYMENT_PLAN.md](DEPLOYMENT_PLAN.md) for the deployment runbook.
 
 ## Quality & evaluation
 
-- **[EXAMPLE_QUESTIONS.md](EXAMPLE_QUESTIONS.md)** — a catalog of example/test questions organized by
+- **[EXAMPLE_QUESTIONS.md](Documentation/EXAMPLE_QUESTIONS.md)** — a catalog of example/test questions organized by
   survey, each with its expected answer shape and the exact source variables.
 - **[evaluations/eval_harness.py](evaluations/eval_harness.py)** — runs those questions through the
   real pipeline, recomputes ground truth from the live data (never hardcoded), and reports pass/fail
@@ -142,7 +142,7 @@ On Windows, `prototype/run.ps1` launches it with the bundled interpreter. See
 Live on **Render** (always-on web service). The ~3.1 GB of data is not in the repo; it lives in a
 Hugging Face **dataset** and is pulled once to the service's persistent disk on first boot
 (`prototype/data_bootstrap.py`), after which SQLite is read locally. Full runbook:
-[DEPLOYMENT_PLAN.md](DEPLOYMENT_PLAN.md).
+[DEPLOYMENT_PLAN.md](Documentation/DEPLOYMENT_PLAN.md).
 
 Typed questions and their outcomes are optionally logged to a Google Sheet for analytics
 (`prototype/question_log.py`): just the question text, a session id, and derived metadata — no
@@ -150,8 +150,9 @@ personal data. Logging is fire-and-forget and a silent no-op when unconfigured.
 
 ## More documentation
 
-- Architecture & design history: [AGENT_ARCHITECTURE.md](AGENT_ARCHITECTURE.md)
-- Cost variable reference: [COST_VARIABLES_REFERENCE.md](COST_VARIABLES_REFERENCE.md)
+- Architecture & design history: [AGENT_ARCHITECTURE.md](Documentation/AGENT_ARCHITECTURE.md)
+- Cost variable reference: [COST_VARIABLES_REFERENCE.md](Documentation/COST_VARIABLES_REFERENCE.md)
+- Full documentation index: [Documentation/0_DOCS_INDEX.md](Documentation/0_DOCS_INDEX.md)
 - App code & launch: [prototype/README.md](prototype/README.md)
 
 ## What is and is not in version control

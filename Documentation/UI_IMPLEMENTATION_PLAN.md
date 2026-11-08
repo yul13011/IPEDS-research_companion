@@ -2,7 +2,7 @@
 
 Recorded: October 17, 2026
 
-**October 18 chatbot response revision (implemented):** Statistical answers expose Display table, Definitions & sources, and Download Data. Definitions & sources and Download Data are adjacent popover buttons on the same row. Counts/status are optional within the table; full technical evidence stays downloadable. Separate source/detail expanders, extract-layout/edit controls and model diagnostics are removed from chatbot results. This supersedes earlier per-answer control requirements below. Handoff and validation details: [PROGRESS_2026-10-18.md](PROGRESS_2026-10-18.md).
+**October 18 chatbot response revision (implemented):** Statistical answers expose Display table, Definitions & sources, and Download Data. Definitions & sources and Download Data are adjacent popover buttons on the same row. Counts/status are optional within the table; full technical evidence stays downloadable. Separate source/detail expanders, extract-layout/edit controls and model diagnostics are removed from chatbot results. This supersedes earlier per-answer control requirements below. Handoff and validation details: [PROGRESS_2026-10-18.md](../PROGRESS_2026-10-18.md).
 
 **Latest layout revision:** Ask & Analyze uses the browser width with small margins, a left Need ideas panel and a right analysis-tools panel. Both start open, with explicit independent Collapse/Show controls. The center conversation expands when either panel closes; panel visibility and selected topic persist after questions. This supersedes the below-conversation Need ideas bar and earlier single-sidebar arrangements described below.
 

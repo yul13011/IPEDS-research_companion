@@ -4,7 +4,7 @@ Implemented October 26, 2026 in the redesigned prototype. The original graduatio
 
 ## Beginner orientation
 
-[The data guide](data/DATA_GUIDE.md) describes twelve subject areas in everyday language, with example questions and supporting codebook references. Its companion `data/data_guide_index.json` retains the underlying table descriptions. The interpreter receives a compact topic index; the guide executor retrieves matching sections without another model call. General orientation does not require a survey name or an exact variable.
+[The data guide](../data/DATA_GUIDE.md) describes twelve subject areas in everyday language, with example questions and supporting codebook references. Its companion `data/data_guide_index.json` retains the underlying table descriptions. The interpreter receives a compact topic index; the guide executor retrieves matching sections without another model call. General orientation does not require a survey name or an exact variable.
 
 The guide combines reviewed editorial explanations with local table documentation. Only documented tables present in the loaded annual databases are included. A source fingerprint refreshes the in-memory guide when the metadata catalog, annual files or guide definitions change. Rebuild the portable documents with `python -B -m prototype.data_guide` from this directory. Changes to the meaning of new surveys still require editorial review.
 

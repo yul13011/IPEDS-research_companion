@@ -1,6 +1,6 @@
 # Analytical expansion: agreed coverage scope
 
-> Current status: analytical expansion steps 1–4 are implemented, including the bounded relational query/validation engine. See [IMPLEMENTATION_CHECKLIST.md](IMPLEMENTATION_CHECKLIST.md) for completed work, evidence, limits and remaining tasks; [engine scope](prototype/QUERY_ENGINE.md) defines supported primitives. Earlier proposal-only statements below are historical checkpoints.
+> Current status: analytical expansion steps 1–4 are implemented, including the bounded relational query/validation engine. See [IMPLEMENTATION_CHECKLIST.md](<Ideas for Improvement/IMPLEMENTATION_CHECKLIST.md>) for completed work, evidence, limits and remaining tasks; [engine scope](../prototype/QUERY_ENGINE.md) defines supported primitives. Earlier proposal-only statements below are historical checkpoints.
 
 Confirmed by project owner: October 19, 2026.
 
@@ -39,7 +39,7 @@ Current inspection: 30/30 cataloged source files exist; 30/30 sizes match the ca
 
 Prior foundation report records full conversion verification for 554 tables and 33,484,311 rows. Full Access hashes, all row/value comparisons and integrity checks were not repeated in this inspection. The catalog records 1,248 metadata issues; their resolution belongs to metadata validation, not source-inventory completion.
 
-Machine-readable evidence: [coverage_scope_2026-10-19.json](data/coverage_scope_2026-10-19.json). Existing verification: [foundation_verification.json](data/foundation_verification.json) and [catalog_verification.json](data/catalog_verification.json).
+Machine-readable evidence: [coverage_scope_2026-10-19.json](../data/coverage_scope_2026-10-19.json). Existing verification: [foundation_verification.json](../data/foundation_verification.json) and [catalog_verification.json](../data/catalog_verification.json).
 
 ## Next work
 

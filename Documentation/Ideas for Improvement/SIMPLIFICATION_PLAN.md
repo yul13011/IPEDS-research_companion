@@ -10,7 +10,7 @@ inventory, Phase 5 prune/architecture. This is the
 tracking document for streamlining the IPEDS Research Companion's structure **without
 losing intended functionality**. Check items off as they land; record evidence and
 decisions inline. Companion review:
-[DIAGNOSIS_AND_FIX_PLAN_2026-10-26.md](DIAGNOSIS_AND_FIX_PLAN_2026-10-26.md).
+[DIAGNOSIS_AND_FIX_PLAN_2026-10-26.md](../DIAGNOSIS_AND_FIX_PLAN_2026-10-26.md).
 
 ## Goal
 
@@ -110,7 +110,7 @@ Lever B (prune/simplify) would remove code, and each needs an explicit owner yes
 - [x] `evaluations/`: untracked **302** pure-output artifacts (`.log`/`.png`/`.svg`/`.jpg`/`.pdf`/`.xlsx` under `evaluations/` and `design-mockups/`) via `.gitignore` + `git rm --cached` — kept on disk (tests unaffected), kept eval scripts (`*.py`) and data fixtures/results (`*.json`/`*.csv`/`*.md`) tracked. `evaluations/` tracked 639 → 351. *Not physically moved: several tests read/write `evaluations/` paths.*
 - [x] `data/proposed_plans/`: already gitignored at git-init (0 tracked) — nothing to relocate; regenerated at runtime.
 - [x] `.packages/`: already gitignored (0 tracked). **Kept on disk** — it's what runs/tests the app here without a venv; a fresh env uses `prototype/requirements.txt`.
-- [x] Docs: added [DOCS_INDEX.md](DOCS_INDEX.md) mapping the 34 root docs by category **in place** (not moved — preserves cross-links). Physically moving them is a later option if root clutter still bothers.
+- [x] Docs: added [DOCS_INDEX.md](../0_DOCS_INDEX.md) mapping the 34 root docs by category **in place** (not moved — preserves cross-links). Physically moving them is a later option if root clutter still bothers.
 - [x] Verified: app imports 30/30 clean; untracking leaves local files intact so tests still run. Net: tracked files **970 → 668**.
 
 ## Phase 3 — Target module map (Lever A)

@@ -1,6 +1,6 @@
 # IPEDS analytical agent: living design
 
-Current status and work tracking: [IMPLEMENTATION_CHECKLIST.md](IMPLEMENTATION_CHECKLIST.md). Its completed items and backlog summarize the latest implementation; dated stages below preserve earlier design/checkpoint history.
+Current status and work tracking: [IMPLEMENTATION_CHECKLIST.md](<Ideas for Improvement/IMPLEMENTATION_CHECKLIST.md>). Its completed items and backlog summarize the latest implementation; dated stages below preserve earlier design/checkpoint history.
 
 Status: Living design. The annual foundation is implemented and verified. A local Streamlit prototype with bounded conversational planning and 36 implementation-reviewed measure mappings is now implemented; see section 18. Broader analytics and public deployment remain future work.
 
@@ -410,7 +410,7 @@ Implemented a derived read-only analytical metadata layer across the complete su
 
 ## October 19 catalog planning implementation — step 3
 
-Implemented [catalog-driven proposed planning](prototype/CATALOG_PLANNING.md) beyond the fixed measure vocabulary, while retaining reviewed numerical execution. Source discovery/typed plans/structural metadata validation and separate proposal persistence now exist. Numerical execution of unfamiliar plans, semantic validation, promotion rules and broad live-model evaluation in section 19 remain outstanding. Verification: 18 planner tests plus 20 existing regressions passed, using mocked model transport. No new owner methodology decision was required.
+Implemented [catalog-driven proposed planning](../prototype/CATALOG_PLANNING.md) beyond the fixed measure vocabulary, while retaining reviewed numerical execution. Source discovery/typed plans/structural metadata validation and separate proposal persistence now exist. Numerical execution of unfamiliar plans, semantic validation, promotion rules and broad live-model evaluation in section 19 remain outstanding. Verification: 18 planner tests plus 20 existing regressions passed, using mocked model transport. No new owner methodology decision was required.
 
 
 ## Step 4 execution update — October 19, 2026
