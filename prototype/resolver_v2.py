@@ -277,7 +277,8 @@ def _fetch(decision, previous, history, model=RESOLVER_MODEL, try_deterministic=
 
     token = AUTHORIZED.set(authorized) if authorized else None
     try:
-        return _answer(sq, _prior_plan(prior), use_model=True, model=model)
+        return _answer(sq, _prior_plan(prior), use_model=True, model=model,
+                       route_text=question if (question and decision['relationship'] == 'new') else None)
     except ValueError as exc:
         return {'intent': 'clarify', 'mode': 'intent validation',
                 'message': str(exc), 'model_usage': getattr(exc, 'model_usage', {})}
@@ -349,6 +350,17 @@ def handle(question, previous, model, history, executor, overrides=None, institu
     decision, usage = resolve(question, history, previous)
     usages.append(usage)
     op = decision['operation']
+
+    # Rung 1 — route a self-contained discovery question on the USER'S words. The model's
+    # rewrite reliably drops the "what data do we have" trigger, and its operation label
+    # wobbles (clarify/conversation/fetch) across identical asks; keying the route off the
+    # original question makes the same discovery question land on discovery.overview every time.
+    if decision['relationship'] == 'new' and op != 'refuse':
+        from .catalog_planner import discovery_question
+        if discovery_question(question):
+            from .discovery import overview
+            answer = overview(question, use_model=True, model=model)
+            return _finish(answer, decision, question, usages, started)
 
     if op in {'refuse', 'clarify'}:
         answer = {'intent': 'clarify', 'mode': 'intent clarification', 'message': decision['message']}

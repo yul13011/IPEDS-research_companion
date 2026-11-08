@@ -328,12 +328,16 @@ def _degrees_breakdown_route(question,previous=None):
     return finalize_answer(answer,question)
 
 
-def _ask(question,previous=None,use_model=False,model=DEFAULT_MODEL):
+def _ask(question,previous=None,use_model=False,model=DEFAULT_MODEL,route_text=None):
     from .progress import report
     report('Choosing an analysis approach…')
     if not isinstance(question,str) or not 1<=len(question)<=4000:raise ValueError('Enter a question of at most 4,000 characters.')
     from .catalog_planner import catalogue_scope, discovery_question, plan_catalog_question, clarify_catalog_request
-    if discovery_question(question):
+    # Route on the user's own words when supplied (route_text, the original question); the
+    # model's rewrite is used only to execute. Keeps the deterministic gates below stable
+    # across phrasing drift so the same question always lands in the same department.
+    route=route_text if (isinstance(route_text,str) and route_text.strip()) else question
+    if discovery_question(route):
         from .discovery import overview
         return overview(question,use_model=use_model,model=model)
     question,previous=clarify_catalog_request(question,previous)
@@ -342,11 +346,11 @@ def _ask(question,previous=None,use_model=False,model=DEFAULT_MODEL):
     breakdown=_degrees_breakdown_route(question,previous)
     if breakdown is not None:return breakdown
     catalog_previous=previous if previous and previous.get('version') in {1,2} else None
-    if not discovery_question(question) and (catalogue_scope(question) or (catalog_previous and uses_context(question))):
+    if not discovery_question(route) and (catalogue_scope(route) or (catalog_previous and uses_context(question))):
         return plan_catalog_question(question,catalog_previous,use_model,model)
     if catalog_previous:previous=None
     action=model_plan(question,previous,model) if use_model else local_plan(question,previous)
-    if action['intent']=='catalog' or (action['intent']=='discover' and not discovery_question(question)) or (
+    if action['intent']=='catalog' or (action['intent']=='discover' and not discovery_question(route)) or (
         action['intent']=='clarify' and re.search(r'needs its own mapping|use codebook discovery|requested aid population/type',action.get('message',''),re.I)):
         answer=plan_catalog_question(question,catalog_previous,use_model,model)
         if action.get('model_usage'):
@@ -385,11 +389,11 @@ def _ask(question,previous=None,use_model=False,model=DEFAULT_MODEL):
     return action
 
 
-def _answer(question,previous=None,use_model=False,model=DEFAULT_MODEL):
+def _answer(question,previous=None,use_model=False,model=DEFAULT_MODEL,route_text=None):
     """Measure answer-ready wall time, including all planning and validation."""
     import time
     start=time.perf_counter()
-    answer=_ask(question,previous,use_model,model)
+    answer=_ask(question,previous,use_model,model,route_text=route_text)
     planned=time.perf_counter()
     if answer.get('analysis_bundle'):
         from .conversation import execute_selection
