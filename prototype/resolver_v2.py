@@ -92,6 +92,7 @@ def _history_summary(history):
             'turn': i + 1,
             'question': h.get('question'),
             'resolved': answer.get('resolved_question') or answer.get('interpreted_as'),
+            'message': (answer.get('message') or '')[:2000],
             'intent': answer.get('intent'),
             'mode': answer.get('mode'),
             'measures': plan.get('metrics'),
